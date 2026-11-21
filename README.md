@@ -1,10 +1,10 @@
 # Survival Fantasy Content
 
-A standalone Remotion project for illustrated Indonesian survival-fantasy shorts. *Kemacetan Terakhir* has an 84.8-second comparison composition and a 70.67-second version-2 recut, both at 1080 × 1920 and 30 fps.
+A Remotion project for illustrated Indonesian survival-fantasy videos. The current Studio v2 direction is a standalone anthology of 2–3 minute survival scenarios. [Kamar Terkunci](episodes/001-kamar-terkunci/brief.md) is the first pilot; the earlier *Kemacetan Terakhir* episodes are Arc 01 production history and tone references.
 
 ## Preview and check
 
-From this directory, use Node 22.13 or newer in the Node 22 line, or another version listed in `package.json`.
+Use a Node version supported by [package.json](package.json), such as Node 22.13 or newer in the Node 22 line. From the repository root:
 
 ```powershell
 npm ci
@@ -13,21 +13,23 @@ npm run check
 npm run build
 ```
 
-Open `KemacetanTerakhirMotionComicRecut` in Studio, `KemacetanTerakhirMotionComicAlternate` for the second data-driven preview, or `KemacetanTerakhirMotionComic` for the original comparison. Use the composition props to toggle sound or captions for review. The terminal prints the Studio URL. `npm run build` runs the checks before bundling.
+The terminal prints the Remotion Studio URL. Open `Skenario01KamarTerkunci` for the v2 pilot. Its [assembly handoff](episodes/001-kamar-terkunci/assembly-handoff.md) and [pipeline state](episodes/001-kamar-terkunci/pipeline-state.json) record the output, historical findings and outstanding review limitations. The pilot uses a custom component and a prepared mix; it does not expose the sound and caption toggles available on the older data-driven compositions.
 
-Use Studio’s Render button or the following command to export an approved cut.
+For Arc 01 comparisons, Studio also lists `KemacetanTerakhirMotionComic`, `KemacetanTerakhirMotionComicRecut`, and other registered compositions. `npm run build` runs the checks before bundling. Checks validate source and schema constraints; they do not replace playback, listening, rights review or independent QA.
 
-```powershell
-npx remotion render src/index.ts KemacetanTerakhirMotionComic out/kemacetan-terakhir.mp4
-```
+Creating a composition, rendering an export and publishing are separate actions. When a render is requested, select the intended composition and output path in Studio or use the Remotion CLI. Do not overwrite an existing export unless that is intended; publishing requires separate authorization.
 
-## Add an episode
+## Start a standalone episode
 
-1. Use [Episode 001’s version-2 manifest](episodes/001-kemacetan-terakhir/recut-v2/manifest.json) and [word-tagged captions](episodes/001-kemacetan-terakhir/recut-v2/captions.json) as examples for a new episode directory. Use a unique composition ID. The unversioned 84.8-second manifest is grandfathered only as the original comparison cut.
-2. Put raster plates, transparent poses and the clean narration under `public/assets/<episode>/`. Reuse [the shared foley library](public/sfx/LICENSES.md). Keep the [brief and review](templates/) with the episode, alongside the script and asset sources.
-3. Import the manifest and captions in [`src/Root.tsx`](src/Root.tsx). Follow the recut registration and keep the composition ID in sync with the manifest. Set `schemaVersion: 2`, `art.styleId` and `art.rasterAssets`, and add the script anchors required in [the engine ticket](ENGINE_UPGRADE_TICKET.md). Use baked plates or `characters: {mode: "masked", layers: [...], foreground: "..."}` with a full-plate alpha foreground. Foreground pixels are drawn after the characters and share the plate’s framing. The same scene, caption and audio components assemble the episode.
-4. Run `npm run check`, then preview the whole cut in Studio. Verify the opening, major choices and final reveal at phone size, then check narration, captions and audio cues together.
+1. Read [AGENTS.md](AGENTS.md), the [v2 style guide](STYLE_GUIDE.md#studio-v2-standalone-survival-scenarios), the [studio role contracts](agents/README.md), the [scenario record](arcs/02-skenario-bertahan/arc.json) and [decision history](archive/playbook/experiments.md). For a broad request with no setting, the showrunner contract calls for three distinct pitches before a full brief.
+2. Keep the episode directly under `episodes/<slug>/`. Maintain a brief, script, asset and rights record, review and `pipeline-state.json` using the [templates](templates/). Plant the trap causes and escape tools in the opening, record their payoffs in the Fair-Play Clue Ledger, and map spoken action and world audio to the picture. Follow the stage prerequisites and handoffs in the role contracts.
+3. For assembly, use the [pilot manifest](episodes/001-kamar-terkunci/manifest.json), [captions](episodes/001-kamar-terkunci/captions.json), [custom composition](src/Skenario01KamarTerkunci.tsx) and [assembler contract](agents/04-remotion-assembler.md#studio-v2-assembly-contract) as references. Set both `schemaVersion: 2` and `pipelineVersion: 2`, use `urban-silhouette-noir` and a `decision-consequence` script, and register a unique composition ID in [Root.tsx](src/Root.tsx). The pilot has episode-specific timings, overlays and a prepared mix; adapt them to the new episode rather than assuming its component is a generic player.
+4. Run `npm run check` and perform the visual, audio and export checks required by the assembler and QA contracts. Record the composition ID, dependencies, provenance, rights and actual review evidence in the episode handoff. A passing automated check is not a publishing approval.
 
-Manifest media paths are relative to `public/`. A scene starts at its `at` frame and ends at the next scene or the composition’s `duration`. Camera positions use composition pixels, and transparent layer positions and widths use percentages. Scene cue offsets are local to the scene. Narration and ambience start on the composition timeline. Captions use milliseconds relative to the narration start; each caption has a `words` array, with optional `white`/`default`, `yellow`/`highlight` or `red`/`danger` color tags. HUD timing uses scene-local frames; HUD boxes and diagram points are normalized to the canvas or their enclosing box. The manifest drives timestamp badges, callouts, checklists, radar diagrams and blueprint overlays. JSON-driven HUD and caption content is edited in source. The [style guide](STYLE_GUIDE.md) covers artwork, voice and review.
+Manifest asset paths are relative to `public/`; scene and audio positions are in frames. Generic data-driven `Episode` compositions use narration-relative caption milliseconds, while the pilot's custom component reads its captions on the composition timeline. Verify timing against the component used by the episode. The [style guide](STYLE_GUIDE.md) covers the artwork, voice and review requirements.
 
-[Episode 001](episodes/001-kemacetan-terakhir/brief.md) includes the script, asset record and review. Earlier attempts are retained with the episode. The [earlier playbook and decision history](archive/playbook/experiments.md) document the parent-based workflow.
+## Archive and maintenance
+
+The archived [Arc 01 Episode 001 brief](episodes/arc1/001-kemacetan-terakhir/brief.md), [recut manifest](episodes/arc1/001-kemacetan-terakhir/recut-v2/manifest.json) and [captions](episodes/arc1/001-kemacetan-terakhir/recut-v2/captions.json) document the earlier format. Its schema version 2 is distinct from Studio `pipelineVersion: 2`; use the pilot and current contracts for new standalone scenarios. The [earlier playbook](archive/playbook/) retains prior workflow and decision history.
+
+See the [maintenance log](MAINTENANCE.md) for completed repository improvements, evidence and follow-ups.
