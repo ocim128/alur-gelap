@@ -1,0 +1,1492 @@
+{
+  "schemaVersion": 2,
+  "pipelineVersion": 2,
+  "id": "Skenario01KamarTerkunci",
+  "fps": 30,
+  "duration": 4230,
+  "captions": "captions.json",
+  "openingTitle": "KAMAR INI TERKUNCI",
+  "narration": {
+    "asset": "assets/001-kamar-terkunci/narration-prepared.mp3",
+    "at": 0,
+    "duration": 4103,
+    "gain": 1
+  },
+  "art": {
+    "styleId": "urban-silhouette-noir",
+    "rasterAssets": {
+      "assets/001-kamar-terkunci/p01.webp": "urban-silhouette-noir",
+      "assets/001-kamar-terkunci/p02.webp": "urban-silhouette-noir",
+      "assets/001-kamar-terkunci/p03.webp": "urban-silhouette-noir",
+      "assets/001-kamar-terkunci/p04.webp": "urban-silhouette-noir",
+      "assets/001-kamar-terkunci/p05.webp": "urban-silhouette-noir",
+      "assets/001-kamar-terkunci/p06.webp": "urban-silhouette-noir",
+      "assets/001-kamar-terkunci/p07.webp": "urban-silhouette-noir",
+      "assets/001-kamar-terkunci/p08.webp": "urban-silhouette-noir",
+      "assets/001-kamar-terkunci/p09.webp": "urban-silhouette-noir",
+      "assets/001-kamar-terkunci/p10.webp": "urban-silhouette-noir",
+      "assets/001-kamar-terkunci/p11.webp": "urban-silhouette-noir",
+      "assets/001-kamar-terkunci/p12.webp": "urban-silhouette-noir",
+      "assets/001-kamar-terkunci/p13.webp": "urban-silhouette-noir",
+      "assets/001-kamar-terkunci/p14.webp": "urban-silhouette-noir",
+      "assets/001-kamar-terkunci/p15.webp": "urban-silhouette-noir",
+      "assets/001-kamar-terkunci/p16.webp": "urban-silhouette-noir",
+      "assets/001-kamar-terkunci/p17.webp": "urban-silhouette-noir",
+      "assets/001-kamar-terkunci/p18.webp": "urban-silhouette-noir",
+      "assets/001-kamar-terkunci/p19.webp": "urban-silhouette-noir",
+      "assets/001-kamar-terkunci/p20.webp": "urban-silhouette-noir",
+      "assets/001-kamar-terkunci/p21.webp": "urban-silhouette-noir",
+      "assets/001-kamar-terkunci/p22.webp": "urban-silhouette-noir",
+      "assets/001-kamar-terkunci/p23.webp": "urban-silhouette-noir",
+      "assets/001-kamar-terkunci/p24.webp": "urban-silhouette-noir"
+    }
+  },
+  "script": {
+    "format": "decision-consequence",
+    "engine": "branch-rewind",
+    "wordCount": 248,
+    "hook": {
+      "at": 0,
+      "line": "Kamu dikunci di kamar. Salah gerak, tamat."
+    },
+    "ending": {
+      "at": 3887,
+      "twistAt": 3952,
+      "payoff": "Kabur melalui tong dan gang."
+    }
+  },
+  "tensionRamp": {
+    "startSec": 133,
+    "endSec": 137.5,
+    "extraScale": 0.01,
+    "vignetteStrength": 0.1
+  },
+  "beds": [
+    {
+      "name": "room tone before reset",
+      "asset": "sfx/prepared/night-air.wav",
+      "at": 0,
+      "duration": 1755,
+      "gain": 0.035,
+      "fadeIn": 6,
+      "fadeOut": 6,
+      "loop": true
+    },
+    {
+      "name": "room tone after reset",
+      "asset": "sfx/prepared/night-air.wav",
+      "at": 1821,
+      "duration": 1350,
+      "gain": 0.035,
+      "fadeIn": 6,
+      "fadeOut": 6,
+      "loop": true
+    },
+    {
+      "name": "room tone after hatch silence",
+      "asset": "sfx/prepared/night-air.wav",
+      "at": 3234,
+      "duration": 888,
+      "gain": 0.035,
+      "fadeIn": 6,
+      "fadeOut": 6,
+      "loop": true
+    }
+  ],
+  "scenes": [
+    {
+      "id": "P01",
+      "name": "Panel 01",
+      "at": 0,
+      "plate": "assets/001-kamar-terkunci/p01.webp",
+      "camera": {
+        "from": {
+          "scale": 1,
+          "x": 0,
+          "y": 0
+        },
+        "to": {
+          "scale": 1.015,
+          "x": 0,
+          "y": 0
+        }
+      },
+      "characters": {
+        "mode": "baked"
+      },
+      "hud": [],
+      "editorial": {
+        "protagonist": "visible",
+        "purpose": "threat-proximity",
+        "evidence": "Locked panel P01."
+      },
+      "reframes": [
+        {
+          "at": 0,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 70,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 140,
+          "duration": 24,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "id": "P02",
+      "name": "Panel 02",
+      "at": 164,
+      "plate": "assets/001-kamar-terkunci/p02.webp",
+      "camera": {
+        "from": {
+          "scale": 1,
+          "x": 0,
+          "y": 0
+        },
+        "to": {
+          "scale": 1.015,
+          "x": 0,
+          "y": 0
+        }
+      },
+      "characters": {
+        "mode": "baked"
+      },
+      "hud": [],
+      "editorial": {
+        "protagonist": "visible",
+        "purpose": "threat-proximity",
+        "evidence": "Locked panel P02."
+      },
+      "reframes": [
+        {
+          "at": 0,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "id": "P03",
+      "name": "Panel 03",
+      "at": 212,
+      "plate": "assets/001-kamar-terkunci/p03.webp",
+      "camera": {
+        "from": {
+          "scale": 1,
+          "x": 0,
+          "y": 0
+        },
+        "to": {
+          "scale": 1.015,
+          "x": 0,
+          "y": 0
+        }
+      },
+      "characters": {
+        "mode": "baked"
+      },
+      "hud": [],
+      "editorial": {
+        "protagonist": "absent",
+        "purpose": "threat-proximity",
+        "evidence": "Locked panel P03."
+      },
+      "reframes": [
+        {
+          "at": 0,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 70,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "id": "P04",
+      "name": "Panel 04",
+      "at": 337,
+      "plate": "assets/001-kamar-terkunci/p04.webp",
+      "camera": {
+        "from": {
+          "scale": 1,
+          "x": 0,
+          "y": 0
+        },
+        "to": {
+          "scale": 1.015,
+          "x": 0,
+          "y": 0
+        }
+      },
+      "characters": {
+        "mode": "baked"
+      },
+      "hud": [],
+      "editorial": {
+        "protagonist": "absent",
+        "purpose": "threat-proximity",
+        "evidence": "Locked panel P04."
+      },
+      "reframes": [
+        {
+          "at": 0,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 70,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 140,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 210,
+          "duration": 9,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "id": "P05",
+      "name": "Panel 05",
+      "at": 556,
+      "plate": "assets/001-kamar-terkunci/p05.webp",
+      "camera": {
+        "from": {
+          "scale": 1,
+          "x": 0,
+          "y": 0
+        },
+        "to": {
+          "scale": 1.015,
+          "x": 0,
+          "y": 0
+        }
+      },
+      "characters": {
+        "mode": "baked"
+      },
+      "hud": [],
+      "editorial": {
+        "protagonist": "absent",
+        "purpose": "threat-proximity",
+        "evidence": "Locked panel P05."
+      },
+      "reframes": [
+        {
+          "at": 0,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 70,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 140,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "id": "P06",
+      "name": "Panel 06",
+      "at": 742,
+      "plate": "assets/001-kamar-terkunci/p06.webp",
+      "camera": {
+        "from": {
+          "scale": 1,
+          "x": 0,
+          "y": 0
+        },
+        "to": {
+          "scale": 1.015,
+          "x": 0,
+          "y": 0
+        }
+      },
+      "characters": {
+        "mode": "baked"
+      },
+      "hud": [],
+      "editorial": {
+        "protagonist": "absent",
+        "purpose": "threat-proximity",
+        "evidence": "Locked panel P06."
+      },
+      "reframes": [
+        {
+          "at": 0,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 70,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "id": "P07",
+      "name": "Panel 07",
+      "at": 871,
+      "plate": "assets/001-kamar-terkunci/p07.webp",
+      "camera": {
+        "from": {
+          "scale": 1,
+          "x": 0,
+          "y": 0
+        },
+        "to": {
+          "scale": 1.015,
+          "x": 0,
+          "y": 0
+        }
+      },
+      "characters": {
+        "mode": "baked"
+      },
+      "hud": [],
+      "editorial": {
+        "protagonist": "visible",
+        "purpose": "threat-proximity",
+        "evidence": "Locked panel P07."
+      },
+      "reframes": [
+        {
+          "at": 0,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 70,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 140,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 210,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 280,
+          "duration": 22,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "id": "P08",
+      "name": "Panel 08",
+      "at": 1173,
+      "plate": "assets/001-kamar-terkunci/p08.webp",
+      "camera": {
+        "from": {
+          "scale": 1,
+          "x": 0,
+          "y": 0
+        },
+        "to": {
+          "scale": 1.015,
+          "x": 0,
+          "y": 0
+        }
+      },
+      "characters": {
+        "mode": "baked"
+      },
+      "hud": [],
+      "editorial": {
+        "protagonist": "visible",
+        "purpose": "threat-proximity",
+        "evidence": "Locked panel P08."
+      },
+      "reframes": [
+        {
+          "at": 0,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 70,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 140,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "id": "P09",
+      "name": "Panel 09",
+      "at": 1346,
+      "plate": "assets/001-kamar-terkunci/p09.webp",
+      "camera": {
+        "from": {
+          "scale": 1,
+          "x": 0,
+          "y": 0
+        },
+        "to": {
+          "scale": 1.015,
+          "x": 0,
+          "y": 0
+        }
+      },
+      "characters": {
+        "mode": "baked"
+      },
+      "hud": [],
+      "editorial": {
+        "protagonist": "absent",
+        "purpose": "threat-proximity",
+        "evidence": "Locked panel P09."
+      },
+      "reframes": [
+        {
+          "at": 0,
+          "duration": 24,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "id": "P10",
+      "name": "Panel 10",
+      "at": 1370,
+      "plate": "assets/001-kamar-terkunci/p10.webp",
+      "camera": {
+        "from": {
+          "scale": 1,
+          "x": 0,
+          "y": 0
+        },
+        "to": {
+          "scale": 1.015,
+          "x": 0,
+          "y": 0
+        }
+      },
+      "characters": {
+        "mode": "baked"
+      },
+      "hud": [],
+      "editorial": {
+        "protagonist": "visible",
+        "purpose": "threat-proximity",
+        "evidence": "Locked panel P10."
+      },
+      "reframes": [
+        {
+          "at": 0,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 70,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 140,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 210,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "id": "P11",
+      "name": "Panel 11",
+      "at": 1644,
+      "plate": "assets/001-kamar-terkunci/p11.webp",
+      "camera": {
+        "from": {
+          "scale": 1,
+          "x": 0,
+          "y": 0
+        },
+        "to": {
+          "scale": 1.015,
+          "x": 0,
+          "y": 0
+        }
+      },
+      "characters": {
+        "mode": "baked"
+      },
+      "hud": [],
+      "editorial": {
+        "protagonist": "visible",
+        "purpose": "threat-proximity",
+        "evidence": "Locked panel P11."
+      },
+      "reframes": [
+        {
+          "at": 0,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 70,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 140,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "id": "P12",
+      "name": "Panel 12",
+      "at": 1818,
+      "plate": "assets/001-kamar-terkunci/p12.webp",
+      "camera": {
+        "from": {
+          "scale": 1,
+          "x": 0,
+          "y": 0
+        },
+        "to": {
+          "scale": 1.015,
+          "x": 0,
+          "y": 0
+        }
+      },
+      "characters": {
+        "mode": "baked"
+      },
+      "hud": [],
+      "editorial": {
+        "protagonist": "visible",
+        "purpose": "threat-proximity",
+        "evidence": "Locked panel P12."
+      },
+      "reframes": [
+        {
+          "at": 0,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 70,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 140,
+          "duration": 9,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "id": "P13",
+      "name": "Panel 13",
+      "at": 1967,
+      "plate": "assets/001-kamar-terkunci/p13.webp",
+      "camera": {
+        "from": {
+          "scale": 1,
+          "x": 0,
+          "y": 0
+        },
+        "to": {
+          "scale": 1.015,
+          "x": 0,
+          "y": 0
+        }
+      },
+      "characters": {
+        "mode": "baked"
+      },
+      "hud": [],
+      "editorial": {
+        "protagonist": "visible",
+        "purpose": "threat-proximity",
+        "evidence": "Locked panel P13."
+      },
+      "reframes": [
+        {
+          "at": 0,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 70,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 140,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 210,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "id": "P14",
+      "name": "Panel 14",
+      "at": 2234,
+      "plate": "assets/001-kamar-terkunci/p14.webp",
+      "camera": {
+        "from": {
+          "scale": 1,
+          "x": 0,
+          "y": 0
+        },
+        "to": {
+          "scale": 1.015,
+          "x": 0,
+          "y": 0
+        }
+      },
+      "characters": {
+        "mode": "baked"
+      },
+      "hud": [],
+      "editorial": {
+        "protagonist": "visible",
+        "purpose": "threat-proximity",
+        "evidence": "Locked panel P14."
+      },
+      "reframes": [
+        {
+          "at": 0,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 70,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 140,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 210,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 280,
+          "duration": 16,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "id": "P15",
+      "name": "Panel 15",
+      "at": 2530,
+      "plate": "assets/001-kamar-terkunci/p15.webp",
+      "camera": {
+        "from": {
+          "scale": 1,
+          "x": 0,
+          "y": 0
+        },
+        "to": {
+          "scale": 1.015,
+          "x": 0,
+          "y": 0
+        }
+      },
+      "characters": {
+        "mode": "baked"
+      },
+      "hud": [],
+      "editorial": {
+        "protagonist": "absent",
+        "purpose": "threat-proximity",
+        "evidence": "Locked panel P15."
+      },
+      "reframes": [
+        {
+          "at": 0,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 70,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 140,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 210,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "id": "P16",
+      "name": "Panel 16",
+      "at": 2778,
+      "plate": "assets/001-kamar-terkunci/p16.webp",
+      "camera": {
+        "from": {
+          "scale": 1,
+          "x": 0,
+          "y": 0
+        },
+        "to": {
+          "scale": 1.015,
+          "x": 0,
+          "y": 0
+        }
+      },
+      "characters": {
+        "mode": "baked"
+      },
+      "hud": [],
+      "editorial": {
+        "protagonist": "visible",
+        "purpose": "threat-proximity",
+        "evidence": "Locked panel P16."
+      },
+      "reframes": [
+        {
+          "at": 0,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 70,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "id": "P17",
+      "name": "Panel 17",
+      "at": 2880,
+      "plate": "assets/001-kamar-terkunci/p17.webp",
+      "camera": {
+        "from": {
+          "scale": 1,
+          "x": 0,
+          "y": 0
+        },
+        "to": {
+          "scale": 1.015,
+          "x": 0,
+          "y": 0
+        }
+      },
+      "characters": {
+        "mode": "baked"
+      },
+      "hud": [],
+      "editorial": {
+        "protagonist": "visible",
+        "purpose": "threat-proximity",
+        "evidence": "Locked panel P17."
+      },
+      "reframes": [
+        {
+          "at": 0,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 70,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 140,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "id": "P18",
+      "name": "Panel 18",
+      "at": 3070,
+      "plate": "assets/001-kamar-terkunci/p18.webp",
+      "camera": {
+        "from": {
+          "scale": 1,
+          "x": 0,
+          "y": 0
+        },
+        "to": {
+          "scale": 1.015,
+          "x": 0,
+          "y": 0
+        }
+      },
+      "characters": {
+        "mode": "baked"
+      },
+      "hud": [],
+      "editorial": {
+        "protagonist": "visible",
+        "purpose": "threat-proximity",
+        "evidence": "Locked panel P18."
+      },
+      "reframes": [
+        {
+          "at": 0,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "id": "P19",
+      "name": "Panel 19",
+      "at": 3127,
+      "plate": "assets/001-kamar-terkunci/p19.webp",
+      "camera": {
+        "from": {
+          "scale": 1,
+          "x": 0,
+          "y": 0
+        },
+        "to": {
+          "scale": 1.015,
+          "x": 0,
+          "y": 0
+        }
+      },
+      "characters": {
+        "mode": "baked"
+      },
+      "hud": [],
+      "editorial": {
+        "protagonist": "visible",
+        "purpose": "threat-proximity",
+        "evidence": "Locked panel P19."
+      },
+      "reframes": [
+        {
+          "at": 0,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 70,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 140,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 210,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "id": "P20",
+      "name": "Panel 20",
+      "at": 3397,
+      "plate": "assets/001-kamar-terkunci/p20.webp",
+      "camera": {
+        "from": {
+          "scale": 1,
+          "x": 0,
+          "y": 0
+        },
+        "to": {
+          "scale": 1.015,
+          "x": 0,
+          "y": 0
+        }
+      },
+      "characters": {
+        "mode": "baked"
+      },
+      "hud": [],
+      "editorial": {
+        "protagonist": "absent",
+        "purpose": "threat-proximity",
+        "evidence": "Locked panel P20."
+      },
+      "reframes": [
+        {
+          "at": 0,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 70,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 140,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 210,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "id": "P21",
+      "name": "Panel 21",
+      "at": 3638,
+      "plate": "assets/001-kamar-terkunci/p21.webp",
+      "camera": {
+        "from": {
+          "scale": 1,
+          "x": 0,
+          "y": 0
+        },
+        "to": {
+          "scale": 1.015,
+          "x": 0,
+          "y": 0
+        }
+      },
+      "characters": {
+        "mode": "baked"
+      },
+      "hud": [],
+      "editorial": {
+        "protagonist": "visible",
+        "purpose": "threat-proximity",
+        "evidence": "Locked panel P21."
+      },
+      "reframes": [
+        {
+          "at": 0,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 70,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "id": "P22",
+      "name": "Panel 22",
+      "at": 3744,
+      "plate": "assets/001-kamar-terkunci/p22.webp",
+      "camera": {
+        "from": {
+          "scale": 1,
+          "x": 0,
+          "y": 0
+        },
+        "to": {
+          "scale": 1.015,
+          "x": 0,
+          "y": 0
+        }
+      },
+      "characters": {
+        "mode": "baked"
+      },
+      "hud": [],
+      "editorial": {
+        "protagonist": "visible",
+        "purpose": "threat-proximity",
+        "evidence": "Locked panel P22."
+      },
+      "reframes": [
+        {
+          "at": 0,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 70,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 140,
+          "duration": 3,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "id": "P23",
+      "name": "Panel 23",
+      "at": 3887,
+      "plate": "assets/001-kamar-terkunci/p23.webp",
+      "camera": {
+        "from": {
+          "scale": 1,
+          "x": 0,
+          "y": 0
+        },
+        "to": {
+          "scale": 1.015,
+          "x": 0,
+          "y": 0
+        }
+      },
+      "characters": {
+        "mode": "baked"
+      },
+      "hud": [],
+      "editorial": {
+        "protagonist": "reaction",
+        "purpose": "threat-proximity",
+        "evidence": "Locked panel P23."
+      },
+      "reframes": [
+        {
+          "at": 0,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "id": "P24",
+      "name": "Panel 24",
+      "at": 3952,
+      "plate": "assets/001-kamar-terkunci/p24.webp",
+      "camera": {
+        "from": {
+          "scale": 1,
+          "x": 0,
+          "y": 0
+        },
+        "to": {
+          "scale": 1.015,
+          "x": 0,
+          "y": 0
+        }
+      },
+      "characters": {
+        "mode": "baked"
+      },
+      "hud": [],
+      "editorial": {
+        "protagonist": "visible",
+        "purpose": "threat-proximity",
+        "evidence": "Locked panel P24."
+      },
+      "reframes": [
+        {
+          "at": 0,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 70,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 140,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 210,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        }
+      ]
+    }
+  ],
+  "soundCues": [
+    {
+      "name": "first hatch open",
+      "asset": "sfx/prepared/ep007-gate-open.wav",
+      "at": 165,
+      "gain": 0.12,
+      "maxSeconds": null
+    },
+    {
+      "name": "first hatch close",
+      "asset": "sfx/prepared/ep007-gate-open.wav",
+      "at": 198,
+      "gain": 0.12,
+      "maxSeconds": null
+    },
+    {
+      "name": "hatch open",
+      "asset": "sfx/prepared/ep007-gate-open.wav",
+      "at": 208,
+      "gain": 0.16,
+      "maxSeconds": null
+    },
+    {
+      "name": "hatch close",
+      "asset": "sfx/prepared/ep007-gate-open.wav",
+      "at": 320,
+      "gain": 0.13,
+      "maxSeconds": null
+    },
+    {
+      "name": "ceramic scrape",
+      "asset": "sfx/prepared/ep007-stone-scrape.wav",
+      "at": 1070,
+      "gain": 0.27,
+      "maxSeconds": null
+    },
+    {
+      "name": "running step",
+      "asset": "sfx/prepared/shoe-left.wav",
+      "at": 1308,
+      "gain": 0.22,
+      "maxSeconds": null
+    },
+    {
+      "name": "running step",
+      "asset": "sfx/prepared/shoe-right.wav",
+      "at": 1318,
+      "gain": 0.22,
+      "maxSeconds": null
+    },
+    {
+      "name": "keys / deadbolt",
+      "asset": "sfx/prepared/door-lock.wav",
+      "at": 1346,
+      "gain": 0.28,
+      "maxSeconds": null
+    },
+    {
+      "name": "door swing",
+      "asset": "sfx/prepared/minimarket-door-creak-outside.wav",
+      "at": 1386,
+      "gain": 0.15,
+      "maxSeconds": null
+    },
+    {
+      "name": "fall",
+      "asset": "sfx/prepared/body-fall.wav",
+      "at": 1556,
+      "gain": 0.2,
+      "maxSeconds": null
+    },
+    {
+      "name": "rewind",
+      "asset": "sfx/prepared/tension-rise.wav",
+      "at": 1644,
+      "gain": 0.15,
+      "maxSeconds": 0.4
+    },
+    {
+      "name": "towel unfold",
+      "asset": "sfx/prepared/coat-shift.wav",
+      "at": 1916,
+      "gain": 0.15,
+      "maxSeconds": null
+    },
+    {
+      "name": "chair placement",
+      "asset": "sfx/prepared/body-fall.wav",
+      "at": 2045,
+      "gain": 0.09,
+      "maxSeconds": null
+    },
+    {
+      "name": "latch",
+      "asset": "sfx/prepared/door-lock.wav",
+      "at": 2280,
+      "gain": 0.12,
+      "maxSeconds": null
+    },
+    {
+      "name": "approach left",
+      "asset": "sfx/prepared/shoe-left.wav",
+      "at": 2681,
+      "gain": 0.18,
+      "maxSeconds": null
+    },
+    {
+      "name": "keys",
+      "asset": "sfx/prepared/door-lock.wav",
+      "at": 2708,
+      "gain": 0.12,
+      "maxSeconds": null
+    },
+    {
+      "name": "return step",
+      "asset": "sfx/prepared/shoe-right.wav",
+      "at": 2910,
+      "gain": 0.15,
+      "maxSeconds": null
+    },
+    {
+      "name": "return step",
+      "asset": "sfx/prepared/shoe-left.wav",
+      "at": 2940,
+      "gain": 0.15,
+      "maxSeconds": null
+    },
+    {
+      "name": "return step",
+      "asset": "sfx/prepared/shoe-right.wav",
+      "at": 2970,
+      "gain": 0.15,
+      "maxSeconds": null
+    },
+    {
+      "name": "hatch open",
+      "asset": "sfx/prepared/ep007-gate-open.wav",
+      "at": 3232,
+      "gain": 0.16,
+      "maxSeconds": null
+    },
+    {
+      "name": "hatch close",
+      "asset": "sfx/prepared/ep007-gate-open.wav",
+      "at": 3380,
+      "gain": 0.14,
+      "maxSeconds": null
+    },
+    {
+      "name": "departure step",
+      "asset": "sfx/prepared/shoe-left.wav",
+      "at": 3412,
+      "gain": 0.12,
+      "maxSeconds": null
+    },
+    {
+      "name": "towel unfold",
+      "asset": "sfx/prepared/coat-shift.wav",
+      "at": 3654,
+      "gain": 0.12,
+      "maxSeconds": null
+    },
+    {
+      "name": "chair placement",
+      "asset": "sfx/prepared/body-fall.wav",
+      "at": 3708,
+      "gain": 0.1,
+      "maxSeconds": null
+    },
+    {
+      "name": "window swing",
+      "asset": "sfx/prepared/minimarket-door-creak-outside.wav",
+      "at": 3813,
+      "gain": 0.12,
+      "maxSeconds": null
+    },
+    {
+      "name": "drum contact",
+      "asset": "sfx/prepared/metal-resonance.wav",
+      "at": 3926,
+      "gain": 0.1,
+      "maxSeconds": null
+    },
+    {
+      "name": "escape step",
+      "asset": "sfx/prepared/shoe-right.wav",
+      "at": 3962,
+      "gain": 0.14,
+      "maxSeconds": null
+    },
+    {
+      "name": "blackout sub",
+      "asset": "assets/001-kamar-terkunci/blackout-sub.wav",
+      "at": 4125,
+      "gain": 0.15,
+      "maxSeconds": null
+    }
+  ],
+  "blackoutFrame": 4125,
+  "rewindFrame": 1644,
+  "notes": "ASR word timings approximate; locked image defects and static action limitations remain open."
+}

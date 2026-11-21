@@ -6,7 +6,7 @@ Write the arc and episode briefs with clear survival choices, continuity, audio 
 
 ## Required Inputs & Preconditions
 
-Read `AGENTS.md`, `STYLE_GUIDE.md`, the arc record, prior exit state, available episode brief and character sheets, and decision history. For a new pilot, establish the survivor from the handoff and mark open character details for the visual brief.
+Read `AGENTS.md`, `STYLE_GUIDE.md`, the anthology record and decision history. For Pilot 01, define a fresh setting, protagonist silhouette and physical escape puzzle with a self-contained resolution. Keep the episode directly under `episodes/<slug>/`.
 
 ## Allowed Write Scope
 
@@ -18,14 +18,17 @@ Keep approved scripts, masters and renders locked. Use established canon and rec
 
 ## Execution Steps & Output Artifacts
 
-1. In **Single-Part Pilot Mode**, draft and lock Arc 02 Part 001 and a three-line premise only. Start from the Part 007 handoff. Leave Parts 002–007 undesigned until pilot review. Hook within three seconds, target **90–210 s** and roughly **200–480 spoken Indonesian words**, and carry setting, time and survivor state through the choice. Arc 01 retains its locked v1 scripts.
-   - Build **Decision → Consequence** around relatable temptation and a visible cost. For **Branch-Rewind**, show the bad choice and its visceral or lethal outcome, rewind to the choice and show a harder survival path with a cost or lingering dread. For **Earned Consequence**, someone else takes the bait and pays immediately, or the protagonist makes a human error with a permanent consequence. Use either or both. Keep arbitrary numbered rule lectures out of the script.
+1. Draft **Standalone Pilot 01** only, targeting **2–3 minutes** with a hook in the first three seconds. Use the [v2 beat map](../STYLE_GUIDE.md#v2-beat-map) for setup, tempting bad decision and lethal cause, `branchRewind`, multi-step escape under pressure, and earned logical payoff.
+   - **Pitch 3 First.** For a broad request with no setting, check `arcs/02-skenario-bertahan/arc.json` for repeated tropes. Pitch three distinct fair-play puzzles, each in three lines describing setting, tempting bad decision and the opening-planted clue chain, before drafting the full brief.
+   - Write in **Bahasa Bayi**, using casual, short Indonesian sentences a friend would say. Use words such as `kamu`, `bakal`, `tamat`, `soalnya` and `perhatiin`. Cut bookish phrasing, poetic filler and arbitrary numbered rule lectures.
+   - Apply **Answer-Before-Question**. List every physical trap cause and each object or detail the escape uses in the brief's **Fair-Play Clue Ledger**. Match each one to a readable opening panel or casual line before the choice or danger and its later payoff. Plant clues naturally so viewers can solve the puzzle ahead of the narrator. Rewrite any beat that depends on a hidden flaw or a tool first introduced at the payoff.
 2. Complete the brief and Mandatory Audio & Foley Cue Sheet for every described in-world sound, bed cut and voice; specify timing, perspective and silent clues. Keep Investigator as the sole narrator.
    - Plan multiple separate diegetic voice or world-audio beats and deliberate 1–3 s dread silences. Give dialogue a caption speaker label or color.
    - Lock each narrated threat or visible action to the panel that shows it at that line. Resolve missing coverage before approving the brief.
 3. Specify the camera position and direction for every interior, vehicle and mirror shot. Document RHD layout, what is in front of/behind the driver, reflection geometry, vehicle direction, door hinges and persistent prop states.
+   - Each panel ID is one clean single-frame composition. Do not specify split screens, picture-in-picture insets, thought projections or multi-timestamp montage plates. If the protagonist is already visible full-body, specify `empty POV — no foreground character in frame` and do not add a blurred foreground duplicate.
 4. Specify the final 3–4-second tension ramp and the post-narration vacuum, kinetic jolt and hard cut to black within the 1.0–1.5-second tail.
-5. Deliver the arc plan, episode `brief.md`, script and continuity updates; flag unresolved exceptions and dependencies.
+5. Deliver the Pilot 01 brief, script, clue ledger and scenario entry. Leave later scenarios open until pilot review.
 
 ## Handoff Update (pipeline-state.json)
 

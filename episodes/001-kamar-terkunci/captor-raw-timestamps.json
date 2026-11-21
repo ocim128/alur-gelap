@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "voiceId": "Charon",
+  "durationSec": 1.985,
+  "master": true,
+  "chunks": [
+    {
+      "index": 0,
+      "tag": null,
+      "text": "Jangan geser apa pun.",
+      "start": 0,
+      "end": 1.985,
+      "retries": 2,
+      "status": "failed"
+    }
+  ],
+  "words": [
+    {
+      "word": "Jangan",
+      "start": 0,
+      "end": 0.78,
+      "chunk": 0
+    },
+    {
+      "word": "geser",
+      "start": 0.78,
+      "end": 1.3,
+      "chunk": 0
+    },
+    {
+      "word": "apapun.",
+      "start": 1.3,
+      "end": 1.9,
+      "chunk": 0
+    }
+  ],
+  "sfx": []
+}

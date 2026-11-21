@@ -2,7 +2,7 @@
 
 This is a **future automation contract**, currently operated by the human owner. It does not itself spawn agents, publish, or override the owner's instructions.
 
-- **Single-Part Pilot Mode.** Start [Arc 02 Part 001](../arcs/02-jalur-samping-rel/arc.json) from the Part 007 night handoff. Assign Agent 01 only the Part 001 brief, script and a three-line arc premise. Lock that scope and run the pilot through audio, image generation, assembly and QA. Wait for the pilot review before commissioning Parts 002–007.
+- **Standalone Pilot 01.** Start from the [anthology collection](../arcs/02-skenario-bertahan/arc.json). Assign Agent 01 the pilot brief, Fair-Play Clue Ledger and script for one independent scenario. Run it through audio, image generation, assembly and QA. Review the pilot before commissioning another scenario.
 
 - Read the arc, brief, prior handoff, current `pipeline-state.json`, [studio sequence](README.md) and role contracts. Invoke each role in a fresh chat with `Read agents/<role>.md and execute your stage for episodes/<slug>.`
 - Route **01 [per arc] → 02 [only if narration must be generated/prepared] → 03 → 04 → 05 [single post-MP4 audit] → Human Publish**. Skip 02 for Arc 01 Episodes 003–007: the owner accepts the existing Investigator takes. Agent 04 handles any missing cue-sheet SFX. An optional early contact-sheet audit for complex vehicles is advisory and does not replace the post-MP4 gate.

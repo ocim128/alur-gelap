@@ -1,0 +1,114 @@
+{
+  "source": "episodes\\001-kamar-terkunci\\narration-investigator.mp3",
+  "output": "episodes\\001-kamar-terkunci\\narration-prepared.mp3",
+  "sourceDurationSec": 132.205,
+  "preparedDurationSec": 136.765,
+  "speechEndSec": 135.535,
+  "silenceThresholdDb": -38,
+  "retainedGapSec": 0.5,
+  "crossfadeSec": 0.01,
+  "tighteningCuts": [
+    {
+      "start": 26.597,
+      "end": 26.867
+    },
+    {
+      "start": 56.297,
+      "end": 56.497
+    },
+    {
+      "start": 75.191,
+      "end": 75.505
+    },
+    {
+      "start": 77.554,
+      "end": 77.868
+    },
+    {
+      "start": 83.432,
+      "end": 83.828
+    },
+    {
+      "start": 109.894,
+      "end": 110.204
+    },
+    {
+      "start": 113.392,
+      "end": 113.891
+    },
+    {
+      "start": 121.46,
+      "end": 121.855
+    },
+    {
+      "start": 125.726,
+      "end": 125.993
+    }
+  ],
+  "insertedPauses": [
+    {
+      "name": "captor-line-gap",
+      "rawSourceSec": 8.28,
+      "insertedSilenceSec": 2.6
+    },
+    {
+      "name": "rewind-gap",
+      "rawSourceSec": 51.97,
+      "insertedSilenceSec": 0.4
+    },
+    {
+      "name": "reset-silence",
+      "rawSourceSec": 56.1,
+      "insertedSilenceSec": 1.5
+    },
+    {
+      "name": "pre-hatch-dread-silence",
+      "rawSourceSec": 102.72,
+      "insertedSilenceSec": 2
+    }
+  ],
+  "timelinePlacement": {
+    "captorCue": {
+      "asset": "public/assets/001-kamar-terkunci/captor-muffled.wav",
+      "cueStartSec": 8.5,
+      "durationSec": 2.03,
+      "cueEndSec": 10.53,
+      "surroundingSilenceRangeSec": [
+        7.92,
+        11.24
+      ],
+      "marginBeforeSec": 0.58,
+      "marginAfterSec": 0.71,
+      "note": "Zero overlap against narrator speech."
+    },
+    "rewindGap": {
+      "gapStartSec": 53.81,
+      "gapEndSec": 55.19,
+      "gapDurationSec": 1.38,
+      "rewindWhooshDurationSec": 0.4
+    },
+    "resetDreadSilence": {
+      "silenceStartSec": 58.59,
+      "silenceEndSec": 60.61,
+      "silenceDurationSec": 2.02
+    },
+    "preHatchDreadSilence": {
+      "silenceStartSec": 105.726,
+      "silenceEndSec": 107.726,
+      "silenceDurationSec": 2
+    }
+  },
+  "runtimeBudget": {
+    "preNarrationTitleAndRoomToneSec": 1.8,
+    "narrationTrackDurationSec": 136.765,
+    "spokenSpeechEndSec": 135.535,
+    "badBranchAftermathHoldSec": 2,
+    "cleanBlackoutTailSec": 3.5,
+    "measuredTotalCutDurationSec": 142.835,
+    "targetWindowSec": [
+      140,
+      165
+    ]
+  },
+  "notes": "Assembled on continuous PCM sample timeline; zero playback speed change; strictly monotonic PTS verified by ffprobe across all packets."
+}

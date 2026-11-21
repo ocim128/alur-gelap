@@ -1,0 +1,138 @@
+{
+  "version": 1,
+  "voiceId": "Charon",
+  "voiceName": "Charon",
+  "provider": "gemini-cloud",
+  "model": "gemini-3.8-flash-tts",
+  "master": true,
+  "masterFilter": "highpass=f=85,equalizer=f=140:t=q:w=1.2:g=1,equalizer=f=450:t=q:w=1.5:g=-1,equalizer=f=3200:t=q:w=1.2:g=1,loudnorm=I=-14:LRA=6:TP=-1.5,aformat=sample_fmts=s16",
+  "asrModel": "small",
+  "generatedAt": "2026-11-21T14:25:22.119Z",
+  "passed": false,
+  "totalChunks": 1,
+  "verifiedChunks": 0,
+  "warningChunks": 0,
+  "failedChunks": 1,
+  "plannedDurationSec": 1.985,
+  "finalAlignment": {
+    "transcript": "Jangan geser apapun.",
+    "mismatches": [],
+    "passed": true
+  },
+  "audioQuality": {
+    "integratedLufs": -17.5,
+    "loudnessRangeLu": 0,
+    "noiseFloorDbfs": -18.4,
+    "targets": {
+      "integratedLufs": -14,
+      "loudnessRangeLu": [
+        5,
+        7
+      ]
+    }
+  },
+  "chunks": [
+    {
+      "index": 0,
+      "tag": null,
+      "text": "Jangan geser apa pun.",
+      "retries": 2,
+      "status": "failed",
+      "bestSimilarity": 0.974,
+      "bestWordRatio": 1,
+      "acceptedAttempt": 0,
+      "attempts": [
+        {
+          "seed": 0,
+          "wordRatio": 1,
+          "similarity": 0.974,
+          "wpm": 121,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: last word missing, truncated, or has invalid timestamps",
+            "last word missing, truncated, or has invalid timestamps"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Jangan geser apapun.",
+          "mismatches": [],
+          "endTruncated": true,
+          "rawTranscript": "Jangan geser apapun.",
+          "rawMismatches": [],
+          "rawEndTruncated": true,
+          "rawReasons": [
+            "last word missing, truncated, or has invalid timestamps"
+          ]
+        },
+        {
+          "seed": 1,
+          "wordRatio": 0.667,
+          "similarity": 0.923,
+          "wpm": 108,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.67): heard \"jangan keser apapun\"",
+            "raw: last word missing, truncated, or has invalid timestamps",
+            "raw: char similarity 0.92 < 0.94",
+            "raw: 95 wpm outside 130±25%",
+            "word mismatch (ratio 0.67): heard \"jangan keser apapun\"",
+            "last word missing, truncated, or has invalid timestamps",
+            "char similarity 0.92 < 0.94"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Jangan keser apapun.",
+          "mismatches": [
+            {
+              "expected": "geser",
+              "heard": "keser"
+            }
+          ],
+          "endTruncated": true,
+          "rawTranscript": "Jangan keser apapun.",
+          "rawMismatches": [
+            {
+              "expected": "geser",
+              "heard": "keser"
+            }
+          ],
+          "rawEndTruncated": true,
+          "rawReasons": [
+            "word mismatch (ratio 0.67): heard \"jangan keser apapun\"",
+            "last word missing, truncated, or has invalid timestamps",
+            "char similarity 0.92 < 0.94",
+            "95 wpm outside 130±25%"
+          ]
+        },
+        {
+          "seed": 2,
+          "wordRatio": 1,
+          "similarity": 0.974,
+          "wpm": 111,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: last word missing, truncated, or has invalid timestamps",
+            "last word missing, truncated, or has invalid timestamps"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Jangan geser apapun.",
+          "mismatches": [],
+          "endTruncated": true,
+          "rawTranscript": "Jangan geser apapun.",
+          "rawMismatches": [],
+          "rawEndTruncated": true,
+          "rawReasons": [
+            "last word missing, truncated, or has invalid timestamps"
+          ]
+        }
+      ]
+    }
+  ]
+}

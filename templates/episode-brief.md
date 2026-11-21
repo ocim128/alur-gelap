@@ -1,27 +1,39 @@
 # Episode brief — [episode ID and working title]
 
-Copy this into `episodes/<episode-id>-<slug>/brief.md`. Complete each step before starting the next.
+Copy this into `episodes/<slug>/brief.md`. Complete each step before starting the next.
 
-## Arc Context
+## Standalone Scenario
 
-- **Arc ID** — [ID and link to `arcs/<arc-id>/arc.json`]
-- **Part and scope** — [Part 001 Pilot or later approved part. In Single-Part Pilot Mode, add a three-line arc premise and scope the brief to Part 001.]
-- **Pipeline Version (v2)** — [set manifest `pipelineVersion: 2` for Arc 02 onward]
-- **Target Runtime (1.5–3.5m)** — [90–210 s target, including silence and final tail]
-- **Entry State** — [clock, inventory and location from the preceding exit, or the established opening state for Episode 1]
-- **Exit State** — [clock, inventory, location and ending hook to write back to the arc record once the cut is accepted]
-- **Locked Character Sheet Paths** — [public-relative paths from `characters[].sheetPath` in the arc record]
+- **Collection and scenario** — [collection link and independent scenario title. Start with Pilot 01 only.]
+- **Pipeline Version (v2)** — [set manifest `pipelineVersion: 2`]
+- **Target Runtime (2.0–3.0m)** — [120–180 s, including silence and final tail]
+- **Setting and opening state** — [fresh location, immediate trap, stakes or timer, and objects available at the start]
+- **Protagonist silhouette** — [fresh identity, shape and clothing. Link the scenario's character sheet when available.]
+- **Self-contained resolution** — [how this video resolves its puzzle]
 
-Read the record before writing. If the story changes the carried state, show how it changed. Set the manifest’s `arcEpisode` to the episode number and copy the sheet paths into `characterSheets`.
+Use only the clues and context established within this video. Record the scenario's character sheet in the asset handoff.
 
 ## 1. Write the script
 
-- **Narrative Engine (Branch-Rewind | Earned Consequence)** — [one or both]
-- **Core Dilemma & Bad-Decision Payoff** — [temptation, choice and visible consequence. For rewind, mark the reset and harder path with a cost. For earned consequence, name the immediate or permanent cost.]
-- **Survivor** — [locked identity and visual traits from the arc, and the survivor’s goal in this episode]. Keep the Indonesian narration in second person, using `kamu` and forms like `mobilmu`. Rotate protagonists at the next arc on the same outbreak timeline.
-- **First sentence** — [immediate emergency and survival rule that both read within three seconds for a first-time FYP viewer]. Use the opening scene, `TimestampBadge` and `PERSEDIAAN` for the 20% serialized continuity.
-- **Spoken script** — [link and count]. Target roughly **200–480 spoken Indonesian words**. Let decisions and consequences carry the story instead of numbered survival lectures.
-- **Story beats** — [hook in the first three seconds, choice, consequence, survival cost and final reveal]
+- **Narrative engine** — Branch-Rewind. Earned consequences can add pressure or cost.
+- **Core Dilemma & Bad-Decision Payoff** — [normal instinct, lethal outcome and planted physical cause. Name the harder escape and its complication.]
+- **First sentence** — [immediate trap and stakes that read within three seconds for a first-time viewer]
+- **Spoken script** — [link and count]. Use Bahasa Bayi with short everyday Indonesian sentences. Let the clues, action and silence set the word count.
+
+| Approximate time | Story beat |
+| --- | --- |
+| 0:00–0:30 | Hook, stakes or timer, and planted environment |
+| 0:30–1:15 | Tempting bad decision, explained physical cause and lethal red/amber outcome |
+| 1:15–2:30 | `branchRewind`, multi-step escape using the planted clues and a pressure complication |
+| 2:30–2:50 | Earned escape or logical twist that recontextualizes the opening |
+
+### Fair-Play Clue Ledger
+
+Complete the ledger for every physical cause of the bad outcome and every object or detail used in the escape. Plant each one naturally before the decision or danger. Let the viewer see it or pick it up casually before revealing its purpose.
+
+| Clue ID | Planted at Panel/Line (Setup) | How It Pays Off (Bad Outcome or Smart Escape) |
+| --- | --- | --- |
+| [ID and physical detail] | [Opening panel and/or line where the clue is readable] | [Outcome or escape step that depends on it] |
 
 ## 2. Lock one ShortZ master
 
@@ -61,7 +73,7 @@ For a 2–3 minute cut, plan **roughly 16–26 purposeful 9:16 panels** in Urban
 
 ## 4. Assemble and review
 
-- **Composition** — [ID, manifest, FPS, frame duration, 9:16 dimensions, output version and preview]. Measure the cut against the **90–210 s** target.
+- **Composition** — [ID, manifest, FPS, frame duration, 9:16 dimensions, output version and preview]. Measure the cut against the **120–180 s** target.
 - **Opening cover** — Set `openingTitle` to [3–4 punchy, conversational words]. Show it **00:00.0–00:01.8** in the upper center of the centered **3:4** safe zone. Use **00:00.2** for the TikTok cover. Flash-frame thumbnails are prohibited.
 - **Captions and HUD** — Align to the locked narration. Record matching numeric strings such as `60%`, `03:00` or `PUKUL 3 PAGI`.
 - **Review and delivery** — [validator result, review link and export path if requested]. Complete the [pre-publish review](review.md) and record any owner feedback or decision.

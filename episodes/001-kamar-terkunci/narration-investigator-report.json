@@ -1,0 +1,1401 @@
+{
+  "version": 1,
+  "voiceId": "voice_71a5a701-796e-421d-840e-0adc00b0816a",
+  "voiceName": "voice_71a5a701-796e-421d-840e-0adc00b0816a",
+  "provider": "gemini-cloud",
+  "model": "gemini-3.8-flash-tts",
+  "master": true,
+  "masterFilter": "highpass=f=85,equalizer=f=140:t=q:w=1.2:g=1,equalizer=f=450:t=q:w=1.5:g=-1,equalizer=f=3200:t=q:w=1.2:g=1,loudnorm=I=-14:LRA=6:TP=-1.5,aformat=sample_fmts=s16",
+  "asrModel": "small",
+  "generatedAt": "2026-11-21T14:22:00.068Z",
+  "passed": false,
+  "totalChunks": 13,
+  "verifiedChunks": 3,
+  "warningChunks": 0,
+  "failedChunks": 10,
+  "plannedDurationSec": 132.205,
+  "finalAlignment": {
+    "transcript": "Kamu di kunci di kamar. Salah gerak. Tamat. Tiap 3 menit. Diangintip. Lalu duduk di kanan. Bawa kunci. Dan pisau. Ada tong dan gang di kiri. Kursi kayu berat di kotak kapur di lantai keramik. Handuknya bersudut biru. Jendela di atas pintu bukanya keluar. Pengaitnya serat. Kamu kepikiran buat nyeret kursi ke bawah jendela, cepat kan? Tapi begitu kaki kursinya gesek ramik, suaranya keras banget. Orang itu cuma duduk 3 meter dari pintu. Dia langsung lari balik, buka kunci dan masuk. Sebelum kamu sempat kabur, pisaunya sudah kena. Kamu jatuh dan gak bangun lagi. Balik lagi. Kali ini jangan seret kursinya, perhatiin handuk di atas kursi tadi, kamu bentang dulu di bawah cendela, baru angkat kursinya dan taruh di atas handuk, pelan-pelan. Jadi kaki kursi nggak beradu langsung sama keramik, kamu naik dan buka pengaitnya pelan-pelan. Seret banget, tapi akhirnya lepas, jendelanya tetap ditutup rapat. Dari luar tetap kelihatan tertutup. Belum sempat turun, kamu dengar langkah dan suara kunci. Dia balik, kamu langsung turun, angkat kursi ke kota Kapur. Lalu lipat handuknya seperti semula. Tunggu, sudut mirunya malah ngadep tembok. Kamu putar lagi ke arah pintu, lalu buru-buru duduk di tempatmu. Lubang pintu terbuka, dia lihat kamu, lihat kursi, lalu pergi ke kanan. Kamu berhasil bikin kamar ini kelihatan gak berubah. Sekarang kamu punya 3 menit lagi. Bentang handuk, angkat kursi ke bawah jendela, lalu naik. Kali ini kamu dorong jendelanya sampai terbuka. Kamu turun kaki dulu ketong, lalu lari ke kiri sampai jalan. Kamu Bebas",
+    "mismatches": [
+      {
+        "expected": "seret",
+        "heard": "serat"
+      },
+      {
+        "expected": "keramik",
+        "heard": "ramik"
+      },
+      {
+        "expected": "nggak",
+        "heard": "gak"
+      },
+      {
+        "expected": "jendela",
+        "heard": "cendela"
+      },
+      {
+        "expected": "kotak",
+        "heard": "kota"
+      },
+      {
+        "expected": "birunya",
+        "heard": "mirunya"
+      },
+      {
+        "expected": "nggak",
+        "heard": "gak"
+      }
+    ],
+    "passed": false
+  },
+  "audioQuality": {
+    "integratedLufs": -16.8,
+    "loudnessRangeLu": 3.9,
+    "noiseFloorDbfs": -20.1,
+    "targets": {
+      "integratedLufs": -14,
+      "loudnessRangeLu": [
+        5,
+        7
+      ]
+    }
+  },
+  "chunks": [
+    {
+      "index": 0,
+      "tag": null,
+      "text": "Kamu dikunci di kamar. Salah gerak, tamat. Tiap tiga menit, dia ngintip lalu duduk di kanan, bawa kunci dan pisau.",
+      "retries": 2,
+      "status": "failed",
+      "bestSimilarity": 0.995,
+      "bestWordRatio": 1,
+      "acceptedAttempt": 0,
+      "attempts": [
+        {
+          "seed": 0,
+          "wordRatio": 1,
+          "similarity": 0.995,
+          "wpm": 93,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: 91 wpm outside 130±25%",
+            "93 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Kamu di kunci di kamar. Salah gerak. Tamat. Tiap 3 menit. Dia ngintip. Lalu duduk di kanan. Bawa kunci dan pisau.",
+          "mismatches": [],
+          "endTruncated": false,
+          "rawTranscript": "Kamu di kunci di kamar. Salah gerak, tamat. Tiap 3 menit, dia ngintip. Lalu duduk di kanan. Bawa kunci dan pisau.",
+          "rawMismatches": [],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "91 wpm outside 130±25%"
+          ]
+        },
+        {
+          "seed": 1,
+          "wordRatio": 1,
+          "similarity": 0.995,
+          "wpm": 100,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: 97 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Kamu di kunci di kamar, salah gerak, tamat, tiap 3 menit, dia ngintip, lalu duduk di kanan, bawa kunci dan pisau.",
+          "mismatches": [],
+          "endTruncated": false,
+          "rawTranscript": "Kamu di kunci di kamar, salah gerak, tamat. Tiap 3 menit, dia ngintip, lalu duduk di kanan, bawa kunci dan pisau.",
+          "rawMismatches": [],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "97 wpm outside 130±25%"
+          ]
+        },
+        {
+          "seed": 2,
+          "wordRatio": 0.95,
+          "similarity": 0.986,
+          "wpm": 94,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: 93 wpm outside 130±25%",
+            "word mismatch (ratio 0.95): heard \"kamu di kunci di kamar salah gerak tamat diap 3 menit dia ngintip lalu duduk di \"",
+            "94 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Kamu di kunci di kamar, salah gerak, tamat. Diap 3 menit, dia ngintip, lalu duduk di kanan, bawa kunci dan pisau.",
+          "mismatches": [
+            {
+              "expected": "tiap",
+              "heard": "diap"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Kamu di kunci di kamar, salah gerak, tamat. Tiap 3 menit, dia ngintip, lalu duduk di kanan, bawa kunci dan pisau.",
+          "rawMismatches": [],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "93 wpm outside 130±25%"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "tag": null,
+      "text": "Ada tong dan gang di kiri. Kursi kayu berat di kotak kapur, di lantai keramik. Handuknya bersudut biru.",
+      "retries": 2,
+      "status": "verified",
+      "bestSimilarity": 1,
+      "bestWordRatio": 1,
+      "acceptedAttempt": 2,
+      "attempts": [
+        {
+          "seed": 0,
+          "wordRatio": 0.944,
+          "similarity": 0.995,
+          "wpm": 113,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.94): heard \"ada tong dan gang di kiri kursi kayu berat di kota kapur di lantai keramik handu\"",
+            "word mismatch (ratio 0.94): heard \"ada tong dan gang di kiri kursi kayu berat di kota kapur di lantai keramik handu\""
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Ada tong dan gang di kiri, kursi kayu berat di kota Kapur, di lantai keramik. Handuknya bersudut biru.",
+          "mismatches": [
+            {
+              "expected": "kotak",
+              "heard": "kota"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Ada tong dan gang di kiri, kursi kayu berat di kota Kapur, di lantai keramik. Handuknya bersudut biru.",
+          "rawMismatches": [
+            {
+              "expected": "kotak",
+              "heard": "kota"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.94): heard \"ada tong dan gang di kiri kursi kayu berat di kota kapur di lantai keramik handu\""
+          ]
+        },
+        {
+          "seed": 1,
+          "wordRatio": 0.944,
+          "similarity": 0.995,
+          "wpm": 119,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.94): heard \"ada tong dan gang di kiri kursi kayu berat di kota kapur di lantai keramik handu\"",
+            "word mismatch (ratio 0.94): heard \"ada tong dan gang di kiri kursi kayu berat di kota kapur di lantai keramik handu\""
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Ada tong dan gang di kiri. Kursi kayu berat di kota Kapur, di lantai keramik, handuknya bersudut biru.",
+          "mismatches": [
+            {
+              "expected": "kotak",
+              "heard": "kota"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Ada tong dan gang di kiri. Kursi kayu berat di kota Kapur, di lantai keramik. Handuknya bersudut biru.",
+          "rawMismatches": [
+            {
+              "expected": "kotak",
+              "heard": "kota"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.94): heard \"ada tong dan gang di kiri kursi kayu berat di kota kapur di lantai keramik handu\""
+          ]
+        },
+        {
+          "seed": 2,
+          "wordRatio": 1,
+          "similarity": 1,
+          "wpm": 123,
+          "expectedWpm": 130,
+          "passed": true,
+          "reasons": [],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Ada tong dan gang di kiri, kursi kayu berat di kotak kapur, di lantai keramik, handuknya bersudut biru.",
+          "mismatches": [],
+          "endTruncated": false,
+          "rawTranscript": "Ada tong dan gang di kiri, kursi kayu berat di kotak kapur di lantai keramik, handuknya bersudut biru.",
+          "rawMismatches": [],
+          "rawEndTruncated": false,
+          "rawReasons": []
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "tag": null,
+      "text": "Jendela di atas pintu bukanya ke luar, pengaitnya seret. Kamu kepikiran buat nyeret kursi ke bawah jendela. Cepat, kan?",
+      "retries": 2,
+      "status": "failed",
+      "bestSimilarity": 0.978,
+      "bestWordRatio": 0.889,
+      "acceptedAttempt": 1,
+      "attempts": [
+        {
+          "seed": 0,
+          "wordRatio": 0.833,
+          "similarity": 0.974,
+          "wpm": 120,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.83): heard \"jendela di atas pintu bukannya keluar pengaitnya serat kamu kepikiran buat nyare\"",
+            "word mismatch (ratio 0.83): heard \"jendela di atas pintu bukannya keluar pengaitnya serat kamu kepikiran buat nyare\""
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Jendela di atas pintu bukannya keluar, pengaitnya serat. Kamu kepikiran buat nyaret kursi ke bawah jendela, cepat kan?",
+          "mismatches": [
+            {
+              "expected": "bukanya",
+              "heard": "bukannya"
+            },
+            {
+              "expected": "seret",
+              "heard": "serat"
+            },
+            {
+              "expected": "nyeret",
+              "heard": "nyaret"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Jendela di atas pintu, bukannya keluar, pengaitnya serat. Kamu kepikiran buat nyaret kursi ke bawah jendela. Cepat kan?",
+          "rawMismatches": [
+            {
+              "expected": "bukanya",
+              "heard": "bukannya"
+            },
+            {
+              "expected": "seret",
+              "heard": "serat"
+            },
+            {
+              "expected": "nyeret",
+              "heard": "nyaret"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.83): heard \"jendela di atas pintu bukannya keluar pengaitnya serat kamu kepikiran buat nyare\""
+          ]
+        },
+        {
+          "seed": 1,
+          "wordRatio": 0.889,
+          "similarity": 0.978,
+          "wpm": 122,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.89): heard \"jendela di atas pintu bukanya keluar pengaitnya serat kamu kepikiran buat nyered\"",
+            "word mismatch (ratio 0.89): heard \"jendela di atas pintu bukanya keluar pengaitnya serat kamu kepikiran buat nyered\""
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Jendela di atas pintu bukanya keluar, pengaitnya serat. Kamu kepikiran buat nyered kursi ke bawah jendela. Cepat kan?",
+          "mismatches": [
+            {
+              "expected": "seret",
+              "heard": "serat"
+            },
+            {
+              "expected": "nyeret",
+              "heard": "nyered"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Jendela di atas pintu bukanya keluar, pengaitnya serat. Kamu kepikiran buat nyered kursi ke bawah jendela. Cepat kan?",
+          "rawMismatches": [
+            {
+              "expected": "seret",
+              "heard": "serat"
+            },
+            {
+              "expected": "nyeret",
+              "heard": "nyered"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.89): heard \"jendela di atas pintu bukanya keluar pengaitnya serat kamu kepikiran buat nyered\""
+          ]
+        },
+        {
+          "seed": 2,
+          "wordRatio": 0.882,
+          "similarity": 0.978,
+          "wpm": 121,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.88): heard \"jendela di atas pintu bukannya keluar pengaitnya serat kamu kepikiran buat nyere\"",
+            "raw: last word missing, truncated, or has invalid timestamps",
+            "word mismatch (ratio 0.88): heard \"jendela di atas pintu bukannya keluar pengaitnya serat kamu kepikiran buat nyere\"",
+            "last word missing, truncated, or has invalid timestamps"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Jendela di atas pintu, bukannya keluar, pengaitnya serat. Kamu kepikiran buat nyeret kursi ke bawah jendela. Cepatkan.",
+          "mismatches": [
+            {
+              "expected": "bukanya",
+              "heard": "bukannya"
+            },
+            {
+              "expected": "seret",
+              "heard": "serat"
+            }
+          ],
+          "endTruncated": true,
+          "rawTranscript": "Jendela di atas pintu, bukannya keluar, pengaitnya serat, kamu kepikiran buat nyeret kursi ke bawah jendela. Cepatkan.",
+          "rawMismatches": [
+            {
+              "expected": "bukanya",
+              "heard": "bukannya"
+            },
+            {
+              "expected": "seret",
+              "heard": "serat"
+            }
+          ],
+          "rawEndTruncated": true,
+          "rawReasons": [
+            "word mismatch (ratio 0.88): heard \"jendela di atas pintu bukannya keluar pengaitnya serat kamu kepikiran buat nyere\"",
+            "last word missing, truncated, or has invalid timestamps"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "tag": null,
+      "text": "Tapi begitu kaki kursinya gesek keramik, suaranya keras banget. Orang itu cuma duduk tiga meter dari pintu. Dia langsung lari balik, buka kunci, dan masuk.",
+      "retries": 2,
+      "status": "failed",
+      "bestSimilarity": 0.997,
+      "bestWordRatio": 0.96,
+      "acceptedAttempt": 0,
+      "attempts": [
+        {
+          "seed": 0,
+          "wordRatio": 0.96,
+          "similarity": 0.997,
+          "wpm": 116,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.96): heard \"tapi begitu kaki kursinya gesek ramik suaranya keras banget orang itu cuma duduk\"",
+            "word mismatch (ratio 0.96): heard \"tapi begitu kaki kursinya gesek kramik suaranya keras banget orang itu cuma dudu\""
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Tapi begitu kaki kursinya gesek kramik, suaranya keras banget. Orang itu cuma duduk 3 meter dari pintu. Dia langsung lari balik, buka kunci dan masuk.",
+          "mismatches": [
+            {
+              "expected": "keramik",
+              "heard": "kramik"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Tapi begitu kaki kursinya gesek ramik, suaranya keras banget. Orang itu cuma duduk 3 meter dari pintu. Dia langsung lari balik, buka kunci dan masuk.",
+          "rawMismatches": [
+            {
+              "expected": "keramik",
+              "heard": "ramik"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.96): heard \"tapi begitu kaki kursinya gesek ramik suaranya keras banget orang itu cuma duduk\""
+          ]
+        },
+        {
+          "seed": 1,
+          "wordRatio": 0.96,
+          "similarity": 0.986,
+          "wpm": 110,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.96): heard \"tapi begitu kaki kursinya gesek ramek suaranya keras banget orang itu cuma duduk\"",
+            "word mismatch (ratio 0.96): heard \"tapi begitu kaki kursinya gesek ramek suaranya keras banget orang itu cuma duduk\""
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Tapi begitu kaki kursinya gesek ramek, suaranya keras banget, orang itu cuma duduk 3 meter dari pintu, dia langsung lari balik, buka kunci, dan masuk.",
+          "mismatches": [
+            {
+              "expected": "keramik",
+              "heard": "ramek"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Tapi begitu kaki kursinya gesek ramek, suaranya keras banget, orang itu cuma duduk 3 meter dari pintu. Dia langsung lari balik, buka kunci, dan masuk.",
+          "rawMismatches": [
+            {
+              "expected": "keramik",
+              "heard": "ramek"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.96): heard \"tapi begitu kaki kursinya gesek ramek suaranya keras banget orang itu cuma duduk\""
+          ]
+        },
+        {
+          "seed": 2,
+          "wordRatio": 0.96,
+          "similarity": 0.993,
+          "wpm": 118,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.96): heard \"tapi begitu kaki kursinya gesek ramik suaranya keras banget orang itu cuma duduk\"",
+            "word mismatch (ratio 0.96): heard \"tapi begitu kaki kursinya gesek ramik suaranya keras banget orang itu cuma duduk\""
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Tapi begitu kaki kursinya gesek ramik, suaranya keras banget, orang itu cuma duduk 3 meter dari pintu, dia langsung lari balik, buka kunci, dan masuk.",
+          "mismatches": [
+            {
+              "expected": "keramik",
+              "heard": "ramik"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Tapi begitu kaki kursinya gesek ramik, suaranya keras banget, orang itu cuma duduk 3 meter dari pintu, dia langsung lari balik, buka kunci, dan masuk.",
+          "rawMismatches": [
+            {
+              "expected": "keramik",
+              "heard": "ramik"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.96): heard \"tapi begitu kaki kursinya gesek ramik suaranya keras banget orang itu cuma duduk\""
+          ]
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "tag": null,
+      "text": "Sebelum kamu sempat kabur, pisaunya sudah kena. Kamu jatuh dan nggak bangun lagi. Balik lagi.",
+      "retries": 2,
+      "status": "failed",
+      "bestSimilarity": 1,
+      "bestWordRatio": 1,
+      "acceptedAttempt": 1,
+      "attempts": [
+        {
+          "seed": 0,
+          "wordRatio": 0.933,
+          "similarity": 0.983,
+          "wpm": 108,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.93): heard \"sebelum kamu sempat kabur pisau nya sudah kena kamu jatuh dan gak bangun lagi ba\"",
+            "word mismatch (ratio 0.93): heard \"sebelum kamu sempat kabur pisau nya sudah kena kamu jatuh dan gak bangun lagi ba\""
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Sebelum kamu sempat kabur, pisau-nya sudah kena, kamu jatuh dan gak bangun lagi. Balik lagi.",
+          "mismatches": [
+            {
+              "expected": "nggak",
+              "heard": "gak"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Sebelum kamu sempat kabur, pisau-nya sudah kena, kamu jatuh dan gak bangun lagi. Balik lagi.",
+          "rawMismatches": [
+            {
+              "expected": "nggak",
+              "heard": "gak"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.93): heard \"sebelum kamu sempat kabur pisau nya sudah kena kamu jatuh dan gak bangun lagi ba\""
+          ]
+        },
+        {
+          "seed": 1,
+          "wordRatio": 1,
+          "similarity": 1,
+          "wpm": 104,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.93): heard \"sebelum kamu sempat kabur pisaunya sudah kena kamu jatuh dan gak bangun lagi bal\""
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Sebelum kamu sempat kabur, pisaunya sudah kena, kamu jatuh dan nggak bangun lagi. Balik lagi.",
+          "mismatches": [],
+          "endTruncated": false,
+          "rawTranscript": "Sebelum kamu sempat kabur, pisaunya sudah kena, kamu jatuh dan gak bangun lagi. Balik lagi.",
+          "rawMismatches": [
+            {
+              "expected": "nggak",
+              "heard": "gak"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.93): heard \"sebelum kamu sempat kabur pisaunya sudah kena kamu jatuh dan gak bangun lagi bal\""
+          ]
+        },
+        {
+          "seed": 2,
+          "wordRatio": 0.8,
+          "similarity": 0.966,
+          "wpm": 102,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.80): heard \"sebelum kamu sempat kabur pisaunya sudah kenang kamu catuh dan gak bangun lagi b\"",
+            "raw: 97 wpm outside 130±25%",
+            "word mismatch (ratio 0.80): heard \"sebelum kamu sempat kabur pisaunya sudah kenang kamu catuh dan gak bangun lagi b\""
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Sebelum kamu sempat kabur, pisaunya sudah kenang, kamu catuh dan gak bangun lagi. Balik lagi.",
+          "mismatches": [
+            {
+              "expected": "kena",
+              "heard": "kenang"
+            },
+            {
+              "expected": "jatuh",
+              "heard": "catuh"
+            },
+            {
+              "expected": "nggak",
+              "heard": "gak"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Sebelum kamu sempat kabur, pisaunya sudah kenang, kamu catuh dan gak bangun lagi. Balik lagi.",
+          "rawMismatches": [
+            {
+              "expected": "kena",
+              "heard": "kenang"
+            },
+            {
+              "expected": "jatuh",
+              "heard": "catuh"
+            },
+            {
+              "expected": "nggak",
+              "heard": "gak"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.80): heard \"sebelum kamu sempat kabur pisaunya sudah kenang kamu catuh dan gak bangun lagi b\"",
+            "97 wpm outside 130±25%"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "tag": null,
+      "text": "Kali ini, jangan seret kursinya. Perhatiin handuk di atas kursi tadi. Kamu bentang dulu di bawah jendela.",
+      "retries": 2,
+      "status": "failed",
+      "bestSimilarity": 0.99,
+      "bestWordRatio": 0.941,
+      "acceptedAttempt": 1,
+      "attempts": [
+        {
+          "seed": 0,
+          "wordRatio": 0.938,
+          "similarity": 0.985,
+          "wpm": 115,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.94): heard \"kali ini jangan seret kursinya perhatiin handuk di atas kursi tadi kamu bentang \"",
+            "raw: last word missing, truncated, or has invalid timestamps",
+            "word mismatch (ratio 0.94): heard \"kali ini jangan seret kursinya perhatiin handuk di atas kursi tadi kamu bentang \"",
+            "last word missing, truncated, or has invalid timestamps"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Kali ini, jangan seret kursinya, perhatiin handuk di atas kursi tadi, kamu bentang dulu dibawah cendela.",
+          "mismatches": [
+            {
+              "expected": "jendela",
+              "heard": "cendela"
+            }
+          ],
+          "endTruncated": true,
+          "rawTranscript": "Kali ini jangan seret kursinya, perhatiin handuk di atas kursi tadi, kamu bentang dulu dibawah cendela.",
+          "rawMismatches": [
+            {
+              "expected": "jendela",
+              "heard": "cendela"
+            }
+          ],
+          "rawEndTruncated": true,
+          "rawReasons": [
+            "word mismatch (ratio 0.94): heard \"kali ini jangan seret kursinya perhatiin handuk di atas kursi tadi kamu bentang \"",
+            "last word missing, truncated, or has invalid timestamps"
+          ]
+        },
+        {
+          "seed": 1,
+          "wordRatio": 0.941,
+          "similarity": 0.99,
+          "wpm": 128,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.94): heard \"kali ini jangan seret kursinya perhatiin handuk di atas kursi tadi kamu bentang \"",
+            "raw: last word missing, truncated, or has invalid timestamps",
+            "word mismatch (ratio 0.94): heard \"kali ini jangan seret kursinya perhatiin handuk di atas kursi tadi kamu bentang \"",
+            "last word missing, truncated, or has invalid timestamps"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Kali ini jangan seret kursinya, perhatiin handuk di atas kursi tadi, kamu bentang dulu di bawah cendela.",
+          "mismatches": [
+            {
+              "expected": "jendela",
+              "heard": "cendela"
+            }
+          ],
+          "endTruncated": true,
+          "rawTranscript": "Kali ini jangan seret kursinya, perhatiin handuk di atas kursi tadi, kamu bentang dulu di bawah cendela.",
+          "rawMismatches": [
+            {
+              "expected": "jendela",
+              "heard": "cendela"
+            }
+          ],
+          "rawEndTruncated": true,
+          "rawReasons": [
+            "word mismatch (ratio 0.94): heard \"kali ini jangan seret kursinya perhatiin handuk di atas kursi tadi kamu bentang \"",
+            "last word missing, truncated, or has invalid timestamps"
+          ]
+        },
+        {
+          "seed": 2,
+          "wordRatio": 0.941,
+          "similarity": 0.99,
+          "wpm": 117,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.94): heard \"kali ini jangan seret kursinya perhatiin handuk di atas kursi tadi kamu bentang \"",
+            "raw: last word missing, truncated, or has invalid timestamps",
+            "word mismatch (ratio 0.94): heard \"kali ini jangan seret kursinya perhatiin handuk di atas kursi tadi kamu bentang \"",
+            "last word missing, truncated, or has invalid timestamps"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Kali ini, jangan seret kursinya, perhatiin handuk di atas kursi tadi, kamu bentang dulu di bawah cendela.",
+          "mismatches": [
+            {
+              "expected": "jendela",
+              "heard": "cendela"
+            }
+          ],
+          "endTruncated": true,
+          "rawTranscript": "Kali ini, jangan seret kursinya, perhatiin handuk di atas kursi tadi, kamu bentang dulu di bawah cendela.",
+          "rawMismatches": [
+            {
+              "expected": "jendela",
+              "heard": "cendela"
+            }
+          ],
+          "rawEndTruncated": true,
+          "rawReasons": [
+            "word mismatch (ratio 0.94): heard \"kali ini jangan seret kursinya perhatiin handuk di atas kursi tadi kamu bentang \"",
+            "last word missing, truncated, or has invalid timestamps"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "tag": null,
+      "text": "Baru angkat kursinya dan taruh di atas handuk, pelan-pelan. Jadi kaki kursi nggak beradu langsung sama keramik. Kamu naik dan buka pengaitnya pelan-pelan.",
+      "retries": 2,
+      "status": "failed",
+      "bestSimilarity": 1,
+      "bestWordRatio": 1,
+      "acceptedAttempt": 0,
+      "attempts": [
+        {
+          "seed": 0,
+          "wordRatio": 1,
+          "similarity": 1,
+          "wpm": 123,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.96): heard \"baru angkat kursinya dan taruh di atas handuk pelan pelan jadi kaki kursi gak be\""
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Baru angkat kursinya, dan taruh di atas handuk, pelan-pelan. Jadi kaki kursi nggak beradu langsung sama keramik, kamu naik dan buka pengaitnya pelan-pelan.",
+          "mismatches": [],
+          "endTruncated": false,
+          "rawTranscript": "Baru angkat kursinya dan taruh di atas handuk pelan-pelan jadi kaki kursi gak beradu langsung sama keramik kamu naik dan buka pengaitnya pelan-pelan",
+          "rawMismatches": [
+            {
+              "expected": "nggak",
+              "heard": "gak"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.96): heard \"baru angkat kursinya dan taruh di atas handuk pelan pelan jadi kaki kursi gak be\""
+          ]
+        },
+        {
+          "seed": 1,
+          "wordRatio": 0.96,
+          "similarity": 0.997,
+          "wpm": 120,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.96): heard \"baru angkat kursinya dan taruh di atas handuk pelan pelan jadi kaki kursi nggak \"",
+            "word mismatch (ratio 0.96): heard \"baru angkat kursinya dan taruh di atas handuk pelan pelan jadi kaki kursi nggak \""
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Baru angkat kursinya dan taruh di atas handuk, pelan-pelan. Jadi kaki kursi nggak beradu langsung sama kramik. Kamu naik dan buka pengaitnya pelan-pelan.",
+          "mismatches": [
+            {
+              "expected": "keramik",
+              "heard": "kramik"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Baru angkat kursinya dan taruh di atas handuk, pelan-pelan. Jadi kaki kursi nggak beradu langsung sama kramik. Kamu naik dan buka pengaitnya pelan-pelan.",
+          "rawMismatches": [
+            {
+              "expected": "keramik",
+              "heard": "kramik"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.96): heard \"baru angkat kursinya dan taruh di atas handuk pelan pelan jadi kaki kursi nggak \""
+          ]
+        },
+        {
+          "seed": 2,
+          "wordRatio": 0.96,
+          "similarity": 0.993,
+          "wpm": 117,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.92): heard \"baru angkat kursinya dan taruh di atas handok pelan pelan jadi kaki kursi gak be\"",
+            "word mismatch (ratio 0.96): heard \"baru angkat kursinya dan taruh di atas handuk pelan pelan jadi kaki kursi gak be\""
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Baru angkat kursinya dan taruh di atas handuk, pelan-pelan. Jadi kaki kursi gak beradu langsung sama keramik. Kamu naik dan buka pengaitnya pelan-pelan.",
+          "mismatches": [
+            {
+              "expected": "nggak",
+              "heard": "gak"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Baru angkat kursinya dan taruh di atas handok, pelan-pelan. Jadi kaki kursi gak beradu langsung sama keramik. Kamu naik dan buka pengaitnya pelan-pelan.",
+          "rawMismatches": [
+            {
+              "expected": "handuk",
+              "heard": "handok"
+            },
+            {
+              "expected": "nggak",
+              "heard": "gak"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.92): heard \"baru angkat kursinya dan taruh di atas handok pelan pelan jadi kaki kursi gak be\""
+          ]
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "tag": null,
+      "text": "Seret banget, tapi akhirnya lepas. Jendelanya tetap ditutup rapat, dari luar tetap kelihatan tertutup. Belum sempat turun, kamu dengar langkah dan suara kunci.",
+      "retries": 2,
+      "status": "failed",
+      "bestSimilarity": 1,
+      "bestWordRatio": 1,
+      "acceptedAttempt": 2,
+      "attempts": [
+        {
+          "seed": 0,
+          "wordRatio": 0.957,
+          "similarity": 0.997,
+          "wpm": 95,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: 91 wpm outside 130±25%",
+            "word mismatch (ratio 0.96): heard \"seret banget tapi akhirnya lepas jendelannya tetap ditutup rapat dari luar tetap\"",
+            "95 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Seret banget, tapi akhirnya lepas. Jendelannya tetap ditutup rapat, dari luar tetap kelihatan tertutup. Belum sempat turun, kamu dengar langkah dan suara kunci.",
+          "mismatches": [
+            {
+              "expected": "jendelanya",
+              "heard": "jendelannya"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Seret banget, tapi akhirnya lepas, jendelanya tetap ditutup rapat, dari luar tetap kelihatan tertutup. Belum sempat turun, kamu dengar langkah dan suara kunci.",
+          "rawMismatches": [],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "91 wpm outside 130±25%"
+          ]
+        },
+        {
+          "seed": 1,
+          "wordRatio": 0.957,
+          "similarity": 0.993,
+          "wpm": 102,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.96): heard \"serat banget tapi akhirnya lepas jendelanya tetap ditutup rapat dari luar tetap \"",
+            "word mismatch (ratio 0.96): heard \"serat banget tapi akhirnya lepas jendelanya tetap ditutup rapat dari luar tetap \""
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Serat banget, tapi akhirnya lepas. Jendelanya tetap ditutup rapat, dari luar tetap kelihatan tertutup. Belum sempat turun, kamu dengar langkah dan suara kunci.",
+          "mismatches": [
+            {
+              "expected": "seret",
+              "heard": "serat"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Serat banget, tapi akhirnya lepas. Jendelanya tetap ditutup rapat, dari luar tetap kelihatan tertutup. Belum sempat turun, kamu dengar langkah dan suara kunci.",
+          "rawMismatches": [
+            {
+              "expected": "seret",
+              "heard": "serat"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.96): heard \"serat banget tapi akhirnya lepas jendelanya tetap ditutup rapat dari luar tetap \""
+          ]
+        },
+        {
+          "seed": 2,
+          "wordRatio": 1,
+          "similarity": 1,
+          "wpm": 96,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: 94 wpm outside 130±25%",
+            "96 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Seret banget, tapi akhirnya lepas, jendelanya tetap ditutup rapat, dari luar tetap kelihatan tertutup. Belum sempat turun, kamu dengar langkah dan suara kunci.",
+          "mismatches": [],
+          "endTruncated": false,
+          "rawTranscript": "Seret banget, tapi akhirnya lepas, jendelanya tetap ditutup rapat, dari luar tetap kelihatan tertutup. Belum sempat turun, kamu dengar langkah dan suara kunci.",
+          "rawMismatches": [],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "94 wpm outside 130±25%"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "tag": null,
+      "text": "Dia balik! Kamu langsung turun, angkat kursi ke kotak kapur, lalu lipat handuknya seperti semula. Tunggu.",
+      "retries": 2,
+      "status": "failed",
+      "bestSimilarity": 0.995,
+      "bestWordRatio": 0.938,
+      "acceptedAttempt": 0,
+      "attempts": [
+        {
+          "seed": 0,
+          "wordRatio": 0.938,
+          "similarity": 0.995,
+          "wpm": 126,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.94): heard \"dia balik kamu langsung turun angkat kursi ke kota kapur lalu lipat handuknya se\"",
+            "word mismatch (ratio 0.94): heard \"dia balik kamu langsung turun angkat kursi ke kota kapur lalu lipat handuknya se\""
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Dia balik. Kamu langsung turun, angkat kursi ke kota Kapur, lalu lipat handuknya seperti semula. Tunggu.",
+          "mismatches": [
+            {
+              "expected": "kotak",
+              "heard": "kota"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Dia balik. Kamu langsung turun, angkat kursi ke kota Kapur, lalu lipat handuknya seperti semula. Tunggu.",
+          "rawMismatches": [
+            {
+              "expected": "kotak",
+              "heard": "kota"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.94): heard \"dia balik kamu langsung turun angkat kursi ke kota kapur lalu lipat handuknya se\""
+          ]
+        },
+        {
+          "seed": 1,
+          "wordRatio": 0.938,
+          "similarity": 0.995,
+          "wpm": 126,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.94): heard \"dia balik kamu langsung turun angkat kursi ke kota kapur lalu lipat handuknya se\"",
+            "word mismatch (ratio 0.94): heard \"dia balik kamu langsung turun angkat kursi ke kota kapur lalu lipat handuknya se\""
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Dia balik. Kamu langsung turun. Angkat kursi ke kota Kapur, lalu lipat handuknya seperti semula. Tunggu.",
+          "mismatches": [
+            {
+              "expected": "kotak",
+              "heard": "kota"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Dia balik. Kamu langsung turun. Angkat kursi ke kota Kapur, lalu lipat handuknya seperti semula. Tunggu.",
+          "rawMismatches": [
+            {
+              "expected": "kotak",
+              "heard": "kota"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.94): heard \"dia balik kamu langsung turun angkat kursi ke kota kapur lalu lipat handuknya se\""
+          ]
+        },
+        {
+          "seed": 2,
+          "wordRatio": 0.938,
+          "similarity": 0.995,
+          "wpm": 119,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.94): heard \"dia balik kamu langsung turun angkat kursi ke kota kapur lalu lipat handuknya se\"",
+            "word mismatch (ratio 0.94): heard \"dia balik kamu langsung turun angkat kursi ke kota kapur lalu lipat handuknya se\""
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Dia balik. Kamu langsung turun, angkat kursi ke kota Kapur, lalu lipat handuknya seperti semula. Tunggu.",
+          "mismatches": [
+            {
+              "expected": "kotak",
+              "heard": "kota"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Dia balik, kamu langsung turun, angkat kursi ke kota Kapur, lalu lipat handuknya seperti semula. Tunggu.",
+          "rawMismatches": [
+            {
+              "expected": "kotak",
+              "heard": "kota"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.94): heard \"dia balik kamu langsung turun angkat kursi ke kota kapur lalu lipat handuknya se\""
+          ]
+        }
+      ]
+    },
+    {
+      "index": 9,
+      "tag": null,
+      "text": "Sudut birunya malah ngadep tembok. Kamu putar lagi ke arah pintu, lalu buru-buru duduk di tempatmu. Lubang pintu terbuka.",
+      "retries": 1,
+      "status": "verified",
+      "bestSimilarity": 1,
+      "bestWordRatio": 1,
+      "acceptedAttempt": 1,
+      "attempts": [
+        {
+          "seed": 0,
+          "wordRatio": 0.923,
+          "similarity": 0.991,
+          "wpm": 141,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.92): heard \"sudut birunya malah ngadep tembok kamu putar lagi karah pintu lalu buru buru dud\"",
+            "word mismatch (ratio 0.92): heard \"sudut birunya malah ngadep tembok kamu putar lagi karah pintu lalu buru buru dud\""
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Sudut birunya malah ngadep tembok, kamu putar lagi karah pintu, lalu buru-buru duduk di tempatmu, lubang pintu terbuka.",
+          "mismatches": [
+            {
+              "expected": "ke",
+              "heard": null
+            },
+            {
+              "expected": "arah",
+              "heard": "karah"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Sudut birunya malah ngadep tembok, kamu putar lagi karah pintu, lalu buru-buru duduk di tempatmu, lubang pintu terbuka.",
+          "rawMismatches": [
+            {
+              "expected": "ke",
+              "heard": null
+            },
+            {
+              "expected": "arah",
+              "heard": "karah"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.92): heard \"sudut birunya malah ngadep tembok kamu putar lagi karah pintu lalu buru buru dud\""
+          ]
+        },
+        {
+          "seed": 1,
+          "wordRatio": 1,
+          "similarity": 1,
+          "wpm": 134,
+          "expectedWpm": 130,
+          "passed": true,
+          "reasons": [],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Sudut birunya malah ngadep tembok, kamu putar lagi ke arah pintu, lalu buru-buru duduk di tempatmu. Lubang pintu terbuka.",
+          "mismatches": [],
+          "endTruncated": false,
+          "rawTranscript": "Sudut birunya malah ngadep tembok, kamu putar lagi ke arah pintu, lalu buru-buru duduk di tempatmu. Lubang pintu terbuka.",
+          "rawMismatches": [],
+          "rawEndTruncated": false,
+          "rawReasons": []
+        }
+      ]
+    },
+    {
+      "index": 10,
+      "tag": null,
+      "text": "Dia lihat kamu, lihat kursi, lalu pergi ke kanan. Kamu berhasil bikin kamar ini kelihatan nggak berubah. Sekarang kamu punya tiga menit lagi.",
+      "retries": 2,
+      "status": "failed",
+      "bestSimilarity": 0.992,
+      "bestWordRatio": 0.957,
+      "acceptedAttempt": 0,
+      "attempts": [
+        {
+          "seed": 0,
+          "wordRatio": 0.957,
+          "similarity": 0.992,
+          "wpm": 121,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.96): heard \"dia lihat kamu lihat kursi lalu pergi ke kanan kamu berhasil bikin kamar ini kel\"",
+            "word mismatch (ratio 0.96): heard \"dia lihat kamu lihat kursi lalu pergi ke kanan kamu berhasil bikin kamar ini kel\""
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Dia lihat kamu, lihat kursi, lalu pergi ke kanan. Kamu berhasil bikin kamar ini kelihatan gak berubah. Sekarang kamu punya 3 menit lagi.",
+          "mismatches": [
+            {
+              "expected": "nggak",
+              "heard": "gak"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Dia lihat kamu, lihat kursi, lalu pergi ke kanan. Kamu berhasil bikin kamar ini kelihatan gak berubah. Sekarang kamu punya 3 menit lagi.",
+          "rawMismatches": [
+            {
+              "expected": "nggak",
+              "heard": "gak"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.96): heard \"dia lihat kamu lihat kursi lalu pergi ke kanan kamu berhasil bikin kamar ini kel\""
+          ]
+        },
+        {
+          "seed": 1,
+          "wordRatio": 0.957,
+          "similarity": 0.992,
+          "wpm": 114,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.96): heard \"dia lihat kamu lihat kursi lalu pergi ke kanan kamu berhasil bikin kamar ini kel\"",
+            "word mismatch (ratio 0.96): heard \"dia lihat kamu lihat kursi lalu pergi ke kanan kamu berhasil bikin kamar ini kel\""
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Dia lihat kamu, lihat kursi, lalu pergi ke kanan. Kamu berhasil bikin kamar ini kelihatan gak berubah. Sekarang kamu punya 3 menit lagi.",
+          "mismatches": [
+            {
+              "expected": "nggak",
+              "heard": "gak"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Dia lihat kamu, lihat kursi, lalu pergi ke kanan. Kamu berhasil bikin kamar ini kelihatan gak berubah. Sekarang kamu punya 3 menit lagi.",
+          "rawMismatches": [
+            {
+              "expected": "nggak",
+              "heard": "gak"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.96): heard \"dia lihat kamu lihat kursi lalu pergi ke kanan kamu berhasil bikin kamar ini kel\""
+          ]
+        },
+        {
+          "seed": 2,
+          "wordRatio": 0.957,
+          "similarity": 0.992,
+          "wpm": 118,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.96): heard \"dia lihat kamu lihat kursi lalu pergi ke kanan kamu berhasil bikin kamar ini kel\"",
+            "word mismatch (ratio 0.96): heard \"dia lihat kamu lihat kursi lalu pergi ke kanan kamu berhasil bikin kamar ini kel\""
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Dia lihat kamu, lihat kursi, lalu pergi ke kanan. Kamu berhasil bikin kamar ini kelihatan gak berubah. Sekarang kamu punya 3 menit lagi.",
+          "mismatches": [
+            {
+              "expected": "nggak",
+              "heard": "gak"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Dia lihat kamu, lihat kursi, lalu pergi ke kanan. Kamu berhasil bikin kamar ini kelihatan gak berubah. Sekarang kamu punya 3 menit lagi.",
+          "rawMismatches": [
+            {
+              "expected": "nggak",
+              "heard": "gak"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.96): heard \"dia lihat kamu lihat kursi lalu pergi ke kanan kamu berhasil bikin kamar ini kel\""
+          ]
+        }
+      ]
+    },
+    {
+      "index": 11,
+      "tag": null,
+      "text": "Bentang handuk, angkat kursi ke bawah jendela, lalu naik. Kali ini kamu dorong jendelanya sampai terbuka. Kamu turun kaki dulu ke tong, lalu lari ke kiri sampai jalan.",
+      "retries": 0,
+      "status": "verified",
+      "bestSimilarity": 0.997,
+      "bestWordRatio": 1,
+      "acceptedAttempt": 0,
+      "attempts": [
+        {
+          "seed": 0,
+          "wordRatio": 1,
+          "similarity": 0.997,
+          "wpm": 123,
+          "expectedWpm": 130,
+          "passed": true,
+          "reasons": [],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Bentang handuk, angkat kursi ke bawah jendela, lalu naik. Kali ini, kamu dorong jendelanya sampai terbuka. Kamu turun kaki dulu ketong, lalu lari ke kiri sampai jalan.",
+          "mismatches": [],
+          "endTruncated": false,
+          "rawTranscript": "Bentang handuk, angkat kursi ke bawah jendela, lalu naik. Kali ini, kamu dorong jendelanya sampai terbuka. Kamu turun kaki dulu ketong, lalu lari ke kiri sampai jalan.",
+          "rawMismatches": [],
+          "rawEndTruncated": false,
+          "rawReasons": []
+        }
+      ]
+    },
+    {
+      "index": 12,
+      "tag": null,
+      "text": "Kamu bebas.",
+      "retries": 2,
+      "status": "failed",
+      "bestSimilarity": 1,
+      "bestWordRatio": 1,
+      "acceptedAttempt": 1,
+      "attempts": [
+        {
+          "seed": 0,
+          "wordRatio": 0.5,
+          "similarity": 0.8,
+          "wpm": 92,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: 63 wpm outside 130±25%",
+            "word mismatch (ratio 0.50): heard \"kamu bipas\"",
+            "last word missing, truncated, or has invalid timestamps",
+            "char similarity 0.80 < 0.94",
+            "92 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "KAMU BIPAS",
+          "mismatches": [
+            {
+              "expected": "bebas",
+              "heard": "bipas"
+            }
+          ],
+          "endTruncated": true,
+          "rawTranscript": "KAMU BEBAS",
+          "rawMismatches": [],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "63 wpm outside 130±25%"
+          ]
+        },
+        {
+          "seed": 1,
+          "wordRatio": 1,
+          "similarity": 1,
+          "wpm": 75,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: 55 wpm outside 130±25%",
+            "75 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Kamu bebas",
+          "mismatches": [],
+          "endTruncated": false,
+          "rawTranscript": "Kamu Bebas.",
+          "rawMismatches": [],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "55 wpm outside 130±25%"
+          ]
+        },
+        {
+          "seed": 2,
+          "wordRatio": 1,
+          "similarity": 1,
+          "wpm": 59,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: 48 wpm outside 130±25%",
+            "59 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Kamu Bebas.",
+          "mismatches": [],
+          "endTruncated": false,
+          "rawTranscript": "KAMU BEBAS",
+          "rawMismatches": [],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "48 wpm outside 130±25%"
+          ]
+        }
+      ]
+    }
+  ]
+}

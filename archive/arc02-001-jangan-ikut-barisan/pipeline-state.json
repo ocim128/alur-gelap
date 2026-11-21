@@ -1,0 +1,20 @@
+{
+  "brief": {
+    "status": "ready",
+    "notes": "Draft Part 001 brief and narasi.txt are ready for orchestrator review, not approved. 306 narration words plus 18 separate diegetic words; target 179 s is an estimate. Character details and sheet remain unapproved; accepted exit state must be recorded only after the cut is accepted. Parts 002–007 are not designed."
+  },
+  "audio": {
+    "status": "pending",
+    "notes": "Wait for brief pass. Generate the whole Investigator script in one ShortZ invocation; preserve master and timestamps, measure natural duration and fit dialogue, cue-sheet foley, two dread silences, 0.4 s rewind and the final tail. No take or listening review exists."
+  },
+  "images": {
+    "status": "pending",
+    "notes": "Wait for approved brief, required narration and a locked Arc 02 character sheet. Brief specifies east-facing wall/track/gap geometry, 22 unique panels, rain/foreground/palette rules, reset pose, chalk reveal and final-jolt continuity."
+  },
+  "render": {
+    "status": "pending",
+    "notes": "Proposed composition Arc02Part001JanganIkutBarisan; use v2 manifest on assembly. Synchronize the 0.4 s rewind and final-jolt audio/visual onset; measure actual duration and final mix. No manifest or export exists."
+  },
+  "audit": {"status": "pending", "notes": "Independent QA follows an assembled MP4; no review performed."},
+  "publish": {"status": "pending", "notes": "No publishing requested or authorized."}
+}

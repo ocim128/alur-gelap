@@ -1,0 +1,1624 @@
+{
+  "version": 1,
+  "voiceId": "voice_71a5a701-796e-421d-840e-0adc00b0816a",
+  "durationSec": 136.765,
+  "master": true,
+  "chunks": [
+    {
+      "index": 0,
+      "tag": null,
+      "text": "Kamu dikunci di kamar. Salah gerak, tamat. Tiap tiga menit, dia ngintip lalu duduk di kanan, bawa kunci dan pisau.",
+      "start": 0,
+      "end": 15.4,
+      "retries": 2,
+      "status": "failed"
+    },
+    {
+      "index": 1,
+      "tag": null,
+      "text": "Ada tong dan gang di kiri. Kursi kayu berat di kotak kapur, di lantai keramik. Handuknya bersudut biru.",
+      "start": 15.82,
+      "end": 24.18,
+      "retries": 2,
+      "status": "verified"
+    },
+    {
+      "index": 2,
+      "tag": null,
+      "text": "Jendela di atas pintu bukanya ke luar, pengaitnya seret. Kamu kepikiran buat nyeret kursi ke bawah jendela. Cepat, kan?",
+      "start": 24.74,
+      "end": 33.49,
+      "retries": 2,
+      "status": "failed"
+    },
+    {
+      "index": 3,
+      "tag": null,
+      "text": "Tapi begitu kaki kursinya gesek keramik, suaranya keras banget. Orang itu cuma duduk tiga meter dari pintu. Dia langsung lari balik, buka kunci, dan masuk.",
+      "start": 33.93,
+      "end": 46.63,
+      "retries": 2,
+      "status": "failed"
+    },
+    {
+      "index": 4,
+      "tag": null,
+      "text": "Sebelum kamu sempat kabur, pisaunya sudah kena. Kamu jatuh dan nggak bangun lagi. Balik lagi.",
+      "start": 47.13,
+      "end": 55.75,
+      "retries": 2,
+      "status": "failed"
+    },
+    {
+      "index": 5,
+      "tag": null,
+      "text": "Kali ini, jangan seret kursinya. Perhatiin handuk di atas kursi tadi. Kamu bentang dulu di bawah jendela.",
+      "start": 55.75,
+      "end": 65.21,
+      "retries": 2,
+      "status": "failed"
+    },
+    {
+      "index": 6,
+      "tag": null,
+      "text": "Baru angkat kursinya dan taruh di atas handuk, pelan-pelan. Jadi kaki kursi nggak beradu langsung sama keramik. Kamu naik dan buka pengaitnya pelan-pelan.",
+      "start": 65.57,
+      "end": 77.59,
+      "retries": 2,
+      "status": "failed"
+    },
+    {
+      "index": 7,
+      "tag": null,
+      "text": "Seret banget, tapi akhirnya lepas. Jendelanya tetap ditutup rapat, dari luar tetap kelihatan tertutup. Belum sempat turun, kamu dengar langkah dan suara kunci.",
+      "start": 77.59,
+      "end": 91.006,
+      "retries": 2,
+      "status": "failed"
+    },
+    {
+      "index": 8,
+      "tag": null,
+      "text": "Dia balik! Kamu langsung turun, angkat kursi ke kotak kapur, lalu lipat handuknya seperti semula. Tunggu.",
+      "start": 91.606,
+      "end": 98.826,
+      "retries": 2,
+      "status": "failed"
+    },
+    {
+      "index": 9,
+      "tag": null,
+      "text": "Sudut birunya malah ngadep tembok. Kamu putar lagi ke arah pintu, lalu buru-buru duduk di tempatmu. Lubang pintu terbuka.",
+      "start": 99.286,
+      "end": 109.946,
+      "retries": 1,
+      "status": "verified"
+    },
+    {
+      "index": 10,
+      "tag": null,
+      "text": "Dia lihat kamu, lihat kursi, lalu pergi ke kanan. Kamu berhasil bikin kamar ini kelihatan nggak berubah. Sekarang kamu punya tiga menit lagi.",
+      "start": 110.286,
+      "end": 120.817,
+      "retries": 2,
+      "status": "failed"
+    },
+    {
+      "index": 11,
+      "tag": null,
+      "text": "Bentang handuk, angkat kursi ke bawah jendela, lalu naik. Kali ini kamu dorong jendelanya sampai terbuka. Kamu turun kaki dulu ke tong, lalu lari ke kiri sampai jalan.",
+      "start": 121.257,
+      "end": 133.895,
+      "retries": 0,
+      "status": "verified"
+    },
+    {
+      "index": 12,
+      "tag": null,
+      "text": "Kamu bebas.",
+      "start": 133.895,
+      "end": 135.535,
+      "retries": 2,
+      "status": "failed"
+    }
+  ],
+  "words": [
+    {
+      "word": "Kamu",
+      "start": 0,
+      "end": 0.58,
+      "chunk": 0
+    },
+    {
+      "word": "di",
+      "start": 0.58,
+      "end": 0.66,
+      "chunk": 0
+    },
+    {
+      "word": "kunci",
+      "start": 0.66,
+      "end": 1.14,
+      "chunk": 0
+    },
+    {
+      "word": "di",
+      "start": 1.14,
+      "end": 1.34,
+      "chunk": 0
+    },
+    {
+      "word": "kamar.",
+      "start": 1.34,
+      "end": 1.76,
+      "chunk": 0
+    },
+    {
+      "word": "Salah",
+      "start": 2.42,
+      "end": 3.04,
+      "chunk": 0
+    },
+    {
+      "word": "gerak.",
+      "start": 3.04,
+      "end": 3.44,
+      "chunk": 0
+    },
+    {
+      "word": "Tamat.",
+      "start": 4.04,
+      "end": 4.52,
+      "chunk": 0
+    },
+    {
+      "word": "Tiap",
+      "start": 5.48,
+      "end": 5.9,
+      "chunk": 0
+    },
+    {
+      "word": "3",
+      "start": 5.9,
+      "end": 6.18,
+      "chunk": 0
+    },
+    {
+      "word": "menit.",
+      "start": 6.18,
+      "end": 6.7,
+      "chunk": 0
+    },
+    {
+      "word": "Diangintip.",
+      "start": 7.08,
+      "end": 7.92,
+      "chunk": 0
+    },
+    {
+      "word": "Lalu",
+      "start": 11.24,
+      "end": 11.52,
+      "chunk": 0
+    },
+    {
+      "word": "duduk",
+      "start": 11.52,
+      "end": 11.92,
+      "chunk": 0
+    },
+    {
+      "word": "di",
+      "start": 11.92,
+      "end": 12.08,
+      "chunk": 0
+    },
+    {
+      "word": "kanan.",
+      "start": 12.08,
+      "end": 12.44,
+      "chunk": 0
+    },
+    {
+      "word": "Bawa",
+      "start": 13.18,
+      "end": 13.52,
+      "chunk": 0
+    },
+    {
+      "word": "kunci.",
+      "start": 13.52,
+      "end": 14.1,
+      "chunk": 0
+    },
+    {
+      "word": "Dan",
+      "start": 14.58,
+      "end": 14.84,
+      "chunk": 0
+    },
+    {
+      "word": "pisau.",
+      "start": 14.84,
+      "end": 15.4,
+      "chunk": 0
+    },
+    {
+      "word": "Ada",
+      "start": 15.82,
+      "end": 16.02,
+      "chunk": 1
+    },
+    {
+      "word": "tong",
+      "start": 16.02,
+      "end": 16.38,
+      "chunk": 1
+    },
+    {
+      "word": "dan",
+      "start": 16.38,
+      "end": 16.72,
+      "chunk": 1
+    },
+    {
+      "word": "gang",
+      "start": 16.72,
+      "end": 17.06,
+      "chunk": 1
+    },
+    {
+      "word": "di",
+      "start": 17.06,
+      "end": 17.36,
+      "chunk": 1
+    },
+    {
+      "word": "kiri.",
+      "start": 17.36,
+      "end": 17.62,
+      "chunk": 1
+    },
+    {
+      "word": "Kursi",
+      "start": 18.52,
+      "end": 18.94,
+      "chunk": 1
+    },
+    {
+      "word": "kayu",
+      "start": 18.94,
+      "end": 19.22,
+      "chunk": 1
+    },
+    {
+      "word": "berat",
+      "start": 19.22,
+      "end": 19.54,
+      "chunk": 1
+    },
+    {
+      "word": "di",
+      "start": 19.54,
+      "end": 19.74,
+      "chunk": 1
+    },
+    {
+      "word": "kotak",
+      "start": 19.74,
+      "end": 20.12,
+      "chunk": 1
+    },
+    {
+      "word": "kapur",
+      "start": 20.12,
+      "end": 20.6,
+      "chunk": 1
+    },
+    {
+      "word": "di",
+      "start": 20.6,
+      "end": 20.96,
+      "chunk": 1
+    },
+    {
+      "word": "lantai",
+      "start": 20.96,
+      "end": 21.38,
+      "chunk": 1
+    },
+    {
+      "word": "keramik.",
+      "start": 21.38,
+      "end": 21.94,
+      "chunk": 1
+    },
+    {
+      "word": "Handuknya",
+      "start": 22.46,
+      "end": 23.22,
+      "chunk": 1
+    },
+    {
+      "word": "bersudut",
+      "start": 23.22,
+      "end": 23.82,
+      "chunk": 1
+    },
+    {
+      "word": "biru.",
+      "start": 23.82,
+      "end": 24.18,
+      "chunk": 1
+    },
+    {
+      "word": "Jendela",
+      "start": 24.74,
+      "end": 25.26,
+      "chunk": 2
+    },
+    {
+      "word": "di",
+      "start": 25.26,
+      "end": 25.52,
+      "chunk": 2
+    },
+    {
+      "word": "atas",
+      "start": 25.52,
+      "end": 25.78,
+      "chunk": 2
+    },
+    {
+      "word": "pintu",
+      "start": 25.78,
+      "end": 26.28,
+      "chunk": 2
+    },
+    {
+      "word": "bukanya",
+      "start": 26.28,
+      "end": 26.88,
+      "chunk": 2
+    },
+    {
+      "word": "keluar.",
+      "start": 26.88,
+      "end": 27.2,
+      "chunk": 2
+    },
+    {
+      "word": "Pengaitnya",
+      "start": 28.02,
+      "end": 28.6,
+      "chunk": 2
+    },
+    {
+      "word": "serat.",
+      "start": 28.6,
+      "end": 29.02,
+      "chunk": 2
+    },
+    {
+      "word": "Kamu",
+      "start": 29.02,
+      "end": 29.67,
+      "chunk": 2
+    },
+    {
+      "word": "kepikiran",
+      "start": 29.67,
+      "end": 30.07,
+      "chunk": 2
+    },
+    {
+      "word": "buat",
+      "start": 30.07,
+      "end": 30.39,
+      "chunk": 2
+    },
+    {
+      "word": "nyeret",
+      "start": 30.39,
+      "end": 30.85,
+      "chunk": 2
+    },
+    {
+      "word": "kursi",
+      "start": 30.85,
+      "end": 31.45,
+      "chunk": 2
+    },
+    {
+      "word": "ke",
+      "start": 31.45,
+      "end": 31.65,
+      "chunk": 2
+    },
+    {
+      "word": "bawah",
+      "start": 31.65,
+      "end": 31.87,
+      "chunk": 2
+    },
+    {
+      "word": "jendela,",
+      "start": 31.87,
+      "end": 32.25,
+      "chunk": 2
+    },
+    {
+      "word": "cepat",
+      "start": 32.73,
+      "end": 33.33,
+      "chunk": 2
+    },
+    {
+      "word": "kan?",
+      "start": 33.33,
+      "end": 33.49,
+      "chunk": 2
+    },
+    {
+      "word": "Tapi",
+      "start": 33.93,
+      "end": 34.23,
+      "chunk": 3
+    },
+    {
+      "word": "begitu",
+      "start": 34.23,
+      "end": 34.71,
+      "chunk": 3
+    },
+    {
+      "word": "kaki",
+      "start": 34.71,
+      "end": 35.09,
+      "chunk": 3
+    },
+    {
+      "word": "kursinya",
+      "start": 35.09,
+      "end": 35.67,
+      "chunk": 3
+    },
+    {
+      "word": "gesek",
+      "start": 35.67,
+      "end": 36.21,
+      "chunk": 3
+    },
+    {
+      "word": "ramik,",
+      "start": 36.21,
+      "end": 36.71,
+      "chunk": 3
+    },
+    {
+      "word": "suaranya",
+      "start": 37.03,
+      "end": 37.55,
+      "chunk": 3
+    },
+    {
+      "word": "keras",
+      "start": 37.55,
+      "end": 37.99,
+      "chunk": 3
+    },
+    {
+      "word": "banget.",
+      "start": 37.99,
+      "end": 38.45,
+      "chunk": 3
+    },
+    {
+      "word": "Orang",
+      "start": 39.11,
+      "end": 39.61,
+      "chunk": 3
+    },
+    {
+      "word": "itu",
+      "start": 39.61,
+      "end": 39.83,
+      "chunk": 3
+    },
+    {
+      "word": "cuma",
+      "start": 39.83,
+      "end": 40.11,
+      "chunk": 3
+    },
+    {
+      "word": "duduk",
+      "start": 40.11,
+      "end": 40.43,
+      "chunk": 3
+    },
+    {
+      "word": "3",
+      "start": 40.43,
+      "end": 40.79,
+      "chunk": 3
+    },
+    {
+      "word": "meter",
+      "start": 40.79,
+      "end": 41.23,
+      "chunk": 3
+    },
+    {
+      "word": "dari",
+      "start": 41.23,
+      "end": 41.53,
+      "chunk": 3
+    },
+    {
+      "word": "pintu.",
+      "start": 41.53,
+      "end": 42.05,
+      "chunk": 3
+    },
+    {
+      "word": "Dia",
+      "start": 42.91,
+      "end": 43.21,
+      "chunk": 3
+    },
+    {
+      "word": "langsung",
+      "start": 43.21,
+      "end": 43.65,
+      "chunk": 3
+    },
+    {
+      "word": "lari",
+      "start": 43.65,
+      "end": 43.99,
+      "chunk": 3
+    },
+    {
+      "word": "balik,",
+      "start": 43.99,
+      "end": 44.37,
+      "chunk": 3
+    },
+    {
+      "word": "buka",
+      "start": 44.85,
+      "end": 45.17,
+      "chunk": 3
+    },
+    {
+      "word": "kunci",
+      "start": 45.17,
+      "end": 45.65,
+      "chunk": 3
+    },
+    {
+      "word": "dan",
+      "start": 45.65,
+      "end": 46.21,
+      "chunk": 3
+    },
+    {
+      "word": "masuk.",
+      "start": 46.21,
+      "end": 46.63,
+      "chunk": 3
+    },
+    {
+      "word": "Sebelum",
+      "start": 47.13,
+      "end": 47.65,
+      "chunk": 4
+    },
+    {
+      "word": "kamu",
+      "start": 47.65,
+      "end": 48.13,
+      "chunk": 4
+    },
+    {
+      "word": "sempat",
+      "start": 48.13,
+      "end": 48.55,
+      "chunk": 4
+    },
+    {
+      "word": "kabur,",
+      "start": 48.55,
+      "end": 49.05,
+      "chunk": 4
+    },
+    {
+      "word": "pisaunya",
+      "start": 49.75,
+      "end": 50.25,
+      "chunk": 4
+    },
+    {
+      "word": "sudah",
+      "start": 50.25,
+      "end": 50.47,
+      "chunk": 4
+    },
+    {
+      "word": "kena.",
+      "start": 50.47,
+      "end": 50.79,
+      "chunk": 4
+    },
+    {
+      "word": "Kamu",
+      "start": 51.53,
+      "end": 51.87,
+      "chunk": 4
+    },
+    {
+      "word": "jatuh",
+      "start": 51.87,
+      "end": 52.39,
+      "chunk": 4
+    },
+    {
+      "word": "dan",
+      "start": 52.39,
+      "end": 52.83,
+      "chunk": 4
+    },
+    {
+      "word": "gak",
+      "start": 52.83,
+      "end": 53.05,
+      "chunk": 4
+    },
+    {
+      "word": "bangun",
+      "start": 53.05,
+      "end": 53.49,
+      "chunk": 4
+    },
+    {
+      "word": "lagi.",
+      "start": 53.49,
+      "end": 53.81,
+      "chunk": 4
+    },
+    {
+      "word": "Balik",
+      "start": 55.19,
+      "end": 55.51,
+      "chunk": 4
+    },
+    {
+      "word": "lagi.",
+      "start": 55.51,
+      "end": 55.75,
+      "chunk": 4
+    },
+    {
+      "word": "Kali",
+      "start": 55.75,
+      "end": 56.47,
+      "chunk": 5
+    },
+    {
+      "word": "ini",
+      "start": 56.47,
+      "end": 56.73,
+      "chunk": 5
+    },
+    {
+      "word": "jangan",
+      "start": 56.73,
+      "end": 57.59,
+      "chunk": 5
+    },
+    {
+      "word": "seret",
+      "start": 57.59,
+      "end": 58.09,
+      "chunk": 5
+    },
+    {
+      "word": "kursinya,",
+      "start": 58.09,
+      "end": 58.59,
+      "chunk": 5
+    },
+    {
+      "word": "perhatiin",
+      "start": 60.61,
+      "end": 61.33,
+      "chunk": 5
+    },
+    {
+      "word": "handuk",
+      "start": 61.33,
+      "end": 61.75,
+      "chunk": 5
+    },
+    {
+      "word": "di",
+      "start": 61.75,
+      "end": 61.95,
+      "chunk": 5
+    },
+    {
+      "word": "atas",
+      "start": 61.95,
+      "end": 62.19,
+      "chunk": 5
+    },
+    {
+      "word": "kursi",
+      "start": 62.19,
+      "end": 62.51,
+      "chunk": 5
+    },
+    {
+      "word": "tadi,",
+      "start": 62.51,
+      "end": 62.77,
+      "chunk": 5
+    },
+    {
+      "word": "kamu",
+      "start": 63.37,
+      "end": 63.85,
+      "chunk": 5
+    },
+    {
+      "word": "bentang",
+      "start": 63.85,
+      "end": 64.21,
+      "chunk": 5
+    },
+    {
+      "word": "dulu",
+      "start": 64.21,
+      "end": 64.49,
+      "chunk": 5
+    },
+    {
+      "word": "di",
+      "start": 64.49,
+      "end": 64.69,
+      "chunk": 5
+    },
+    {
+      "word": "bawah",
+      "start": 64.69,
+      "end": 64.91,
+      "chunk": 5
+    },
+    {
+      "word": "cendela,",
+      "start": 64.91,
+      "end": 65.21,
+      "chunk": 5
+    },
+    {
+      "word": "baru",
+      "start": 65.57,
+      "end": 66.07,
+      "chunk": 6
+    },
+    {
+      "word": "angkat",
+      "start": 66.07,
+      "end": 66.69,
+      "chunk": 6
+    },
+    {
+      "word": "kursinya",
+      "start": 66.69,
+      "end": 67.25,
+      "chunk": 6
+    },
+    {
+      "word": "dan",
+      "start": 67.25,
+      "end": 68.17,
+      "chunk": 6
+    },
+    {
+      "word": "taruh",
+      "start": 68.17,
+      "end": 68.69,
+      "chunk": 6
+    },
+    {
+      "word": "di",
+      "start": 68.69,
+      "end": 68.83,
+      "chunk": 6
+    },
+    {
+      "word": "atas",
+      "start": 68.83,
+      "end": 69.07,
+      "chunk": 6
+    },
+    {
+      "word": "handuk,",
+      "start": 69.07,
+      "end": 69.49,
+      "chunk": 6
+    },
+    {
+      "word": "pelan",
+      "start": 69.89,
+      "end": 70.31,
+      "chunk": 6
+    },
+    {
+      "word": "-pelan.",
+      "start": 70.31,
+      "end": 70.73,
+      "chunk": 6
+    },
+    {
+      "word": "Jadi",
+      "start": 71.25,
+      "end": 71.55,
+      "chunk": 6
+    },
+    {
+      "word": "kaki",
+      "start": 71.55,
+      "end": 71.81,
+      "chunk": 6
+    },
+    {
+      "word": "kursi",
+      "start": 71.81,
+      "end": 72.21,
+      "chunk": 6
+    },
+    {
+      "word": "nggak",
+      "start": 72.21,
+      "end": 72.37,
+      "chunk": 6
+    },
+    {
+      "word": "beradu",
+      "start": 72.37,
+      "end": 72.97,
+      "chunk": 6
+    },
+    {
+      "word": "langsung",
+      "start": 72.97,
+      "end": 73.31,
+      "chunk": 6
+    },
+    {
+      "word": "sama",
+      "start": 73.31,
+      "end": 73.53,
+      "chunk": 6
+    },
+    {
+      "word": "keramik,",
+      "start": 73.53,
+      "end": 74.05,
+      "chunk": 6
+    },
+    {
+      "word": "kamu",
+      "start": 74.45,
+      "end": 74.95,
+      "chunk": 6
+    },
+    {
+      "word": "naik",
+      "start": 74.95,
+      "end": 75.33,
+      "chunk": 6
+    },
+    {
+      "word": "dan",
+      "start": 75.33,
+      "end": 75.99,
+      "chunk": 6
+    },
+    {
+      "word": "buka",
+      "start": 75.99,
+      "end": 76.41,
+      "chunk": 6
+    },
+    {
+      "word": "pengaitnya",
+      "start": 76.41,
+      "end": 76.95,
+      "chunk": 6
+    },
+    {
+      "word": "pelan",
+      "start": 76.95,
+      "end": 77.25,
+      "chunk": 6
+    },
+    {
+      "word": "-pelan.",
+      "start": 77.25,
+      "end": 77.59,
+      "chunk": 6
+    },
+    {
+      "word": "Seret",
+      "start": 77.59,
+      "end": 78.45,
+      "chunk": 7
+    },
+    {
+      "word": "banget,",
+      "start": 78.45,
+      "end": 78.75,
+      "chunk": 7
+    },
+    {
+      "word": "tapi",
+      "start": 79.221,
+      "end": 79.656,
+      "chunk": 7
+    },
+    {
+      "word": "akhirnya",
+      "start": 79.656,
+      "end": 80.376,
+      "chunk": 7
+    },
+    {
+      "word": "lepas,",
+      "start": 80.376,
+      "end": 80.856,
+      "chunk": 7
+    },
+    {
+      "word": "jendelanya",
+      "start": 81.442,
+      "end": 82.002,
+      "chunk": 7
+    },
+    {
+      "word": "tetap",
+      "start": 82.002,
+      "end": 82.682,
+      "chunk": 7
+    },
+    {
+      "word": "ditutup",
+      "start": 82.682,
+      "end": 83.102,
+      "chunk": 7
+    },
+    {
+      "word": "rapat.",
+      "start": 83.102,
+      "end": 83.442,
+      "chunk": 7
+    },
+    {
+      "word": "Dari",
+      "start": 84.342,
+      "end": 84.502,
+      "chunk": 7
+    },
+    {
+      "word": "luar",
+      "start": 84.502,
+      "end": 84.782,
+      "chunk": 7
+    },
+    {
+      "word": "tetap",
+      "start": 84.782,
+      "end": 85.362,
+      "chunk": 7
+    },
+    {
+      "word": "kelihatan",
+      "start": 85.362,
+      "end": 85.982,
+      "chunk": 7
+    },
+    {
+      "word": "tertutup.",
+      "start": 85.982,
+      "end": 86.582,
+      "chunk": 7
+    },
+    {
+      "word": "Belum",
+      "start": 87.006,
+      "end": 87.346,
+      "chunk": 7
+    },
+    {
+      "word": "sempat",
+      "start": 87.346,
+      "end": 87.686,
+      "chunk": 7
+    },
+    {
+      "word": "turun,",
+      "start": 87.686,
+      "end": 88.126,
+      "chunk": 7
+    },
+    {
+      "word": "kamu",
+      "start": 88.806,
+      "end": 89.066,
+      "chunk": 7
+    },
+    {
+      "word": "dengar",
+      "start": 89.066,
+      "end": 89.366,
+      "chunk": 7
+    },
+    {
+      "word": "langkah",
+      "start": 89.366,
+      "end": 89.926,
+      "chunk": 7
+    },
+    {
+      "word": "dan",
+      "start": 89.926,
+      "end": 90.266,
+      "chunk": 7
+    },
+    {
+      "word": "suara",
+      "start": 90.266,
+      "end": 90.606,
+      "chunk": 7
+    },
+    {
+      "word": "kunci.",
+      "start": 90.606,
+      "end": 91.006,
+      "chunk": 7
+    },
+    {
+      "word": "Dia",
+      "start": 91.606,
+      "end": 91.746,
+      "chunk": 8
+    },
+    {
+      "word": "balik,",
+      "start": 91.746,
+      "end": 92.106,
+      "chunk": 8
+    },
+    {
+      "word": "kamu",
+      "start": 92.606,
+      "end": 92.866,
+      "chunk": 8
+    },
+    {
+      "word": "langsung",
+      "start": 92.866,
+      "end": 93.106,
+      "chunk": 8
+    },
+    {
+      "word": "turun,",
+      "start": 93.106,
+      "end": 93.426,
+      "chunk": 8
+    },
+    {
+      "word": "angkat",
+      "start": 94.086,
+      "end": 94.466,
+      "chunk": 8
+    },
+    {
+      "word": "kursi",
+      "start": 94.466,
+      "end": 94.906,
+      "chunk": 8
+    },
+    {
+      "word": "ke",
+      "start": 94.906,
+      "end": 95.026,
+      "chunk": 8
+    },
+    {
+      "word": "kota",
+      "start": 95.026,
+      "end": 95.246,
+      "chunk": 8
+    },
+    {
+      "word": "Kapur.",
+      "start": 95.246,
+      "end": 95.606,
+      "chunk": 8
+    },
+    {
+      "word": "Lalu",
+      "start": 96.006,
+      "end": 96.286,
+      "chunk": 8
+    },
+    {
+      "word": "lipat",
+      "start": 96.286,
+      "end": 96.626,
+      "chunk": 8
+    },
+    {
+      "word": "handuknya",
+      "start": 96.626,
+      "end": 97.146,
+      "chunk": 8
+    },
+    {
+      "word": "seperti",
+      "start": 97.146,
+      "end": 97.346,
+      "chunk": 8
+    },
+    {
+      "word": "semula.",
+      "start": 97.346,
+      "end": 97.746,
+      "chunk": 8
+    },
+    {
+      "word": "Tunggu,",
+      "start": 98.506,
+      "end": 98.826,
+      "chunk": 8
+    },
+    {
+      "word": "sudut",
+      "start": 99.286,
+      "end": 99.906,
+      "chunk": 9
+    },
+    {
+      "word": "mirunya",
+      "start": 99.906,
+      "end": 100.426,
+      "chunk": 9
+    },
+    {
+      "word": "malah",
+      "start": 100.426,
+      "end": 101.006,
+      "chunk": 9
+    },
+    {
+      "word": "ngadep",
+      "start": 101.006,
+      "end": 101.306,
+      "chunk": 9
+    },
+    {
+      "word": "tembok.",
+      "start": 101.306,
+      "end": 101.686,
+      "chunk": 9
+    },
+    {
+      "word": "Kamu",
+      "start": 102.346,
+      "end": 102.586,
+      "chunk": 9
+    },
+    {
+      "word": "putar",
+      "start": 102.586,
+      "end": 102.886,
+      "chunk": 9
+    },
+    {
+      "word": "lagi",
+      "start": 102.886,
+      "end": 103.126,
+      "chunk": 9
+    },
+    {
+      "word": "ke",
+      "start": 103.126,
+      "end": 103.266,
+      "chunk": 9
+    },
+    {
+      "word": "arah",
+      "start": 103.266,
+      "end": 103.486,
+      "chunk": 9
+    },
+    {
+      "word": "pintu,",
+      "start": 103.486,
+      "end": 103.786,
+      "chunk": 9
+    },
+    {
+      "word": "lalu",
+      "start": 104.226,
+      "end": 104.366,
+      "chunk": 9
+    },
+    {
+      "word": "buru",
+      "start": 104.366,
+      "end": 104.566,
+      "chunk": 9
+    },
+    {
+      "word": "-buru",
+      "start": 104.566,
+      "end": 104.826,
+      "chunk": 9
+    },
+    {
+      "word": "duduk",
+      "start": 104.826,
+      "end": 105.166,
+      "chunk": 9
+    },
+    {
+      "word": "di",
+      "start": 105.166,
+      "end": 105.286,
+      "chunk": 9
+    },
+    {
+      "word": "tempatmu.",
+      "start": 105.286,
+      "end": 105.726,
+      "chunk": 9
+    },
+    {
+      "word": "Lubang",
+      "start": 107.726,
+      "end": 109.086,
+      "chunk": 9
+    },
+    {
+      "word": "pintu",
+      "start": 109.086,
+      "end": 109.526,
+      "chunk": 9
+    },
+    {
+      "word": "terbuka,",
+      "start": 109.526,
+      "end": 109.946,
+      "chunk": 9
+    },
+    {
+      "word": "dia",
+      "start": 110.286,
+      "end": 110.666,
+      "chunk": 10
+    },
+    {
+      "word": "lihat",
+      "start": 110.666,
+      "end": 110.966,
+      "chunk": 10
+    },
+    {
+      "word": "kamu,",
+      "start": 110.966,
+      "end": 111.286,
+      "chunk": 10
+    },
+    {
+      "word": "lihat",
+      "start": 111.966,
+      "end": 112.306,
+      "chunk": 10
+    },
+    {
+      "word": "kursi,",
+      "start": 112.306,
+      "end": 112.866,
+      "chunk": 10
+    },
+    {
+      "word": "lalu",
+      "start": 113.226,
+      "end": 113.746,
+      "chunk": 10
+    },
+    {
+      "word": "pergi",
+      "start": 113.746,
+      "end": 114.066,
+      "chunk": 10
+    },
+    {
+      "word": "ke",
+      "start": 114.066,
+      "end": 114.186,
+      "chunk": 10
+    },
+    {
+      "word": "kanan.",
+      "start": 114.186,
+      "end": 114.546,
+      "chunk": 10
+    },
+    {
+      "word": "Kamu",
+      "start": 115.116,
+      "end": 115.456,
+      "chunk": 10
+    },
+    {
+      "word": "berhasil",
+      "start": 115.456,
+      "end": 115.976,
+      "chunk": 10
+    },
+    {
+      "word": "bikin",
+      "start": 115.976,
+      "end": 116.296,
+      "chunk": 10
+    },
+    {
+      "word": "kamar",
+      "start": 116.296,
+      "end": 116.576,
+      "chunk": 10
+    },
+    {
+      "word": "ini",
+      "start": 116.576,
+      "end": 116.776,
+      "chunk": 10
+    },
+    {
+      "word": "kelihatan",
+      "start": 116.776,
+      "end": 117.216,
+      "chunk": 10
+    },
+    {
+      "word": "gak",
+      "start": 117.216,
+      "end": 117.316,
+      "chunk": 10
+    },
+    {
+      "word": "berubah.",
+      "start": 117.316,
+      "end": 117.776,
+      "chunk": 10
+    },
+    {
+      "word": "Sekarang",
+      "start": 118.217,
+      "end": 118.837,
+      "chunk": 10
+    },
+    {
+      "word": "kamu",
+      "start": 118.837,
+      "end": 119.597,
+      "chunk": 10
+    },
+    {
+      "word": "punya",
+      "start": 119.597,
+      "end": 119.857,
+      "chunk": 10
+    },
+    {
+      "word": "3",
+      "start": 119.857,
+      "end": 120.237,
+      "chunk": 10
+    },
+    {
+      "word": "menit",
+      "start": 120.237,
+      "end": 120.537,
+      "chunk": 10
+    },
+    {
+      "word": "lagi.",
+      "start": 120.537,
+      "end": 120.817,
+      "chunk": 10
+    },
+    {
+      "word": "Bentang",
+      "start": 121.257,
+      "end": 121.797,
+      "chunk": 11
+    },
+    {
+      "word": "handuk,",
+      "start": 121.797,
+      "end": 122.237,
+      "chunk": 11
+    },
+    {
+      "word": "angkat",
+      "start": 122.857,
+      "end": 123.177,
+      "chunk": 11
+    },
+    {
+      "word": "kursi",
+      "start": 123.177,
+      "end": 123.657,
+      "chunk": 11
+    },
+    {
+      "word": "ke",
+      "start": 123.657,
+      "end": 123.757,
+      "chunk": 11
+    },
+    {
+      "word": "bawah",
+      "start": 123.757,
+      "end": 124.017,
+      "chunk": 11
+    },
+    {
+      "word": "jendela,",
+      "start": 124.017,
+      "end": 124.377,
+      "chunk": 11
+    },
+    {
+      "word": "lalu",
+      "start": 124.797,
+      "end": 125.137,
+      "chunk": 11
+    },
+    {
+      "word": "naik.",
+      "start": 125.137,
+      "end": 125.457,
+      "chunk": 11
+    },
+    {
+      "word": "Kali",
+      "start": 125.762,
+      "end": 126.082,
+      "chunk": 11
+    },
+    {
+      "word": "ini",
+      "start": 126.082,
+      "end": 126.362,
+      "chunk": 11
+    },
+    {
+      "word": "kamu",
+      "start": 126.362,
+      "end": 127.122,
+      "chunk": 11
+    },
+    {
+      "word": "dorong",
+      "start": 127.122,
+      "end": 127.662,
+      "chunk": 11
+    },
+    {
+      "word": "jendelanya",
+      "start": 127.662,
+      "end": 128.182,
+      "chunk": 11
+    },
+    {
+      "word": "sampai",
+      "start": 128.182,
+      "end": 128.602,
+      "chunk": 11
+    },
+    {
+      "word": "terbuka.",
+      "start": 128.602,
+      "end": 129.162,
+      "chunk": 11
+    },
+    {
+      "word": "Kamu",
+      "start": 129.575,
+      "end": 130.035,
+      "chunk": 11
+    },
+    {
+      "word": "turun",
+      "start": 130.035,
+      "end": 130.335,
+      "chunk": 11
+    },
+    {
+      "word": "kaki",
+      "start": 130.335,
+      "end": 130.595,
+      "chunk": 11
+    },
+    {
+      "word": "dulu",
+      "start": 130.595,
+      "end": 130.875,
+      "chunk": 11
+    },
+    {
+      "word": "ketong,",
+      "start": 130.875,
+      "end": 131.275,
+      "chunk": 11
+    },
+    {
+      "word": "lalu",
+      "start": 131.735,
+      "end": 132.055,
+      "chunk": 11
+    },
+    {
+      "word": "lari",
+      "start": 132.055,
+      "end": 132.435,
+      "chunk": 11
+    },
+    {
+      "word": "ke",
+      "start": 132.435,
+      "end": 132.575,
+      "chunk": 11
+    },
+    {
+      "word": "kiri",
+      "start": 132.575,
+      "end": 132.875,
+      "chunk": 11
+    },
+    {
+      "word": "sampai",
+      "start": 132.875,
+      "end": 133.475,
+      "chunk": 11
+    },
+    {
+      "word": "jalan.",
+      "start": 133.475,
+      "end": 133.895,
+      "chunk": 11
+    },
+    {
+      "word": "Kamu",
+      "start": 133.895,
+      "end": 134.935,
+      "chunk": 12
+    },
+    {
+      "word": "Bebas",
+      "start": 134.935,
+      "end": 135.535,
+      "chunk": 12
+    }
+  ],
+  "sfx": [],
+  "source": "narration-investigator-timestamps.json",
+  "note": "Assembled on continuous PCM sample timeline with spliced non-overlapping pauses (captor line 2.6s, rewind 0.4s, reset silence 1.5s, pre-hatch silence 2.0s). Zero speed-up, monotonic PTS verified."
+}

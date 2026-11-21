@@ -3,6 +3,10 @@ import assert from "node:assert/strict";
 import {copyFileSync, mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync} from "node:fs";
 import {tmpdir} from "node:os";
 import {dirname, join, resolve} from "node:path";
+import Module from "node:module";
+import React from "react";
+import {renderToStaticMarkup} from "react-dom/server";
+import ts from "typescript";
 import {checkAll, validateEpisode, validatePipelineState} from "./check-episodes.mjs";
 
 const tempRoot = mkdtempSync(join(tmpdir(), "episode-gates-"));
@@ -46,6 +50,28 @@ const base = {
 const captions = [{startMs: 0, endMs: 1000, timestampMs: null, confidence: null, words: [{text: "Ada"}, {text: "bahaya", color: "danger"}]}];
 const clone = () => structuredClone(base);
 const validate = (manifest, cap = captions) => validateEpisode(manifest, cap, opts);
+
+test("speaker captions hide narrator labels and retain colored world-voice labels", () => {
+  const filename = resolve("src/components/SpeakerCaption.test.cjs");
+  const compiled = ts.transpileModule(readFileSync("src/components/SpeakerCaption.tsx", "utf8"), {
+    compilerOptions: {module: ts.ModuleKind.CommonJS, jsx: ts.JsxEmit.ReactJSX},
+  }).outputText;
+  const componentModule = new Module(filename);
+  componentModule.filename = filename;
+  componentModule.paths = Module._nodeModulePaths(dirname(filename));
+  componentModule._compile(compiled, filename);
+  const {SpeakerCaption} = componentModule.exports;
+  for (const speaker of [undefined, null, "", "NARATOR", " narrator "]) {
+    const markup = renderToStaticMarkup(React.createElement(SpeakerCaption, {speaker, text: "KAMU DIKUNCI"}));
+    assert.match(markup, /KAMU DIKUNCI/);
+    assert.match(markup, /color:white/);
+    assert.doesNotMatch(markup, /NARATOR|NARRATOR/i);
+  }
+  const dialogue = renderToStaticMarkup(React.createElement(SpeakerCaption, {speaker: "PENCULIK", text: "JANGAN GERAK"}));
+  assert.match(dialogue, /PENCULIK/);
+  assert.match(dialogue, /JANGAN GERAK/);
+  assert.match(dialogue, /color:#ffe154/i);
+});
 
 test("studio v2 accepts a long decision-consequence pilot without changing the v1 ceiling", () => {
   const pilot = clone();
@@ -96,13 +122,13 @@ test("a handoff light-up must fit its scene and use a valid brightness", () => {
 
 test("valid v2 and the exact comparison baseline", () => {
   assert.doesNotThrow(() => validate(clone()));
-  const old = JSON.parse(readFileSync("episodes/001-kemacetan-terakhir/manifest.json"));
-  const oldCaps = JSON.parse(readFileSync("episodes/001-kemacetan-terakhir/captions.json"));
+  const old = JSON.parse(readFileSync("episodes/arc1/001-kemacetan-terakhir/manifest.json"));
+  const oldCaps = JSON.parse(readFileSync("episodes/arc1/001-kemacetan-terakhir/captions.json"));
   assert.doesNotThrow(() => validateEpisode(old, oldCaps, {publicDir: resolve("public"), manifestPath: "001-kemacetan-terakhir/manifest.json"}));
   assert.throws(() => validateEpisode(old, oldCaps, opts), /schema version/);
   const path = "001-kemacetan-terakhir/attempt-05/manifest.json";
-  const closed = JSON.parse(readFileSync(join("episodes", path)));
-  const closedCaptions = JSON.parse(readFileSync(join("episodes", dirname(path), "captions.json")));
+  const closed = JSON.parse(readFileSync(join("episodes", "arc1", path)));
+  const closedCaptions = JSON.parse(readFileSync(join("episodes", "arc1", dirname(path), "captions.json")));
   const closedOptions = {publicDir: resolve("public"), manifestPath: path};
   assert.equal(validateEpisode(closed, closedCaptions, closedOptions).comparison, true);
   closed.scenes[0].name += " revised";
@@ -292,7 +318,7 @@ test("arc metadata is optional and supports both ends of a seven-episode arc", (
 });
 
 test("Episode 005 keeps narrator and whisper in separately timed caption beats", () => {
-  const beats = JSON.parse(readFileSync("episodes/005-suara-dari-rumah-kosong/captions.json", "utf8"));
+  const beats = JSON.parse(readFileSync("episodes/arc1/005-suara-dari-rumah-kosong/captions.json", "utf8"));
   const text = beat => beat.words.map(word => word.text).join(" ");
   const narrator = beats.find(beat => text(beat).includes("BERBISIK"));
   const whisper = beats.find(beat => text(beat).includes("KALAU"));
@@ -308,7 +334,7 @@ test("Episode 005 keeps narrator and whisper in separately timed caption beats",
 test("pipeline state accepts documented statuses and rejects missing or invalid stages", () => {
   const state = JSON.parse(readFileSync("templates/pipeline-state.json", "utf8"));
   assert.doesNotThrow(() => validatePipelineState(state));
-  const episode = JSON.parse(readFileSync("episodes/003-bel-minimarket/pipeline-state.json", "utf8"));
+  const episode = JSON.parse(readFileSync("episodes/arc1/003-bel-minimarket/pipeline-state.json", "utf8"));
   assert.doesNotThrow(() => validatePipelineState(episode));
   const progressed = structuredClone(state); progressed.audio.status = "pass"; progressed.images.status = "ready";
   assert.doesNotThrow(() => validatePipelineState(progressed));

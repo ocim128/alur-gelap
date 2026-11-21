@@ -2,17 +2,32 @@
 
 Give viewers an unbelievable survival experience in an imagined world. Show the danger, the character’s choice and its consequence clearly enough to follow without prior episodes. Treat continuity as established only when the episode brief explicitly adopts it.
 
-## Studio v2 Arc 02 onward
+## Studio v2 Standalone Survival Scenarios
 
-- **Pilot first.** Draft and lock Arc 02 Part 001 and a three-line arc premise. Pick up `HARI 5 • MALAM` from Part 007 and review the pilot end to end before drafting Parts 002–007.
-- **Pacing.** Hook viewers in the first three seconds. Aim for **1.5–3.5 minutes (90–210 s)** and roughly **200–480 spoken Indonesian words**. Let consequences, dialogue and silences set the pace.
-- **Decision → Consequence.** Replace arbitrary numbered survival lectures with a concrete temptation and an outcome the viewer can see. In **Branch-Rewind**, play the intuitive bad choice through to a visceral or lethal outcome, snap back with a tape/glitch rewind and take a harder survival path that carries a cost or lingering dread. In **Earned Consequence**, show someone else take the bait and pay immediately, or have the protagonist make a human error with a permanent consequence that carries forward. An episode can use both.
+- **Standalone anthology.** Every Skenario opens cold with a fresh setting, protagonist silhouette and physical escape puzzle. Resolve the puzzle within the video. Draw on Arc 01's high-stakes survival tone and keep its timeline, cast and handoff out of the new story. Draft **Pilot 01** first.
+- **Bahasa Bayi.** Write the way a sharp friend explains a deadly puzzle. Use short sentences and everyday words like `kamu`, `bakal`, `tamat`, `soalnya`, `perhatiin`, `ternyata` and `jangan sampai`. Cut filler, stiff narration and poetic phrasing such as “Hujan memukul jalur,” “Lututmu menghantam tepi beton,” and “Dia menggeleng lalu melihatmu mundur.”
+- **Golden spoken voice sample.** “Kamu dikunci di kamar. Salah gerak, tamat. Tiap tiga menit, dia ngintip lalu duduk di kanan, bawa kunci dan pisau. Ada tong dan gang di kiri.” Use its clear, conversational rhythm as a tone reference, and write fresh details for each scenario.
+- **One inked medium.** Walls, floors, doors, props and characters share the same hand-inked 2D graphic-novel treatment, flat cel-shaded texture, matte `#07080B` silhouettes, practical rim light and grounded shadows. Keep poses expressive and scene-specific. Avoid photorealistic 3D backgrounds, pasted vector cutouts, stiff symmetrical A-poses and white internal diagram outlines from turnaround sheets.
+- **Single-frame composition.** Each panel ID represents one scene at one moment, with no split screens, picture-in-picture, thought projections or multi-timestamp montages. When the protagonist is already visible full-body, specify `empty POV — no foreground character in frame` instead of adding a blurred duplicate.
+- **Pitch 3 First.** For a broad request with no specified setting, Agent 01 checks the scenario collection for repeated tropes and pitches three distinct fair-play survival puzzles, each in three lines covering setting, tempting bad decision and opening-planted clue chain. Draft the full brief after the selected direction is known.
+- **Answer-Before-Question.** Plant every physical cause of the lethal bad decision and every object or detail needed for the smart escape in the opening, before the choice or danger arrives. Show each clue naturally or establish it casually. Keep clues readable without over-labeling them or announcing their purpose. No hidden flaw or miracle tool can explain the payoff. Map each plant and payoff in the brief's Fair-Play Clue Ledger.
 - **Show-What-You-Say Panel Lock.** Time each narrated threat or visible action to a panel that depicts it. A reaction shot can follow the action. An export that substitutes a reaction for the narrated reveal fails QA.
 - **Audio theater.** Keep Investigator as the narrator and cue multiple separate world-audio or non-narrator voice beats, such as TOA or radio, survivor dialogue or panic, muffled pleas or whispers. Plan deliberate 1–3 s dread silences. Label speakers or use consistent caption colors for dialogue.
 - **Urban Silhouette Noir.** Use the [Attempt 07 sandbox](experiments/attempt-07-silhouette-noir/brief.md) as the visual benchmark. Draw matte `#07080B` graphic silhouettes with crisp edges and expressive poses. Keep skin and faces flat. Reserve thin colored rims and stark pale eye glints for the threat in focus. Use charcoal and slate-blue Indonesian urban settings with 1–2 practical light accents per scene, such as taillights, fluorescents, exit signs, streetlights or a flashlight. Shift to harsh red or amber on bad branches.
 - **Panels and motion.** Plan roughly 16–26 purposeful panels for a 2–3 minute cut. Hold atmospheric shots for 5–9 seconds with slow camera motion or practical light flicker. Cut tightly on action and jolt beats. Keep falling rain outdoors or visible beyond a window or doorway. Keep the existing climax and final mix checks, including ±1 frame exported jolt sync.
 
-The sections below record the Arc 01 v1 format and shared craft guidance. The v2 runtime, narrative, palette and hold rules above take precedence for Arc 02 onward. Keep the shared Indonesian grounding, continuity, cover, caption, sound and editorial checks where compatible.
+### V2 beat map
+
+Target 2.0–3.0 minutes, including dialogue, deliberate silences and the final tail.
+
+| Approximate time | Beat |
+| --- | --- |
+| 0:00–0:30 | Hook within three seconds. Drop into the trap, establish stakes or timer and plant all physical clues naturally. |
+| 0:30–1:15 | Name the tempting instinct, as in “Kalau kamu pilih X, kamu langsung tamat. Kenapa?” Trace the cause to the setup and show the lethal outcome in harsh red or amber. |
+| 1:15–2:30 | Use `branchRewind` to return to the choice. Chain planted details into a multi-step physical escape, then pressure-test it with a real complication. |
+| 2:30–2:50 | Deliver the earned escape or a logical twist that changes how viewers read the opening. |
+
+The sections below record the Arc 01 v1 format and shared craft guidance. The standalone v2 runtime, narrative, palette and hold rules above take precedence. Keep shared Indonesian grounding, within-video continuity, cover, caption, sound and editorial checks where compatible.
 
 ## Seven-episode anthology arcs
 
@@ -93,6 +108,7 @@ For Episode 007, place the crowd’s synchronized head-snap jolt after the final
 
 - Write natural conversational Bahasa Indonesia. Keep the delivery masculine and mature, with clear articulation and deliberate pauses. Keep the clean ShortZ Gemini Flash master and word-timing record with the episode.
 - Time the captions to the final narration. Aim for **3–4 words per beat**, with an absolute maximum of four. Use **bold uppercase condensed type** with a crisp dark stroke or drop shadow. Place captions in the **lower-middle safe zone above TikTok UI**. Dark semi-transparent pill backgrounds are prohibited.
+- Show the narrator's caption text in white without a `NARATOR` or `NARRATOR` speaker label. Show a colored speaker label for each non-narrator diegetic voice, such as yellow `PENCULIK`.
 - Set semantic color per word in `captions.json`. Use `white` by default, `yellow` for key survival terms and `red` for danger or scare words. Check readability and sync at phone size.
 - Use digits and match numeric formatting to the HUD, such as `60%`, `03:00` or `PUKUL 3 PAGI`. Spell numbers as needed in the spoken source and use the numeric form on screen.
 - Start with recorded location tone and foley, then add a restrained tension cue where it serves the scene. Leave room for the narration and let a quiet beat hold before a knock or reveal. Use the shared recordings or add new assets with an explicit redistribution license and source credit.

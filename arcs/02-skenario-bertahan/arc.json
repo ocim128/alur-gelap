@@ -1,0 +1,25 @@
+{
+  "arcId": "02-skenario-bertahan",
+  "workingTitle": "Skenario Bertahan",
+  "pipelineVersion": 2,
+  "productionMode": "standalone-anthology",
+  "episodes": [
+    {
+      "episodeNumber": 1,
+      "workingTitle": "Kamar Terkunci",
+      "status": "completed",
+      "finalVideo": "out/001-kamar-terkunci/Skenario01KamarTerkunci-audit-revision_compressed.mp4",
+      "durationSec": 156.8,
+      "setting": "Locked Indonesian kos room with a high outward-opening window.",
+      "mechanics": "A chair scraping ceramic alerts the guard. The survivor lifts it using a towel, resets its blue corner, and escapes through the outward window onto a drum.",
+      "briefPath": "episodes/001-kamar-terkunci/brief.md",
+      "scriptPath": "episodes/001-kamar-terkunci/narasi.txt",
+      "pipelineStatePath": "episodes/001-kamar-terkunci/pipeline-state.json"
+    },
+    {
+      "episodeNumber": 2,
+      "workingTitle": "Scenario 02",
+      "status": "pending"
+    }
+  ]
+}

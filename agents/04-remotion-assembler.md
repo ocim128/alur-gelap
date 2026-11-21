@@ -23,7 +23,22 @@ Never regenerate the main narration TTS, rewrite scripts, invent or generate rep
 3. Target **−14.0 LUFS integrated** and **≤ −1.0 dBTP** for the complete mix; mix climax SFX peaks within **−8 to −2 dB relative to narration peaks**, then measure the finished result and true peak. Keep the impact crisp without clipping.
 4. Run `npm run check`, render the MP4 and export verification stills including 00:00.2, representative HUD/face frames and final jolt/black. Deliver manifest, captions, composition ID, render path, duration, mix measurements, rights and verification evidence.
 
+- **Foley variation.** Avoid repeating the exact same breath or exhale sample across consecutive narration gaps. Alternate subtle variations or duck repeated breaths by 4–6 dB so the loop does not stand out on headphones.
+- **Caption hygiene.** Before the final render, remove stray hyphens and TTS punctuation artifacts from all burned-in speaker captions. Keep intentional wording and timing.
+- **Speaker labels.** Keep narrator captions white and hide the `NARATOR` / `NARRATOR` badge. Display a colored label for non-narrator diegetic voices, such as yellow `PENCULIK`.
+
 ### Studio v2 assembly contract
+
+Reusable components are exported from `src/components/StudioV2.tsx`. Import the named exports directly. Frame props use the **local frame of the containing composition or Sequence**. Put matching visual and audio cues on the same timeline. Normalized boxes use `{x, y, width, height}` in 0–1 composition coordinates. `FrameTransition` is `{at: number; duration: number; from: number; to: number}`; provide transitions sorted by `at` without overlap.
+
+| Component | Props and behavior |
+| --- | --- |
+| `SilhouetteAtmosphereLayer` | `{grainOpacity?: number; grainSeed?: string; flicker?: {box: NormalizedBox; color: string; opacity?: number; strength?: number}}`. Grain and optional practical-light flicker are deterministic per frame. Use distinct seeds for multiple layers. |
+| `BranchRewindTransition` | `{startFrame: number; durationFrames?: number; intensity?: number; seed?: string}`. The overlay lasts 0.4 s by default at the composition FPS. Place the reverse-whoosh/tape-stop sound separately at the same frame. |
+| `LiveDigitalClockHUD` | `{initialSeconds: number; jumps?: {atFrame: number; seconds: number}[]; rewind?: {startFrame: number; durationFrames: number; fromSeconds: number; toSeconds: number}; showSeconds?: boolean; warning?: boolean; box?: NormalizedBox; fontSize?: number}`. Seconds are time-of-day values. The clock ticks using composition FPS, applies scheduled jumps, reverses during the supplied interval, then resumes from the rewind target. `showSeconds` selects HH:MM:SS; `warning` selects red. |
+| `SlidingHatchOverlay` | `{box: NormalizedBox; initialOpen?: number; transitions: FrameTransition[]; direction?: "left" \| "right" \| "up" \| "down"; color?: string}`. Open values range from 0 closed to 1 open. Animate the matte shutter over an already-open hatch plate and schedule each transition at the hatch sound. Default color is `#07080B`. |
+| `UnderDoorShoeShadow` | `{box: NormalizedBox; startFrame: number; stopFrame: number; fromX?: number; color?: string}`. Two matte blocks enter the light strip and halt centered at `stopFrame`. `fromX` is relative to the strip width and defaults to −0.3. |
+| `ImpactMicroShake` | `{children: ReactNode; contactFrame: number; durationFrames?: number; jitterPx?: number; pushPx?: number}`. Wrap the visual to shake. The lateral push and decaying jitter start at the contact frame; defaults are 10 frames, 5 px jitter and 8 px push. Schedule the scrape or impact SFX at that same frame. |
 
 Implement these capabilities during Part 001 assembly. Record `pipelineVersion: 2` separately from `schemaVersion: 2`. Use `art.styleId: "urban-silhouette-noir"` and `script.format: "decision-consequence"` with `script.engine` set to `branch-rewind`, `earned-consequence` or `both`. Keep the frame-zero hook and timed ending/reveal. Record the spoken count in `script.wordCount`.
 

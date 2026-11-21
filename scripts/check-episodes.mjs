@@ -346,7 +346,7 @@ export function checkAll(root = process.cwd()) {
     if (statSync(statePath, {throwIfNoEntry: false})?.isFile()) validatePipelineState(readJson(statePath), statePath);
   }
   const paths = findManifests(episodeDir).sort().map(path => ({
-    path, manifestPath: relative(episodeDir, path).split(sep).join("/"),
+    path, manifestPath: relative(episodeDir, path).split(sep).join("/").replace(/^arc1\//, ""),
   }));
   assert(paths.length > 0, "No episode manifests found");
   const batchRoots = paths.map(({manifestPath}) => assetBatchDir(manifestPath));

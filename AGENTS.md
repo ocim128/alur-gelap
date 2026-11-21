@@ -7,7 +7,7 @@
 - For an episode, maintain a brief, script, asset and rights record, and review using the templates. Record the composition ID and any external dependencies. Update the decision log when evidence exists.
 - Creating a video, rendering an export and publishing are distinct actions. Follow the owner's request and applicable Remotion skill instructions. Do not post, schedule, message people or change accounts without authorization.
 
-## Dimensi Niskala character arcs
+## Archived Arc 01 continuity
 
 - Keep one locked protagonist for up to seven episodes, then rotate to a new survivor on the same outbreak timeline. Read the arc record and canonical character sheets before writing. Use the current stage and the preceding episode’s exit clock, inventory and location to fill the brief’s entry state. After the cut is accepted, write its exit state and hook back to the same arc record. [Arc 01](arcs/01-kemacetan-terakhir/arc.json)
 - Aim for 80% standalone FYP and 20% serialized continuity. Start with the immediate emergency and rule. Carry the previous state through the opening scene, `TimestampBadge` and `PERSEDIAAN`. Keep recap lines out of the hook. End with a quiet `niskala` reveal that exposes a blind spot in the rule the survivor followed.
@@ -15,9 +15,9 @@
 
 ## Studio v2 · Arc 02 onward
 
-Use the [v2 style guide](STYLE_GUIDE.md#studio-v2-arc-02-onward) and [studio contracts](agents/README.md). Arc 02 starts with [Part 001 only](arcs/02-jalur-samping-rel/arc.json), picking up the Part 007 night handoff. Agent 01 writes the pilot and a three-line premise before the production loop. Parts 002–007 wait for the pilot review.
+Use the [v2 style guide](STYLE_GUIDE.md#studio-v2-standalone-survival-scenarios) and [studio contracts](agents/README.md). Start with [Standalone Pilot 01](arcs/02-skenario-bertahan/arc.json). Each Skenario has its own setting, protagonist silhouette, escape puzzle and resolution. Arc 01 is a tone reference. Keep physical episode folders directly under `episodes/<slug>/`.
 
-Plan a 90–210-second cut with roughly 200–480 spoken Indonesian words and a hook in the first three seconds. Build around Decision → Consequence, time the narrated action to the panel that shows it, and make room for multiple in-world voice or audio beats. Use [Urban Silhouette Noir](experiments/attempt-07-silhouette-noir/brief.md). Set `pipelineVersion: 2` on new manifests when assembly begins.
+Plan a 2–3 minute cut with a hook in the first three seconds and short, everyday spoken Indonesian. Plant every trap cause and escape tool in the opening and record its payoff in the Fair-Play Clue Ledger. Run the bad decision, `branchRewind`, pressured escape and earned payoff. Time spoken action to the matching panel and allow multiple in-world voice or audio beats. Use [Urban Silhouette Noir](experiments/attempt-07-silhouette-noir/brief.md) and set `pipelineVersion: 2` at assembly.
 
 ## Archived v1 · Arc 01 factory loop
 

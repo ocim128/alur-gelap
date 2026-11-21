@@ -1,6 +1,6 @@
 # Dimensi Niskala studio contracts
 
-Studio v2 is the default for Arc 02 onward. Arc 01 is locked under v1. Start Arc 02 in **Single-Part Pilot Mode** with [Part 001](../arcs/02-jalur-samping-rel/arc.json) and a three-line premise. Review the finished pilot before planning Parts 002–007.
+Studio v2 uses the standalone anthology format. Arc 01 is locked under v1. Start with [Standalone Pilot 01](../arcs/02-skenario-bertahan/arc.json). Review the finished scenario before planning another one.
 
 These are stage checklists for human-directed work, not running agents or an automated system. The owner currently operates the [orchestrator](00-orchestrator.md). In a fresh chat, invoke one role with:
 

@@ -1,28 +1,29 @@
+import {Skenario01KamarTerkunci} from './Skenario01KamarTerkunci';
 import {Composition, staticFile, type CalculateMetadataFunction} from "remotion";
 import {Episode, type PreviewOptions} from "./Episode";
 import type {CaptionBeat, EpisodeManifest, EpisodeManifestV2} from "./manifest-types";
-import kemacetan from "../episodes/001-kemacetan-terakhir/manifest.json";
-import kemacetanCaptions from "../episodes/001-kemacetan-terakhir/captions.json";
-import recut from "../episodes/001-kemacetan-terakhir/recut-v2/manifest.json";
-import recutCaptions from "../episodes/001-kemacetan-terakhir/recut-v2/captions.json";
-import alternate from "../episodes/001-kemacetan-terakhir/recut-v2-alternate/manifest.json";
-import alternateCaptions from "../episodes/001-kemacetan-terakhir/recut-v2-alternate/captions.json";
-import attempt05 from "../episodes/001-kemacetan-terakhir/attempt-05/manifest.json";
-import attempt05Captions from "../episodes/001-kemacetan-terakhir/attempt-05/captions.json";
-import attempt06 from "../episodes/001-kemacetan-terakhir/attempt-06/manifest.json";
-import attempt06Captions from "../episodes/001-kemacetan-terakhir/attempt-06/captions.json";
-import episode02 from "../episodes/002-kabur-dari-mobil/manifest.json";
-import episode02Captions from "../episodes/002-kabur-dari-mobil/captions.json";
-import episode03 from "../episodes/003-bel-minimarket/manifest.json";
-import episode03Captions from "../episodes/003-bel-minimarket/captions.json";
+import kemacetan from "../episodes/arc1/001-kemacetan-terakhir/manifest.json";
+import kemacetanCaptions from "../episodes/arc1/001-kemacetan-terakhir/captions.json";
+import recut from "../episodes/arc1/001-kemacetan-terakhir/recut-v2/manifest.json";
+import recutCaptions from "../episodes/arc1/001-kemacetan-terakhir/recut-v2/captions.json";
+import alternate from "../episodes/arc1/001-kemacetan-terakhir/recut-v2-alternate/manifest.json";
+import alternateCaptions from "../episodes/arc1/001-kemacetan-terakhir/recut-v2-alternate/captions.json";
+import attempt05 from "../episodes/arc1/001-kemacetan-terakhir/attempt-05/manifest.json";
+import attempt05Captions from "../episodes/arc1/001-kemacetan-terakhir/attempt-05/captions.json";
+import attempt06 from "../episodes/arc1/001-kemacetan-terakhir/attempt-06/manifest.json";
+import attempt06Captions from "../episodes/arc1/001-kemacetan-terakhir/attempt-06/captions.json";
+import episode02 from "../episodes/arc1/002-kabur-dari-mobil/manifest.json";
+import episode02Captions from "../episodes/arc1/002-kabur-dari-mobil/captions.json";
+import episode03 from "../episodes/arc1/003-bel-minimarket/manifest.json";
+import episode03Captions from "../episodes/arc1/003-bel-minimarket/captions.json";
 import episode04 from "../episodes/004-alarm-di-tangga/manifest.json";
 import episode04Captions from "../episodes/004-alarm-di-tangga/captions.json";
-import episode05 from "../episodes/005-suara-dari-rumah-kosong/manifest.json";
-import episode05Captions from "../episodes/005-suara-dari-rumah-kosong/captions.json";
-import episode06 from "../episodes/006-gema-di-underpass/manifest.json";
-import episode06Captions from "../episodes/006-gema-di-underpass/captions.json";
-import episode07 from "../episodes/007-pos-evakuasi-sunyi/manifest.json";
-import episode07Captions from "../episodes/007-pos-evakuasi-sunyi/captions.json";
+import episode05 from "../episodes/arc1/005-suara-dari-rumah-kosong/manifest.json";
+import episode05Captions from "../episodes/arc1/005-suara-dari-rumah-kosong/captions.json";
+import episode06 from "../episodes/arc1/006-gema-di-underpass/manifest.json";
+import episode06Captions from "../episodes/arc1/006-gema-di-underpass/captions.json";
+import episode07 from "../episodes/arc1/007-pos-evakuasi-sunyi/manifest.json";
+import episode07Captions from "../episodes/arc1/007-pos-evakuasi-sunyi/captions.json";
 
 // Use for new episode registrations: the source file, not a fixed cap or the
 // editable manifest's potentially stale narration.duration, sets the runtime.
@@ -102,4 +103,5 @@ export const Root = () => <><Composition
 <Composition id="Arc01Episode05" component={Arc01Episode05} width={1080} height={1920} fps={episode05.fps} durationInFrames={episode05.duration} calculateMetadata={audioFirstMetadata(episode05 as EpisodeManifestV2)} defaultProps={{showCaptions: true, soundOn: true, narrationOn: true, effectsOn: true}} />
 <Composition id="Arc01Episode06" component={Arc01Episode06} width={1080} height={1920} fps={episode06.fps} durationInFrames={episode06.duration} calculateMetadata={audioFirstMetadata(episode06 as EpisodeManifestV2)} defaultProps={{showCaptions: true, soundOn: true, narrationOn: true, effectsOn: true}} />
 <Composition id="Arc01Episode07" component={Arc01Episode07} width={1080} height={1920} fps={episode07.fps} durationInFrames={episode07.duration} calculateMetadata={audioFirstMetadata(episode07 as EpisodeManifestV2)} defaultProps={{showCaptions: true, soundOn: true, narrationOn: true, effectsOn: true}} />
+<Composition id="Skenario01KamarTerkunci" component={Skenario01KamarTerkunci} width={1080} height={1920} fps={30} durationInFrames={4703} />
 </>;
