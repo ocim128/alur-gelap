@@ -1,13 +1,14 @@
 // Separate in-world voice effects; never touches the Investigator narration.
 // Run from the ShortZ directory with its tsx and configured Cloud credentials.
 import {resolve} from 'node:path';
+import {fileURLToPath} from 'node:url';
 import {existsSync} from 'node:fs';
 import {createGeminiCloudProvider} from 'C:/Users/user/Documents/Repo/tiktok-repost/shortz/src/core/tts/gemini-cloud';
 import {resolveGoogleCloudProject} from 'C:/Users/user/Documents/Repo/tiktok-repost/shortz/src/core/tts/environment';
 
 async function main() {
   const project = await resolveGoogleCloudProject();
-  const outputDir = resolve('C:/Users/user/Documents/Repo/tiktok-repost/tiktok-video/Survival-Fantasy-Content/public/sfx/sources');
+  const outputDir = fileURLToPath(new URL('../../../public/sfx/sources', import.meta.url));
   const cues = [
     {file: 'ep005-entity-plea-original.wav', text: 'Tolong... buka pintunya...', style: 'Young Indonesian female voice, eerily flat and repetitive, soft, natural Indonesian pronunciation, no music or sound effects.'},
     {file: 'ep005-entity-whisper-original.wav', text: 'Kalau kaca diketuk... kenapa kamu masih menoleh?', style: 'Young Indonesian female voice, close intimate breathy whisper, eerily flat, natural Indonesian pronunciation, no music or sound effects.'},

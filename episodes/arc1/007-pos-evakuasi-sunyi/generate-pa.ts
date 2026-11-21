@@ -1,11 +1,12 @@
 // Separate in-world PA voice; the Investigator narration is never touched.
 // Run from the ShortZ directory with its configured Google Cloud credentials.
 import {existsSync} from 'node:fs';
+import {fileURLToPath} from 'node:url';
 import {createGeminiCloudProvider} from 'C:/Users/user/Documents/Repo/tiktok-repost/shortz/src/core/tts/gemini-cloud';
 import {resolveGoogleCloudProject} from 'C:/Users/user/Documents/Repo/tiktok-repost/shortz/src/core/tts/environment';
 
 async function main() {
-  const outputWav = 'C:/Users/user/Documents/Repo/tiktok-repost/tiktok-video/Survival-Fantasy-Content/public/sfx/sources/ep007-pa-original.wav';
+  const outputWav = fileURLToPath(new URL('../../../public/sfx/sources/ep007-pa-original.wav', import.meta.url));
   if (existsSync(outputWav)) throw new Error('PA source already exists; preserve it');
   const project = await resolveGoogleCloudProject();
   const provider = createGeminiCloudProvider({project, model:'gemini-3.8-flash-tts', fetchImpl: async (url, init) => {

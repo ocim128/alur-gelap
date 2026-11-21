@@ -1,4 +1,4 @@
-# Survival Fantasy Content
+# alur-gelap
 
 A Remotion project for illustrated Indonesian survival-fantasy videos. The current Studio v2 direction is a standalone anthology of 2–3 minute survival scenarios. [Kamar Terkunci](episodes/001-kamar-terkunci/brief.md) is the first pilot; the earlier *Kemacetan Terakhir* episodes are Arc 01 production history and tone references.
 
@@ -30,6 +30,6 @@ Manifest asset paths are relative to `public/`; scene and audio positions are in
 
 ## Archive and maintenance
 
-The archived [Arc 01 Episode 001 brief](episodes/arc1/001-kemacetan-terakhir/brief.md), [recut manifest](episodes/arc1/001-kemacetan-terakhir/recut-v2/manifest.json) and [captions](episodes/arc1/001-kemacetan-terakhir/recut-v2/captions.json) document the earlier format. Its schema version 2 is distinct from Studio `pipelineVersion: 2`; use the pilot and current contracts for new standalone scenarios. The [earlier playbook](archive/playbook/) retains prior workflow and decision history.
+The archived [Arc 01 Episode 001 brief](episodes/arc1/001-kemacetan-terakhir/brief.md), [recut manifest](episodes/arc1/001-kemacetan-terakhir/recut-v2/manifest.json) and [captions](episodes/arc1/001-kemacetan-terakhir/recut-v2/captions.json) document the earlier format. Its schema version 2 is distinct from Studio `pipelineVersion: 2`; use the pilot and current contracts for new standalone scenarios. The [earlier playbook](archive/playbook/) retains prior workflow and decision history. Archived directed prompt records use repository-root-relative paths for assets in this repository; external references remain as originally recorded.
 
 See the [maintenance log](MAINTENANCE.md) for completed repository improvements, evidence and follow-ups.

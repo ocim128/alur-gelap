@@ -4,8 +4,8 @@
     "panel": "06",
     "prompt": "Use case precise-object-edit, illustration-story. Image 1 is the target scene; image 2 is the locked teen identity reference. One vertical 9:16 gritty inked dark anime comic panel.\n**Stair and landing anchor:** A narrow gray concrete rear ruko staircase rises to a cramped second-floor landing; a simple black metal stair railing has vertical bars. Cool bluish night light and a small warm flashlight beam illuminate scuffed gray concrete steps. The stair alarm is a distinctive empty clear plastic bottle with a solid red screw cap, placed on a middle step. Muddy footprints continue upward on steps above the alarm, without visual emphasis. There are no signs on the stairs or upstairs door.\nDIRECTED FOLLOW-UP: Use a STEEP DOWNWARD angle with the flat top surfaces of the steps broad and clearly visible; no full door is required. The same survivor is at left holding her flashlight, the same empty red-capped bottle rests on a middle stair. On the FLAT TOP of two steps ABOVE the bottle add two natural muddy BARE FOOTPRINTS with toes pointing toward the landing, matching the prior panel's clue, each plausibly human-sized and recognizable at phone size. The vertical RISERS must be completely clean. Naturally restrained brown footprints, no outlines, no glow, no arrows, no new accent. Preserve the same narrow enclosed concrete staircase and black railing.",
     "references": [
-      "C:/Users/user/Documents/Repo/tiktok-repost/tiktok-video/Survival-Fantasy-Content/episodes/004-alarm-di-tangga/sources/directed-candidates/panel-06.webp",
-      "C:/Users/user/Documents/Repo/tiktok-repost/tiktok-video/Survival-Fantasy-Content/public/assets/characters/arc-01-passenger-teen/sheet.png"
+      "episodes/arc1/004-alarm-di-tangga/sources/directed-candidates/panel-06.webp",
+      "public/assets/characters/arc-01-passenger-teen/sheet.png"
     ]
   }
 ]

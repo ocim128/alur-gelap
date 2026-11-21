@@ -4,8 +4,8 @@
     "panel": "10",
     "prompt": "Use case precise-object-edit, illustration-story. Image 1 is the target scene; image 2 is the locked teen identity reference. One vertical 9:16 gritty inked dark anime comic panel.\n**Tunnel and station (immutable):** A long, narrow Indonesian pedestrian underpass at night, made of damp gray concrete, runs straight from its mouth toward the station. Square concrete support columns repeat along the right wall when looking toward the station. The floor is wet rough concrete with shallow puddles. Halfway along that same right wall, an open, doorless concrete emergency-stair alcove is marked by a plain sign reading exactly “TANGGA DARURAT”; its stairs lead away from the main passage. At the far end, a bright green sign reading exactly “PINTU KELUAR” sits above the same closed, fixed, gray metal-framed station entrance glass partition. The alcove looks obliquely along the right wall toward that glass. Cold dim overhead light and the green sign are the only fixed lights.\nDIRECTED FOLLOW-UP: Targeted correction: preserve this exact view and all other details. Her raised FIST is already on the inside of the transparent glass. Place its front knuckles directly touching the glass at eye level, with a tiny ordinary contact smudge on the pane and raindrops visible in front of her fingers so it clearly reads as hand-to-glass contact. Arm remains connected and behind the pane; no contact with metal frame, no crack and no graphic impact marks. Preserve exact sign PINTU KELUAR and face.",
     "references": [
-      "C:/Users/user/Documents/Repo/tiktok-repost/tiktok-video/Survival-Fantasy-Content/episodes/006-gema-di-underpass/sources/directed-candidates/panel-10.webp",
-      "C:/Users/user/Documents/Repo/tiktok-repost/tiktok-video/Survival-Fantasy-Content/public/assets/characters/arc-01-passenger-teen/sheet.png"
+      "episodes/arc1/006-gema-di-underpass/sources/directed-candidates/panel-10.webp",
+      "public/assets/characters/arc-01-passenger-teen/sheet.png"
     ]
   }
 ]

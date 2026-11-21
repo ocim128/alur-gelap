@@ -2,7 +2,7 @@
 
 ## Current setup
 
-The Remotion project root is the parent of `Survival-Fantasy-Content/`. `src/index.ts` registers the root, and `src/Root.tsx` registers compositions. `public/` contains static assets. Existing compositions are unrelated working content; preserve them and any user changes. The project currently defines vertical 1080 × 1920 compositions. It has `npm run dev`, `npm run lint`, and `npm run build` scripts in its `package.json`.
+The `alur-gelap` repository root is the Remotion project root. `src/index.ts` registers the root, and `src/Root.tsx` registers compositions. `public/` contains static assets. Existing compositions are unrelated working content; preserve them and any user changes. The project currently defines vertical 1080 × 1920 compositions. It has `npm run dev`, `npm run check`, and `npm run build` scripts in its `package.json`.
 
 When asked to make a video, read the installed `remotion-best-practices` skill and its indicated creation, markup, interactivity, captions, preview and render references as needed. Start Studio as directed by that skill, verify the actual composition preview and do not render unless explicitly requested. Implement a uniquely named composition, appropriate frame rate and frame-based duration, and use editable, named layers where practical. Use Remotion's frame clock for deterministic animation; avoid relying on wall-clock time, unseeded randomness, network-only assets or CSS animations that might render differently. Base scene boundaries and duration on the final narration and storyboard.
 
@@ -14,24 +14,24 @@ After retiming, check that referenced media exist, voiced words fit inside their
 
 ## Paths and commands
 
-Run these from the parent project root, not from `Survival-Fantasy-Content/`:
+Run these from the repository root:
 
 ```powershell
 npm run dev
-npm run lint
+npm run check
 npm run build
 ```
 
-Register a new episode composition in `src/Root.tsx`, put its components under a descriptive `src/` subfolder, and reference assets placed in a matching `public/` subfolder with Remotion's `staticFile` when appropriate. Record exact paths and the composition ID in the brief. Check existing dependencies and assets before adding more. Do not assume this content folder itself is already a runnable Remotion app.
+Register a new episode composition in `src/Root.tsx`, put its components under a descriptive `src/` subfolder, and reference assets placed in a matching `public/` subfolder with Remotion's `staticFile` when appropriate. Record exact paths and the composition ID in the brief. Check existing dependencies and assets before adding more. The repository root is a runnable Remotion app.
 
-If the user explicitly requests an MP4 export, run the CLI from the parent project root with the real composition ID and an episode-specific destination, for example:
+If the user explicitly requests an MP4 export, run the CLI from the repository root with the real composition ID and an episode-specific destination, for example:
 
 ```powershell
-npx remotion render src/index.ts COMPOSITION_ID "Survival-Fantasy-Content/episodes/001-short-episode-slug/final.mp4"
+npx remotion render src/index.ts COMPOSITION_ID "episodes/001-short-episode-slug/final.mp4"
 ```
 
-Replace both placeholders. The parent `remotion.config.ts` enables overwrite, so check that the output path is new or that replacement is intended before rendering. Verify the actual export's duration, aspect ratio, picture, audio and caption sync; a successful command alone does not establish quality. A reviewable Studio preview is useful even when no export has been requested.
+Replace both placeholders. The root `remotion.config.ts` enables overwrite, so check that the output path is new or that replacement is intended before rendering. Verify the actual export's duration, aspect ratio, picture, audio and caption sync; a successful command alone does not establish quality. A reviewable Studio preview is useful even when no export has been requested.
 
-## When this becomes a separate repository
+## Historical note on repository separation
 
-Today, episode code and served assets depend on files outside this folder; copying this folder alone will not produce a runnable project. Record those dependencies in each episode brief. When separation is actually requested, choose whether to move the Remotion project into the new repository or establish an explicit versioned dependency, then migrate source code, required assets, licenses, package manifest and lockfile, configuration and reproducible commands. Verify install, Studio, lint/build and any explicitly requested render from a clean checkout. Avoid absolute Windows paths in portable content documents. No migration is performed by this playbook.
+This archived guidance predates the move of the Remotion project into this repository. Some historical production scripts still depend on external tools. Record those dependencies in each episode brief. When separation is actually requested, choose whether to move the Remotion project into the new repository or establish an explicit versioned dependency, then migrate source code, required assets, licenses, package manifest and lockfile, configuration and reproducible commands. Verify install, Studio, lint/build and any explicitly requested render from a clean checkout. Avoid absolute Windows paths in portable content documents. This archived playbook does not itself perform a migration.

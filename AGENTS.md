@@ -1,4 +1,4 @@
-# Agent instructions for Survival Fantasy Content
+# Agent instructions for alur-gelap
 
 - Before working on content, read [README.md](README.md), [STYLE_GUIDE.md](STYLE_GUIDE.md), and the relevant episode brief and [decision history](archive/playbook/experiments.md). Earlier guidance lives in [the archived playbook](archive/playbook/). The owner's current instructions override these working assumptions.
 - Make new videos with the Remotion project in this repository root. Follow the applicable installed Remotion skills. Preserve existing user files and the reference video.
