@@ -19,6 +19,7 @@ Never edit source, audio, images, renders, scripts, state or rights records, fix
 ## Severity Rubric
 
 - **Studio v2 pacing.** Review the standalone cut against the 2–3 minute target. Check the three-second hook, planted setup, lethal bad choice, rewind, pressured escape and self-contained payoff. Check that audio theater supports the puzzle. Apply Arc 01's existing v1 rules to its locked parts.
+- **Real Human, Not NPC.** Review character dialogue, habits and constraints as a grounded thriller: flag tutorial-like dialogue or behavior motivated only by the puzzle, and route concrete issues to Agent 01.
 - **Unplanted logic is a BLOCKER.** Trace every physical cause of the bad outcome and every tool or detail used in the smart escape back to its opening panel or line in the Fair-Play Clue Ledger. Verify it is visible or casually established in the actual export before the decision or danger. A hidden flaw or miracle tool introduced mid-story to justify a payoff blocks the cut.
 - **Show-What-You-Say is a BLOCKER.** Compare each mapped narration line to the actual exported frames. A narrated threat or action must be visible during that line. A reaction shot alone does not satisfy the lock.
 - **Silhouette QA.** Accept graphic-novel mirror exaggeration when RHD, reflected sightlines and phone readability remain clear. Flag broken anatomy or legs, indoor falling rain, unrequested figures and incorrect plot-bearing signage as blockers.
