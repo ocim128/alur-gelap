@@ -22,7 +22,13 @@ for i,c in enumerate(m['soundCues']):
 
 for j,bed in enumerate(m['beds']):
  inputs.append('public/'+bed['asset']); idx=len(inputs)-1; delay=round(bed['at']*1000/30); length=bed['duration']/30
- filters.append(f'[{idx}:a]aresample=48000,asetpts=N/SR/TB,aloop=loop=-1:size=2147483647,atrim=duration={length},afade=t=in:st=0:d=0.2,afade=t=out:st={max(0,length-.2)}:d=0.2,volume={bed["gain"]},adelay={delay}|{delay}[bed{j}]'); labels.append(f'[bed{j}]')
+ duck=m.get('audioPolish',{}).get('roomToneDuck',{})
+ envelope=''
+ if bed['name']==duck.get('bedName'):
+  start=duck['startSec']-bed['at']/30; end=duck['endSec']-bed['at']/30; fade=duck['fadeSec']; gain=10**(duck['gainDb']/20)
+  expr=f'if(lt(t,{start-fade}),1,if(lt(t,{start}),1-(1-{gain})*(t-{start-fade})/{fade},if(lt(t,{end}),{gain},if(lt(t,{end+fade}),{gain}+(1-{gain})*(t-{end})/{fade},1))))'
+  envelope=f",volume='{expr}':eval=frame"
+ filters.append(f'[{idx}:a]aresample=48000,asetpts=N/SR/TB,aloop=loop=-1:size=2147483647,atrim=duration={length},afade=t=in:st=0:d=0.2,afade=t=out:st={max(0,length-.2)}:d=0.2,volume={bed["gain"]}{envelope},adelay={delay}|{delay}[bed{j}]'); labels.append(f'[bed{j}]')
 filters.append(''.join(labels)+f'amix=inputs={len(labels)}:normalize=0:duration=longest,apad,atrim=duration={m["duration"]/30},aresample=48000[mix]')
 cmd=['ffmpeg','-y','-v','error']
 for x in inputs:cmd+=['-i',x]

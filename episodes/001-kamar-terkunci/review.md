@@ -13,3 +13,7 @@ Reproduce after reviewing dependencies: `python episodes/001-kamar-terkunci/buil
 ## Audit revision — 22 November 2026
 
 The timing and P17 shadow were revised after the independent FAIL. The clock now runs 70 s from reset to check; the P17 shadow interrupts the light strip in the source-frame test. P08 starts with the run line and P10 no longer starts before the stated hit, but the seated-state line and entry still lack matching selected picture. P04 still lacks the key and knife. The speech-to-hit measurement is provisional and full listening, phone-size motion review, rights and independent QA remain open. This producer revision is not an audit pass. See `assembly-handoff.md`.
+
+## Caption and audio polish — 22 November 2026
+
+The polished export retains the 4,703-frame timing and selected 24-plate batch. Encoded stills show white narrator text without a speaker badge and the yellow PENCULIK label with “JANGAN GESER APA PUN.” The looped room-tone bed is ducked by 5 dB from 01:10 to 01:58; no distinct breath Foley cue was found, and headphone listening is needed to judge the reported repetition. The MP4 measures −14.2 LUFS and −1.8 dBTP; `npm run check` passes 26/26 tests. This is a production polish, not a new independent audit.

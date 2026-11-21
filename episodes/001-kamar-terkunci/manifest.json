@@ -1571,5 +1571,14 @@
       "durationFrames": 65
     }
   ],
-  "notes": "ASR word timings approximate; locked image defects and static action limitations remain open."
+  "notes": "ASR word timings approximate; locked image defects and static action limitations remain open.",
+  "audioPolish": {
+    "roomToneDuck": {
+      "bedName": "room tone after reset",
+      "startSec": 70,
+      "endSec": 118,
+      "gainDb": -5,
+      "fadeSec": 0.25
+    }
+  }
 }
