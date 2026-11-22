@@ -197,6 +197,76 @@
       "output": "public/sfx/prepared/ep007-siren-mixready.wav",
       "processing": "Additional +23.1 dB sample-peak normalization for mix; listening pending",
       "license": "CC0 1.0; TinyWorlds; see LICENSES.md"
+    },
+    {
+      "name": "scenario03-rewind-whoosh",
+      "source": "public/sfx/tension-rise.wav",
+      "output": "public/assets/003-goyangan-dek-enam/sfx/rewind-whoosh.wav",
+      "processing": "0.40 s reverse swell, highpass 120 Hz, lowpass 5500 Hz, peak normalized to -1 dBFS; sample-derived PTS",
+      "license": "CC0 1.0; techiew; see LICENSES.md"
+    },
+    {
+      "name": "scenario03-lifeboat-impact",
+      "source": "public/sfx/prepared/climax-stinger.wav",
+      "output": "public/assets/003-goyangan-dek-enam/sfx/lifeboat-impact.wav",
+      "processing": "0.75 s heavy metal impact, peak normalized to -1 dBFS; anchored to BRAK!",
+      "license": "Derived from dklon (CC BY 3.0), rubberduck (CC0), techiew (CC0); see LICENSES.md"
+    },
+    {
+      "name": "scenario03-lock-pin",
+      "source": "public/sfx/door-lock.wav and public/sfx/ignition-click.wav",
+      "output": "public/assets/003-goyangan-dek-enam/sfx/lock-pin.wav",
+      "processing": "0.40 s layered mechanical pin insertion click, peak normalized to -1 dBFS; anchored to KLIK!",
+      "license": "CC0 1.0; rubberduck; see LICENSES.md"
+    },
+    {
+      "name": "scenario03-chain-padlock",
+      "source": "public/sfx/sources/ep007-metal-open-original.ogg",
+      "output": "public/assets/003-goyangan-dek-enam/sfx/chain-padlock.wav",
+      "processing": "1.15 s metal and chain rattle, highpass 90 Hz, lowpass 5000 Hz, peak normalized to -1 dBFS",
+      "license": "CC0 1.0; rubberduck; see LICENSES.md"
+    },
+    {
+      "name": "scenario03-brake-lever-pull",
+      "source": "public/sfx/console-switch.wav and public/sfx/ignition-click.wav",
+      "output": "public/assets/003-goyangan-dek-enam/sfx/brake-lever-pull.wav",
+      "processing": "0.23 s mechanical lever snap / ratchet release, peak normalized to -1 dBFS",
+      "license": "CC0 1.0; rubberduck; see LICENSES.md"
+    },
+    {
+      "name": "scenario03-pulley-whirr",
+      "source": "public/sfx/sources/ep007-scrape-original.wav",
+      "output": "public/assets/003-goyangan-dek-enam/sfx/pulley-whirr.wav",
+      "processing": "1.20 s wire cable payout friction, highpass 300 Hz, lowpass 4500 Hz, peak normalized to -1 dBFS",
+      "license": "CC0 1.0; AntumDeluge; see LICENSES.md"
+    },
+    {
+      "name": "scenario03-ocean-vortex-suction",
+      "source": "public/sfx/sub-drone.wav",
+      "output": "public/assets/003-goyangan-dek-enam/sfx/ocean-vortex-suction.wav",
+      "processing": "3.50 s underwater vortex cavitation roar, lowpass 220 Hz, peak normalized to -1 dBFS",
+      "license": "CC0 1.0; techiew; see LICENSES.md"
+    },
+    {
+      "name": "scenario03-deck-water-flow",
+      "source": "synthetic pink noise",
+      "output": "public/assets/003-goyangan-dek-enam/sfx/deck-water-flow.wav",
+      "processing": "2.50 s water wash across steel deck, bandpass 800 Hz, tremolo, peak normalized to -1 dBFS",
+      "license": "Locally synthesized noise, no external recording"
+    },
+    {
+      "name": "scenario03-blackout-hit",
+      "source": "synthetic 50 Hz sine",
+      "output": "public/assets/003-goyangan-dek-enam/sfx/blackout-hit.wav",
+      "processing": "0.35 s pure 50 Hz sub-drop, 15 ms attack, peak normalized to -1 dBFS; scheduled at 153.50-153.85 s with 150 ms silence margin before 154.0s cut to black",
+      "license": "Locally synthesized tone, no external recording"
+    },
+    {
+      "name": "scenario03-ship-ambience-bed",
+      "source": "public/sfx/night-air.wav and public/sfx/engine-idle.wav",
+      "output": "public/assets/003-goyangan-dek-enam/sfx/ship-ambience-bed.wav",
+      "processing": "154.0 s continuous exterior ship & engine ambience stem, peak normalized to -12 dBFS",
+      "license": "CC0 1.0; rubberduck; see LICENSES.md"
     }
   ]
 }

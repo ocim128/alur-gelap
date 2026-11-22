@@ -1,0 +1,343 @@
+{
+  "source": "episodes\\003-goyangan-dek-enam\\narration-investigator.mp3",
+  "outputWav": "episodes\\003-goyangan-dek-enam\\narration-prepared.wav",
+  "outputMp3": "episodes\\003-goyangan-dek-enam\\narration-prepared.mp3",
+  "sourceDurationSec": 151.125,
+  "preparedDurationSec": 151.035,
+  "speechEndSec": 150.02,
+  "crossfadeSec": 0.01,
+  "tighteningCuts": [
+    {
+      "start": 2.01,
+      "end": 2.25,
+      "durationSec": 0.24,
+      "word1": "oleng,",
+      "word2": "tapi",
+      "originalGapSec": 0.66,
+      "retainedGapSec": 0.42
+    },
+    {
+      "start": 11.89,
+      "end": 12.19,
+      "durationSec": 0.3,
+      "word1": "detik.",
+      "word2": "Pintu",
+      "originalGapSec": 0.72,
+      "retainedGapSec": 0.42
+    },
+    {
+      "start": 20.59,
+      "end": 21.07,
+      "durationSec": 0.48,
+      "word1": "teratur.",
+      "word2": "Di",
+      "originalGapSec": 0.9,
+      "retainedGapSec": 0.42
+    },
+    {
+      "start": 35.95,
+      "end": 36.25,
+      "durationSec": 0.3,
+      "word1": "bahaya.",
+      "word2": "Pusaran",
+      "originalGapSec": 0.72,
+      "retainedGapSec": 0.42
+    },
+    {
+      "start": 46.85,
+      "end": 47.17,
+      "durationSec": 0.32,
+      "word1": "pagar.",
+      "word2": "Pintu",
+      "originalGapSec": 0.74,
+      "retainedGapSec": 0.42
+    },
+    {
+      "start": 58.81,
+      "end": 59.13,
+      "durationSec": 0.32,
+      "word1": "wajar, kan?",
+      "word2": "Tapi",
+      "originalGapSec": 0.74,
+      "retainedGapSec": 0.42
+    },
+    {
+      "start": 71.27,
+      "end": 72.13,
+      "durationSec": 0.86,
+      "word1": "gelap.",
+      "word2": "Tamat.",
+      "originalGapSec": 1.28,
+      "retainedGapSec": 0.42
+    },
+    {
+      "start": 86.15,
+      "end": 86.39,
+      "durationSec": 0.24,
+      "word1": "berayun.",
+      "word2": "Kabel",
+      "originalGapSec": 0.66,
+      "retainedGapSec": 0.42
+    },
+    {
+      "start": 92.25,
+      "end": 92.57,
+      "durationSec": 0.32,
+      "word1": "gravitasi.",
+      "word2": "Kuncinya:",
+      "originalGapSec": 0.74,
+      "retainedGapSec": 0.42
+    },
+    {
+      "start": 106.51,
+      "end": 106.79,
+      "durationSec": 0.28,
+      "word1": "air:",
+      "word2": "mulai",
+      "originalGapSec": 0.7,
+      "retainedGapSec": 0.42
+    },
+    {
+      "start": 122.55,
+      "end": 123.13,
+      "durationSec": 0.58,
+      "word1": "besi!",
+      "word2": "Sebelum",
+      "originalGapSec": 1,
+      "retainedGapSec": 0.42
+    },
+    {
+      "start": 144.57,
+      "end": 144.87,
+      "durationSec": 0.3,
+      "word1": "lega.",
+      "word2": "Duduk",
+      "originalGapSec": 0.72,
+      "retainedGapSec": 0.42
+    },
+    {
+      "start": 148.53,
+      "end": 148.95,
+      "durationSec": 0.42,
+      "word1": "tiba.",
+      "word2": "Kamu",
+      "originalGapSec": 0.84,
+      "retainedGapSec": 0.42
+    }
+  ],
+  "insertedPauses": [
+    {
+      "name": "rewind-gap",
+      "rawSourceSec": 73.22,
+      "insertedSilenceSec": 0.4
+    },
+    {
+      "name": "post-rewind-silence",
+      "rawSourceSec": 78.22,
+      "insertedSilenceSec": 1.6
+    },
+    {
+      "name": "post-pin-dread-silence",
+      "rawSourceSec": 137.7,
+      "insertedSilenceSec": 2
+    }
+  ],
+  "timelinePlacement": {
+    "rewindGap": {
+      "gapStartSec": 70.4,
+      "gapEndSec": 71.52,
+      "gapDurationSec": 1.12,
+      "rewindWhooshDurationSec": 0.4,
+      "note": "Placed at bad outcome reset between word 129 (Tamat.) and word 130 (Balik lagi.). Anchored with rewind-whoosh.wav."
+    },
+    "postRewindDreadSilence": {
+      "silenceStartSec": 75.8,
+      "silenceEndSec": 77.4,
+      "silenceDurationSec": 1.6,
+      "note": "Placed between word 139 (berlayar.) and word 140 (Perhatiin sekelilingmu lagi.). Total muting of voice and bed."
+    },
+    "executionAndImpactBeat": {
+      "cueSekarangSec": 110.2,
+      "pullTuasSec": 111.24,
+      "lifeboatImpactSec": 117.28,
+      "note": "Execution beat preserved with zero tightening. 111.24 s brake lever clack; 117.28 s 3-ton lifeboat impact (BRAK!) anchored with lifeboat-impact.wav."
+    },
+    "postPinDreadSilence": {
+      "silenceStartSec": 135.46,
+      "silenceEndSec": 138.12,
+      "silenceDurationSec": 2.66,
+      "note": "Placed after word 244 (hening.) and before word 245 (Napasmu memburu.). Includes 2.000 s spliced dread silence."
+    },
+    "blackoutTail": {
+      "speechReleaseSec": 150.02,
+      "preparedTrackEndSec": 151.035,
+      "assembledVideoCutEndSec": 154,
+      "plannedSubHitStartSec": 153.5,
+      "plannedSubHitEndSec": 153.85,
+      "postHitSilenceMarginSec": 0.15,
+      "tailHoldSec": 3.98,
+      "note": "Atmospheric wide P24 hold. Sub-hit (blackout-hit.wav, 0.35s 50 Hz sine) is scheduled at 153.500–153.850 s, leaving a 150 ms clean silent margin before the 154.000 s cut to black. Flagged for Agent 04 to resolve, place inside the output timeline, and measure in the finished MP4 export."
+    }
+  },
+  "cueSheetSounds": [
+    {
+      "name": "ship-ambience-bed",
+      "path": "public/assets/003-goyangan-dek-enam/sfx/ship-ambience-bed.wav",
+      "timingTrigger": "00:00.000–154.000 s (continuous stem, ducked during speech and muted during dread silences)",
+      "durationSec": 154.0,
+      "processing": "Layered night-air.wav and engine-idle.wav loops with subtle ocean wind, filtered 80–4000 Hz, peak normalized to -12.0 dBFS",
+      "source": "rubberduck CC0 1.0 (sfx100v2_loop_ambient_01.ogg, sfx100v2_loop_machine_01.ogg)",
+      "rights": "CC0 1.0 Universal",
+      "peakDbfs": -12.0,
+      "role": "Cold exterior ship ambience & engine rumble bed"
+    },
+    {
+      "name": "chain-padlock",
+      "path": "public/assets/003-goyangan-dek-enam/sfx/chain-padlock.wav",
+      "timingTrigger": "13.400–14.550 s (P03 cabin door chain lock)",
+      "durationSec": 1.15,
+      "processing": "Heavy metal rattle and padlock clink, highpass 90 Hz, lowpass 5000 Hz, normalized to -1.0 dBFS",
+      "source": "rubberduck CC0 1.0 (metal_open_01.ogg)",
+      "rights": "CC0 1.0 Universal",
+      "peakDbfs": -1.0,
+      "role": "Foley for locked cabin doors wrapped in rusted chain"
+    },
+    {
+      "name": "deck-water-flow",
+      "path": "public/assets/003-goyangan-dek-enam/sfx/deck-water-flow.wav",
+      "timingTrigger": "16.340–18.840 s (P04 puddle shift) and 104.300–106.800 s (P16 water surging right)",
+      "durationSec": 2.5,
+      "processing": "Synthesized pink noise with 800 Hz bandpass and 1.5 Hz tremolo, normalized to -1.0 dBFS",
+      "source": "Locally synthesized audio (FFmpeg lavfi anoisesrc)",
+      "rights": "Original procedural sound, no external recording",
+      "peakDbfs": -1.0,
+      "role": "Water sloshing across metal deck plates as ship rolls"
+    },
+    {
+      "name": "ocean-vortex-suction",
+      "path": "public/assets/003-goyangan-dek-enam/sfx/ocean-vortex-suction.wav",
+      "timingTrigger": "58.500–62.000 s (P09 bad outcome propeller suction)",
+      "durationSec": 3.5,
+      "processing": "Underwater vortex cavitation roar derived from sub-drone.wav (2.0–5.5 s), lowpass 220 Hz, 80 Hz boost, normalized to -1.0 dBFS",
+      "source": "techiew CC0 1.0 (ambient_horror.ogg)",
+      "rights": "CC0 1.0 Universal",
+      "peakDbfs": -1.0,
+      "role": "Harsh underwater vortex suction pulling survivor down"
+    },
+    {
+      "name": "rewind-whoosh",
+      "path": "public/assets/003-goyangan-dek-enam/sfx/rewind-whoosh.wav",
+      "timingTrigger": "70.400–70.800 s (P10 to P11 branchRewind transition)",
+      "durationSec": 0.4,
+      "processing": "Reverse swell excerpt from tension-rise.wav (3.2–3.6 s), highpass 120 Hz, lowpass 5500 Hz, normalized to -1.0 dBFS",
+      "source": "techiew CC0 1.0 (ambient_horror.ogg)",
+      "rights": "CC0 1.0 Universal",
+      "peakDbfs": -1.0,
+      "role": "Non-diegetic 0.4s rewind tape snap / reverse swell transition"
+    },
+    {
+      "name": "brake-lever-pull",
+      "path": "public/assets/003-goyangan-dek-enam/sfx/brake-lever-pull.wav",
+      "timingTrigger": "111.240–111.470 s (P18 lever pull action)",
+      "durationSec": 0.23,
+      "processing": "Mechanical switch snap & ignition click composite, normalized to -1.0 dBFS",
+      "source": "rubberduck CC0 1.0 (sfx100v2_switch_01.ogg, sfx100v2_switch_02.ogg)",
+      "rights": "CC0 1.0 Universal",
+      "peakDbfs": -1.0,
+      "role": "Hand brake lever snap / ratchet release"
+    },
+    {
+      "name": "pulley-whirr",
+      "path": "public/assets/003-goyangan-dek-enam/sfx/pulley-whirr.wav",
+      "timingTrigger": "113.520–114.720 s (P19 start, cable payout)",
+      "durationSec": 1.2,
+      "processing": "Metallic cable friction excerpt from ep007-scrape-original.wav, highpass 300 Hz, lowpass 4500 Hz, normalized to -1.0 dBFS",
+      "source": "AntumDeluge CC0 1.0 (scrape-3.wav)",
+      "rights": "CC0 1.0 Universal",
+      "peakDbfs": -1.0,
+      "role": "Wire cable whirring freely off the davit pulley drum"
+    },
+    {
+      "name": "lifeboat-impact",
+      "path": "public/assets/003-goyangan-dek-enam/sfx/lifeboat-impact.wav",
+      "timingTrigger": "117.280–118.030 s (P19 impact, anchored to BRAK!)",
+      "durationSec": 0.75,
+      "processing": "Massive 3-ton metal impact derived from climax-stinger.wav, layered body-fall, metal-resonance, and sub-drone, normalized to -1.0 dBFS",
+      "source": "dklon CC BY 3.0 (body_hit_on_ground.wav) + rubberduck CC0 (sfx100v2_metal_hit_01.ogg) + techiew CC0 (ambient_horror.ogg)",
+      "rights": "CC BY 3.0 (dklon attribution required) and CC0 1.0 Universal",
+      "peakDbfs": -1.0,
+      "role": "Massive 3-ton lifeboat impact crushing entity against iron bulkhead"
+    },
+    {
+      "name": "lock-pin",
+      "path": "public/assets/003-goyangan-dek-enam/sfx/lock-pin.wav",
+      "timingTrigger": "125.320–125.720 s (P21 lock pin, anchored to KLIK!)",
+      "durationSec": 0.4,
+      "processing": "Layered door-lock.wav and ignition-click.wav, normalized to -1.0 dBFS",
+      "source": "rubberduck CC0 1.0 (sfx100v2_lock_open_01.ogg, sfx100v2_switch_01.ogg)",
+      "rights": "CC0 1.0 Universal",
+      "peakDbfs": -1.0,
+      "role": "Heavy cylindrical steel pin locking the pulley wheel in place"
+    },
+    {
+      "name": "blackout-hit",
+      "path": "public/assets/003-goyangan-dek-enam/sfx/blackout-hit.wav",
+      "timingTrigger": "153.500–153.850 s (P24 final blackout hit, ending 150 ms before 154.000 s cut to black)",
+      "durationSec": 0.35,
+      "processing": "Synthesized 50 Hz sine sub-drop with 15 ms smooth attack and exponential decay, normalized to -1.0 dBFS",
+      "source": "Locally synthesized audio (FFmpeg aevalsrc)",
+      "rights": "Original procedural sound, no external recording",
+      "peakDbfs": -1.0,
+      "role": "Restrained final sub-bass hit punctuating the cut to black"
+    }
+  ],
+  "comicSfxRouting": {
+    "issue": "Locked script narasi.txt contained literal all-caps comic SFX 'BRAK!' (line 37) and 'KLIK!' (line 41), which were sent to TTS. Current Agent 02 contract prohibits sending raw comic SFX to TTS.",
+    "status": "Routed to Agent 01 (scriptwriter) for future script compliance; approved voice take preserved without re-roll per owner acceptance.",
+    "foleyAnchors": {
+      "BRAK!": {
+        "wordIndex": 212,
+        "timingSec": "117.28–117.96 s",
+        "cueAsset": "public/assets/003-goyangan-dek-enam/sfx/lifeboat-impact.wav",
+        "note": "Reconciled from raw Whisper ASR taboo artifact 'berak' to 'BRAK!' in timestamps; anchored to massive 3-ton lifeboat impact foley."
+      },
+      "KLIK!": {
+        "wordIndex": 228,
+        "timingSec": "125.32–126.04 s",
+        "cueAsset": "public/assets/003-goyangan-dek-enam/sfx/lock-pin.wav",
+        "note": "Reconciled from Whisper 'Klik,' to 'KLIK!' in timestamps; anchored to mechanical lock-pin insertion foley."
+      }
+    }
+  },
+  "pronunciationReconciliation": {
+    "status": "complete",
+    "totalWords": 265,
+    "reconciledCount": 33,
+    "keyCorrections": [
+      { "index": 2, "asr": "oleg,", "script": "oleng,", "resolution": "ASR phonetic confusion; Investigator vocalized 'oleng'; reconciled." },
+      { "index": 62, "asr": "Dipagar", "script": "Di pagar", "resolution": "ASR compound token; reconciled to 'Di pagar'." },
+      { "index": 104, "asr": "wajarkan.", "script": "wajar, kan?", "resolution": "ASR contraction; reconciled to 'wajar, kan?'." },
+      { "index": 115, "asr": "ngedot", "script": "nyedot", "resolution": "ASR nasal substitution; context is 'nyedot tubuhmu'; reconciled." },
+      { "index": 150, "asr": "Jacket", "script": "Jaket", "resolution": "ASR English spelling; reconciled to Indonesian 'Jaket'." },
+      { "index": 166, "asr": "peban", "script": "beban", "resolution": "ASR devoicing artifact; reconciled to 'beban'." },
+      { "index": 176, "asr": "kecilah", "script": "ke celah", "resolution": "ASR compound token; reconciled to 'ke celah'." },
+      { "index": 188, "asr": "kenangan", "script": "genangan", "resolution": "ASR velar stop confusion; context is 'genangan air'; reconciled." },
+      { "index": 212, "asr": "berak", "script": "BRAK!", "resolution": "TTS vocalized 'BRAK!'; Whisper heard 'berak'; reconciled to 'BRAK!' to prevent taboo caption." },
+      { "index": 228, "asr": "Klik,", "script": "KLIK!", "resolution": "Reconciled to 'KLIK!' for caption formatting." },
+      { "index": 239, "asr": "Gak", "script": "nggak", "resolution": "ASR informal spelling; reconciled to script 'nggak'." },
+      { "index": 259, "asr": "phajar", "script": "fajar", "resolution": "ASR phonetic artifact; reconciled to 'fajar'." }
+    ]
+  },
+  "runtimeBudget": {
+    "preNarrationTitleAndRoomToneSec": 0,
+    "narrationTrackDurationSec": 151.035,
+    "spokenSpeechEndSec": 150.02,
+    "tailAtmosphericHoldSec": 3.98,
+    "measuredTotalCutDurationSec": 154,
+    "targetWindowSec": [
+      140,
+      165
+    ]
+  },
+  "notes": "Assembled on continuous PCM sample timeline; zero playback speed change (atempo 1.0x preserved); strictly monotonic PTS verified by ffprobe across all packets. 10 cue-sheet SFX pre-mastered at -1 dBFS sample peak (-12 dBFS for bed) and delivered to public/assets/003-goyangan-dek-enam/sfx/."
+}

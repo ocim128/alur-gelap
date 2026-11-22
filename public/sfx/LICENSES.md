@@ -76,3 +76,17 @@ These candidates and the existing climax derivatives require listening in the ep
 - The guard steps and flashlight click use the existing rubberduck CC0 library. The shared climax stinger contains dklon's CC BY 3.0 foley; its attribution above applies.
 
 For the Episode 007 assembly, `prepared/ep007-pa-mixready.wav` adds 22 dB to the processed PA and `prepared/ep007-siren-mixready.wav` adds 23.1 dB to the filtered siren loop, placing their source sample peaks near -1 dBFS. Original and intermediate files are retained. Finished loudness and true peak are measured on the exported mix; source normalization is not a listening review.
+
+## Standalone Scenario 03 — Goyangan Dek Enam
+
+- `sfx/rewind-whoosh.wav`: 0.40 s reverse whoosh excerpt from techiew's CC0 1.0 `tension-rise.wav` (seconds 3.2–3.6), filtered 120–5500 Hz with 30 ms / 50 ms entry/exit fades, sample-peak normalized to -1.0 dBFS. Used for the 0.4 s `branchRewind` transition at 70.40–71.52 s.
+- `sfx/lifeboat-impact.wav`: 0.75 s heavy metal impact derived from `climax-stinger.wav`, layering dklon's CC BY 3.0 `body-fall`, rubberduck's CC0 `metal-resonance`, and techiew's CC0 `sub-drone`. Peak normalized to -1.0 dBFS. Credit text applies: **Foley from “Super Foley Pack” by dklon, licensed CC BY 3.0. Excerpts trimmed and filtered.** Anchored to `BRAK!` at 117.28–117.96 s.
+- `sfx/lock-pin.wav`: 0.40 s composite of rubberduck's CC0 `door-lock.wav` and `ignition-click.wav`, normalized to -1.0 dBFS. Anchored to `KLIK!` at 125.32–126.04 s.
+- `sfx/chain-padlock.wav`: 1.15 s metal and chain rattle from rubberduck's CC0 `ep007-metal-open-original.ogg` (`metal_open_01.ogg`), filtered 90–5000 Hz, normalized to -1.0 dBFS.
+- `sfx/brake-lever-pull.wav`: 0.23 s mechanical lever snap / ratchet release from rubberduck's CC0 `console-switch.wav` and `ignition-click.wav`, normalized to -1.0 dBFS. Triggered at 111.24 s (P18).
+- `sfx/pulley-whirr.wav`: 1.20 s wire cable friction from AntumDeluge's CC0 `ep007-scrape-original.wav` (`scrape-3.wav`), highpass 300 Hz, lowpass 4500 Hz, normalized to -1.0 dBFS. Triggered at 113.52 s (P19 start).
+- `sfx/ocean-vortex-suction.wav`: 3.50 s underwater vortex cavitation roar derived from techiew's CC0 `sub-drone.wav` (seconds 2.0–5.5) with 220 Hz lowpass filter and 80 Hz boost, normalized to -1.0 dBFS. Triggered at 58.50 s (P09).
+- `sfx/deck-water-flow.wav`: 2.50 s water wash across steel deck plate, synthesized via pink noise with 800 Hz bandpass and 1.5 Hz tremolo, normalized to -1.0 dBFS. Triggered at 16.34 s (P04) and 104.30 s (P16).
+- `sfx/blackout-hit.wav`: 0.35 s (350 ms) pure 50 Hz sine sub-drop with 15 ms smooth attack and exponential decay, synthesized locally via FFmpeg, normalized to -1.0 dBFS. Scheduled inside the cut at 153.50–153.85 s with a 150 ms silent margin before the 154.000 s cut to black.
+- `sfx/ship-ambience-bed.wav`: 154.000 s continuous ship exterior ambience stem layering rubberduck's CC0 `night-air.wav` and `engine-idle.wav`, peak normalized to -12.0 dBFS.
+

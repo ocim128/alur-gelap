@@ -1,0 +1,1720 @@
+{
+  "version": 1,
+  "voiceId": "voice_71a5a701-796e-421d-840e-0adc00b0816a",
+  "durationSec": 151.035,
+  "master": true,
+  "chunks": [
+    {
+      "index": 0,
+      "tag": null,
+      "text": "Kapalnya terus oleng, tapi bayangan di depanmu berdiri tegak. Di lorong luar kapal, ombak bikin kapal miring ke kiri dan kanan tiap lima detik. Pintu masuk ke lorong kabin digembok rantai dari luar karena badai.",
+      "start": 0,
+      "end": 15.92,
+      "retries": 1,
+      "status": "verified"
+    },
+    {
+      "index": 1,
+      "tag": null,
+      "text": "Genangan air di lantai bolak-balik teratur. Di dinding, deretan jaket pelampung berayun barengan sama kabel sekoci. Di dekat tiang sekoci, ada tuas rem dengan besi pengunci.",
+      "start": 16.34,
+      "end": 30.96,
+      "retries": 1,
+      "status": "verified"
+    },
+    {
+      "index": 2,
+      "tag": null,
+      "text": "Di pagar pembatas, ada tanda bahaya: pusaran baling-baling kapal bakal nyedot apapun yang lompat ke laut. Sosok hitam itu melangkah pelan, memojokkan kamu ke pagar. Pintu kabin terkunci, jalan mundur habis.",
+      "start": 31.42,
+      "end": 49.38,
+      "retries": 0,
+      "status": "verified"
+    },
+    {
+      "index": 3,
+      "tag": null,
+      "text": "Instingmu: sambar jaket pelampung di dinding, lalu nekat lompat ke laut. Wajar, kan? Tapi begitu nyebur ke ombak gelap: pusaran baling-baling langsung nyedot tubuhmu ke bawah kapal.",
+      "start": 49.38,
+      "end": 64.18,
+      "retries": 1,
+      "status": "verified"
+    },
+    {
+      "index": 4,
+      "tag": null,
+      "text": "Dalam tiga detik, kamu lenyap ditelan ombak gelap. Tamat. Balik lagi.",
+      "start": 64.66,
+      "end": 72.06,
+      "retries": 2,
+      "status": "failed"
+    },
+    {
+      "index": 5,
+      "tag": null,
+      "text": "Jangan pernah lompat ke laut saat kapal berlayar. Perhatiin sekelilingmu lagi. Semua benda gantung ikut oleng karena ombak.",
+      "start": 72.44,
+      "end": 82.9,
+      "retries": 2,
+      "status": "verified"
+    },
+    {
+      "index": 6,
+      "tag": null,
+      "text": "Jaket pelampung berayun, kabel sekoci berayun. Cuma sosok itu yang berdiri tegak melawan gravitasi. Kuncinya: manfaatin beban sekoci tiga ton di atasmu.",
+      "start": 83.34,
+      "end": 95.72,
+      "retries": 1,
+      "status": "verified"
+    },
+    {
+      "index": 7,
+      "tag": null,
+      "text": "Pancing sosok itu mendekat ke celah sempit di balik badan sekoci. Tanganmu di tuas rem sekoci. Lihat genangan air: mulai ngalir deras ke kanan.",
+      "start": 96.22,
+      "end": 107.1,
+      "retries": 2,
+      "status": "failed"
+    },
+    {
+      "index": 8,
+      "tag": null,
+      "text": "Kapal mencapai puncak kemiringan! Sekarang! Tarik tuas rem sekuat tenaga!",
+      "start": 107.6,
+      "end": 113.06,
+      "retries": 2,
+      "status": "failed"
+    },
+    {
+      "index": 9,
+      "tag": null,
+      "text": "Kabel lepas, sekoci tiga ton mengayun dan—BRAK! Menghantam tubuhnya ke dinding besi! Sebelum sekoci mantul, langsung tancapkan besi pengunci ke roda katrol!",
+      "start": 113.52,
+      "end": 125.32,
+      "retries": 2,
+      "status": "failed"
+    },
+    {
+      "index": 10,
+      "tag": null,
+      "text": "KLIK! Besi terkunci. Sosok itu terjepit rapat di balik badan sekoci, nggak bisa bergerak.",
+      "start": 125.32,
+      "end": 133.96,
+      "retries": 2,
+      "status": "failed"
+    },
+    {
+      "index": 11,
+      "tag": null,
+      "text": "Dua detik hening. Napasmu memburu. Sekoci menahannya tanpa ampun.",
+      "start": 134.5,
+      "end": 142.28,
+      "retries": 2,
+      "status": "failed"
+    },
+    {
+      "index": 12,
+      "tag": null,
+      "text": "Tarik napas lega. Duduk di lantai dek, tunggu fajar tiba. Kamu berhasil bertahan hidup.",
+      "start": 142.76,
+      "end": 150.02,
+      "retries": 2,
+      "status": "failed"
+    }
+  ],
+  "words": [
+    {
+      "word": "Kapalnya",
+      "start": 0,
+      "end": 0.84,
+      "chunk": 0
+    },
+    {
+      "word": "terus",
+      "start": 0.84,
+      "end": 1.26,
+      "chunk": 0
+    },
+    {
+      "word": "oleng,",
+      "start": 1.26,
+      "end": 1.8,
+      "chunk": 0
+    },
+    {
+      "word": "tapi",
+      "start": 2.22,
+      "end": 2.64,
+      "chunk": 0
+    },
+    {
+      "word": "bayangan",
+      "start": 2.64,
+      "end": 3.08,
+      "chunk": 0
+    },
+    {
+      "word": "di",
+      "start": 3.08,
+      "end": 3.3,
+      "chunk": 0
+    },
+    {
+      "word": "depanmu",
+      "start": 3.3,
+      "end": 3.8,
+      "chunk": 0
+    },
+    {
+      "word": "berdiri",
+      "start": 3.8,
+      "end": 4.28,
+      "chunk": 0
+    },
+    {
+      "word": "tegak.",
+      "start": 4.28,
+      "end": 5.54,
+      "chunk": 0
+    },
+    {
+      "word": "Di",
+      "start": 5.54,
+      "end": 5.76,
+      "chunk": 0
+    },
+    {
+      "word": "lorong",
+      "start": 5.76,
+      "end": 6.14,
+      "chunk": 0
+    },
+    {
+      "word": "luar",
+      "start": 6.14,
+      "end": 6.36,
+      "chunk": 0
+    },
+    {
+      "word": "kapal,",
+      "start": 6.36,
+      "end": 6.88,
+      "chunk": 0
+    },
+    {
+      "word": "ombak",
+      "start": 7.38,
+      "end": 7.7,
+      "chunk": 0
+    },
+    {
+      "word": "bikin",
+      "start": 7.7,
+      "end": 8,
+      "chunk": 0
+    },
+    {
+      "word": "kapal",
+      "start": 8,
+      "end": 8.42,
+      "chunk": 0
+    },
+    {
+      "word": "miring",
+      "start": 8.42,
+      "end": 8.96,
+      "chunk": 0
+    },
+    {
+      "word": "ke",
+      "start": 8.96,
+      "end": 9.16,
+      "chunk": 0
+    },
+    {
+      "word": "kiri",
+      "start": 9.16,
+      "end": 9.6,
+      "chunk": 0
+    },
+    {
+      "word": "dan",
+      "start": 9.6,
+      "end": 9.88,
+      "chunk": 0
+    },
+    {
+      "word": "kanan",
+      "start": 9.88,
+      "end": 10.4,
+      "chunk": 0
+    },
+    {
+      "word": "tiap",
+      "start": 10.4,
+      "end": 10.82,
+      "chunk": 0
+    },
+    {
+      "word": "lima",
+      "start": 10.82,
+      "end": 11.08,
+      "chunk": 0
+    },
+    {
+      "word": "detik.",
+      "start": 11.08,
+      "end": 11.44,
+      "chunk": 0
+    },
+    {
+      "word": "Pintu",
+      "start": 11.86,
+      "end": 12.22,
+      "chunk": 0
+    },
+    {
+      "word": "masuk",
+      "start": 12.22,
+      "end": 12.54,
+      "chunk": 0
+    },
+    {
+      "word": "lorong",
+      "start": 12.54,
+      "end": 12.98,
+      "chunk": 0
+    },
+    {
+      "word": "kabin",
+      "start": 12.98,
+      "end": 13.4,
+      "chunk": 0
+    },
+    {
+      "word": "di",
+      "start": 13.4,
+      "end": 13.56,
+      "chunk": 0
+    },
+    {
+      "word": "gembok",
+      "start": 13.56,
+      "end": 13.96,
+      "chunk": 0
+    },
+    {
+      "word": "rantai",
+      "start": 13.96,
+      "end": 14.52,
+      "chunk": 0
+    },
+    {
+      "word": "dari",
+      "start": 14.52,
+      "end": 14.72,
+      "chunk": 0
+    },
+    {
+      "word": "luar",
+      "start": 14.72,
+      "end": 15.08,
+      "chunk": 0
+    },
+    {
+      "word": "karena",
+      "start": 15.08,
+      "end": 15.4,
+      "chunk": 0
+    },
+    {
+      "word": "badai.",
+      "start": 15.4,
+      "end": 15.92,
+      "chunk": 0
+    },
+    {
+      "word": "Genangan",
+      "start": 16.34,
+      "end": 16.94,
+      "chunk": 1
+    },
+    {
+      "word": "air",
+      "start": 16.94,
+      "end": 17.42,
+      "chunk": 1
+    },
+    {
+      "word": "di",
+      "start": 17.42,
+      "end": 17.72,
+      "chunk": 1
+    },
+    {
+      "word": "lantai,",
+      "start": 17.72,
+      "end": 18.34,
+      "chunk": 1
+    },
+    {
+      "word": "bolak-",
+      "start": 18.8,
+      "end": 19,
+      "chunk": 1
+    },
+    {
+      "word": "balik",
+      "start": 19,
+      "end": 19.42,
+      "chunk": 1
+    },
+    {
+      "word": "teratur.",
+      "start": 19.42,
+      "end": 19.84,
+      "chunk": 1
+    },
+    {
+      "word": "Di",
+      "start": 20.26,
+      "end": 20.48,
+      "chunk": 1
+    },
+    {
+      "word": "dinding,",
+      "start": 20.48,
+      "end": 20.9,
+      "chunk": 1
+    },
+    {
+      "word": "deretan",
+      "start": 21.52,
+      "end": 21.96,
+      "chunk": 1
+    },
+    {
+      "word": "jaket",
+      "start": 21.96,
+      "end": 22.32,
+      "chunk": 1
+    },
+    {
+      "word": "pelampung",
+      "start": 22.32,
+      "end": 22.92,
+      "chunk": 1
+    },
+    {
+      "word": "berayun",
+      "start": 22.92,
+      "end": 23.66,
+      "chunk": 1
+    },
+    {
+      "word": "barengan",
+      "start": 23.66,
+      "end": 24.46,
+      "chunk": 1
+    },
+    {
+      "word": "sama",
+      "start": 24.46,
+      "end": 24.7,
+      "chunk": 1
+    },
+    {
+      "word": "kabel",
+      "start": 24.7,
+      "end": 25.2,
+      "chunk": 1
+    },
+    {
+      "word": "sekoci.",
+      "start": 25.2,
+      "end": 25.78,
+      "chunk": 1
+    },
+    {
+      "word": "Di",
+      "start": 25.78,
+      "end": 27.04,
+      "chunk": 1
+    },
+    {
+      "word": "dekat",
+      "start": 27.04,
+      "end": 27.36,
+      "chunk": 1
+    },
+    {
+      "word": "tiang",
+      "start": 27.36,
+      "end": 27.6,
+      "chunk": 1
+    },
+    {
+      "word": "sekoci,",
+      "start": 27.6,
+      "end": 28.12,
+      "chunk": 1
+    },
+    {
+      "word": "ada",
+      "start": 28.38,
+      "end": 28.86,
+      "chunk": 1
+    },
+    {
+      "word": "tuas",
+      "start": 28.86,
+      "end": 29.26,
+      "chunk": 1
+    },
+    {
+      "word": "rem",
+      "start": 29.26,
+      "end": 29.54,
+      "chunk": 1
+    },
+    {
+      "word": "dengan",
+      "start": 29.54,
+      "end": 30.04,
+      "chunk": 1
+    },
+    {
+      "word": "besi",
+      "start": 30.04,
+      "end": 30.5,
+      "chunk": 1
+    },
+    {
+      "word": "pengunci.",
+      "start": 30.5,
+      "end": 30.96,
+      "chunk": 1
+    },
+    {
+      "word": "Di pagar",
+      "start": 31.42,
+      "end": 32.12,
+      "chunk": 2
+    },
+    {
+      "word": "pembatas,",
+      "start": 32.12,
+      "end": 32.76,
+      "chunk": 2
+    },
+    {
+      "word": "ada",
+      "start": 33.36,
+      "end": 33.78,
+      "chunk": 2
+    },
+    {
+      "word": "tanda",
+      "start": 33.78,
+      "end": 34.16,
+      "chunk": 2
+    },
+    {
+      "word": "bahaya.",
+      "start": 34.16,
+      "end": 34.72,
+      "chunk": 2
+    },
+    {
+      "word": "Pusaran",
+      "start": 35.14,
+      "end": 35.64,
+      "chunk": 2
+    },
+    {
+      "word": "baling-",
+      "start": 35.64,
+      "end": 36.14,
+      "chunk": 2
+    },
+    {
+      "word": "baling",
+      "start": 36.14,
+      "end": 36.48,
+      "chunk": 2
+    },
+    {
+      "word": "kapal",
+      "start": 36.48,
+      "end": 37,
+      "chunk": 2
+    },
+    {
+      "word": "bakal",
+      "start": 37,
+      "end": 37.48,
+      "chunk": 2
+    },
+    {
+      "word": "nyedot",
+      "start": 37.48,
+      "end": 37.74,
+      "chunk": 2
+    },
+    {
+      "word": "apapun",
+      "start": 37.74,
+      "end": 38.52,
+      "chunk": 2
+    },
+    {
+      "word": "yang",
+      "start": 38.52,
+      "end": 38.72,
+      "chunk": 2
+    },
+    {
+      "word": "lompat",
+      "start": 38.72,
+      "end": 39.28,
+      "chunk": 2
+    },
+    {
+      "word": "ke",
+      "start": 39.28,
+      "end": 39.44,
+      "chunk": 2
+    },
+    {
+      "word": "laut.",
+      "start": 39.44,
+      "end": 39.68,
+      "chunk": 2
+    },
+    {
+      "word": "Sosok",
+      "start": 40.28,
+      "end": 40.92,
+      "chunk": 2
+    },
+    {
+      "word": "hitam",
+      "start": 40.92,
+      "end": 41.42,
+      "chunk": 2
+    },
+    {
+      "word": "itu",
+      "start": 41.42,
+      "end": 41.7,
+      "chunk": 2
+    },
+    {
+      "word": "melangkah",
+      "start": 41.7,
+      "end": 42.42,
+      "chunk": 2
+    },
+    {
+      "word": "pelan,",
+      "start": 42.42,
+      "end": 42.92,
+      "chunk": 2
+    },
+    {
+      "word": "memojokkan",
+      "start": 43.34,
+      "end": 44.1,
+      "chunk": 2
+    },
+    {
+      "word": "kamu",
+      "start": 44.1,
+      "end": 44.58,
+      "chunk": 2
+    },
+    {
+      "word": "ke",
+      "start": 44.58,
+      "end": 44.82,
+      "chunk": 2
+    },
+    {
+      "word": "pagar.",
+      "start": 44.82,
+      "end": 45.32,
+      "chunk": 2
+    },
+    {
+      "word": "Pintu",
+      "start": 45.74,
+      "end": 46.1,
+      "chunk": 2
+    },
+    {
+      "word": "kabin",
+      "start": 46.1,
+      "end": 46.44,
+      "chunk": 2
+    },
+    {
+      "word": "terkunci,",
+      "start": 46.44,
+      "end": 46.98,
+      "chunk": 2
+    },
+    {
+      "word": "jalan",
+      "start": 47.56,
+      "end": 47.98,
+      "chunk": 2
+    },
+    {
+      "word": "mundur,",
+      "start": 47.98,
+      "end": 48.46,
+      "chunk": 2
+    },
+    {
+      "word": "habis.",
+      "start": 48.94,
+      "end": 49.38,
+      "chunk": 2
+    },
+    {
+      "word": "Instingmu,",
+      "start": 49.38,
+      "end": 50.78,
+      "chunk": 3
+    },
+    {
+      "word": "sambar",
+      "start": 51.32,
+      "end": 51.96,
+      "chunk": 3
+    },
+    {
+      "word": "jaket",
+      "start": 51.96,
+      "end": 52.32,
+      "chunk": 3
+    },
+    {
+      "word": "pelampung",
+      "start": 52.32,
+      "end": 52.76,
+      "chunk": 3
+    },
+    {
+      "word": "di",
+      "start": 52.76,
+      "end": 52.9,
+      "chunk": 3
+    },
+    {
+      "word": "dinding,",
+      "start": 52.9,
+      "end": 53.2,
+      "chunk": 3
+    },
+    {
+      "word": "lalu",
+      "start": 53.64,
+      "end": 53.94,
+      "chunk": 3
+    },
+    {
+      "word": "nekat",
+      "start": 53.94,
+      "end": 54.42,
+      "chunk": 3
+    },
+    {
+      "word": "lompat",
+      "start": 54.42,
+      "end": 55.26,
+      "chunk": 3
+    },
+    {
+      "word": "ke",
+      "start": 55.26,
+      "end": 55.4,
+      "chunk": 3
+    },
+    {
+      "word": "laut,",
+      "start": 55.4,
+      "end": 55.62,
+      "chunk": 3
+    },
+    {
+      "word": "wajar, kan?",
+      "start": 56.22,
+      "end": 56.96,
+      "chunk": 3
+    },
+    {
+      "word": "Tapi",
+      "start": 57.38,
+      "end": 57.94,
+      "chunk": 3
+    },
+    {
+      "word": "begitu",
+      "start": 57.94,
+      "end": 58.5,
+      "chunk": 3
+    },
+    {
+      "word": "nyebur",
+      "start": 58.5,
+      "end": 58.96,
+      "chunk": 3
+    },
+    {
+      "word": "ke",
+      "start": 58.96,
+      "end": 59.16,
+      "chunk": 3
+    },
+    {
+      "word": "ombak",
+      "start": 59.16,
+      "end": 59.6,
+      "chunk": 3
+    },
+    {
+      "word": "gelap,",
+      "start": 59.6,
+      "end": 60.02,
+      "chunk": 3
+    },
+    {
+      "word": "pusaran",
+      "start": 60.36,
+      "end": 60.94,
+      "chunk": 3
+    },
+    {
+      "word": "baling-",
+      "start": 60.94,
+      "end": 61.26,
+      "chunk": 3
+    },
+    {
+      "word": "baling",
+      "start": 61.26,
+      "end": 61.52,
+      "chunk": 3
+    },
+    {
+      "word": "langsung",
+      "start": 61.52,
+      "end": 61.96,
+      "chunk": 3
+    },
+    {
+      "word": "nyedot",
+      "start": 61.96,
+      "end": 62.42,
+      "chunk": 3
+    },
+    {
+      "word": "tubuhmu",
+      "start": 62.42,
+      "end": 63.12,
+      "chunk": 3
+    },
+    {
+      "word": "ke",
+      "start": 63.12,
+      "end": 63.32,
+      "chunk": 3
+    },
+    {
+      "word": "bawah",
+      "start": 63.32,
+      "end": 63.74,
+      "chunk": 3
+    },
+    {
+      "word": "kapal.",
+      "start": 63.74,
+      "end": 64.18,
+      "chunk": 3
+    },
+    {
+      "word": "Dalam",
+      "start": 64.66,
+      "end": 65.08,
+      "chunk": 4
+    },
+    {
+      "word": "tiga",
+      "start": 65.08,
+      "end": 65.56,
+      "chunk": 4
+    },
+    {
+      "word": "detik,",
+      "start": 65.56,
+      "end": 66.06,
+      "chunk": 4
+    },
+    {
+      "word": "kamu",
+      "start": 66.7,
+      "end": 67.16,
+      "chunk": 4
+    },
+    {
+      "word": "lenyap",
+      "start": 67.16,
+      "end": 67.76,
+      "chunk": 4
+    },
+    {
+      "word": "di",
+      "start": 67.76,
+      "end": 68,
+      "chunk": 4
+    },
+    {
+      "word": "telan",
+      "start": 68,
+      "end": 68.28,
+      "chunk": 4
+    },
+    {
+      "word": "ombak",
+      "start": 68.28,
+      "end": 68.68,
+      "chunk": 4
+    },
+    {
+      "word": "gelap.",
+      "start": 68.68,
+      "end": 69.1,
+      "chunk": 4
+    },
+    {
+      "word": "Tamat,",
+      "start": 69.52,
+      "end": 70.4,
+      "chunk": 4
+    },
+    {
+      "word": "balik",
+      "start": 71.52,
+      "end": 71.86,
+      "chunk": 4
+    },
+    {
+      "word": "lagi.",
+      "start": 71.86,
+      "end": 72.06,
+      "chunk": 4
+    },
+    {
+      "word": "Jangan",
+      "start": 72.44,
+      "end": 72.88,
+      "chunk": 5
+    },
+    {
+      "word": "pernah",
+      "start": 72.88,
+      "end": 73.2,
+      "chunk": 5
+    },
+    {
+      "word": "lompat",
+      "start": 73.2,
+      "end": 73.76,
+      "chunk": 5
+    },
+    {
+      "word": "ke",
+      "start": 73.76,
+      "end": 73.94,
+      "chunk": 5
+    },
+    {
+      "word": "laut",
+      "start": 73.94,
+      "end": 74.2,
+      "chunk": 5
+    },
+    {
+      "word": "saat",
+      "start": 74.2,
+      "end": 74.68,
+      "chunk": 5
+    },
+    {
+      "word": "kapal",
+      "start": 74.68,
+      "end": 75.16,
+      "chunk": 5
+    },
+    {
+      "word": "berlayar.",
+      "start": 75.16,
+      "end": 75.8,
+      "chunk": 5
+    },
+    {
+      "word": "Perhatiin",
+      "start": 77.4,
+      "end": 78.66,
+      "chunk": 5
+    },
+    {
+      "word": "sekelilingmu",
+      "start": 78.66,
+      "end": 79.18,
+      "chunk": 5
+    },
+    {
+      "word": "lagi.",
+      "start": 79.18,
+      "end": 79.48,
+      "chunk": 5
+    },
+    {
+      "word": "Semua",
+      "start": 80.06,
+      "end": 80.6,
+      "chunk": 5
+    },
+    {
+      "word": "benda",
+      "start": 80.6,
+      "end": 80.84,
+      "chunk": 5
+    },
+    {
+      "word": "gantung",
+      "start": 80.84,
+      "end": 81.3,
+      "chunk": 5
+    },
+    {
+      "word": "ikut",
+      "start": 81.3,
+      "end": 81.62,
+      "chunk": 5
+    },
+    {
+      "word": "oleng",
+      "start": 81.62,
+      "end": 81.96,
+      "chunk": 5
+    },
+    {
+      "word": "karena",
+      "start": 81.96,
+      "end": 82.36,
+      "chunk": 5
+    },
+    {
+      "word": "ombak.",
+      "start": 82.36,
+      "end": 82.9,
+      "chunk": 5
+    },
+    {
+      "word": "Jaket",
+      "start": 83.34,
+      "end": 83.9,
+      "chunk": 6
+    },
+    {
+      "word": "pelampung",
+      "start": 83.9,
+      "end": 84.48,
+      "chunk": 6
+    },
+    {
+      "word": "berayun.",
+      "start": 84.48,
+      "end": 85.12,
+      "chunk": 6
+    },
+    {
+      "word": "Kabel",
+      "start": 85.54,
+      "end": 85.84,
+      "chunk": 6
+    },
+    {
+      "word": "sekoci",
+      "start": 85.84,
+      "end": 86.44,
+      "chunk": 6
+    },
+    {
+      "word": "berayun.",
+      "start": 86.44,
+      "end": 87.08,
+      "chunk": 6
+    },
+    {
+      "word": "Cuma",
+      "start": 87.32,
+      "end": 87.96,
+      "chunk": 6
+    },
+    {
+      "word": "sosok",
+      "start": 87.96,
+      "end": 88.4,
+      "chunk": 6
+    },
+    {
+      "word": "itu",
+      "start": 88.4,
+      "end": 88.68,
+      "chunk": 6
+    },
+    {
+      "word": "yang",
+      "start": 88.68,
+      "end": 88.94,
+      "chunk": 6
+    },
+    {
+      "word": "berdiri",
+      "start": 88.94,
+      "end": 89.28,
+      "chunk": 6
+    },
+    {
+      "word": "tegak",
+      "start": 89.28,
+      "end": 89.8,
+      "chunk": 6
+    },
+    {
+      "word": "melawan",
+      "start": 89.8,
+      "end": 90.28,
+      "chunk": 6
+    },
+    {
+      "word": "gravitasi.",
+      "start": 90.28,
+      "end": 90.98,
+      "chunk": 6
+    },
+    {
+      "word": "Kuncinya,",
+      "start": 91.4,
+      "end": 92.12,
+      "chunk": 6
+    },
+    {
+      "word": "manfaatin",
+      "start": 92.58,
+      "end": 93.32,
+      "chunk": 6
+    },
+    {
+      "word": "beban",
+      "start": 93.32,
+      "end": 93.68,
+      "chunk": 6
+    },
+    {
+      "word": "sekoci",
+      "start": 93.68,
+      "end": 94.18,
+      "chunk": 6
+    },
+    {
+      "word": "tiga",
+      "start": 94.18,
+      "end": 94.68,
+      "chunk": 6
+    },
+    {
+      "word": "ton",
+      "start": 94.68,
+      "end": 94.96,
+      "chunk": 6
+    },
+    {
+      "word": "di",
+      "start": 94.96,
+      "end": 95.26,
+      "chunk": 6
+    },
+    {
+      "word": "atasmu.",
+      "start": 95.26,
+      "end": 95.72,
+      "chunk": 6
+    },
+    {
+      "word": "Pancing",
+      "start": 96.22,
+      "end": 96.7,
+      "chunk": 7
+    },
+    {
+      "word": "sosok",
+      "start": 96.7,
+      "end": 97.16,
+      "chunk": 7
+    },
+    {
+      "word": "itu",
+      "start": 97.16,
+      "end": 97.38,
+      "chunk": 7
+    },
+    {
+      "word": "mendekat",
+      "start": 97.38,
+      "end": 97.98,
+      "chunk": 7
+    },
+    {
+      "word": "ke celah",
+      "start": 97.98,
+      "end": 98.4,
+      "chunk": 7
+    },
+    {
+      "word": "sempit",
+      "start": 98.4,
+      "end": 98.82,
+      "chunk": 7
+    },
+    {
+      "word": "di",
+      "start": 98.82,
+      "end": 99.24,
+      "chunk": 7
+    },
+    {
+      "word": "balik",
+      "start": 99.24,
+      "end": 99.5,
+      "chunk": 7
+    },
+    {
+      "word": "badan",
+      "start": 99.5,
+      "end": 99.9,
+      "chunk": 7
+    },
+    {
+      "word": "sekoci.",
+      "start": 99.9,
+      "end": 100.38,
+      "chunk": 7
+    },
+    {
+      "word": "Tanganmu",
+      "start": 100.38,
+      "end": 101.82,
+      "chunk": 7
+    },
+    {
+      "word": "di",
+      "start": 101.82,
+      "end": 102,
+      "chunk": 7
+    },
+    {
+      "word": "tuas",
+      "start": 102,
+      "end": 102.3,
+      "chunk": 7
+    },
+    {
+      "word": "rem",
+      "start": 102.3,
+      "end": 102.52,
+      "chunk": 7
+    },
+    {
+      "word": "sekoci.",
+      "start": 102.52,
+      "end": 103.02,
+      "chunk": 7
+    },
+    {
+      "word": "Lihat",
+      "start": 103.54,
+      "end": 104.3,
+      "chunk": 7
+    },
+    {
+      "word": "genangan",
+      "start": 104.3,
+      "end": 104.58,
+      "chunk": 7
+    },
+    {
+      "word": "air,",
+      "start": 104.58,
+      "end": 104.92,
+      "chunk": 7
+    },
+    {
+      "word": "mulai",
+      "start": 105.34,
+      "end": 105.92,
+      "chunk": 7
+    },
+    {
+      "word": "ngalir",
+      "start": 105.92,
+      "end": 106.26,
+      "chunk": 7
+    },
+    {
+      "word": "deras",
+      "start": 106.26,
+      "end": 106.64,
+      "chunk": 7
+    },
+    {
+      "word": "ke",
+      "start": 106.64,
+      "end": 106.76,
+      "chunk": 7
+    },
+    {
+      "word": "kanan.",
+      "start": 106.76,
+      "end": 107.1,
+      "chunk": 7
+    },
+    {
+      "word": "Kapal",
+      "start": 107.6,
+      "end": 108,
+      "chunk": 8
+    },
+    {
+      "word": "mencapai",
+      "start": 108,
+      "end": 108.48,
+      "chunk": 8
+    },
+    {
+      "word": "puncak",
+      "start": 108.48,
+      "end": 108.98,
+      "chunk": 8
+    },
+    {
+      "word": "kemiringan!",
+      "start": 108.98,
+      "end": 109.8,
+      "chunk": 8
+    },
+    {
+      "word": "Sekarang!",
+      "start": 110.2,
+      "end": 110.8,
+      "chunk": 8
+    },
+    {
+      "word": "Tarik",
+      "start": 111.24,
+      "end": 111.62,
+      "chunk": 8
+    },
+    {
+      "word": "tuas",
+      "start": 111.62,
+      "end": 111.96,
+      "chunk": 8
+    },
+    {
+      "word": "rem",
+      "start": 111.96,
+      "end": 112.18,
+      "chunk": 8
+    },
+    {
+      "word": "sekuat",
+      "start": 112.18,
+      "end": 112.78,
+      "chunk": 8
+    },
+    {
+      "word": "tenaga!",
+      "start": 112.78,
+      "end": 113.06,
+      "chunk": 8
+    },
+    {
+      "word": "Kabel",
+      "start": 113.52,
+      "end": 113.86,
+      "chunk": 9
+    },
+    {
+      "word": "lepas,",
+      "start": 113.86,
+      "end": 114.42,
+      "chunk": 9
+    },
+    {
+      "word": "sekoci",
+      "start": 115.04,
+      "end": 115.6,
+      "chunk": 9
+    },
+    {
+      "word": "tiga",
+      "start": 115.6,
+      "end": 115.92,
+      "chunk": 9
+    },
+    {
+      "word": "ton",
+      "start": 115.92,
+      "end": 116.1,
+      "chunk": 9
+    },
+    {
+      "word": "mengayun",
+      "start": 116.1,
+      "end": 116.74,
+      "chunk": 9
+    },
+    {
+      "word": "dan",
+      "start": 116.74,
+      "end": 117.28,
+      "chunk": 9
+    },
+    {
+      "word": "BRAK!",
+      "start": 117.28,
+      "end": 117.96,
+      "chunk": 9
+    },
+    {
+      "word": "Menghantam",
+      "start": 117.96,
+      "end": 119.32,
+      "chunk": 9
+    },
+    {
+      "word": "tubuhnya",
+      "start": 119.32,
+      "end": 119.8,
+      "chunk": 9
+    },
+    {
+      "word": "ke",
+      "start": 119.8,
+      "end": 119.94,
+      "chunk": 9
+    },
+    {
+      "word": "dinding",
+      "start": 119.94,
+      "end": 120.28,
+      "chunk": 9
+    },
+    {
+      "word": "besi!",
+      "start": 120.28,
+      "end": 120.68,
+      "chunk": 9
+    },
+    {
+      "word": "Sebelum",
+      "start": 121.1,
+      "end": 121.54,
+      "chunk": 9
+    },
+    {
+      "word": "sekoci",
+      "start": 121.54,
+      "end": 121.98,
+      "chunk": 9
+    },
+    {
+      "word": "mantul,",
+      "start": 121.98,
+      "end": 122.44,
+      "chunk": 9
+    },
+    {
+      "word": "langsung",
+      "start": 122.86,
+      "end": 123.28,
+      "chunk": 9
+    },
+    {
+      "word": "tancapkan",
+      "start": 123.28,
+      "end": 123.86,
+      "chunk": 9
+    },
+    {
+      "word": "besi",
+      "start": 123.86,
+      "end": 124.12,
+      "chunk": 9
+    },
+    {
+      "word": "pengunci",
+      "start": 124.12,
+      "end": 124.48,
+      "chunk": 9
+    },
+    {
+      "word": "ke",
+      "start": 124.48,
+      "end": 124.66,
+      "chunk": 9
+    },
+    {
+      "word": "roda",
+      "start": 124.66,
+      "end": 124.94,
+      "chunk": 9
+    },
+    {
+      "word": "katrol!",
+      "start": 124.94,
+      "end": 125.32,
+      "chunk": 9
+    },
+    {
+      "word": "KLIK!",
+      "start": 125.32,
+      "end": 126.04,
+      "chunk": 10
+    },
+    {
+      "word": "besi",
+      "start": 126.68,
+      "end": 127.24,
+      "chunk": 10
+    },
+    {
+      "word": "terkunci.",
+      "start": 127.24,
+      "end": 127.88,
+      "chunk": 10
+    },
+    {
+      "word": "Sosok",
+      "start": 128.5,
+      "end": 129.14,
+      "chunk": 10
+    },
+    {
+      "word": "itu",
+      "start": 129.14,
+      "end": 129.32,
+      "chunk": 10
+    },
+    {
+      "word": "terjepit",
+      "start": 129.32,
+      "end": 129.88,
+      "chunk": 10
+    },
+    {
+      "word": "rapat",
+      "start": 129.88,
+      "end": 130.58,
+      "chunk": 10
+    },
+    {
+      "word": "di",
+      "start": 130.58,
+      "end": 130.88,
+      "chunk": 10
+    },
+    {
+      "word": "balik",
+      "start": 130.88,
+      "end": 131.12,
+      "chunk": 10
+    },
+    {
+      "word": "badan",
+      "start": 131.12,
+      "end": 131.62,
+      "chunk": 10
+    },
+    {
+      "word": "sekoci.",
+      "start": 131.62,
+      "end": 132.08,
+      "chunk": 10
+    },
+    {
+      "word": "nggak",
+      "start": 132.62,
+      "end": 133.02,
+      "chunk": 10
+    },
+    {
+      "word": "bisa",
+      "start": 133.02,
+      "end": 133.4,
+      "chunk": 10
+    },
+    {
+      "word": "bergerak.",
+      "start": 133.4,
+      "end": 133.96,
+      "chunk": 10
+    },
+    {
+      "word": "Dua",
+      "start": 134.5,
+      "end": 134.78,
+      "chunk": 11
+    },
+    {
+      "word": "detik",
+      "start": 134.78,
+      "end": 135.2,
+      "chunk": 11
+    },
+    {
+      "word": "hening.",
+      "start": 135.2,
+      "end": 135.46,
+      "chunk": 11
+    },
+    {
+      "word": "Napasmu",
+      "start": 138.12,
+      "end": 138.88,
+      "chunk": 11
+    },
+    {
+      "word": "memburu.",
+      "start": 138.88,
+      "end": 139.42,
+      "chunk": 11
+    },
+    {
+      "word": "Sekoci",
+      "start": 140,
+      "end": 140.6,
+      "chunk": 11
+    },
+    {
+      "word": "menahannya",
+      "start": 140.6,
+      "end": 141.34,
+      "chunk": 11
+    },
+    {
+      "word": "tanpa",
+      "start": 141.34,
+      "end": 141.88,
+      "chunk": 11
+    },
+    {
+      "word": "ampun.",
+      "start": 141.88,
+      "end": 142.28,
+      "chunk": 11
+    },
+    {
+      "word": "Tarik",
+      "start": 142.76,
+      "end": 143.16,
+      "chunk": 12
+    },
+    {
+      "word": "napas",
+      "start": 143.16,
+      "end": 143.62,
+      "chunk": 12
+    },
+    {
+      "word": "lega.",
+      "start": 143.62,
+      "end": 144.12,
+      "chunk": 12
+    },
+    {
+      "word": "Duduk",
+      "start": 144.54,
+      "end": 145.06,
+      "chunk": 12
+    },
+    {
+      "word": "di",
+      "start": 145.06,
+      "end": 145.22,
+      "chunk": 12
+    },
+    {
+      "word": "lantai",
+      "start": 145.22,
+      "end": 145.56,
+      "chunk": 12
+    },
+    {
+      "word": "dek.",
+      "start": 145.56,
+      "end": 145.9,
+      "chunk": 12
+    },
+    {
+      "word": "tunggu",
+      "start": 146.54,
+      "end": 146.9,
+      "chunk": 12
+    },
+    {
+      "word": "fajar",
+      "start": 146.9,
+      "end": 147.38,
+      "chunk": 12
+    },
+    {
+      "word": "tiba.",
+      "start": 147.38,
+      "end": 147.78,
+      "chunk": 12
+    },
+    {
+      "word": "Kamu",
+      "start": 148.2,
+      "end": 148.64,
+      "chunk": 12
+    },
+    {
+      "word": "berhasil",
+      "start": 148.64,
+      "end": 149.3,
+      "chunk": 12
+    },
+    {
+      "word": "bertahan",
+      "start": 149.3,
+      "end": 149.72,
+      "chunk": 12
+    },
+    {
+      "word": "hidup.",
+      "start": 149.72,
+      "end": 150.02,
+      "chunk": 12
+    }
+  ],
+  "sfx": [],
+  "source": "narration-investigator-timestamps.json",
+  "note": "Assembled on continuous PCM sample timeline with spliced non-overlapping story pauses (rewind gap 0.4s, post-rewind silence 1.6s, post-pin dread silence 2.0s). Zero speed-up, monotonic PTS verified. Caption text reconciled against approved narasi.txt."
+}

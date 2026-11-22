@@ -1,0 +1,1381 @@
+{
+  "version": 1,
+  "voiceId": "voice_71a5a701-796e-421d-840e-0adc00b0816a",
+  "voiceName": "voice_71a5a701-796e-421d-840e-0adc00b0816a",
+  "provider": "gemini-cloud",
+  "model": "gemini-3.8-flash-tts",
+  "master": true,
+  "masterFilter": "highpass=f=85,equalizer=f=140:t=q:w=1.2:g=1,equalizer=f=450:t=q:w=1.5:g=-1,equalizer=f=3200:t=q:w=1.2:g=1,loudnorm=I=-14:LRA=6:TP=-1.5,aformat=sample_fmts=s16",
+  "asrModel": "small",
+  "generatedAt": "2026-11-22T10:07:19.349Z",
+  "passed": false,
+  "totalChunks": 13,
+  "verifiedChunks": 6,
+  "warningChunks": 0,
+  "failedChunks": 7,
+  "plannedDurationSec": 151.125,
+  "finalAlignment": {
+    "transcript": "Kapalnya terus oleg, tapi bayangan di depanmu berdiri tegak. Di lorong luar kapal, ombak bikin kapal miring ke kiri dan kanan tiap lima detik. Pintu masuk lorong kabin di gembok rantai dari luar karena badai. Genangan air di lantai, bolak balik teratur. Di dinding, deretan jaket pelampung berayun barengan sama kabel sekoci. Di dekat tiang sekoci, ada tuas rem dengan besi pengunci. Dipagar pembatas, ada tanda bahaya. Pusaran baling-baling kapal bakal nyedot apapun yang lompat ke laut. Sosok hitam itu melangkah pelan, memojokkan kamu ke pagar. Pintu kabin terkunci, jalan mundur, habis. Instingmu, sambar jaket pelampung di dinding, lalu nekat lompat ke laut, wajarkan. Tapi begitu nyebur ke ombak gelap, pusaran baling-baling langsung ngedot tubuhmu ke bawah kapal. Dalam tiga detik, kamu lenyap di telan ombak gelap. Tamat, balik lagi. Jangan pernah lompat ke laut saat kapal berlayar. Perhatiin sekelilingmu lagi. Semua benda gantung ikut oleng karena ombak. Jacket pelampung berayun. Kabel sekoci berayun. Cuma sosok itu yang berdiri tegak melawan gravitasi. Kuncinya, manfaatin peban sekoci 3 ton di atasmu. Pancing sosok itu mendekat kecilah sempit di balik badan sekoci. tanganmu di tuas rem sekoci. Lihat kenangan air, mulai ngalir deras ke kanan. Kapal mencapai puncak kemiringan. Sekarang, tarik tuas rem sekuat tenaga. Kabel lepas, sekoci 3 ton mengayun dan berak menghantam tubuhnya ke dinding besi. Sebelum sekoci mantul, langsung tancapkan besi pengunci ke roda katrol. Klik, besi terkunci. Sosok itu terjepit rapat di balik badan sekoci. Gak bisa bergerak. Dua detik hening. Napasmu memburu. Sekoci menahannya tanpa ampun. Tarik napas lega. Duduk di lantai dek. Tunggu phajar tiba. Kamu berhasil bertahan hidup.",
+    "mismatches": [
+      {
+        "expected": "oleng",
+        "heard": "oleg"
+      },
+      {
+        "expected": "ke",
+        "heard": null
+      },
+      {
+        "expected": "nyedot",
+        "heard": "ngedot"
+      },
+      {
+        "expected": "jaket",
+        "heard": "jacket"
+      },
+      {
+        "expected": "beban",
+        "heard": "peban"
+      },
+      {
+        "expected": "ke",
+        "heard": null
+      },
+      {
+        "expected": "celah",
+        "heard": "kecilah"
+      },
+      {
+        "expected": "genangan",
+        "heard": "kenangan"
+      },
+      {
+        "expected": "brak",
+        "heard": "berak"
+      },
+      {
+        "expected": "nggak",
+        "heard": "gak"
+      },
+      {
+        "expected": "fajar",
+        "heard": "phajar"
+      }
+    ],
+    "passed": false
+  },
+  "audioQuality": {
+    "integratedLufs": -16.9,
+    "loudnessRangeLu": 3.6,
+    "noiseFloorDbfs": -19.9,
+    "targets": {
+      "integratedLufs": -14,
+      "loudnessRangeLu": [
+        5,
+        7
+      ]
+    }
+  },
+  "chunks": [
+    {
+      "index": 0,
+      "tag": null,
+      "text": "Kapalnya terus oleng, tapi bayangan di depanmu berdiri tegak. Di lorong luar kapal, ombak bikin kapal miring ke kiri dan kanan tiap lima detik. Pintu masuk ke lorong kabin digembok rantai dari luar karena badai.",
+      "retries": 1,
+      "status": "verified",
+      "bestSimilarity": 0.993,
+      "bestWordRatio": 1,
+      "acceptedAttempt": 1,
+      "attempts": [
+        {
+          "seed": 0,
+          "wordRatio": 0.941,
+          "similarity": 0.99,
+          "wpm": 122,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "word mismatch (ratio 0.94): heard \"kapalnya terus oleg tapi bayangan di depanmu berdiri tegak di lorong luar kapal \"",
+            "last word missing, truncated, or has invalid timestamps"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Kapalnya terus oleg, tapi bayangan di depanmu berdiri tegak. Di lorong luar kapal, ombak bikin kapal miring kekiri dan kanan tiap lima detik. Pintu masuk ke lorong kabin, digembok rantai dari luar karena padai.",
+          "mismatches": [
+            {
+              "expected": "oleng",
+              "heard": "oleg"
+            },
+            {
+              "expected": "badai",
+              "heard": "padai"
+            }
+          ],
+          "endTruncated": true,
+          "rawTranscript": "Kapalnya terus oleng, tapi bayangan di depanmu berdiri tegak. Di lorong luar kapal, ombak bikin kapal miring ke kiri dan kanan tiap lima detik. Pintu masuk ke lorong kabin, digembok rantai dari luar karena badai.",
+          "rawMismatches": [],
+          "rawEndTruncated": false,
+          "rawReasons": []
+        },
+        {
+          "seed": 1,
+          "wordRatio": 1,
+          "similarity": 0.993,
+          "wpm": 127,
+          "expectedWpm": 130,
+          "passed": true,
+          "reasons": [],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Kapalnya terus oleng, tapi bayangan di depanmu berdiri tegak. Dilorong luar kapal, ombak bikin kapal miring ke kiri dan kanan tiap lima detik. Pintu masuk kelorong kabin di gembok rantai dari luar karena badai.",
+          "mismatches": [],
+          "endTruncated": false,
+          "rawTranscript": "Kapalnya terus oleng, tapi bayangan di depanmu berdiri tegak. Di lorong luar kapal, ombak bikin kapal miring ke kiri dan kanan tiap lima detik. Pintu masuk ke lorong kabin di gembok rantai dari luar karena badai.",
+          "rawMismatches": [],
+          "rawEndTruncated": false,
+          "rawReasons": []
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "tag": null,
+      "text": "Genangan air di lantai bolak-balik teratur. Di dinding, deretan jaket pelampung berayun barengan sama kabel sekoci. Di dekat tiang sekoci, ada tuas rem dengan besi pengunci.",
+      "retries": 1,
+      "status": "verified",
+      "bestSimilarity": 1,
+      "bestWordRatio": 1,
+      "acceptedAttempt": 1,
+      "attempts": [
+        {
+          "seed": 0,
+          "wordRatio": 0.926,
+          "similarity": 0.988,
+          "wpm": 102,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.93): heard \"genangan air di lantai bolak balik teratur di dinding deretan jacket pelampung b\"",
+            "word mismatch (ratio 0.93): heard \"genangan air di lantai bolak balik teratur di dinding deretan jaket plampung ber\""
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Genangan air di lantai bolak balik teratur di dinding, deretan jaket plampung berayun barengan sama kabel sekoci. Di dekat yang sekoci, ada tuas rem dengan besi pengunci.",
+          "mismatches": [
+            {
+              "expected": "pelampung",
+              "heard": "plampung"
+            },
+            {
+              "expected": "tiang",
+              "heard": "yang"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Genangan air di lantai bolak balik teratur di dinding, deretan jacket pelampung berayun barengan sama kabel sekoci. Di dekat yang sekoci ada tuas rem dengan besi pengunci.",
+          "rawMismatches": [
+            {
+              "expected": "jaket",
+              "heard": "jacket"
+            },
+            {
+              "expected": "tiang",
+              "heard": "yang"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.93): heard \"genangan air di lantai bolak balik teratur di dinding deretan jacket pelampung b\""
+          ]
+        },
+        {
+          "seed": 1,
+          "wordRatio": 1,
+          "similarity": 1,
+          "wpm": 105,
+          "expectedWpm": 130,
+          "passed": true,
+          "reasons": [],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Genangan air di lantai, bolak balik teratur. Di dinding, deretan jaket pelampung berayun barengan sama kabel sekoci. Di dekat tiang sekoci, ada tuas rem dengan besi pengunci.",
+          "mismatches": [],
+          "endTruncated": false,
+          "rawTranscript": "Genangan air di lantai, bolak balik teratur. Di dinding, deretan jaket pelampung berayun barengan sama kabel sekoci. Di dekat tiang sekoci, ada tuas rem dengan besi pengunci.",
+          "rawMismatches": [],
+          "rawEndTruncated": false,
+          "rawReasons": []
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "tag": null,
+      "text": "Di pagar pembatas, ada tanda bahaya: pusaran baling-baling kapal bakal nyedot apapun yang lompat ke laut. Sosok hitam itu melangkah pelan, memojokkan kamu ke pagar. Pintu kabin terkunci, jalan mundur habis.",
+      "retries": 0,
+      "status": "verified",
+      "bestSimilarity": 1,
+      "bestWordRatio": 1,
+      "acceptedAttempt": 0,
+      "attempts": [
+        {
+          "seed": 0,
+          "wordRatio": 1,
+          "similarity": 1,
+          "wpm": 102,
+          "expectedWpm": 130,
+          "passed": true,
+          "reasons": [],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Di pagar pembatas, ada tanda bahaya. Pusaran baling-baling kapal bakal nyedot apapun yang lompat ke laut. Sosok hitam itu melangkah pelan, memojokkan kamu ke pagar. Pintu kabin terkunci. Jalan mundur, habis.",
+          "mismatches": [],
+          "endTruncated": false,
+          "rawTranscript": "Di pagar pembatas, ada tanda bahaya. Pusaran baling-baling kapal bakal nyedot apapun yang lompat ke laut. Sosok hitam itu melangkah pelan, memojokkan kamu ke pagar. Pintu kabin terkunci. Jalan mundur, habis.",
+          "rawMismatches": [],
+          "rawEndTruncated": false,
+          "rawReasons": []
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "tag": null,
+      "text": "Instingmu: sambar jaket pelampung di dinding, lalu nekat lompat ke laut. Wajar, kan? Tapi begitu nyebur ke ombak gelap: pusaran baling-baling langsung nyedot tubuhmu ke bawah kapal.",
+      "retries": 1,
+      "status": "verified",
+      "bestSimilarity": 0.997,
+      "bestWordRatio": 1,
+      "acceptedAttempt": 1,
+      "attempts": [
+        {
+          "seed": 0,
+          "wordRatio": 0.963,
+          "similarity": 0.991,
+          "wpm": 123,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.96): heard \"instingmu sambar jaket pelampung di dinding lalu nekat lompat ke laut wajarkan t\"",
+            "word mismatch (ratio 0.96): heard \"instingmu sambar jaket pelampung di dinding lalu nekat lompat ke laut wajarkan t\""
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Instingmu, sambar jaket pelampung di dinding, lalu nekat lompat ke laut, wajarkan, tapi begitu nyebur ke ombak gelap, pusaran baling-baling langsung ngedot tubuhmu ke bawah kapal.",
+          "mismatches": [
+            {
+              "expected": "nyedot",
+              "heard": "ngedot"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Instingmu, sambar jaket pelampung di dinding, lalu nekat lompat ke laut, wajarkan, tapi begitu nyebur ke ombak gelap, pusaran baling-baling langsung ngedot tubuhmu ke bawah kapal.",
+          "rawMismatches": [
+            {
+              "expected": "nyedot",
+              "heard": "ngedot"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.96): heard \"instingmu sambar jaket pelampung di dinding lalu nekat lompat ke laut wajarkan t\""
+          ]
+        },
+        {
+          "seed": 1,
+          "wordRatio": 1,
+          "similarity": 0.997,
+          "wpm": 112,
+          "expectedWpm": 130,
+          "passed": true,
+          "reasons": [],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Instingmu, sambar jaket pelampung di dinding, lalu nekat lompat ke laut. Wajarkan, tapi begitu nyebur ke ombak gelap, pusaran baling-baling langsung nyedot tubuhmu ke bawah kapal.",
+          "mismatches": [],
+          "endTruncated": false,
+          "rawTranscript": "Instingmu, sambar jaket pelampung di dinding, lalu nekat lompat ke laut. Wajarkan, tapi begitu nyebur ke ombak gelap, pusaran baling-baling langsung nyedot tubuhmu ke bawah kapal.",
+          "rawMismatches": [],
+          "rawEndTruncated": false,
+          "rawReasons": []
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "tag": null,
+      "text": "Dalam tiga detik, kamu lenyap ditelan ombak gelap. Tamat. Balik lagi.",
+      "retries": 2,
+      "status": "failed",
+      "bestSimilarity": 0.992,
+      "bestWordRatio": 1,
+      "acceptedAttempt": 0,
+      "attempts": [
+        {
+          "seed": 0,
+          "wordRatio": 1,
+          "similarity": 0.992,
+          "wpm": 81,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: 80 wpm outside 130±25%",
+            "81 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Dalam tiga detik, kamu lenyap di telan ombak gelap. Tamat, balik lagi.",
+          "mismatches": [],
+          "endTruncated": false,
+          "rawTranscript": "Dalam tiga detik, kamu lenyap di telan ombak gelap. Tamat. Balik lagi.",
+          "rawMismatches": [],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "80 wpm outside 130±25%"
+          ]
+        },
+        {
+          "seed": 1,
+          "wordRatio": 1,
+          "similarity": 0.992,
+          "wpm": 101,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: 96 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Dalam 3 detik, kamu lenyap di telan ombak gelap. Tamat, balik lagi.",
+          "mismatches": [],
+          "endTruncated": false,
+          "rawTranscript": "Dalam 3 detik, kamu lenyap di telan ombak gelap. Tamat, balik lagi.",
+          "rawMismatches": [],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "96 wpm outside 130±25%"
+          ]
+        },
+        {
+          "seed": 2,
+          "wordRatio": 1,
+          "similarity": 0.992,
+          "wpm": 90,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: 87 wpm outside 130±25%",
+            "90 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Dalam tiga detik, kamu lenyap di telan ombak gelap. Tamat. Balik lagi.",
+          "mismatches": [],
+          "endTruncated": false,
+          "rawTranscript": "Dalam tiga detik, kamu lenyap di telan ombak gelap. Tamat. Balik lagi.",
+          "rawMismatches": [],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "87 wpm outside 130±25%"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "tag": null,
+      "text": "Jangan pernah lompat ke laut saat kapal berlayar. Perhatiin sekelilingmu lagi. Semua benda gantung ikut oleng karena ombak.",
+      "retries": 2,
+      "status": "verified",
+      "bestSimilarity": 1,
+      "bestWordRatio": 1,
+      "acceptedAttempt": 2,
+      "attempts": [
+        {
+          "seed": 0,
+          "wordRatio": 1,
+          "similarity": 1,
+          "wpm": 98,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: 96 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Jangan pernah lompat ke laut saat kapal berlayar, perhatiin sekelilingmu lagi, semua benda gantung ikut oleng karena ombak.",
+          "mismatches": [],
+          "endTruncated": false,
+          "rawTranscript": "Jangan pernah lompat ke laut saat kapal berlayar, perhatiin sekelilingmu lagi. Semua benda gantung ikut oleng karena ombak.",
+          "rawMismatches": [],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "96 wpm outside 130±25%"
+          ]
+        },
+        {
+          "seed": 1,
+          "wordRatio": 0.919,
+          "similarity": 0.975,
+          "wpm": 110,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.92): heard \"jangan pernah lompat ke laut saat kapal berlayar perhatiin sekililing mulai lagi\"",
+            "word mismatch (ratio 0.92): heard \"jangan pernah lompat ke laut saat kapal berlayar perhatiin sekililing mulai lagi\""
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Jangan pernah lompat ke laut saat kapal berlayar, perhatiin sekililing mulai lagi, semua benda gantung ikut oleng karena ombak.",
+          "mismatches": [
+            {
+              "expected": null,
+              "heard": "sekililing"
+            },
+            {
+              "expected": "sekelilingmu",
+              "heard": "mulai"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Jangan pernah lompat ke laut saat kapal berlayar, perhatiin sekililing mulai lagi, semua benda gantung ikut oleng karena ombak.",
+          "rawMismatches": [
+            {
+              "expected": null,
+              "heard": "sekililing"
+            },
+            {
+              "expected": "sekelilingmu",
+              "heard": "mulai"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.92): heard \"jangan pernah lompat ke laut saat kapal berlayar perhatiin sekililing mulai lagi\""
+          ]
+        },
+        {
+          "seed": 2,
+          "wordRatio": 1,
+          "similarity": 1,
+          "wpm": 118,
+          "expectedWpm": 130,
+          "passed": true,
+          "reasons": [],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Jangan pernah lompat ke laut saat kapal berlayar. Perhatiin sekelilingmu lagi. Semua benda gantung ikut oleng karena ombak.",
+          "mismatches": [],
+          "endTruncated": false,
+          "rawTranscript": "Jangan pernah lompat ke laut saat kapal berlayar. Perhatiin sekelilingmu lagi. Semua benda gantung ikut oleng karena ombak.",
+          "rawMismatches": [],
+          "rawEndTruncated": false,
+          "rawReasons": []
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "tag": null,
+      "text": "Jaket pelampung berayun, kabel sekoci berayun. Cuma sosok itu yang berdiri tegak melawan gravitasi. Kuncinya: manfaatin beban sekoci tiga ton di atasmu.",
+      "retries": 1,
+      "status": "verified",
+      "bestSimilarity": 1,
+      "bestWordRatio": 1,
+      "acceptedAttempt": 1,
+      "attempts": [
+        {
+          "seed": 0,
+          "wordRatio": 1,
+          "similarity": 0.997,
+          "wpm": 91,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: last word missing, truncated, or has invalid timestamps",
+            "raw: 89 wpm outside 130±25%",
+            "last word missing, truncated, or has invalid timestamps",
+            "91 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Jaket pelampung berayun, kabel sekoci berayun. Cuma sosok itu yang berdiri tegak melawan gravitasi. Kuncinya, manfaatin beban sekoci 3 ton di atas mu.",
+          "mismatches": [],
+          "endTruncated": true,
+          "rawTranscript": "Jaket pelampung berayun, kabel sekoci berayun. Cuma sosok itu yang berdiri tegak melawan gravitasi. Kuncinya, manfaatin beban sekoci 3 ton di atas mu.",
+          "rawMismatches": [],
+          "rawEndTruncated": true,
+          "rawReasons": [
+            "last word missing, truncated, or has invalid timestamps",
+            "89 wpm outside 130±25%"
+          ]
+        },
+        {
+          "seed": 1,
+          "wordRatio": 1,
+          "similarity": 1,
+          "wpm": 100,
+          "expectedWpm": 130,
+          "passed": true,
+          "reasons": [],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Jaket pelampung berayun, kabel sekoci berayun, cuma sosok itu yang berdiri tegak melawan gravitasi. Kuncinya, manfaatin beban sekoci 3 ton di atasmu.",
+          "mismatches": [],
+          "endTruncated": false,
+          "rawTranscript": "Jaket pelampung berayun, kabel sekoci berayun, cuma sosok itu yang berdiri tegak melawan gravitasi. Kuncinya, manfaatin beban sekoci 3 ton di atasmu.",
+          "rawMismatches": [],
+          "rawEndTruncated": false,
+          "rawReasons": []
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "tag": null,
+      "text": "Pancing sosok itu mendekat ke celah sempit di balik badan sekoci. Tanganmu di tuas rem sekoci. Lihat genangan air: mulai ngalir deras ke kanan.",
+      "retries": 2,
+      "status": "failed",
+      "bestSimilarity": 0.978,
+      "bestWordRatio": 0.889,
+      "acceptedAttempt": 0,
+      "attempts": [
+        {
+          "seed": 0,
+          "wordRatio": 0.889,
+          "similarity": 0.978,
+          "wpm": 126,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.89): heard \"pancing sosok itu mendekat kecilah sempit di balik badan sekoci tanganmu dituas \"",
+            "word mismatch (ratio 0.89): heard \"pancing sosok itu mendekat kecilah sempit di balik badan sekoci tanganmu dituas \""
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Pancing sosok itu mendekat kecilah sempit di balik badan sekoci. Tanganmu dituas rem sekoci. Lihat kenangan air. Mulai ngalir deras ke kanan.",
+          "mismatches": [
+            {
+              "expected": "ke",
+              "heard": null
+            },
+            {
+              "expected": "celah",
+              "heard": "kecilah"
+            },
+            {
+              "expected": "genangan",
+              "heard": "kenangan"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Pancing sosok itu mendekat kecilah sempit di balik badan sekoci. Tanganmu dituas rem sekoci. Lihat kenangan air. Mulai ngalir deras ke kanan.",
+          "rawMismatches": [
+            {
+              "expected": "ke",
+              "heard": null
+            },
+            {
+              "expected": "celah",
+              "heard": "kecilah"
+            },
+            {
+              "expected": "genangan",
+              "heard": "kenangan"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.89): heard \"pancing sosok itu mendekat kecilah sempit di balik badan sekoci tanganmu dituas \""
+          ]
+        },
+        {
+          "seed": 1,
+          "wordRatio": 0.826,
+          "similarity": 0.971,
+          "wpm": 134,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.83): heard \"pancing sosok itu mendekat kecelah sempit di balik badan sekoci tangan muni tua \"",
+            "word mismatch (ratio 0.83): heard \"pancing sosok itu mendekat kecelah sempit di balik badan sekoci tangan muli tua \""
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Pancing sosok itu mendekat kecelah sempit di balik badan sekoci. Tangan muli tua serem sekoci. Lihat genangan air, mulai ngalir deras ke kanan.",
+          "mismatches": [
+            {
+              "expected": "tanganmu",
+              "heard": "tangan"
+            },
+            {
+              "expected": "di",
+              "heard": "muli"
+            },
+            {
+              "expected": "tuas",
+              "heard": "tua"
+            },
+            {
+              "expected": "rem",
+              "heard": "serem"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Pancing sosok itu mendekat kecelah sempit di balik badan sekoci. Tangan muni tua serem sekoci. Lihat genangan air mulai ngalir deras ke kanan.",
+          "rawMismatches": [
+            {
+              "expected": "tanganmu",
+              "heard": "tangan"
+            },
+            {
+              "expected": "di",
+              "heard": "muni"
+            },
+            {
+              "expected": "tuas",
+              "heard": "tua"
+            },
+            {
+              "expected": "rem",
+              "heard": "serem"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.83): heard \"pancing sosok itu mendekat kecelah sempit di balik badan sekoci tangan muni tua \""
+          ]
+        },
+        {
+          "seed": 2,
+          "wordRatio": 0.8,
+          "similarity": 0.967,
+          "wpm": 136,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.80): heard \"pancing sosok itu mendekat kecelas sempit di balik badan skocci tanganmu dituas \"",
+            "word mismatch (ratio 0.80): heard \"pancing sosok itu mendekat kecelas sempit di balik badan skocci tanganmu dituas \""
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Pancing sosok itu mendekat kecelas sempit di balik badan skocci. Tanganmu dituas rem skocci. Lihat genangan air mulai ngalir dras ke kanan.",
+          "mismatches": [
+            {
+              "expected": "ke",
+              "heard": null
+            },
+            {
+              "expected": "celah",
+              "heard": "kecelas"
+            },
+            {
+              "expected": "sekoci",
+              "heard": "skocci"
+            },
+            {
+              "expected": "sekoci",
+              "heard": "skocci"
+            },
+            {
+              "expected": "deras",
+              "heard": "dras"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Pancing sosok itu mendekat kecelas sempit di balik badan skocci. Tanganmu dituas rem skocci. Lihat genangan air mulai ngalir dras ke kanan.",
+          "rawMismatches": [
+            {
+              "expected": "ke",
+              "heard": null
+            },
+            {
+              "expected": "celah",
+              "heard": "kecelas"
+            },
+            {
+              "expected": "sekoci",
+              "heard": "skocci"
+            },
+            {
+              "expected": "sekoci",
+              "heard": "skocci"
+            },
+            {
+              "expected": "deras",
+              "heard": "dras"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.80): heard \"pancing sosok itu mendekat kecelas sempit di balik badan skocci tanganmu dituas \""
+          ]
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "tag": null,
+      "text": "Kapal mencapai puncak kemiringan! Sekarang! Tarik tuas rem sekuat tenaga!",
+      "retries": 2,
+      "status": "failed",
+      "bestSimilarity": 1,
+      "bestWordRatio": 1,
+      "acceptedAttempt": 0,
+      "attempts": [
+        {
+          "seed": 0,
+          "wordRatio": 1,
+          "similarity": 1,
+          "wpm": 102,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: 96 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Kapal mencapai puncak kemiringan. Sekarang, tarik Tuas Rem sekuat tenaga.",
+          "mismatches": [],
+          "endTruncated": false,
+          "rawTranscript": "Kapal mencapai puncak kemiringan. Sekarang, tarik Tuas Rem sekuat tenaga.",
+          "rawMismatches": [],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "96 wpm outside 130±25%"
+          ]
+        },
+        {
+          "seed": 1,
+          "wordRatio": 1,
+          "similarity": 1,
+          "wpm": 102,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: 96 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Kapal mencapai puncak kemiringan, sekarang tarik Tuas Rem sekuat tenaga.",
+          "mismatches": [],
+          "endTruncated": false,
+          "rawTranscript": "Kapal mencapai puncak kemiringan, sekarang tarik Tuas Rem sekuat tenaga.",
+          "rawMismatches": [],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "96 wpm outside 130±25%"
+          ]
+        },
+        {
+          "seed": 2,
+          "wordRatio": 1,
+          "similarity": 1,
+          "wpm": 93,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: 88 wpm outside 130±25%",
+            "93 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Kapal mencapai puncak kemiringan. Sekarang, tarik Tuas Rem sekuat tenaga.",
+          "mismatches": [],
+          "endTruncated": false,
+          "rawTranscript": "Kapal mencapai puncak kemiringan. Sekarang, tarik Tuas Rem sekuat tenaga.",
+          "rawMismatches": [],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "88 wpm outside 130±25%"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 9,
+      "tag": null,
+      "text": "Kabel lepas, sekoci tiga ton mengayun dan—BRAK! Menghantam tubuhnya ke dinding besi! Sebelum sekoci mantul, langsung tancapkan besi pengunci ke roda katrol!",
+      "retries": 2,
+      "status": "failed",
+      "bestSimilarity": 0.993,
+      "bestWordRatio": 0.957,
+      "acceptedAttempt": 1,
+      "attempts": [
+        {
+          "seed": 0,
+          "wordRatio": 0.826,
+          "similarity": 0.976,
+          "wpm": 103,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.76): heard \"kabel lepas sekoci 3 ton mengayun dan berak menghantam tubuhnya ke dinding pesi \"",
+            "raw: last word missing, truncated, or has invalid timestamps",
+            "word mismatch (ratio 0.83): heard \"kabel lepas sekoci 3 ton mengayun dan berak menghantam tubuhnya ke dinding pesi \"",
+            "last word missing, truncated, or has invalid timestamps"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Kabel lepas, sekoci tiga ton mengayun dan berak menghantam tubuhnya ke dinding pesi. Sebelum sekoci mantul, langsung tancapkan pesi pengunci ke Roda Catrol.",
+          "mismatches": [
+            {
+              "expected": "brak",
+              "heard": "berak"
+            },
+            {
+              "expected": "besi",
+              "heard": "pesi"
+            },
+            {
+              "expected": "besi",
+              "heard": "pesi"
+            },
+            {
+              "expected": "katrol",
+              "heard": "catrol"
+            }
+          ],
+          "endTruncated": true,
+          "rawTranscript": "Kabel lepas, sekoci tiga ton mengayun dan berak menghantam tubuhnya ke dinding pesi. Sebelum sekoci mantul, langsung tancapkan pesi pengunci kerodak atrol.",
+          "rawMismatches": [
+            {
+              "expected": "brak",
+              "heard": "berak"
+            },
+            {
+              "expected": "besi",
+              "heard": "pesi"
+            },
+            {
+              "expected": "besi",
+              "heard": "pesi"
+            },
+            {
+              "expected": "ke",
+              "heard": null
+            },
+            {
+              "expected": "roda",
+              "heard": "kerodak"
+            },
+            {
+              "expected": "katrol",
+              "heard": "atrol"
+            }
+          ],
+          "rawEndTruncated": true,
+          "rawReasons": [
+            "word mismatch (ratio 0.76): heard \"kabel lepas sekoci 3 ton mengayun dan berak menghantam tubuhnya ke dinding pesi \"",
+            "last word missing, truncated, or has invalid timestamps"
+          ]
+        },
+        {
+          "seed": 1,
+          "wordRatio": 0.957,
+          "similarity": 0.993,
+          "wpm": 109,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.95): heard \"kabel lepas sekoci 3 ton mengayun dan prak menghantam tubuhnya ke dinding besi s\"",
+            "word mismatch (ratio 0.96): heard \"kabel lepas sekoci 3 ton mengayun dan prak menghantam tubuhnya ke dinding besi s\""
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Kabel lepas, sekoci tiga ton mengayun dan prak menghantam tubuhnya ke dinding besi. Sebelum sekoci mantul, langsung tancapkan besi pengunci ke roda katrol.",
+          "mismatches": [
+            {
+              "expected": "brak",
+              "heard": "prak"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Kabel lepas, sekoci 3 ton mengayun dan prak menghantam tubuhnya ke dinding besi. Sebelum sekoci mantul, langsung tancapkan besi pengunci keroda katrol.",
+          "rawMismatches": [
+            {
+              "expected": "brak",
+              "heard": "prak"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.95): heard \"kabel lepas sekoci 3 ton mengayun dan prak menghantam tubuhnya ke dinding besi s\""
+          ]
+        },
+        {
+          "seed": 2,
+          "wordRatio": 0.837,
+          "similarity": 0.98,
+          "wpm": 115,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.84): heard \"kabel lepas sekoci 3 ton mengayun dan berak menghantam tubuhnya kedinding besi s\"",
+            "word mismatch (ratio 0.84): heard \"kabel lepas sekoci 3 ton mengayun dan berak menghantam tubuhnya kedinding besi s\""
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Kabel lepas, sekoci tiga ton mengayun dan berak menghantam tubuhnya kedinding besi. Sebelum sekoci mantul, langsung tancarkan besi pengunci kerodak katrol.",
+          "mismatches": [
+            {
+              "expected": "brak",
+              "heard": "berak"
+            },
+            {
+              "expected": "tancapkan",
+              "heard": "tancarkan"
+            },
+            {
+              "expected": "ke",
+              "heard": null
+            },
+            {
+              "expected": "roda",
+              "heard": "kerodak"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Kabel lepas, sekoci tiga ton mengayun dan berak menghantam tubuhnya kedinding besi. Sebelum sekoci mantul, langsung tancarkan besi pengunci kerodak katrol.",
+          "rawMismatches": [
+            {
+              "expected": "brak",
+              "heard": "berak"
+            },
+            {
+              "expected": "tancapkan",
+              "heard": "tancarkan"
+            },
+            {
+              "expected": "ke",
+              "heard": null
+            },
+            {
+              "expected": "roda",
+              "heard": "kerodak"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.84): heard \"kabel lepas sekoci 3 ton mengayun dan berak menghantam tubuhnya kedinding besi s\""
+          ]
+        }
+      ]
+    },
+    {
+      "index": 10,
+      "tag": null,
+      "text": "KLIK! Besi terkunci. Sosok itu terjepit rapat di balik badan sekoci, nggak bisa bergerak.",
+      "retries": 2,
+      "status": "failed",
+      "bestSimilarity": 0.976,
+      "bestWordRatio": 0.857,
+      "acceptedAttempt": 0,
+      "attempts": [
+        {
+          "seed": 0,
+          "wordRatio": 0.857,
+          "similarity": 0.976,
+          "wpm": 100,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.86): heard \"klik besi terkunci sosok itu terjepit rapat di balik badan skocci gak bisa berge\"",
+            "raw: 95 wpm outside 130±25%",
+            "word mismatch (ratio 0.86): heard \"klik besi terkunci sosok itu terjepit rapat di balik badan skocci gak bisa berge\""
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Klik, Besi Terkunci. Sosok itu terjepit rapat di balik badan skocci. Gak bisa bergerak.",
+          "mismatches": [
+            {
+              "expected": "sekoci",
+              "heard": "skocci"
+            },
+            {
+              "expected": "nggak",
+              "heard": "gak"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Klik, Besi Terkunci. Sosok itu terjepit rapat di balik badan skocci. Gak bisa bergerak.",
+          "rawMismatches": [
+            {
+              "expected": "sekoci",
+              "heard": "skocci"
+            },
+            {
+              "expected": "nggak",
+              "heard": "gak"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.86): heard \"klik besi terkunci sosok itu terjepit rapat di balik badan skocci gak bisa berge\"",
+            "95 wpm outside 130±25%"
+          ]
+        },
+        {
+          "seed": 1,
+          "wordRatio": 0.786,
+          "similarity": 0.965,
+          "wpm": 101,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.71): heard \"klik besi terkunji sosok itu terjepit rapat di balik badan sekoji gak bisa berge\"",
+            "raw: last word missing, truncated, or has invalid timestamps",
+            "word mismatch (ratio 0.79): heard \"klik besi terkunji sosok itu terjepit rapat di balik badan sekoji nggak bisa ber\"",
+            "last word missing, truncated, or has invalid timestamps"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Klik! Besi terkunji. Sosok itu terjepit rapat di balik badan sekoji. Nggak bisa bergerat.",
+          "mismatches": [
+            {
+              "expected": "terkunci",
+              "heard": "terkunji"
+            },
+            {
+              "expected": "sekoci",
+              "heard": "sekoji"
+            },
+            {
+              "expected": "bergerak",
+              "heard": "bergerat"
+            }
+          ],
+          "endTruncated": true,
+          "rawTranscript": "Klik! Besi terkunji. Sosok itu terjepit rapat di balik badan sekoji. Gak bisa bergerat.",
+          "rawMismatches": [
+            {
+              "expected": "terkunci",
+              "heard": "terkunji"
+            },
+            {
+              "expected": "sekoci",
+              "heard": "sekoji"
+            },
+            {
+              "expected": "nggak",
+              "heard": "gak"
+            },
+            {
+              "expected": "bergerak",
+              "heard": "bergerat"
+            }
+          ],
+          "rawEndTruncated": true,
+          "rawReasons": [
+            "word mismatch (ratio 0.71): heard \"klik besi terkunji sosok itu terjepit rapat di balik badan sekoji gak bisa berge\"",
+            "last word missing, truncated, or has invalid timestamps"
+          ]
+        },
+        {
+          "seed": 2,
+          "wordRatio": 0.857,
+          "similarity": 0.965,
+          "wpm": 102,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "word mismatch (ratio 0.86): heard \"klik besi terkunci sosok itu terjebih terapat di balik badan sekoci nggak bisa b\""
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Klik, Besi terkunci. Sosok itu terjebih terapat di balik badan sekoci. Nggak bisa bergerak.",
+          "mismatches": [
+            {
+              "expected": "terjepit",
+              "heard": "terjebih"
+            },
+            {
+              "expected": "rapat",
+              "heard": "terapat"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Klik, besi terkunci. Sosok itu terjepit rapat di balik badan sekoci. Nggak bisa bergerak.",
+          "rawMismatches": [],
+          "rawEndTruncated": false,
+          "rawReasons": []
+        }
+      ]
+    },
+    {
+      "index": 11,
+      "tag": null,
+      "text": "Dua detik hening. Napasmu memburu. Sekoci menahannya tanpa ampun.",
+      "retries": 2,
+      "status": "failed",
+      "bestSimilarity": 1,
+      "bestWordRatio": 1,
+      "acceptedAttempt": 0,
+      "attempts": [
+        {
+          "seed": 0,
+          "wordRatio": 1,
+          "similarity": 1,
+          "wpm": 87,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: 81 wpm outside 130±25%",
+            "87 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Dua detik hening, napasmu memburu, sekoci menahannya tanpa ampun.",
+          "mismatches": [],
+          "endTruncated": false,
+          "rawTranscript": "Dua detik hening, napasmu memburu, sekoci menahannya tanpa ampun.",
+          "rawMismatches": [],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "81 wpm outside 130±25%"
+          ]
+        },
+        {
+          "seed": 1,
+          "wordRatio": 0.737,
+          "similarity": 0.952,
+          "wpm": 84,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.74): heard \"2 detik haning nafas semua memburu sekoci menahannya tanpa ampun\"",
+            "raw: char similarity 0.94 < 0.94",
+            "raw: 80 wpm outside 130±25%",
+            "word mismatch (ratio 0.74): heard \"2 detik haning napas semua memburu sekoci menahannya tanpa ampun\"",
+            "84 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Dua detik haning, napas semua memburu, sekoci menahannya tanpa ampun.",
+          "mismatches": [
+            {
+              "expected": null,
+              "heard": "haning"
+            },
+            {
+              "expected": "hening",
+              "heard": "napas"
+            },
+            {
+              "expected": "napasmu",
+              "heard": "semua"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Dua detik haning, nafas semua memburu, sekoci menahannya tanpa ampun.",
+          "rawMismatches": [
+            {
+              "expected": null,
+              "heard": "haning"
+            },
+            {
+              "expected": "hening",
+              "heard": "nafas"
+            },
+            {
+              "expected": "napasmu",
+              "heard": "semua"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.74): heard \"2 detik haning nafas semua memburu sekoci menahannya tanpa ampun\"",
+            "char similarity 0.94 < 0.94",
+            "80 wpm outside 130±25%"
+          ]
+        },
+        {
+          "seed": 2,
+          "wordRatio": 1,
+          "similarity": 1,
+          "wpm": 77,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: 74 wpm outside 130±25%",
+            "77 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Dua detik hening, napasmu memburu, sekoci menahannya tanpa ampun.",
+          "mismatches": [],
+          "endTruncated": false,
+          "rawTranscript": "Dua detik hening, napasmu memburu, sekoci menahannya tanpa ampun.",
+          "rawMismatches": [],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "74 wpm outside 130±25%"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 12,
+      "tag": null,
+      "text": "Tarik napas lega. Duduk di lantai dek, tunggu fajar tiba. Kamu berhasil bertahan hidup.",
+      "retries": 2,
+      "status": "failed",
+      "bestSimilarity": 0.988,
+      "bestWordRatio": 0.929,
+      "acceptedAttempt": 0,
+      "attempts": [
+        {
+          "seed": 0,
+          "wordRatio": 0.929,
+          "similarity": 0.988,
+          "wpm": 101,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.93): heard \"tarik nafas lega duduk di lantai dek tunggu fajar tiba kamu berhasil bertahan hi\"",
+            "raw: 97 wpm outside 130±25%",
+            "word mismatch (ratio 0.93): heard \"tarik nafas lega duduk di lantai dek tunggu fajar tiba kamu berhasil bertahan hi\""
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Tarik nafas lega, duduk di lantai dek, tunggu fajar tiba, kamu berhasil bertahan hidup.",
+          "mismatches": [
+            {
+              "expected": "napas",
+              "heard": "nafas"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Tarik nafas lega, duduk di lantai dek, tunggu fajar tiba, kamu berhasil bertahan hidup.",
+          "rawMismatches": [
+            {
+              "expected": "napas",
+              "heard": "nafas"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.93): heard \"tarik nafas lega duduk di lantai dek tunggu fajar tiba kamu berhasil bertahan hi\"",
+            "97 wpm outside 130±25%"
+          ]
+        },
+        {
+          "seed": 1,
+          "wordRatio": 0.857,
+          "similarity": 0.97,
+          "wpm": 88,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.79): heard \"parik nafas lega duduk di lantai dek tunggu phajar tiba kamu berhasil bertahan h\"",
+            "raw: 85 wpm outside 130±25%",
+            "word mismatch (ratio 0.86): heard \"parik napas lega duduk di lantai dek tunggu phajar tiba kamu berhasil bertahan h\"",
+            "88 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Parik napas lega, duduk di lantai dek, tunggu phajar tiba, kamu berhasil bertahan hidup.",
+          "mismatches": [
+            {
+              "expected": "tarik",
+              "heard": "parik"
+            },
+            {
+              "expected": "fajar",
+              "heard": "phajar"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Parik nafas lega, duduk di lantai dek, tunggu phajar tiba, kamu berhasil bertahan hidup.",
+          "rawMismatches": [
+            {
+              "expected": "tarik",
+              "heard": "parik"
+            },
+            {
+              "expected": "napas",
+              "heard": "nafas"
+            },
+            {
+              "expected": "fajar",
+              "heard": "phajar"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.79): heard \"parik nafas lega duduk di lantai dek tunggu phajar tiba kamu berhasil bertahan h\"",
+            "85 wpm outside 130±25%"
+          ]
+        },
+        {
+          "seed": 2,
+          "wordRatio": 0.929,
+          "similarity": 0.988,
+          "wpm": 98,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.93): heard \"tarik nafas lega duduk di lantai dek tunggu fajar tiba kamu berhasil bertahan hi\"",
+            "raw: 95 wpm outside 130±25%",
+            "word mismatch (ratio 0.93): heard \"tarik nafas lega duduk di lantai dek tunggu fajar tiba kamu berhasil bertahan hi\""
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Tarik nafas lega, duduk di lantai dek. Tunggu fajar tiba. Kamu berhasil bertahan hidup.",
+          "mismatches": [
+            {
+              "expected": "napas",
+              "heard": "nafas"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Tarik nafas lega, duduk di lantai dek. Tunggu fajar tiba. Kamu berhasil bertahan hidup.",
+          "rawMismatches": [
+            {
+              "expected": "napas",
+              "heard": "nafas"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.93): heard \"tarik nafas lega duduk di lantai dek tunggu fajar tiba kamu berhasil bertahan hi\"",
+            "95 wpm outside 130±25%"
+          ]
+        }
+      ]
+    }
+  ]
+}
