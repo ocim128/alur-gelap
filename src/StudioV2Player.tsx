@@ -5,13 +5,13 @@ import {SpeakerCaption} from './components/SpeakerCaption';
 import {BranchRewindTransition} from './components/StudioV2';
 import {sceneAtFrame, splitCaptionsAtCuts, validateScenes} from './studio-v2-timeline';
 import type {StudioCaption, StudioScene} from './studio-v2-timeline';
-import {studioTimingError} from './studio-v2-timing.mjs';
+import {studioTimingError, type StudioTiming} from './studio-v2-timing.mjs';
 
 export type StudioV2Manifest = {
   duration: number;
   scenes: StudioScene[];
   soundMix: {asset: string; gain?: number};
-  timing: {rewindFrame?: number; rewindFrames?: number; blackoutFrame: number};
+  timing: StudioTiming;
 };
 
 export type StudioV2OverlayContext = {frame: number; fps: number; scene: StudioScene; sceneIndex: number; sceneEndFrame: number};
@@ -34,9 +34,8 @@ export function StudioV2Player({manifest, captions, plateOverlay, plateTransform
   if (manifest.duration !== durationInFrames) throw new Error('Player manifest duration must match the composition');
   const timingError = studioTimingError(manifest.timing, manifest.duration, fps);
   if (timingError) throw new Error(timingError);
-  const namedTiming = manifest.timing as Record<string, number | undefined>;
   for (const item of manifest.scenes) {
-    if (item.atCue && item.at !== namedTiming[item.atCue]) throw new Error(`${item.id}: scene start differs from named cue ${item.atCue}`);
+    if (item.atCue && item.at !== manifest.timing[item.atCue]) throw new Error(`${item.id}: scene start differs from named cue ${item.atCue}`);
   }
   const {scene, index, endFrame} = sceneAtFrame(manifest.scenes, manifest.duration, frame);
   const context = {frame, fps, scene, sceneIndex: index, sceneEndFrame: endFrame};
@@ -58,6 +57,9 @@ export function StudioV2Player({manifest, captions, plateOverlay, plateTransform
         {plateOverlay?.(context)}
       </AbsoluteFill></AbsoluteFill>
       {overlay?.(context)}
+      {manifest.timing.branchRewinds?.map(({startFrame, endFrame}) => (
+        <BranchRewindTransition key={startFrame} startFrame={startFrame} durationFrames={endFrame - startFrame} />
+      ))}
       {manifest.timing.rewindFrame !== undefined && <BranchRewindTransition startFrame={manifest.timing.rewindFrame} durationFrames={manifest.timing.rewindFrames} />}
       {caption && <SpeakerCaption speaker={caption.speaker} text={caption.words.map(word => word.text).join(' ')} words={caption.words} />}
     </>}

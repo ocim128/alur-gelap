@@ -101,7 +101,11 @@ export function validateEpisode(manifest, captions, {publicDir, manifestPath, ba
     const timing = manifest.timing ?? {blackoutFrame: manifest.blackoutFrame, rewindFrame: manifest.rewindFrame, rewindFrames: manifest.rewindFrames};
     const timingError = studioTimingError(timing, duration, fps);
     fail(!timingError, timingError);
-    if (["branch-rewind", "both"].includes(manifest.script?.engine)) fail(timing.rewindFrame !== undefined, "branch-rewind requires a rewind frame");
+    if (["branch-rewind", "both"].includes(manifest.script?.engine)) fail(timing.rewindFrame !== undefined || timing.branchRewinds !== undefined, "branch-rewind requires rewind timing");
+    if (manifest.script?.engine === "triple-branch-rewind") {
+      fail(timing.branchRewinds?.length === 3, "triple-branch-rewind requires exactly three branchRewinds intervals");
+      fail(timing.branchRewinds.every(({startFrame, endFrame}) => endFrame - startFrame === Math.max(1, Math.round(fps * 0.4))), "triple-branch-rewind intervals must last 0.4 s rounded to frames");
+    }
     for (const [name, value] of Object.entries(timing)) {
       if (name.endsWith("Frame")) fail(isFrame(value) && value < duration, `${name}: invalid cue frame`);
       if (name.endsWith("SampleOffset")) fail(Number.isInteger(value), `${name}: invalid sample offset`);
@@ -151,7 +155,7 @@ export function validateEpisode(manifest, captions, {publicDir, manifestPath, ba
     asset("fonts/theboldfont.ttf", "caption font");
     if (studioV2) {
       const script = manifest.script;
-      fail(script?.format === "decision-consequence" && ["branch-rewind", "earned-consequence", "both"].includes(script.engine),
+      fail(script?.format === "decision-consequence" && ["branch-rewind", "triple-branch-rewind", "earned-consequence", "both"].includes(script.engine),
         "studio v2 requires a decision-consequence script engine");
       fail(script.hook?.at === 0 && nonempty(script.hook.line), "invalid hook at frame 0");
       const ending = script.ending;

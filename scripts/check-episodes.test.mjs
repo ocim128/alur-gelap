@@ -143,6 +143,38 @@ test("studio player rejects missing mix, invalid blackout and invalid rewind int
   assert.throws(() => check(drifted), /scene start differs from named cue/);
 });
 
+test("studio v2 validates a three-rewind manifest and rejects invalid intervals", () => {
+  const path = '002-rumah-tengah-hutan/manifest.json';
+  const episode = JSON.parse(readFileSync(join('episodes', path)));
+  const episodeCaptions = JSON.parse(readFileSync('episodes/002-rumah-tengah-hutan/captions.json'));
+  const check = value => validateEpisode(value, episodeCaptions, {publicDir: resolve('public'), manifestPath: path});
+  const rewindStart = episode.timing.rewindFrame;
+  delete episode.timing.rewindFrame;
+  delete episode.timing.rewindFrames;
+  delete episode.scenes.find(scene => scene.atCue === 'rewindFrame').atCue;
+  episode.script.engine = 'triple-branch-rewind';
+  episode.timing.branchRewinds = [rewindStart - 720, rewindStart - 360, rewindStart]
+    .map(startFrame => ({startFrame, endFrame: startFrame + 12}));
+  assert.doesNotThrow(() => check(episode));
+
+  const invalidCases = [
+    [value => value.timing.branchRewinds.pop(), /exactly three/],
+    [value => value.timing.branchRewinds[0].endFrame++, /must last 0.4 s/],
+    [value => value.timing.branchRewinds[0].startFrame = -1, /invalid branchRewinds interval/],
+    [value => value.timing.branchRewinds[0].startFrame += 0.5, /invalid branchRewinds interval/],
+    [value => value.timing.branchRewinds[0].endFrame = value.timing.branchRewinds[0].startFrame, /invalid branchRewinds interval/],
+    [value => value.timing.branchRewinds[2].endFrame = value.duration + 1, /invalid branchRewinds interval/],
+    [value => value.timing.branchRewinds[2].endFrame = value.timing.blackoutFrame + 1, /invalid branchRewinds interval/],
+    [value => value.timing.branchRewinds[1] = {...value.timing.branchRewinds[0]}, /intervals overlap/],
+    [value => value.timing.rewindFrame = rewindStart, /cannot be combined/],
+  ];
+  for (const [mutate, message] of invalidCases) {
+    const invalid = structuredClone(episode);
+    mutate(invalid);
+    assert.throws(() => check(invalid), message);
+  }
+});
+
 test("climax timing and optional image must be valid and fit the composition", () => {
   const a = clone();
   a.tensionRamp = {startSec: 65, endSec: 68, extraScale: .06, vignetteStrength: .3};
