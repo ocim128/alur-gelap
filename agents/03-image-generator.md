@@ -2,7 +2,7 @@
 
 ## Mission & Scope
 
-Generate a consistent raster panel batch from the approved brief, locked characters and explicit shot geography.
+Generate a consistent raster panel batch from the approved brief, locked characters and explicit shot geography. Own both the artwork and on-image text for Studio v2 episode thumbnails and covers.
 
 ## Required Inputs & Preconditions
 
@@ -13,7 +13,7 @@ Read the approved brief, camera specs and jolt beat; verify the owner-accepted p
 
 ## Allowed Write Scope
 
-The assigned episode's fresh `public/assets/<episode>/` image batch, `panels-contact.jpg`, `sources/prompts.md`, asset/rights record and `images` pipeline state. Preserve existing sheets, previous attempts and approved outputs.
+The assigned episode's fresh `public/assets/<episode>/` image batch, `panels-contact.jpg`, `sources/prompts.md`, asset/rights record and `images` pipeline state. Save standalone thumbnail JPGs in `out/<slug>/`. Preserve existing sheets, previous attempts and approved outputs.
 
 ## Hard Prohibitions (NEVER)
 
@@ -38,6 +38,14 @@ Never mix old-attempt panels or styles, invent missing geography, reuse a panel 
    - **Barrier and reflection physics.** Check that hands contact reachable surfaces on the correct side of doors, stairs, railings, windows, gates and glass. Check hinges, swing direction and open or closed state. For mirrors and reflective glass, confirm the plane faces the reflected subject at a plausible angle and the subtle clue reads at phone size without glow, artificial highlights or sound accents.
    - **Indonesian text spelling.** Compare script-mandated signs and lettering with the exact approved text. Check for garbled, missing or substituted letters, including in `PINTU KELUAR`, `JANGAN IKUT BARISAN` and required minimarket or station signs.
 4. Allow stylized mirror exaggeration when RHD, reflected sightlines and phone readability hold up. Treat broken anatomy or legs, indoor rain, unrequested figures, incorrect plot-bearing signage and Show-What-You-Say mismatches as failures. Regenerate only the failing panel and rebuild `panels-contact.jpg`. Try at most **twice per panel**. Record unresolved defects and retry counts in `pipeline-state.json` and hand off passing work with the prompts, self-audit and rights record.
+
+## Studio v2 · Episode Thumbnails and Covers
+
+1. **Start from the episode.** Read its approved brief, narration and Fair-Play Clue Ledger, then inspect the selected panels or latest cut. Generate thumbnails once the relevant artwork and character identities are locked. For a thumbnail-only request on an existing episode, use those same inputs and the latest owner-selected thumbnail, if available. Use the installed ImageGen skill for raster generation and edits.
+2. **Write the hook from a first-time viewer's point of view.** Use short, conversational Indonesian. Make the stakes, choice or visible anomaly understandable without the title, captions or earlier episodes. Give a countdown an objective and pair words like `dia` with a clearly identifiable figure. Use the opening premise and keep hidden mechanics, escape solutions and final reveals out of the text and artwork. Match any wording the owner supplies verbatim. Owner-selected examples include `3 MENIT KABUR DARI PENCULIK` for 001, `JANGAN SAMPAI DIA TAHU KAMU DI SINI` for 002 and `DIA NGGAK OLENG` for 003. Apply the underlying approach to each new scenario.
+3. **Match the actual episode art.** Use the same episode's final panels or locked character sheets as identity and scene references. Check the silhouette, proportions, head, distinctive features, clothing and relevant props for both the survivor and the threat. Retain Urban Silhouette Noir and the episode's lighting. Show one readable scene whose composition makes the headline meaningful. When revising only the text, use the most recently selected artwork as the edit target.
+4. **Deliver two layouts.** Export a **1280 × 720 JPG (16:9)** as `out/<slug>/thumbnail-youtube.jpg` and one shared **1080 × 1920 JPG (9:16)** as `out/<slug>/cover-social-9x16.jpg` for Instagram Reels, TikTok and Facebook Reels. Recompose the vertical artwork and type for the narrower frame. Keep the full headline and the identifying visual in the centered 3:4 region (y = 240–1680 on the vertical canvas). Make separate platform variants only when the target placement requires a different asset. Save revisions with a version suffix, such as `thumbnail-youtube-v2.jpg`.
+5. **Review and hand off the stills.** Open the saved JPGs at phone size, including a centered 3:4 crop of the vertical cover. Verify exact text, spelling, contrast, crop, dimensions and character fidelity. Record the final copy, paths, reference panels, generation tool and any open issue in the episode's prompt and asset/rights records. Link the JPGs in the handoff. [TikTok's documented cover picker](https://support.tiktok.com/id/using-tiktok/creating-videos/editing-posting-and-deleting) selects a frame from the video. If the target upload flow requires that, flag it to Agent 04 for a separately authorized video variant. Agent 03 delivers the stills and leaves video assembly and publication to their respective roles.
 
 ## Handoff Update (pipeline-state.json)
 
