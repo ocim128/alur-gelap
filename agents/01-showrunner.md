@@ -18,8 +18,10 @@ Keep approved scripts, masters and renders locked. Use established canon and rec
 
 ## Execution Steps & Output Artifacts
 
-1. Draft **Standalone Pilot 01** only, targeting **2–3 minutes** with a hook in the first three seconds. Use the [v2 beat map](../STYLE_GUIDE.md#v2-beat-map) for setup, tempting bad decision and lethal cause, `branchRewind`, multi-step escape under pressure, and earned logical payoff.
-   - **Pitch 3 First.** For a broad request with no setting, check `arcs/02-skenario-bertahan/arc.json` for repeated tropes. Pitch three distinct fair-play puzzles, each in three lines describing setting, tempting bad decision and the opening-planted clue chain, before drafting the full brief.
+1. Draft the assigned standalone scenario, targeting **2–3 minutes**. Use the [v2 beat map](../STYLE_GUIDE.md#v2-beat-map) for setup, tempting bad decision and lethal cause, `branchRewind`, multi-step escape under pressure, and earned logical payoff.
+   - **Episode-specific hook.** Establish this episode's specific danger or constraint in the first three seconds, such as “Dia nggak lihat kamu. Tapi dia denger.” Avoid generic hooks such as “Salah gerak, tamat.”
+   - **Pitch 3 First.** For a broad request with no setting, check `arcs/02-skenario-bertahan/arc.json` for repeated tropes. Pitch three fair-play puzzles, each in three lines describing setting, tempting bad decision and the opening-planted clue chain. Give each a distinct failure mechanic, such as line of sight, sequence or timing, or a spatial misread; do not default again to loud noise alerting a threat after Episodes 01 and 02.
+   - **Real-time timed beats.** When a puzzle depends on a literal countdown or physical interval, keep its spoken line short enough to fit the actual window and plan the action, narration and sound together at real-time speed.
    - Write in **Bahasa Bayi**, using casual, short Indonesian sentences a friend would say. Use words such as `kamu`, `bakal`, `tamat`, `soalnya` and `perhatiin`. Cut bookish phrasing, poetic filler and arbitrary numbered rule lectures.
    - **Real Human, Not NPC.** Ground every character's dialogue, habits and constraints in believable psychology, paranoia or pragmatism; never write game-tutorial dialogue announcing the survival mechanic.
      Before handoff, mentally strip away the puzzle and read every action and spoken line as a grounded thriller; rewrite the setup wherever motivation feels contrived just to make the trap work.
@@ -30,7 +32,7 @@ Keep approved scripts, masters and renders locked. Use established canon and rec
 3. Specify the camera position and direction for every interior, vehicle and mirror shot. Document RHD layout, what is in front of/behind the driver, reflection geometry, vehicle direction, door hinges and persistent prop states.
    - Each panel ID is one clean single-frame composition. Do not specify split screens, picture-in-picture insets, thought projections or multi-timestamp montage plates. If the protagonist is already visible full-body, specify `empty POV — no foreground character in frame` and do not add a blurred foreground duplicate.
 4. Specify the final 3–4-second tension ramp and the post-narration vacuum, kinetic jolt and hard cut to black within the 1.0–1.5-second tail.
-5. Deliver the Pilot 01 brief, script, clue ledger and scenario entry. Leave later scenarios open until pilot review.
+5. Deliver the assigned scenario's brief, script, clue ledger and scenario entry.
 
 ## Handoff Update (pipeline-state.json)
 
