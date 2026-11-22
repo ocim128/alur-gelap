@@ -13,3 +13,29 @@ Copy [pipeline-state.json](../templates/pipeline-state.json) into each episode. 
 On **FAIL**, route each defect only to the owning role with the exact issue and evidence; for Arc 01, missing or defective assembly SFX belong to Agent 04. Reset affected downstream stage statuses to `pending` when their artifacts become stale, then reassemble as needed and run a new independent post-MP4 audit. Human publishing is a distinct step and requires explicit owner authorization; a QA pass alone is not publication approval.
 
 Episode 003 has the owner-designated brief `pass` and existing narration `pass`; its 140-word script is a pre-existing exception to the current new-script budget. Agent 03 is next. The opening rule's ASR estimate ends at 3.68 s and cue timings are provisional: preserve that uncertainty for assembly and QA, and establish the scenario and rule visually within the first three seconds. Do not silently rewrite the script or regenerate the voice.
+
+## Stage records
+
+For new image handoffs, add the four structured fields below after the technical review. Any other stage can use the same record. Keep `status` and `notes` for compatibility. An older record with only those fields still uses the `status: "pass"` handoff rule.
+
+```json
+{
+  "status": "fail",
+  "notes": "See the transition audit for the selected P09 plate.",
+  "technicalVerdict": "fail",
+  "ownerDisposition": "approved_with_exceptions",
+  "handoffAllowed": true,
+  "exceptions": [
+    {
+      "panel": "P09",
+      "defect": "present_unreadable_at_phone_size",
+      "evidence": "In the selected contact sheet the arm and panel edge merge.",
+      "downstreamVerify": "Agent 04 checks whether the contact reads in the compressed export at phone size. Agent 05 reports the result independently."
+    }
+  ]
+}
+```
+
+Keep `status` equal to the technical verdict once it is known. Use `ownerDisposition: "pending"` while awaiting the owner's choice. `approved` allows handoff for a technical pass. `approved_with_exceptions` allows handoff for a technical fail and requires at least one documented exception. Pending and rejected records block handoff. Use `exceptions: []` except when recording accepted exceptions. Only record a disposition the owner actually gave.
+
+For image exceptions use the audit's defect labels. Put the specific finding in `evidence`. Use a panel, transition or artifact identifier in `panel`. For a stage-wide issue use `episode`. Downstream roles carry the required checks into their handoffs and record what they found. Approval applies to the stated handoff only.

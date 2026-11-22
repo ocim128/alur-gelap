@@ -353,6 +353,34 @@ export function validatePipelineState(state, label = "pipeline-state.json") {
     assert(entry && typeof entry === "object" && !Array.isArray(entry), `${label}: missing ${stage} stage`);
     assert(["pending", "ready", "pass", "fail"].includes(entry.status), `${label}: invalid ${stage} status`);
     assert(typeof entry.notes === "string", `${label}: ${stage} notes must be a string`);
+    // Older episodes have status and notes only. A structured record is all-or-nothing.
+    const fields = ["technicalVerdict", "ownerDisposition", "handoffAllowed", "exceptions"];
+    if (!fields.some(field => Object.hasOwn(entry, field))) continue;
+    const context = `${label}: ${stage}`;
+    const {technicalVerdict, ownerDisposition, handoffAllowed, exceptions} = entry;
+    assert(["pass", "fail"].includes(technicalVerdict), `${context}: technicalVerdict must be pass or fail`);
+    assert(entry.status === technicalVerdict, `${context}: status must match technicalVerdict`);
+    assert(["pending", "approved", "approved_with_exceptions", "rejected"].includes(ownerDisposition), `${context}: invalid ownerDisposition`);
+    assert(typeof handoffAllowed === "boolean", `${context}: handoffAllowed must be a boolean`);
+    assert(Array.isArray(exceptions), `${context}: exceptions must be an array`);
+
+    const approved = ownerDisposition === "approved";
+    const waived = ownerDisposition === "approved_with_exceptions";
+    if (approved) assert(technicalVerdict === "pass", `${context}: approved requires a technical pass`);
+    if (waived) assert(technicalVerdict === "fail" && exceptions.length > 0, `${context}: approved_with_exceptions requires a technical fail and at least one exception`);
+    else assert(exceptions.length === 0, `${context}: exceptions require approved_with_exceptions`);
+    assert(handoffAllowed === (approved || waived), `${context}: handoffAllowed must match ownerDisposition`);
+
+    for (const [index, exception] of exceptions.entries()) {
+      const location = `${context}.exceptions[${index}]`;
+      assert(exception && typeof exception === "object" && !Array.isArray(exception), `${location}: expected an exception object`);
+      for (const field of ["panel", "defect", "evidence", "downstreamVerify"]) {
+        assert(nonempty(exception[field]), `${location}: ${field} must be a nonempty string`);
+      }
+      if (stage === "images") {
+        assert(["absent", "present_unreadable_at_phone_size", "present_conflicting_state"].includes(exception.defect), `${location}: invalid image defect label`);
+      }
+    }
   }
 }
 

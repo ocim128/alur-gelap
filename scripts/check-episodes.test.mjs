@@ -432,3 +432,39 @@ test("pipeline state accepts documented statuses and rejects missing or invalid 
   writeFileSync(join(draftDir, "pipeline-state.json"), JSON.stringify(invalidDraft));
   assert.throws(() => checkAll(draftRoot), /invalid images status/);
 });
+
+test("structured stage records preserve technical failures through owner exception handoffs", () => {
+  const state = JSON.parse(readFileSync("templates/pipeline-state.json", "utf8"));
+  const exception = {
+    panel: "P09",
+    defect: "present_conflicting_state",
+    evidence: "The instrument lights remain on after the shutdown.",
+    downstreamVerify: "Inspect the transition on the compressed export at phone size.",
+  };
+  const waived = {
+    status: "fail", notes: "", technicalVerdict: "fail",
+    ownerDisposition: "approved_with_exceptions", handoffAllowed: true,
+    exceptions: [exception],
+  };
+  const checkImages = entry => validatePipelineState({...state, images: entry});
+  assert.doesNotThrow(() => checkImages(waived));
+  const cleanPass = {...waived, status: "pass", technicalVerdict: "pass", ownerDisposition: "approved", exceptions: []};
+  assert.doesNotThrow(() => checkImages(cleanPass));
+  for (const ownerDisposition of ["pending", "rejected"]) {
+    assert.doesNotThrow(() => checkImages({...waived, ownerDisposition, handoffAllowed: false, exceptions: []}));
+  }
+  assert.doesNotThrow(() => validatePipelineState({
+    ...state,
+    render: {...waived, exceptions: [{...exception, defect: "Missing alternate encode"}]},
+  }));
+
+  assert.throws(() => checkImages({...waived, status: "pass"}), /status must match technicalVerdict/);
+  assert.throws(() => checkImages({...waived, ownerDisposition: "accepted"}), /invalid ownerDisposition/);
+  assert.throws(() => checkImages({...waived, ownerDisposition: "approved"}), /approved requires a technical pass/);
+  assert.throws(() => checkImages({...waived, ownerDisposition: "pending", exceptions: []}), /handoffAllowed must match ownerDisposition/);
+  assert.throws(() => checkImages({...waived, handoffAllowed: "true"}), /handoffAllowed must be a boolean/);
+  assert.throws(() => checkImages({...waived, exceptions: []}), /at least one exception/);
+  assert.throws(() => checkImages({...waived, exceptions: [{...exception, downstreamVerify: " "}]}), /downstreamVerify must be a nonempty string/);
+  assert.throws(() => checkImages({...waived, exceptions: [{...exception, defect: "unreadable"}]}), /invalid image defect label/);
+  assert.throws(() => checkImages({status: "fail", notes: "", ownerDisposition: "pending"}), /technicalVerdict must be pass or fail/);
+});

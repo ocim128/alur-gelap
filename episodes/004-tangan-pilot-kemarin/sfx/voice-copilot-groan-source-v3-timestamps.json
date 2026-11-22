@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "voiceId": "Charon",
+  "durationSec": 0.745,
+  "master": false,
+  "chunks": [
+    {
+      "index": 0,
+      "tag": null,
+      "text": "Ugh!",
+      "start": 0,
+      "end": 0.745,
+      "retries": 2,
+      "status": "failed"
+    }
+  ],
+  "words": [
+    {
+      "word": "URGH",
+      "start": 0,
+      "end": 0.66,
+      "chunk": 0
+    }
+  ],
+  "sfx": []
+}

@@ -1,0 +1,203 @@
+{
+  "version": 1,
+  "voiceId": "Charon",
+  "voiceName": "Charon",
+  "provider": "gemini-cloud",
+  "model": "gemini-3.8-flash-tts",
+  "master": false,
+  "masterFilter": null,
+  "asrModel": "small",
+  "generatedAt": "2026-11-22T16:27:08.414Z",
+  "passed": false,
+  "totalChunks": 1,
+  "verifiedChunks": 0,
+  "warningChunks": 0,
+  "failedChunks": 1,
+  "plannedDurationSec": 0.565,
+  "finalAlignment": {
+    "transcript": "Hmm",
+    "mismatches": [
+      {
+        "expected": "hngh",
+        "heard": "hmm"
+      }
+    ],
+    "passed": false
+  },
+  "audioQuality": {
+    "integratedLufs": -16.5,
+    "loudnessRangeLu": 0,
+    "noiseFloorDbfs": -15.9,
+    "targets": {
+      "integratedLufs": -14,
+      "loudnessRangeLu": [
+        5,
+        7
+      ]
+    }
+  },
+  "chunks": [
+    {
+      "index": 0,
+      "tag": null,
+      "text": "Hngh!",
+      "retries": 2,
+      "status": "failed",
+      "bestSimilarity": 0.286,
+      "bestWordRatio": 0,
+      "acceptedAttempt": 1,
+      "attempts": [
+        {
+          "seed": 0,
+          "wordRatio": 0,
+          "similarity": 0.125,
+          "wpm": 154,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.00): heard \"terima kasih kerana menonton\"",
+            "raw: last word missing, truncated, or has invalid timestamps",
+            "raw: char similarity 0.13 < 0.94",
+            "raw: 58 wpm outside 130±25%",
+            "word mismatch (ratio 0.00): heard \"terima kasih kerana menonton\"",
+            "last word missing, truncated, or has invalid timestamps",
+            "char similarity 0.13 < 0.94"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Terima kasih kerana menonton.",
+          "mismatches": [
+            {
+              "expected": null,
+              "heard": "terima"
+            },
+            {
+              "expected": null,
+              "heard": "kasih"
+            },
+            {
+              "expected": null,
+              "heard": "kerana"
+            },
+            {
+              "expected": "hngh",
+              "heard": "menonton"
+            }
+          ],
+          "endTruncated": true,
+          "rawTranscript": "Terima kasih kerana menonton.",
+          "rawMismatches": [
+            {
+              "expected": null,
+              "heard": "terima"
+            },
+            {
+              "expected": null,
+              "heard": "kasih"
+            },
+            {
+              "expected": null,
+              "heard": "kerana"
+            },
+            {
+              "expected": "hngh",
+              "heard": "menonton"
+            }
+          ],
+          "rawEndTruncated": true,
+          "rawReasons": [
+            "word mismatch (ratio 0.00): heard \"terima kasih kerana menonton\"",
+            "last word missing, truncated, or has invalid timestamps",
+            "char similarity 0.13 < 0.94",
+            "58 wpm outside 130±25%"
+          ]
+        },
+        {
+          "seed": 1,
+          "wordRatio": 0,
+          "similarity": 0.286,
+          "wpm": 106,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.00): heard \"hmm\"",
+            "raw: last word missing, truncated, or has invalid timestamps",
+            "raw: char similarity 0.29 < 0.94",
+            "raw: 65 wpm outside 130±25%",
+            "word mismatch (ratio 0.00): heard \"hmm\"",
+            "last word missing, truncated, or has invalid timestamps",
+            "char similarity 0.29 < 0.94"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Hmm",
+          "mismatches": [
+            {
+              "expected": "hngh",
+              "heard": "hmm"
+            }
+          ],
+          "endTruncated": true,
+          "rawTranscript": "Hmm",
+          "rawMismatches": [
+            {
+              "expected": "hngh",
+              "heard": "hmm"
+            }
+          ],
+          "rawEndTruncated": true,
+          "rawReasons": [
+            "word mismatch (ratio 0.00): heard \"hmm\"",
+            "last word missing, truncated, or has invalid timestamps",
+            "char similarity 0.29 < 0.94",
+            "65 wpm outside 130±25%"
+          ]
+        },
+        {
+          "seed": 2,
+          "wordRatio": 0,
+          "similarity": 0.286,
+          "wpm": 99,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.00): heard \"hmm\"",
+            "raw: last word missing, truncated, or has invalid timestamps",
+            "raw: char similarity 0.29 < 0.94",
+            "raw: 75 wpm outside 130±25%",
+            "word mismatch (ratio 0.00): heard \"hmm\"",
+            "last word missing, truncated, or has invalid timestamps",
+            "char similarity 0.29 < 0.94"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Hmm.",
+          "mismatches": [
+            {
+              "expected": "hngh",
+              "heard": "hmm"
+            }
+          ],
+          "endTruncated": true,
+          "rawTranscript": "Hmm",
+          "rawMismatches": [
+            {
+              "expected": "hngh",
+              "heard": "hmm"
+            }
+          ],
+          "rawEndTruncated": true,
+          "rawReasons": [
+            "word mismatch (ratio 0.00): heard \"hmm\"",
+            "last word missing, truncated, or has invalid timestamps",
+            "char similarity 0.29 < 0.94",
+            "75 wpm outside 130±25%"
+          ]
+        }
+      ]
+    }
+  ]
+}

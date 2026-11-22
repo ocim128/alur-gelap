@@ -1,0 +1,612 @@
+{
+  "source": "episodes\\005-sabuk-ketiga\\narration-investigator.mp3",
+  "outputWav": "episodes\\005-sabuk-ketiga\\narration-prepared.wav",
+  "outputMp3": "episodes\\005-sabuk-ketiga\\narration-prepared.mp3",
+  "sourceDurationSec": 170.125,
+  "preparedDurationSec": 155.985,
+  "speechEndSec": 154.84,
+  "crossfadeSec": 0.01,
+  "tightenThresholdSec": 0.5,
+  "retainedGapSec": 0.32,
+  "pronunciationDiff": "pronunciation-diff.json",
+  "tighteningCuts": [
+    {
+      "word1": "terpasang,",
+      "word2": "penumpangnya",
+      "originalGapSec": 0.6,
+      "retainedGapSec": 0.32,
+      "mappedStartSec": 1.6,
+      "mappedEndSec": 1.92
+    },
+    {
+      "word1": "dua,",
+      "word2": "heli",
+      "originalGapSec": 0.72,
+      "retainedGapSec": 0.32,
+      "mappedStartSec": 3.16,
+      "mappedEndSec": 3.48
+    },
+    {
+      "word1": "awan,",
+      "word2": "tengah",
+      "originalGapSec": 0.68,
+      "retainedGapSec": 0.32,
+      "mappedStartSec": 6.62,
+      "mappedEndSec": 6.94
+    },
+    {
+      "word1": "bawah,",
+      "word2": "awan",
+      "originalGapSec": 0.56,
+      "retainedGapSec": 0.32,
+      "mappedStartSec": 8.88,
+      "mappedEndSec": 9.2
+    },
+    {
+      "word1": "gunung,",
+      "word2": "ujung",
+      "originalGapSec": 0.74,
+      "retainedGapSec": 0.32,
+      "mappedStartSec": 10.48,
+      "mappedEndSec": 10.8
+    },
+    {
+      "word1": "dikit,",
+      "word2": "radio",
+      "originalGapSec": 0.6,
+      "retainedGapSec": 0.32,
+      "mappedStartSec": 12.9,
+      "mappedEndSec": 13.22
+    },
+    {
+      "word1": "kosong,",
+      "word2": "mepet",
+      "originalGapSec": 0.72,
+      "retainedGapSec": 0.32,
+      "mappedStartSec": 19.76,
+      "mappedEndSec": 20.08
+    },
+    {
+      "word1": "bengkok.",
+      "word2": "Copilot",
+      "originalGapSec": 0.68,
+      "retainedGapSec": 0.32,
+      "mappedStartSec": 23.18,
+      "mappedEndSec": 23.5
+    },
+    {
+      "word1": "sekali.",
+      "word2": "Kamu",
+      "originalGapSec": 0.78,
+      "retainedGapSec": 0.32,
+      "mappedStartSec": 32.08,
+      "mappedEndSec": 32.4
+    },
+    {
+      "word1": "geser.",
+      "word2": "Telat",
+      "originalGapSec": 0.84,
+      "retainedGapSec": 0.32,
+      "mappedStartSec": 37.5,
+      "mappedEndSec": 37.82
+    },
+    {
+      "word1": "ketukan.",
+      "word2": "Suara",
+      "originalGapSec": 0.88,
+      "retainedGapSec": 0.32,
+      "mappedStartSec": 39.08,
+      "mappedEndSec": 39.4
+    },
+    {
+      "word1": "masuk.",
+      "word2": "Tenang,",
+      "originalGapSec": 0.74,
+      "retainedGapSec": 0.32,
+      "mappedStartSec": 41.22,
+      "mappedEndSec": 41.54
+    },
+    {
+      "word1": "Tenang,",
+      "word2": "jernih.",
+      "originalGapSec": 0.56,
+      "retainedGapSec": 0.32,
+      "mappedStartSec": 41.94,
+      "mappedEndSec": 42.26
+    },
+    {
+      "word1": "Turun,",
+      "word2": "lewatin",
+      "originalGapSec": 0.6,
+      "retainedGapSec": 0.32,
+      "mappedStartSec": 44.1,
+      "mappedEndSec": 44.42
+    },
+    {
+      "word1": "awan.",
+      "word2": "Izin",
+      "originalGapSec": 0.8,
+      "retainedGapSec": 0.32,
+      "mappedStartSec": 45.32,
+      "mappedEndSec": 45.64
+    },
+    {
+      "word1": "patuh.",
+      "word2": "Heli",
+      "originalGapSec": 0.7,
+      "retainedGapSec": 0.32,
+      "mappedStartSec": 48.22,
+      "mappedEndSec": 48.54
+    },
+    {
+      "word1": "liar,",
+      "word2": "ditelen",
+      "originalGapSec": 0.54,
+      "retainedGapSec": 0.32,
+      "mappedStartSec": 55.16,
+      "mappedEndSec": 55.48
+    },
+    {
+      "word1": "belakang.",
+      "word2": "Nyelip,",
+      "originalGapSec": 0.6,
+      "retainedGapSec": 0.32,
+      "mappedStartSec": 62.72,
+      "mappedEndSec": 63.04
+    },
+    {
+      "word1": "Nyelip,",
+      "word2": "hilang",
+      "originalGapSec": 0.56,
+      "retainedGapSec": 0.32,
+      "mappedStartSec": 63.5,
+      "mappedEndSec": 63.82
+    },
+    {
+      "word1": "pandangan.",
+      "word2": "Suara",
+      "originalGapSec": 0.88,
+      "retainedGapSec": 0.32,
+      "mappedStartSec": 64.88,
+      "mappedEndSec": 65.2
+    },
+    {
+      "word1": "ketukan.",
+      "word2": "nggak",
+      "originalGapSec": 0.76,
+      "retainedGapSec": 0.32,
+      "mappedStartSec": 70.24,
+      "mappedEndSec": 70.56
+    },
+    {
+      "word1": "dia,",
+      "word2": "tamat.",
+      "originalGapSec": 0.68,
+      "retainedGapSec": 0.32,
+      "mappedStartSec": 71.66,
+      "mappedEndSec": 71.98
+    },
+    {
+      "word1": "sendiri.",
+      "word2": "Sabukmu",
+      "originalGapSec": 0.82,
+      "retainedGapSec": 0.32,
+      "mappedStartSec": 76.58,
+      "mappedEndSec": 76.9
+    },
+    {
+      "word1": "kemudian.",
+      "word2": "Sabuk",
+      "originalGapSec": 0.54,
+      "retainedGapSec": 0.32,
+      "mappedStartSec": 80.26,
+      "mappedEndSec": 80.58
+    },
+    {
+      "word1": "bolong,",
+      "word2": "heli",
+      "originalGapSec": 0.62,
+      "retainedGapSec": 0.32,
+      "mappedStartSec": 84.4,
+      "mappedEndSec": 84.72
+    },
+    {
+      "word1": "dalam.",
+      "word2": "Kamu",
+      "originalGapSec": 0.68,
+      "retainedGapSec": 0.32,
+      "mappedStartSec": 86.22,
+      "mappedEndSec": 86.54
+    },
+    {
+      "word1": "diikat,",
+      "word2": "panel",
+      "originalGapSec": 0.6,
+      "retainedGapSec": 0.32,
+      "mappedStartSec": 87.5,
+      "mappedEndSec": 87.82
+    },
+    {
+      "word1": "badanmu.",
+      "word2": "Tamat,",
+      "originalGapSec": 0.64,
+      "retainedGapSec": 0.32,
+      "mappedStartSec": 89.82,
+      "mappedEndSec": 90.14
+    },
+    {
+      "word1": "sabuk.",
+      "word2": "Perhatiin,",
+      "originalGapSec": 0.76,
+      "retainedGapSec": 0.32,
+      "mappedStartSec": 95.48,
+      "mappedEndSec": 95.8
+    },
+    {
+      "word1": "Perhatiin,",
+      "word2": "dia",
+      "originalGapSec": 0.88,
+      "retainedGapSec": 0.32,
+      "mappedStartSec": 96.26,
+      "mappedEndSec": 96.58
+    },
+    {
+      "word1": "celahnya.",
+      "word2": "Kamu",
+      "originalGapSec": 0.9,
+      "retainedGapSec": 0.32,
+      "mappedStartSec": 102.94,
+      "mappedEndSec": 103.26
+    },
+    {
+      "word1": "copilot",
+      "word2": "Jangan",
+      "originalGapSec": 0.52,
+      "retainedGapSec": 0.32,
+      "mappedStartSec": 104.36,
+      "mappedEndSec": 104.68
+    },
+    {
+      "word1": "diam.",
+      "word2": "Kamu",
+      "originalGapSec": 0.86,
+      "retainedGapSec": 0.32,
+      "mappedStartSec": 106.7,
+      "mappedEndSec": 107.02
+    },
+    {
+      "word1": "setengah.",
+      "word2": "Pura",
+      "originalGapSec": 0.56,
+      "retainedGapSec": 0.32,
+      "mappedStartSec": 111.78,
+      "mappedEndSec": 112.1
+    },
+    {
+      "word1": "sabukmu.",
+      "word2": "Angkat",
+      "originalGapSec": 0.68,
+      "retainedGapSec": 0.32,
+      "mappedStartSec": 113.46,
+      "mappedEndSec": 113.78
+    },
+    {
+      "word1": "bunyi.",
+      "word2": "Jangan",
+      "originalGapSec": 0.56,
+      "retainedGapSec": 0.32,
+      "mappedStartSec": 116,
+      "mappedEndSec": 116.32
+    },
+    {
+      "word1": "napas,",
+      "word2": "satu",
+      "originalGapSec": 0.62,
+      "retainedGapSec": 0.32,
+      "mappedStartSec": 119.12,
+      "mappedEndSec": 119.44
+    },
+    {
+      "word1": "itu,",
+      "word2": "tancep",
+      "originalGapSec": 0.6,
+      "retainedGapSec": 0.32,
+      "mappedStartSec": 125.24,
+      "mappedEndSec": 125.56
+    },
+    {
+      "word1": "-kerasnya.",
+      "word2": "Heli",
+      "originalGapSec": 0.66,
+      "retainedGapSec": 0.32,
+      "mappedStartSec": 128.28,
+      "mappedEndSec": 128.6
+    },
+    {
+      "word1": "tajam,",
+      "word2": "yang",
+      "originalGapSec": 0.96,
+      "retainedGapSec": 0.32,
+      "mappedStartSec": 130.22,
+      "mappedEndSec": 130.54
+    },
+    {
+      "word1": "diikat,",
+      "word2": "terlempar",
+      "originalGapSec": 0.56,
+      "retainedGapSec": 0.32,
+      "mappedStartSec": 131.32,
+      "mappedEndSec": 131.64
+    },
+    {
+      "word1": "dia,",
+      "word2": "copilot",
+      "originalGapSec": 0.82,
+      "retainedGapSec": 0.32,
+      "mappedStartSec": 135.78,
+      "mappedEndSec": 136.1
+    },
+    {
+      "word1": "tuas.",
+      "word2": "Heli",
+      "originalGapSec": 0.54,
+      "retainedGapSec": 0.32,
+      "mappedStartSec": 137.98,
+      "mappedEndSec": 138.3
+    },
+    {
+      "word1": "lagi,",
+      "word2": "langit",
+      "originalGapSec": 0.58,
+      "retainedGapSec": 0.32,
+      "mappedStartSec": 139.42,
+      "mappedEndSec": 139.74
+    },
+    {
+      "word1": "mulus.",
+      "word2": "Pintu",
+      "originalGapSec": 0.7,
+      "retainedGapSec": 0.32,
+      "mappedStartSec": 147.7,
+      "mappedEndSec": 148.02
+    },
+    {
+      "word1": "setengah.",
+      "word2": "Cuma",
+      "originalGapSec": 0.56,
+      "retainedGapSec": 0.32,
+      "mappedStartSec": 150.9,
+      "mappedEndSec": 151.22
+    }
+  ],
+  "lockedRewindGaps": [
+    {
+      "name": "rewind1",
+      "afterWord": "tamat.",
+      "afterWordEndSec": 57.8,
+      "beforeWord": "Balik",
+      "beforeWordStartSec": 58.2,
+      "rewindSec": 0.4,
+      "naturalGapSec": 0.56,
+      "note": "branchRewinds[0]; tape-snap SFX at round(startFrame x sampleRate / fps); zero dead air besides the 0.4 s rewind."
+    },
+    {
+      "name": "rewind2",
+      "afterWord": "tamat.",
+      "afterWordEndSec": 72.46,
+      "beforeWord": "Insting",
+      "beforeWordStartSec": 72.86,
+      "rewindSec": 0.4,
+      "naturalGapSec": 0,
+      "note": "branchRewinds[1]; tape-snap SFX; zero dead air besides the 0.4 s rewind."
+    },
+    {
+      "name": "rewind3-with-dread-silence",
+      "afterWord": "Tamat,",
+      "afterWordEndSec": 90.64,
+      "beforeWord": "balik",
+      "beforeWordStartSec": 92.54,
+      "rewindSec": 0.4,
+      "dreadSilenceSec": 1.5,
+      "totalGapSec": 1.9,
+      "dreadSilenceStartSec": 91.04,
+      "dreadSilenceEndSec": 92.54,
+      "naturalGapSec": 0.56,
+      "note": "branchRewinds[2]; the only 1.5 s true-zero dread silence (mute ambience + vocals entirely in the mix); P12 reset resumes at beforeWordStartSec."
+    }
+  ],
+  "preservedLagCues": {
+    "P05": {
+      "afterWord": "kemudi.",
+      "gapStartSec": 34.36,
+      "beforeWord": "Kancing",
+      "beforeWordStartSec": 34.86,
+      "gapSec": 0.5,
+      "note": "C5 plant: third-belt buckle tick lands inside this measured one-beat lag (~0.4 s after the cyclic grip-change foley)."
+    },
+    "P10": {
+      "afterWord": "kebuka,",
+      "gapStartSec": 77.98,
+      "beforeWord": "satu",
+      "beforeWordStartSec": 78.66,
+      "gapSec": 0.68,
+      "note": "C5 payoff part 1: third-belt self-release click lands one beat (~0.4 s) after the pilot belt click."
+    },
+    "P17": {
+      "afterWord": "ketukan,",
+      "gapStartSec": 120.58,
+      "beforeWord": "sabuk",
+      "beforeWordStartSec": 121.42,
+      "gapSec": 0.84,
+      "note": "Main payoff: release clack of the third belt lands one beat (~0.4 s) after the fake click; identical lag to C5."
+    }
+  },
+  "towerQuoteMuteSpan": {
+    "fromWordIdx": 77,
+    "toWordIdx": 81,
+    "words": [
+      "turun",
+      "lewatin",
+      "awan",
+      "izin",
+      "darurat"
+    ],
+    "startSec": 43.7,
+    "endSec": 46.4,
+    "reservedWindow": {
+      "startSec": 42.74,
+      "endSec": 46.94,
+      "durationSec": 4.2,
+      "note": "Narrator-free window reserved by protecting the flanking gaps; the pa-announcer asset is laid entirely inside it (speech starts at asset 0.000 s, ends at asset 4.040 s)."
+    },
+    "replacementAsset": "public/sfx/prepared/scenario05-tower-pa-mixready.wav",
+    "replacementAssetDurationSec": 4.09,
+    "note": "Agent 04: mute the narrator quote non-destructively in the edit map and lay the pa-announcer asset inside the reserved window (suggest asset start = reservedWindow.startSec + 0.05 entry air; speech ends ~0.2 s before Instingmu onset); caption label yellow MENARA RADIO over the asset window. Radio static bed ducks while the impossibly clear voice plays (audible C3 contradiction). Final bandpass/mix judgment per the brief belongs to the mix."
+  },
+  "timelinePlacement": {
+    "narrationTitleWindowSec": [
+      0,
+      1.8
+    ],
+    "firstWordStartSec": 0,
+    "hookWords": [
+      "Tiga",
+      "sabuk",
+      "terpasang.",
+      "Penumpangnya",
+      "cuma",
+      "dua."
+    ],
+    "blackoutTail": {
+      "speechReleaseSec": 154.84,
+      "preparedTrackEndSec": 155.985,
+      "note": "Brief: 150 ms silence vacuum, then restrained 1.0 s jolt, then 0.35 s blackout = 1.5 s tail from the last word. Agent 04 anchors the jolt at speechReleaseSec + 0.15 s and the hard cut to black at speechReleaseSec + 1.5 s, re-anchoring provisional frame numbers (blackoutFrame 4521) to this measured master."
+    }
+  },
+  "runtimeBudget": {
+    "preNarrationSec": 0,
+    "narrationTrackDurationSec": 155.985,
+    "spokenSpeechEndSec": 154.84,
+    "targetWindowSec": [
+      145,
+      160
+    ],
+    "note": "Provisional 151.0 s / 4530-frame timeline must be re-anchored to this measured master without changing vocal speed."
+  },
+  "assemblerHandoff": {
+    "approvedBy": "Owner listening check 2026-11-23: narration-prepared.mp3 approved (pronunciation, pacing, Rewind 3 dread silence clean; no re-roll).",
+    "approvedArtifact": {
+      "path": "episodes/005-sabuk-ketiga/narration-prepared.mp3",
+      "sha256": "A6638C8A0C1E71E8D808160CACD1D2CD51EC74F8727524AA7E3B8B0DDCFBC416",
+      "durationSec": 155.985,
+      "sampleRate": 48000,
+      "channels": 1
+    },
+    "pronunciationDiff": "pass (read-back verified against narasi.txt token-for-token; see pronunciation-diff.json)",
+    "fps": 30,
+    "branchRewinds": [
+      {
+        "index": 0,
+        "startSec": 57.8,
+        "endSec": 58.2,
+        "startFrame": 1734,
+        "endFrame": 1746,
+        "durationFrames": 12,
+        "tapeSnapSampleOffset": 2774400,
+        "note": "After 'Tamat.' (P07); 0.4 s rewind only, snap straight back with zero dead air."
+      },
+      {
+        "index": 1,
+        "startSec": 72.46,
+        "endSec": 72.86,
+        "startFrame": 2174,
+        "endFrame": 2186,
+        "durationFrames": 12,
+        "tapeSnapSampleOffset": 3478400,
+        "note": "After 'Tamat.' (P09); 0.4 s rewind only, snap straight back with zero dead air."
+      },
+      {
+        "index": 2,
+        "startSec": 90.64,
+        "endSec": 91.04,
+        "startFrame": 2719,
+        "endFrame": 2731,
+        "durationFrames": 12,
+        "tapeSnapSampleOffset": 4350400,
+        "note": "After 'Tamat.' (P11); 0.4 s rewind immediately followed by the dread silence."
+      }
+    ],
+    "rewind3DreadSilence": {
+      "startSec": 91.04,
+      "endSec": 92.54,
+      "startFrame": 2731,
+      "endFrame": 2776,
+      "durationSec": 1.5,
+      "note": "True zero in the narration stem (sample-verified); mute ambience + vocals entirely across this region in the mix. P12 reset speech resumes at 92.54 s (frame 2776)."
+    },
+    "lagCues": {
+      "P05": {
+        "sfx": "third-belt buckle tick (perspective: rear)",
+        "windowSec": [
+          34.36,
+          34.86
+        ],
+        "gapSec": 0.5,
+        "note": "Tick lands ~0.4 s after the cyclic grip-change foley; callout TELAT 1 KETUKAN."
+      },
+      "P10": {
+        "sfx": "third-belt self-release click (deeper perspective)",
+        "windowSec": [
+          77.98,
+          78.66
+        ],
+        "gapSec": 0.68,
+        "note": "One beat (~0.4 s) after the pilot belt click."
+      },
+      "P17": {
+        "sfx": "third-belt release clack + strap flutter (rear perspective)",
+        "windowSec": [
+          120.58,
+          121.42
+        ],
+        "gapSec": 0.84,
+        "note": "One beat (~0.4 s) after the fake click; callout SABUK KETIGA: TERBUKA."
+      }
+    },
+    "paAnnouncerTower": {
+      "line": "turun, lewatin awan, izin darurat",
+      "muteNarratorWords": {
+        "fromWordIdx": 77,
+        "toWordIdx": 81,
+        "startSec": 43.7,
+        "endSec": 46.4
+      },
+      "reservedWindowSec": [
+        42.74,
+        46.94
+      ],
+      "reservedWindowFrames": [
+        1282,
+        1408
+      ],
+      "asset": "public/sfx/prepared/scenario05-tower-pa-mixready.wav",
+      "assetDurationSec": 4.09,
+      "assetSpeechEndSec": 4.04,
+      "suggestedLaySec": 42.79,
+      "note": "Lay entirely inside the reserved window (entry air ~0.05 s; speech ends ~0.2 s before Instingmu onset at 46.94 s); caption label yellow MENARA RADIO; duck the radio-static bed under the clear voice (audible C3 tell). Final bandpass/mix judgment per brief belongs to the mix."
+    },
+    "tail": {
+      "speechReleaseSec": 154.84,
+      "silenceVacuumSec": [
+        154.84,
+        154.99
+      ],
+      "joltAnchorSec": 154.99,
+      "hardCutToBlackSec": 156.34,
+      "hardCutFrameApprox": 4690,
+      "note": "150 ms vacuum then restrained 1.0 s jolt (sub-boom + short wind gust, 2-frame flash <=65%) then 0.35 s blackout; re-anchors provisional blackoutFrame 4521."
+    },
+    "reAnchorNote": "All provisional panel frames in brief.md are stale; anchor every panel, callout and SFX to narration-timestamps.json / audio-edit-map.json measured spans (per-panel table in audio-assets.md). Hook starts at exactly 0.000 s so the title 0-1.8 s window and cover frame 6 hold."
+  },
+  "notes": "Assembled on continuous PCM sample timeline; zero playback speed change (atempo 1.0x preserved); strictly monotonic PTS verified by ffprobe across all packets."
+}

@@ -8,6 +8,8 @@ Act as an independent, fresh-context, **read-only** reviewer at the single post-
 
 Receive the completed MP4, approved brief and script, narration and timing records, manifest/captions, locked sheets and pipeline state. Use panels, contact sheets, prompt records and mix notes as supporting evidence when available.
 
+Read any structured stage exceptions and check the assigned `downstreamVerify` items on the export. Record the evidence and apply the normal QA rubric to what you find. Owner permission to assemble is separate from the technical verdict.
+
 ## Allowed Write Scope
 
 Write **only** `episodes/<slug>/audit-report.md`. Read project files and run `npm run check` without modifying repository content. The human orchestrator updates pipeline state from the report.

@@ -1,0 +1,29 @@
+# Scenario 05 · image correction handoff
+
+## Latest re-audit routing · 23 November 2026
+
+The human owner operates the orchestrator. Please route P05, P07, P11, P16 and the unresolved P17–P23 door/crew continuity to Agent 03 under the retry contract: these affected panels have already reached the two-retry limit. P15, P22 and P24 have now also reached that limit after the latest pass. Do not silently restart their counters. Exact shot defects and the five-point review are in `sources/prompts.md` under **Latest re-audit self-check**; all existing attempts remain preserved.
+
+The new `selected-reaudit/` replaces only P22 and P24 with clearer half-open-door exteriors; it is still a failing draft, not a production handoff. The candidates do not establish rear-belt state or left/right crew placement independently, and the two exterior viewpoints face opposite directions. P15's new candidate was rejected as it adds an apparent extra arm and a flat third belt.
+
+P16 needs a story-state decision before a replacement: the brief says the pilot fakes opening the buckle and stays belted, while the latest audit requests clear separation from the latch. Clarify whether this means lifting the latch while the tongue remains engaged, or an actual release; the latter would change the locked escape. Agent 04 should continue to use measured audio for the delayed response and schedule timed lighting and rewind effects separately.
+
+**Verdict: FAIL; do not assemble as an approved batch.** Correction pass against `audit-report.md` on 23 November 2026. `panels-contact-audit-revision.jpg` and `public/assets/005-sabuk-ketiga/selected-audit-revision/` contain the selected draft. Existing studies, selected draft, attempts and accepted audio remain preserved. Owner approval of the study direction is recorded; there is no batch approval.
+
+## Five-point contact-sheet audit
+
+1. **Location and prop anchors / reveal to jolt — FAIL.** P17 shows separate buckle halves; P18 and P20 revisions now show separated rear belt ends, and P19 retains its anchored strap through the door. P21 shows hanging separated ends. P18/P20/P21 door aperture and bent rail are not reliably clear at phone size, and P23 has an ambiguous belt/door state. P22 and P24 exterior door state remains unclear. The dedicated final-jolt plate is absent. P17 and P19 remain byte-identical to the selected draft and were not retried; route any further work on those two to the human orchestrator under the retry contract.
+2. **Floor, door scale and anatomy — FAIL / unresolved.** P08's crouching copilot is partially hidden behind the left seat, without a full-height figure to compare to doorway scale. P11's pilot leans toward the panel and red/amber practical lighting reads, but direct shoulder contact and the pilot's unbelted state are not unambiguous at phone size. P16's latch is large, but its inserted and still-locked state remains ambiguous. P15 arm contact and rail bend remain weak.
+3. **Camera vantage and character lock — FAIL.** P08 shows the left seat vacated and a crouched figure behind it; P09 shows an empty left seat and one featureless wrong-shaped figure, with the pilot right. The broad blue-rim versus slim cyan-rim identity is more legible there, although the transition still needs motion-context review. P07 is an exterior perspective with tail boom close to terrain but tail-rotor contact cannot be reliably identified. P18's right-bank action is weak. P10/P14 retain the previously logged continuity questions.
+4. **Barrier and prop physics — FAIL.** P05 now makes a buckle larger, but its belt lies flat instead of visibly cinched around empty air, so the setup still fails. P16 does not prove that the belt remains locked while the latch is raised. P18/P20 unbuckled halves read at phone size, but their door positions and P21/P23 continuity need work. P19 retains the unbuckled strap's seat anchor and figure-free cloud view. P02's peak remains an unaccented visual clue; no reflection is required.
+5. **Indonesian text — PASS / not applicable to the stills.** No mandated signage or callouts are baked into these plates. P05's physical clue remains a readability failure, not a spelling issue.
+
+## Retry ledger and next routing
+
+This correction generated P05/P16/P23 once each (now retry 2), P07/P11/P18/P20/P21 twice each (now retry 2), and P08/P09 once each (now retry 1). P17/P19 stayed at the previous retry 2; no new generation or alteration was performed on either. All prompts and original outputs are recorded in `sources/prompts.md` and `sources/audit-corrections*-map.json`; both correction contact sheets and prior outputs are retained. Further attempts on panels at retry 2 require orchestration under the contract. P08/P09 may still receive one retry if the orchestrator routes that work.
+
+For the current review selection, P05/P08/P09/P18/P20 use correction 1; P07/P11/P21 use correction 2; P16 and P23 retain their earlier selected versions because the new alternatives did not resolve the defects. All other selected plates, including P17/P19, come from `selected-draft/` unchanged. Images remain 941 × 1672 and need exact 9:16 standardization after a final selection without losing clue detail.
+
+## Agent 04 handoff (after image blockers are resolved)
+
+The plates contain steady practical warning colors, not timed flashes or rewinds. Schedule any beacon pulse, instrument flicker, camera shake and rewind treatment as separate Remotion effects. Use the accepted measured `audio-edit-map.json` and `narration-timestamps.json` to time P05 and P17's one-beat response, not the provisional brief times; preserve deliberately silent visual clues. Review the P07/P11 danger lighting and action at phone size in the finished cut. No playback, mix, export, rights or publication approval is implied.

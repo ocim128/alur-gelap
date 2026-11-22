@@ -1,0 +1,189 @@
+{
+  "generatedAt": "2026-11-22T16:19:55.213Z",
+  "script": "narasi.txt (256 words)",
+  "asrSource": "narration-investigator-timestamps.json (263 ASR tokens; ShortZ Whisper small verifier)",
+  "method": "LCS alignment of punctuation-stripped lowercase tokens; classification per agents/02-audio-producer.md mandatory pronunciation check",
+  "headline": "Zero true omissions and zero foreign insertions: all 256 script words are accounted for in the ASR via token merges/splits, colloquial-to-standard normalization, or phonetic-suspect ASR artifacts. Report similarity >= 0.977 on every chunk; many flagged pairs match the script exactly in the raw (pre-normalization) Whisper transcripts (e.g. raw \"Beku\" vs normalized \"Begu\").",
+  "classifications": {
+    "harmlessFormattingTokenization": [
+      {
+        "script": "di tuas",
+        "asr": "dituas",
+        "count": 2,
+        "why": "preposition merged into token"
+      },
+      {
+        "script": "copilot",
+        "asr": "co pilot | kopilot",
+        "why": "token split / phonetic spelling"
+      },
+      {
+        "script": "kedip-kedip",
+        "asr": "kedip kedip",
+        "why": "reduplication split"
+      },
+      {
+        "script": "baling-baling",
+        "asr": "baling baling",
+        "why": "reduplication split"
+      },
+      {
+        "script": "pelan-pelan",
+        "asr": "pelan pelan",
+        "count": 3,
+        "why": "reduplication split"
+      },
+      {
+        "script": "tanganmu",
+        "asr": "tangan ... mau",
+        "why": "cross-word alignment drift"
+      },
+      {
+        "script": "diam-diam",
+        "asr": "diam diam",
+        "why": "reduplication split"
+      },
+      {
+        "script": "dua-duanya",
+        "asr": "dua duanya",
+        "why": "reduplication split"
+      },
+      {
+        "script": "di dalam",
+        "asr": "didalam",
+        "why": "preposition merged into token"
+      }
+    ],
+    "colloquialToStandardNormalization": [
+      {
+        "script": "jadiin",
+        "asr": "jadikan"
+      },
+      {
+        "script": "bener-bener",
+        "asr": "benar-bener"
+      },
+      {
+        "script": "deket",
+        "asr": "dekat"
+      },
+      {
+        "script": "kran",
+        "asr": "keran",
+        "note": "both standard Indonesian for tap/valve"
+      },
+      {
+        "script": "senter",
+        "asr": "center",
+        "note": "ASR normalized to English near-homophone"
+      },
+      {
+        "script": "statis",
+        "asr": "status",
+        "note": "ASR normalized to higher-frequency word"
+      },
+      {
+        "script": "netral",
+        "asr": "natural",
+        "note": "ASR normalized to English-like form"
+      }
+    ],
+    "phoneticSuspectAsrArtifacts": [
+      {
+        "script": "beku",
+        "asr": "begu",
+        "note": "k/g confusion; raw transcript spells Beku correctly"
+      },
+      {
+        "script": "alih",
+        "asr": "ali",
+        "note": "final-h elision in ASR"
+      },
+      {
+        "script": "petanya",
+        "asr": "pertanya",
+        "note": "ASR inserted r"
+      },
+      {
+        "script": "betulin",
+        "asr": "bertulin",
+        "note": "ASR inserted r"
+      },
+      {
+        "script": "gunung",
+        "asr": "gunuh",
+        "note": "final-g drop in ASR"
+      },
+      {
+        "script": "arah",
+        "asr": "arh",
+        "note": "ASR truncation"
+      },
+      {
+        "script": "napas",
+        "asr": "napa",
+        "note": "vowel elision in ASR"
+      },
+      {
+        "script": "lega",
+        "asr": "selega",
+        "note": "cross-word segmentation artifact (napas lega -> napa selega)"
+      }
+    ],
+    "intentionalDropInPreparation": [
+      {
+        "script": "itu",
+        "asr": "itu (heard)",
+        "note": "Brief-documented hook fallback: hook must land <= 00:03.0; raw hook ended 3.56 s, so prepare-audio.mjs drops \"itu\" by edit -> spoken hook \"Tangan di tuas bukan tanganmu.\" Zero speed change."
+      }
+    ],
+    "tabooSounds": "None found. No flagged token resembles Indonesian profanity or taboo phrasing."
+  },
+  "asrFailureClassification": {
+    "failedChunks": 14,
+    "verifiedChunks": 5,
+    "drivers": [
+      "endTruncated last-word flags: Whisper floors/fails final word timestamps at chunk boundaries; each failed chunk transcript still contains all expected words",
+      "wpm outside 130+/-25%: Investigator narrates ~95-116 wpm by design; not a pronunciation issue",
+      "onset flooring warning (speech starts at 0 ms): Whisper artifact, audio itself starts at track start"
+    ],
+    "decision": "Take retained. Regeneration is not warranted under agents/02-audio-producer.md (no proven mangled/omitted/taboo word; failures are ASR verification artifacts). The 8 phonetic-suspect pairs remain text-vs-audio ambiguous and are handed to the owner listening check without claiming a listening review occurred."
+  },
+  "reportMasterMismatches": [
+    "beku->begu",
+    "alih->ali",
+    "petanya->pertanya",
+    "betulin->bertulin",
+    "statis->status",
+    "senter->center",
+    "copilot->kopilot",
+    "kran->keran",
+    "gunung->gunuh",
+    "jadiin->jadikan",
+    "null->tangan",
+    "tanganmu->mau",
+    "arah->arh",
+    "bener->benar",
+    "bener->benar",
+    "deket->dekat",
+    "napas->napa",
+    "lega->selega",
+    "netral->natural"
+  ],
+  "preparedStemDiff": {
+    "checkedAt": "2026-11-23",
+    "file": "narration-timestamps.json (262 words; prepared stem)",
+    "result": "PASS",
+    "summary": "Same 31 known ASR artifact pairs as the raw diff (tokenization merges/splits, colloquial-to-standard normalization, 8 phonetic-suspect ASR pairs). The only additional omission is \"itu\", which is the brief-documented hook fallback drop applied by edit in prepare-audio.mjs. Every other script word maps to a spoken token; zero unexpected omissions or insertions. Owner approved narration-prepared.mp3 on 2026-11-23 (pronunciation, pacing, Rewind 3 dread silence clean; no re-roll), which resolves the phonetic-suspect watch list for the narrator stem.",
+    "intentionallyDroppedWords": [
+      "itu"
+    ],
+    "reverifiedGaps": {
+      "rewind-1": "0.400 s @ 43.440-43.840",
+      "rewind-2": "0.400 s @ 58.500-58.900",
+      "rewind-3": "2.000 s @ 73.300-75.300"
+    },
+    "speechEndSec": 152,
+    "trackDurationSec": 153.5
+  }
+}

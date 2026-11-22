@@ -1,0 +1,2415 @@
+{
+  "version": 1,
+  "voiceId": "voice_71a5a701-796e-421d-840e-0adc00b0816a",
+  "voiceName": "voice_71a5a701-796e-421d-840e-0adc00b0816a",
+  "provider": "gemini-cloud",
+  "model": "gemini-3.8-flash-tts",
+  "master": true,
+  "masterFilter": "highpass=f=85,equalizer=f=140:t=q:w=1.2:g=1,equalizer=f=450:t=q:w=1.5:g=-1,equalizer=f=3200:t=q:w=1.2:g=1,loudnorm=I=-14:LRA=6:TP=-1.5,aformat=sample_fmts=s16",
+  "asrModel": "small",
+  "generatedAt": "2026-11-22T16:11:53.756Z",
+  "passed": false,
+  "totalChunks": 21,
+  "verifiedChunks": 3,
+  "warningChunks": 0,
+  "failedChunks": 18,
+  "plannedDurationSec": 170.125,
+  "finalAlignment": {
+    "transcript": "Tiga sabuk terpasang, penumpangnya cuma dua, heli kecil nyangkut di atas laut awan, tengah malam. Di bawah, awan nutupin gunung, ujung satu puncak nembus dikit, radio cuma desis. Di belakang, sabuk ketiga kenceng ngelilit kursi kosong, mapet pintu geser longgar, realnya Bangkok. Kopilot terikat rapat di kursi kiri. dia bilang, angin gunung suka bolong. Beneran, Heli anjolok sekali. Kamu ganti pegangan tuas kemudih. Kancing sabuk ketiga, ikut geser. Telat satu ketukan. Suara menara radio masuk. Tenang, jernih. Turun, lewatin awan. Izin darurat. Instingmu patuh. Heli miring masuk awan. Baling-baling ekor nyangkut punggung gunung, muter liar, ditelan kabut, tamat. Balik lagi, kopilot buka sabuknya, mau cek kursi belakang. Nyalip, hilang dari pandangan. Suara kopilot, manggil dari balik kursi, yang balik telat satu ketukan. Gak mirip dia, tamat. Insting terakhir, buka sabukmu sendiri. Sabukmu kebuka, satu ketukan kemudian. Sabuk ketiga, kebuka sendiri. Udara bolong, heli anjolok dalam. Kamu nggak diikat, panel kokpit hantam badanmu. Tamat, balik lagi. Gak ada yang sempat buka sabuk. Perhatikan, dia niru kamu telat satu ketukan. Gapernah duluan. Itu celahnya. Kamu desek kop pilot. Jangan buka sabuk. Duduk diam. Kamu tarik pintu gesel. Relnya bengkok. Cuma kebuka setengah. Pura-pura buka sabukmu. Angkat lidah kancingnya sampai bunyi. Jangan ditekan. Tahan napas, satu ketukan, sabuk ketiga, kebuka sendiri. Saat itu, tancap tuas kemudian sekeras-kerasnya. Heli miring tajam, yang gak diikat, terlempar keluar pintu geser. Laut awan nutupin dia, copilot bantu narik tuas. Heli datar lagi, langit pelan-pelan cerah. Sabuk ketiga kosong. Nggak ada yang niru. Heli mendarat mulus. Pintu geser masih kebuka setengah. Cuma angin. Kamu berhasil bertahan hidup.",
+    "mismatches": [
+      {
+        "expected": "mepet",
+        "heard": "mapet"
+      },
+      {
+        "expected": "relnya",
+        "heard": "realnya"
+      },
+      {
+        "expected": "bengkok",
+        "heard": "bangkok"
+      },
+      {
+        "expected": "copilot",
+        "heard": "kopilot"
+      },
+      {
+        "expected": "anjlok",
+        "heard": "anjolok"
+      },
+      {
+        "expected": "kemudi",
+        "heard": "kemudih"
+      },
+      {
+        "expected": "ditelen",
+        "heard": "ditelan"
+      },
+      {
+        "expected": "copilot",
+        "heard": "kopilot"
+      },
+      {
+        "expected": "nyelip",
+        "heard": "nyalip"
+      },
+      {
+        "expected": "copilot",
+        "heard": "kopilot"
+      },
+      {
+        "expected": "nggak",
+        "heard": "gak"
+      },
+      {
+        "expected": "anjlok",
+        "heard": "anjolok"
+      },
+      {
+        "expected": "nggak",
+        "heard": "gak"
+      },
+      {
+        "expected": "perhatiin",
+        "heard": "perhatikan"
+      },
+      {
+        "expected": "nggak",
+        "heard": null
+      },
+      {
+        "expected": "pernah",
+        "heard": "gapernah"
+      },
+      {
+        "expected": null,
+        "heard": "kop"
+      },
+      {
+        "expected": "copilot",
+        "heard": "pilot"
+      },
+      {
+        "expected": "geser",
+        "heard": "gesel"
+      },
+      {
+        "expected": "tancep",
+        "heard": "tancap"
+      },
+      {
+        "expected": "kemudi",
+        "heard": "kemudian"
+      },
+      {
+        "expected": "nggak",
+        "heard": "gak"
+      }
+    ],
+    "passed": false
+  },
+  "audioQuality": {
+    "integratedLufs": -16.9,
+    "loudnessRangeLu": 3.8,
+    "noiseFloorDbfs": -20,
+    "targets": {
+      "integratedLufs": -14,
+      "loudnessRangeLu": [
+        5,
+        7
+      ]
+    }
+  },
+  "chunks": [
+    {
+      "index": 0,
+      "tag": null,
+      "text": "Tiga sabuk terpasang. Penumpangnya cuma dua. Heli kecil nyangkut di atas laut awan, tengah malam.",
+      "retries": 0,
+      "status": "verified",
+      "bestSimilarity": 1,
+      "bestWordRatio": 1,
+      "acceptedAttempt": 0,
+      "attempts": [
+        {
+          "seed": 0,
+          "wordRatio": 1,
+          "similarity": 1,
+          "wpm": 103,
+          "expectedWpm": 130,
+          "passed": true,
+          "reasons": [],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Tiga sabuk terpasang. Penumpangnya cuma dua. Heli kecil nyangkut di atas laut awan tengah malam.",
+          "mismatches": [],
+          "endTruncated": false,
+          "rawTranscript": "Tiga sabuk terpasang. Penumpangnya cuma dua. Heli kecil nyangkut di atas laut awan tengah malam.",
+          "rawMismatches": [],
+          "rawEndTruncated": false,
+          "rawReasons": []
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "tag": null,
+      "text": "Di bawah, awan nutupin gunung. Ujung satu puncak nembus dikit. Radio cuma desis.",
+      "retries": 2,
+      "status": "failed",
+      "bestSimilarity": 1,
+      "bestWordRatio": 1,
+      "acceptedAttempt": 0,
+      "attempts": [
+        {
+          "seed": 0,
+          "wordRatio": 1,
+          "similarity": 1,
+          "wpm": 93,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: 88 wpm outside 130±25%",
+            "93 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Di bawah awan nutupin gunung, ujung satu puncak nembus dikit, radio cuma desis.",
+          "mismatches": [],
+          "endTruncated": false,
+          "rawTranscript": "Di bawah awan nutupin gunung, ujung satu puncak nembus dikit, radio cuma desis.",
+          "rawMismatches": [],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "88 wpm outside 130±25%"
+          ]
+        },
+        {
+          "seed": 1,
+          "wordRatio": 0.923,
+          "similarity": 0.986,
+          "wpm": 87,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.92): heard \"dibawah awan notupin gunung ujung 1 puncak nembus dikit radio cuma desis\"",
+            "raw: 84 wpm outside 130±25%",
+            "word mismatch (ratio 0.92): heard \"di bawah awan notupin gunung ujung 1 puncak nembus dikit radio cuma desis\"",
+            "87 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Di bawah awan notupin gunung, ujung satu puncak nembus dikit, radio cuma desis.",
+          "mismatches": [
+            {
+              "expected": "nutupin",
+              "heard": "notupin"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Dibawah awan notupin gunung, ujung satu puncak nembus dikit, radio cuma desis.",
+          "rawMismatches": [
+            {
+              "expected": "nutupin",
+              "heard": "notupin"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.92): heard \"dibawah awan notupin gunung ujung 1 puncak nembus dikit radio cuma desis\"",
+            "84 wpm outside 130±25%"
+          ]
+        },
+        {
+          "seed": 2,
+          "wordRatio": 0.923,
+          "similarity": 0.993,
+          "wpm": 92,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.92): heard \"di bawah awan nutupin gunung ujung 1 puncak nemus dikit radio cuma desis\"",
+            "raw: 87 wpm outside 130±25%",
+            "word mismatch (ratio 0.92): heard \"di bawah awan nutupin gunung ujung 1 puncak nemus dikit radio cuma desis\"",
+            "92 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Di bawah awan nutupin gunung, ujung satu puncak nemus dikit, radio cuma desis.",
+          "mismatches": [
+            {
+              "expected": "nembus",
+              "heard": "nemus"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Di bawah, awan nutupin gunung, ujung satu puncak nemus dikit, radio cuma desis.",
+          "rawMismatches": [
+            {
+              "expected": "nembus",
+              "heard": "nemus"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.92): heard \"di bawah awan nutupin gunung ujung 1 puncak nemus dikit radio cuma desis\"",
+            "87 wpm outside 130±25%"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "tag": null,
+      "text": "Di belakang, sabuk ketiga kenceng ngelilit kursi kosong. Mepet pintu geser longgar, relnya bengkok. Copilot terikat rapat di kursi kiri.",
+      "retries": 2,
+      "status": "failed",
+      "bestSimilarity": 0.989,
+      "bestWordRatio": 0.9,
+      "acceptedAttempt": 0,
+      "attempts": [
+        {
+          "seed": 0,
+          "wordRatio": 0.9,
+          "similarity": 0.989,
+          "wpm": 100,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.90): heard \"di belakang sabuk ketiga kenceng ngelilit kursi kosong mapet pintu geser longgar\"",
+            "raw: 97 wpm outside 130±25%",
+            "word mismatch (ratio 0.90): heard \"di belakang sabuk ketiga kenceng ngelilit kursi kosong mapet pintu geser longgar\""
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Di belakang, sabuk ketiga kenceng ngelilit kursi kosong, mapet pintu geser longgar, reelnya bengkok, copilot terikat rapat di kursi kiri.",
+          "mismatches": [
+            {
+              "expected": "mepet",
+              "heard": "mapet"
+            },
+            {
+              "expected": "relnya",
+              "heard": "reelnya"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Di belakang, sabuk ketiga kenceng ngelilit kursi kosong, mapet pintu geser longgar, reelnya bengkok, copilot, terikat rapat di kursi kiri.",
+          "rawMismatches": [
+            {
+              "expected": "mepet",
+              "heard": "mapet"
+            },
+            {
+              "expected": "relnya",
+              "heard": "reelnya"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.90): heard \"di belakang sabuk ketiga kenceng ngelilit kursi kosong mapet pintu geser longgar\"",
+            "97 wpm outside 130±25%"
+          ]
+        },
+        {
+          "seed": 1,
+          "wordRatio": 0.85,
+          "similarity": 0.977,
+          "wpm": 90,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.85): heard \"di belakang sabuk ketiga kenceng ngelilit kursi kosong mepet pintu gaser longgar\"",
+            "raw: 88 wpm outside 130±25%",
+            "word mismatch (ratio 0.85): heard \"di belakang sabuk ketiga kenceng ngelilit kursi kosong mepet pintu gaser longgar\"",
+            "90 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Di belakang, sabuk ketiga, kenceng ngelilit kursi kosong. Mepet pintu gaser longgar, realnya, bankok. Copilot terikat rapat di kursi kiri.",
+          "mismatches": [
+            {
+              "expected": "geser",
+              "heard": "gaser"
+            },
+            {
+              "expected": "relnya",
+              "heard": "realnya"
+            },
+            {
+              "expected": "bengkok",
+              "heard": "bankok"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Di belakang, sabuk ketiga, kenceng ngelilit kursi kosong. Mepet pintu gaser longgar, realnya, bankok. Copilot terikat rapat di kursi kiri.",
+          "rawMismatches": [
+            {
+              "expected": "geser",
+              "heard": "gaser"
+            },
+            {
+              "expected": "relnya",
+              "heard": "realnya"
+            },
+            {
+              "expected": "bengkok",
+              "heard": "bankok"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.85): heard \"di belakang sabuk ketiga kenceng ngelilit kursi kosong mepet pintu gaser longgar\"",
+            "88 wpm outside 130±25%"
+          ]
+        },
+        {
+          "seed": 2,
+          "wordRatio": 0.9,
+          "similarity": 0.989,
+          "wpm": 106,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.90): heard \"di belakang sabuk ketiga kenceng ngelilit kursi kosong mepet pintu geser longgar\"",
+            "word mismatch (ratio 0.90): heard \"di belakang sabuk ketiga kenceng ngelilit kursi kosong mepet pintu geser longgar\""
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Di belakang, sabuk ketiga kenceng ngelilit kursi kosong, mepet pintu geser longgar, realnya bengkok. Kopilot terikat rapat di kursi kiri.",
+          "mismatches": [
+            {
+              "expected": "relnya",
+              "heard": "realnya"
+            },
+            {
+              "expected": "copilot",
+              "heard": "kopilot"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Di belakang, sabuk ketiga kenceng ngelilit kursi kosong, mepet pintu geser longgar, realnya bengkok. Kopilot terikat rapat di kursi kiri.",
+          "rawMismatches": [
+            {
+              "expected": "relnya",
+              "heard": "realnya"
+            },
+            {
+              "expected": "copilot",
+              "heard": "kopilot"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.90): heard \"di belakang sabuk ketiga kenceng ngelilit kursi kosong mepet pintu geser longgar\""
+          ]
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "tag": null,
+      "text": "Dia bilang, angin gunung suka bolong. Beneran, heli anjlok sekali. Kamu ganti pegangan tuas kemudi.",
+      "retries": 2,
+      "status": "failed",
+      "bestSimilarity": 0.984,
+      "bestWordRatio": 0.867,
+      "acceptedAttempt": 0,
+      "attempts": [
+        {
+          "seed": 0,
+          "wordRatio": 0.867,
+          "similarity": 0.984,
+          "wpm": 112,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.87): heard \"dia bilang angin gunung suka bolong beneran heli anjolok sekali kamu ganti pegan\"",
+            "raw: last word missing, truncated, or has invalid timestamps",
+            "word mismatch (ratio 0.87): heard \"dia bilang angin gunung suka bolong beneran heli anjolok sekali kamu ganti pegan\"",
+            "last word missing, truncated, or has invalid timestamps"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Dia bilang, Angin gunung suka bolong. Beneran, Heli anjolok sekali. Kamu ganti pegangan tuas kemudian.",
+          "mismatches": [
+            {
+              "expected": "anjlok",
+              "heard": "anjolok"
+            },
+            {
+              "expected": "kemudi",
+              "heard": "kemudian"
+            }
+          ],
+          "endTruncated": true,
+          "rawTranscript": "Dia bilang, Angin gunung suka bolong. Beneran, Heli anjolok sekali. Kamu ganti pegangan tuas kemudian.",
+          "rawMismatches": [
+            {
+              "expected": "anjlok",
+              "heard": "anjolok"
+            },
+            {
+              "expected": "kemudi",
+              "heard": "kemudian"
+            }
+          ],
+          "rawEndTruncated": true,
+          "rawReasons": [
+            "word mismatch (ratio 0.87): heard \"dia bilang angin gunung suka bolong beneran heli anjolok sekali kamu ganti pegan\"",
+            "last word missing, truncated, or has invalid timestamps"
+          ]
+        },
+        {
+          "seed": 1,
+          "wordRatio": 0.867,
+          "similarity": 0.984,
+          "wpm": 107,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.87): heard \"dia bilang angin gunung suka bolong beneran heli anjolok sekali kamu ganti pegan\"",
+            "raw: last word missing, truncated, or has invalid timestamps",
+            "word mismatch (ratio 0.87): heard \"dia bilang angin gunung suka bolong beneran heli anjolok sekali kamu ganti pegan\"",
+            "last word missing, truncated, or has invalid timestamps"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Dia bilang, Angin gunung suka bolong. Beneran, Heli anjolok sekali. Kamu ganti pegangan tuas kemudian.",
+          "mismatches": [
+            {
+              "expected": "anjlok",
+              "heard": "anjolok"
+            },
+            {
+              "expected": "kemudi",
+              "heard": "kemudian"
+            }
+          ],
+          "endTruncated": true,
+          "rawTranscript": "Dia bilang, Angin gunung suka bolong. Beneran, Heli anjolok sekali. Kamu ganti pegangan tuas kemudian.",
+          "rawMismatches": [
+            {
+              "expected": "anjlok",
+              "heard": "anjolok"
+            },
+            {
+              "expected": "kemudi",
+              "heard": "kemudian"
+            }
+          ],
+          "rawEndTruncated": true,
+          "rawReasons": [
+            "word mismatch (ratio 0.87): heard \"dia bilang angin gunung suka bolong beneran heli anjolok sekali kamu ganti pegan\"",
+            "last word missing, truncated, or has invalid timestamps"
+          ]
+        },
+        {
+          "seed": 2,
+          "wordRatio": 0.8,
+          "similarity": 0.974,
+          "wpm": 94,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.80): heard \"dia bilang angin gunung suka bolong benaran heli anjolok sekali kamu ganti pegan\"",
+            "raw: last word missing, truncated, or has invalid timestamps",
+            "raw: 90 wpm outside 130±25%",
+            "word mismatch (ratio 0.80): heard \"dia bilang angin gunung suka bolong benaran heli anjolok sekali kamu ganti pegan\"",
+            "last word missing, truncated, or has invalid timestamps",
+            "94 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Dia bilang, Angin gunung suka bolong. Benaran, Heli anjolok sekali. Kamu ganti pegangan tuas kemudian.",
+          "mismatches": [
+            {
+              "expected": "beneran",
+              "heard": "benaran"
+            },
+            {
+              "expected": "anjlok",
+              "heard": "anjolok"
+            },
+            {
+              "expected": "kemudi",
+              "heard": "kemudian"
+            }
+          ],
+          "endTruncated": true,
+          "rawTranscript": "Dia bilang, Angin gunung suka bolong. Benaran, Heli anjolok sekali. Kamu ganti pegangan tuas kemudian.",
+          "rawMismatches": [
+            {
+              "expected": "beneran",
+              "heard": "benaran"
+            },
+            {
+              "expected": "anjlok",
+              "heard": "anjolok"
+            },
+            {
+              "expected": "kemudi",
+              "heard": "kemudian"
+            }
+          ],
+          "rawEndTruncated": true,
+          "rawReasons": [
+            "word mismatch (ratio 0.80): heard \"dia bilang angin gunung suka bolong benaran heli anjolok sekali kamu ganti pegan\"",
+            "last word missing, truncated, or has invalid timestamps",
+            "90 wpm outside 130±25%"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "tag": null,
+      "text": "Kancing sabuk ketiga ikut geser. Telat satu ketukan. Suara menara radio masuk, tenang, jernih: turun, lewatin awan, izin darurat.",
+      "retries": 2,
+      "status": "failed",
+      "bestSimilarity": 1,
+      "bestWordRatio": 1,
+      "acceptedAttempt": 1,
+      "attempts": [
+        {
+          "seed": 0,
+          "wordRatio": 0.842,
+          "similarity": 0.975,
+          "wpm": 91,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.89): heard \"kancing sabuk ketiga ikut keser telat 1 ketukan suara menara radio masuk tenang \"",
+            "raw: 88 wpm outside 130±25%",
+            "word mismatch (ratio 0.84): heard \"kancing sabuk ketiga ikut keseer telat 1 ketukan suara menara radyo masuk tenang\"",
+            "91 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Kancing sabuk ketiga ikut keseer, telat satu ketukan. Suara menara radyo masuk, tenang, jerni, turun, lewatin awan, izin darurat.",
+          "mismatches": [
+            {
+              "expected": "geser",
+              "heard": "keseer"
+            },
+            {
+              "expected": "radio",
+              "heard": "radyo"
+            },
+            {
+              "expected": "jernih",
+              "heard": "jerni"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Kancing sabuk ketiga ikut keser, telat satu ketukan, suara menara radio masuk, tenang, jerni, turun, lewatin awan, izin darurat.",
+          "rawMismatches": [
+            {
+              "expected": "geser",
+              "heard": "keser"
+            },
+            {
+              "expected": "jernih",
+              "heard": "jerni"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.89): heard \"kancing sabuk ketiga ikut keser telat 1 ketukan suara menara radio masuk tenang \"",
+            "88 wpm outside 130±25%"
+          ]
+        },
+        {
+          "seed": 1,
+          "wordRatio": 1,
+          "similarity": 1,
+          "wpm": 79,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: 77 wpm outside 130±25%",
+            "79 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Kancing sabuk ketiga, ikut geser, telat satu ketukan, suara menara radio masuk, tenang, jernih, turun, lewatin awan, izin darurat.",
+          "mismatches": [],
+          "endTruncated": false,
+          "rawTranscript": "Kancing sabuk ketiga ikut geser, telat satu ketukan, suara menara radio masuk, tenang, jernih, turun, lewatin awan, izin darurat.",
+          "rawMismatches": [],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "77 wpm outside 130±25%"
+          ]
+        },
+        {
+          "seed": 2,
+          "wordRatio": 0.947,
+          "similarity": 0.979,
+          "wpm": 81,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.89): heard \"kancing sabuk ketiga ikut geyser telat 1 ketukan suara menara radio masuk tenang\"",
+            "raw: 78 wpm outside 130±25%",
+            "word mismatch (ratio 0.95): heard \"kancing sabuk ketiga ikut geser telat 1 ketukan suara menara radyum masuk tenang\"",
+            "81 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Kancing sabuk ketiga ikut geser. Telat satu ketukan. Suara menara radyum masuk, tenang, jernih. Turun, lewatin awan, izin darurat.",
+          "mismatches": [
+            {
+              "expected": "radio",
+              "heard": "radyum"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Kancing sabuk ketiga ikut geyser. Telat satu ketukan. Suara menara radio masuk. Tenang. Jerni. Turun. Lewatin awan. Izin darurat.",
+          "rawMismatches": [
+            {
+              "expected": "geser",
+              "heard": "geyser"
+            },
+            {
+              "expected": "jernih",
+              "heard": "jerni"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.89): heard \"kancing sabuk ketiga ikut geyser telat 1 ketukan suara menara radio masuk tenang\"",
+            "78 wpm outside 130±25%"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "tag": null,
+      "text": "Instingmu: patuh. Heli miring masuk awan. Baling-baling ekor nyangkut punggung gunung.",
+      "retries": 2,
+      "status": "failed",
+      "bestSimilarity": 1,
+      "bestWordRatio": 1,
+      "acceptedAttempt": 0,
+      "attempts": [
+        {
+          "seed": 0,
+          "wordRatio": 1,
+          "similarity": 1,
+          "wpm": 97,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: 93 wpm outside 130±25%",
+            "97 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Instingmu patuh, heli miring masuk awan, baling-baling ekor nyangkut punggung gunung.",
+          "mismatches": [],
+          "endTruncated": false,
+          "rawTranscript": "Instingmu patuh, heli miring masuk awan, baling-baling ekor nyangkut punggung gunung.",
+          "rawMismatches": [],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "93 wpm outside 130±25%"
+          ]
+        },
+        {
+          "seed": 1,
+          "wordRatio": 0.917,
+          "similarity": 0.982,
+          "wpm": 97,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: 94 wpm outside 130±25%",
+            "word mismatch (ratio 0.92): heard \"instingmu patuh helly miring masuk awan baling baling ekor nyangkut punggung gun\"",
+            "97 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "INSTINGMU PATUH HELLY MIRING MASUK AWAN BALING-BALING EKOR NYANGKUT PUNGGUNG GUNUNG",
+          "mismatches": [
+            {
+              "expected": "heli",
+              "heard": "helly"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "instingmu, patuh heli miring masuk awan baling-baling ekor nyangkut punggung gunung",
+          "rawMismatches": [],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "94 wpm outside 130±25%"
+          ]
+        },
+        {
+          "seed": 2,
+          "wordRatio": 1,
+          "similarity": 0.994,
+          "wpm": 91,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: 88 wpm outside 130±25%",
+            "91 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "INSTING MU PATUH Heli miring masuk awan Baling-baling ekor nyangkut punggung gunung",
+          "mismatches": [],
+          "endTruncated": false,
+          "rawTranscript": "INSTING MU PATUH Heli miring masuk awan Baling-baling ekor nyangkut punggung gunung",
+          "rawMismatches": [],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "88 wpm outside 130±25%"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "tag": null,
+      "text": "Muter liar, ditelen kabut. Tamat. Balik lagi.",
+      "retries": 2,
+      "status": "failed",
+      "bestSimilarity": 0.976,
+      "bestWordRatio": 0.857,
+      "acceptedAttempt": 1,
+      "attempts": [
+        {
+          "seed": 0,
+          "wordRatio": 0.714,
+          "similarity": 0.881,
+          "wpm": 72,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.71): heard \"motor liar dittallan kabut tamat balik lagi\"",
+            "raw: char similarity 0.88 < 0.94",
+            "raw: 66 wpm outside 130±25%",
+            "word mismatch (ratio 0.71): heard \"motor liar dittallan kabut tamat balik lagi\"",
+            "char similarity 0.88 < 0.94",
+            "72 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Motor liar, dittallan kabut, tamat balik lagi.",
+          "mismatches": [
+            {
+              "expected": "muter",
+              "heard": "motor"
+            },
+            {
+              "expected": "ditelen",
+              "heard": "dittallan"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Motor liar, dittallan kabut, tamat balik lagi.",
+          "rawMismatches": [
+            {
+              "expected": "muter",
+              "heard": "motor"
+            },
+            {
+              "expected": "ditelen",
+              "heard": "dittallan"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.71): heard \"motor liar dittallan kabut tamat balik lagi\"",
+            "char similarity 0.88 < 0.94",
+            "66 wpm outside 130±25%"
+          ]
+        },
+        {
+          "seed": 1,
+          "wordRatio": 0.857,
+          "similarity": 0.976,
+          "wpm": 75,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.86): heard \"muter liar ditelan kabut tamat balik lagi\"",
+            "raw: 67 wpm outside 130±25%",
+            "word mismatch (ratio 0.86): heard \"muter liar ditelan kabut tamat balik lagi\"",
+            "75 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Muter liar, ditelan kabut, tamat, balik lagi.",
+          "mismatches": [
+            {
+              "expected": "ditelen",
+              "heard": "ditelan"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "muter liar, ditelan kabut, tamat, balik lagi.",
+          "rawMismatches": [
+            {
+              "expected": "ditelen",
+              "heard": "ditelan"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.86): heard \"muter liar ditelan kabut tamat balik lagi\"",
+            "67 wpm outside 130±25%"
+          ]
+        },
+        {
+          "seed": 2,
+          "wordRatio": 0.714,
+          "similarity": 0.976,
+          "wpm": 70,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.71): heard \"mu terliar ditelen kabut tamat balik lagi\"",
+            "raw: 67 wpm outside 130±25%",
+            "word mismatch (ratio 0.71): heard \"mu terliar ditelen kabut tamat balik lagi\"",
+            "70 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Mu terliar, ditelen kabut, tamat balik lagi.",
+          "mismatches": [
+            {
+              "expected": "muter",
+              "heard": "mu"
+            },
+            {
+              "expected": "liar",
+              "heard": "terliar"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Mu terliar, ditelen kabut, tamat, balik lagi.",
+          "rawMismatches": [
+            {
+              "expected": "muter",
+              "heard": "mu"
+            },
+            {
+              "expected": "liar",
+              "heard": "terliar"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.71): heard \"mu terliar ditelen kabut tamat balik lagi\"",
+            "67 wpm outside 130±25%"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "tag": null,
+      "text": "Copilot buka sabuknya, mau cek kursi belakang. Nyelip, hilang dari pandangan. Suara copilot manggil dari balik kursi.",
+      "retries": 2,
+      "status": "failed",
+      "bestSimilarity": 0.991,
+      "bestWordRatio": 0.941,
+      "acceptedAttempt": 0,
+      "attempts": [
+        {
+          "seed": 0,
+          "wordRatio": 0.941,
+          "similarity": 0.991,
+          "wpm": 106,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.94): heard \"copilot buka sabuknya mau cek kursi belakang nyalip hilang dari pandangan suara \"",
+            "word mismatch (ratio 0.94): heard \"copilot buka sabuknya mau cek kursi belakang nyalip hilang dari pandangan suara \""
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Copilot buka sabuknya, mau cek kursi belakang. Nyalip, hilang dari pandangan. Suara copilot, manggil dari balik kursi.",
+          "mismatches": [
+            {
+              "expected": "nyelip",
+              "heard": "nyalip"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Copilot buka sabuknya, mau cek kursi belakang. Nyalip, hilang dari pandangan. Suara copilot, manggil dari balik kursi.",
+          "rawMismatches": [
+            {
+              "expected": "nyelip",
+              "heard": "nyalip"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.94): heard \"copilot buka sabuknya mau cek kursi belakang nyalip hilang dari pandangan suara \""
+          ]
+        },
+        {
+          "seed": 1,
+          "wordRatio": 0.824,
+          "similarity": 0.973,
+          "wpm": 103,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.88): heard \"kopilot buka sabuknya mau cek kursi belakang nyelip hilang dari pandangan suara \"",
+            "word mismatch (ratio 0.82): heard \"kopilot buka sabuknya mau cek kursi belakang nyalip hilang dari pandangan suara \""
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Kopilot buka sabuknya, mau cek kursi belakang, nyalip, hilang dari pandangan, suara kopilot manggil dari balik kursi.",
+          "mismatches": [
+            {
+              "expected": "copilot",
+              "heard": "kopilot"
+            },
+            {
+              "expected": "nyelip",
+              "heard": "nyalip"
+            },
+            {
+              "expected": "copilot",
+              "heard": "kopilot"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Kopilot buka sabuknya, mau cek kursi belakang, nyelip, hilang dari pandangan, suara kopilot manggil dari balik kursi.",
+          "rawMismatches": [
+            {
+              "expected": "copilot",
+              "heard": "kopilot"
+            },
+            {
+              "expected": "copilot",
+              "heard": "kopilot"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.88): heard \"kopilot buka sabuknya mau cek kursi belakang nyelip hilang dari pandangan suara \""
+          ]
+        },
+        {
+          "seed": 2,
+          "wordRatio": 0.824,
+          "similarity": 0.973,
+          "wpm": 100,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.82): heard \"kopilot buka sabuknya mau cek kursi belakang nyalip hilang dari pandangan suara \"",
+            "word mismatch (ratio 0.82): heard \"kopilot buka sabuknya mau cek kursi belakang nyalip hilang dari pandangan suara \""
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Kopilot buka sabuknya. Mau cek kursi belakang. Nyalip. Hilang dari pandangan. Suara kopilot manggil dari balik kursi.",
+          "mismatches": [
+            {
+              "expected": "copilot",
+              "heard": "kopilot"
+            },
+            {
+              "expected": "nyelip",
+              "heard": "nyalip"
+            },
+            {
+              "expected": "copilot",
+              "heard": "kopilot"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Kopilot buka sabuknya. Mau cek kursi belakang. Nyalip. Hilang dari pandangan. Suara kopilot manggil dari balik kursi.",
+          "rawMismatches": [
+            {
+              "expected": "copilot",
+              "heard": "kopilot"
+            },
+            {
+              "expected": "nyelip",
+              "heard": "nyalip"
+            },
+            {
+              "expected": "copilot",
+              "heard": "kopilot"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.82): heard \"kopilot buka sabuknya mau cek kursi belakang nyalip hilang dari pandangan suara \""
+          ]
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "tag": null,
+      "text": "Yang balik telat satu ketukan. Nggak mirip dia. Tamat.",
+      "retries": 2,
+      "status": "failed",
+      "bestSimilarity": 1,
+      "bestWordRatio": 1,
+      "acceptedAttempt": 0,
+      "attempts": [
+        {
+          "seed": 0,
+          "wordRatio": 1,
+          "similarity": 1,
+          "wpm": 101,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.89): heard \"yang balik telat 1 ketukan gak mirip dia tamat\"",
+            "raw: 95 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Yang balik telat satu ketukan, Nggak mirip dia, tamat.",
+          "mismatches": [],
+          "endTruncated": false,
+          "rawTranscript": "yang balik telat satu ketukan, gak mirip dia, tamat.",
+          "rawMismatches": [
+            {
+              "expected": "nggak",
+              "heard": "gak"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.89): heard \"yang balik telat 1 ketukan gak mirip dia tamat\"",
+            "95 wpm outside 130±25%"
+          ]
+        },
+        {
+          "seed": 1,
+          "wordRatio": 0.778,
+          "similarity": 0.957,
+          "wpm": 107,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.78): heard \"yang balik telat 1 ketukan gak mirip dia taman\"",
+            "raw: last word missing, truncated, or has invalid timestamps",
+            "word mismatch (ratio 0.78): heard \"yang balik telat 1 ketukan gak mirip dia taman\"",
+            "last word missing, truncated, or has invalid timestamps"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "yang balik telat satu ketukan. Gak mirip dia. Taman.",
+          "mismatches": [
+            {
+              "expected": "nggak",
+              "heard": "gak"
+            },
+            {
+              "expected": "tamat",
+              "heard": "taman"
+            }
+          ],
+          "endTruncated": true,
+          "rawTranscript": "yang balik telat satu ketukan. Gak mirip dia. Taman.",
+          "rawMismatches": [
+            {
+              "expected": "nggak",
+              "heard": "gak"
+            },
+            {
+              "expected": "tamat",
+              "heard": "taman"
+            }
+          ],
+          "rawEndTruncated": true,
+          "rawReasons": [
+            "word mismatch (ratio 0.78): heard \"yang balik telat 1 ketukan gak mirip dia taman\"",
+            "last word missing, truncated, or has invalid timestamps"
+          ]
+        },
+        {
+          "seed": 2,
+          "wordRatio": 0.889,
+          "similarity": 0.979,
+          "wpm": 110,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.89): heard \"yang balik telat 1 ketukan gak mirip dia tamat\"",
+            "word mismatch (ratio 0.89): heard \"yang balik telat 1 ketukan gak mirip dia tamat\""
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "yang balik telat satu ketukan, gak mirip dia, tamat.",
+          "mismatches": [
+            {
+              "expected": "nggak",
+              "heard": "gak"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "yang balik telat satu ketukan, gak mirip dia, tamat.",
+          "rawMismatches": [
+            {
+              "expected": "nggak",
+              "heard": "gak"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.89): heard \"yang balik telat 1 ketukan gak mirip dia tamat\""
+          ]
+        }
+      ]
+    },
+    {
+      "index": 9,
+      "tag": null,
+      "text": "Insting terakhir: buka sabukmu sendiri. Sabukmu kebuka. Satu ketukan kemudian, sabuk ketiga kebuka sendiri.",
+      "retries": 2,
+      "status": "failed",
+      "bestSimilarity": 1,
+      "bestWordRatio": 1,
+      "acceptedAttempt": 0,
+      "attempts": [
+        {
+          "seed": 0,
+          "wordRatio": 1,
+          "similarity": 1,
+          "wpm": 80,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: 77 wpm outside 130±25%",
+            "80 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Insting terakhir. Buka sabukmu sendiri. Sabukmu kebuka. Satu ketukan kemudian. Sabuk ketiga. Kebuka sendiri.",
+          "mismatches": [],
+          "endTruncated": false,
+          "rawTranscript": "Insting terakhir. Buka sabukmu sendiri. Sabukmu kebuka. Satu ketukan kemudian. Sabuk ketiga. Kebuka sendiri.",
+          "rawMismatches": [],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "77 wpm outside 130±25%"
+          ]
+        },
+        {
+          "seed": 1,
+          "wordRatio": 1,
+          "similarity": 1,
+          "wpm": 76,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: 73 wpm outside 130±25%",
+            "76 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Insting terakhir, buka sabukmu sendiri, sabukmu kebuka, satu ketukan kemudian, sabuk ketiga, kebuka sendiri.",
+          "mismatches": [],
+          "endTruncated": false,
+          "rawTranscript": "Insting terakhir. Buka sabukmu sendiri. Sabukmu kebuka. Satu ketukan kemudian. Sabuk ketiga. Kebuka sendiri.",
+          "rawMismatches": [],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "73 wpm outside 130±25%"
+          ]
+        },
+        {
+          "seed": 2,
+          "wordRatio": 1,
+          "similarity": 1,
+          "wpm": 80,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: 78 wpm outside 130±25%",
+            "80 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Insting terakhir, buka sabukmu sendiri. Sabukmu kebuka. Satu ketukan kemudian, sabuk ketiga, kebuka sendiri.",
+          "mismatches": [],
+          "endTruncated": false,
+          "rawTranscript": "Insting terakhir, buka sabukmu sendiri. Sabukmu kebuka, satu ketukan kemudian, sabuk ketiga kebuka sendiri.",
+          "rawMismatches": [],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "78 wpm outside 130±25%"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 10,
+      "tag": null,
+      "text": "Udara bolong. Heli anjlok dalam. Kamu nggak diikat.",
+      "retries": 2,
+      "status": "failed",
+      "bestSimilarity": 0.99,
+      "bestWordRatio": 0.875,
+      "acceptedAttempt": 0,
+      "attempts": [
+        {
+          "seed": 0,
+          "wordRatio": 0.875,
+          "similarity": 0.99,
+          "wpm": 93,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.88): heard \"udara bolong heli anjolok dalam kamu nggak diikat\"",
+            "raw: 87 wpm outside 130±25%",
+            "word mismatch (ratio 0.88): heard \"udara bolong heli anjolok dalam kamu nggak diikat\"",
+            "93 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Udara bolong, heli anjolok dalam, kamu nggak diikat.",
+          "mismatches": [
+            {
+              "expected": "anjlok",
+              "heard": "anjolok"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Udara bolong, heli anjolok dalam, kamu nggak diikat.",
+          "rawMismatches": [
+            {
+              "expected": "anjlok",
+              "heard": "anjolok"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.88): heard \"udara bolong heli anjolok dalam kamu nggak diikat\"",
+            "87 wpm outside 130±25%"
+          ]
+        },
+        {
+          "seed": 1,
+          "wordRatio": 0.875,
+          "similarity": 0.979,
+          "wpm": 84,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.88): heard \"udara bolong heli anjlog dalam kamu nggak diikat\"",
+            "raw: 79 wpm outside 130±25%",
+            "word mismatch (ratio 0.88): heard \"udara bolong heli anjlog dalam kamu nggak diikat\"",
+            "84 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Udara bolong, heli anjlog dalam, kamu nggak diikat.",
+          "mismatches": [
+            {
+              "expected": "anjlok",
+              "heard": "anjlog"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Udara bolong, heli anjlog dalam, kamu nggak diikat.",
+          "rawMismatches": [
+            {
+              "expected": "anjlok",
+              "heard": "anjlog"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.88): heard \"udara bolong heli anjlog dalam kamu nggak diikat\"",
+            "79 wpm outside 130±25%"
+          ]
+        },
+        {
+          "seed": 2,
+          "wordRatio": 0.875,
+          "similarity": 0.979,
+          "wpm": 87,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.88): heard \"udara bolong heli anjrok dalam kamu nggak diikat\"",
+            "raw: 83 wpm outside 130±25%",
+            "word mismatch (ratio 0.88): heard \"udara bolong heli anjrok dalam kamu nggak diikat\"",
+            "87 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Udara bolong, heli anjrok dalam, kamu nggak diikat.",
+          "mismatches": [
+            {
+              "expected": "anjlok",
+              "heard": "anjrok"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Udara bolong, heli anjrok dalam, kamu nggak diikat.",
+          "rawMismatches": [
+            {
+              "expected": "anjlok",
+              "heard": "anjrok"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.88): heard \"udara bolong heli anjrok dalam kamu nggak diikat\"",
+            "83 wpm outside 130±25%"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 11,
+      "tag": null,
+      "text": "Panel kokpit hantam badanmu. Tamat. Balik lagi.",
+      "retries": 2,
+      "status": "failed",
+      "bestSimilarity": 1,
+      "bestWordRatio": 1,
+      "acceptedAttempt": 0,
+      "attempts": [
+        {
+          "seed": 0,
+          "wordRatio": 1,
+          "similarity": 1,
+          "wpm": 90,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: 81 wpm outside 130±25%",
+            "90 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Panel kokpit hantam badanmu, tamat. Balik lagi.",
+          "mismatches": [],
+          "endTruncated": false,
+          "rawTranscript": "Panel kokpit hantam badanmu, tamat. Balik lagi.",
+          "rawMismatches": [],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "81 wpm outside 130±25%"
+          ]
+        },
+        {
+          "seed": 1,
+          "wordRatio": 1,
+          "similarity": 1,
+          "wpm": 83,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: 77 wpm outside 130±25%",
+            "83 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Panel kokpit hantam badanmu. Tamat. Balik lagi.",
+          "mismatches": [],
+          "endTruncated": false,
+          "rawTranscript": "Panel kokpit hantam badanmu. Tamat. Balik lagi.",
+          "rawMismatches": [],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "77 wpm outside 130±25%"
+          ]
+        },
+        {
+          "seed": 2,
+          "wordRatio": 1,
+          "similarity": 1,
+          "wpm": 77,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: 70 wpm outside 130±25%",
+            "77 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Panel kokpit hantam badanmu. Tamat. Balik lagi.",
+          "mismatches": [],
+          "endTruncated": false,
+          "rawTranscript": "Panel kokpit hantam badanmu. Tamat. Balik lagi.",
+          "rawMismatches": [],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "70 wpm outside 130±25%"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 12,
+      "tag": null,
+      "text": "Nggak ada yang sempat buka sabuk. Perhatiin: dia niru kamu, telat satu ketukan. Nggak pernah duluan.",
+      "retries": 2,
+      "status": "failed",
+      "bestSimilarity": 0.978,
+      "bestWordRatio": 0.875,
+      "acceptedAttempt": 0,
+      "attempts": [
+        {
+          "seed": 0,
+          "wordRatio": 0.875,
+          "similarity": 0.978,
+          "wpm": 102,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.88): heard \"gak ada yang sempat buka sabuk perhatiin dia niru kamu telat 1 ketukan gak perna\"",
+            "raw: 97 wpm outside 130±25%",
+            "word mismatch (ratio 0.88): heard \"gak ada yang sempat buka sabuk perhatiin dia niru kamu telat 1 ketukan gak perna\""
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Gak ada yang sempat buka sabuk, perhatiin, dia niru kamu telat satu ketukan. Gak pernah duluan.",
+          "mismatches": [
+            {
+              "expected": "nggak",
+              "heard": "gak"
+            },
+            {
+              "expected": "nggak",
+              "heard": "gak"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Gak ada yang sempat buka sabuk, perhatiin, dia niru kamu telat satu ketukan. Gak pernah duluan.",
+          "rawMismatches": [
+            {
+              "expected": "nggak",
+              "heard": "gak"
+            },
+            {
+              "expected": "nggak",
+              "heard": "gak"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.88): heard \"gak ada yang sempat buka sabuk perhatiin dia niru kamu telat 1 ketukan gak perna\"",
+            "97 wpm outside 130±25%"
+          ]
+        },
+        {
+          "seed": 1,
+          "wordRatio": 0.875,
+          "similarity": 0.978,
+          "wpm": 115,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.88): heard \"gak ada yang sempat buka sabuk perhatiin dia niru kamu telat 1 ketukan gak perna\"",
+            "word mismatch (ratio 0.88): heard \"gak ada yang sempat buka sabuk perhatiin dia niru kamu telat 1 ketukan gak perna\""
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Gak ada yang sempat buka sabuk, perhatiin, dia niru kamu, telat satu ketukan, gak pernah duluan.",
+          "mismatches": [
+            {
+              "expected": "nggak",
+              "heard": "gak"
+            },
+            {
+              "expected": "nggak",
+              "heard": "gak"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Gak ada yang sempat buka sabuk, perhatiin, dia niru kamu, telat satu ketukan, gak pernah duluan.",
+          "rawMismatches": [
+            {
+              "expected": "nggak",
+              "heard": "gak"
+            },
+            {
+              "expected": "nggak",
+              "heard": "gak"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.88): heard \"gak ada yang sempat buka sabuk perhatiin dia niru kamu telat 1 ketukan gak perna\""
+          ]
+        },
+        {
+          "seed": 2,
+          "wordRatio": 0.875,
+          "similarity": 0.978,
+          "wpm": 112,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.88): heard \"gak ada yang sempat buka sabuk perhatiin dia niru kamu telat 1 ketukan gak perna\"",
+            "word mismatch (ratio 0.88): heard \"gak ada yang sempat buka sabuk perhatiin dia niru kamu telat 1 ketukan gak perna\""
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Gak ada yang sempat buka sabuk, perhatiin, dia niru kamu telat satu ketukan. Gak pernah duluan.",
+          "mismatches": [
+            {
+              "expected": "nggak",
+              "heard": "gak"
+            },
+            {
+              "expected": "nggak",
+              "heard": "gak"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Gak ada yang sempat buka sabuk, perhatiin, dia niru kamu, telat satu ketukan. Gak pernah duluan.",
+          "rawMismatches": [
+            {
+              "expected": "nggak",
+              "heard": "gak"
+            },
+            {
+              "expected": "nggak",
+              "heard": "gak"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.88): heard \"gak ada yang sempat buka sabuk perhatiin dia niru kamu telat 1 ketukan gak perna\""
+          ]
+        }
+      ]
+    },
+    {
+      "index": 13,
+      "tag": null,
+      "text": "Itu celahnya. Kamu desek copilot: jangan buka sabuk, duduk diam. Kamu tarik pintu geser.",
+      "retries": 1,
+      "status": "verified",
+      "bestSimilarity": 1,
+      "bestWordRatio": 1,
+      "acceptedAttempt": 1,
+      "attempts": [
+        {
+          "seed": 0,
+          "wordRatio": 0.929,
+          "similarity": 0.988,
+          "wpm": 107,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.90): heard \"itu celahnya kamu desek kok pilot jangan buka sabuk duduk diam kamu tarik pintu \"",
+            "word mismatch (ratio 0.93): heard \"itu celahnya kamu desek kopilot jangan buka sabuk duduk diam kamu tarik pintu ge\""
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Itu celahnya. Kamu desek kopilot. Jangan buka sabuk. Duduk diam. Kamu tarik pintu geser.",
+          "mismatches": [
+            {
+              "expected": "copilot",
+              "heard": "kopilot"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Itu celahnya. Kamu desek kok pilot. Jangan buka sabuk. Duduk diam. Kamu tarik pintu geser.",
+          "rawMismatches": [
+            {
+              "expected": null,
+              "heard": "kok"
+            },
+            {
+              "expected": "copilot",
+              "heard": "pilot"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.90): heard \"itu celahnya kamu desek kok pilot jangan buka sabuk duduk diam kamu tarik pintu \""
+          ]
+        },
+        {
+          "seed": 1,
+          "wordRatio": 1,
+          "similarity": 1,
+          "wpm": 105,
+          "expectedWpm": 130,
+          "passed": true,
+          "reasons": [],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Itu celahnya. Kamu desek copilot, jangan buka sabuk, duduk diam. Kamu tarik pintu geser.",
+          "mismatches": [],
+          "endTruncated": false,
+          "rawTranscript": "Itu celahnya. Kamu desek copilot. Jangan buka sabuk, duduk diam. Kamu tarik pintu geser.",
+          "rawMismatches": [],
+          "rawEndTruncated": false,
+          "rawReasons": []
+        }
+      ]
+    },
+    {
+      "index": 14,
+      "tag": null,
+      "text": "Relnya bengkok, cuma kebuka setengah. Pura-pura buka sabukmu: angkat lidah kancingnya sampai bunyi. Jangan ditekan.",
+      "retries": 2,
+      "status": "failed",
+      "bestSimilarity": 1,
+      "bestWordRatio": 1,
+      "acceptedAttempt": 0,
+      "attempts": [
+        {
+          "seed": 0,
+          "wordRatio": 1,
+          "similarity": 1,
+          "wpm": 99,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: 96 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Relnya bengkok, cuma kebuka setengah, pura-pura buka sabukmu, angkat lidah kancingnya sampai bunyi, jangan ditekan.",
+          "mismatches": [],
+          "endTruncated": false,
+          "rawTranscript": "Relnya bengkok, cuma kebuka setengah, pura-pura buka sabukmu, angkat lidah kancingnya sampai bunyi, jangan ditekan.",
+          "rawMismatches": [],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "96 wpm outside 130±25%"
+          ]
+        },
+        {
+          "seed": 1,
+          "wordRatio": 1,
+          "similarity": 1,
+          "wpm": 102,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.94): heard \"realnya bengkok cuma kebuka setengah pura pura buka sabukmu angkat lidah kancing\""
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Relnya bengkok. Cuma kebuka setengah. Pura-pura buka sabukmu. Angkat lidah kancingnya sampai bunyi. Jangan ditekan.",
+          "mismatches": [],
+          "endTruncated": false,
+          "rawTranscript": "Realnya bengkok. Cuma kebuka setengah. Pura-pura buka sabukmu. Angkat lidah kancingnya sampai bunyi. Jangan ditekan.",
+          "rawMismatches": [
+            {
+              "expected": "relnya",
+              "heard": "realnya"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.94): heard \"realnya bengkok cuma kebuka setengah pura pura buka sabukmu angkat lidah kancing\""
+          ]
+        },
+        {
+          "seed": 2,
+          "wordRatio": 0.938,
+          "similarity": 0.995,
+          "wpm": 98,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.94): heard \"realnya bengkok cuma kebuka setengah pura pura buka sabukmu angkat lidah kancing\"",
+            "raw: 95 wpm outside 130±25%",
+            "word mismatch (ratio 0.94): heard \"realnya bengkok cuma kebuka setengah pura pura buka sabukmu angkat lidah kancing\""
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Realnya bengkok, cuma kebuka setengah, pura-pura buka sabukmu, angkat lidah kancingnya sampai bunyi, jangan ditekan.",
+          "mismatches": [
+            {
+              "expected": "relnya",
+              "heard": "realnya"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Realnya bengkok, cuma kebuka setengah, pura-pura buka sabukmu, angkat lidah kancingnya sampai bunyi, jangan ditekan.",
+          "rawMismatches": [
+            {
+              "expected": "relnya",
+              "heard": "realnya"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.94): heard \"realnya bengkok cuma kebuka setengah pura pura buka sabukmu angkat lidah kancing\"",
+            "95 wpm outside 130±25%"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 15,
+      "tag": null,
+      "text": "Tahan napas. Satu ketukan. Sabuk ketiga kebuka sendiri.",
+      "retries": 2,
+      "status": "failed",
+      "bestSimilarity": 1,
+      "bestWordRatio": 1,
+      "acceptedAttempt": 0,
+      "attempts": [
+        {
+          "seed": 0,
+          "wordRatio": 1,
+          "similarity": 1,
+          "wpm": 73,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: 67 wpm outside 130±25%",
+            "73 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Tahan napas, satu ketukan, sabuk ketiga, kebuka sendiri.",
+          "mismatches": [],
+          "endTruncated": false,
+          "rawTranscript": "Tahan napas, satu ketukan, sabuk ketiga, kebuka sendiri.",
+          "rawMismatches": [],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "67 wpm outside 130±25%"
+          ]
+        },
+        {
+          "seed": 1,
+          "wordRatio": 1,
+          "similarity": 1,
+          "wpm": 80,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: 75 wpm outside 130±25%",
+            "80 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Tahan napas, satu ketukan, sabuk ketiga kebuka sendiri.",
+          "mismatches": [],
+          "endTruncated": false,
+          "rawTranscript": "Tahan napas, satu ketukan, sabuk ketiga kebuka sendiri.",
+          "rawMismatches": [],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "75 wpm outside 130±25%"
+          ]
+        },
+        {
+          "seed": 2,
+          "wordRatio": 1,
+          "similarity": 1,
+          "wpm": 82,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: 75 wpm outside 130±25%",
+            "82 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Tahan napas, satu ketukan, sabuk ketiga kebuka sendiri.",
+          "mismatches": [],
+          "endTruncated": false,
+          "rawTranscript": "Tahan napas, satu ketukan, sabuk ketiga kebuka sendiri.",
+          "rawMismatches": [],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "75 wpm outside 130±25%"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 16,
+      "tag": null,
+      "text": "Saat itu, tancep tuas kemudi sekeras-kerasnya. Heli miring tajam. Yang nggak diikat, terlempar keluar pintu geser.",
+      "retries": 2,
+      "status": "failed",
+      "bestSimilarity": 0.972,
+      "bestWordRatio": 0.824,
+      "acceptedAttempt": 0,
+      "attempts": [
+        {
+          "seed": 0,
+          "wordRatio": 0.824,
+          "similarity": 0.972,
+          "wpm": 93,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.82): heard \"saat itu tancap tuas kemudian sekeras kerasnya heli miring tajam yang gak diikat\"",
+            "raw: 90 wpm outside 130±25%",
+            "word mismatch (ratio 0.82): heard \"saat itu tancap tuas kemudian sekeras kerasnya heli miring tajam yang gak diikat\"",
+            "93 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Saat itu, tancap tuas kemudian sekeras-kerasnya, heli miring tajam yang gak diikat, terlempar keluar pintu geser.",
+          "mismatches": [
+            {
+              "expected": "tancep",
+              "heard": "tancap"
+            },
+            {
+              "expected": "kemudi",
+              "heard": "kemudian"
+            },
+            {
+              "expected": "nggak",
+              "heard": "gak"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Saat itu, tancap tuas kemudian sekeras-kerasnya, heli miring tajam yang gak diikat, terlempar keluar pintu geser.",
+          "rawMismatches": [
+            {
+              "expected": "tancep",
+              "heard": "tancap"
+            },
+            {
+              "expected": "kemudi",
+              "heard": "kemudian"
+            },
+            {
+              "expected": "nggak",
+              "heard": "gak"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.82): heard \"saat itu tancap tuas kemudian sekeras kerasnya heli miring tajam yang gak diikat\"",
+            "90 wpm outside 130±25%"
+          ]
+        },
+        {
+          "seed": 1,
+          "wordRatio": 0.824,
+          "similarity": 0.972,
+          "wpm": 96,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.82): heard \"saat itu tancap tuas kemudian sekeras kerasnya heli miring tajam yang gak diikat\"",
+            "raw: 93 wpm outside 130±25%",
+            "word mismatch (ratio 0.82): heard \"saat itu tancap tuas kemudian sekeras kerasnya heli miring tajam yang gak diikat\"",
+            "96 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Saat itu, tancap tuas kemudian sekeras-kerasnya heli miring tajam yang gak diikat, terlempar keluar pintu geser.",
+          "mismatches": [
+            {
+              "expected": "tancep",
+              "heard": "tancap"
+            },
+            {
+              "expected": "kemudi",
+              "heard": "kemudian"
+            },
+            {
+              "expected": "nggak",
+              "heard": "gak"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Saat itu, tancap tuas kemudian sekeras-kerasnya, heli miring tajam, yang gak diikat, terlempar keluar pintu geser.",
+          "rawMismatches": [
+            {
+              "expected": "tancep",
+              "heard": "tancap"
+            },
+            {
+              "expected": "kemudi",
+              "heard": "kemudian"
+            },
+            {
+              "expected": "nggak",
+              "heard": "gak"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.82): heard \"saat itu tancap tuas kemudian sekeras kerasnya heli miring tajam yang gak diikat\"",
+            "93 wpm outside 130±25%"
+          ]
+        },
+        {
+          "seed": 2,
+          "wordRatio": 0.824,
+          "similarity": 0.972,
+          "wpm": 106,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.82): heard \"saat itu tancap tuas kemudian sekeras kerasnya heli miring tajam yang gak diikat\"",
+            "word mismatch (ratio 0.82): heard \"saat itu tancap tuas kemudian sekeras kerasnya heli miring tajam yang gak diikat\""
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Saat itu, tancap tuas kemudian sekeras-kerasnya, heli miring tajam yang gak diikat terlempar keluar pintu geser.",
+          "mismatches": [
+            {
+              "expected": "tancep",
+              "heard": "tancap"
+            },
+            {
+              "expected": "kemudi",
+              "heard": "kemudian"
+            },
+            {
+              "expected": "nggak",
+              "heard": "gak"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Saat itu, tancap tuas kemudian sekeras-kerasnya. Heli miring tajam, yang gak diikat, terlempar keluar pintu geser.",
+          "rawMismatches": [
+            {
+              "expected": "tancep",
+              "heard": "tancap"
+            },
+            {
+              "expected": "kemudi",
+              "heard": "kemudian"
+            },
+            {
+              "expected": "nggak",
+              "heard": "gak"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.82): heard \"saat itu tancap tuas kemudian sekeras kerasnya heli miring tajam yang gak diikat\""
+          ]
+        }
+      ]
+    },
+    {
+      "index": 17,
+      "tag": null,
+      "text": "Laut awan nutupin dia. Copilot bantu narik tuas. Heli datar lagi.",
+      "retries": 2,
+      "status": "failed",
+      "bestSimilarity": 1,
+      "bestWordRatio": 1,
+      "acceptedAttempt": 2,
+      "attempts": [
+        {
+          "seed": 0,
+          "wordRatio": 0.909,
+          "similarity": 0.984,
+          "wpm": 90,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.90): heard \"laut awan nutupindia kopilot bantu narik tuas heli datar lagi\"",
+            "raw: 85 wpm outside 130±25%",
+            "word mismatch (ratio 0.91): heard \"laut awan nutupin dia kopilot bantu narik tuas heli datar lagi\"",
+            "90 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Laut awan nutupin dia. Kopilot bantu narik tuas. Heli datar lagi.",
+          "mismatches": [
+            {
+              "expected": "copilot",
+              "heard": "kopilot"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Laut Awan Nutupindia. Kopilot Bantu Narik Tuas. Heli Datar Lagi.",
+          "rawMismatches": [
+            {
+              "expected": "copilot",
+              "heard": "kopilot"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.90): heard \"laut awan nutupindia kopilot bantu narik tuas heli datar lagi\"",
+            "85 wpm outside 130±25%"
+          ]
+        },
+        {
+          "seed": 1,
+          "wordRatio": 0.762,
+          "similarity": 0.967,
+          "wpm": 105,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.76): heard \"laut awan nutupin dia kopilot bantu narktuas heli datar lagi\"",
+            "word mismatch (ratio 0.76): heard \"laut awan nutupin dia kopilot bantu narktuas heli datar lagi\""
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Laut awan nutupin dia, kopilot bantu narktuas, heli datar lagi.",
+          "mismatches": [
+            {
+              "expected": "copilot",
+              "heard": "kopilot"
+            },
+            {
+              "expected": "narik",
+              "heard": null
+            },
+            {
+              "expected": "tuas",
+              "heard": "narktuas"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Laut awan nutupin dia. Kopilot bantu narktuas. Heli datar lagi.",
+          "rawMismatches": [
+            {
+              "expected": "copilot",
+              "heard": "kopilot"
+            },
+            {
+              "expected": "narik",
+              "heard": null
+            },
+            {
+              "expected": "tuas",
+              "heard": "narktuas"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.76): heard \"laut awan nutupin dia kopilot bantu narktuas heli datar lagi\""
+          ]
+        },
+        {
+          "seed": 2,
+          "wordRatio": 1,
+          "similarity": 1,
+          "wpm": 101,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.86): heard \"laut awan nutupin dia copilot bantu narituas heli datar lagi\""
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Laut awan nutupin dia. Copilot bantu narik tuas. Heli datar lagi.",
+          "mismatches": [],
+          "endTruncated": false,
+          "rawTranscript": "Laut awan nutupin dia. Copilot bantu narituas. Heli datar lagi.",
+          "rawMismatches": [
+            {
+              "expected": "narik",
+              "heard": null
+            },
+            {
+              "expected": "tuas",
+              "heard": "narituas"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.86): heard \"laut awan nutupin dia copilot bantu narituas heli datar lagi\""
+          ]
+        }
+      ]
+    },
+    {
+      "index": 18,
+      "tag": null,
+      "text": "Langit pelan-pelan cerah. Sabuk ketiga kosong. Nggak ada yang niru.",
+      "retries": 1,
+      "status": "verified",
+      "bestSimilarity": 1,
+      "bestWordRatio": 1,
+      "acceptedAttempt": 1,
+      "attempts": [
+        {
+          "seed": 0,
+          "wordRatio": 0.857,
+          "similarity": 0.968,
+          "wpm": 105,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.91): heard \"langit pelan pelan cerah sabuk ketiga kosong gak ada yang niru\"",
+            "word mismatch (ratio 0.86): heard \"langit pelan pelan cerah sabuk ketiga kosong gaada yang niru\""
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Langit pelan-pelan cerah, sabuk ketiga kosong, gaada yang niru.",
+          "mismatches": [
+            {
+              "expected": "nggak",
+              "heard": null
+            },
+            {
+              "expected": "ada",
+              "heard": "gaada"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Langit pelan-pelan cerah. Sabuk ketiga kosong. Gak ada yang niru.",
+          "rawMismatches": [
+            {
+              "expected": "nggak",
+              "heard": "gak"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.91): heard \"langit pelan pelan cerah sabuk ketiga kosong gak ada yang niru\""
+          ]
+        },
+        {
+          "seed": 1,
+          "wordRatio": 1,
+          "similarity": 1,
+          "wpm": 108,
+          "expectedWpm": 130,
+          "passed": true,
+          "reasons": [],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Langit pelan-pelan cerah. Sabuk ketiga kosong. Nggak ada yang niru.",
+          "mismatches": [],
+          "endTruncated": false,
+          "rawTranscript": "Langit pelan-pelan cerah. Sabuk ketiga kosong. Nggak ada yang niru.",
+          "rawMismatches": [],
+          "rawEndTruncated": false,
+          "rawReasons": []
+        }
+      ]
+    },
+    {
+      "index": 19,
+      "tag": null,
+      "text": "Heli mendarat mulus. Pintu geser masih kebuka setengah. Cuma angin.",
+      "retries": 2,
+      "status": "failed",
+      "bestSimilarity": 1,
+      "bestWordRatio": 1,
+      "acceptedAttempt": 0,
+      "attempts": [
+        {
+          "seed": 0,
+          "wordRatio": 1,
+          "similarity": 1,
+          "wpm": 85,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: 81 wpm outside 130±25%",
+            "85 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Heli mendarat mulus. Pintu geser masih kebuka setengah. Cuma angin.",
+          "mismatches": [],
+          "endTruncated": false,
+          "rawTranscript": "Heli mendarat mulus. Pintu geser masih kebuka setengah. Cuma angin.",
+          "rawMismatches": [],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "81 wpm outside 130±25%"
+          ]
+        },
+        {
+          "seed": 1,
+          "wordRatio": 1,
+          "similarity": 1,
+          "wpm": 95,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: 89 wpm outside 130±25%",
+            "95 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Heli mendarat mulus. Pintu geser masih kebuka setengah. Cuma angin.",
+          "mismatches": [],
+          "endTruncated": false,
+          "rawTranscript": "Heli mendarat mulus, pintu geser masih kebuka setengah. Cuma angin.",
+          "rawMismatches": [],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "89 wpm outside 130±25%"
+          ]
+        },
+        {
+          "seed": 2,
+          "wordRatio": 1,
+          "similarity": 1,
+          "wpm": 97,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: 94 wpm outside 130±25%",
+            "97 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Heli mendarat mulus. Pintu geser masih kebuka setengah. Cuma angin.",
+          "mismatches": [],
+          "endTruncated": false,
+          "rawTranscript": "Heli mendarat mulus, pintu geser masih kebuka setengah. Cuma angin.",
+          "rawMismatches": [],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "94 wpm outside 130±25%"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 20,
+      "tag": null,
+      "text": "Kamu berhasil bertahan hidup.",
+      "retries": 2,
+      "status": "failed",
+      "bestSimilarity": 1,
+      "bestWordRatio": 1,
+      "acceptedAttempt": 0,
+      "attempts": [
+        {
+          "seed": 0,
+          "wordRatio": 1,
+          "similarity": 1,
+          "wpm": 91,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: 80 wpm outside 130±25%",
+            "91 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Kamu berhasil bertahan hidup.",
+          "mismatches": [],
+          "endTruncated": false,
+          "rawTranscript": "Kamu berhasil bertahan hidup.",
+          "rawMismatches": [],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "80 wpm outside 130±25%"
+          ]
+        },
+        {
+          "seed": 1,
+          "wordRatio": 1,
+          "similarity": 1,
+          "wpm": 89,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: 81 wpm outside 130±25%",
+            "89 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Kamu berhasil bertahan hidup.",
+          "mismatches": [],
+          "endTruncated": false,
+          "rawTranscript": "Kamu berhasil bertahan hidup.",
+          "rawMismatches": [],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "81 wpm outside 130±25%"
+          ]
+        },
+        {
+          "seed": 2,
+          "wordRatio": 1,
+          "similarity": 1,
+          "wpm": 92,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: 86 wpm outside 130±25%",
+            "92 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Kamu berhasil bertahan hidup.",
+          "mismatches": [],
+          "endTruncated": false,
+          "rawTranscript": "Kamu berhasil bertahan hidup.",
+          "rawMismatches": [],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "86 wpm outside 130±25%"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "brief": {
+    "status": "pass",
+    "notes": "Showrunner brief and script completed for Scenario 04 ('Tangan Pilot Kemarin'): 256-word Bahasa Bayi narasi.txt, 24-panel single-frame plan, triple-branch-rewind engine, 154.0 s (4620 frame) timeline, Fair-Play Clue Ledger planted in P01-P05. The owner directed the Agent 02 audio production handoff on 2026-11-22; the brief text and narasi.txt are the accepted production basis. No separate brief review event is recorded."
+  },
+  "audio": {
+    "status": "pass",
+    "notes": "Owner APPROVED narration-prepared.mp3 on 2026-11-23 (pronunciation, pacing, and the Rewind 3 dread silence clean; no re-roll) after automatic narrator acceptance. Raw master from one ShortZ CLI invocation (gemini-cloud, gemini-3.8-flash-tts, voice_71a5a701-796e-421d-840e-0adc00b0816a, 165.935 s, 19 chunks); raw ASR verification exited 2 and was classified, not regenerated: zero true omissions/insertions, drivers are Whisper chunk-boundary end-truncation flags, the generic wpm gate (Investigator narrates ~95-116 wpm) and normalization pairs (copilot->kopilot, senter->center, kran->keran, jadiin->jadikan, bener->benar, deket->dekat). The 8 phonetic-suspect ASR pairs (beku->begu, alih->ali, petanya->pertanya, betulin->bertulin, statis->status, gunung->gunuh, arah->arh, napas->napa, lega->selega) were resolved by the owner's 2026-11-23 listening approval; no taboo-sounding tokens found. Mandatory pronunciation diff re-run on the prepared narration-timestamps.json (262 words): PASS, only additional omission is the intentional hook fallback drop 'itu'. Prepared stem narration-prepared.mp3 (153.500 s, speech end 152.000 s, 1.500 s tail, -16.2 LUFS, -0.5 dBTP) assembled on one continuous PCM sample timeline via prepare-audio.mjs at 1.0x speed: 29 dead-air gaps tightened to 0.30 s; hook fallback applied by edit (spoken hook 'Tangan di tuas bukan tanganmu.' ends 2.700 s, inside the 00:03.0 limit; captions must match); three branchRewind gaps enforced exactly: rewind 1 0.400 s at 43.440-43.840, rewind 2 0.400 s at 58.500-58.900, rewind 3 2.000 s at 73.300-75.300 = 0.400 s tape-snap + the episode's only 1.600 s true-zero dread silence 73.700-75.300; 'terjepit.'->'Ambruk.' beat protected for the copilot groan. 6,397 MP3 packets 100% strictly monotonic PTS and zero splice deviations via ffprobe. Exact measured anchors for Agent 04 flagged in assembly-handoff.md: locked frames 1380/1773/2172 vs measured drift (rewind 1 2.56 s early, rewind 2 0.60 s early, rewind 3 0.90 s late, speech end 152.000 vs provisional 152.5) to reconcile panel boundaries inside the locked 4620-frame cut; blacktail cue 152.650-153.700 sub-hit window, hard black 153.700-154.000. Voice-sfx delivered as separate assets with sources/rights in public/sfx/LICENSES.md: COPILOT line 'Gantian, bang?' (Gemini 3.8 Flash TTS Charon, ASR-verbatim take, 0.715 s, cue 24.900 s, yellow COPILOT caption) and restrained copilot groan (Charon 'Ugh!' take heard 'URGH', 0.745 s, cue 57.000 s; these two AI-voice clips still need listening-in-context in the mix - owner approval covers the narrator stem only), plus locally synthesized tape-snap-rewind.wav (0.400 s, -1.0 dBFS) reused x3 at 43.440/58.500/73.300. Remaining cue-sheet foley/beds and the final mix (-14 LUFS, <= -1.5 dBTP after AAC) are Agent 04 assembly scope and are NOT covered by this audio pass."
+  },
+  "images": {
+    "status": "pass",
+    "notes": "Owner explicitly directed one last attempt and approval of best available images even if failures remain, 2026-11-23. Owner-approved exception handoff: 24 exact-9:16 WebP plates plus P09 reaction and final jolt at public/assets/004-tangan-pilot-kemarin/owner-approved-exception/. Technical audit remains FAIL: P09 motion and arm/panel contact not depicted; reaction instrument lights inconsistent; P23 cloud gap remains after landing; P14 foot attribution and phone text small; P22 aircraft differs. Owner accepts these exceptions for Agent 04; see sources/prompts.md and panels-contact-owner-approved.jpg. Audio preserved; render and final QA pending."
+  },
+  "render": {
+    "status": "pending",
+    "notes": ""
+  },
+  "audit": {
+    "status": "pending",
+    "notes": ""
+  },
+  "publish": {
+    "status": "pending",
+    "notes": "No publishing requested or authorized."
+  }
+}

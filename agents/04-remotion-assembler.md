@@ -6,7 +6,7 @@ Deterministically assemble the approved script, audio and panel batch with Remot
 
 ## Required Inputs & Preconditions
 
-Read the episode brief, cue sheet, arc record, owner-accepted narration with timing/edit map, available cue record, approved panels/contact sheet and current pipeline state. Require `brief`, owner-accepted narration (`audio`) and `images` to be `pass`; do not treat the narration pass as evidence of listening or completed sound design. Follow installed Remotion guidance.
+Read the episode brief, cue sheet, arc record, owner-accepted narration with timing/edit map, available cue record, approved panels/contact sheet and current pipeline state. For `brief`, `audio` and `images`, require `handoffAllowed: true` on structured records or `status: "pass"` on older records. Carry each accepted exception into the assembly handoff and perform its `downstreamVerify` check when assigned. Leave the source stage's technical verdict intact. Follow installed Remotion guidance.
 
 ## Allowed Write Scope
 

@@ -1,0 +1,2200 @@
+{
+  "version": 1,
+  "voiceId": "voice_71a5a701-796e-421d-840e-0adc00b0816a",
+  "voiceName": "voice_71a5a701-796e-421d-840e-0adc00b0816a",
+  "provider": "gemini-cloud",
+  "model": "gemini-3.8-flash-tts",
+  "master": true,
+  "masterFilter": "highpass=f=85,equalizer=f=140:t=q:w=1.2:g=1,equalizer=f=450:t=q:w=1.5:g=-1,equalizer=f=3200:t=q:w=1.2:g=1,loudnorm=I=-14:LRA=6:TP=-1.5,aformat=sample_fmts=s16",
+  "asrModel": "small",
+  "generatedAt": "2026-11-22T16:13:32.620Z",
+  "passed": false,
+  "totalChunks": 19,
+  "verifiedChunks": 5,
+  "warningChunks": 0,
+  "failedChunks": 14,
+  "plannedDurationSec": 165.935,
+  "finalAlignment": {
+    "transcript": "tangan dituas itu, bukan tanganmu, isinya kamu sama co pilot doang, ada tangan kedua dituas, begu selama kamu pegang, lepas satu detik, dia langsung ambil ali, pilot kemarin jatuh di rute ini. Di pertanya, ada lingkaran tulisan tangan. Celah, tangan kananmu mulai kaku. Copilot nawarin gantian. Kamu tolak. Dia bertulin arah pake kaki. Lampu panel kedip-kedip. Radio cuma status, instingmu. Lepas tuas, pegang radio. Sekali lepas, dia narik keras ke arah gunung. Baling-baling ekor nyangkut pinus mati. Balik lagi, lampu panel mati total. Instingmu, nyambar center. Begitu tanganmu naik. Dia dorong tuas mentok kiri. Kopilot nangkep. Lengannya terjepit. Ambruk. Jarum bensin makin turun. Instingmu, buka keran cadangan. Satu detik. Satu detik cukup. Dia narik penuh. Dinding awan. Jadi dinding gunuh. Tamat. Setiap kali lepas, dia narik ke arah yang sama. Lingkaran celah. Dia nggak mau bunuh kamu. Dia mau nyampe. Jadikan arah itu arah pulang. Triknya, belok pake kaki. tangan tetep nempel di tuas. Pelan-pelan, derajat demi derajat, moncong heli mutar ke arah celah, tangan mau mulai gemeter. Copilot diam-diam perhatiin tangan kedua itu. Pas! Arh nariknya benar-benar nembus di tengah lingkaran. Sekarang bagian paling gila. Lepasin dua-duanya. Sengaja, biarin dia nyetir, dan dia nyetir halus banget. Nembus celah presisi, kayak orang pulang ke rumah sendiri. Keluar dari awan, tangan itu pelan-pelan minggir dari tuas. Terus lenyap, kamu ambil alih lagi, lampu landasan makin dekat. Copilot akhirnya napa selega. Roda nyentuh, mesin pelan-pelan turun. Didalam tuas balik natural sendiri, peta pilot kemarin kebuka, lingkaran celahnya ada centang pensil. Kayak dia bilang, selamat kamu berhasil sampai.",
+    "mismatches": [
+      {
+        "expected": "beku",
+        "heard": "begu"
+      },
+      {
+        "expected": "alih",
+        "heard": "ali"
+      },
+      {
+        "expected": "petanya",
+        "heard": "pertanya"
+      },
+      {
+        "expected": "betulin",
+        "heard": "bertulin"
+      },
+      {
+        "expected": "statis",
+        "heard": "status"
+      },
+      {
+        "expected": "senter",
+        "heard": "center"
+      },
+      {
+        "expected": "copilot",
+        "heard": "kopilot"
+      },
+      {
+        "expected": "kran",
+        "heard": "keran"
+      },
+      {
+        "expected": "gunung",
+        "heard": "gunuh"
+      },
+      {
+        "expected": "jadiin",
+        "heard": "jadikan"
+      },
+      {
+        "expected": null,
+        "heard": "tangan"
+      },
+      {
+        "expected": "tanganmu",
+        "heard": "mau"
+      },
+      {
+        "expected": "arah",
+        "heard": "arh"
+      },
+      {
+        "expected": "bener",
+        "heard": "benar"
+      },
+      {
+        "expected": "bener",
+        "heard": "benar"
+      },
+      {
+        "expected": "deket",
+        "heard": "dekat"
+      },
+      {
+        "expected": "napas",
+        "heard": "napa"
+      },
+      {
+        "expected": "lega",
+        "heard": "selega"
+      },
+      {
+        "expected": "netral",
+        "heard": "natural"
+      }
+    ],
+    "passed": false
+  },
+  "audioQuality": {
+    "integratedLufs": -16.3,
+    "loudnessRangeLu": 3.6,
+    "noiseFloorDbfs": -19.6,
+    "targets": {
+      "integratedLufs": -14,
+      "loudnessRangeLu": [
+        5,
+        7
+      ]
+    }
+  },
+  "chunks": [
+    {
+      "index": 0,
+      "tag": null,
+      "text": "Tangan di tuas itu bukan tanganmu. Isinya kamu sama copilot doang. Ada tangan kedua di tuas.",
+      "retries": 2,
+      "status": "failed",
+      "bestSimilarity": 0.983,
+      "bestWordRatio": 1,
+      "acceptedAttempt": 0,
+      "attempts": [
+        {
+          "seed": 0,
+          "wordRatio": 1,
+          "similarity": 0.983,
+          "wpm": 99,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: last word missing, truncated, or has invalid timestamps",
+            "raw: 95 wpm outside 130±25%",
+            "last word missing, truncated, or has invalid timestamps"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Tangan dituas itu, bukan tanganmu, isinya kamu sama co-pilot doang, ada tangan kedua dituas.",
+          "mismatches": [],
+          "endTruncated": true,
+          "rawTranscript": "Tangan dituas itu, bukan tanganmu, isinya kamu sama co-pilot doang, ada tangan kedua dituas.",
+          "rawMismatches": [],
+          "rawEndTruncated": true,
+          "rawReasons": [
+            "last word missing, truncated, or has invalid timestamps",
+            "95 wpm outside 130±25%"
+          ]
+        },
+        {
+          "seed": 1,
+          "wordRatio": 1,
+          "similarity": 0.983,
+          "wpm": 106,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: last word missing, truncated, or has invalid timestamps",
+            "last word missing, truncated, or has invalid timestamps"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "tangan dituas itu. Bukan tanganmu, isinya kamu sama co-pilot doang, ada tangan kedua dituas.",
+          "mismatches": [],
+          "endTruncated": true,
+          "rawTranscript": "tangan dituas itu, bukan tanganmu, isinya kamu sama co pilot doang, ada tangan kedua dituas.",
+          "rawMismatches": [],
+          "rawEndTruncated": true,
+          "rawReasons": [
+            "last word missing, truncated, or has invalid timestamps"
+          ]
+        },
+        {
+          "seed": 2,
+          "wordRatio": 0.929,
+          "similarity": 0.977,
+          "wpm": 108,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.93): heard \"tangan dituas itu bukan tanganmu isinya kamu sama kopilot doang ada tangan kedua\"",
+            "raw: last word missing, truncated, or has invalid timestamps",
+            "word mismatch (ratio 0.93): heard \"tangan dituas itu bukan tanganmu isinya kamu sama kopilot doang ada tangan kedua\"",
+            "last word missing, truncated, or has invalid timestamps"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Tangan dituas itu, bukan tanganmu. Isinya kamu sama kopilot doang. Ada tangan kedua dituas.",
+          "mismatches": [
+            {
+              "expected": "copilot",
+              "heard": "kopilot"
+            }
+          ],
+          "endTruncated": true,
+          "rawTranscript": "Tangan dituas itu bukan tanganmu. Isinya kamu sama kopilot doang. Ada tangan kedua dituas.",
+          "rawMismatches": [
+            {
+              "expected": "copilot",
+              "heard": "kopilot"
+            }
+          ],
+          "rawEndTruncated": true,
+          "rawReasons": [
+            "word mismatch (ratio 0.93): heard \"tangan dituas itu bukan tanganmu isinya kamu sama kopilot doang ada tangan kedua\"",
+            "last word missing, truncated, or has invalid timestamps"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "tag": null,
+      "text": "Beku selama kamu pegang. Lepas satu detik, dia langsung ambil alih. Pilot kemarin jatuh di rute ini.",
+      "retries": 2,
+      "status": "verified",
+      "bestSimilarity": 1,
+      "bestWordRatio": 1,
+      "acceptedAttempt": 2,
+      "attempts": [
+        {
+          "seed": 0,
+          "wordRatio": 0.941,
+          "similarity": 0.989,
+          "wpm": 118,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "word mismatch (ratio 0.94): heard \"begu selama kamu pegang lepas 1 detik dia langsung ambil alih pilot kemarin jatu\""
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Begu selama kamu pegang, lepas satu detik, dia langsung ambil alih. Pilot kemarin jatuh di rute ini.",
+          "mismatches": [
+            {
+              "expected": "beku",
+              "heard": "begu"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Beku selama kamu pegang, lepas satu detik, dia langsung ambil alih. Pilot kemarin jatuh di rute ini.",
+          "rawMismatches": [],
+          "rawEndTruncated": false,
+          "rawReasons": []
+        },
+        {
+          "seed": 1,
+          "wordRatio": 0.941,
+          "similarity": 0.989,
+          "wpm": 103,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.94): heard \"beku selama kamu pegang lepas 1 detik dia langsung ambil alih pilot kemarin jatu\"",
+            "word mismatch (ratio 0.94): heard \"beku selama kamu pegang lepas 1 detik dia langsung ambil alih pilot kemarin jatu\""
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Beku, selama kamu pegang, lepas satu detik, dia langsung ambil alih. Pilot kemarin jatuh di ruta ini.",
+          "mismatches": [
+            {
+              "expected": "rute",
+              "heard": "ruta"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Beku, selama kamu pegang, lepas satu detik, dia langsung ambil alih. Pilot kemarin jatuh di ruta ini.",
+          "rawMismatches": [
+            {
+              "expected": "rute",
+              "heard": "ruta"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.94): heard \"beku selama kamu pegang lepas 1 detik dia langsung ambil alih pilot kemarin jatu\""
+          ]
+        },
+        {
+          "seed": 2,
+          "wordRatio": 1,
+          "similarity": 1,
+          "wpm": 116,
+          "expectedWpm": 130,
+          "passed": true,
+          "reasons": [],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Beku selama kamu pegang, lepas satu detik, dia langsung ambil alih. Pilot kemarin jatuh di rute ini.",
+          "mismatches": [],
+          "endTruncated": false,
+          "rawTranscript": "Beku selama kamu pegang, lepas satu detik, dia langsung ambil alih. Pilot kemarin jatuh di rute ini.",
+          "rawMismatches": [],
+          "rawEndTruncated": false,
+          "rawReasons": []
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "tag": null,
+      "text": "Di petanya ada lingkaran tulisan tangan: CELAH. Tangan kananmu mulai kaku. Copilot nawarin gantian, kamu tolak.",
+      "retries": 2,
+      "status": "failed",
+      "bestSimilarity": 0.995,
+      "bestWordRatio": 0.938,
+      "acceptedAttempt": 2,
+      "attempts": [
+        {
+          "seed": 0,
+          "wordRatio": 0.813,
+          "similarity": 0.972,
+          "wpm": 77,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.81): heard \"di petanya ada lingkaran tulisan tangan celah tangan kanan mumulek kaku kopilot \"",
+            "raw: 76 wpm outside 130±25%",
+            "word mismatch (ratio 0.81): heard \"di petanya ada lingkaran tulisan tangan celah tangan kanan memulai kaku kopilot \"",
+            "77 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Di petanya, ada lingkaran tulisan tangan. Celah. Tangan kanan memulai kaku. Kopilot nawarin gantian. Kamu tolak.",
+          "mismatches": [
+            {
+              "expected": "kananmu",
+              "heard": "kanan"
+            },
+            {
+              "expected": "mulai",
+              "heard": "memulai"
+            },
+            {
+              "expected": "copilot",
+              "heard": "kopilot"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Di petanya, ada lingkaran tulisan tangan. Celah. Tangan kanan mumulek kaku. Kopilot nawarin gantian. Kamu tolak.",
+          "rawMismatches": [
+            {
+              "expected": "kananmu",
+              "heard": "kanan"
+            },
+            {
+              "expected": "mulai",
+              "heard": "mumulek"
+            },
+            {
+              "expected": "copilot",
+              "heard": "kopilot"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.81): heard \"di petanya ada lingkaran tulisan tangan celah tangan kanan mumulek kaku kopilot \"",
+            "76 wpm outside 130±25%"
+          ]
+        },
+        {
+          "seed": 1,
+          "wordRatio": 0.788,
+          "similarity": 0.967,
+          "wpm": 99,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.79): heard \"di petanya ada lingkaran tulisan tangan celah tangan kanan memulai kaku kopi lot\"",
+            "raw: 96 wpm outside 130±25%",
+            "word mismatch (ratio 0.79): heard \"di petanya ada lingkaran tulisan tangan celah tangan kanan memulai kaku kopi lot\""
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Di petanya, ada lingkaran tulisan tangan. Celah, tangan kanan memulai kaku, kopi lot nawarin gantian, kamu tolak.",
+          "mismatches": [
+            {
+              "expected": "kananmu",
+              "heard": "kanan"
+            },
+            {
+              "expected": "mulai",
+              "heard": "memulai"
+            },
+            {
+              "expected": null,
+              "heard": "kopi"
+            },
+            {
+              "expected": "copilot",
+              "heard": "lot"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Di petanya ada lingkaran tulisan tangan. Celah, tangan kanan memulai kaku, kopi lot nawarin gantian, kamu tolak.",
+          "rawMismatches": [
+            {
+              "expected": "kananmu",
+              "heard": "kanan"
+            },
+            {
+              "expected": "mulai",
+              "heard": "memulai"
+            },
+            {
+              "expected": null,
+              "heard": "kopi"
+            },
+            {
+              "expected": "copilot",
+              "heard": "lot"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.79): heard \"di petanya ada lingkaran tulisan tangan celah tangan kanan memulai kaku kopi lot\"",
+            "96 wpm outside 130±25%"
+          ]
+        },
+        {
+          "seed": 2,
+          "wordRatio": 0.938,
+          "similarity": 0.995,
+          "wpm": 83,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.88): heard \"di pertanya ada lingkaran tulisan tangan jelah tangan kananmu mulai kaku copilot\"",
+            "raw: 81 wpm outside 130±25%",
+            "word mismatch (ratio 0.94): heard \"di petanya ada lingkaran tulisan tangan cela tangan kananmu mulai kaku copilot n\"",
+            "83 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Di petanya, ada lingkaran tulisan tangan. Cela, tangan kananmu mulai kaku. Copilot nawarin gantian, kamu tolak.",
+          "mismatches": [
+            {
+              "expected": "celah",
+              "heard": "cela"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Di pertanya, ada lingkaran tulisan tangan. Jelah, tangan kananmu mulai kaku. Copilot nawarin gantian, kamu tolak.",
+          "rawMismatches": [
+            {
+              "expected": "petanya",
+              "heard": "pertanya"
+            },
+            {
+              "expected": "celah",
+              "heard": "jelah"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.88): heard \"di pertanya ada lingkaran tulisan tangan jelah tangan kananmu mulai kaku copilot\"",
+            "81 wpm outside 130±25%"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "tag": null,
+      "text": "Dia betulin arah pake kaki. Lampu panel kedip-kedip. Radio cuma statis.",
+      "retries": 2,
+      "status": "failed",
+      "bestSimilarity": 0.985,
+      "bestWordRatio": 0.917,
+      "acceptedAttempt": 2,
+      "attempts": [
+        {
+          "seed": 0,
+          "wordRatio": 0.833,
+          "similarity": 0.978,
+          "wpm": 118,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.83): heard \"dia bertulin arah pake kaki lampu panel kedip kedip radio cuma status\"",
+            "raw: last word missing, truncated, or has invalid timestamps",
+            "word mismatch (ratio 0.83): heard \"dia bertulin arah pake kaki lampu panel kedip kedip radio cuma statif\"",
+            "last word missing, truncated, or has invalid timestamps"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Dia bertulin arah pake kaki, lampu panel kedip-kedip, radio cuma statif.",
+          "mismatches": [
+            {
+              "expected": "betulin",
+              "heard": "bertulin"
+            },
+            {
+              "expected": "statis",
+              "heard": "statif"
+            }
+          ],
+          "endTruncated": true,
+          "rawTranscript": "Dia bertulin arah pake kaki, lampu panel kedip-kedip, radio cuma status.",
+          "rawMismatches": [
+            {
+              "expected": "betulin",
+              "heard": "bertulin"
+            },
+            {
+              "expected": "statis",
+              "heard": "status"
+            }
+          ],
+          "rawEndTruncated": true,
+          "rawReasons": [
+            "word mismatch (ratio 0.83): heard \"dia bertulin arah pake kaki lampu panel kedip kedip radio cuma status\"",
+            "last word missing, truncated, or has invalid timestamps"
+          ]
+        },
+        {
+          "seed": 1,
+          "wordRatio": 0.917,
+          "similarity": 0.978,
+          "wpm": 108,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.83): heard \"dia betulin arah pakai kaki lampu panel kedip kedip radio cuma status\"",
+            "raw: last word missing, truncated, or has invalid timestamps",
+            "word mismatch (ratio 0.92): heard \"dia betulin arah pakai kaki lampu panel kedip kedip radio cuma statis\""
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "dia betulin arah pakai kaki, lampu panel kedip-kedip, radio cuma statis.",
+          "mismatches": [
+            {
+              "expected": "pake",
+              "heard": "pakai"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "dia betulin arah pakai kaki, lampu panel kedip-kedip, radio cuma status.",
+          "rawMismatches": [
+            {
+              "expected": "pake",
+              "heard": "pakai"
+            },
+            {
+              "expected": "statis",
+              "heard": "status"
+            }
+          ],
+          "rawEndTruncated": true,
+          "rawReasons": [
+            "word mismatch (ratio 0.83): heard \"dia betulin arah pakai kaki lampu panel kedip kedip radio cuma status\"",
+            "last word missing, truncated, or has invalid timestamps"
+          ]
+        },
+        {
+          "seed": 2,
+          "wordRatio": 0.917,
+          "similarity": 0.985,
+          "wpm": 98,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.92): heard \"dia betulin arah pake kaki lampu panel kedip kedip radio cuma status\"",
+            "raw: last word missing, truncated, or has invalid timestamps",
+            "raw: 92 wpm outside 130±25%",
+            "word mismatch (ratio 0.92): heard \"dia betulin arah pake kaki lampu panel kedip kedip radio cuma status\"",
+            "last word missing, truncated, or has invalid timestamps"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "dia betulin arah pake kaki, lampu panel kedip-kedip, radio cuma status.",
+          "mismatches": [
+            {
+              "expected": "statis",
+              "heard": "status"
+            }
+          ],
+          "endTruncated": true,
+          "rawTranscript": "dia betulin arah pake kaki, lampu panel kedip-kedip, radio cuma status.",
+          "rawMismatches": [
+            {
+              "expected": "statis",
+              "heard": "status"
+            }
+          ],
+          "rawEndTruncated": true,
+          "rawReasons": [
+            "word mismatch (ratio 0.92): heard \"dia betulin arah pake kaki lampu panel kedip kedip radio cuma status\"",
+            "last word missing, truncated, or has invalid timestamps",
+            "92 wpm outside 130±25%"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "tag": null,
+      "text": "Instingmu: lepas tuas, pegang radio. Sekali lepas, dia narik keras ke arah gunung. Baling-baling ekor nyangkut pinus mati.",
+      "retries": 0,
+      "status": "verified",
+      "bestSimilarity": 1,
+      "bestWordRatio": 1,
+      "acceptedAttempt": 0,
+      "attempts": [
+        {
+          "seed": 0,
+          "wordRatio": 1,
+          "similarity": 1,
+          "wpm": 102,
+          "expectedWpm": 130,
+          "passed": true,
+          "reasons": [],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Instingmu, lepas tuas, pegang radio. Sekali lepas, dia narik keras ke arah gunung. Baling-baling ekor nyangkut pinus mati.",
+          "mismatches": [],
+          "endTruncated": false,
+          "rawTranscript": "Instingmu, lepas tuas, pegang radio. Sekali lepas, dia narik keras ke arah gunung. Baling-baling ekor nyangkut pinus mati.",
+          "rawMismatches": [],
+          "rawEndTruncated": false,
+          "rawReasons": []
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "tag": null,
+      "text": "Balik lagi. Lampu panel mati total. Instingmu: nyambar senter.",
+      "retries": 2,
+      "status": "failed",
+      "bestSimilarity": 0.983,
+      "bestWordRatio": 0.889,
+      "acceptedAttempt": 2,
+      "attempts": [
+        {
+          "seed": 0,
+          "wordRatio": 0.778,
+          "similarity": 0.965,
+          "wpm": 92,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.78): heard \"balik lagi lampu panel mati total instimu nyambar center\"",
+            "raw: last word missing, truncated, or has invalid timestamps",
+            "raw: 85 wpm outside 130±25%",
+            "word mismatch (ratio 0.78): heard \"balik lagi lampu panel mati total instimu nyambar center\"",
+            "last word missing, truncated, or has invalid timestamps",
+            "92 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Balik lagi, lampu panel mati total, instimu nyambar center.",
+          "mismatches": [
+            {
+              "expected": "instingmu",
+              "heard": "instimu"
+            },
+            {
+              "expected": "senter",
+              "heard": "center"
+            }
+          ],
+          "endTruncated": true,
+          "rawTranscript": "Balik lagi. Lampu panel mati total. Instimu Nyambar Center",
+          "rawMismatches": [
+            {
+              "expected": "instingmu",
+              "heard": "instimu"
+            },
+            {
+              "expected": "senter",
+              "heard": "center"
+            }
+          ],
+          "rawEndTruncated": true,
+          "rawReasons": [
+            "word mismatch (ratio 0.78): heard \"balik lagi lampu panel mati total instimu nyambar center\"",
+            "last word missing, truncated, or has invalid timestamps",
+            "85 wpm outside 130±25%"
+          ]
+        },
+        {
+          "seed": 1,
+          "wordRatio": 0.778,
+          "similarity": 0.966,
+          "wpm": 83,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.78): heard \"balik lagi lampu panel mati total instingmu nyampar center\"",
+            "raw: last word missing, truncated, or has invalid timestamps",
+            "raw: 78 wpm outside 130±25%",
+            "word mismatch (ratio 0.78): heard \"balik lagi lampu panel mati total instingmu nyampar center\"",
+            "last word missing, truncated, or has invalid timestamps",
+            "83 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Balik lagi, lampu panel mati total, instingmu nyampar center.",
+          "mismatches": [
+            {
+              "expected": "nyambar",
+              "heard": "nyampar"
+            },
+            {
+              "expected": "senter",
+              "heard": "center"
+            }
+          ],
+          "endTruncated": true,
+          "rawTranscript": "Balik lagi. Lampu panel mati total. Instingmu, nyampar center.",
+          "rawMismatches": [
+            {
+              "expected": "nyambar",
+              "heard": "nyampar"
+            },
+            {
+              "expected": "senter",
+              "heard": "center"
+            }
+          ],
+          "rawEndTruncated": true,
+          "rawReasons": [
+            "word mismatch (ratio 0.78): heard \"balik lagi lampu panel mati total instingmu nyampar center\"",
+            "last word missing, truncated, or has invalid timestamps",
+            "78 wpm outside 130±25%"
+          ]
+        },
+        {
+          "seed": 2,
+          "wordRatio": 0.889,
+          "similarity": 0.983,
+          "wpm": 78,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.89): heard \"balik lagi lampu panel mati total instingmu nyambar center\"",
+            "raw: last word missing, truncated, or has invalid timestamps",
+            "raw: 73 wpm outside 130±25%",
+            "word mismatch (ratio 0.89): heard \"balik lagi lampu panel mati total instingmu nyambar center\"",
+            "last word missing, truncated, or has invalid timestamps",
+            "78 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Balik lagi, lampu panel mati total. Instingmu, Nyambar Center.",
+          "mismatches": [
+            {
+              "expected": "senter",
+              "heard": "center"
+            }
+          ],
+          "endTruncated": true,
+          "rawTranscript": "Balik lagi, lampu panel mati total. Instingmu, Nyambar Center.",
+          "rawMismatches": [
+            {
+              "expected": "senter",
+              "heard": "center"
+            }
+          ],
+          "rawEndTruncated": true,
+          "rawReasons": [
+            "word mismatch (ratio 0.89): heard \"balik lagi lampu panel mati total instingmu nyambar center\"",
+            "last word missing, truncated, or has invalid timestamps",
+            "73 wpm outside 130±25%"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "tag": null,
+      "text": "Begitu tanganmu naik, dia dorong tuas mentok kiri. Copilot nangkep. Lengannya terjepit, ambruk.",
+      "retries": 2,
+      "status": "failed",
+      "bestSimilarity": 0.978,
+      "bestWordRatio": 0.769,
+      "acceptedAttempt": 1,
+      "attempts": [
+        {
+          "seed": 0,
+          "wordRatio": 0.615,
+          "similarity": 0.961,
+          "wpm": 93,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.62): heard \"begitu tangan munaik dia dorong tuas mentok kiri kopilot nangkep lengannya terje\"",
+            "raw: last word missing, truncated, or has invalid timestamps",
+            "raw: 88 wpm outside 130±25%",
+            "word mismatch (ratio 0.62): heard \"begitu tangan munaik dia dorong tuas mentok kiri kopilot nangkep lengannya terje\"",
+            "last word missing, truncated, or has invalid timestamps",
+            "93 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Begitu tangan munaik, dia dorong tuas mentok kiri. Kopilot nangkep. Lengannya terjebit. Amruk.",
+          "mismatches": [
+            {
+              "expected": "tanganmu",
+              "heard": "tangan"
+            },
+            {
+              "expected": "naik",
+              "heard": "munaik"
+            },
+            {
+              "expected": "copilot",
+              "heard": "kopilot"
+            },
+            {
+              "expected": "terjepit",
+              "heard": "terjebit"
+            },
+            {
+              "expected": "ambruk",
+              "heard": "amruk"
+            }
+          ],
+          "endTruncated": true,
+          "rawTranscript": "Begitu tangan munaik, dia dorong tuas mentok kiri. Kopilot nangkep. Lengannya terjebit. Amruk.",
+          "rawMismatches": [
+            {
+              "expected": "tanganmu",
+              "heard": "tangan"
+            },
+            {
+              "expected": "naik",
+              "heard": "munaik"
+            },
+            {
+              "expected": "copilot",
+              "heard": "kopilot"
+            },
+            {
+              "expected": "terjepit",
+              "heard": "terjebit"
+            },
+            {
+              "expected": "ambruk",
+              "heard": "amruk"
+            }
+          ],
+          "rawEndTruncated": true,
+          "rawReasons": [
+            "word mismatch (ratio 0.62): heard \"begitu tangan munaik dia dorong tuas mentok kiri kopilot nangkep lengannya terje\"",
+            "last word missing, truncated, or has invalid timestamps",
+            "88 wpm outside 130±25%"
+          ]
+        },
+        {
+          "seed": 1,
+          "wordRatio": 0.769,
+          "similarity": 0.978,
+          "wpm": 94,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.77): heard \"begitu tangan munaik dia dorong tuas mentok kiri kopilot nangkep lengannya terje\"",
+            "raw: 89 wpm outside 130±25%",
+            "word mismatch (ratio 0.77): heard \"begitu tangan munaik dia dorong tuas mentok kiri kopilot nangkep lengannya terje\"",
+            "94 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Begitu tangan munaik. Dia dorong tuas mentok kiri. Kopilot nangkep. Lengannya terjepit. Ambruk.",
+          "mismatches": [
+            {
+              "expected": "tanganmu",
+              "heard": "tangan"
+            },
+            {
+              "expected": "naik",
+              "heard": "munaik"
+            },
+            {
+              "expected": "copilot",
+              "heard": "kopilot"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Begitu tangan munaik, dia dorong tuas mentok kiri, kopilot nangkep, lengannya terjepit, ambruk.",
+          "rawMismatches": [
+            {
+              "expected": "tanganmu",
+              "heard": "tangan"
+            },
+            {
+              "expected": "naik",
+              "heard": "munaik"
+            },
+            {
+              "expected": "copilot",
+              "heard": "kopilot"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.77): heard \"begitu tangan munaik dia dorong tuas mentok kiri kopilot nangkep lengannya terje\"",
+            "89 wpm outside 130±25%"
+          ]
+        },
+        {
+          "seed": 2,
+          "wordRatio": 0.692,
+          "similarity": 0.961,
+          "wpm": 85,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.69): heard \"begitu tangan munaik dia dorong tuas mentok kiri kopilot nangkep lengannya terje\"",
+            "raw: last word missing, truncated, or has invalid timestamps",
+            "raw: 82 wpm outside 130±25%",
+            "word mismatch (ratio 0.69): heard \"begitu tangan munaik dia dorong tuas mentok kiri kopilot nangkep lengannya terje\"",
+            "last word missing, truncated, or has invalid timestamps",
+            "85 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Begitu tangan munaik, dia dorong tuas mentok kiri. Kopilot nangkep. Lengannya terjepit. Amrub.",
+          "mismatches": [
+            {
+              "expected": "tanganmu",
+              "heard": "tangan"
+            },
+            {
+              "expected": "naik",
+              "heard": "munaik"
+            },
+            {
+              "expected": "copilot",
+              "heard": "kopilot"
+            },
+            {
+              "expected": "ambruk",
+              "heard": "amrub"
+            }
+          ],
+          "endTruncated": true,
+          "rawTranscript": "Begitu tangan munaik, dia dorong tuas mentok kiri. Kopilot nangkep. Lengannya terjepit. Amrub.",
+          "rawMismatches": [
+            {
+              "expected": "tanganmu",
+              "heard": "tangan"
+            },
+            {
+              "expected": "naik",
+              "heard": "munaik"
+            },
+            {
+              "expected": "copilot",
+              "heard": "kopilot"
+            },
+            {
+              "expected": "ambruk",
+              "heard": "amrub"
+            }
+          ],
+          "rawEndTruncated": true,
+          "rawReasons": [
+            "word mismatch (ratio 0.69): heard \"begitu tangan munaik dia dorong tuas mentok kiri kopilot nangkep lengannya terje\"",
+            "last word missing, truncated, or has invalid timestamps",
+            "82 wpm outside 130±25%"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "tag": null,
+      "text": "Jarum bensin makin turun. Instingmu: buka kran cadangan. Satu detik.",
+      "retries": 2,
+      "status": "failed",
+      "bestSimilarity": 0.992,
+      "bestWordRatio": 0.9,
+      "acceptedAttempt": 0,
+      "attempts": [
+        {
+          "seed": 0,
+          "wordRatio": 0.9,
+          "similarity": 0.992,
+          "wpm": 77,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.90): heard \"jarum bensin makin turun instingmu buka keran cadangan 1 detik\"",
+            "raw: 75 wpm outside 130±25%",
+            "word mismatch (ratio 0.90): heard \"jarum bensin makin turun instingmu buka keran cadangan 1 detik\"",
+            "77 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Jarum bensin makin turun. Instingmu buka keran cadangan. Satu detik.",
+          "mismatches": [
+            {
+              "expected": "kran",
+              "heard": "keran"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Jarum bensin makin turun. Instingmu buka keran cadangan. Satu detik.",
+          "rawMismatches": [
+            {
+              "expected": "kran",
+              "heard": "keran"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.90): heard \"jarum bensin makin turun instingmu buka keran cadangan 1 detik\"",
+            "75 wpm outside 130±25%"
+          ]
+        },
+        {
+          "seed": 1,
+          "wordRatio": 0.737,
+          "similarity": 0.967,
+          "wpm": 84,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.74): heard \"jarum bensin makin turun instimu buka kerancadangan 1 detik\"",
+            "raw: 79 wpm outside 130±25%",
+            "word mismatch (ratio 0.74): heard \"jarum bensin makin turun instimu buka kerancadangan 1 detik\"",
+            "84 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Jarum bensin makin turun. Instimu buka kerancadangan. Satu detik.",
+          "mismatches": [
+            {
+              "expected": "instingmu",
+              "heard": "instimu"
+            },
+            {
+              "expected": "kran",
+              "heard": null
+            },
+            {
+              "expected": "cadangan",
+              "heard": "kerancadangan"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Jarum bensin makin turun. Instimu, buka kerancadangan. Satu detik.",
+          "rawMismatches": [
+            {
+              "expected": "instingmu",
+              "heard": "instimu"
+            },
+            {
+              "expected": "kran",
+              "heard": null
+            },
+            {
+              "expected": "cadangan",
+              "heard": "kerancadangan"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.74): heard \"jarum bensin makin turun instimu buka kerancadangan 1 detik\"",
+            "79 wpm outside 130±25%"
+          ]
+        },
+        {
+          "seed": 2,
+          "wordRatio": 0.842,
+          "similarity": 0.984,
+          "wpm": 83,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.84): heard \"jarum bensin makin turun instingmu buka kerancadangan 1 detik\"",
+            "raw: 81 wpm outside 130±25%",
+            "word mismatch (ratio 0.84): heard \"jarum bensin makin turun instingmu buka kerancadangan 1 detik\"",
+            "83 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Jarum bensin makin turun. Instingmu, buka kerancadangan. Satu detik.",
+          "mismatches": [
+            {
+              "expected": "kran",
+              "heard": null
+            },
+            {
+              "expected": "cadangan",
+              "heard": "kerancadangan"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Jarum bensin makin turun. Instingmu, buka kerancadangan. Satu detik.",
+          "rawMismatches": [
+            {
+              "expected": "kran",
+              "heard": null
+            },
+            {
+              "expected": "cadangan",
+              "heard": "kerancadangan"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.84): heard \"jarum bensin makin turun instingmu buka kerancadangan 1 detik\"",
+            "81 wpm outside 130±25%"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "tag": null,
+      "text": "Satu detik cukup. Dia narik penuh. Dinding awan jadi dinding gunung.",
+      "retries": 0,
+      "status": "verified",
+      "bestSimilarity": 1,
+      "bestWordRatio": 1,
+      "acceptedAttempt": 0,
+      "attempts": [
+        {
+          "seed": 0,
+          "wordRatio": 1,
+          "similarity": 1,
+          "wpm": 103,
+          "expectedWpm": 130,
+          "passed": true,
+          "reasons": [],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Satu detik cukup. Dia narik penuh. Dinding awan. Jadi dinding gunung.",
+          "mismatches": [],
+          "endTruncated": false,
+          "rawTranscript": "Satu detik cukup. Dia narik penuh. Dinding awan. Jadi dinding gunung.",
+          "rawMismatches": [],
+          "rawEndTruncated": false,
+          "rawReasons": []
+        }
+      ]
+    },
+    {
+      "index": 9,
+      "tag": null,
+      "text": "Tamat. Setiap kali lepas, dia narik ke arah yang sama: lingkaran CELAH. Dia nggak mau bunuh kamu.",
+      "retries": 0,
+      "status": "verified",
+      "bestSimilarity": 1,
+      "bestWordRatio": 1,
+      "acceptedAttempt": 0,
+      "attempts": [
+        {
+          "seed": 0,
+          "wordRatio": 1,
+          "similarity": 1,
+          "wpm": 105,
+          "expectedWpm": 130,
+          "passed": true,
+          "reasons": [],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Tamat, setiap kali lepas, dia narik ke arah yang sama. Lingkaran celah, dia nggak mau bunuh kamu.",
+          "mismatches": [],
+          "endTruncated": false,
+          "rawTranscript": "Tamat. Setiap kali lepas, dia narik ke arah yang sama. Lingkaran celah. Dia nggak mau bunuh kamu.",
+          "rawMismatches": [],
+          "rawEndTruncated": false,
+          "rawReasons": []
+        }
+      ]
+    },
+    {
+      "index": 10,
+      "tag": null,
+      "text": "Dia mau nyampe. Jadiin arah itu arah pulang. Triknya: belok pake kaki.",
+      "retries": 2,
+      "status": "failed",
+      "bestSimilarity": 0.977,
+      "bestWordRatio": 0.917,
+      "acceptedAttempt": 0,
+      "attempts": [
+        {
+          "seed": 0,
+          "wordRatio": 0.917,
+          "similarity": 0.977,
+          "wpm": 103,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.92): heard \"dia mau nyampe jadikan arah itu arah pulang triknya belok pake kaki\"",
+            "word mismatch (ratio 0.92): heard \"dia mau nyampe jadikan arah itu arah pulang triknya belok pake kaki\""
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Dia mau nyampe. Jadikan arah itu arah pulang. Triknya, Belok pake kaki.",
+          "mismatches": [
+            {
+              "expected": "jadiin",
+              "heard": "jadikan"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Dia mau nyampe. Jadikan arah itu arah pulang. Triknya, Belok pake kaki.",
+          "rawMismatches": [
+            {
+              "expected": "jadiin",
+              "heard": "jadikan"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.92): heard \"dia mau nyampe jadikan arah itu arah pulang triknya belok pake kaki\""
+          ]
+        },
+        {
+          "seed": 1,
+          "wordRatio": 0.833,
+          "similarity": 0.955,
+          "wpm": 100,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.83): heard \"dia mau nyampai jadikan arah itu arah pulang triknya belok pake kaki\"",
+            "raw: 95 wpm outside 130±25%",
+            "word mismatch (ratio 0.83): heard \"dia mau nyampai jadikan arah itu arah pulang triknya belok pake kaki\""
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Dia mau nyampai. Jadikan arah itu arah pulang. Triknya, Belok pake kaki.",
+          "mismatches": [
+            {
+              "expected": "nyampe",
+              "heard": "nyampai"
+            },
+            {
+              "expected": "jadiin",
+              "heard": "jadikan"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Dia mau nyampai. Jadikan arah itu arah pulang. Triknya, Belok pake kaki.",
+          "rawMismatches": [
+            {
+              "expected": "nyampe",
+              "heard": "nyampai"
+            },
+            {
+              "expected": "jadiin",
+              "heard": "jadikan"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.83): heard \"dia mau nyampai jadikan arah itu arah pulang triknya belok pake kaki\"",
+            "95 wpm outside 130±25%"
+          ]
+        },
+        {
+          "seed": 2,
+          "wordRatio": 0.833,
+          "similarity": 0.955,
+          "wpm": 102,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.83): heard \"dia mau nyampai jadikan arah itu arah pulang triknya belok pake kaki\"",
+            "raw: 97 wpm outside 130±25%",
+            "word mismatch (ratio 0.83): heard \"dia mau nyampai jadikan arah itu arah pulang triknya belok pake kaki\""
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "dia mau nyampai. Jadikan arah itu arah pulang. Triknya, belok pake kaki.",
+          "mismatches": [
+            {
+              "expected": "nyampe",
+              "heard": "nyampai"
+            },
+            {
+              "expected": "jadiin",
+              "heard": "jadikan"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "dia mau nyampai. Jadikan arah itu arah pulang. Triknya, belok pake kaki.",
+          "rawMismatches": [
+            {
+              "expected": "nyampe",
+              "heard": "nyampai"
+            },
+            {
+              "expected": "jadiin",
+              "heard": "jadikan"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.83): heard \"dia mau nyampai jadikan arah itu arah pulang triknya belok pake kaki\"",
+            "97 wpm outside 130±25%"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 11,
+      "tag": null,
+      "text": "Tangan tetep nempel di tuas. Pelan-pelan, derajat demi derajat, moncong heli mutar ke arah celah. Tanganmu mulai gemeter.",
+      "retries": 2,
+      "status": "failed",
+      "bestSimilarity": 0.983,
+      "bestWordRatio": 0.872,
+      "acceptedAttempt": 1,
+      "attempts": [
+        {
+          "seed": 0,
+          "wordRatio": 0.865,
+          "similarity": 0.974,
+          "wpm": 103,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.86): heard \"tangan tetap nempel dituas pelan pelan derajat demi derajat moncong heli mutar k\"",
+            "raw: last word missing, truncated, or has invalid timestamps",
+            "word mismatch (ratio 0.86): heard \"tangan tetap nempel dituas pelan pelan derajat demi derajat moncong heli mutar k\"",
+            "last word missing, truncated, or has invalid timestamps"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Tangan tetap nempel dituas. Pelan pelan, derajat demi derajat. Moncong heli mutar ke arah celah. Tanganmu mulai ke meter.",
+          "mismatches": [
+            {
+              "expected": "tetep",
+              "heard": "tetap"
+            },
+            {
+              "expected": null,
+              "heard": "ke"
+            },
+            {
+              "expected": "gemeter",
+              "heard": "meter"
+            }
+          ],
+          "endTruncated": true,
+          "rawTranscript": "Tangan tetap nempel dituas. Pelan pelan, derajat demi derajat. Moncong heli mutar ke arah celah. Tanganmu mulai ke meter.",
+          "rawMismatches": [
+            {
+              "expected": "tetep",
+              "heard": "tetap"
+            },
+            {
+              "expected": null,
+              "heard": "ke"
+            },
+            {
+              "expected": "gemeter",
+              "heard": "meter"
+            }
+          ],
+          "rawEndTruncated": true,
+          "rawReasons": [
+            "word mismatch (ratio 0.86): heard \"tangan tetap nempel dituas pelan pelan derajat demi derajat moncong heli mutar k\"",
+            "last word missing, truncated, or has invalid timestamps"
+          ]
+        },
+        {
+          "seed": 1,
+          "wordRatio": 0.872,
+          "similarity": 0.983,
+          "wpm": 111,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.92): heard \"tangan tetep nempel di tuas pelan pelan derajat demi derajat moncong heli mutar \"",
+            "word mismatch (ratio 0.87): heard \"tangan tetep nempel di tuas pelan pelan derajat demi derajat moncong heli mutar \"",
+            "last word missing, truncated, or has invalid timestamps"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "tangan tetep nempel di tuas, pelan-pelan, derajat demi derajat, moncong heli mutar ke arah celah, tangan mau mulai gemetar.",
+          "mismatches": [
+            {
+              "expected": null,
+              "heard": "tangan"
+            },
+            {
+              "expected": "tanganmu",
+              "heard": "mau"
+            },
+            {
+              "expected": "gemeter",
+              "heard": "gemetar"
+            }
+          ],
+          "endTruncated": true,
+          "rawTranscript": "tangan tetep nempel di tuas, pelan-pelan, derajat demi derajat, moncong heli mutar ke arah celah, tangan mau mulai gemeter.",
+          "rawMismatches": [
+            {
+              "expected": null,
+              "heard": "tangan"
+            },
+            {
+              "expected": "tanganmu",
+              "heard": "mau"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.92): heard \"tangan tetep nempel di tuas pelan pelan derajat demi derajat moncong heli mutar \""
+          ]
+        },
+        {
+          "seed": 2,
+          "wordRatio": 0.865,
+          "similarity": 0.979,
+          "wpm": 111,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.94): heard \"tangan tetap nempel dituas pelan pelan derajat demi derajat moncong heli mutar k\"",
+            "word mismatch (ratio 0.86): heard \"tangan tetap nempel dituas pelan pelan derajat demi derajat moncong heli mutar k\""
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Tangan tetap nempel dituas, pelan-pelan, derajat demi derajat, moncong heli mutar ke arah celah, tangan mau mulai gemeter.",
+          "mismatches": [
+            {
+              "expected": "tetep",
+              "heard": "tetap"
+            },
+            {
+              "expected": null,
+              "heard": "tangan"
+            },
+            {
+              "expected": "tanganmu",
+              "heard": "mau"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Tangan tetap nempel dituas, pelan-pelan, derajat demi derajat, moncong heli mutar ke arah celah, tanganmu mulai gemeter.",
+          "rawMismatches": [
+            {
+              "expected": "tetep",
+              "heard": "tetap"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.94): heard \"tangan tetap nempel dituas pelan pelan derajat demi derajat moncong heli mutar k\""
+          ]
+        }
+      ]
+    },
+    {
+      "index": 12,
+      "tag": null,
+      "text": "Copilot diam-diam perhatiin tangan kedua itu. Pas. Arah nariknya bener-bener nembus di tengah lingkaran.",
+      "retries": 2,
+      "status": "failed",
+      "bestSimilarity": 0.98,
+      "bestWordRatio": 0.875,
+      "acceptedAttempt": 1,
+      "attempts": [
+        {
+          "seed": 0,
+          "wordRatio": 0.813,
+          "similarity": 0.97,
+          "wpm": 103,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.81): heard \"kopilot diam diam perhatiin tangan kedua itu pas arah nariknya benar benar nembu\"",
+            "word mismatch (ratio 0.81): heard \"kopilot diam diam perhatiin tangan kedua itu pas arah nariknya benar benar nembu\""
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Kopilot diam-diam perhatiin tangan kedua itu. Pas, arah nariknya benar-benar nembus di tengah lingkaran.",
+          "mismatches": [
+            {
+              "expected": "copilot",
+              "heard": "kopilot"
+            },
+            {
+              "expected": "bener",
+              "heard": "benar"
+            },
+            {
+              "expected": "bener",
+              "heard": "benar"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Kopilot diam-diam perhatiin tangan kedua itu. Pas, arah nariknya benar-benar nembus di tengah lingkaran.",
+          "rawMismatches": [
+            {
+              "expected": "copilot",
+              "heard": "kopilot"
+            },
+            {
+              "expected": "bener",
+              "heard": "benar"
+            },
+            {
+              "expected": "bener",
+              "heard": "benar"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.81): heard \"kopilot diam diam perhatiin tangan kedua itu pas arah nariknya benar benar nembu\""
+          ]
+        },
+        {
+          "seed": 1,
+          "wordRatio": 0.875,
+          "similarity": 0.98,
+          "wpm": 106,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.88): heard \"copilot diam diam perhatiin tangan kedua itu pas arah nariknya benar benar nembu\"",
+            "word mismatch (ratio 0.88): heard \"copilot diam diam perhatiin tangan kedua itu pas arah nariknya benar benar nembu\""
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Copilot diam-diam perhatiin tangan kedua itu, pas, arah nariknya benar-benar nembus di tengah lingkaran.",
+          "mismatches": [
+            {
+              "expected": "bener",
+              "heard": "benar"
+            },
+            {
+              "expected": "bener",
+              "heard": "benar"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Copilot diam-diam perhatiin tangan kedua itu, pas, arah nariknya benar-benar nembus di tengah lingkaran.",
+          "rawMismatches": [
+            {
+              "expected": "bener",
+              "heard": "benar"
+            },
+            {
+              "expected": "bener",
+              "heard": "benar"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.88): heard \"copilot diam diam perhatiin tangan kedua itu pas arah nariknya benar benar nembu\""
+          ]
+        },
+        {
+          "seed": 2,
+          "wordRatio": 0.875,
+          "similarity": 0.98,
+          "wpm": 100,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.88): heard \"copilot diam diam perhatiin tangan kedua itu pas arah nariknya benar benar nembu\"",
+            "word mismatch (ratio 0.88): heard \"copilot diam diam perhatiin tangan kedua itu pas arah nariknya benar benar nembu\""
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Copilot diam-diam perhatiin tangan kedua itu. Pas, arah nariknya benar-benar nembus di tengah lingkaran.",
+          "mismatches": [
+            {
+              "expected": "bener",
+              "heard": "benar"
+            },
+            {
+              "expected": "bener",
+              "heard": "benar"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Copilot diam-diam perhatiin tangan kedua itu. Pas, arah nariknya benar-benar nembus di tengah lingkaran.",
+          "rawMismatches": [
+            {
+              "expected": "bener",
+              "heard": "benar"
+            },
+            {
+              "expected": "bener",
+              "heard": "benar"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.88): heard \"copilot diam diam perhatiin tangan kedua itu pas arah nariknya benar benar nembu\""
+          ]
+        }
+      ]
+    },
+    {
+      "index": 13,
+      "tag": null,
+      "text": "Sekarang bagian paling gila: lepasin dua-duanya. Sengaja. Biarin dia nyetir.",
+      "retries": 2,
+      "status": "failed",
+      "bestSimilarity": 1,
+      "bestWordRatio": 1,
+      "acceptedAttempt": 0,
+      "attempts": [
+        {
+          "seed": 0,
+          "wordRatio": 1,
+          "similarity": 1,
+          "wpm": 83,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: 80 wpm outside 130±25%",
+            "83 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Sekarang bagian paling gila, lepasin dua-duanya. Sengaja biarin dia nyetir.",
+          "mismatches": [],
+          "endTruncated": false,
+          "rawTranscript": "Sekarang bagian paling gila, lepasin dua-duanya. Sengaja biarin dia nyetir.",
+          "rawMismatches": [],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "80 wpm outside 130±25%"
+          ]
+        },
+        {
+          "seed": 1,
+          "wordRatio": 1,
+          "similarity": 1,
+          "wpm": 90,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: 87 wpm outside 130±25%",
+            "90 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Sekarang bagian paling gila, lepasin dua-duanya, sengaja, biarin dia nyetir.",
+          "mismatches": [],
+          "endTruncated": false,
+          "rawTranscript": "Sekarang bagian paling gila, lepasin dua-duanya, sengaja, biarin dia nyetir.",
+          "rawMismatches": [],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "87 wpm outside 130±25%"
+          ]
+        },
+        {
+          "seed": 2,
+          "wordRatio": 1,
+          "similarity": 1,
+          "wpm": 86,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: 83 wpm outside 130±25%",
+            "86 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Sekarang bagian paling gila, lepasin dua-duanya, sengaja, biarin dia nyetir.",
+          "mismatches": [],
+          "endTruncated": false,
+          "rawTranscript": "Sekarang bagian paling gila, lepasin dua-duanya, sengaja, biarin dia nyetir.",
+          "rawMismatches": [],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "83 wpm outside 130±25%"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 14,
+      "tag": null,
+      "text": "Dan dia nyetir halus banget. Nembus celah presisi, kayak orang pulang ke rumah sendiri. Keluar dari awan, tangan itu pelan-pelan minggir dari tuas.",
+      "retries": 0,
+      "status": "verified",
+      "bestSimilarity": 1,
+      "bestWordRatio": 1,
+      "acceptedAttempt": 0,
+      "attempts": [
+        {
+          "seed": 0,
+          "wordRatio": 1,
+          "similarity": 1,
+          "wpm": 106,
+          "expectedWpm": 130,
+          "passed": true,
+          "reasons": [],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Dan dia nyetir halus banget, nembus celah presisi kayak orang pulang ke rumah sendiri. Keluar dari awan, tangan itu pelan-pelan minggir dari tuas.",
+          "mismatches": [],
+          "endTruncated": false,
+          "rawTranscript": "dan dia nyetir halus banget, nembus celah presisi kayak orang pulang ke rumah sendiri. Keluar dari awan, tangan itu pelan-pelan minggir dari tuas.",
+          "rawMismatches": [],
+          "rawEndTruncated": false,
+          "rawReasons": []
+        }
+      ]
+    },
+    {
+      "index": 15,
+      "tag": null,
+      "text": "Terus lenyap. Kamu ambil alih lagi. Lampu landasan makin deket.",
+      "retries": 2,
+      "status": "failed",
+      "bestSimilarity": 0.983,
+      "bestWordRatio": 0.9,
+      "acceptedAttempt": 0,
+      "attempts": [
+        {
+          "seed": 0,
+          "wordRatio": 0.9,
+          "similarity": 0.983,
+          "wpm": 89,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.90): heard \"terus lenyap kamu ambil alih lagi lampu landasan makin dekat\"",
+            "raw: last word missing, truncated, or has invalid timestamps",
+            "raw: 86 wpm outside 130±25%",
+            "word mismatch (ratio 0.90): heard \"terus lenyap kamu ambil alih lagi lampu landasan makin dekat\"",
+            "last word missing, truncated, or has invalid timestamps",
+            "89 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Terus lenyap, kamu ambil alih lagi, lampu landasan makin dekat.",
+          "mismatches": [
+            {
+              "expected": "deket",
+              "heard": "dekat"
+            }
+          ],
+          "endTruncated": true,
+          "rawTranscript": "Terus lenyap, kamu ambil alih lagi, lampu landasan makin dekat.",
+          "rawMismatches": [
+            {
+              "expected": "deket",
+              "heard": "dekat"
+            }
+          ],
+          "rawEndTruncated": true,
+          "rawReasons": [
+            "word mismatch (ratio 0.90): heard \"terus lenyap kamu ambil alih lagi lampu landasan makin dekat\"",
+            "last word missing, truncated, or has invalid timestamps",
+            "86 wpm outside 130±25%"
+          ]
+        },
+        {
+          "seed": 1,
+          "wordRatio": 0.9,
+          "similarity": 0.983,
+          "wpm": 88,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.70): heard \"terus lenyap kamu ambil alih lagi lampulan dasan makin dekat\"",
+            "raw: last word missing, truncated, or has invalid timestamps",
+            "raw: 84 wpm outside 130±25%",
+            "word mismatch (ratio 0.90): heard \"terus lenyap kamu ambil alih lagi lampu landasan makin dekat\"",
+            "last word missing, truncated, or has invalid timestamps",
+            "88 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Terus, lenyap. Kamu ambil alih lagi, lampu landasan makin dekat.",
+          "mismatches": [
+            {
+              "expected": "deket",
+              "heard": "dekat"
+            }
+          ],
+          "endTruncated": true,
+          "rawTranscript": "Terus, lenyap. Kamu ambil alih lagi. Lampulan dasan makin dekat.",
+          "rawMismatches": [
+            {
+              "expected": "lampu",
+              "heard": "lampulan"
+            },
+            {
+              "expected": "landasan",
+              "heard": "dasan"
+            },
+            {
+              "expected": "deket",
+              "heard": "dekat"
+            }
+          ],
+          "rawEndTruncated": true,
+          "rawReasons": [
+            "word mismatch (ratio 0.70): heard \"terus lenyap kamu ambil alih lagi lampulan dasan makin dekat\"",
+            "last word missing, truncated, or has invalid timestamps",
+            "84 wpm outside 130±25%"
+          ]
+        },
+        {
+          "seed": 2,
+          "wordRatio": 0.9,
+          "similarity": 0.983,
+          "wpm": 104,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.90): heard \"terus lenyap kamu ambil alih lagi lampu landasan makin dekat\"",
+            "raw: last word missing, truncated, or has invalid timestamps",
+            "word mismatch (ratio 0.90): heard \"terus lenyap kamu ambil alih lagi lampu landasan makin dekat\"",
+            "last word missing, truncated, or has invalid timestamps"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Terus lenyap, kamu ambil alih lagi, lampu landasan makin dekat.",
+          "mismatches": [
+            {
+              "expected": "deket",
+              "heard": "dekat"
+            }
+          ],
+          "endTruncated": true,
+          "rawTranscript": "Terus lenyap, kamu ambil alih lagi, lampu landasan makin dekat.",
+          "rawMismatches": [
+            {
+              "expected": "deket",
+              "heard": "dekat"
+            }
+          ],
+          "rawEndTruncated": true,
+          "rawReasons": [
+            "word mismatch (ratio 0.90): heard \"terus lenyap kamu ambil alih lagi lampu landasan makin dekat\"",
+            "last word missing, truncated, or has invalid timestamps"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 16,
+      "tag": null,
+      "text": "Copilot akhirnya napas lega. Roda nyentuh. Mesin pelan-pelan turun.",
+      "retries": 2,
+      "status": "failed",
+      "bestSimilarity": 1,
+      "bestWordRatio": 1,
+      "acceptedAttempt": 0,
+      "attempts": [
+        {
+          "seed": 0,
+          "wordRatio": 1,
+          "similarity": 1,
+          "wpm": 91,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.80): heard \"copilot akhirnya napa selega roda nyentuh mesin pelan pelan turun\"",
+            "raw: 88 wpm outside 130±25%",
+            "91 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Copilot akhirnya napas lega. Roda nyentuh, mesin pelan-pelan turun.",
+          "mismatches": [],
+          "endTruncated": false,
+          "rawTranscript": "Copilot akhirnya napa selega. Roda nyentuh, mesin pelan-pelan turun.",
+          "rawMismatches": [
+            {
+              "expected": "napas",
+              "heard": "napa"
+            },
+            {
+              "expected": "lega",
+              "heard": "selega"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.80): heard \"copilot akhirnya napa selega roda nyentuh mesin pelan pelan turun\"",
+            "88 wpm outside 130±25%"
+          ]
+        },
+        {
+          "seed": 1,
+          "wordRatio": 1,
+          "similarity": 1,
+          "wpm": 93,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.90): heard \"copilot akhirnya nafas lega roda nyentuh mesin pelan pelan turun\"",
+            "raw: 89 wpm outside 130±25%",
+            "93 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Copilot akhirnya napas lega. Roda nyentuh, mesin pelan-pelan turun.",
+          "mismatches": [],
+          "endTruncated": false,
+          "rawTranscript": "Copilot akhirnya nafas lega. Roda nyentuh, mesin pelan-pelan turun.",
+          "rawMismatches": [
+            {
+              "expected": "napas",
+              "heard": "nafas"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.90): heard \"copilot akhirnya nafas lega roda nyentuh mesin pelan pelan turun\"",
+            "89 wpm outside 130±25%"
+          ]
+        },
+        {
+          "seed": 2,
+          "wordRatio": 1,
+          "similarity": 1,
+          "wpm": 86,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: 84 wpm outside 130±25%",
+            "86 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Copilot akhirnya napas lega. Roda nyentuh, mesin pelan-pelan turun.",
+          "mismatches": [],
+          "endTruncated": false,
+          "rawTranscript": "Copilot akhirnya napas lega. Roda nyentuh. Mesin pelan-pelan turun.",
+          "rawMismatches": [],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "84 wpm outside 130±25%"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 17,
+      "tag": null,
+      "text": "Di dalam, tuas balik netral sendiri. Peta pilot kemarin kebuka. Lingkaran CELAH-nya ada centang pensil.",
+      "retries": 2,
+      "status": "failed",
+      "bestSimilarity": 0.995,
+      "bestWordRatio": 1,
+      "acceptedAttempt": 0,
+      "attempts": [
+        {
+          "seed": 0,
+          "wordRatio": 1,
+          "similarity": 0.995,
+          "wpm": 100,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: 96 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Di dalam, tuas balik netral sendiri, peta pilot kemarin kebuka, lingkaran celahnya ada centang pensil.",
+          "mismatches": [],
+          "endTruncated": false,
+          "rawTranscript": "Di dalam, tuas balik netral sendiri, peta pilot kemarin kebuka, lingkaran celahnya ada centang pensil.",
+          "rawMismatches": [],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "96 wpm outside 130±25%"
+          ]
+        },
+        {
+          "seed": 1,
+          "wordRatio": 0.933,
+          "similarity": 0.99,
+          "wpm": 109,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.93): heard \"di dalam tuas balik netral sendiri petah pilot kemarin kebuka lingkaran celahnya\"",
+            "word mismatch (ratio 0.93): heard \"di dalam tuas balik netral sendiri petah pilot kemarin kebuka lingkaran celahnya\""
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Di dalam, tuas balik netral sendiri, petah pilot kemarin kebuka, lingkaran celahnya ada centang pensil.",
+          "mismatches": [
+            {
+              "expected": "peta",
+              "heard": "petah"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Di dalam, tuas balik netral sendiri, petah pilot kemarin kebuka, lingkaran celahnya ada centang pensil.",
+          "rawMismatches": [
+            {
+              "expected": "peta",
+              "heard": "petah"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.93): heard \"di dalam tuas balik netral sendiri petah pilot kemarin kebuka lingkaran celahnya\""
+          ]
+        },
+        {
+          "seed": 2,
+          "wordRatio": 1,
+          "similarity": 0.995,
+          "wpm": 99,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: 96 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Di dalam, tuas balik netral sendiri, peta pilot kemarin kebuka, lingkaran celahnya ada centang pensil.",
+          "mismatches": [],
+          "endTruncated": false,
+          "rawTranscript": "Di dalam, tuas balik netral sendiri, peta pilot kemarin kebuka, lingkaran celahnya ada centang pensil.",
+          "rawMismatches": [],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "96 wpm outside 130±25%"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 18,
+      "tag": null,
+      "text": "Kayak dia bilang: selamat. Kamu berhasil sampai.",
+      "retries": 2,
+      "status": "failed",
+      "bestSimilarity": 0.989,
+      "bestWordRatio": 0.857,
+      "acceptedAttempt": 2,
+      "attempts": [
+        {
+          "seed": 0,
+          "wordRatio": 0.714,
+          "similarity": 0.966,
+          "wpm": 84,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.86): heard \"kaya dia bilang selamat kamu berhasil sampai\"",
+            "raw: 76 wpm outside 130±25%",
+            "word mismatch (ratio 0.71): heard \"kaya dia bilang selamat kamu berhasil sampah\"",
+            "last word missing, truncated, or has invalid timestamps",
+            "84 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Kaya dia bilang, Selamat, kamu berhasil sampah.",
+          "mismatches": [
+            {
+              "expected": "kayak",
+              "heard": "kaya"
+            },
+            {
+              "expected": "sampai",
+              "heard": "sampah"
+            }
+          ],
+          "endTruncated": true,
+          "rawTranscript": "Kaya dia bilang, Selamat, kamu berhasil sampai.",
+          "rawMismatches": [
+            {
+              "expected": "kayak",
+              "heard": "kaya"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.86): heard \"kaya dia bilang selamat kamu berhasil sampai\"",
+            "76 wpm outside 130±25%"
+          ]
+        },
+        {
+          "seed": 1,
+          "wordRatio": 0.714,
+          "similarity": 0.966,
+          "wpm": 88,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.86): heard \"kaya dia bilang selamat kamu berhasil sampai\"",
+            "raw: 79 wpm outside 130±25%",
+            "word mismatch (ratio 0.71): heard \"kaya dia bilang selamat kamu berhasil sampat\"",
+            "last word missing, truncated, or has invalid timestamps",
+            "88 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Kaya dia bilang selamat, kamu berhasil sampat.",
+          "mismatches": [
+            {
+              "expected": "kayak",
+              "heard": "kaya"
+            },
+            {
+              "expected": "sampai",
+              "heard": "sampat"
+            }
+          ],
+          "endTruncated": true,
+          "rawTranscript": "Kaya dia bilang, Selamat, kamu berhasil sampai.",
+          "rawMismatches": [
+            {
+              "expected": "kayak",
+              "heard": "kaya"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.86): heard \"kaya dia bilang selamat kamu berhasil sampai\"",
+            "79 wpm outside 130±25%"
+          ]
+        },
+        {
+          "seed": 2,
+          "wordRatio": 0.857,
+          "similarity": 0.989,
+          "wpm": 94,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: 86 wpm outside 130±25%",
+            "word mismatch (ratio 0.86): heard \"kaya dia bilang selamat kamu berhasil sampai\"",
+            "94 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Kaya dia bilang, selamat, kamu berhasil sampai.",
+          "mismatches": [
+            {
+              "expected": "kayak",
+              "heard": "kaya"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Kayak dia bilang, selamat, kamu berhasil sampai.",
+          "rawMismatches": [],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "86 wpm outside 130±25%"
+          ]
+        }
+      ]
+    }
+  ]
+}

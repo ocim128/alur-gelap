@@ -1,0 +1,126 @@
+{
+  "version": 1,
+  "voiceId": "Charon",
+  "voiceName": "Charon",
+  "provider": "gemini-cloud",
+  "model": "gemini-3.8-flash-tts",
+  "master": false,
+  "masterFilter": null,
+  "asrModel": "small",
+  "generatedAt": "2026-11-22T16:26:38.547Z",
+  "passed": false,
+  "totalChunks": 1,
+  "verifiedChunks": 0,
+  "warningChunks": 0,
+  "failedChunks": 1,
+  "plannedDurationSec": 1.085,
+  "finalAlignment": {
+    "transcript": "Gantian bang?",
+    "mismatches": [],
+    "passed": true
+  },
+  "audioQuality": {
+    "integratedLufs": -15.6,
+    "loudnessRangeLu": 0,
+    "noiseFloorDbfs": -15.2,
+    "targets": {
+      "integratedLufs": -14,
+      "loudnessRangeLu": [
+        5,
+        7
+      ]
+    }
+  },
+  "chunks": [
+    {
+      "index": 0,
+      "tag": null,
+      "text": "Gantian, bang?",
+      "retries": 2,
+      "status": "failed",
+      "bestSimilarity": 1,
+      "bestWordRatio": 1,
+      "acceptedAttempt": 1,
+      "attempts": [
+        {
+          "seed": 0,
+          "wordRatio": 0,
+          "similarity": 0.87,
+          "wpm": 169,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: 70 wpm outside 130±25%",
+            "word mismatch (ratio 0.00): heard \"anti anbang\"",
+            "last word missing, truncated, or has invalid timestamps",
+            "char similarity 0.87 < 0.94",
+            "169 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "anti-anbang",
+          "mismatches": [
+            {
+              "expected": "gantian",
+              "heard": "anti"
+            },
+            {
+              "expected": "bang",
+              "heard": "anbang"
+            }
+          ],
+          "endTruncated": true,
+          "rawTranscript": "Gantian, Bang.",
+          "rawMismatches": [],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "70 wpm outside 130±25%"
+          ]
+        },
+        {
+          "seed": 1,
+          "wordRatio": 1,
+          "similarity": 1,
+          "wpm": 111,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: 77 wpm outside 130±25%"
+          ],
+          "warnings": [],
+          "transcript": "Gantian bang?",
+          "mismatches": [],
+          "endTruncated": false,
+          "rawTranscript": "Gantian bang?",
+          "rawMismatches": [],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "77 wpm outside 130±25%"
+          ]
+        },
+        {
+          "seed": 2,
+          "wordRatio": 1,
+          "similarity": 1,
+          "wpm": 109,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: 79 wpm outside 130±25%"
+          ],
+          "warnings": [],
+          "transcript": "Gantian Bang!",
+          "mismatches": [],
+          "endTruncated": false,
+          "rawTranscript": "Gantian Bang.",
+          "rawMismatches": [],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "79 wpm outside 130±25%"
+          ]
+        }
+      ]
+    }
+  ]
+}

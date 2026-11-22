@@ -267,6 +267,20 @@
       "output": "public/assets/003-goyangan-dek-enam/sfx/ship-ambience-bed.wav",
       "processing": "154.0 s continuous exterior ship & engine ambience stem, peak normalized to -12 dBFS",
       "license": "CC0 1.0; rubberduck; see LICENSES.md"
+    },
+    {
+      "name": "scenario05-tower-pa",
+      "source": "public/sfx/sources/scenario05-tower-original.wav",
+      "output": "public/sfx/prepared/scenario05-tower-pa.wav",
+      "processing": "Google Cloud Gemini 3.8 Flash TTS Orus, flat formal Indonesian tower line 'Turun, lewatin awan, izin darurat.'; toa-megaphone profile as the closest installed radio-bandpass treatment (final judgment in mix); ASR recognized the line verbatim; listening pending",
+      "license": "Generated via Google Cloud; publication terms not independently verified; see LICENSES.md"
+    },
+    {
+      "name": "scenario05-tower-pa-mixready",
+      "source": "public/sfx/prepared/scenario05-tower-pa.wav",
+      "output": "public/sfx/prepared/scenario05-tower-pa-mixready.wav",
+      "processing": "Tail trimmed to 4.090 s (speech ends 4.040 s) with 40 ms release fade; +21.2 dB sample-peak normalization to -1.0 dBFS to fit the 4.200 s reserved narrator-free window; listening pending",
+      "license": "Generated via Google Cloud; terms unverified; see LICENSES.md"
     }
   ]
 }

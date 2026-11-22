@@ -1,0 +1,26 @@
+{
+  "brief": {
+    "status": "pass",
+    "notes": "Owner-approved 2026-11-22: Scenario 05 (Sabuk Ketiga) locked. brief.md + narasi.txt final (259 words, Bahasa Bayi, no all-caps SFX) with three owner-requested TTS-safe swaps applied and mirrored across all quoted anchors: nyerudut->anjlok (2x), nekatin->angkat, kelontang->terlempar. Engine triple-branch-rewind; 24 panels; provisional timeline 02:31.0 (151.0 s) shared verbatim across Script, Cue Sheet, and Panel Plan until the measured narration master locks final anchors; branchRewinds at frames 1305/1680/2055 (12 frames each); 1.5 s dread silence reserved for post-Rewind 3 only. Next: Agent 02 one-shot gemini-3.8-flash-tts master + word timestamps + pa-announcer voice-sfx for the tower call, and Agent 03 24-panel batch against the Set & Prop Anchors."
+  },
+  "audio": {
+    "status": "pass",
+    "notes": "Owner APPROVED narration-prepared.mp3 via listening check 2026-11-23 (pronunciation, pacing and the Rewind 3 dread silence clean; no re-roll). Single ShortZ gemini-cloud / gemini-3.8-flash-tts invocation, Investigator voice voice_71a5a701-796e-421d-840e-0adc00b0816a, from narasi.txt (259 words): raw master narration-investigator.mp3 170.125 s, 21 chunks. ShortZ report passed:false (3/21 verified): flags classified as the generic 130±25% WPM pacing gate (accepted takes 67-97 WPM; Bahasa Bayi is deliberately casual) plus Whisper word-match attempts - not treated as proof of mispronunciation, and now moot after the owner listening approval. Mandatory pronunciation diff completed (pronunciation-diff.json): 20 deviations reconciled (18 renames e.g. mapet->mepet, Bangkok->bengkok, anjlok x2, Gak/gak->nggak x3, gesel->geser, tancap->tancep, kopilot->copilot x2; split Gapernah->Nggak pernah; merge kop pilot->copilot) with the reconciled track matching narasi.txt token-for-token; read-back re-verification on the approved narration-timestamps.json also passes; 2 items had been marked suspected-standardization (Perhatikan->Perhatiin, formal kemudian->kemudi in P18), resolved to script text and covered by the owner approval. Preparation via prepare-audio.mjs on one continuous 48 kHz PCM timeline at 1.0x speed (zero atempo): 46 dead-air tightenings (>0.5 s -> 0.32 s retained), 3 exact rewind-gap replacements (57.80-58.20, 72.46-72.86, 90.64-91.04 - each 0.400 s, rewinds 1-2 snap straight back with zero dead air), 1.500 s true-zero dread silence only after Rewind 3 (91.04-92.54, sample-verified zero), protected one-beat lag cues P05 0.50 s / P10 0.68 s / P17 0.84 s, tower window reserved 42.74-46.94 s. narration-prepared.wav/.mp3 155.985 s, speech end 154.84 s, -16.9 LUFS / true peak -1.14 dBTP (approved MP3 SHA-256 A6638C8A0C1E71E8D808160CACD1D2CD51EC74F8727524AA7E3B8B0DDCFBC416); narration-timestamps.json + audio-edit-map.json remapped; 6501 MP3 packets 100% strictly monotonic PTS; derivatives copied to public/assets/005-sabuk-ketiga/. audio-edit-map.json assemblerHandoff block flags branchRewinds[0..2] (frames 1734-1746 / 2174-2186 / 2719-2731 with tape-snap sample offsets 2774400 / 3478400 / 4350400 at 48 kHz), the 1.5 s dread region (2731-2776), lag SFX cue windows, the pa-announcer replacement window and the tail anchors for Agent 04. pa-announcer voice-sfx generated via Google Cloud Gemini 3.8 Flash TTS Orus for 'Turun, lewatin awan, izin darurat.' (public/sfx/sources/scenario05-tower-original.wav, SHA-256 logged; ASR spot-check verbatim, mix listening pending): toa-megaphone radio-bandpass derivative + 4.090 s -1.0 dBFS mixready trim fitting the reserved window; provenance + rights recorded in public/sfx/catalog.json and LICENSES.md (publication terms not independently verified). Agent 04: mute narrator quote words 77-81 non-destructively in the edit map, lay the pa asset with yellow MENARA RADIO caption, anchor all transients to narration-timestamps.json (not panel starts), keep deliberate silent clues and silences, final mix -14 LUFS / <= -1.5 dBTP; final SFX/mix approval remains a separate downstream gate. Provisional 151.0 s / 4530-frame timeline in brief.md is STALE for downstream anchoring: images (Agent 03) and render (Agent 04) must re-anchor panels/frames to the measured spans in audio-edit-map.json / audio-assets.md (cut ~156.3 s, still inside the 145-160 s window; hook starts at exactly 0.000 s so title/cover anchors hold)."
+  },
+  "images": {
+    "status": "pass",
+    "notes": "Owner explicitly directed one final attempt and advance approval of best available selection even if defects remain, 23 November 2026. Selected 24 distinct 1080x1920 plates + clean jolt under selected-owner-approved; contact sheet and full prompt/self-audit history recorded. This is owner-accepted with known visual limitations, not a clean technical audit: rail shape/door continuity, some night rain, P11 contact and exterior matching require playback review. Agent 04 may assemble subject to normal final QA; see sources/prompts.md owner-directed final selection."
+  },
+  "render": {
+    "status": "pending",
+    "notes": ""
+  },
+  "audit": {
+    "status": "pending",
+    "notes": ""
+  },
+  "publish": {
+    "status": "pending",
+    "notes": ""
+  }
+}

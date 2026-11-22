@@ -1,0 +1,283 @@
+{
+  "source": "episodes\\004-tangan-pilot-kemarin\\narration-investigator.mp3",
+  "outputWav": "episodes\\004-tangan-pilot-kemarin\\narration-prepared.wav",
+  "outputMp3": "episodes\\004-tangan-pilot-kemarin\\narration-prepared.mp3",
+  "sourceDurationSec": 165.935,
+  "preparedDurationSec": 153.5,
+  "speechEndSec": 152,
+  "hookEndSec": 2.7,
+  "hookWithinLimit": true,
+  "crossfadeSec": 0.01,
+  "leadTrimSec": 0,
+  "hookFallback": {
+    "applied": true,
+    "cutSec": [
+      1.22,
+      2.08
+    ],
+    "spokenHook": "Tangan di tuas bukan tanganmu.",
+    "removedWords": [
+      "itu,"
+    ],
+    "note": "Brief-documented fallback: raw hook ended past the 00:03.0 limit, so \"itu\" was dropped by edit (zero speed change). The word was also removed from narration-timestamps.json; captions must match this spoken form."
+  },
+  "protectedBeats": [
+    {
+      "aStem": "terjepit",
+      "bStem": "ambruk",
+      "why": "Loop 2 restrained copilot groan + muffled thud SFX live in this gap (cue sheet ~00:55.6)"
+    }
+  ],
+  "tighteningCuts": [
+    {
+      "word1": "tanganmu,",
+      "word2": "isinya",
+      "originalGapSec": 0.76,
+      "retainedGapSec": 0.3
+    },
+    {
+      "word1": "pegang,",
+      "word2": "lepas",
+      "originalGapSec": 0.8,
+      "retainedGapSec": 0.3
+    },
+    {
+      "word1": "ali,",
+      "word2": "pilot",
+      "originalGapSec": 0.9,
+      "retainedGapSec": 0.3
+    },
+    {
+      "word1": "pertanya,",
+      "word2": "ada",
+      "originalGapSec": 0.68,
+      "retainedGapSec": 0.3
+    },
+    {
+      "word1": "Celah,",
+      "word2": "tangan",
+      "originalGapSec": 0.78,
+      "retainedGapSec": 0.3
+    },
+    {
+      "word1": "kaku.",
+      "word2": "Copilot",
+      "originalGapSec": 0.92,
+      "retainedGapSec": 0.3
+    },
+    {
+      "word1": "gantian.",
+      "word2": "Kamu",
+      "originalGapSec": 0.92,
+      "retainedGapSec": 0.3
+    },
+    {
+      "word1": "kaki.",
+      "word2": "Lampu",
+      "originalGapSec": 0.8,
+      "retainedGapSec": 0.3
+    },
+    {
+      "word1": "-kedip.",
+      "word2": "Radio",
+      "originalGapSec": 0.66,
+      "retainedGapSec": 0.3
+    },
+    {
+      "word1": "radio.",
+      "word2": "Sekali",
+      "originalGapSec": 0.82,
+      "retainedGapSec": 0.3
+    },
+    {
+      "word1": "total.",
+      "word2": "Instingmu,",
+      "originalGapSec": 0.96,
+      "retainedGapSec": 0.3
+    },
+    {
+      "word1": "kiri.",
+      "word2": "Kopilot",
+      "originalGapSec": 0.66,
+      "retainedGapSec": 0.3
+    },
+    {
+      "word1": "turun.",
+      "word2": "Instingmu,",
+      "originalGapSec": 0.66,
+      "retainedGapSec": 0.3
+    },
+    {
+      "word1": "lepas,",
+      "word2": "dia",
+      "originalGapSec": 0.66,
+      "retainedGapSec": 0.3
+    },
+    {
+      "word1": "sama.",
+      "word2": "Lingkaran",
+      "originalGapSec": 0.92,
+      "retainedGapSec": 0.3
+    },
+    {
+      "word1": "celah.",
+      "word2": "Dia",
+      "originalGapSec": 0.78,
+      "retainedGapSec": 0.3
+    },
+    {
+      "word1": "nyampe.",
+      "word2": "Jadikan",
+      "originalGapSec": 0.8,
+      "retainedGapSec": 0.3
+    },
+    {
+      "word1": "pulang.",
+      "word2": "Triknya,",
+      "originalGapSec": 0.66,
+      "retainedGapSec": 0.3
+    },
+    {
+      "word1": "Pas!",
+      "word2": "Arh",
+      "originalGapSec": 0.92,
+      "retainedGapSec": 0.3
+    },
+    {
+      "word1": "gila.",
+      "word2": "Lepasin",
+      "originalGapSec": 0.9,
+      "retainedGapSec": 0.3
+    },
+    {
+      "word1": "Sengaja,",
+      "word2": "biarin",
+      "originalGapSec": 0.76,
+      "retainedGapSec": 0.3
+    },
+    {
+      "word1": "presisi,",
+      "word2": "kayak",
+      "originalGapSec": 0.68,
+      "retainedGapSec": 0.3
+    },
+    {
+      "word1": "sendiri.",
+      "word2": "Keluar",
+      "originalGapSec": 1.08,
+      "retainedGapSec": 0.3
+    },
+    {
+      "word1": "lenyap,",
+      "word2": "kamu",
+      "originalGapSec": 0.88,
+      "retainedGapSec": 0.3
+    },
+    {
+      "word1": "lagi,",
+      "word2": "lampu",
+      "originalGapSec": 0.92,
+      "retainedGapSec": 0.3
+    },
+    {
+      "word1": "selega.",
+      "word2": "Roda",
+      "originalGapSec": 0.76,
+      "retainedGapSec": 0.3
+    },
+    {
+      "word1": "sendiri,",
+      "word2": "peta",
+      "originalGapSec": 0.92,
+      "retainedGapSec": 0.3
+    },
+    {
+      "word1": "kebuka,",
+      "word2": "lingkaran",
+      "originalGapSec": 0.76,
+      "retainedGapSec": 0.3
+    },
+    {
+      "word1": "bilang,",
+      "word2": "selamat",
+      "originalGapSec": 0.66,
+      "retainedGapSec": 0.3
+    }
+  ],
+  "branchRewindGaps": [
+    {
+      "name": "rewind-1",
+      "tailWord": "mati.",
+      "tailWordEndSec": 43.44,
+      "nextWord": "Balik",
+      "nextWordStartSec": 43.84,
+      "gapSec": 0.4,
+      "targetGapSec": 0.4,
+      "lockedManifestFrames": {
+        "startFrame": 1380,
+        "endFrame": 1392
+      },
+      "note": "Tape-snap straight back into Loop 2; zero dead air beyond the 0.4 s rewind."
+    },
+    {
+      "name": "rewind-2",
+      "tailWord": "Ambruk.",
+      "tailWordEndSec": 58.5,
+      "nextWord": "Jarum",
+      "nextWordStartSec": 58.9,
+      "gapSec": 0.4,
+      "targetGapSec": 0.4,
+      "lockedManifestFrames": {
+        "startFrame": 1773,
+        "endFrame": 1785
+      },
+      "note": "Tape-snap straight back into Loop 3; zero dead air beyond the 0.4 s rewind."
+    },
+    {
+      "name": "rewind-3",
+      "tailWord": "Tamat.",
+      "tailWordEndSec": 73.3,
+      "nextWord": "Setiap",
+      "nextWordStartSec": 75.3,
+      "gapSec": 2,
+      "targetGapSec": 2,
+      "lockedManifestFrames": {
+        "startFrame": 2172,
+        "endFrame": 2184
+      },
+      "note": "0.4 s tape-snap rewind, then the episode's only 1.6 s true-zero dread silence before realization."
+    }
+  ],
+  "dreadSilence": {
+    "rewindWindowSec": [
+      73.3,
+      73.7
+    ],
+    "trueZeroSilenceSec": [
+      73.7,
+      75.3
+    ],
+    "trueZeroDurationSec": 1.6,
+    "note": "Rewind 3 tape-snap occupies the first 0.4 s of the gap; the remaining 1.6 s is true-zero (mute ambience and vocal) before the realization line."
+  },
+  "timelinePlacement": {
+    "blackoutTail": {
+      "speechReleaseSec": 152,
+      "preparedTrackEndSec": 153.5,
+      "tailHoldSec": 1.5,
+      "assembledVideoCutEndSec": 154,
+      "note": "Brief tail: 1.5 s from the final word; tension ramp, 150 ms vacuum, restrained sub-hit and 1-2 frame red flash are Agent 04 mix cues inside this tail."
+    }
+  },
+  "runtimeBudget": {
+    "narrationTrackDurationSec": 153.5,
+    "spokenSpeechEndSec": 152,
+    "tailHoldSec": 1.5,
+    "assembledVideoCutDurationSec": 154,
+    "targetWindowSec": [
+      145,
+      160
+    ]
+  },
+  "notes": "Assembled on a continuous PCM sample timeline; zero playback-speed change (atempo 1.0x preserved); strictly monotonic PTS verified by ffprobe across all packets."
+}

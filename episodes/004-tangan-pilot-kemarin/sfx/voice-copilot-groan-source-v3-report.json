@@ -1,0 +1,182 @@
+{
+  "version": 1,
+  "voiceId": "Charon",
+  "voiceName": "Charon",
+  "provider": "gemini-cloud",
+  "model": "gemini-3.8-flash-tts",
+  "master": false,
+  "masterFilter": null,
+  "asrModel": "small",
+  "generatedAt": "2026-11-22T16:29:34.483Z",
+  "passed": false,
+  "totalChunks": 1,
+  "verifiedChunks": 0,
+  "warningChunks": 0,
+  "failedChunks": 1,
+  "plannedDurationSec": 0.745,
+  "finalAlignment": {
+    "transcript": "URGH",
+    "mismatches": [
+      {
+        "expected": "ugh",
+        "heard": "urgh"
+      }
+    ],
+    "passed": false
+  },
+  "audioQuality": {
+    "integratedLufs": -15.2,
+    "loudnessRangeLu": 0,
+    "noiseFloorDbfs": -15.9,
+    "targets": {
+      "integratedLufs": -14,
+      "loudnessRangeLu": [
+        5,
+        7
+      ]
+    }
+  },
+  "chunks": [
+    {
+      "index": 0,
+      "tag": null,
+      "text": "Ugh!",
+      "retries": 2,
+      "status": "failed",
+      "bestSimilarity": 0.857,
+      "bestWordRatio": 0,
+      "acceptedAttempt": 0,
+      "attempts": [
+        {
+          "seed": 0,
+          "wordRatio": 0,
+          "similarity": 0.857,
+          "wpm": 81,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.00): heard \"uuh\"",
+            "raw: last word missing, truncated, or has invalid timestamps",
+            "raw: char similarity 0.67 < 0.94",
+            "raw: 52 wpm outside 130±25%",
+            "word mismatch (ratio 0.00): heard \"urgh\"",
+            "last word missing, truncated, or has invalid timestamps",
+            "char similarity 0.86 < 0.94",
+            "81 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "URGH",
+          "mismatches": [
+            {
+              "expected": "ugh",
+              "heard": "urgh"
+            }
+          ],
+          "endTruncated": true,
+          "rawTranscript": "Uuh!",
+          "rawMismatches": [
+            {
+              "expected": "ugh",
+              "heard": "uuh"
+            }
+          ],
+          "rawEndTruncated": true,
+          "rawReasons": [
+            "word mismatch (ratio 0.00): heard \"uuh\"",
+            "last word missing, truncated, or has invalid timestamps",
+            "char similarity 0.67 < 0.94",
+            "52 wpm outside 130±25%"
+          ]
+        },
+        {
+          "seed": 1,
+          "wordRatio": 0,
+          "similarity": 0.25,
+          "wpm": 76,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.00): heard \"yaaah\"",
+            "raw: last word missing, truncated, or has invalid timestamps",
+            "raw: char similarity 0.25 < 0.94",
+            "raw: 58 wpm outside 130±25%",
+            "word mismatch (ratio 0.00): heard \"yaaah\"",
+            "last word missing, truncated, or has invalid timestamps",
+            "char similarity 0.25 < 0.94",
+            "76 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Yaaah",
+          "mismatches": [
+            {
+              "expected": "ugh",
+              "heard": "yaaah"
+            }
+          ],
+          "endTruncated": true,
+          "rawTranscript": "Yaaah",
+          "rawMismatches": [
+            {
+              "expected": "ugh",
+              "heard": "yaaah"
+            }
+          ],
+          "rawEndTruncated": true,
+          "rawReasons": [
+            "word mismatch (ratio 0.00): heard \"yaaah\"",
+            "last word missing, truncated, or has invalid timestamps",
+            "char similarity 0.25 < 0.94",
+            "58 wpm outside 130±25%"
+          ]
+        },
+        {
+          "seed": 2,
+          "wordRatio": 0,
+          "similarity": 0.8,
+          "wpm": 96,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.00): heard \"uuh\"",
+            "raw: last word missing, truncated, or has invalid timestamps",
+            "raw: char similarity 0.67 < 0.94",
+            "raw: 58 wpm outside 130±25%",
+            "word mismatch (ratio 0.00): heard \"uh\"",
+            "last word missing, truncated, or has invalid timestamps",
+            "char similarity 0.80 < 0.94",
+            "96 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Uh!",
+          "mismatches": [
+            {
+              "expected": "ugh",
+              "heard": "uh"
+            }
+          ],
+          "endTruncated": true,
+          "rawTranscript": "Uuh!",
+          "rawMismatches": [
+            {
+              "expected": "ugh",
+              "heard": "uuh"
+            }
+          ],
+          "rawEndTruncated": true,
+          "rawReasons": [
+            "word mismatch (ratio 0.00): heard \"uuh\"",
+            "last word missing, truncated, or has invalid timestamps",
+            "char similarity 0.67 < 0.94",
+            "58 wpm outside 130±25%"
+          ]
+        }
+      ]
+    }
+  ]
+}

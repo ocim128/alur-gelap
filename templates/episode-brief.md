@@ -52,22 +52,44 @@ Audit the final narration for every described in-world sound and stop. Keep `inv
 
 ## 3. Plan the panels
 
-### Spatial & Camera Layout
+### Immutable Set & Identity Anchor
 
-- **Floor plan and route** — [entry, exit, stairs or landings, connecting spaces, and each character’s position at the reveal]
-- **Openings and barriers** — [door and window type, hinge and swing direction, bars or glass, which side each character is on, and exact plot-bearing signage]
-- **Camera and sightlines** — [where the camera stands, what it looks toward, and which corner, barrier or reflection conceals or reveals the threat. Carry that geometry through the reveal and final jolt.]
+- **Set type, seating and geography** — [aircraft or room model/type, fixed seating and relative positions, right-hand drive where relevant, entry, exit and connecting spaces]
+- **Character identity** — [silhouette, clothing and rim colors for each character or anomaly. List the locked sheets.]
+- **Fixed prop geometry** — [belt mounts, hinge or slide directions, controls, map placement and construction, barriers, reflection geometry and exact plot-bearing signage]
 
-For a 2–3 minute cut, plan **roughly 16–26 purposeful 9:16 panels** in Urban Silhouette Noir. Allow 5–9 s for atmospheric shots with slow motion or flicker and cut tightly on action. Keep Indonesian vehicles right-hand drive.
+### Per-Shot State Table
 
-**Show-What-You-Say Panel Lock** — [exact narrated threat or action line | transcript time | panel ID | subject and action visible on screen]. Include each narrated threat and visible action.
+For the 24-panel format, fill every row. Include any separate jolt plate. Record exact narrated wording and the visible action it maps to, or mark a silent beat. Indicate `present`, `absent` or `departed` for the anomaly, `lit`, `dark` or `emergency` for lighting, and `clear`, `rain` or `fog` for weather. List `strobe`, `shake`, `glitch` or `none` in the Remotion effects column. Make rewinds and deliberate changes explicit.
 
-| Beat and time | Unique panel and narrative purpose | Motion, HUD or effect |
-| --- | --- | --- |
-| Hook | [protagonist, situation and threat] | [title and action] |
-| Decision and consequence | [choice and visible outcome, one row per panel] | [branch color and any rewind cue] |
-| Anticipation and reveal | [protagonist reaction followed by payoff] | [precise sound hit] |
-| Post-Narration Final Jolt (1.0–1.5s) | [dedicated close-up/lunge panel or snap-zoom; concrete threat action] | [final 3–4 s narration ramp; 120–180 ms silence; 0.7–1.1 s jolt with shake, 1–2-frame flash and limited stinger; 0.2–0.3 s hard black] |
+| Panel | Time / camera vantage | Visible people + positions | Anomaly | Key prop states | Lighting | Weather | Exact narrated line and visible action | Remotion effects |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| P01 | | | | | | | | |
+| P02 | | | | | | | | |
+| P03 | | | | | | | | |
+| P04 | | | | | | | | |
+| P05 | | | | | | | | |
+| P06 | | | | | | | | |
+| P07 | | | | | | | | |
+| P08 | | | | | | | | |
+| P09 | | | | | | | | |
+| P10 | | | | | | | | |
+| P11 | | | | | | | | |
+| P12 | | | | | | | | |
+| P13 | | | | | | | | |
+| P14 | | | | | | | | |
+| P15 | | | | | | | | |
+| P16 | | | | | | | | |
+| P17 | | | | | | | | |
+| P18 | | | | | | | | |
+| P19 | | | | | | | | |
+| P20 | | | | | | | | |
+| P21 | | | | | | | | |
+| P22 | | | | | | | | |
+| P23 | | | | | | | | |
+| P24 | | | | | | | | |
+
+- **Final jolt and tail** — [dedicated close-up/lunge panel or snap-zoom, concrete action, 3–4 s narration ramp, 120–180 ms silence, 0.7–1.1 s jolt and 0.2–0.3 s hard black. Fit the post-narration beat in 1.0–1.5 s.]
 
 - **Asset and rights record** — [batch path, prompts, tools, voice rights, credits and any external dependencies]
 

@@ -1,0 +1,184 @@
+{
+  "episode": "005-sabuk-ketiga",
+  "checkedAt": "2026-11-22T16:22:29.650Z",
+  "scriptPath": "narasi.txt",
+  "rawTimestampsPath": "narration-investigator-timestamps.json",
+  "reportPath": "narration-investigator-report.json",
+  "method": "Word-by-word diff of the raw ShortZ ASR word track against the approved script tokens, cross-checked with the per-chunk ASR report attempts. Deviations classified and reconciled to script-faithful text while preserving ASR timings. ASR text alone cannot establish pronunciation; no listening review is claimed.",
+  "reportSummary": {
+    "passed": false,
+    "totalChunks": 21,
+    "verifiedChunks": 3,
+    "warningChunks": 0,
+    "failedChunks": 18,
+    "note": "Failed chunks reflect the generic 130±25% WPM pacing gate and Whisper word-match attempts, not established mispronunciation; see classification below and narration-investigator-report.json."
+  },
+  "reconciliations": [
+    {
+      "rawIdx": 36,
+      "heard": "mapet",
+      "scriptFaithful": "mepet",
+      "class": "phonetic-variant",
+      "action": "renamed",
+      "note": "ASR vowel mishearing (e/a)."
+    },
+    {
+      "rawIdx": 40,
+      "heard": "realnya",
+      "scriptFaithful": "relnya",
+      "class": "phonetic-variant",
+      "action": "renamed",
+      "note": "ASR intrusion; script word \"relnya\"."
+    },
+    {
+      "rawIdx": 41,
+      "heard": "Bangkok.",
+      "scriptFaithful": "bengkok.",
+      "class": "phonetic-variant",
+      "action": "renamed",
+      "note": "Near-identical phonetics (bengkok/Bangkok); ASR mishearing."
+    },
+    {
+      "rawIdx": 42,
+      "heard": "Kopilot",
+      "scriptFaithful": "Copilot",
+      "class": "phonetic-variant",
+      "action": "renamed",
+      "note": "ASR k/c; case normalized to script."
+    },
+    {
+      "rawIdx": 101,
+      "heard": "kopilot",
+      "scriptFaithful": "copilot",
+      "class": "phonetic-variant",
+      "action": "renamed",
+      "note": "ASR k/c, in \"Copilot buka sabuknya\" (P08) and the copilot quote \"Suara copilot manggil\" (P09)."
+    },
+    {
+      "rawIdx": 113,
+      "heard": "kopilot,",
+      "scriptFaithful": "copilot,",
+      "class": "phonetic-variant",
+      "action": "renamed",
+      "note": "ASR k/c, in \"Copilot buka sabuknya\" (P08) and the copilot quote \"Suara copilot manggil\" (P09)."
+    },
+    {
+      "rawIdx": 56,
+      "heard": "anjolok",
+      "scriptFaithful": "anjlok",
+      "class": "phonetic-variant",
+      "action": "renamed",
+      "note": "ASR epenthetic vowel; script \"anjlok\"."
+    },
+    {
+      "rawIdx": 144,
+      "heard": "anjolok",
+      "scriptFaithful": "anjlok",
+      "class": "phonetic-variant",
+      "action": "renamed",
+      "note": "ASR epenthetic vowel; script \"anjlok\"."
+    },
+    {
+      "rawIdx": 62,
+      "heard": "kemudih.",
+      "scriptFaithful": "kemudi.",
+      "class": "phonetic-variant",
+      "action": "renamed",
+      "note": "Final-vowel devoicing heard by ASR; script \"kemudi\"."
+    },
+    {
+      "rawIdx": 96,
+      "heard": "ditelan",
+      "scriptFaithful": "ditelen",
+      "class": "phonetic-variant",
+      "action": "renamed",
+      "note": "Whisper colloquial-form normalization; script \"ditelen\"."
+    },
+    {
+      "rawIdx": 108,
+      "heard": "Nyalip,",
+      "scriptFaithful": "Nyelip,",
+      "class": "phonetic-variant",
+      "action": "renamed",
+      "note": "ASR a/e; script \"nyelip\"."
+    },
+    {
+      "rawIdx": 123,
+      "heard": "Gak",
+      "scriptFaithful": "nggak",
+      "class": "phonetic-variant",
+      "action": "renamed",
+      "note": "Whisper colloquial-form normalization; script \"nggak\" (\"Nggak mirip dia\" P09, \"Nggak ada yang sempat\" P12)."
+    },
+    {
+      "rawIdx": 156,
+      "heard": "Gak",
+      "scriptFaithful": "nggak",
+      "class": "phonetic-variant",
+      "action": "renamed",
+      "note": "Whisper colloquial-form normalization; script \"nggak\" (\"Nggak mirip dia\" P09, \"Nggak ada yang sempat\" P12)."
+    },
+    {
+      "rawIdx": 221,
+      "heard": "gak",
+      "scriptFaithful": "nggak",
+      "class": "phonetic-variant",
+      "action": "renamed",
+      "note": "Whisper colloquial-form normalization; script \"nggak\" (\"yang nggak diikat\" P19)."
+    },
+    {
+      "rawIdx": 185,
+      "heard": "gesel.",
+      "scriptFaithful": "geser.",
+      "class": "phonetic-variant",
+      "action": "renamed",
+      "note": "ASR l/r; script \"geser\"."
+    },
+    {
+      "rawIdx": 212,
+      "heard": "tancap",
+      "scriptFaithful": "tancep",
+      "class": "phonetic-variant",
+      "action": "renamed",
+      "note": "ASR a/e; script \"tancep\"."
+    },
+    {
+      "rawIdx": 162,
+      "heard": "Perhatikan,",
+      "scriptFaithful": "Perhatiin,",
+      "class": "suspected-standardization",
+      "action": "renamed",
+      "note": "Formal Indonesian form heard instead of the colloquial script word; resolved to script text. Optional targeted listening if the owner wants audible confirmation."
+    },
+    {
+      "rawIdx": 214,
+      "heard": "kemudian",
+      "scriptFaithful": "kemudi",
+      "class": "suspected-standardization",
+      "action": "renamed",
+      "note": "In \"tancep tuas kemudi sekeras-kerasnya\" (P18) only: formal \"kemudian\" heard; resolved to script word \"kemudi\". The script-faithful \"kemudian\" in \"Satu ketukan kemudian\" (P10) is left untouched. Optional targeted listening if the owner wants audible confirmation."
+    },
+    {
+      "rawIdx": 169,
+      "heard": "Gapernah",
+      "scriptFaithful": "Nggak pernah",
+      "class": "merge-split",
+      "action": "split",
+      "note": "Rapid \"nggak pernah\" merged by ASR into one token; span split for the script-faithful pair."
+    },
+    {
+      "rawIdx": 176,
+      "heard": "kop pilot",
+      "scriptFaithful": "copilot",
+      "class": "merge-split",
+      "action": "merged",
+      "note": "\"copilot\" split by ASR into two tokens (\"kop\"+\"pilot.\"); spans merged."
+    }
+  ],
+  "keptFormatting": [
+    "Hyphen-split tokens kept as ASR produced them: \"Baling\"+\"-baling\", \"Pura\"+\"-pura\", \"sekeras\"+\"-kerasnya\", \"pelan\"+\"-pelan\" (Episode 003 precedent).",
+    "Case and punctuation differences (e.g. \"tamat.\" vs \"Tamat.\") are harmless ASR formatting and were not regenerated."
+  ],
+  "wpmPacingNote": "Accepted takes measured 67-97 WPM against the generic 130±25% expectation. The Bahasa Bayi script is deliberately casual; the brief targets ~1.7 words/second overall (~102 WPM including pauses). No vocal-speed change was made; pacing is corrected only by tightening dead air.",
+  "result": "pass"
+}
