@@ -42,6 +42,7 @@ words = [w for w in words if w['word']]
 beats = []
 group = []
 manifest = json.loads((episode / 'manifest.json').read_text(encoding='utf-8'))
+fps = manifest['fps']
 cuts = [s['at'] for s in manifest['scenes']] + [manifest['duration']]
 
 # Work on the composition's exact frame grid and break each word's interval
@@ -49,8 +50,8 @@ cuts = [s['at'] for s in manifest['scenes']] + [manifest['duration']]
 # itself spans the cut; no multiword caption remains frozen across a cut.
 segments = []
 for word in words:
-    start = math.ceil(word['start'] * 30 - 1e-8)
-    end = math.ceil(word['end'] * 30 - 1e-8)
+    start = math.ceil(word['start'] * fps - 1e-8)
+    end = math.ceil(word['end'] * fps - 1e-8)
     for left, right in zip(cuts, cuts[1:]):
         a, b = max(start, left), min(end, right)
         if a < b:
@@ -61,8 +62,8 @@ def flush():
         return
     pieces = ' '.join(w['word'] for w in group).split()
     beats.append({
-        'startMs': group[0]['startFrame'] * 1000 / 30,
-        'endMs': group[-1]['endFrame'] * 1000 / 30,
+        'startMs': group[0]['startFrame'] * 1000 / fps,
+        'endMs': group[-1]['endFrame'] * 1000 / fps,
         'timestampMs': None, 'confidence': None, 'speaker': 'NARATOR',
         'words': [{'text': x.upper(), 'color': 'white'} for x in pieces],
     })

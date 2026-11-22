@@ -25,6 +25,8 @@ import episode06 from "../episodes/arc1/006-gema-di-underpass/manifest.json";
 import episode06Captions from "../episodes/arc1/006-gema-di-underpass/captions.json";
 import episode07 from "../episodes/arc1/007-pos-evakuasi-sunyi/manifest.json";
 import episode07Captions from "../episodes/arc1/007-pos-evakuasi-sunyi/captions.json";
+import pilotManifest from "../episodes/001-kamar-terkunci/manifest.json";
+import forestManifest from "../episodes/002-rumah-tengah-hutan/manifest.json";
 
 // Use for new episode registrations: the source file, not a fixed cap or the
 // editable manifest's potentially stale narration.duration, sets the runtime.
@@ -104,6 +106,6 @@ export const Root = () => <><Composition
 <Composition id="Arc01Episode05" component={Arc01Episode05} width={1080} height={1920} fps={episode05.fps} durationInFrames={episode05.duration} calculateMetadata={audioFirstMetadata(episode05 as EpisodeManifestV2)} defaultProps={{showCaptions: true, soundOn: true, narrationOn: true, effectsOn: true}} />
 <Composition id="Arc01Episode06" component={Arc01Episode06} width={1080} height={1920} fps={episode06.fps} durationInFrames={episode06.duration} calculateMetadata={audioFirstMetadata(episode06 as EpisodeManifestV2)} defaultProps={{showCaptions: true, soundOn: true, narrationOn: true, effectsOn: true}} />
 <Composition id="Arc01Episode07" component={Arc01Episode07} width={1080} height={1920} fps={episode07.fps} durationInFrames={episode07.duration} calculateMetadata={audioFirstMetadata(episode07 as EpisodeManifestV2)} defaultProps={{showCaptions: true, soundOn: true, narrationOn: true, effectsOn: true}} />
-<Composition id="Skenario01KamarTerkunci" component={Skenario01KamarTerkunci} width={1080} height={1920} fps={30} durationInFrames={4703} />
-<Composition id="Skenario02RumahTengahHutan" component={Skenario02RumahTengahHutan} width={1080} height={1920} fps={30} durationInFrames={4620} />
+<Composition id="Skenario01KamarTerkunci" component={Skenario01KamarTerkunci} width={1080} height={1920} fps={pilotManifest.fps} durationInFrames={pilotManifest.duration} />
+<Composition id="Skenario02RumahTengahHutan" component={Skenario02RumahTengahHutan} width={1080} height={1920} fps={forestManifest.fps} durationInFrames={forestManifest.duration} />
 </>;

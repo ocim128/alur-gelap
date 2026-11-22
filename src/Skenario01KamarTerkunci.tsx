@@ -12,7 +12,7 @@ export const Skenario01KamarTerkunci = () => {
  const plate=<AbsoluteFill style={{overflow:'hidden'}}><Img src={staticFile(scene.plate)} style={{width:'100%',height:'100%',objectFit:'fill'}} /></AbsoluteFill>;
  const hatch=scene.id==='P02'?{x:.19,y:.416,width:.155,height:.035}:scene.id==='P03'?{x:.242,y:.447,width:.222,height:.052}:scene.id==='P19'?{x:.16,y:.407,width:.20,height:.047}:null;
  return <AbsoluteFill style={{backgroundColor:'#000'}}>
- <Audio src={staticFile('assets/001-kamar-terkunci/mix-master.wav')} />
+ <Audio src={staticFile(manifest.soundMix.asset)} />
  {frame<manifest.blackoutFrame && <>
  <AbsoluteFill style={{transform:`scale(${interpolate(frame,[scene.at,next],[1,1.015],{extrapolateLeft:'clamp',extrapolateRight:'clamp'})})`}}>{scene.id==='P07'?<ImpactMicroShake contactFrame={Math.round(35.67*30)} jitterPx={5} pushPx={8}>{plate}</ImpactMicroShake>:plate}
  {hatch && <SlidingHatchOverlay box={hatch} initialOpen={0} transitions={scene.id==='P02'?[{at:165,duration:6,from:0,to:1},{at:198,duration:6,from:1,to:0}]:scene.id==='P03'?[{at:Math.round(6.95*30),duration:8,from:0,to:1},{at:Math.round(10.65*30),duration:8,from:1,to:0}]:[{at:mapFrame(Math.round(107.73*30)),duration:8,from:0,to:1},{at:mapFrame(Math.round(112.65*30)),duration:8,from:1,to:0}]} />}

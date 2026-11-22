@@ -80,6 +80,8 @@ test("studio v2 accepts a long decision-consequence pilot without changing the v
   const pilot = clone();
   pilot.pipelineVersion = 2;
   pilot.duration = 120 * pilot.fps;
+  pilot.soundMix = {asset: `${assetDir}/narration.mp3`};
+  pilot.timing = {blackoutFrame: pilot.duration - 1, rewindFrame: 100, rewindFrames: 12};
   pilot.narration.duration = 115 * pilot.fps;
   pilot.art.styleId = "urban-silhouette-noir";
   for (const path of Object.keys(pilot.art.rasterAssets)) pilot.art.rasterAssets[path] = pilot.art.styleId;
@@ -97,6 +99,23 @@ test("studio v2 accepts a long decision-consequence pilot without changing the v
   assert.throws(() => validate({...pilot, pipelineVersion: 3}), /invalid pipelineVersion/);
   pilot.script.wordCount = 185;
   assert.ok(validate(pilot).warnings.some(warning => /spoken word count/.test(warning)));
+});
+
+test("studio player rejects missing mix, invalid blackout and invalid rewind intervals", () => {
+  const episode = JSON.parse(readFileSync('episodes/002-rumah-tengah-hutan/manifest.json'));
+  const episodeCaptions = JSON.parse(readFileSync('episodes/002-rumah-tengah-hutan/captions.json'));
+  const check = value => validateEpisode(value, episodeCaptions, {publicDir: resolve('public'), manifestPath: '002-rumah-tengah-hutan/manifest.json'});
+  assert.doesNotThrow(() => check(episode));
+  const missing = structuredClone(episode); missing.soundMix.asset = 'assets/002-rumah-tengah-hutan/missing.wav';
+  assert.throws(() => check(missing), /playback mix: missing asset/);
+  for (const frame of [episode.duration, episode.duration + 1, -1, 1.5]) {
+    const invalid = structuredClone(episode); invalid.timing.blackoutFrame = frame;
+    assert.throws(() => check(invalid), /invalid blackout frame/);
+  }
+  const invalid = structuredClone(episode); invalid.timing.rewindFrame = invalid.timing.blackoutFrame - 1; invalid.timing.rewindFrames = 12;
+  assert.throws(() => check(invalid), /invalid branchRewind interval/);
+  const drifted = structuredClone(episode); drifted.timing.climaxThunderFrame += 1;
+  assert.throws(() => check(drifted), /scene start differs from named cue/);
 });
 
 test("climax timing and optional image must be valid and fit the composition", () => {

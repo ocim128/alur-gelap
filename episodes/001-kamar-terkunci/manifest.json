@@ -5,6 +5,7 @@
   "fps": 30,
   "duration": 4703,
   "captions": "captions.json",
+  "soundMix": {"asset": "assets/001-kamar-terkunci/mix-master.wav"},
   "openingTitle": "KAMAR INI TERKUNCI",
   "narration": {
     "asset": "assets/001-kamar-terkunci/narration-prepared.mp3",

@@ -5,6 +5,7 @@ import {SpeakerCaption} from './components/SpeakerCaption';
 import {BranchRewindTransition} from './components/StudioV2';
 import {sceneAtFrame, splitCaptionsAtCuts, validateScenes} from './studio-v2-timeline';
 import type {StudioCaption, StudioScene} from './studio-v2-timeline';
+import {studioTimingError} from './studio-v2-timing.mjs';
 
 export type StudioV2Manifest = {
   duration: number;
@@ -29,7 +30,12 @@ export function StudioV2Player({manifest, captions, plateOverlay, overlay}: Stud
   const splitCaptions = useMemo(() => splitCaptionsAtCuts(captions, manifest.scenes, fps), [captions, manifest.scenes, fps]);
   validateScenes(manifest.scenes, manifest.duration);
   if (manifest.duration !== durationInFrames) throw new Error('Player manifest duration must match the composition');
-  if (!Number.isInteger(manifest.timing.blackoutFrame) || manifest.timing.blackoutFrame < 0 || manifest.timing.blackoutFrame > manifest.duration) throw new Error('Invalid blackout frame');
+  const timingError = studioTimingError(manifest.timing, manifest.duration, fps);
+  if (timingError) throw new Error(timingError);
+  const namedTiming = manifest.timing as Record<string, number | undefined>;
+  for (const item of manifest.scenes) {
+    if (item.atCue && item.at !== namedTiming[item.atCue]) throw new Error(`${item.id}: scene start differs from named cue ${item.atCue}`);
+  }
   const {scene, index, endFrame} = sceneAtFrame(manifest.scenes, manifest.duration, frame);
   const context = {frame, fps, scene, sceneIndex: index, sceneEndFrame: endFrame};
   const progress = interpolate(frame, [scene.at, Math.max(scene.at + 1, endFrame - 1)], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});

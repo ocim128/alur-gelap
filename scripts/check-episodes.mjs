@@ -3,6 +3,7 @@ import {createHash} from "node:crypto";
 import {readFileSync, readdirSync, realpathSync, statSync} from "node:fs";
 import {join, relative, resolve, sep} from "node:path";
 import {fileURLToPath} from "node:url";
+import {studioTimingError} from "../src/studio-v2-timing.mjs";
 
 const isFrame = (v) => Number.isInteger(v) && v >= 0;
 const nonempty = (v) => typeof v === "string" && v.trim().length > 0;
@@ -94,6 +95,19 @@ export function validateEpisode(manifest, captions, {publicDir, manifestPath, ba
   };
   fail(nonempty(id) && /^[a-zA-Z0-9-]+$/.test(id), "invalid composition id");
   fail(isFrame(fps) && fps > 0 && isFrame(duration) && duration > 0, "invalid duration/fps");
+  if (studioV2) {
+    batchAsset(manifest.soundMix?.asset, "playback mix");
+    if (manifest.soundMix.sampleRate !== undefined) fail(Number.isInteger(manifest.soundMix.sampleRate) && manifest.soundMix.sampleRate > 0, "invalid playback sample rate");
+    const timing = manifest.timing ?? {blackoutFrame: manifest.blackoutFrame, rewindFrame: manifest.rewindFrame, rewindFrames: manifest.rewindFrames};
+    const timingError = studioTimingError(timing, duration, fps);
+    fail(!timingError, timingError);
+    if (["branch-rewind", "both"].includes(manifest.script?.engine)) fail(timing.rewindFrame !== undefined, "branch-rewind requires a rewind frame");
+    for (const [name, value] of Object.entries(timing)) {
+      if (name.endsWith("Frame")) fail(isFrame(value) && value < duration, `${name}: invalid cue frame`);
+      if (name.endsWith("SampleOffset")) fail(Number.isInteger(value), `${name}: invalid sample offset`);
+      if (name.endsWith("SilenceFrames")) fail(Array.isArray(value) && value.length === 2 && isFrame(value[0]) && isFrame(value[1]) && value[0] < value[1] && value[1] <= duration, `${name}: invalid silence interval`);
+    }
+  }
   if (manifest.tensionRamp !== undefined) {
     const r = manifest.tensionRamp;
     fail(r && Number.isFinite(r.startSec) && r.startSec >= 0 && Number.isFinite(r.endSec) && r.endSec > r.startSec && r.endSec * fps <= duration && unit(r.extraScale) && unit(r.vignetteStrength), "invalid tensionRamp");
@@ -205,6 +219,7 @@ export function validateEpisode(manifest, captions, {publicDir, manifestPath, ba
     const length = end - scene.at;
     fail(isFrame(scene.at) && isFrame(end) && length > 0 && end <= duration, `${scene.id}: invalid scene interval ${scene.at}–${end}`);
     fail(nonempty(scene.id) && !sceneIds.has(scene.id), `duplicate/missing scene id ${scene.id}`); sceneIds.add(scene.id);
+    if (studioV2 && scene.atCue !== undefined) fail(nonempty(scene.atCue) && scene.at === manifest.timing?.[scene.atCue], `${scene.id}: scene start differs from named cue ${scene.atCue}`);
     const plate = raster(scene.plate, `${scene.id} plate`);
     if (strict) plateUses.push({scene, fingerprint: batchAssets.get(plate).fingerprint});
     fail(scene.camera?.from && scene.camera?.to && [scene.camera.from, scene.camera.to].every(c => Number.isFinite(c.scale) && c.scale > 0 && Number.isFinite(c.x) && Number.isFinite(c.y)), `${scene.id}: invalid camera`);

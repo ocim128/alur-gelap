@@ -2,6 +2,7 @@ export type StudioScene = {
   id: string;
   at: number;
   plate: string;
+  atCue?: string;
   camera?: {from: {scale: number; x: number; y: number}; to: {scale: number; x: number; y: number}};
 };
 

@@ -698,7 +698,8 @@
           "x": 0,
           "y": 0
         }
-      ]
+      ],
+      "atCue": "rewindFrame"
     },
     {
       "id": "P12",
@@ -1070,7 +1071,8 @@
           "x": 0,
           "y": 0
         }
-      ]
+      ],
+      "atCue": "climaxThunderFrame"
     },
     {
       "id": "P20",
@@ -1322,50 +1324,51 @@
     "cues": [
       {
         "name": "synthetic rain and wind",
-        "atSec": 0
+        "timingKey": "ambientFrame"
       },
       {
         "name": "falling pine",
         "asset": "sfx/prepared/body-fall.wav",
-        "atSec": 9.1
+        "timingKey": "fallingPineFrame"
       },
       {
         "name": "branches",
         "asset": "sfx/prepared/coat-shift.wav",
-        "atSec": 18.9
+        "timingKey": "branchesFrame"
       },
       {
         "name": "setup thunder",
-        "atSec": 32.7,
-        "source": "deterministic synthesized noise"
+        "source": "deterministic synthesized noise",
+        "timingKey": "setupThunderFrame"
       },
       {
         "name": "exposed strike",
         "asset": "assets/002-rumah-tengah-hutan/wood-hit.ogg",
-        "atSec": 62.2333333333
+        "timingKey": "exposedStrikeFrame"
       },
       {
         "name": "rewind",
         "asset": "sfx/prepared/tension-rise.wav",
-        "atSec": 84.6
+        "timingKey": "rewindFrame"
       },
       {
         "name": "climax thunder and masked strike",
         "asset": "assets/002-rumah-tengah-hutan/wood-hit.ogg",
-        "atSec": 123.9459133333,
-        "thunderAtSec": 123.9333333333
+        "timingKey": "climaxThunderFrame",
+        "woodSampleOffsetKey": "maskedWoodSampleOffset"
       },
       {
         "name": "door creak",
         "asset": "sfx/prepared/minimarket-door-creak-outside.wav",
-        "atSec": 143.34
+        "timingKey": "doorCreakFrame"
       },
       {
         "name": "blackout sub",
-        "atSec": 152.65,
-        "source": "deterministic sine"
+        "source": "deterministic sine",
+        "timingKey": "blackoutSubFrame"
       }
-    ]
+    ],
+    "sampleRate": 48000
   },
   "timing": {
     "setupFlashFrame": 891,
@@ -1374,16 +1377,41 @@
     "climaxThunderFrame": 3718,
     "rewindFrame": 2538,
     "rewindFrames": 12,
-    "postRewindSilence": [
-      88.6,
-      90.2
-    ],
-    "postThunderSilence": [
-      139.0,
-      141.0
-    ],
     "blackoutFrame": 4575,
-    "blackoutSubFrame": 4580
+    "blackoutSubFrame": 4580,
+    "fallingPineFrame": 273,
+    "branchesFrame": 567,
+    "exposedStrikeFrame": 1867,
+    "clothesFirstFrame": 1512,
+    "firstStepLeftFrame": 1466,
+    "firstStepLeftSampleOffset": -800,
+    "firstStepRightFrame": 1476,
+    "clothesLaterFrame": 2121,
+    "fallFirstFrame": 2330,
+    "fallFirstSampleOffset": -320,
+    "fallSecondFrame": 2402,
+    "fallSecondSampleOffset": -320,
+    "clothesAfterRewindFrame": 3203,
+    "clothesAfterRewindSampleOffset": -320,
+    "stepAfterRewindLeftFrame": 3276,
+    "stepAfterRewindRightFrame": 3291,
+    "doorCreakFrame": 4300,
+    "doorCreakSampleOffset": 320,
+    "escapeStepOneFrame": 4359,
+    "escapeStepTwoFrame": 4372,
+    "escapeStepTwoSampleOffset": 800,
+    "escapeStepThreeFrame": 4386,
+    "postRewindSilenceFrames": [
+      2658,
+      2706
+    ],
+    "postThunderSilenceFrames": [
+      4170,
+      4230
+    ],
+    "blackoutSubSampleOffset": -800,
+    "maskedWoodSampleOffset": 604,
+    "ambientFrame": 0
   },
   "notes": "Original narration retained. The climax flash is at 120.933333 s and the thunder/impact at 123.933333 s, 13.333 ms after the measured BRAK start at 123.920 s. The earlier Kilat menyala line starts at 114.360 s and the count finishes at 119.080 s; neither can coincide with the flash without changing the accepted narration."
 }

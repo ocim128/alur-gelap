@@ -1,4 +1,4 @@
-import {AbsoluteFill, Img, interpolate, staticFile, useCurrentFrame} from 'remotion';
+import {AbsoluteFill, Img, interpolate, staticFile, useCurrentFrame, useVideoConfig} from 'remotion';
 import {Audio} from '@remotion/media';
 import {BranchRewindTransition, ImpactMicroShake} from './components/StudioV2';
 import manifest from '../episodes/002-rumah-tengah-hutan/manifest.json';
@@ -15,16 +15,17 @@ const windowMasks: Record<string, string> = {
 
 export const Skenario02RumahTengahHutan = () => {
   const frame = useCurrentFrame();
+  const {fps} = useVideoConfig();
   const sceneIndex = manifest.scenes.reduce((last, scene, i) => scene.at <= frame ? i : last, 0);
   const scene = manifest.scenes[sceneIndex];
   const end = manifest.scenes[sceneIndex + 1]?.at ?? manifest.duration;
-  const caption = captions.find(c => frame * 1000 / 30 >= c.startMs && frame * 1000 / 30 < c.endMs);
+  const caption = captions.find(c => frame * 1000 / fps >= c.startMs && frame * 1000 / fps < c.endMs);
   const captionText = caption?.words.map(w => w.text).join(' ') ?? '';
   const t = manifest.timing;
   const isFlash = [t.setupFlashFrame, t.climaxFlashFrame, t.climaxThunderFrame]
     .some(at => frame >= at && frame < at + 3); // last flash is the impact jolt
   const isImpact = scene.id === 'P08' || scene.id === 'P19';
-  const contact = scene.id === 'P08' ? 1867 : t.climaxThunderFrame;
+  const contact = scene.id === 'P08' ? t.exposedStrikeFrame : t.climaxThunderFrame;
   const progress = interpolate(frame, [scene.at, end], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
   const zoom = 1.035 + .04 * progress;
   const pan = (sceneIndex % 2 === 0 ? 1 : -1) * (-10 + 20 * progress);
@@ -38,7 +39,7 @@ export const Skenario02RumahTengahHutan = () => {
     </AbsoluteFill>
   </AbsoluteFill>;
   return <AbsoluteFill style={{backgroundColor: '#000', overflow: 'hidden'}}>
-    <Audio src={staticFile('assets/002-rumah-tengah-hutan/mix-polish.wav')} />
+    <Audio src={staticFile(manifest.soundMix.asset)} />
     {frame < t.blackoutFrame && <>
       {isImpact ? <ImpactMicroShake contactFrame={contact} jitterPx={7} pushPx={8} durationFrames={10}>{plate}</ImpactMicroShake> : plate}
       {outdoor.has(scene.id) && <AbsoluteFill style={{pointerEvents: 'none', overflow: 'hidden',
@@ -50,7 +51,7 @@ export const Skenario02RumahTengahHutan = () => {
       </AbsoluteFill>}
       <BranchRewindTransition startFrame={t.rewindFrame} durationFrames={t.rewindFrames} intensity={.85} seed="forest-rewind" />
       {isFlash && <AbsoluteFill style={{backgroundColor:'rgba(255,255,255,.85)', pointerEvents:'none'}} />}
-      {frame < 54 && <div style={{position:'absolute', top:'19%', left:'12.5%', width:'75%', textAlign:'center',
+      {frame < Math.round(1.8 * fps) && <div style={{position:'absolute', top:'19%', left:'12.5%', width:'75%', textAlign:'center',
         font:'900 54px Arial, sans-serif', color:'white', textShadow:'0 4px 9px black'}}>PONDOK TENGAH BADAI</div>}
       {caption && <div style={{position:'absolute', top:'77%', left:scene.id === 'P15' ? '0%' : '5%', width:scene.id === 'P15' ? '80%' : '90%', textAlign:'center',
         whiteSpace:'nowrap', fontFamily:'Arial, sans-serif', fontWeight:900,
