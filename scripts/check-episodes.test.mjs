@@ -71,6 +71,9 @@ test("speaker captions hide narrator labels and retain colored world-voice label
   assert.match(dialogue, /PENCULIK/);
   assert.match(dialogue, /JANGAN GERAK/);
   assert.match(dialogue, /color:#ffe154/i);
+  const indonesian = renderToStaticMarkup(React.createElement(SpeakerCaption, {text: "satu-satunya pelan-pelan keras-keras dihantam"}));
+  assert.match(indonesian, /top:77%/);
+  assert.match(indonesian, /satu-satunya pelan-pelan keras-keras dihantam/);
 });
 
 test("studio v2 accepts a long decision-consequence pilot without changing the v1 ceiling", () => {

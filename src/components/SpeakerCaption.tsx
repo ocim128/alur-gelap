@@ -9,7 +9,7 @@ export function SpeakerCaption({speaker, text}: SpeakerCaptionProps) {
   const voiceColor = narrator ? "white" : "#ffe154";
 
   return <div style={{
-    position: "absolute", top: "72%", width: "100%", textAlign: "center",
+    position: "absolute", top: "77%", left: "5%", width: "90%", textAlign: "center",
     fontFamily: "Arial, sans-serif", fontWeight: 900, color: voiceColor,
     textShadow: "-3px -3px 0 #000, 3px -3px 0 #000, -3px 3px 0 #000, 3px 3px 0 #000",
   }}>
