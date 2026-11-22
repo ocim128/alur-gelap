@@ -20,11 +20,13 @@ export type StudioV2PlayerProps = {
   captions: StudioCaption[];
   /** Drawn inside the moving plate, for spatially locked props and masks. */
   plateOverlay?: (context: StudioV2OverlayContext) => ReactNode;
+  /** Optional episode-specific motion composed with the plate camera. */
+  plateTransform?: (context: StudioV2OverlayContext) => string;
   /** Drawn above the plate, for screen-space atmosphere, flashes or titles. */
   overlay?: (context: StudioV2OverlayContext) => ReactNode;
 };
 
-export function StudioV2Player({manifest, captions, plateOverlay, overlay}: StudioV2PlayerProps) {
+export function StudioV2Player({manifest, captions, plateOverlay, plateTransform, overlay}: StudioV2PlayerProps) {
   const frame = useCurrentFrame();
   const {fps, durationInFrames} = useVideoConfig();
   const splitCaptions = useMemo(() => splitCaptionsAtCuts(captions, manifest.scenes, fps), [captions, manifest.scenes, fps]);
@@ -51,7 +53,7 @@ export function StudioV2Player({manifest, captions, plateOverlay, overlay}: Stud
   return <AbsoluteFill style={{backgroundColor: '#000', overflow: 'hidden'}}>
     <Audio src={staticFile(manifest.soundMix.asset)} volume={manifest.soundMix.gain ?? 1} />
     {frame < manifest.timing.blackoutFrame && <>
-      <AbsoluteFill style={{overflow: 'hidden'}}><AbsoluteFill style={{transform: `translate(${x}px, ${y}px) scale(${scale})`}}>
+      <AbsoluteFill style={{overflow: 'hidden'}}><AbsoluteFill style={{transform: `translate(${x}px, ${y}px) scale(${scale}) ${plateTransform?.(context) ?? ''}`}}>
         <Img src={staticFile(scene.plate)} style={{width: '100%', height: '100%', objectFit: 'cover'}} />
         {plateOverlay?.(context)}
       </AbsoluteFill></AbsoluteFill>

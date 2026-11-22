@@ -1,3 +1,5 @@
+import {Skenario03GoyanganDekEnam} from './Skenario03GoyanganDekEnam';
+import deckManifest from '../episodes/003-goyangan-dek-enam/manifest.json';
 import {Skenario01KamarTerkunci} from './Skenario01KamarTerkunci';
 import {Skenario02RumahTengahHutan} from './Skenario02RumahTengahHutan';
 import {Composition, staticFile, type CalculateMetadataFunction} from "remotion";
@@ -108,4 +110,5 @@ export const Root = () => <><Composition
 <Composition id="Arc01Episode07" component={Arc01Episode07} width={1080} height={1920} fps={episode07.fps} durationInFrames={episode07.duration} calculateMetadata={audioFirstMetadata(episode07 as EpisodeManifestV2)} defaultProps={{showCaptions: true, soundOn: true, narrationOn: true, effectsOn: true}} />
 <Composition id="Skenario01KamarTerkunci" component={Skenario01KamarTerkunci} width={1080} height={1920} fps={pilotManifest.fps} durationInFrames={pilotManifest.duration} />
 <Composition id="Skenario02RumahTengahHutan" component={Skenario02RumahTengahHutan} width={1080} height={1920} fps={forestManifest.fps} durationInFrames={forestManifest.duration} />
+<Composition id="Skenario03GoyanganDekEnam" component={Skenario03GoyanganDekEnam} width={1080} height={1920} fps={deckManifest.fps} durationInFrames={deckManifest.duration} />
 </>;

@@ -1,0 +1,74 @@
+{
+  "video": "out\\003-goyangan-dek-enam\\Skenario03GoyanganDekEnam-master_compressed.mp4",
+  "durationSec": 158.0,
+  "silences": {
+    "postRewind": {
+      "startSec": 75.8,
+      "endSec": 77.4,
+      "peakDbfs": -57.21,
+      "rmsDbfs": -88.99,
+      "interiorPeakDbfs": -300.0,
+      "interiorEdgeTrimMs": 10.0
+    },
+    "postPin": {
+      "startSec": 135.46,
+      "endSec": 137.46,
+      "peakDbfs": -49.99,
+      "rmsDbfs": -86.2,
+      "interiorPeakDbfs": -300.0,
+      "interiorEdgeTrimMs": 10.0
+    },
+    "blackoutLead": {
+      "startSec": 153.85,
+      "endSec": 154.0,
+      "peakDbfs": -73.2,
+      "rmsDbfs": -96.43,
+      "interiorPeakDbfs": -106.91,
+      "interiorEdgeTrimMs": 10.0
+    }
+  },
+  "errors": [],
+  "blackoutAudio": {
+    "frame": 4620,
+    "visualSec": 154.0,
+    "onsetSec": 154.000167,
+    "offsetMs": 0.167,
+    "threshold": 0.001
+  },
+  "impactAudio": {
+    "anchorSec": 117.28,
+    "detectedSec": 117.28,
+    "offsetMs": 0.0,
+    "normalizedCorrelation": 0.8013
+  },
+  "visualFrames": [
+    {
+      "frame": 3517,
+      "meanLuma": 66.47
+    },
+    {
+      "frame": 3518,
+      "meanLuma": 165.72
+    },
+    {
+      "frame": 3519,
+      "meanLuma": 165.5
+    },
+    {
+      "frame": 3520,
+      "meanLuma": 166.57
+    },
+    {
+      "frame": 3521,
+      "meanLuma": 65.72
+    },
+    {
+      "frame": 4619,
+      "meanLuma": 31.29
+    },
+    {
+      "frame": 4620,
+      "meanLuma": 0.0
+    }
+  ]
+}

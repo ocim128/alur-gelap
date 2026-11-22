@@ -1,0 +1,18 @@
+﻿# Agent 04 assembly readiness — Goyangan Dek Enam
+
+**Result: blocked before assembly.** `brief` and owner-accepted `audio` are `pass`; the selected image batch is `fail`. The Agent 04 contract requires all three input stages to pass, and its scope prohibits inventing or replacing panels. This record is a readiness check, not a rendered cut or a post-MP4 audit.
+
+## Routing for the human orchestrator
+
+- **Image stage:** `P04` does not show a continuous hoist connection; `P19`/`P21` do not clearly establish the entity compressed against the established side wall; `P20`–`P23` do not consistently carry the fixed-support pin and wall geography. The owner-requested four-hand design remains in force. Per `sources/prompts.md`, these panels have exhausted their correction attempts; the latest P23 alternative is unselected and introduces hair / an unclear pin. Direct a remedy and establish the selected batch's status before Agent 04 assembly. The available 24 selected plates are preserved.
+- **Audio cue handoff:** The owner-accepted narration is 151.035 s, mono 48 kHz, with the last sidecar word ending at 150.020 s. The supplied 10 SFX files are present. Several listed cue-sheet elements do not have individually identified handoff assets, including wet steps, vest handling/splash, entity choke and survivor breathing; Agent 02 should identify their intended assets or treatment before final sound design. This is a provenance/coverage observation, not a claim that no such sound is audible inside the prepared files.
+- **Dread-silence correction for assembly:** Although the asset record describes the supplied `ship-ambience-bed.wav` as muted in the deliberate pauses, decoded measurements of the supplied bed show about −27.4 dBFS RMS during 75.800–77.400 s and −27.5 dBFS RMS during 135.460–137.460 s (mono downmix). The assembler must gate the bed and other overlapping effects in those intervals; do not modify the accepted narration source. Verify residual levels on the encoded compressed delivery.
+- **Ending timing:** The handoff schedules the 0.350 s blackout hit at 153.500–153.850 s, while the brief calls for a hit *at* the 154.000 s black cut and a 4 s black tail. Those instructions cannot all be true on a 154 s total composition. An assembly candidate is a black cut and hit at 154.000 s with a 4 s tail ending at 158.000 s, within the brief's 145–160 s range, provided the approved script, audio and scene timing support it. This is a proposal, not a measured final mix or an approved change. Align the hit onset to the encoded black frame and verify the prescribed pre-hit silence and compressed true peak.
+
+## Available measured anchors
+
+The accepted timing sidecar places `Tamat` at 69.520–70.400 s, `balik` at 71.520–71.860 s, `Tarik` at 111.240–111.620 s, `BRAK!` at 117.280–117.960 s, `KLIK!` at 125.320–126.040 s, and `hidup.` at 149.720–150.020 s. These are the timing sidecar's word boundaries, not a listening verification. Use the 70.400 s rewind gap and align impact and locking cues to their measured anchors when assembly is authorized.
+
+No selected image, narration, arc record, manifest, composition, MP4, independent audit verdict or publication state was changed. The source audio's approval is preserved; it does not imply that its pronunciation, final mix or visual sync was independently reviewed.
+
+**Superseded by owner direction:** On 22 November 2026 the owner approved proceeding with the existing selected panel batch. The hoist, wall/contact and pin caveats remain recorded and are not represented as repaired. The completed render and verification are recorded in `assembly-handoff.md`.

@@ -1,0 +1,1430 @@
+{
+  "schemaVersion": 2,
+  "pipelineVersion": 2,
+  "id": "Skenario03GoyanganDekEnam",
+  "fps": 30,
+  "duration": 4740,
+  "captions": "captions.json",
+  "openingTitle": "GOYANGAN DEK ENAM",
+  "narration": {
+    "asset": "assets/003-goyangan-dek-enam/narration-prepared.mp3",
+    "at": 0,
+    "duration": 4532,
+    "gain": 1
+  },
+  "art": {
+    "styleId": "urban-silhouette-noir",
+    "rasterAssets": {
+      "assets/003-goyangan-dek-enam/master-batch-01/p01.webp": "urban-silhouette-noir",
+      "assets/003-goyangan-dek-enam/master-batch-01/p02.webp": "urban-silhouette-noir",
+      "assets/003-goyangan-dek-enam/master-batch-01/p03.webp": "urban-silhouette-noir",
+      "assets/003-goyangan-dek-enam/master-batch-01/p04.webp": "urban-silhouette-noir",
+      "assets/003-goyangan-dek-enam/master-batch-01/p05.webp": "urban-silhouette-noir",
+      "assets/003-goyangan-dek-enam/master-batch-01/p06.webp": "urban-silhouette-noir",
+      "assets/003-goyangan-dek-enam/master-batch-01/p07.webp": "urban-silhouette-noir",
+      "assets/003-goyangan-dek-enam/master-batch-01/p08.webp": "urban-silhouette-noir",
+      "assets/003-goyangan-dek-enam/master-batch-01/p09.webp": "urban-silhouette-noir",
+      "assets/003-goyangan-dek-enam/master-batch-01/p10.webp": "urban-silhouette-noir",
+      "assets/003-goyangan-dek-enam/master-batch-01/p11.webp": "urban-silhouette-noir",
+      "assets/003-goyangan-dek-enam/master-batch-01/p12.webp": "urban-silhouette-noir",
+      "assets/003-goyangan-dek-enam/master-batch-01/p13.webp": "urban-silhouette-noir",
+      "assets/003-goyangan-dek-enam/master-batch-01/p14.webp": "urban-silhouette-noir",
+      "assets/003-goyangan-dek-enam/master-batch-01/p15.webp": "urban-silhouette-noir",
+      "assets/003-goyangan-dek-enam/master-batch-01/p16.webp": "urban-silhouette-noir",
+      "assets/003-goyangan-dek-enam/master-batch-01/p17.webp": "urban-silhouette-noir",
+      "assets/003-goyangan-dek-enam/master-batch-01/p18.webp": "urban-silhouette-noir",
+      "assets/003-goyangan-dek-enam/master-batch-01/p19.webp": "urban-silhouette-noir",
+      "assets/003-goyangan-dek-enam/master-batch-01/p20.webp": "urban-silhouette-noir",
+      "assets/003-goyangan-dek-enam/master-batch-01/p21.webp": "urban-silhouette-noir",
+      "assets/003-goyangan-dek-enam/master-batch-01/p22.webp": "urban-silhouette-noir",
+      "assets/003-goyangan-dek-enam/master-batch-01/p23.webp": "urban-silhouette-noir",
+      "assets/003-goyangan-dek-enam/master-batch-01/p24.webp": "urban-silhouette-noir"
+    }
+  },
+  "script": {
+    "format": "decision-consequence",
+    "engine": "branch-rewind",
+    "wordCount": 263,
+    "hook": {
+      "at": 0,
+      "line": "Kapalnya terus oleng, tapi bayangan di depanmu berdiri tegak."
+    },
+    "ending": {
+      "at": 4283,
+      "twistAt": 4446,
+      "payoff": "Survivor waits for dawn after trapping the entity."
+    }
+  },
+  "tensionRamp": {
+    "startSec": 151,
+    "endSec": 153.85,
+    "extraScale": 0.01,
+    "vignetteStrength": 0.1
+  },
+  "beds": [],
+  "scenes": [
+    {
+      "id": "P01",
+      "name": "Panel 01",
+      "at": 0,
+      "atCue": "p01StartFrame",
+      "plate": "assets/003-goyangan-dek-enam/master-batch-01/p01.webp",
+      "camera": {
+        "from": {
+          "scale": 1.12,
+          "x": -6,
+          "y": 0
+        },
+        "to": {
+          "scale": 1.16,
+          "x": 6,
+          "y": 0
+        }
+      },
+      "characters": {
+        "mode": "baked"
+      },
+      "hud": [],
+      "editorial": {
+        "protagonist": "visible",
+        "purpose": "threat-proximity",
+        "evidence": "Owner-approved selected P01; see image audit for caveats."
+      },
+      "reframes": [
+        {
+          "at": 0,
+          "duration": 30,
+          "scale": 1.12723,
+          "x": -3.831,
+          "y": 0
+        },
+        {
+          "at": 70,
+          "duration": 30,
+          "scale": 1.1441,
+          "x": 1.229,
+          "y": 0
+        },
+        {
+          "at": 140,
+          "duration": 26,
+          "scale": 1.16,
+          "x": 6.0,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "id": "P02",
+      "name": "Panel 02",
+      "at": 166,
+      "atCue": "p02StartFrame",
+      "plate": "assets/003-goyangan-dek-enam/master-batch-01/p02.webp",
+      "camera": {
+        "from": {
+          "scale": 1.12,
+          "x": 6,
+          "y": 0
+        },
+        "to": {
+          "scale": 1.16,
+          "x": -6,
+          "y": 0
+        }
+      },
+      "characters": {
+        "mode": "baked"
+      },
+      "hud": [],
+      "editorial": {
+        "protagonist": "absent",
+        "purpose": "threat-proximity",
+        "evidence": "Owner-approved selected P02; see image audit for caveats."
+      },
+      "reframes": [
+        {
+          "at": 0,
+          "duration": 30,
+          "scale": 1.12632,
+          "x": 4.105,
+          "y": 0
+        },
+        {
+          "at": 70,
+          "duration": 30,
+          "scale": 1.14105,
+          "x": -0.316,
+          "y": 0
+        },
+        {
+          "at": 140,
+          "duration": 30,
+          "scale": 1.15579,
+          "x": -4.737,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "id": "P03",
+      "name": "Panel 03",
+      "at": 356,
+      "atCue": "p03StartFrame",
+      "plate": "assets/003-goyangan-dek-enam/master-batch-01/p03.webp",
+      "camera": {
+        "from": {
+          "scale": 1.12,
+          "x": -6,
+          "y": 0
+        },
+        "to": {
+          "scale": 1.16,
+          "x": 6,
+          "y": 0
+        }
+      },
+      "characters": {
+        "mode": "baked"
+      },
+      "hud": [],
+      "editorial": {
+        "protagonist": "absent",
+        "purpose": "threat-proximity",
+        "evidence": "Owner-approved selected P03; see image audit for caveats."
+      },
+      "reframes": [
+        {
+          "at": 0,
+          "duration": 30,
+          "scale": 1.12896,
+          "x": -3.313,
+          "y": 0
+        },
+        {
+          "at": 70,
+          "duration": 30,
+          "scale": 1.14985,
+          "x": 2.955,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "id": "P04",
+      "name": "Panel 04",
+      "at": 490,
+      "atCue": "p04StartFrame",
+      "plate": "assets/003-goyangan-dek-enam/master-batch-01/p04.webp",
+      "camera": {
+        "from": {
+          "scale": 1.12,
+          "x": 6,
+          "y": 0
+        },
+        "to": {
+          "scale": 1.16,
+          "x": -6,
+          "y": 0
+        }
+      },
+      "characters": {
+        "mode": "baked"
+      },
+      "hud": [],
+      "editorial": {
+        "protagonist": "absent",
+        "purpose": "threat-proximity",
+        "evidence": "Owner-approved selected P04; see image audit for caveats."
+      },
+      "reframes": [
+        {
+          "at": 0,
+          "duration": 30,
+          "scale": 1.12424,
+          "x": 4.728,
+          "y": 0
+        },
+        {
+          "at": 70,
+          "duration": 30,
+          "scale": 1.13413,
+          "x": 1.76,
+          "y": 0
+        },
+        {
+          "at": 140,
+          "duration": 30,
+          "scale": 1.14403,
+          "x": -1.208,
+          "y": 0
+        },
+        {
+          "at": 210,
+          "duration": 30,
+          "scale": 1.15392,
+          "x": -4.177,
+          "y": 0
+        },
+        {
+          "at": 280,
+          "duration": 3,
+          "scale": 1.16,
+          "x": -6.0,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "id": "P05",
+      "name": "Panel 05",
+      "at": 773,
+      "atCue": "p05StartFrame",
+      "plate": "assets/003-goyangan-dek-enam/master-batch-01/p05.webp",
+      "camera": {
+        "from": {
+          "scale": 1.12,
+          "x": -6,
+          "y": 0
+        },
+        "to": {
+          "scale": 1.16,
+          "x": 6,
+          "y": 0
+        }
+      },
+      "characters": {
+        "mode": "baked"
+      },
+      "hud": [],
+      "editorial": {
+        "protagonist": "absent",
+        "purpose": "threat-proximity",
+        "evidence": "Owner-approved selected P05; see image audit for caveats."
+      },
+      "reframes": [
+        {
+          "at": 0,
+          "duration": 30,
+          "scale": 1.12706,
+          "x": -3.882,
+          "y": 0
+        },
+        {
+          "at": 70,
+          "duration": 30,
+          "scale": 1.14353,
+          "x": 1.059,
+          "y": 0
+        },
+        {
+          "at": 140,
+          "duration": 30,
+          "scale": 1.16,
+          "x": 6.0,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "id": "P06",
+      "name": "Panel 06",
+      "at": 943,
+      "atCue": "p06StartFrame",
+      "plate": "assets/003-goyangan-dek-enam/master-batch-01/p06.webp",
+      "camera": {
+        "from": {
+          "scale": 1.12,
+          "x": 6,
+          "y": 0
+        },
+        "to": {
+          "scale": 1.16,
+          "x": -6,
+          "y": 0
+        }
+      },
+      "characters": {
+        "mode": "baked"
+      },
+      "hud": [],
+      "editorial": {
+        "protagonist": "absent",
+        "purpose": "threat-proximity",
+        "evidence": "Owner-approved selected P06; see image audit for caveats."
+      },
+      "reframes": [
+        {
+          "at": 0,
+          "duration": 30,
+          "scale": 1.12453,
+          "x": 4.642,
+          "y": 0
+        },
+        {
+          "at": 70,
+          "duration": 30,
+          "scale": 1.13509,
+          "x": 1.472,
+          "y": 0
+        },
+        {
+          "at": 140,
+          "duration": 30,
+          "scale": 1.14566,
+          "x": -1.698,
+          "y": 0
+        },
+        {
+          "at": 210,
+          "duration": 30,
+          "scale": 1.15623,
+          "x": -4.868,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "id": "P07",
+      "name": "Panel 07",
+      "at": 1208,
+      "atCue": "p07StartFrame",
+      "plate": "assets/003-goyangan-dek-enam/master-batch-01/p07.webp",
+      "camera": {
+        "from": {
+          "scale": 1.12,
+          "x": -6,
+          "y": 0
+        },
+        "to": {
+          "scale": 1.16,
+          "x": 6,
+          "y": 0
+        }
+      },
+      "characters": {
+        "mode": "baked"
+      },
+      "hud": [],
+      "editorial": {
+        "protagonist": "visible",
+        "purpose": "threat-proximity",
+        "evidence": "Owner-approved selected P07; see image audit for caveats."
+      },
+      "reframes": [
+        {
+          "at": 0,
+          "duration": 30,
+          "scale": 1.1244,
+          "x": -4.681,
+          "y": 0
+        },
+        {
+          "at": 70,
+          "duration": 30,
+          "scale": 1.13465,
+          "x": -1.604,
+          "y": 0
+        },
+        {
+          "at": 140,
+          "duration": 30,
+          "scale": 1.14491,
+          "x": 1.473,
+          "y": 0
+        },
+        {
+          "at": 210,
+          "duration": 30,
+          "scale": 1.15516,
+          "x": 4.549,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "id": "P08",
+      "name": "Panel 08",
+      "at": 1481,
+      "atCue": "p08StartFrame",
+      "plate": "assets/003-goyangan-dek-enam/master-batch-01/p08.webp",
+      "camera": {
+        "from": {
+          "scale": 1.12,
+          "x": 6,
+          "y": 0
+        },
+        "to": {
+          "scale": 1.16,
+          "x": -6,
+          "y": 0
+        }
+      },
+      "characters": {
+        "mode": "baked"
+      },
+      "hud": [],
+      "editorial": {
+        "protagonist": "visible",
+        "purpose": "threat-proximity",
+        "evidence": "Owner-approved selected P08; see image audit for caveats."
+      },
+      "reframes": [
+        {
+          "at": 0,
+          "duration": 30,
+          "scale": 1.125,
+          "x": 4.5,
+          "y": 0
+        },
+        {
+          "at": 70,
+          "duration": 30,
+          "scale": 1.13667,
+          "x": 1.0,
+          "y": 0
+        },
+        {
+          "at": 140,
+          "duration": 30,
+          "scale": 1.14833,
+          "x": -2.5,
+          "y": 0
+        },
+        {
+          "at": 210,
+          "duration": 30,
+          "scale": 1.16,
+          "x": -6.0,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "id": "P09",
+      "name": "Panel 09",
+      "at": 1721,
+      "atCue": "p09StartFrame",
+      "plate": "assets/003-goyangan-dek-enam/master-batch-01/p09.webp",
+      "camera": {
+        "from": {
+          "scale": 1.12,
+          "x": -6,
+          "y": 0
+        },
+        "to": {
+          "scale": 1.16,
+          "x": 6,
+          "y": 0
+        }
+      },
+      "characters": {
+        "mode": "baked"
+      },
+      "hud": [],
+      "editorial": {
+        "protagonist": "visible",
+        "purpose": "threat-proximity",
+        "evidence": "Owner-approved selected P09; see image audit for caveats."
+      },
+      "reframes": [
+        {
+          "at": 0,
+          "duration": 30,
+          "scale": 1.12548,
+          "x": -4.356,
+          "y": 0
+        },
+        {
+          "at": 70,
+          "duration": 30,
+          "scale": 1.13826,
+          "x": -0.521,
+          "y": 0
+        },
+        {
+          "at": 140,
+          "duration": 30,
+          "scale": 1.15105,
+          "x": 3.315,
+          "y": 0
+        },
+        {
+          "at": 210,
+          "duration": 9,
+          "scale": 1.16,
+          "x": 6.0,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "id": "P10",
+      "name": "Panel 10",
+      "at": 1940,
+      "atCue": "p10StartFrame",
+      "plate": "assets/003-goyangan-dek-enam/master-batch-01/p10.webp",
+      "camera": {
+        "from": {
+          "scale": 1.12,
+          "x": 6,
+          "y": 0
+        },
+        "to": {
+          "scale": 1.16,
+          "x": -6,
+          "y": 0
+        }
+      },
+      "characters": {
+        "mode": "baked"
+      },
+      "hud": [],
+      "editorial": {
+        "protagonist": "visible",
+        "purpose": "threat-proximity",
+        "evidence": "Owner-approved selected P10; see image audit for caveats."
+      },
+      "reframes": [
+        {
+          "at": 0,
+          "duration": 30,
+          "scale": 1.12652,
+          "x": 4.043,
+          "y": 0
+        },
+        {
+          "at": 70,
+          "duration": 30,
+          "scale": 1.14174,
+          "x": -0.522,
+          "y": 0
+        },
+        {
+          "at": 140,
+          "duration": 30,
+          "scale": 1.15696,
+          "x": -5.087,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "id": "P11",
+      "name": "Panel 11",
+      "at": 2124,
+      "atCue": "p11StartFrame",
+      "plate": "assets/003-goyangan-dek-enam/master-batch-01/p11.webp",
+      "camera": {
+        "from": {
+          "scale": 1.12,
+          "x": -6,
+          "y": 0
+        },
+        "to": {
+          "scale": 1.16,
+          "x": 6,
+          "y": 0
+        }
+      },
+      "characters": {
+        "mode": "baked"
+      },
+      "hud": [],
+      "editorial": {
+        "protagonist": "visible",
+        "purpose": "threat-proximity",
+        "evidence": "Owner-approved selected P11; see image audit for caveats."
+      },
+      "reframes": [
+        {
+          "at": 0,
+          "duration": 30,
+          "scale": 1.12606,
+          "x": -4.182,
+          "y": 0
+        },
+        {
+          "at": 70,
+          "duration": 30,
+          "scale": 1.1402,
+          "x": 0.061,
+          "y": 0
+        },
+        {
+          "at": 140,
+          "duration": 30,
+          "scale": 1.15434,
+          "x": 4.303,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "id": "P12",
+      "name": "Panel 12",
+      "at": 2322,
+      "atCue": "p12StartFrame",
+      "plate": "assets/003-goyangan-dek-enam/master-batch-01/p12.webp",
+      "camera": {
+        "from": {
+          "scale": 1.12,
+          "x": 6,
+          "y": 0
+        },
+        "to": {
+          "scale": 1.16,
+          "x": -6,
+          "y": 0
+        }
+      },
+      "characters": {
+        "mode": "baked"
+      },
+      "hud": [],
+      "editorial": {
+        "protagonist": "absent",
+        "purpose": "threat-proximity",
+        "evidence": "Owner-approved selected P12; see image audit for caveats."
+      },
+      "reframes": [
+        {
+          "at": 0,
+          "duration": 30,
+          "scale": 1.12403,
+          "x": 4.792,
+          "y": 0
+        },
+        {
+          "at": 70,
+          "duration": 30,
+          "scale": 1.13342,
+          "x": 1.973,
+          "y": 0
+        },
+        {
+          "at": 140,
+          "duration": 30,
+          "scale": 1.14282,
+          "x": -0.846,
+          "y": 0
+        },
+        {
+          "at": 210,
+          "duration": 30,
+          "scale": 1.15221,
+          "x": -3.664,
+          "y": 0
+        },
+        {
+          "at": 280,
+          "duration": 18,
+          "scale": 1.16,
+          "x": -6.0,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "id": "P13",
+      "name": "Panel 13",
+      "at": 2620,
+      "atCue": "p13StartFrame",
+      "plate": "assets/003-goyangan-dek-enam/master-batch-01/p13.webp",
+      "camera": {
+        "from": {
+          "scale": 1.12,
+          "x": -6,
+          "y": 0
+        },
+        "to": {
+          "scale": 1.16,
+          "x": 6,
+          "y": 0
+        }
+      },
+      "characters": {
+        "mode": "baked"
+      },
+      "hud": [],
+      "editorial": {
+        "protagonist": "absent",
+        "purpose": "threat-proximity",
+        "evidence": "Owner-approved selected P13; see image audit for caveats."
+      },
+      "reframes": [
+        {
+          "at": 0,
+          "duration": 30,
+          "scale": 1.12984,
+          "x": -3.049,
+          "y": 0
+        },
+        {
+          "at": 70,
+          "duration": 30,
+          "scale": 1.15279,
+          "x": 3.836,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "id": "P14",
+      "name": "Panel 14",
+      "at": 2742,
+      "atCue": "p14StartFrame",
+      "plate": "assets/003-goyangan-dek-enam/master-batch-01/p14.webp",
+      "camera": {
+        "from": {
+          "scale": 1.12,
+          "x": 6,
+          "y": 0
+        },
+        "to": {
+          "scale": 1.16,
+          "x": -6,
+          "y": 0
+        }
+      },
+      "characters": {
+        "mode": "baked"
+      },
+      "hud": [],
+      "editorial": {
+        "protagonist": "absent",
+        "purpose": "threat-proximity",
+        "evidence": "Owner-approved selected P14; see image audit for caveats."
+      },
+      "reframes": [
+        {
+          "at": 0,
+          "duration": 30,
+          "scale": 1.12828,
+          "x": 3.517,
+          "y": 0
+        },
+        {
+          "at": 70,
+          "duration": 30,
+          "scale": 1.14759,
+          "x": -2.276,
+          "y": 0
+        },
+        {
+          "at": 140,
+          "duration": 5,
+          "scale": 1.16,
+          "x": -6.0,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "id": "P15",
+      "name": "Panel 15",
+      "at": 2887,
+      "atCue": "p15StartFrame",
+      "plate": "assets/003-goyangan-dek-enam/master-batch-01/p15.webp",
+      "camera": {
+        "from": {
+          "scale": 1.12,
+          "x": -6,
+          "y": 0
+        },
+        "to": {
+          "scale": 1.16,
+          "x": 6,
+          "y": 0
+        }
+      },
+      "characters": {
+        "mode": "baked"
+      },
+      "hud": [],
+      "editorial": {
+        "protagonist": "visible",
+        "purpose": "threat-proximity",
+        "evidence": "Owner-approved selected P15; see image audit for caveats."
+      },
+      "reframes": [
+        {
+          "at": 0,
+          "duration": 30,
+          "scale": 1.12968,
+          "x": -3.097,
+          "y": 0
+        },
+        {
+          "at": 70,
+          "duration": 30,
+          "scale": 1.15226,
+          "x": 3.677,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "id": "P16",
+      "name": "Panel 16",
+      "at": 3011,
+      "atCue": "p16StartFrame",
+      "plate": "assets/003-goyangan-dek-enam/master-batch-01/p16.webp",
+      "camera": {
+        "from": {
+          "scale": 1.12,
+          "x": 6,
+          "y": 0
+        },
+        "to": {
+          "scale": 1.16,
+          "x": -6,
+          "y": 0
+        }
+      },
+      "characters": {
+        "mode": "baked"
+      },
+      "hud": [],
+      "editorial": {
+        "protagonist": "visible",
+        "purpose": "threat-proximity",
+        "evidence": "Owner-approved selected P16; see image audit for caveats."
+      },
+      "reframes": [
+        {
+          "at": 0,
+          "duration": 30,
+          "scale": 1.12553,
+          "x": 4.341,
+          "y": 0
+        },
+        {
+          "at": 70,
+          "duration": 30,
+          "scale": 1.13843,
+          "x": 0.47,
+          "y": 0
+        },
+        {
+          "at": 140,
+          "duration": 30,
+          "scale": 1.15134,
+          "x": -3.401,
+          "y": 0
+        },
+        {
+          "at": 210,
+          "duration": 7,
+          "scale": 1.16,
+          "x": -6.0,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "id": "P17",
+      "name": "Panel 17",
+      "at": 3228,
+      "atCue": "p17StartFrame",
+      "plate": "assets/003-goyangan-dek-enam/master-batch-01/p17.webp",
+      "camera": {
+        "from": {
+          "scale": 1.12,
+          "x": -6,
+          "y": 0
+        },
+        "to": {
+          "scale": 1.16,
+          "x": 6,
+          "y": 0
+        }
+      },
+      "characters": {
+        "mode": "baked"
+      },
+      "hud": [],
+      "editorial": {
+        "protagonist": "visible",
+        "purpose": "threat-proximity",
+        "evidence": "Owner-approved selected P17; see image audit for caveats."
+      },
+      "reframes": [
+        {
+          "at": 0,
+          "duration": 30,
+          "scale": 1.13101,
+          "x": -2.697,
+          "y": 0
+        },
+        {
+          "at": 70,
+          "duration": 30,
+          "scale": 1.1567,
+          "x": 5.009,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "id": "P18",
+      "name": "Panel 18",
+      "at": 3337,
+      "atCue": "p18StartFrame",
+      "plate": "assets/003-goyangan-dek-enam/master-batch-01/p18.webp",
+      "camera": {
+        "from": {
+          "scale": 1.12,
+          "x": 6,
+          "y": 0
+        },
+        "to": {
+          "scale": 1.16,
+          "x": -6,
+          "y": 0
+        }
+      },
+      "characters": {
+        "mode": "baked"
+      },
+      "hud": [],
+      "editorial": {
+        "protagonist": "visible",
+        "purpose": "threat-proximity",
+        "evidence": "Owner-approved selected P18; see image audit for caveats."
+      },
+      "reframes": [
+        {
+          "at": 0,
+          "duration": 30,
+          "scale": 1.13739,
+          "x": 0.783,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "id": "P19",
+      "name": "Panel 19",
+      "at": 3406,
+      "atCue": "p19StartFrame",
+      "plate": "assets/003-goyangan-dek-enam/master-batch-01/p19.webp",
+      "camera": {
+        "from": {
+          "scale": 1.12,
+          "x": -6,
+          "y": 0
+        },
+        "to": {
+          "scale": 1.16,
+          "x": 6,
+          "y": 0
+        }
+      },
+      "characters": {
+        "mode": "baked"
+      },
+      "hud": [],
+      "editorial": {
+        "protagonist": "absent",
+        "purpose": "threat-proximity",
+        "evidence": "Owner-approved selected P19; see image audit for caveats."
+      },
+      "reframes": [
+        {
+          "at": 0,
+          "duration": 30,
+          "scale": 1.12529,
+          "x": -4.414,
+          "y": 0
+        },
+        {
+          "at": 70,
+          "duration": 30,
+          "scale": 1.13762,
+          "x": -0.714,
+          "y": 0
+        },
+        {
+          "at": 140,
+          "duration": 30,
+          "scale": 1.14996,
+          "x": 2.987,
+          "y": 0
+        },
+        {
+          "at": 210,
+          "duration": 17,
+          "scale": 1.16,
+          "x": 6.0,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "id": "P20",
+      "name": "Panel 20",
+      "at": 3633,
+      "atCue": "p20StartFrame",
+      "plate": "assets/003-goyangan-dek-enam/master-batch-01/p20.webp",
+      "camera": {
+        "from": {
+          "scale": 1.12,
+          "x": 6,
+          "y": 0
+        },
+        "to": {
+          "scale": 1.16,
+          "x": -6,
+          "y": 0
+        }
+      },
+      "characters": {
+        "mode": "baked"
+      },
+      "hud": [],
+      "editorial": {
+        "protagonist": "visible",
+        "purpose": "threat-proximity",
+        "evidence": "Owner-approved selected P20; see image audit for caveats."
+      },
+      "reframes": [
+        {
+          "at": 0,
+          "duration": 30,
+          "scale": 1.12945,
+          "x": 3.165,
+          "y": 0
+        },
+        {
+          "at": 70,
+          "duration": 30,
+          "scale": 1.1515,
+          "x": -3.449,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "id": "P21",
+      "name": "Panel 21",
+      "at": 3760,
+      "atCue": "p21StartFrame",
+      "plate": "assets/003-goyangan-dek-enam/master-batch-01/p21.webp",
+      "camera": {
+        "from": {
+          "scale": 1.12,
+          "x": -6,
+          "y": 0
+        },
+        "to": {
+          "scale": 1.16,
+          "x": 6,
+          "y": 0
+        }
+      },
+      "characters": {
+        "mode": "baked"
+      },
+      "hud": [],
+      "editorial": {
+        "protagonist": "absent",
+        "purpose": "threat-proximity",
+        "evidence": "Owner-approved selected P21; see image audit for caveats."
+      },
+      "reframes": [
+        {
+          "at": 0,
+          "duration": 30,
+          "scale": 1.12436,
+          "x": -4.691,
+          "y": 0
+        },
+        {
+          "at": 70,
+          "duration": 30,
+          "scale": 1.13455,
+          "x": -1.636,
+          "y": 0
+        },
+        {
+          "at": 140,
+          "duration": 30,
+          "scale": 1.14473,
+          "x": 1.418,
+          "y": 0
+        },
+        {
+          "at": 210,
+          "duration": 30,
+          "scale": 1.15491,
+          "x": 4.473,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "id": "P22",
+      "name": "Panel 22",
+      "at": 4035,
+      "atCue": "p22StartFrame",
+      "plate": "assets/003-goyangan-dek-enam/master-batch-01/p22.webp",
+      "camera": {
+        "from": {
+          "scale": 1.12,
+          "x": 6,
+          "y": 0
+        },
+        "to": {
+          "scale": 1.16,
+          "x": -6,
+          "y": 0
+        }
+      },
+      "characters": {
+        "mode": "baked"
+      },
+      "hud": [],
+      "editorial": {
+        "protagonist": "visible",
+        "purpose": "threat-proximity",
+        "evidence": "Owner-approved selected P22; see image audit for caveats."
+      },
+      "reframes": [
+        {
+          "at": 0,
+          "duration": 30,
+          "scale": 1.12484,
+          "x": 4.548,
+          "y": 0
+        },
+        {
+          "at": 70,
+          "duration": 30,
+          "scale": 1.13613,
+          "x": 1.161,
+          "y": 0
+        },
+        {
+          "at": 140,
+          "duration": 30,
+          "scale": 1.14742,
+          "x": -2.226,
+          "y": 0
+        },
+        {
+          "at": 210,
+          "duration": 30,
+          "scale": 1.15871,
+          "x": -5.613,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "id": "P23",
+      "name": "Panel 23",
+      "at": 4283,
+      "atCue": "p23StartFrame",
+      "plate": "assets/003-goyangan-dek-enam/master-batch-01/p23.webp",
+      "camera": {
+        "from": {
+          "scale": 1.12,
+          "x": -6,
+          "y": 0
+        },
+        "to": {
+          "scale": 1.16,
+          "x": 6,
+          "y": 0
+        }
+      },
+      "characters": {
+        "mode": "baked"
+      },
+      "hud": [],
+      "editorial": {
+        "protagonist": "reaction",
+        "purpose": "threat-proximity",
+        "evidence": "Owner-approved selected P23; see image audit for caveats."
+      },
+      "reframes": [
+        {
+          "at": 0,
+          "duration": 30,
+          "scale": 1.12736,
+          "x": -3.791,
+          "y": 0
+        },
+        {
+          "at": 70,
+          "duration": 30,
+          "scale": 1.14454,
+          "x": 1.362,
+          "y": 0
+        },
+        {
+          "at": 140,
+          "duration": 23,
+          "scale": 1.16,
+          "x": 6.0,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "id": "P24",
+      "name": "Panel 24",
+      "at": 4446,
+      "atCue": "p24StartFrame",
+      "plate": "assets/003-goyangan-dek-enam/master-batch-01/p24.webp",
+      "camera": {
+        "from": {
+          "scale": 1.12,
+          "x": 6,
+          "y": 0
+        },
+        "to": {
+          "scale": 1.16,
+          "x": -6,
+          "y": 0
+        }
+      },
+      "characters": {
+        "mode": "baked"
+      },
+      "hud": [],
+      "editorial": {
+        "protagonist": "absent",
+        "purpose": "threat-proximity",
+        "evidence": "Owner-approved selected P24; see image audit for caveats."
+      },
+      "reframes": [
+        {
+          "at": 0,
+          "duration": 30,
+          "scale": 1.12408,
+          "x": 4.776,
+          "y": 0
+        },
+        {
+          "at": 70,
+          "duration": 30,
+          "scale": 1.13361,
+          "x": 1.918,
+          "y": 0
+        },
+        {
+          "at": 140,
+          "duration": 30,
+          "scale": 1.14313,
+          "x": -0.939,
+          "y": 0
+        },
+        {
+          "at": 210,
+          "duration": 30,
+          "scale": 1.15265,
+          "x": -3.796,
+          "y": 0
+        },
+        {
+          "at": 280,
+          "duration": 14,
+          "scale": 1.16,
+          "x": -6.0,
+          "y": 0
+        }
+      ]
+    }
+  ],
+  "soundMix": {
+    "asset": "assets/003-goyangan-dek-enam/assembly-mix.wav",
+    "gain": 1,
+    "sampleRate": 48000
+  },
+  "timing": {
+    "p01StartFrame": 0,
+    "p02StartFrame": 166,
+    "p03StartFrame": 356,
+    "p04StartFrame": 490,
+    "p05StartFrame": 773,
+    "p06StartFrame": 943,
+    "p07StartFrame": 1208,
+    "p08StartFrame": 1481,
+    "p09StartFrame": 1721,
+    "p10StartFrame": 1940,
+    "p11StartFrame": 2124,
+    "p12StartFrame": 2322,
+    "p13StartFrame": 2620,
+    "p14StartFrame": 2742,
+    "p15StartFrame": 2887,
+    "p16StartFrame": 3011,
+    "p17StartFrame": 3228,
+    "p18StartFrame": 3337,
+    "p19StartFrame": 3406,
+    "p20StartFrame": 3633,
+    "p21StartFrame": 3760,
+    "p22StartFrame": 4035,
+    "p23StartFrame": 4283,
+    "p24StartFrame": 4446,
+    "rewindFrame": 2112,
+    "rewindFrames": 12,
+    "postRewindSilenceFrames": [
+      2274,
+      2322
+    ],
+    "postPinSilenceFrames": [
+      4064,
+      4124
+    ],
+    "blackoutSilenceStartFrame": 4615,
+    "blackoutSilenceStartSampleOffset": 800,
+    "postPinSilenceStartFrame": 4064,
+    "postPinSilenceStartSampleOffset": -320,
+    "postPinSilenceEndFrame": 4124,
+    "postPinSilenceEndSampleOffset": -320,
+    "blackoutFrame": 4620,
+    "blackoutSubFrame": 4620,
+    "shipGroanFrame": 221,
+    "shipGroanSampleOffset": 640,
+    "vestSwayFrame": 688,
+    "vestSwaySampleOffset": -640,
+    "entityChokeFrame": 3917,
+    "entityChokeSampleOffset": 640,
+    "chainFrame": 402,
+    "chainSampleOffset": 0,
+    "waterSetupFrame": 490,
+    "waterSetupSampleOffset": 320,
+    "pulleySetupFrame": 866,
+    "pulleySetupSampleOffset": -320,
+    "approachStep1Frame": 1251,
+    "approachStep1SampleOffset": 0,
+    "approachStep2Frame": 1272,
+    "approachStep2SampleOffset": 0,
+    "vestFrame": 1540,
+    "vestSampleOffset": -640,
+    "splashFrame": 1755,
+    "splashSampleOffset": 0,
+    "vortexFrame": 1811,
+    "vortexSampleOffset": -320,
+    "cableSwingFrame": 2575,
+    "cableSwingSampleOffset": 320,
+    "waterReturnFrame": 3129,
+    "waterReturnSampleOffset": 0,
+    "leverFrame": 3337,
+    "leverSampleOffset": 320,
+    "cableReleaseFrame": 3406,
+    "cableReleaseSampleOffset": -640,
+    "impactFrame": 3518,
+    "impactSampleOffset": 640,
+    "pinInsertFrame": 3698,
+    "pinInsertSampleOffset": 640,
+    "pinLockFrame": 3760,
+    "pinLockSampleOffset": -640,
+    "survivorBreathFrame": 4144,
+    "survivorBreathSampleOffset": -640,
+    "sitFrame": 4336,
+    "sitSampleOffset": 320
+  },
+  "notes": "Current selected plates approved for assembly by owner after image-stage fail; physical-contact, cable and pin continuity findings remain documented."
+}

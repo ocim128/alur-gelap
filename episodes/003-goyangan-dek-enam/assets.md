@@ -30,3 +30,9 @@
 - **Attribution notice:** Cuts using `sfx/lifeboat-impact.wav` require the credit: **Foley from “Super Foley Pack” by dklon, licensed CC BY 3.0. Excerpts trimmed and filtered.**
 - **Flagged 154.0s cut boundary hit for Agent 04:** The composition timeline is 154.000 s (02:34.0 / 4620 frames). The final sub-hit `blackout-hit.wav` (0.350 s) is scheduled at 153.500–153.850 s, leaving a 150 ms silent margin before the 154.000 s cut to black. Agent 04 must ensure any audible hit and visible black tail sit inside the output timeline and measure ≤ -1.5 dBTP in the finished export.
 
+
+## Agent 04 assembly sources — 22 November 2026
+
+The owner approved proceeding with the selected 24-panel batch after the recorded image-stage failure; the existing hoist attachment, wall/contact and locking-pin caveats remain recorded in the audit. The audio producer's ten episode SFX and accepted narration are retained. The assembly also uses existing shared `shoe-left.wav`, `shoe-right.wav`, `coat-shift.wav`, `body-fall.wav`, `minimarket-door-creak-outside.wav`, and `ep004-survivor-breath.wav` as wet-step, cloth, splash, structural-creak and breathing proxies, respectively. Their CC0 / CC BY 3.0 origins are recorded in `public/sfx/LICENSES.md`; the dklon attribution applies to cloth, fall and the lifeboat impact.
+
+`sfx/entity-choke-proxy.wav` is an assembly derivative of `ep004-survivor-breath.wav`, originally Kuroseishin's CC0 `breathing_female.wav`; it is rate-adjusted to 38.4 kHz, resampled to 48 kHz, filtered 180–1200 Hz and faded. It serves as a low-level nonhuman choking sound called for in the cue sheet; its character and suitability have not been reviewed by listening. No additional dialogue or narration was generated. `assembly-mix.wav` is a non-destructive 48 kHz assembly master built by `mix.py`; the original TTS and prepared stems were not overwritten.

@@ -1,0 +1,50 @@
+# Agent 04 assembly handoff — Goyangan Dek Enam
+
+**Revised delivery:** `out/003-goyangan-dek-enam/Skenario03GoyanganDekEnam-revision-v3-master_compressed.mp4`; its retained lossless-audio master is `out/003-goyangan-dek-enam/Skenario03GoyanganDekEnam-revision-v3-master.mp4`. The previously named master `out/003-goyangan-dek-enam/Skenario03GoyanganDekEnam-master.mp4` is not present; its pre-revision assembly audio is preserved at `episodes/003-goyangan-dek-enam/sources/before-audit-revision/assembly-mix.wav`. Composition `Skenario03GoyanganDekEnam`, 1080 × 1920, 30 fps, 4,740 frames / 158.000 s. The extra four seconds after the 154.000 s cut provide the brief's black tail. The owner approved proceeding with the selected 24 plates on 22 November 2026; the prior image audit's P04 hoist connection and P19–P23 wall/contact/pin findings remain visible concerns, not claims of repaired art. No selected plate or accepted narration source was overwritten.
+
+## Timeline and sound
+
+The timeline uses the accepted word sidecar, not the provisional times in the brief. `manifest.json` is the frame-based source of truth; `build-assembly.py`, `mix.py`, `src/Skenario03GoyanganDekEnam.tsx` and `src/StudioV2Player.tsx` implement the timing. Caption beats use `scripts/caption_helpers.py`, preserve Indonesian reduplication, use semantic colors and stay within their assigned scene. A few sidecar entries contain multiple words in a single measured interval, so their individual internal boundaries are estimates rather than separately measured word timings. The narrator has no speaker badge. Narration remains at its original speed; owner acceptance is recorded in the pipeline and does not imply a new listening review.
+
+- Rewind visual and sound start at 70.400 s for 0.400 s; the reset silence is 75.800–77.400 s.
+- Brake cue is at 111.240 s. The lifeboat impact is anchored at the sidecar's `BRAK!` onset, 117.280 s; the P19 flash begins at frame 3518 / 117.266667 s, 13.333 ms before the word-anchored audio cue. The lock cue is anchored at `KLIK!`, 125.320 s.
+- The post-pin silence is 135.460–137.460 s. The original supplied ambience bed was not silent there or during the reset pause; both windows are explicitly muted in the assembly mix.
+- A 150 ms pre-black vacuum is at 153.850–154.000 s; the clean black cut and sub-hit start at 154.000 s, frame 4620. The four-second black tail ends at 158.000 s.
+
+The final mix uses the episode's supplied 10 SFX and the shared footsteps, cloth, fall, door-creak and breathing proxies described in `assets.md`. The low-level `entity-choke-proxy.wav` is a filtered, rate-adjusted derivative of Kuroseishin's CC0 breath sample; it has not been reviewed by listening. The raw, pre-master impact peak was approximately −3.56 dB relative to the narration peak in the same impact interval. No independent listening or subjective quality assessment is claimed.
+
+## Encoded delivery verification
+
+`python episodes/003-goyangan-dek-enam/verify-export.py out/003-goyangan-dek-enam/Skenario03GoyanganDekEnam-master_compressed.mp4` returned no errors; the detailed report is `verification/export-report.json`.
+
+- Integrated loudness **−14.1 LUFS**; true peak **−1.9 dBTP**, measured on the compressed AAC delivery.
+- The encoded impact sound was detected at 117.280 s, matching its measured word anchor (normalized correlation 0.8013). The impact frame is 13.333 ms earlier, within one 30 fps frame.
+- The first black frame is 4620 / 154.000 s; decoded AAC crosses 0.001 amplitude at 154.000167 s, **+0.167 ms**. AAC can introduce low-level pre-echo.
+- Across the full encoded windows, reset silence measured −88.99 dBFS RMS / −57.21 dBFS peak, post-pin silence −86.20 dBFS RMS / −49.99 dBFS peak, and the 150 ms pre-black window −96.43 dBFS RMS / −73.20 dBFS peak. These are not claims of exact digital zero; the report separately gives interior readings.
+- The three impact flash frames measured mean luma 165.50–166.57, below the 190 cap. `ffprobe` confirmed limited-range Rec.709 `yuv420p`, BT.709 color tags and 30 fps.
+- `npm run check` passed 33 Node tests and 4 Python tests. Selected encoded stills, including the 00:00.2 cover, rewind, impact, pre-black and black, are in `verification/export-01.png` through `export-06.png`.
+
+## Dependencies, rights and remaining review
+
+The project requires the repository's Node/Remotion packages, Python with NumPy, and FFmpeg/ffprobe; the supplied image, narration and sound assets are local public-relative files. CC BY credit is required: **Foley from “Super Foley Pack” by dklon, licensed CC BY 3.0. Excerpts trimmed and filtered.** `assets.md` and `public/sfx/LICENSES.md` record the sources. Image and TTS service publication terms and platform-specific disclosure have not been independently checked.
+
+Independent Agent 05 audit is pending. Full-speed human listening, caption/acting continuity, phone-size viewing, foley character and the listed physical-geometry caveats remain to be reviewed. The owner approval to proceed is not an independent QA verdict or publication authorization.
+
+## Agent 04 revision after two audit reports — 22 November 2026
+
+**Status: partial visual revision; artwork handoff required.** This section supersedes the original assembly timing and delivery details above for the revised cut. The owner-approved selected plates and four-hand reveal remain unchanged. `agent03-handoff.md` routes the specific missing layered sway, attached hoist, pre-impact swing and wall/contact/pin states to Agent 03 and the human orchestrator. P04 and P12 still have the jackets and cable baked into the wall and do not independently sway; P19–P23 do not prove the requested trap continuity. Do not treat the partial motion overlays as an independent audit pass.
+
+- **P18–P19:** The existing P18 lever-and-suspended-boat view is held until frame 3518 / 117.266667 s. The selected four-hand P19 is first shown on that frame, synchronized with the impact flash and shake. The word-anchored impact sound begins at 117.280 s, 13.333 ms into that display frame. P18 does not depict the boat's actual travel into the gap; the needed pre-impact swing state is in the Agent 03 handoff.
+- **Gravity / water:** `DeckGravityClues.tsx` overlays a feathered moving floor segment cut from the existing P13 plate below the upright figure, and moving clipped reflection streaks over P16's existing puddles. These are limited compositing proxies, not detached or repaired artwork. P13's upper ship and hanging objects do not roll independently of the figure, and the clarity of P16's rightward motion needs a normal-speed phone-size review. P04/P12 vest and cable movement remains open.
+- **Caption corrections:** The locked source transcript has `masuk ke`; the accepted word sidecar omitted `ke`. The caption builder includes it within the sidecar's `masuk` interval, so the independent word boundary is an estimate, not a new measured timestamp. `TAMAT.` replaces `TAMAT,` in the burned-in captions. The narration audio was not regenerated.
+- **“Hening” splice:** In the supplied prepared WAV, 2.000 s of zeros at 135.460–137.460 s split the word's release; 0.340 s of existing source audio immediately after that gap has been rejoined before it in the non-destructive mix. The same 2.000 s of silence is placed at 135.800–137.800 s, and all audio after 137.800 s remains at its prior sample positions. The source WAV and MP3 remain untouched. The reconstructed phrase correlates with the original narration master at greater than 0.99999 before mixing; this supports continuity but is not a human listening review. An encoded review clip is supplied in `verification/revision-v2-encoded-hening-listen.wav` (the revision-v3 sound mix is the same).
+- **Master correction:** The original path `Skenario03GoyanganDekEnam-master.mp4` was not present when checked; its pre-revision mix is retained at `sources/before-audit-revision/assembly-mix.wav`. The new revised lossless-audio master is retained separately alongside the new compressed delivery. The previous compressed export remains untouched.
+
+The technical checks and phone-size frame evidence for the final revision are recorded below. Full-speed human listening, phone-size motion review and independent QA are still needed.
+
+### Revised encoded delivery checks
+
+- `verify-export.py` returned no errors on the revision-v3 compressed MP4; the detailed measurements are in `verification/export-report-revision-v3.json`. The compressed output is 1080 × 1920, 30 fps, 158.000 s, H.264 `yuv420p`, limited-range BT.709 with Rec.709 color tags. Its integrated loudness is **−14.1 LUFS** and true peak **−1.9 dBTP**; the FFmpeg measurement is in `verification/loudness-revision-v3.txt`.
+- Impact audio was detected at 117.280 s, matching the word anchor. The P19/flash frame is 3518 / 117.266667 s, 13.333 ms before that onset, within one frame. Three flash frames measured mean luma 165.34–166.42, below 190. The first black frame is 4620 / 154.000 s, with decoded hit onset at 154.000167 s, 0.167 ms later.
+- Full-window decoded AAC measurements: reset 75.800–77.400 s, −94.93 dBFS RMS / −61.13 dBFS peak; post-pin 135.800–137.800 s, −118.68 dBFS RMS / −79.16 dBFS peak; pre-black 153.850–154.000 s, −96.43 dBFS RMS / −73.20 dBFS peak. These windows include AAC residue and are not claimed to be exact digital silence. The encoded restored word release correlates 0.8109 with the retained source; subjective listening remains necessary.
+- `npm run check` passed 33 Node and 4 Python tests. The final encoded P04–P23 frame crops at 270 × 480 per plate are recorded in `verification/revision-v3-contact-04-13.jpg` and `verification/revision-v3-contact-14-23.jpg`. The stills show that the pre-impact view lacks a depicted swing, P04's hoist ends in a free ring, and the P19–P23 contact, wall geography and inserted pin remain ambiguous. Still-frame inspection cannot validate motion or replace full-speed phone-size viewing.
