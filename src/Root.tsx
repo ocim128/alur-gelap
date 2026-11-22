@@ -1,4 +1,5 @@
 import {Skenario01KamarTerkunci} from './Skenario01KamarTerkunci';
+import {Skenario02RumahTengahHutan} from './Skenario02RumahTengahHutan';
 import {Composition, staticFile, type CalculateMetadataFunction} from "remotion";
 import {Episode, type PreviewOptions} from "./Episode";
 import type {CaptionBeat, EpisodeManifest, EpisodeManifestV2} from "./manifest-types";
@@ -104,4 +105,5 @@ export const Root = () => <><Composition
 <Composition id="Arc01Episode06" component={Arc01Episode06} width={1080} height={1920} fps={episode06.fps} durationInFrames={episode06.duration} calculateMetadata={audioFirstMetadata(episode06 as EpisodeManifestV2)} defaultProps={{showCaptions: true, soundOn: true, narrationOn: true, effectsOn: true}} />
 <Composition id="Arc01Episode07" component={Arc01Episode07} width={1080} height={1920} fps={episode07.fps} durationInFrames={episode07.duration} calculateMetadata={audioFirstMetadata(episode07 as EpisodeManifestV2)} defaultProps={{showCaptions: true, soundOn: true, narrationOn: true, effectsOn: true}} />
 <Composition id="Skenario01KamarTerkunci" component={Skenario01KamarTerkunci} width={1080} height={1920} fps={30} durationInFrames={4703} />
+<Composition id="Skenario02RumahTengahHutan" component={Skenario02RumahTengahHutan} width={1080} height={1920} fps={30} durationInFrames={4620} />
 </>;

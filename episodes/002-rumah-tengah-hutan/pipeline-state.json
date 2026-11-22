@@ -1,0 +1,26 @@
+{
+  "brief": {
+    "status": "pass",
+    "notes": "Orchestrator approved Pitch 1 ('Sinkronisasi Petir & Jebakan Ranting Roboh') on 2026-11-22 with locked 252-word Bahasa Bayi narration in narasi.txt, 24-panel single-frame layout, Fair-Play Clue Ledger, filter-safe noir aftermath, and rescaled 02:34.0 (154.0 s) timeline. Ready for parallel handoff to Agent 02 (Audio Producer) and Agent 03 (Image Generator)."
+  },
+  "audio": {
+    "status": "pass",
+    "notes": "Single-speaker Investigator narration generated via ShortZ CLI (gemini-cloud, gemini-3.8-flash-tts, custom voice voice_71a5a701-796e-421d-840e-0adc00b0816a) from narasi.txt (252 words, raw master 161.110 s). Owner accepted narration without listening gate. Non-critical Whisper transcription flags noted in report. Continuous PCM sample preparation via prepare-audio.mjs tightened 40 non-protected dead-air gaps to 0.18-0.32 s (saving 14.520 s) at 1.0x speed, and spliced 3 deliberate story pauses: 0.400 s branchRewind gap (83.760-85.020 s), 1.600 s post-rewind dread silence (88.400-90.460 s), and 2.000 s post-thunder dread silence (138.720-141.460 s). Preserved un-tightened countdown pacing (114.360-123.920 s). Speech ends at 150.860 s, prepared audio is 151.590 s (-16.8 LUFS, -1.1 dBFS true peak), aligning to total assembled cut duration of 154.000 s (02:34.0) with 3.140 s P24 blackout tail. 100% strictly monotonic PTS verified by ffprobe across all 6318 packets. Derivatives copied to public/assets/002-rumah-tengah-hutan/."
+  },
+  "images": {
+    "status": "pass",
+    "notes": "Human orchestrator approved master-batch-01 for assembly on 2026-11-22 with an explicit waiver for cropped boots in P08 and P19. Both are intended as fast-cut upper-body impacts with ImpactMicroShake and their bottom edges behind captions/UI; the original crops remain and no plates were changed. Agent 05 image re-audit resolved the prior rear-bar release and front/rear geography findings. P08/P19 each had two retries; P08 retry 2 remains unselected due to an extra beam. Agent 04 must verify framing and implement the exact 3.0-second lightning-to-thunder timing and sound masking in the cut. Final post-render audit remains pending. See audit-report.md and sources/master-batch-01.md."
+  },
+  "render": {
+    "status": "ready",
+    "notes": "Polish v2 rendered: out/002-rumah-tengah-hutan/Skenario02RumahTengahHutan-polish-v2-lossless.mp4, 154.000 s, 1080x1920/30 fps, -13.98 LUFS / -1.81 dBTP. AAC alternative is polish-v2-aac.mp4 (-13.96 LUFS / -1.80 dBTP); only ALAC retains exact decoded silence. Climax flash 120.933333 s; thunder and P19 jolt 123.933333 s, exactly 3.000 s later and 13.333 ms after measured BRAK onset. The locked narration says Kilat menyala and completes the count before this flash; the preceding GURUH line also starts before it. npm run check passed 26 tests. P15 framing/caption corrected; prior P08/P19 image waiver remains. Listening, perceived masking, foley completeness and independent QA pending. See assembly-handoff.md, review.md and export-sync-polish-v2.json."
+  },
+  "audit": {
+    "status": "pending",
+    "notes": ""
+  },
+  "publish": {
+    "status": "pending",
+    "notes": "No publishing requested or authorized."
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "visualFlashes": {
+    "setup": {
+      "expectedFrame": 891,
+      "brightFrames": [
+        891,
+        892,
+        893
+      ],
+      "meanLuma": [
+        31.7,
+        31.8,
+        31.7,
+        222.9,
+        222.9,
+        221.8,
+        32.8
+      ]
+    },
+    "climax": {
+      "expectedFrame": 3628,
+      "brightFrames": [
+        3628,
+        3629,
+        3630
+      ],
+      "meanLuma": [
+        31.9,
+        31.8,
+        31.9,
+        221.7,
+        221.7,
+        221.7,
+        31.8
+      ]
+    },
+    "impact": {
+      "expectedFrame": 3718,
+      "brightFrames": [
+        3718,
+        3719,
+        3720
+      ],
+      "meanLuma": [
+        30.4,
+        30.4,
+        30.4,
+        222.0,
+        222.0,
+        222.0,
+        30.2
+      ]
+    }
+  },
+  "setup": {
+    "expectedSec": 32.7,
+    "detectedSec": 32.7,
+    "offsetMs": 0.0,
+    "normalizedCorrelation": 0.8992
+  },
+  "climax": {
+    "expectedSec": 123.93333333333334,
+    "detectedSec": 123.933333,
+    "offsetMs": 0.0,
+    "normalizedCorrelation": 0.8303
+  },
+  "silence": {
+    "postRewind": {
+      "startSec": 88.6,
+      "durationSec": 1.6,
+      "peak": 0.00074576,
+      "rms": 1.305e-05
+    },
+    "postThunder": {
+      "startSec": 139,
+      "durationSec": 2,
+      "peak": 0.00027206,
+      "rms": 3.54e-06
+    },
+    "blackoutLead": {
+      "startSec": 152.5,
+      "durationSec": 0.15,
+      "peak": 0.00155577,
+      "rms": 6.379e-05
+    }
+  }
+}

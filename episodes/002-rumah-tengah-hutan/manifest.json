@@ -1,0 +1,1389 @@
+{
+  "schemaVersion": 2,
+  "pipelineVersion": 2,
+  "id": "Skenario02RumahTengahHutan",
+  "fps": 30,
+  "duration": 4620,
+  "captions": "captions.json",
+  "openingTitle": "PONDOK TENGAH BADAI",
+  "narration": {
+    "asset": "assets/002-rumah-tengah-hutan/narration-prepared.mp3",
+    "at": 0,
+    "duration": 4548,
+    "gain": 1
+  },
+  "art": {
+    "styleId": "urban-silhouette-noir",
+    "rasterAssets": {
+      "assets/002-rumah-tengah-hutan/master-batch-01/p01.webp": "urban-silhouette-noir",
+      "assets/002-rumah-tengah-hutan/master-batch-01/p02.webp": "urban-silhouette-noir",
+      "assets/002-rumah-tengah-hutan/master-batch-01/p03.webp": "urban-silhouette-noir",
+      "assets/002-rumah-tengah-hutan/master-batch-01/p04.webp": "urban-silhouette-noir",
+      "assets/002-rumah-tengah-hutan/master-batch-01/p05.webp": "urban-silhouette-noir",
+      "assets/002-rumah-tengah-hutan/master-batch-01/p06.webp": "urban-silhouette-noir",
+      "assets/002-rumah-tengah-hutan/master-batch-01/p07.webp": "urban-silhouette-noir",
+      "assets/002-rumah-tengah-hutan/master-batch-01/p08.webp": "urban-silhouette-noir",
+      "assets/002-rumah-tengah-hutan/master-batch-01/p09.webp": "urban-silhouette-noir",
+      "assets/002-rumah-tengah-hutan/master-batch-01/p10.webp": "urban-silhouette-noir",
+      "assets/002-rumah-tengah-hutan/master-batch-01/p11.webp": "urban-silhouette-noir",
+      "assets/002-rumah-tengah-hutan/master-batch-01/p12.webp": "urban-silhouette-noir",
+      "assets/002-rumah-tengah-hutan/master-batch-01/p13.webp": "urban-silhouette-noir",
+      "assets/002-rumah-tengah-hutan/master-batch-01/p14.webp": "urban-silhouette-noir",
+      "assets/002-rumah-tengah-hutan/master-batch-01/p15.webp": "urban-silhouette-noir",
+      "assets/002-rumah-tengah-hutan/master-batch-01/p16.webp": "urban-silhouette-noir",
+      "assets/002-rumah-tengah-hutan/master-batch-01/p17.webp": "urban-silhouette-noir",
+      "assets/002-rumah-tengah-hutan/master-batch-01/p18.webp": "urban-silhouette-noir",
+      "assets/002-rumah-tengah-hutan/master-batch-01/p19.webp": "urban-silhouette-noir",
+      "assets/002-rumah-tengah-hutan/master-batch-01/p20.webp": "urban-silhouette-noir",
+      "assets/002-rumah-tengah-hutan/master-batch-01/p21.webp": "urban-silhouette-noir",
+      "assets/002-rumah-tengah-hutan/master-batch-01/p22.webp": "urban-silhouette-noir",
+      "assets/002-rumah-tengah-hutan/master-batch-01/p23.webp": "urban-silhouette-noir",
+      "assets/002-rumah-tengah-hutan/master-batch-01/p24.webp": "urban-silhouette-noir"
+    }
+  },
+  "script": {
+    "format": "decision-consequence",
+    "engine": "branch-rewind",
+    "wordCount": 252,
+    "hook": {
+      "at": 0,
+      "line": "Kamu nemu pondok pos pantau di tengah badai. Salah gerak, tamat."
+    },
+    "ending": {
+      "at": 4358,
+      "twistAt": 4464,
+      "payoff": "Survivor escapes down the cliff path."
+    }
+  },
+  "tensionRamp": {
+    "startSec": 149.4,
+    "endSec": 152.5,
+    "extraScale": 0.01,
+    "vignetteStrength": 0.1
+  },
+  "shotTreatments": {
+    "P15": "1.25x additional crop, 230px downward offset, and left-biased smaller caption to clear the hands and beam."
+  },
+  "beds": [],
+  "scenes": [
+    {
+      "id": "P01",
+      "name": "Panel 01",
+      "at": 0,
+      "plate": "assets/002-rumah-tengah-hutan/master-batch-01/p01.webp",
+      "camera": {
+        "from": {
+          "scale": 1.035,
+          "x": -10,
+          "y": 0
+        },
+        "to": {
+          "scale": 1.075,
+          "x": 10,
+          "y": 0
+        }
+      },
+      "characters": {
+        "mode": "baked"
+      },
+      "hud": [],
+      "editorial": {
+        "protagonist": "visible",
+        "purpose": "threat-proximity",
+        "evidence": "Selected approved panel P01."
+      },
+      "reframes": [
+        {
+          "at": 0,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 70,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 140,
+          "duration": 27,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "id": "P02",
+      "name": "Panel 02",
+      "at": 167,
+      "plate": "assets/002-rumah-tengah-hutan/master-batch-01/p02.webp",
+      "camera": {
+        "from": {
+          "scale": 1.035,
+          "x": 10,
+          "y": 0
+        },
+        "to": {
+          "scale": 1.075,
+          "x": -10,
+          "y": 0
+        }
+      },
+      "characters": {
+        "mode": "baked"
+      },
+      "hud": [],
+      "editorial": {
+        "protagonist": "absent",
+        "purpose": "threat-proximity",
+        "evidence": "Selected approved panel P02."
+      },
+      "reframes": [
+        {
+          "at": 0,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 70,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 140,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 210,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 280,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "id": "P03",
+      "name": "Panel 03",
+      "at": 486,
+      "plate": "assets/002-rumah-tengah-hutan/master-batch-01/p03.webp",
+      "camera": {
+        "from": {
+          "scale": 1.035,
+          "x": -10,
+          "y": 0
+        },
+        "to": {
+          "scale": 1.075,
+          "x": 10,
+          "y": 0
+        }
+      },
+      "characters": {
+        "mode": "baked"
+      },
+      "hud": [],
+      "editorial": {
+        "protagonist": "absent",
+        "purpose": "threat-proximity",
+        "evidence": "Selected approved panel P03."
+      },
+      "reframes": [
+        {
+          "at": 0,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 70,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 140,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 210,
+          "duration": 25,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "id": "P04",
+      "name": "Panel 04",
+      "at": 721,
+      "plate": "assets/002-rumah-tengah-hutan/master-batch-01/p04.webp",
+      "camera": {
+        "from": {
+          "scale": 1.035,
+          "x": 10,
+          "y": 0
+        },
+        "to": {
+          "scale": 1.075,
+          "x": -10,
+          "y": 0
+        }
+      },
+      "characters": {
+        "mode": "baked"
+      },
+      "hud": [],
+      "editorial": {
+        "protagonist": "absent",
+        "purpose": "threat-proximity",
+        "evidence": "Selected approved panel P04."
+      },
+      "reframes": [
+        {
+          "at": 0,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 70,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 140,
+          "duration": 3,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "id": "P05",
+      "name": "Panel 05",
+      "at": 864,
+      "plate": "assets/002-rumah-tengah-hutan/master-batch-01/p05.webp",
+      "camera": {
+        "from": {
+          "scale": 1.035,
+          "x": -10,
+          "y": 0
+        },
+        "to": {
+          "scale": 1.075,
+          "x": 10,
+          "y": 0
+        }
+      },
+      "characters": {
+        "mode": "baked"
+      },
+      "hud": [],
+      "editorial": {
+        "protagonist": "absent",
+        "purpose": "threat-proximity",
+        "evidence": "Selected approved panel P05."
+      },
+      "reframes": [
+        {
+          "at": 0,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 70,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 140,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 210,
+          "duration": 9,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "id": "P06",
+      "name": "Panel 06",
+      "at": 1083,
+      "plate": "assets/002-rumah-tengah-hutan/master-batch-01/p06.webp",
+      "camera": {
+        "from": {
+          "scale": 1.035,
+          "x": 10,
+          "y": 0
+        },
+        "to": {
+          "scale": 1.075,
+          "x": -10,
+          "y": 0
+        }
+      },
+      "characters": {
+        "mode": "baked"
+      },
+      "hud": [],
+      "editorial": {
+        "protagonist": "absent",
+        "purpose": "threat-proximity",
+        "evidence": "Selected approved panel P06."
+      },
+      "reframes": [
+        {
+          "at": 0,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 70,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 140,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 210,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "id": "P07",
+      "name": "Panel 07",
+      "at": 1357,
+      "plate": "assets/002-rumah-tengah-hutan/master-batch-01/p07.webp",
+      "camera": {
+        "from": {
+          "scale": 1.035,
+          "x": -10,
+          "y": 0
+        },
+        "to": {
+          "scale": 1.075,
+          "x": 10,
+          "y": 0
+        }
+      },
+      "characters": {
+        "mode": "baked"
+      },
+      "hud": [],
+      "editorial": {
+        "protagonist": "visible",
+        "purpose": "threat-proximity",
+        "evidence": "Selected approved panel P07."
+      },
+      "reframes": [
+        {
+          "at": 0,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 70,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 140,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 210,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 280,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 350,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "id": "P08",
+      "name": "Panel 08",
+      "at": 1756,
+      "plate": "assets/002-rumah-tengah-hutan/master-batch-01/p08.webp",
+      "camera": {
+        "from": {
+          "scale": 1.035,
+          "x": 10,
+          "y": 0
+        },
+        "to": {
+          "scale": 1.075,
+          "x": -10,
+          "y": 0
+        }
+      },
+      "characters": {
+        "mode": "baked"
+      },
+      "hud": [],
+      "editorial": {
+        "protagonist": "visible",
+        "purpose": "threat-proximity",
+        "evidence": "Selected approved panel P08."
+      },
+      "reframes": [
+        {
+          "at": 0,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 70,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 140,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 210,
+          "duration": 9,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "id": "P09",
+      "name": "Panel 09",
+      "at": 1975,
+      "plate": "assets/002-rumah-tengah-hutan/master-batch-01/p09.webp",
+      "camera": {
+        "from": {
+          "scale": 1.035,
+          "x": -10,
+          "y": 0
+        },
+        "to": {
+          "scale": 1.075,
+          "x": 10,
+          "y": 0
+        }
+      },
+      "characters": {
+        "mode": "baked"
+      },
+      "hud": [],
+      "editorial": {
+        "protagonist": "absent",
+        "purpose": "threat-proximity",
+        "evidence": "Selected approved panel P09."
+      },
+      "reframes": [
+        {
+          "at": 0,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 70,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 140,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 210,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "id": "P10",
+      "name": "Panel 10",
+      "at": 2253,
+      "plate": "assets/002-rumah-tengah-hutan/master-batch-01/p10.webp",
+      "camera": {
+        "from": {
+          "scale": 1.035,
+          "x": 10,
+          "y": 0
+        },
+        "to": {
+          "scale": 1.075,
+          "x": -10,
+          "y": 0
+        }
+      },
+      "characters": {
+        "mode": "baked"
+      },
+      "hud": [],
+      "editorial": {
+        "protagonist": "visible",
+        "purpose": "threat-proximity",
+        "evidence": "Selected approved panel P10."
+      },
+      "reframes": [
+        {
+          "at": 0,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 70,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 140,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 210,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 280,
+          "duration": 5,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "id": "P11",
+      "name": "Panel 11",
+      "at": 2538,
+      "plate": "assets/002-rumah-tengah-hutan/master-batch-01/p11.webp",
+      "camera": {
+        "from": {
+          "scale": 1.035,
+          "x": -10,
+          "y": 0
+        },
+        "to": {
+          "scale": 1.075,
+          "x": 10,
+          "y": 0
+        }
+      },
+      "characters": {
+        "mode": "baked"
+      },
+      "hud": [],
+      "editorial": {
+        "protagonist": "visible",
+        "purpose": "threat-proximity",
+        "evidence": "Selected approved panel P11."
+      },
+      "reframes": [
+        {
+          "at": 0,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 70,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 140,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "id": "P12",
+      "name": "Panel 12",
+      "at": 2714,
+      "plate": "assets/002-rumah-tengah-hutan/master-batch-01/p12.webp",
+      "camera": {
+        "from": {
+          "scale": 1.035,
+          "x": 10,
+          "y": 0
+        },
+        "to": {
+          "scale": 1.075,
+          "x": -10,
+          "y": 0
+        }
+      },
+      "characters": {
+        "mode": "baked"
+      },
+      "hud": [],
+      "editorial": {
+        "protagonist": "absent",
+        "purpose": "threat-proximity",
+        "evidence": "Selected approved panel P12."
+      },
+      "reframes": [
+        {
+          "at": 0,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 70,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 140,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "id": "P13",
+      "name": "Panel 13",
+      "at": 2920,
+      "plate": "assets/002-rumah-tengah-hutan/master-batch-01/p13.webp",
+      "camera": {
+        "from": {
+          "scale": 1.035,
+          "x": -10,
+          "y": 0
+        },
+        "to": {
+          "scale": 1.075,
+          "x": 10,
+          "y": 0
+        }
+      },
+      "characters": {
+        "mode": "baked"
+      },
+      "hud": [],
+      "editorial": {
+        "protagonist": "absent",
+        "purpose": "threat-proximity",
+        "evidence": "Selected approved panel P13."
+      },
+      "reframes": [
+        {
+          "at": 0,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 70,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 140,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "id": "P14",
+      "name": "Panel 14",
+      "at": 3106,
+      "plate": "assets/002-rumah-tengah-hutan/master-batch-01/p14.webp",
+      "camera": {
+        "from": {
+          "scale": 1.035,
+          "x": 10,
+          "y": 0
+        },
+        "to": {
+          "scale": 1.075,
+          "x": -10,
+          "y": 0
+        }
+      },
+      "characters": {
+        "mode": "baked"
+      },
+      "hud": [],
+      "editorial": {
+        "protagonist": "visible",
+        "purpose": "threat-proximity",
+        "evidence": "Selected approved panel P14."
+      },
+      "reframes": [
+        {
+          "at": 0,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 70,
+          "duration": 13,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "id": "P15",
+      "name": "Panel 15",
+      "at": 3189,
+      "plate": "assets/002-rumah-tengah-hutan/master-batch-01/p15.webp",
+      "camera": {
+        "from": {
+          "scale": 1.035,
+          "x": -10,
+          "y": 0
+        },
+        "to": {
+          "scale": 1.075,
+          "x": 10,
+          "y": 0
+        }
+      },
+      "characters": {
+        "mode": "baked"
+      },
+      "hud": [],
+      "editorial": {
+        "protagonist": "visible",
+        "purpose": "threat-proximity",
+        "evidence": "Selected approved panel P15."
+      },
+      "reframes": [
+        {
+          "at": 0,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "id": "P16",
+      "name": "Panel 16",
+      "at": 3251,
+      "plate": "assets/002-rumah-tengah-hutan/master-batch-01/p16.webp",
+      "camera": {
+        "from": {
+          "scale": 1.035,
+          "x": 10,
+          "y": 0
+        },
+        "to": {
+          "scale": 1.075,
+          "x": -10,
+          "y": 0
+        }
+      },
+      "characters": {
+        "mode": "baked"
+      },
+      "hud": [],
+      "editorial": {
+        "protagonist": "visible",
+        "purpose": "threat-proximity",
+        "evidence": "Selected approved panel P16."
+      },
+      "reframes": [
+        {
+          "at": 0,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 70,
+          "duration": 8,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "id": "P17",
+      "name": "Panel 17",
+      "at": 3329,
+      "plate": "assets/002-rumah-tengah-hutan/master-batch-01/p17.webp",
+      "camera": {
+        "from": {
+          "scale": 1.035,
+          "x": -10,
+          "y": 0
+        },
+        "to": {
+          "scale": 1.075,
+          "x": 10,
+          "y": 0
+        }
+      },
+      "characters": {
+        "mode": "baked"
+      },
+      "hud": [],
+      "editorial": {
+        "protagonist": "visible",
+        "purpose": "threat-proximity",
+        "evidence": "Selected approved panel P17."
+      },
+      "reframes": [
+        {
+          "at": 0,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 70,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "id": "P18",
+      "name": "Panel 18",
+      "at": 3431,
+      "plate": "assets/002-rumah-tengah-hutan/master-batch-01/p18.webp",
+      "camera": {
+        "from": {
+          "scale": 1.035,
+          "x": 10,
+          "y": 0
+        },
+        "to": {
+          "scale": 1.075,
+          "x": -10,
+          "y": 0
+        }
+      },
+      "characters": {
+        "mode": "baked"
+      },
+      "hud": [],
+      "editorial": {
+        "protagonist": "visible",
+        "purpose": "threat-proximity",
+        "evidence": "Selected approved panel P18."
+      },
+      "reframes": [
+        {
+          "at": 0,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 70,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 140,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 210,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 280,
+          "duration": 7,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "id": "P19",
+      "name": "Panel 19",
+      "at": 3718,
+      "plate": "assets/002-rumah-tengah-hutan/master-batch-01/p19.webp",
+      "camera": {
+        "from": {
+          "scale": 1.035,
+          "x": -10,
+          "y": 0
+        },
+        "to": {
+          "scale": 1.075,
+          "x": 10,
+          "y": 0
+        }
+      },
+      "characters": {
+        "mode": "baked"
+      },
+      "hud": [],
+      "editorial": {
+        "protagonist": "visible",
+        "purpose": "threat-proximity",
+        "evidence": "Selected approved panel P19."
+      },
+      "reframes": [
+        {
+          "at": 0,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 70,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "id": "P20",
+      "name": "Panel 20",
+      "at": 3835,
+      "plate": "assets/002-rumah-tengah-hutan/master-batch-01/p20.webp",
+      "camera": {
+        "from": {
+          "scale": 1.035,
+          "x": 10,
+          "y": 0
+        },
+        "to": {
+          "scale": 1.075,
+          "x": -10,
+          "y": 0
+        }
+      },
+      "characters": {
+        "mode": "baked"
+      },
+      "hud": [],
+      "editorial": {
+        "protagonist": "absent",
+        "purpose": "threat-proximity",
+        "evidence": "Selected approved panel P20."
+      },
+      "reframes": [
+        {
+          "at": 0,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 70,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 140,
+          "duration": 9,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "id": "P21",
+      "name": "Panel 21",
+      "at": 3984,
+      "plate": "assets/002-rumah-tengah-hutan/master-batch-01/p21.webp",
+      "camera": {
+        "from": {
+          "scale": 1.035,
+          "x": -10,
+          "y": 0
+        },
+        "to": {
+          "scale": 1.075,
+          "x": 10,
+          "y": 0
+        }
+      },
+      "characters": {
+        "mode": "baked"
+      },
+      "hud": [],
+      "editorial": {
+        "protagonist": "absent",
+        "purpose": "threat-proximity",
+        "evidence": "Selected approved panel P21."
+      },
+      "reframes": [
+        {
+          "at": 0,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 70,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 140,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 210,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "id": "P22",
+      "name": "Panel 22",
+      "at": 4244,
+      "plate": "assets/002-rumah-tengah-hutan/master-batch-01/p22.webp",
+      "camera": {
+        "from": {
+          "scale": 1.035,
+          "x": 10,
+          "y": 0
+        },
+        "to": {
+          "scale": 1.075,
+          "x": -10,
+          "y": 0
+        }
+      },
+      "characters": {
+        "mode": "baked"
+      },
+      "hud": [],
+      "editorial": {
+        "protagonist": "visible",
+        "purpose": "threat-proximity",
+        "evidence": "Selected approved panel P22."
+      },
+      "reframes": [
+        {
+          "at": 0,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 70,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "id": "P23",
+      "name": "Panel 23",
+      "at": 4358,
+      "plate": "assets/002-rumah-tengah-hutan/master-batch-01/p23.webp",
+      "camera": {
+        "from": {
+          "scale": 1.035,
+          "x": -10,
+          "y": 0
+        },
+        "to": {
+          "scale": 1.075,
+          "x": 10,
+          "y": 0
+        }
+      },
+      "characters": {
+        "mode": "baked"
+      },
+      "hud": [],
+      "editorial": {
+        "protagonist": "reaction",
+        "purpose": "threat-proximity",
+        "evidence": "Selected approved panel P23."
+      },
+      "reframes": [
+        {
+          "at": 0,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 70,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "id": "P24",
+      "name": "Panel 24",
+      "at": 4464,
+      "plate": "assets/002-rumah-tengah-hutan/master-batch-01/p24.webp",
+      "camera": {
+        "from": {
+          "scale": 1.035,
+          "x": 10,
+          "y": 0
+        },
+        "to": {
+          "scale": 1.075,
+          "x": -10,
+          "y": 0
+        }
+      },
+      "characters": {
+        "mode": "baked"
+      },
+      "hud": [],
+      "editorial": {
+        "protagonist": "absent",
+        "purpose": "threat-proximity",
+        "evidence": "Selected approved panel P24."
+      },
+      "reframes": [
+        {
+          "at": 0,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 70,
+          "duration": 30,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 140,
+          "duration": 16,
+          "scale": 1.01,
+          "x": 0,
+          "y": 0
+        }
+      ]
+    }
+  ],
+  "soundMix": {
+    "asset": "assets/002-rumah-tengah-hutan/mix-polish.wav",
+    "recipe": "episodes/002-rumah-tengah-hutan/mix.py",
+    "cues": [
+      {
+        "name": "synthetic rain and wind",
+        "atSec": 0
+      },
+      {
+        "name": "falling pine",
+        "asset": "sfx/prepared/body-fall.wav",
+        "atSec": 9.1
+      },
+      {
+        "name": "branches",
+        "asset": "sfx/prepared/coat-shift.wav",
+        "atSec": 18.9
+      },
+      {
+        "name": "setup thunder",
+        "atSec": 32.7,
+        "source": "deterministic synthesized noise"
+      },
+      {
+        "name": "exposed strike",
+        "asset": "assets/002-rumah-tengah-hutan/wood-hit.ogg",
+        "atSec": 62.2333333333
+      },
+      {
+        "name": "rewind",
+        "asset": "sfx/prepared/tension-rise.wav",
+        "atSec": 84.6
+      },
+      {
+        "name": "climax thunder and masked strike",
+        "asset": "assets/002-rumah-tengah-hutan/wood-hit.ogg",
+        "atSec": 123.9459133333,
+        "thunderAtSec": 123.9333333333
+      },
+      {
+        "name": "door creak",
+        "asset": "sfx/prepared/minimarket-door-creak-outside.wav",
+        "atSec": 143.34
+      },
+      {
+        "name": "blackout sub",
+        "atSec": 152.65,
+        "source": "deterministic sine"
+      }
+    ]
+  },
+  "timing": {
+    "setupFlashFrame": 891,
+    "setupThunderFrame": 981,
+    "climaxFlashFrame": 3628,
+    "climaxThunderFrame": 3718,
+    "rewindFrame": 2538,
+    "rewindFrames": 12,
+    "postRewindSilence": [
+      88.6,
+      90.2
+    ],
+    "postThunderSilence": [
+      139.0,
+      141.0
+    ],
+    "blackoutFrame": 4575,
+    "blackoutSubFrame": 4580
+  },
+  "notes": "Original narration retained. The climax flash is at 120.933333 s and the thunder/impact at 123.933333 s, 13.333 ms after the measured BRAK start at 123.920 s. The earlier Kilat menyala line starts at 114.360 s and the count finishes at 119.080 s; neither can coincide with the flash without changing the accepted narration."
+}

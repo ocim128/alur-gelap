@@ -1,0 +1,23 @@
+# Master-anchor batch 01
+
+Owner approved the P01/P06/P15 style test on 2026-11-22 and authorized the full batch. The approved hiker/creature profile supplies identity only; `docs/style-anchor/shot-a-rhd-mirror.webp`, `shot-b-minimarket-doors.webp` and `shot-c-underpass-exit.webp` are the only style references. Do not reference Pilot 01 panels. The earlier 24-plate batch and all test assets remain preserved.
+
+## Set & Prop Anchors
+
+**Exterior front anchor:** The front/south side of a weathered dark wooden 4 m × 6 m Indonesian forestry lookout stands on a misty pine-forest cliff. Its single front wooden door faces a small porch; the fallen pine and landslide later obstruct this doorway from outside. Storm rain and fog are outdoors. No electric porch or ceiling light is visible.
+
+**Interior anchor:** A dry 4 m × 6 m Indonesian forestry lookout cabin on a forested cliff, with weathered dark-brown wooden plank walls and a solid wooden plank floor. The south/front wooden door faces a small porch blocked outside by a fallen pine trunk and earth. A rectangular wood-framed glass window on the west wall faces the storm sky. A stone fireplace stands in the central area, with one loose solid teak beam approximately one metre long on the floor nearby. The north/rear heavy wooden emergency door has right-hand hinges when viewed from the interior and opens outward onto the rocky cliff path after release. It is restrained by a thick horizontal wooden bar: its left end is held by a rusty keeper bolted to the fixed left wall jamb, while a second rusty bracket secures the bar to the moving door leaf on the right. The bar's right end stays within the door leaf, clear of the hinge-side jamb. After the bar breaks, the short wall-held fragment stays on the jamb and the door-held fragment stays fully inside the leaf's edges, allowing outward clearance. No falling rain occurs inside the cabin. No ceiling fixture, fluorescent tube, exposed electric bulb or artificial overhead light is present; cold exterior storm light enters through the west window.
+
+**Front threshold anchor:** The front/south wooden door faces the lookout's small porch. A fallen pine trunk and earth block the entrance from outside; dense broken pine boughs obscure sightlines between interior and exterior. A tall, lean, pointed-eared nonhuman creature nests among the branches, facing the storm while its ears attend toward the room. Rain and fog are outdoors; the separate rear barred door is on the opposite wall.
+
+**Rear exit anchor:** The north/rear emergency door opens outward on its right-hand hinge viewed from inside, onto a rocky pine-cliff path beyond the fallen front tree. When the bar is broken, the left keeper and its fragment stay fixed to the left jamb and the other fragment stays inside the door leaf, clear of both jambs. Rain is outdoors; the cabin interior is dry and has no ceiling light.
+
+The keeper geometry is a production interpretation made to address the previous audit. Agent 05's image-stage re-audit found the selected stills coherent; the actual outward swing remains for the final-cut audit. P08/P19 must depict the separate teak beam swung diagonally or overhead into the horizontal bar. Agent 04 must enforce the exact 3.0-second lightning-to-thunder interval using measured audio, rather than the brief's rough timestamps.
+
+## Batch state
+
+All 24 plates have been generated in `public/assets/002-rumah-tengah-hutan/master-batch-01/`. The owner-approved Episode 002 P01 style-test plate was reused as this batch's P01; the other shots were generated separately. Exact prompts, references and source images are in `master-batch-01-generation.md`.
+
+P05 and P23 needed one retry each. P08 and P19 each needed two retries and a boot remains clipped at the left edge in each selected image. P08's second retry shows the whole boot but adds an unintended second beam, so it remains an unselected alternative. The selected P08 keeps one diagonal striking beam; selected P19 has both hands on one diagonal beam. Agent 05's independent image-stage re-audit considered the earlier rear-bar release and separate front/rear geography findings resolved in the selected stills. On 22 November 2026 the human orchestrator expressly waived the P08/P19 cropped-boot finding and approved the selected batch for assembly, citing fast-cut upper-body impact framing, `ImpactMicroShake`, and the intended captions/UI coverage. The plates remain unchanged. Verify the actual treatment and timing in the finished cut.
+
+The full contact sheet is `episodes/002-rumah-tengah-hutan/panels-contact-master-01.jpg`; four larger six-panel sheets accompany it. The five-point self-audit is appended to `sources/prompts.md`.

@@ -1,0 +1,1312 @@
+{
+  "version": 1,
+  "voiceId": "voice_71a5a701-796e-421d-840e-0adc00b0816a",
+  "voiceName": "voice_71a5a701-796e-421d-840e-0adc00b0816a",
+  "provider": "gemini-cloud",
+  "model": "gemini-3.8-flash-tts",
+  "master": true,
+  "masterFilter": "highpass=f=85,equalizer=f=140:t=q:w=1.2:g=1,equalizer=f=450:t=q:w=1.5:g=-1,equalizer=f=3200:t=q:w=1.2:g=1,loudnorm=I=-14:LRA=6:TP=-1.5,aformat=sample_fmts=s16",
+  "asrModel": "small",
+  "generatedAt": "2026-11-22T00:12:52.813Z",
+  "passed": false,
+  "totalChunks": 14,
+  "verifiedChunks": 8,
+  "warningChunks": 0,
+  "failedChunks": 6,
+  "plannedDurationSec": 161.11,
+  "finalAlignment": {
+    "transcript": "Kamu nemu pondok pos pantau di tengah badai, salah gerak tamat. Baru aja kamu masuk, pohon pinus raksasa di teras roboh di hantam angin. Batang pohon dan tanah longsor nutup pintu depan dari luar. Tapi perhatikan, di seladahan pohon itu ada makhluk bertangan panjang kurus yang bersarang diambang teras. Dia menghadap luar, tapi kupingnya siaga ke arah ruangan. Di jendela, gilatan petir selalu disusul guruh keras 3 detik kemudian. Bikin dinding bergetar. Dilantai dekat perapian, ada balok kayu jati tebal yang lepas. Dan di belakang ada pintu darurat yang palang kayunya macet. Pintu depan tertutup monster. Instingmu lari ke belakang, ambil balok kayu dan hajar palangnya sekuat tenaga, biar cepat lepas, wajar kan, biar bisa langsung kabur. Tapi, begitu balokmu menghantam kayu. Prak, suaranya memecah keheningan rumah. Monster di teras langsung mutar lehernya ke belakang. Dalam satu lompatan kilat, sosok hitam itu menerjang dari seladahan. Sebelum kamu sempat noleh, cakarnya menghantam telak. Kamu terpental ke lante kayu dan pandanganmu gelap. Balik lagi, jangan pernah hantam palangnya sembarangan. Monster itu nggak bisa lihat kedalam karena tertutup dahan. Tapi dia peka banget sama suara tentuman. Satu-satunya jalan, ya pintu darurat, dan palangnya harus dihantam balok. Kuncinya, manfaatin suara badai. Ambil balok kayu jati tadi. Dekati pintu belakang pelan-pelan. Tatap jendela samping. Tunggu kilatan petir. Kilat menyala. Satu, dua, tiga. Guru menggelegar di detik yang sama, berak, hantam palang kayunya keras-keras, suara hantaman balokmu, tenggelam total dibalik ke muruh petir. Diam dulu dua detik, sampai guru reda, monster di depan tetap tenang disarangnya, palang pintu sudah patah, dorong pintu daruratnya keluar, lari menyusuri jalan setapak tebing, tembus badai. Kamu berhasil lolos hidup-hidup.",
+    "mismatches": [
+      {
+        "expected": "perhatiin",
+        "heard": "perhatikan"
+      },
+      {
+        "expected": "kilatan",
+        "heard": "gilatan"
+      },
+      {
+        "expected": "brak",
+        "heard": "prak"
+      },
+      {
+        "expected": "lantai",
+        "heard": "lante"
+      },
+      {
+        "expected": "dentuman",
+        "heard": "tentuman"
+      },
+      {
+        "expected": "guruh",
+        "heard": "guru"
+      },
+      {
+        "expected": "brak",
+        "heard": "berak"
+      },
+      {
+        "expected": null,
+        "heard": "ke"
+      },
+      {
+        "expected": "gemuruh",
+        "heard": "muruh"
+      },
+      {
+        "expected": "guruh",
+        "heard": "guru"
+      }
+    ],
+    "passed": false
+  },
+  "audioQuality": {
+    "integratedLufs": -16.9,
+    "loudnessRangeLu": 4,
+    "noiseFloorDbfs": -20.4,
+    "targets": {
+      "integratedLufs": -14,
+      "loudnessRangeLu": [
+        5,
+        7
+      ]
+    }
+  },
+  "chunks": [
+    {
+      "index": 0,
+      "tag": null,
+      "text": "Kamu nemu pondok pos pantau di tengah badai. Salah gerak, tamat. Baru aja kamu masuk, pohon pinus raksasa di teras roboh dihantam angin.",
+      "retries": 0,
+      "status": "verified",
+      "bestSimilarity": 0.996,
+      "bestWordRatio": 1,
+      "acceptedAttempt": 0,
+      "attempts": [
+        {
+          "seed": 0,
+          "wordRatio": 1,
+          "similarity": 0.996,
+          "wpm": 115,
+          "expectedWpm": 130,
+          "passed": true,
+          "reasons": [],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Kamu nemu pondok pos Pantau di tengah badai, salah gerak tamat, baru aja kamu masuk, pohon pinus raksasa di teras roboh di hantam angin.",
+          "mismatches": [],
+          "endTruncated": false,
+          "rawTranscript": "Kamu nemu pondok pos pantau di tengah badai, salah gerak tamat. Baru aja kamu masuk, pohon pinus raksasa di teras roboh di hantam angin.",
+          "rawMismatches": [],
+          "rawEndTruncated": false,
+          "rawReasons": []
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "tag": null,
+      "text": "Batang pohon dan tanah longsor nutup pintu depan dari luar. Tapi perhatiin: di sela dahan pohon itu, ada makhluk bertangan panjang kurus yang bersarang di ambang teras. Dia menghadap luar, tapi kupingnya siaga ke arah ruangan.",
+      "retries": 1,
+      "status": "verified",
+      "bestSimilarity": 0.995,
+      "bestWordRatio": 1,
+      "acceptedAttempt": 1,
+      "attempts": [
+        {
+          "seed": 0,
+          "wordRatio": 0.971,
+          "similarity": 0.991,
+          "wpm": 110,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.94): heard \"batang pohon dan tanah longsor nutup pintu depan dari luar tapi perhatiin di sel\"",
+            "word mismatch (ratio 0.97): heard \"batang pohon dan tanah longsor nutup pintu depan dari luar tapi perhatiin di sel\""
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Batang pohon dan tanah longsor nutup pintu depan dari luar. Tapi perhatiin, di seladahan pohon itu, ada makhluk bertangan panjang kurus yang bersarang diambang peras. Dia menghadap luar, tapi kupingnya siaga ke arah ruangan.",
+          "mismatches": [
+            {
+              "expected": "teras",
+              "heard": "peras"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Batang pohon dan tanah longsor nutup pintu depan dari luar. Tapi perhatiin, di seladahan pohon itu, ada mahluk bertangan panjang kurus yang bersarang diambang peras. Dia menghadap luar, tapi kupingnya siaga ke arah ruangan.",
+          "rawMismatches": [
+            {
+              "expected": "makhluk",
+              "heard": "mahluk"
+            },
+            {
+              "expected": "teras",
+              "heard": "peras"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.94): heard \"batang pohon dan tanah longsor nutup pintu depan dari luar tapi perhatiin di sel\""
+          ]
+        },
+        {
+          "seed": 1,
+          "wordRatio": 1,
+          "similarity": 0.995,
+          "wpm": 113,
+          "expectedWpm": 130,
+          "passed": true,
+          "reasons": [],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Batang pohon dan tanah longsor, nutup pintu depan dari luar. Tapi perhatiin, di seladahan pohon itu, ada makhluk bertangan panjang kurus yang bersarang diambang teras. Dia menghadap luar, tapi kupingnya siaga ke arah ruangan.",
+          "mismatches": [],
+          "endTruncated": false,
+          "rawTranscript": "Batang pohon dan tanah longsor, nutup pintu depan dari luar. Tapi perhatiin, di seladahan pohon itu, ada makhluk bertangan panjang kurus yang bersarang diambang teras. Dia menghadap luar, tapi kupingnya siaga ke arah ruangan.",
+          "rawMismatches": [],
+          "rawEndTruncated": false,
+          "rawReasons": []
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "tag": null,
+      "text": "Di jendela, kilatan petir selalu disusul guruh keras tiga detik kemudian, bikin dinding bergetar. Di lantai dekat perapian, ada balok kayu jati tebal yang lepas. Dan di belakang, ada pintu darurat yang palang kayunya macet.",
+      "retries": 1,
+      "status": "verified",
+      "bestSimilarity": 0.998,
+      "bestWordRatio": 1,
+      "acceptedAttempt": 1,
+      "attempts": [
+        {
+          "seed": 0,
+          "wordRatio": 0.971,
+          "similarity": 0.995,
+          "wpm": 108,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "word mismatch (ratio 0.97): heard \"di jendela gilatan petir selalu disusul guruh keras 3 detik kemudian bikin dindi\""
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Di jendela, gilatan petir selalu disusul guruh keras tiga detik kemudian, bikin dinding bergetar. Di lantai dekat perapian, ada balok kayu jati tebal yang lepas, dan di belakang ada pintu darurat yang palang kayunya macet.",
+          "mismatches": [
+            {
+              "expected": "kilatan",
+              "heard": "gilatan"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Di jendela, kilatan petir selalu disusul guruh keras tiga detik kemudian bikin dinding bergetar. Di lantai dekat perapian, ada balok kayu jati tebal yang lepas, dan di belakang ada pintu darurat yang palang kayunya macet.",
+          "rawMismatches": [],
+          "rawEndTruncated": false,
+          "rawReasons": []
+        },
+        {
+          "seed": 1,
+          "wordRatio": 1,
+          "similarity": 0.998,
+          "wpm": 111,
+          "expectedWpm": 130,
+          "passed": true,
+          "reasons": [],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Di jendela, kilatan petir selalu disusul guruh keras tiga detik kemudian, bikin dinding bergetar. Dilantai dekat perapian, ada balok kayu jati tebal yang lepas, dan di belakang ada pintu darurat yang palang kayunya macet.",
+          "mismatches": [],
+          "endTruncated": false,
+          "rawTranscript": "Di jendela, kilatan petir selalu disusul guruh keras tiga detik kemudian, bikin dinding bergetar. Dilantai dekat perapian, ada balok kayu jati tebal yang lepas, dan di belakang ada pintu darurat yang palang kayunya macet.",
+          "rawMismatches": [],
+          "rawEndTruncated": false,
+          "rawReasons": []
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "tag": null,
+      "text": "Pintu depan tertutup monster. Instingmu: lari ke belakang, ambil balok kayu, dan hajar palangnya sekuat tenaga biar cepat lepas. Wajar, kan?",
+      "retries": 1,
+      "status": "verified",
+      "bestSimilarity": 1,
+      "bestWordRatio": 1,
+      "acceptedAttempt": 1,
+      "attempts": [
+        {
+          "seed": 0,
+          "wordRatio": 1,
+          "similarity": 0.996,
+          "wpm": 102,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: last word missing, truncated, or has invalid timestamps",
+            "last word missing, truncated, or has invalid timestamps"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Pintu depan tertutup monster. Instingmu lari ke belakang. Ambil balok kayu dan hajar palangnya sekuat tenaga biar cepat lepas. Wajarkan.",
+          "mismatches": [],
+          "endTruncated": true,
+          "rawTranscript": "Pintu depan tertutup monster. Instingmu lari ke belakang. Ambil balok kayu dan hajar palangnya sekuat tenaga biar cepat lepas. Wajarkan.",
+          "rawMismatches": [],
+          "rawEndTruncated": true,
+          "rawReasons": [
+            "last word missing, truncated, or has invalid timestamps"
+          ]
+        },
+        {
+          "seed": 1,
+          "wordRatio": 1,
+          "similarity": 1,
+          "wpm": 105,
+          "expectedWpm": 130,
+          "passed": true,
+          "reasons": [],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Pintu depan tertutup monster. Instingmu lari ke belakang, ambil balok kayu, dan hajar palangnya sekuat tenaga, biar cepat lepas. Wajar kan?",
+          "mismatches": [],
+          "endTruncated": false,
+          "rawTranscript": "Pintu depan tertutup monster. Instingmu lari ke belakang, ambil balok kayu dan hajar palangnya sekuat tenaga biar cepat lepas. Wajar kan?",
+          "rawMismatches": [],
+          "rawEndTruncated": false,
+          "rawReasons": []
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "tag": null,
+      "text": "Biar bisa langsung kabur. Tapi begitu balokmu menghantam kayu: BRAK! Suaranya memecah keheningan rumah.",
+      "retries": 2,
+      "status": "failed",
+      "bestSimilarity": 0.99,
+      "bestWordRatio": 0.929,
+      "acceptedAttempt": 1,
+      "attempts": [
+        {
+          "seed": 0,
+          "wordRatio": 0.714,
+          "similarity": 0.964,
+          "wpm": 92,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.71): heard \"biar bisa langsung kabur tapi begitu balok memenghantam kayu berak suaranya meca\"",
+            "raw: 87 wpm outside 130±25%",
+            "word mismatch (ratio 0.71): heard \"biar bisa langsung kabur tapi begitu balok memenghantam kayu berak suaranya meca\"",
+            "92 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "biar bisa langsung kabur. Tapi begitu balok memenghantam kayu, berak, suaranya mecah keheningan rumah.",
+          "mismatches": [
+            {
+              "expected": "balokmu",
+              "heard": "balok"
+            },
+            {
+              "expected": "menghantam",
+              "heard": "memenghantam"
+            },
+            {
+              "expected": "brak",
+              "heard": "berak"
+            },
+            {
+              "expected": "memecah",
+              "heard": "mecah"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "biar bisa langsung kabur. Tapi begitu balok memenghantam kayu. Berak! Suaranya mecah keheningan rumah.",
+          "rawMismatches": [
+            {
+              "expected": "balokmu",
+              "heard": "balok"
+            },
+            {
+              "expected": "menghantam",
+              "heard": "memenghantam"
+            },
+            {
+              "expected": "brak",
+              "heard": "berak"
+            },
+            {
+              "expected": "memecah",
+              "heard": "mecah"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.71): heard \"biar bisa langsung kabur tapi begitu balok memenghantam kayu berak suaranya meca\"",
+            "87 wpm outside 130±25%"
+          ]
+        },
+        {
+          "seed": 1,
+          "wordRatio": 0.929,
+          "similarity": 0.99,
+          "wpm": 82,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.93): heard \"biar bisa langsung kabur tapi begitu balokmu menghantam kayu prak suaranya memec\"",
+            "raw: 79 wpm outside 130±25%",
+            "word mismatch (ratio 0.93): heard \"biar bisa langsung kabur tapi begitu balokmu menghantam kayu prak suaranya memec\"",
+            "82 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "biar bisa langsung kabur. Tapi, begitu balokmu menghantam kayu, prak suaranya memecah keheningan rumah.",
+          "mismatches": [
+            {
+              "expected": "brak",
+              "heard": "prak"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "biar bisa langsung kabur. Tapi, begitu balokmu menghantam kayu, prak, suaranya memecah keheningan rumah.",
+          "rawMismatches": [
+            {
+              "expected": "brak",
+              "heard": "prak"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.93): heard \"biar bisa langsung kabur tapi begitu balokmu menghantam kayu prak suaranya memec\"",
+            "79 wpm outside 130±25%"
+          ]
+        },
+        {
+          "seed": 2,
+          "wordRatio": 0.643,
+          "similarity": 0.944,
+          "wpm": 92,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.71): heard \"biar bisa langsung kabur tapi begitu balok memenghantam kayu perak suaranya meca\"",
+            "raw: 88 wpm outside 130±25%",
+            "word mismatch (ratio 0.64): heard \"biar bisa langsung kabur tapi begitu balok memenghantam kayu perak suaranya meca\"",
+            "92 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "biar bisa langsung kabur. Tapi begitu balok memenghantam kayu, perak, suaranya mecah kehaningan rumah.",
+          "mismatches": [
+            {
+              "expected": "balokmu",
+              "heard": "balok"
+            },
+            {
+              "expected": "menghantam",
+              "heard": "memenghantam"
+            },
+            {
+              "expected": "brak",
+              "heard": "perak"
+            },
+            {
+              "expected": "memecah",
+              "heard": "mecah"
+            },
+            {
+              "expected": "keheningan",
+              "heard": "kehaningan"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "biar bisa langsung kabur. Tapi begitu balok memenghantam kayu, perak, suaranya mecah keheningan rumah.",
+          "rawMismatches": [
+            {
+              "expected": "balokmu",
+              "heard": "balok"
+            },
+            {
+              "expected": "menghantam",
+              "heard": "memenghantam"
+            },
+            {
+              "expected": "brak",
+              "heard": "perak"
+            },
+            {
+              "expected": "memecah",
+              "heard": "mecah"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.71): heard \"biar bisa langsung kabur tapi begitu balok memenghantam kayu perak suaranya meca\"",
+            "88 wpm outside 130±25%"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "tag": null,
+      "text": "Monster di teras langsung mutar lehernya ke belakang. Dalam satu lompatan kilat, sosok hitam itu menerjang dari sela dahan. Sebelum kamu sempat noleh, cakarnya menghantam telak.",
+      "retries": 2,
+      "status": "verified",
+      "bestSimilarity": 0.997,
+      "bestWordRatio": 1,
+      "acceptedAttempt": 2,
+      "attempts": [
+        {
+          "seed": 0,
+          "wordRatio": 1,
+          "similarity": 0.997,
+          "wpm": 98,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: 95 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Monster di teras langsung mutar lehernya ke belakang. Dalam satu lompatan kilat, sosok hitam itu menerjang dari seladahan. Sebelum kamu sempat noleh, cakarnya menghantam telak.",
+          "mismatches": [],
+          "endTruncated": false,
+          "rawTranscript": "Monster di teras langsung mutar lehernya ke belakang. Dalam satu lompatan kilat, sosok hitam itu menerjang dari seladahan. Sebelum kamu sempat noleh, cakarnya menghantam telak.",
+          "rawMismatches": [],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "95 wpm outside 130±25%"
+          ]
+        },
+        {
+          "seed": 1,
+          "wordRatio": 1,
+          "similarity": 0.997,
+          "wpm": 98,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: 97 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Monster di teras langsung mutar lehernya ke belakang. Dalam satu lompatan kilat, sosok hitam itu menerjang dari seladahan. Sebelum kamu sempat noleh, cakarnya menghantam telak.",
+          "mismatches": [],
+          "endTruncated": false,
+          "rawTranscript": "Monster di teras langsung mutar lehernya ke belakang. Dalam satu lompatan kilat, sosok hitam itu menerjang dari seladahan. Sebelum kamu sempat noleh, cakarnya menghantam telak.",
+          "rawMismatches": [],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "97 wpm outside 130±25%"
+          ]
+        },
+        {
+          "seed": 2,
+          "wordRatio": 1,
+          "similarity": 0.997,
+          "wpm": 105,
+          "expectedWpm": 130,
+          "passed": true,
+          "reasons": [],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Monster di teras langsung mutar lehernya ke belakang. Dalam satu lompatan kilat, sosok hitam itu menerjang dari seladahan. Sebelum kamu sempat noleh, cakarnya menghantam telak.",
+          "mismatches": [],
+          "endTruncated": false,
+          "rawTranscript": "Monster di teras langsung mutar lehernya ke belakang. Dalam satu lompatan kilat, sosok hitam itu menerjang dari seladahan. Sebelum kamu sempat noleh, cakarnya menghantam telak.",
+          "rawMismatches": [],
+          "rawEndTruncated": false,
+          "rawReasons": []
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "tag": null,
+      "text": "Kamu terpental ke lantai kayu, dan pandanganmu gelap. Balik lagi. Jangan pernah hantam palangnya sembarangan.",
+      "retries": 2,
+      "status": "failed",
+      "bestSimilarity": 1,
+      "bestWordRatio": 1,
+      "acceptedAttempt": 0,
+      "attempts": [
+        {
+          "seed": 0,
+          "wordRatio": 1,
+          "similarity": 1,
+          "wpm": 97,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: 93 wpm outside 130±25%",
+            "97 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Kamu terpental ke lantai kayu dan pandanganmu gelap, balik lagi, jangan pernah hantam palangnya sembarangan.",
+          "mismatches": [],
+          "endTruncated": false,
+          "rawTranscript": "Kamu terpental ke lantai kayu dan pandanganmu gelap. Balik lagi, jangan pernah hantam palangnya sembarangan.",
+          "rawMismatches": [],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "93 wpm outside 130±25%"
+          ]
+        },
+        {
+          "seed": 1,
+          "wordRatio": 0.929,
+          "similarity": 0.986,
+          "wpm": 94,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.93): heard \"kamu terpental kelantai kayu dan pandanganmu kelap balik lagi jangan pernah hant\"",
+            "raw: 91 wpm outside 130±25%",
+            "word mismatch (ratio 0.93): heard \"kamu terpental kelantai kayu dan pandanganmu kelap balik lagi jangan pernah hant\"",
+            "94 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Kamu terpental kelantai kayu dan pandanganmu kelap, balik lagi, jangan pernah hantam palangnya sembarangan.",
+          "mismatches": [
+            {
+              "expected": "gelap",
+              "heard": "kelap"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Kamu terpental kelantai kayu dan pandanganmu kelap, balik lagi, jangan pernah hantam palangnya sembarangan.",
+          "rawMismatches": [
+            {
+              "expected": "gelap",
+              "heard": "kelap"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.93): heard \"kamu terpental kelantai kayu dan pandanganmu kelap balik lagi jangan pernah hant\"",
+            "91 wpm outside 130±25%"
+          ]
+        },
+        {
+          "seed": 2,
+          "wordRatio": 1,
+          "similarity": 1,
+          "wpm": 99,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: 95 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Kamu terpental ke lantai kayu dan pandanganmu gelap. Balik lagi, jangan pernah hantam palangnya sembarangan.",
+          "mismatches": [],
+          "endTruncated": false,
+          "rawTranscript": "Kamu terpental ke lantai kayu dan pandanganmu gelap. Balik lagi, jangan pernah hantam palangnya sembarangan.",
+          "rawMismatches": [],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "95 wpm outside 130±25%"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "tag": null,
+      "text": "Monster itu nggak bisa lihat ke dalam karena tertutup dahan, tapi dia peka banget sama suara dentuman. Satu-satunya jalan ya pintu darurat, dan palangnya harus dihantam balok. Kuncinya: manfaatin suara badai.",
+      "retries": 2,
+      "status": "failed",
+      "bestSimilarity": 0.992,
+      "bestWordRatio": 0.968,
+      "acceptedAttempt": 0,
+      "attempts": [
+        {
+          "seed": 0,
+          "wordRatio": 0.968,
+          "similarity": 0.992,
+          "wpm": 115,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.97): heard \"monster itu nggak bisa lihat kedalam karena tertutup dahan tapi dia peka banget \"",
+            "word mismatch (ratio 0.97): heard \"monster itu nggak bisa lihat kedalam karena tertutup dahan tapi dia peka banget \""
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Monster itu nggak bisa lihat kedalam, karena tertutup dahan, tapi dia peka banget sama suara dentuman. Satu-satunya jalan, ya pintu dalurat, dan palangnya harus dihantam balok, kuncinya manfaatin suara badai.",
+          "mismatches": [
+            {
+              "expected": "darurat",
+              "heard": "dalurat"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Monster itu nggak bisa lihat kedalam, karena tertutup dahan, tapi dia peka banget sama suara dentuman. Satu-satunya jalan, ya pintu dalurat, dan palangnya harus dihantam balok. Kuncinya, manfaatin suara badai.",
+          "rawMismatches": [
+            {
+              "expected": "darurat",
+              "heard": "dalurat"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.97): heard \"monster itu nggak bisa lihat kedalam karena tertutup dahan tapi dia peka banget \""
+          ]
+        },
+        {
+          "seed": 1,
+          "wordRatio": 0.954,
+          "similarity": 0.992,
+          "wpm": 103,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.95): heard \"monster itu nggak bisa lihat ke dalam karena tertutup dahan tapi dia peka banget\"",
+            "word mismatch (ratio 0.95): heard \"monster itu nggak bisa lihat ke dalam karena tertutup dahan tapi dia peka banget\""
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Monster itu nggak bisa lihat ke dalam, karena tertutup dahan, tapi dia peka banget sama suara dan tuman, satu-satunya jalan, ya pintu darurat, dan palangnya harus dihantam balok, kuncinya, manfaatin suara badai.",
+          "mismatches": [
+            {
+              "expected": null,
+              "heard": "dan"
+            },
+            {
+              "expected": "dentuman",
+              "heard": "tuman"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Monster itu nggak bisa lihat ke dalam, karena tertutup dahan, tapi dia peka banget sama suara dan tuman, satu-satunya jalan, ya pintu darurat, dan palangnya harus dihantam balok, kuncinya, manfaatin suara badai.",
+          "rawMismatches": [
+            {
+              "expected": null,
+              "heard": "dan"
+            },
+            {
+              "expected": "dentuman",
+              "heard": "tuman"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.95): heard \"monster itu nggak bisa lihat ke dalam karena tertutup dahan tapi dia peka banget\""
+          ]
+        },
+        {
+          "seed": 2,
+          "wordRatio": 0.952,
+          "similarity": 0.995,
+          "wpm": 118,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.95): heard \"monster itu nggak bisa lihat ke dalam karena tertutup dahan tapi dia perkabangat\"",
+            "word mismatch (ratio 0.95): heard \"monster itu nggak bisa lihat ke dalam karena tertutup dahan tapi dia perkabanget\""
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Monster itu nggak bisa lihat ke dalam, karena tertutup dahan, tapi dia perkabanget sama suara dentuman. Satu-satunya jalan, ya pintu darurat, dan palangnya harus dihantam balok. Kuncinya, manfaatin suara badai.",
+          "mismatches": [
+            {
+              "expected": "peka",
+              "heard": null
+            },
+            {
+              "expected": "banget",
+              "heard": "perkabanget"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Monster itu nggak bisa lihat ke dalam, karena tertutup dahan, tapi dia perkabangat sama suara dentuman. Satu-satunya jalan, ya pintu darurat, dan palangnya harus dihantam balok. Kuncinya, manfaatin suara badai.",
+          "rawMismatches": [
+            {
+              "expected": "peka",
+              "heard": null
+            },
+            {
+              "expected": "banget",
+              "heard": "perkabangat"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.95): heard \"monster itu nggak bisa lihat ke dalam karena tertutup dahan tapi dia perkabangat\""
+          ]
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "tag": null,
+      "text": "Ambil balok kayu jati tadi. Dekati pintu belakang pelan-pelan. Tatap jendela samping.",
+      "retries": 1,
+      "status": "verified",
+      "bestSimilarity": 1,
+      "bestWordRatio": 1,
+      "acceptedAttempt": 1,
+      "attempts": [
+        {
+          "seed": 0,
+          "wordRatio": 0.923,
+          "similarity": 0.988,
+          "wpm": 115,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.92): heard \"ambil balok kayu jati tadi dekati pintu belakang pelan pelan tatap cendela sampi\"",
+            "word mismatch (ratio 0.92): heard \"ambil balok kayu jati tadi dekati pintu belakang pelan pelan tatap cendela sampi\""
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Ambil balok kayu jati tadi, dekati pintu belakang pelan-pelan, tatap cendela samping.",
+          "mismatches": [
+            {
+              "expected": "jendela",
+              "heard": "cendela"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Ambil balok kayu jati tadi, dekati pintu belakang pelan-pelan, tatap cendela samping.",
+          "rawMismatches": [
+            {
+              "expected": "jendela",
+              "heard": "cendela"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.92): heard \"ambil balok kayu jati tadi dekati pintu belakang pelan pelan tatap cendela sampi\""
+          ]
+        },
+        {
+          "seed": 1,
+          "wordRatio": 1,
+          "similarity": 1,
+          "wpm": 104,
+          "expectedWpm": 130,
+          "passed": true,
+          "reasons": [],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Ambil balok kayu jati tadi, dekati pintu belakang pelan-pelan, tatap jendela samping.",
+          "mismatches": [],
+          "endTruncated": false,
+          "rawTranscript": "Ambil balok kayu jati tadi, dekati pintu belakang pelan-pelan, tatap jendela samping.",
+          "rawMismatches": [],
+          "rawEndTruncated": false,
+          "rawReasons": []
+        }
+      ]
+    },
+    {
+      "index": 9,
+      "tag": null,
+      "text": "Tunggu kilatan petir. Kilat menyala! Satu...",
+      "retries": 2,
+      "status": "failed",
+      "bestSimilarity": 1,
+      "bestWordRatio": 1,
+      "acceptedAttempt": 0,
+      "attempts": [
+        {
+          "seed": 0,
+          "wordRatio": 1,
+          "similarity": 1,
+          "wpm": 71,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: 65 wpm outside 130±25%",
+            "71 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Tunggu kilatan petir, kilat menyala. Satu.",
+          "mismatches": [],
+          "endTruncated": false,
+          "rawTranscript": "Tunggu kilatan petir, kilat menyala, satu.",
+          "rawMismatches": [],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "65 wpm outside 130±25%"
+          ]
+        },
+        {
+          "seed": 1,
+          "wordRatio": 1,
+          "similarity": 1,
+          "wpm": 76,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: 72 wpm outside 130±25%",
+            "76 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Tunggu kilatan petir. Kilat menyala. Satu.",
+          "mismatches": [],
+          "endTruncated": false,
+          "rawTranscript": "Tunggu kilatan petir. Kilat menyala. Satu.",
+          "rawMismatches": [],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "72 wpm outside 130±25%"
+          ]
+        },
+        {
+          "seed": 2,
+          "wordRatio": 1,
+          "similarity": 1,
+          "wpm": 69,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: 67 wpm outside 130±25%",
+            "69 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Tunggu kilatan petir, kilat menyala. Satu.",
+          "mismatches": [],
+          "endTruncated": false,
+          "rawTranscript": "Tunggu kilatan petir, kilat menyala. Satu.",
+          "rawMismatches": [],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "67 wpm outside 130±25%"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 10,
+      "tag": null,
+      "text": "dua... tiga... GURUH MENGGELEGAR!",
+      "retries": 2,
+      "status": "failed",
+      "bestSimilarity": 0.976,
+      "bestWordRatio": 0.75,
+      "acceptedAttempt": 0,
+      "attempts": [
+        {
+          "seed": 0,
+          "wordRatio": 0.75,
+          "similarity": 0.976,
+          "wpm": 53,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.50): heard \"2 3 guru manggalagar\"",
+            "raw: last word missing, truncated, or has invalid timestamps",
+            "raw: char similarity 0.83 < 0.94",
+            "raw: 47 wpm outside 130±25%",
+            "word mismatch (ratio 0.75): heard \"2 3 guru menggelegar\"",
+            "53 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Dua, tiga, Guru menggelegar.",
+          "mismatches": [
+            {
+              "expected": "guruh",
+              "heard": "guru"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Dua, Tiga, Guru Manggalagar.",
+          "rawMismatches": [
+            {
+              "expected": "guruh",
+              "heard": "guru"
+            },
+            {
+              "expected": "menggelegar",
+              "heard": "manggalagar"
+            }
+          ],
+          "rawEndTruncated": true,
+          "rawReasons": [
+            "word mismatch (ratio 0.50): heard \"2 3 guru manggalagar\"",
+            "last word missing, truncated, or has invalid timestamps",
+            "char similarity 0.83 < 0.94",
+            "47 wpm outside 130±25%"
+          ]
+        },
+        {
+          "seed": 1,
+          "wordRatio": 0.75,
+          "similarity": 0.976,
+          "wpm": 53,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.75): heard \"2 3 guru menggelegar\"",
+            "raw: 49 wpm outside 130±25%",
+            "word mismatch (ratio 0.75): heard \"2 3 guru menggelegar\"",
+            "53 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Dua, tiga, guru menggelegar.",
+          "mismatches": [
+            {
+              "expected": "guruh",
+              "heard": "guru"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Dua, tiga, guru menggelegar.",
+          "rawMismatches": [
+            {
+              "expected": "guruh",
+              "heard": "guru"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.75): heard \"2 3 guru menggelegar\"",
+            "49 wpm outside 130±25%"
+          ]
+        },
+        {
+          "seed": 2,
+          "wordRatio": 0.75,
+          "similarity": 0.976,
+          "wpm": 56,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: 52 wpm outside 130±25%",
+            "word mismatch (ratio 0.75): heard \"2 3 guru menggelegar\"",
+            "56 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "dua, tiga, guru menggelegar.",
+          "mismatches": [
+            {
+              "expected": "guruh",
+              "heard": "guru"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "dua, tiga, guruh menggelegar.",
+          "rawMismatches": [],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "52 wpm outside 130±25%"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 11,
+      "tag": null,
+      "text": "Di detik yang sama: BRAK! Hantam palang kayunya keras-keras! Suara hantaman balokmu tenggelam total di balik gemuruh petir.",
+      "retries": 2,
+      "status": "failed",
+      "bestSimilarity": 0.971,
+      "bestWordRatio": 0.865,
+      "acceptedAttempt": 2,
+      "attempts": [
+        {
+          "seed": 0,
+          "wordRatio": 0.821,
+          "similarity": 0.983,
+          "wpm": 94,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.82): heard \"di detik yang sama berak hantam palang kayunya keras keras suara hantaman balok \"",
+            "raw: 90 wpm outside 130±25%",
+            "word mismatch (ratio 0.82): heard \"di detik yang sama berak hantam palang kayunya keras keras suara hantaman balok \"",
+            "94 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Di detik yang sama, berak, hantam palang kayunya keras-keras. Suara hantaman balok muteng gelam total di balik gemuruh petir.",
+          "mismatches": [
+            {
+              "expected": "brak",
+              "heard": "berak"
+            },
+            {
+              "expected": null,
+              "heard": "balok"
+            },
+            {
+              "expected": "balokmu",
+              "heard": "muteng"
+            },
+            {
+              "expected": "tenggelam",
+              "heard": "gelam"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Di detik yang sama, berak, hantam palang kayunya keras-keras. Suara hantaman balok muteng gelam total di balik gemuruh petir.",
+          "rawMismatches": [
+            {
+              "expected": "brak",
+              "heard": "berak"
+            },
+            {
+              "expected": null,
+              "heard": "balok"
+            },
+            {
+              "expected": "balokmu",
+              "heard": "muteng"
+            },
+            {
+              "expected": "tenggelam",
+              "heard": "gelam"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.82): heard \"di detik yang sama berak hantam palang kayunya keras keras suara hantaman balok \"",
+            "90 wpm outside 130±25%"
+          ]
+        },
+        {
+          "seed": 1,
+          "wordRatio": 0.811,
+          "similarity": 0.979,
+          "wpm": 97,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.81): heard \"di detik yang sama berak hantam palang kayunya keras keras suara hantaman balok \"",
+            "raw: 94 wpm outside 130±25%",
+            "word mismatch (ratio 0.81): heard \"di detik yang sama berak hantam palang kayunya keras keras suara hantaman balok \"",
+            "97 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Di detik yang sama, berak, hantam palang kayunya keras-keras, suara hantaman balok muteng gelam total dibalik gemuruh petir.",
+          "mismatches": [
+            {
+              "expected": "brak",
+              "heard": "berak"
+            },
+            {
+              "expected": null,
+              "heard": "balok"
+            },
+            {
+              "expected": "balokmu",
+              "heard": "muteng"
+            },
+            {
+              "expected": "tenggelam",
+              "heard": "gelam"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Di detik yang sama, berak, hantam palang kayunya keras-keras. Suara hantaman balok muteng gelam total dibalik gemuruh petir.",
+          "rawMismatches": [
+            {
+              "expected": "brak",
+              "heard": "berak"
+            },
+            {
+              "expected": null,
+              "heard": "balok"
+            },
+            {
+              "expected": "balokmu",
+              "heard": "muteng"
+            },
+            {
+              "expected": "tenggelam",
+              "heard": "gelam"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.81): heard \"di detik yang sama berak hantam palang kayunya keras keras suara hantaman balok \"",
+            "94 wpm outside 130±25%"
+          ]
+        },
+        {
+          "seed": 2,
+          "wordRatio": 0.865,
+          "similarity": 0.971,
+          "wpm": 100,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.86): heard \"didetik yang sama perak hantam palang kayunya keras keras suara hantaman balokmu\"",
+            "raw: 97 wpm outside 130±25%",
+            "word mismatch (ratio 0.86): heard \"didetik yang sama perak hantam palang kayunya keras keras suara hantaman balokmu\""
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Didetik yang sama. Perak! Hantam palang kayunya keras keras. Suara hantaman balokmu, tenggelam total di balik ke muruh petir.",
+          "mismatches": [
+            {
+              "expected": "brak",
+              "heard": "perak"
+            },
+            {
+              "expected": null,
+              "heard": "ke"
+            },
+            {
+              "expected": "gemuruh",
+              "heard": "muruh"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Didetik yang sama. Perak! Hantam palang kayunya keras keras. Suara hantaman balokmu, tenggelam total di balik ke muruh petir.",
+          "rawMismatches": [
+            {
+              "expected": "brak",
+              "heard": "perak"
+            },
+            {
+              "expected": null,
+              "heard": "ke"
+            },
+            {
+              "expected": "gemuruh",
+              "heard": "muruh"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.86): heard \"didetik yang sama perak hantam palang kayunya keras keras suara hantaman balokmu\"",
+            "97 wpm outside 130±25%"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 12,
+      "tag": null,
+      "text": "Diam dulu dua detik sampai guruh reda. Monster di depan tetap tenang di sarangnya. Palang pintu sudah patah.",
+      "retries": 0,
+      "status": "verified",
+      "bestSimilarity": 0.995,
+      "bestWordRatio": 1,
+      "acceptedAttempt": 0,
+      "attempts": [
+        {
+          "seed": 0,
+          "wordRatio": 1,
+          "similarity": 0.995,
+          "wpm": 118,
+          "expectedWpm": 130,
+          "passed": true,
+          "reasons": [],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Diam dulu dua detik, sampai guruh reda. Monster di depan tetap tenang disarangnya. Palang pintu sudah patah.",
+          "mismatches": [],
+          "endTruncated": false,
+          "rawTranscript": "Diam dulu dua detik, sampai guruh reda. Monster di depan tetap tenang disarangnya. Palang pintu sudah patah.",
+          "rawMismatches": [],
+          "rawEndTruncated": false,
+          "rawReasons": []
+        }
+      ]
+    },
+    {
+      "index": 13,
+      "tag": null,
+      "text": "Dorong pintu daruratnya keluar. Lari menyusuri jalan setapak tebing, tembus badai. Kamu berhasil lolos hidup-hidup.",
+      "retries": 1,
+      "status": "verified",
+      "bestSimilarity": 1,
+      "bestWordRatio": 1,
+      "acceptedAttempt": 1,
+      "attempts": [
+        {
+          "seed": 0,
+          "wordRatio": 1,
+          "similarity": 1,
+          "wpm": 97,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: 94 wpm outside 130±25%",
+            "97 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Dorong pintu daruratnya keluar, lari menyusuri jalan setapak tebing, tembus badai, kamu berhasil lolos hidup-hidup.",
+          "mismatches": [],
+          "endTruncated": false,
+          "rawTranscript": "Dorong pintu daruratnya keluar, lari menyusuri jalan setapak tebing, tembus badai, kamu berhasil lolos hidup-hidup.",
+          "rawMismatches": [],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "94 wpm outside 130±25%"
+          ]
+        },
+        {
+          "seed": 1,
+          "wordRatio": 1,
+          "similarity": 1,
+          "wpm": 114,
+          "expectedWpm": 130,
+          "passed": true,
+          "reasons": [],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Dorong pintu daruratnya keluar, lari menyusuri jalan setapak tebing, tembus badai, kamu berhasil lolos hidup-hidup.",
+          "mismatches": [],
+          "endTruncated": false,
+          "rawTranscript": "Dorong pintu daruratnya keluar, lari menyusuri jalan setapak tebing, tembus badai. Kamu berhasil lolos hidup-hidup.",
+          "rawMismatches": [],
+          "rawEndTruncated": false,
+          "rawReasons": []
+        }
+      ]
+    }
+  ]
+}

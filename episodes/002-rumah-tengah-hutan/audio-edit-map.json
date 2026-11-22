@@ -1,0 +1,436 @@
+{
+  "source": "episodes\\002-rumah-tengah-hutan\\narration-investigator.mp3",
+  "output": "episodes\\002-rumah-tengah-hutan\\narration-prepared.mp3",
+  "sourceDurationSec": 161.11,
+  "preparedDurationSec": 151.59,
+  "speechEndSec": 150.86,
+  "crossfadeSec": 0.01,
+  "tighteningCuts": [
+    {
+      "start": 3.24,
+      "end": 3.68,
+      "durationSec": 0.44,
+      "word1": "badai,",
+      "word2": "salah",
+      "originalGapSec": 0.68,
+      "retainedGapSec": 0.24
+    },
+    {
+      "start": 5.84,
+      "end": 6.08,
+      "durationSec": 0.24,
+      "word1": "tamat.",
+      "word2": "Baru",
+      "originalGapSec": 0.56,
+      "retainedGapSec": 0.32
+    },
+    {
+      "start": 7.82,
+      "end": 8.24,
+      "durationSec": 0.42,
+      "word1": "masuk,",
+      "word2": "pohon",
+      "originalGapSec": 0.66,
+      "retainedGapSec": 0.24
+    },
+    {
+      "start": 17.14,
+      "end": 17.58,
+      "durationSec": 0.44,
+      "word1": "luar.",
+      "word2": "Tapi",
+      "originalGapSec": 0.76,
+      "retainedGapSec": 0.32
+    },
+    {
+      "start": 18.64,
+      "end": 19.4,
+      "durationSec": 0.76,
+      "word1": "perhatikan,",
+      "word2": "di",
+      "originalGapSec": 1,
+      "retainedGapSec": 0.24
+    },
+    {
+      "start": 28.12,
+      "end": 28.46,
+      "durationSec": 0.34,
+      "word1": "luar,",
+      "word2": "tapi",
+      "originalGapSec": 0.58,
+      "retainedGapSec": 0.24
+    },
+    {
+      "start": 31.3,
+      "end": 31.42,
+      "durationSec": 0.12,
+      "word1": "ruangan.",
+      "word2": "Di",
+      "originalGapSec": 0.44,
+      "retainedGapSec": 0.32
+    },
+    {
+      "start": 32.38,
+      "end": 32.88,
+      "durationSec": 0.5,
+      "word1": "jendela,",
+      "word2": "gilatan",
+      "originalGapSec": 0.74,
+      "retainedGapSec": 0.24
+    },
+    {
+      "start": 37.24,
+      "end": 37.74,
+      "durationSec": 0.5,
+      "word1": "kemudian.",
+      "word2": "Bikin",
+      "originalGapSec": 0.82,
+      "retainedGapSec": 0.32
+    },
+    {
+      "start": 39.7,
+      "end": 40.22,
+      "durationSec": 0.52,
+      "word1": "bergetar.",
+      "word2": "Dilantai",
+      "originalGapSec": 0.84,
+      "retainedGapSec": 0.32
+    },
+    {
+      "start": 41.86,
+      "end": 42.34,
+      "durationSec": 0.48,
+      "word1": "perapian,",
+      "word2": "ada",
+      "originalGapSec": 0.72,
+      "retainedGapSec": 0.24
+    },
+    {
+      "start": 45.1,
+      "end": 45.68,
+      "durationSec": 0.58,
+      "word1": "lepas.",
+      "word2": "Dan",
+      "originalGapSec": 0.9,
+      "retainedGapSec": 0.32
+    },
+    {
+      "start": 50.42,
+      "end": 50.52,
+      "durationSec": 0.1,
+      "word1": "macet.",
+      "word2": "Pintu",
+      "originalGapSec": 0.42,
+      "retainedGapSec": 0.32
+    },
+    {
+      "start": 55.7,
+      "end": 55.88,
+      "durationSec": 0.18,
+      "word1": "belakang,",
+      "word2": "ambil",
+      "originalGapSec": 0.42,
+      "retainedGapSec": 0.24
+    },
+    {
+      "start": 59.74,
+      "end": 59.92,
+      "durationSec": 0.18,
+      "word1": "tenaga,",
+      "word2": "biar",
+      "originalGapSec": 0.42,
+      "retainedGapSec": 0.24
+    },
+    {
+      "start": 61.14,
+      "end": 61.52,
+      "durationSec": 0.38,
+      "word1": "lepas,",
+      "word2": "wajar",
+      "originalGapSec": 0.62,
+      "retainedGapSec": 0.24
+    },
+    {
+      "start": 62.52,
+      "end": 62.72,
+      "durationSec": 0.2,
+      "word1": "kan,",
+      "word2": "biar",
+      "originalGapSec": 0.44,
+      "retainedGapSec": 0.24
+    },
+    {
+      "start": 64.74,
+      "end": 65.22,
+      "durationSec": 0.48,
+      "word1": "kabur.",
+      "word2": "Tapi,",
+      "originalGapSec": 0.8,
+      "retainedGapSec": 0.32
+    },
+    {
+      "start": 65.92,
+      "end": 66.3,
+      "durationSec": 0.38,
+      "word1": "Tapi,",
+      "word2": "begitu",
+      "originalGapSec": 0.62,
+      "retainedGapSec": 0.24
+    },
+    {
+      "start": 72.9,
+      "end": 73.08,
+      "durationSec": 0.18,
+      "word1": "rumah.",
+      "word2": "Monster",
+      "originalGapSec": 0.5,
+      "retainedGapSec": 0.32
+    },
+    {
+      "start": 79.26,
+      "end": 79.44,
+      "durationSec": 0.18,
+      "word1": "kilat,",
+      "word2": "sosok",
+      "originalGapSec": 0.42,
+      "retainedGapSec": 0.24
+    },
+    {
+      "start": 82.54,
+      "end": 82.98,
+      "durationSec": 0.44,
+      "word1": "seladahan.",
+      "word2": "Sebelum",
+      "originalGapSec": 0.76,
+      "retainedGapSec": 0.32
+    },
+    {
+      "start": 84.98,
+      "end": 85.34,
+      "durationSec": 0.36,
+      "word1": "noleh,",
+      "word2": "cakarnya",
+      "originalGapSec": 0.6,
+      "retainedGapSec": 0.24
+    },
+    {
+      "start": 87.84,
+      "end": 88.06,
+      "durationSec": 0.22,
+      "word1": "telak.",
+      "word2": "Kamu",
+      "originalGapSec": 0.54,
+      "retainedGapSec": 0.32
+    },
+    {
+      "start": 94.04,
+      "end": 94.66,
+      "durationSec": 0.62,
+      "word1": "lagi,",
+      "word2": "jangan",
+      "originalGapSec": 0.86,
+      "retainedGapSec": 0.24
+    },
+    {
+      "start": 101.9,
+      "end": 102.04,
+      "durationSec": 0.14,
+      "word1": "dahan.",
+      "word2": "Tapi",
+      "originalGapSec": 0.46,
+      "retainedGapSec": 0.32
+    },
+    {
+      "start": 108.04,
+      "end": 108.34,
+      "durationSec": 0.3,
+      "word1": "darurat,",
+      "word2": "dan",
+      "originalGapSec": 0.54,
+      "retainedGapSec": 0.24
+    },
+    {
+      "start": 111.06,
+      "end": 111.28,
+      "durationSec": 0.22,
+      "word1": "balok.",
+      "word2": "Kuncinya,",
+      "originalGapSec": 0.54,
+      "retainedGapSec": 0.32
+    },
+    {
+      "start": 112.3,
+      "end": 112.48,
+      "durationSec": 0.18,
+      "word1": "Kuncinya,",
+      "word2": "manfaatin",
+      "originalGapSec": 0.42,
+      "retainedGapSec": 0.24
+    },
+    {
+      "start": 114.22,
+      "end": 114.32,
+      "durationSec": 0.1,
+      "word1": "badai.",
+      "word2": "Ambil",
+      "originalGapSec": 0.42,
+      "retainedGapSec": 0.32
+    },
+    {
+      "start": 116.38,
+      "end": 117.06,
+      "durationSec": 0.68,
+      "word1": "tadi.",
+      "word2": "Dekati",
+      "originalGapSec": 1,
+      "retainedGapSec": 0.32
+    },
+    {
+      "start": 119.68,
+      "end": 120.2,
+      "durationSec": 0.52,
+      "word1": "-pelan.",
+      "word2": "Tatap",
+      "originalGapSec": 0.84,
+      "retainedGapSec": 0.32
+    },
+    {
+      "start": 121.82,
+      "end": 122.06,
+      "durationSec": 0.24,
+      "word1": "samping.",
+      "word2": "Tunggu",
+      "originalGapSec": 0.56,
+      "retainedGapSec": 0.32
+    },
+    {
+      "start": 123.82,
+      "end": 124.24,
+      "durationSec": 0.42,
+      "word1": "petir.",
+      "word2": "Kilat",
+      "originalGapSec": 0.74,
+      "retainedGapSec": 0.32
+    },
+    {
+      "start": 137.74,
+      "end": 138.18,
+      "durationSec": 0.44,
+      "word1": "-keras,",
+      "word2": "suara",
+      "originalGapSec": 0.68,
+      "retainedGapSec": 0.24
+    },
+    {
+      "start": 140.06,
+      "end": 140.18,
+      "durationSec": 0.12,
+      "word1": "balokmu,",
+      "word2": "tenggelam",
+      "originalGapSec": 0.36,
+      "retainedGapSec": 0.24
+    },
+    {
+      "start": 143.24,
+      "end": 143.54,
+      "durationSec": 0.3,
+      "word1": "petir.",
+      "word2": "Diam",
+      "originalGapSec": 0.62,
+      "retainedGapSec": 0.32
+    },
+    {
+      "start": 146.86,
+      "end": 147.36,
+      "durationSec": 0.5,
+      "word1": "reda,",
+      "word2": "monster",
+      "originalGapSec": 0.74,
+      "retainedGapSec": 0.24
+    },
+    {
+      "start": 152.62,
+      "end": 152.84,
+      "durationSec": 0.22,
+      "word1": "patah,",
+      "word2": "dorong",
+      "originalGapSec": 0.46,
+      "retainedGapSec": 0.24
+    },
+    {
+      "start": 154.76,
+      "end": 155.26,
+      "durationSec": 0.5,
+      "word1": "keluar,",
+      "word2": "lari",
+      "originalGapSec": 0.74,
+      "retainedGapSec": 0.24
+    }
+  ],
+  "insertedPauses": [
+    {
+      "name": "rewind-gap",
+      "rawSourceSec": 92.4,
+      "insertedSilenceSec": 0.4
+    },
+    {
+      "name": "post-rewind-silence",
+      "rawSourceSec": 97.25,
+      "insertedSilenceSec": 1.6
+    },
+    {
+      "name": "post-thunder-dread-silence",
+      "rawSourceSec": 150.15,
+      "insertedSilenceSec": 2
+    }
+  ],
+  "timelinePlacement": {
+    "rewindGap": {
+      "gapStartSec": 83.76,
+      "gapEndSec": 85.02,
+      "gapDurationSec": 1.26,
+      "rewindWhooshDurationSec": 0.4,
+      "note": "Placed at bad outcome reset between word 159 (gelap.) and word 160 (Balik)."
+    },
+    "postRewindDreadSilence": {
+      "silenceStartSec": 88.4,
+      "silenceEndSec": 90.46,
+      "silenceDurationSec": 2.06,
+      "note": "Placed between word 166 (sembarangan.) and word 167 (Monster)."
+    },
+    "countdownAndSimultaneousThunder": {
+      "flashStartSec": 114.36,
+      "countdownSatuSec": 116.48,
+      "countdownDuaSec": 117.24,
+      "countdownTigaSec": 118.54,
+      "thunderBoomSec": 119.08,
+      "woodImpactSec": 123.92,
+      "note": "Pacing preserved with zero tightening across countdown."
+    },
+    "postThunderDreadSilence": {
+      "silenceStartSec": 138.72,
+      "silenceEndSec": 141.46,
+      "silenceDurationSec": 2.74,
+      "note": "Placed after word 252 (disarangnya,) and before word 253 (palang)."
+    },
+    "blackoutTail": {
+      "speechReleaseSec": 150.86,
+      "preparedTrackEndSec": 151.59,
+      "assembledVideoCutEndSec": 154,
+      "tailHoldSec": 3.14,
+      "note": "Atmospheric wide P24 hold with low sub-hit at 154.0s cut to black."
+    }
+  },
+  "runtimeBudget": {
+    "preNarrationTitleAndRoomToneSec": 0,
+    "narrationTrackDurationSec": 151.59,
+    "spokenSpeechEndSec": 150.86,
+    "tailAtmosphericHoldSec": 3.14,
+    "measuredTotalCutDurationSec": 154,
+    "targetWindowSec": [
+      140,
+      165
+    ]
+  },
+  "notes": "Assembled on continuous PCM sample timeline; zero playback speed change (atempo 1.0x preserved); strictly monotonic PTS verified by ffprobe across all packets."
+}

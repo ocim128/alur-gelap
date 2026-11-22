@@ -19,6 +19,8 @@ For Arc 01 comparisons, Studio also lists `KemacetanTerakhirMotionComic`, `Kemac
 
 Creating a composition, rendering an export and publishing are separate actions. When a render is requested, select the intended composition and output path in Studio or use the Remotion CLI. Do not overwrite an existing export unless that is intended; publishing requires separate authorization.
 
+For a standard delivery, `npm run render -- <composition-id> <delivery.mp4>` renders then compresses automatically using ShortZ's balanced preset. FFmpeg and FFprobe must be on PATH. In PowerShell quote optional Remotion flags, for example `'--concurrency=3'`. For a separately mastered MP4, run `npm run compress -- <master.mp4>` after mastering; the command creates a neighboring `_compressed.mp4` without overwriting the master or an existing delivery. Recheck audio sync, loudness and silence on the compressed file because AAC encoding can change them.
+
 ## Start a standalone episode
 
 1. Read [AGENTS.md](AGENTS.md), the [v2 style guide](STYLE_GUIDE.md#studio-v2-standalone-survival-scenarios), the [studio role contracts](agents/README.md), the [scenario record](arcs/02-skenario-bertahan/arc.json) and [decision history](archive/playbook/experiments.md). For a broad request with no setting, the showrunner contract calls for three distinct pitches before a full brief.

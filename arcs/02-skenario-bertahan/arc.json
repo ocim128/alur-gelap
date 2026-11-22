@@ -18,8 +18,13 @@
     },
     {
       "episodeNumber": 2,
-      "workingTitle": "Scenario 02",
-      "status": "pending"
+      "workingTitle": "Rumah Tengah Hutan",
+      "status": "in-progress",
+      "setting": "Abandoned forestry cabin on a cliff edge during a pine forest storm.",
+      "mechanics": "A fallen pine tree traps the survivor with a long-armed beast in the porch branches. Smashing the jammed back emergency door with a teak beam alerts the beast unless the strike is acoustic-masked to hit simultaneously with a house-shaking thunderclap 3 seconds after a lightning flash.",
+      "briefPath": "episodes/002-rumah-tengah-hutan/brief.md",
+      "scriptPath": "episodes/002-rumah-tengah-hutan/narasi.txt",
+      "pipelineStatePath": "episodes/002-rumah-tengah-hutan/pipeline-state.json"
     }
   ]
 }
