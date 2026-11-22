@@ -25,6 +25,16 @@
       "briefPath": "episodes/002-rumah-tengah-hutan/brief.md",
       "scriptPath": "episodes/002-rumah-tengah-hutan/narasi.txt",
       "pipelineStatePath": "episodes/002-rumah-tengah-hutan/pipeline-state.json"
+    },
+    {
+      "episodeNumber": 3,
+      "workingTitle": "Goyangan Dek Enam",
+      "status": "in-progress",
+      "setting": "Outdoor promenade Deck 6 on a cruise ship in the middle of the ocean during a midnight storm.",
+      "mechanics": "The survivor is trapped on the promenade with the cabin door padlocked from outside. Jumping overboard triggers lethal propeller suction. The survivor detects the entity because all hanging gear sways with the ship roll while the entity stands rigid against gravity, then releases the manual lifeboat winch brake at peak roll to crush and pin the entity with a 3-ton lifeboat, locking it with a steel pin until dawn.",
+      "briefPath": "episodes/003-goyangan-dek-enam/brief.md",
+      "scriptPath": "episodes/003-goyangan-dek-enam/narasi.txt",
+      "pipelineStatePath": "episodes/003-goyangan-dek-enam/pipeline-state.json"
     }
   ]
 }
