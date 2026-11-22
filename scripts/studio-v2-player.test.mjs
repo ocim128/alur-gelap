@@ -27,9 +27,10 @@ test('captions crossing cuts split on measured words without repeating or droppi
   assert.deepEqual(splitCaptionsAtCuts(noCrossing, scenes, 30), noCrossing);
 });
 
-test('caption splitting refuses to guess missing word timing or cut through a word', () => {
+test('caption splitting refuses missing timing and assigns a cut-spanning word once', () => {
   assert.throws(() => splitCaptionsAtCuts([{startMs: 900, endMs: 1100, words: [{text: 'jangan'}]}], scenes, 30), /requires measured word timings/);
-  assert.throws(() => splitCaptionsAtCuts([{startMs: 900, endMs: 1100, words: [{text: 'jangan', startMs: 950, endMs: 1050}]}], scenes, 30), /crosses a panel cut/);
+  const result = splitCaptionsAtCuts([{startMs: 900, endMs: 1100, words: [{text: 'jangan', startMs: 950, endMs: 1050}]}], scenes, 30);
+  assert.deepEqual(result.map(c => [c.startMs, c.endMs, c.words[0].text]), [[900, 1000, 'jangan']]);
 });
 
 test('caption cut times use the supplied frame rate', () => {

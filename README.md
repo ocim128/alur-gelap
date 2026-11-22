@@ -13,13 +13,13 @@ npm run check
 npm run build
 ```
 
-The terminal prints the Remotion Studio URL. Open `Skenario01KamarTerkunci` for the v2 pilot. Its [assembly handoff](episodes/001-kamar-terkunci/assembly-handoff.md) and [pipeline state](episodes/001-kamar-terkunci/pipeline-state.json) record the output, historical findings and outstanding review limitations. The pilot uses a custom component and a prepared mix; it does not expose the sound and caption toggles available on the older data-driven compositions.
+The terminal prints the Remotion Studio URL. Open `Skenario01KamarTerkunci` for the v2 pilot. Its [assembly handoff](episodes/001-kamar-terkunci/assembly-handoff.md) and [pipeline state](episodes/001-kamar-terkunci/pipeline-state.json) record the output, historical findings and outstanding review limitations. The pilot uses a custom component and a prepared mix; it does not expose the sound and caption toggles available on the older data-driven compositions. Checks require Python for caption tests; the Rec.709 compression test runs when FFmpeg and FFprobe are available.
 
 For Arc 01 comparisons, Studio also lists `KemacetanTerakhirMotionComic`, `KemacetanTerakhirMotionComicRecut`, and other registered compositions. `npm run build` runs the checks before bundling. Checks validate source and schema constraints; they do not replace playback, listening, rights review or independent QA.
 
 Creating a composition, rendering an export and publishing are separate actions. When a render is requested, select the intended composition and output path in Studio or use the Remotion CLI. Do not overwrite an existing export unless that is intended; publishing requires separate authorization.
 
-For a standard delivery, `npm run render -- <composition-id> <delivery.mp4>` renders then compresses automatically using ShortZ's balanced preset. FFmpeg and FFprobe must be on PATH. In PowerShell quote optional Remotion flags, for example `'--concurrency=3'`. For a separately mastered MP4, run `npm run compress -- <master.mp4>` after mastering; the command creates a neighboring `_compressed.mp4` without overwriting the master or an existing delivery. Recheck audio sync, loudness and silence on the compressed file because AAC encoding can change them.
+For a standard delivery, `npm run render -- <composition-id> <delivery.mp4>` renders then compresses automatically using ShortZ's balanced quality settings and limited-range Rec.709 tags. FFmpeg and FFprobe must be on PATH. In PowerShell quote optional Remotion flags, for example `'--concurrency=3'`. For a separately mastered MP4, run `npm run compress -- <master.mp4>` after mastering; the command creates a neighboring `_compressed.mp4` without overwriting the master or an existing delivery. The color tags assume the master is already Rec.709; tagging alone does not convert another color space or recover crushed blacks. Recheck audio sync, loudness and silence on the compressed file because AAC encoding can change them.
 
 ## Start a standalone episode
 

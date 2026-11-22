@@ -57,7 +57,7 @@ export function StudioV2Player({manifest, captions, plateOverlay, overlay}: Stud
       </AbsoluteFill></AbsoluteFill>
       {overlay?.(context)}
       {manifest.timing.rewindFrame !== undefined && <BranchRewindTransition startFrame={manifest.timing.rewindFrame} durationFrames={manifest.timing.rewindFrames} />}
-      {caption && <SpeakerCaption speaker={caption.speaker} text={caption.words.map(word => word.text).join(' ')} />}
+      {caption && <SpeakerCaption speaker={caption.speaker} text={caption.words.map(word => word.text).join(' ')} words={caption.words} />}
     </>}
   </AbsoluteFill>;
 }

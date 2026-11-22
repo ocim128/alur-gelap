@@ -4,8 +4,11 @@ The sidecar is automatic speech recognition, so correct its obvious spelling
 errors against the locked script without modifying the narration or timings.
 """
 import json
-import math
+import sys
 from pathlib import Path
+sys.dont_write_bytecode = True
+sys.path.insert(0, str(Path(__file__).resolve().parents[2] / 'scripts'))
+from caption_helpers import assign_word_to_scene, semantic_color
 
 episode = Path(__file__).parent
 source = json.loads((episode / 'narration-timestamps.json').read_text(encoding='utf-8'))
@@ -45,17 +48,11 @@ manifest = json.loads((episode / 'manifest.json').read_text(encoding='utf-8'))
 fps = manifest['fps']
 cuts = [s['at'] for s in manifest['scenes']] + [manifest['duration']]
 
-# Work on the composition's exact frame grid and break each word's interval
-# at a panel cut. The same word can appear on both sides only when that word
-# itself spans the cut; no multiword caption remains frozen across a cut.
-segments = []
-for word in words:
-    start = math.ceil(word['start'] * fps - 1e-8)
-    end = math.ceil(word['end'] * fps - 1e-8)
-    for left, right in zip(cuts, cuts[1:]):
-        a, b = max(start, left), min(end, right)
-        if a < b:
-            segments.append({**word, 'startFrame': a, 'endFrame': b, 'sceneFrame': left})
+# Each ASR word is assigned once to its longest-overlap panel. Do not deduplicate
+# separate spoken occurrences, even when their spelling is identical.
+segments = [assign_word_to_scene(word, cuts, fps) for word in words]
+color_path = episode / 'caption-colors.json'
+color_overrides = json.loads(color_path.read_text(encoding='utf-8')) if color_path.exists() else {}
 
 def flush():
     if not group:
@@ -65,7 +62,7 @@ def flush():
         'startMs': group[0]['startFrame'] * 1000 / fps,
         'endMs': group[-1]['endFrame'] * 1000 / fps,
         'timestampMs': None, 'confidence': None, 'speaker': 'NARATOR',
-        'words': [{'text': x.upper(), 'color': 'white'} for x in pieces],
+        'words': [{'text': x.upper(), 'color': semantic_color(x, color_overrides)} for x in pieces],
     })
     group.clear()
 

@@ -19,6 +19,7 @@ if (!composition || !outputArg || extname(outputArg).toLowerCase() !== '.mp4') {
     const result = spawnSync(process.execPath, [cli, 'render', 'src/index.ts', composition, master, ...options], {stdio: 'inherit'});
     if (result.error) throw result.error;
     if (result.status !== 0) throw new Error(`Remotion failed (${result.status}); intermediate retained if present: ${master}`);
+    // The delivery step enforces limited-range Rec.709 metadata and yuv420p.
     compressVideo(master, output);
     rmSync(master);
   } catch (error) {

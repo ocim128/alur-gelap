@@ -74,6 +74,31 @@ test("speaker captions hide narrator labels and retain colored world-voice label
   const indonesian = renderToStaticMarkup(React.createElement(SpeakerCaption, {text: "satu-satunya pelan-pelan keras-keras dihantam"}));
   assert.match(indonesian, /top:77%/);
   assert.match(indonesian, /satu-satunya pelan-pelan keras-keras dihantam/);
+  const semantic = renderToStaticMarkup(React.createElement(SpeakerCaption, {text: 'BUKA PINTU BAHAYA', words: [{text: 'BUKA', color: 'yellow'}, {text: 'PINTU', color: 'white'}, {text: 'BAHAYA', color: 'red'}]}));
+  assert.match(semantic, /color:#ffd052/i);
+  assert.match(semantic, /color:#f2544e/i);
+  assert.match(semantic, /color:#fff/i);
+});
+
+test("v2 flash overlay caps opacity and respects its frame interval", () => {
+  const filename = resolve('src/components/StudioV2.test.cjs');
+  const compiled = ts.transpileModule(readFileSync('src/components/StudioV2.tsx', 'utf8'), {
+    compilerOptions: {module: ts.ModuleKind.CommonJS, jsx: ts.JsxEmit.ReactJSX},
+  }).outputText;
+  const componentModule = new Module(filename);
+  componentModule.filename = filename;
+  componentModule.paths = Module._nodeModulePaths(dirname(filename));
+  const nativeRequire = componentModule.require.bind(componentModule);
+  let frame = 10;
+  componentModule.require = name => name === 'remotion'
+    ? {useCurrentFrame: () => frame, AbsoluteFill: ({style, children}) => React.createElement('div', {style}, children)}
+    : nativeRequire(name);
+  componentModule._compile(compiled, filename);
+  const {FlashOverlay} = componentModule.exports;
+  const markup = renderToStaticMarkup(React.createElement(FlashOverlay, {startFrame: 10, opacity: .95}));
+  assert.match(markup, /opacity:0\.65/);
+  frame = 13;
+  assert.equal(renderToStaticMarkup(React.createElement(FlashOverlay, {startFrame: 10})), '');
 });
 
 test("studio v2 accepts a long decision-consequence pilot without changing the v1 ceiling", () => {

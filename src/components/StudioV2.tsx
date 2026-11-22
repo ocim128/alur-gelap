@@ -36,6 +36,16 @@ export function SilhouetteAtmosphereLayer({grainOpacity = 0.035, grainSeed = "no
   </AbsoluteFill>;
 }
 
+export type FlashOverlayProps = {startFrame: number; durationFrames?: number; opacity?: number; color?: string};
+
+/** Cap overlay opacity; verify final frame luma separately against the underlying plate. */
+export function FlashOverlay({startFrame, durationFrames = 3, opacity = 0.6, color = '#fff'}: FlashOverlayProps) {
+  const frame = useCurrentFrame();
+  if (frame < startFrame || frame >= startFrame + durationFrames) return null;
+  const safeOpacity = Number.isFinite(opacity) ? Math.max(0, Math.min(0.65, opacity)) : 0.6;
+  return <AbsoluteFill style={{backgroundColor: color, opacity: safeOpacity, pointerEvents: 'none'}} />;
+}
+
 export type BranchRewindTransitionProps = {startFrame: number; durationFrames?: number; intensity?: number; seed?: string};
 
 export function BranchRewindTransition({startFrame, durationFrames, intensity = 1, seed = "rewind"}: BranchRewindTransitionProps) {

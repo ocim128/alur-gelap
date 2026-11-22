@@ -37,12 +37,22 @@ export function splitCaptionsAtCuts(captions: StudioCaption[], scenes: StudioSce
     if (!boundaries.length) return [caption];
     for (const word of caption.words) {
       if (word.startMs === undefined || word.endMs === undefined || !Number.isFinite(word.startMs) || !Number.isFinite(word.endMs) || word.endMs <= word.startMs || word.startMs < caption.startMs || word.endMs > caption.endMs) throw new Error(`Caption crossing a cut requires measured word timings: ${caption.words.map(w => w.text).join(' ')}`);
-      if (boundaries.some(cut => word.startMs! < cut && word.endMs! > cut)) throw new Error(`Word '${word.text}' crosses a panel cut; adjust the cut or caption timing`);
     }
     const edges = [caption.startMs, ...boundaries, caption.endMs];
+    // A spoken word that spans a cut belongs to the panel with the largest
+    // overlap (earlier panel wins a tie); never duplicate it on both panels.
+    const assignments = caption.words.map(word => {
+      let best = 0;
+      let overlap = -1;
+      for (let index = 0; index < edges.length - 1; index++) {
+        const length = Math.max(0, Math.min(word.endMs!, edges[index + 1]) - Math.max(word.startMs!, edges[index]));
+        if (length > overlap) { best = index; overlap = length; }
+      }
+      return best;
+    });
     return edges.slice(0, -1).flatMap((startMs, index) => {
       const endMs = edges[index + 1];
-      const words = caption.words.filter(word => word.startMs! >= startMs && word.startMs! < endMs);
+      const words = caption.words.filter((_, wordIndex) => assignments[wordIndex] === index);
       return words.length ? [{...caption, startMs, endMs, words}] : [];
     });
   });
