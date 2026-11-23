@@ -1,0 +1,1431 @@
+{
+  "schemaVersion": 1,
+  "result": "pass",
+  "scope": "Sampled decoded YUV code comparison; source-to-master exact for every sampled code, not an exhaustive comparison of all frames.",
+  "source": {
+    "path": "out\\004-tangan-pilot-kemarin\\skenario04-rec709-proof-source.mp4",
+    "sha256": "31c6afd06c19c92d0a1216f80b74ad2eca9d2cb365bebc5d3c2f48d5f6ad664f",
+    "video": {
+      "codec_type": "video",
+      "width": 1080,
+      "height": 1920,
+      "pix_fmt": "yuvj420p",
+      "color_range": "pc",
+      "color_space": "bt470bg",
+      "r_frame_rate": "30/1",
+      "side_data_list": [
+        {}
+      ]
+    }
+  },
+  "audioMix": {
+    "path": "public\\assets\\004-tangan-pilot-kemarin\\assembly-mix-polish.wav",
+    "sha256": "10660551332751c11cf929d5b1a17c30018d20aabe7c820ae7396285c5027bde"
+  },
+  "master": {
+    "path": "out\\004-tangan-pilot-kemarin\\skenario04-rec709-proof-master.mp4",
+    "sha256": "24fdb3d40c4ad757d8d41451616bbd8fc0140daaac9777c4877914ebe91fa935",
+    "video": {
+      "codec_type": "video",
+      "width": 1080,
+      "height": 1920,
+      "pix_fmt": "yuv420p",
+      "color_range": "tv",
+      "color_space": "bt709",
+      "color_transfer": "bt709",
+      "color_primaries": "bt709",
+      "r_frame_rate": "30/1",
+      "side_data_list": [
+        {}
+      ]
+    }
+  },
+  "delivery": {
+    "path": "out\\004-tangan-pilot-kemarin\\skenario04-rec709-proof-review.mp4",
+    "sha256": "2ac9179086bc5b381723ab6c8a877ad845e26ea84e91b65f31c66f98fdbc593b",
+    "video": {
+      "codec_type": "video",
+      "width": 1080,
+      "height": 1920,
+      "pix_fmt": "yuv420p",
+      "color_range": "tv",
+      "color_space": "bt709",
+      "color_transfer": "bt709",
+      "color_primaries": "bt709",
+      "r_frame_rate": "30/1"
+    }
+  },
+  "renderCommand": [
+    "npx",
+    "remotion",
+    "render",
+    "src/index.ts",
+    "Skenario04TanganPilotKemarin",
+    "out\\004-tangan-pilot-kemarin\\skenario04-rec709-proof-source.mp4",
+    "--concurrency=6"
+  ],
+  "masterCommand": [
+    "ffmpeg",
+    "-n",
+    "-hide_banner",
+    "-loglevel",
+    "error",
+    "-i",
+    "C:\\Users\\user\\Documents\\Repo\\tiktok-repost\\tiktok-video\\Survival-Fantasy-Content\\out\\004-tangan-pilot-kemarin\\skenario04-rec709-proof-source.mp4",
+    "-i",
+    "C:\\Users\\user\\Documents\\Repo\\tiktok-repost\\tiktok-video\\Survival-Fantasy-Content\\public\\assets\\004-tangan-pilot-kemarin\\assembly-mix-polish.wav",
+    "-map",
+    "0:v:0",
+    "-map",
+    "1:a:0",
+    "-vf",
+    "scale=in_range=full:in_color_matrix=bt601:out_range=limited:out_color_matrix=bt709,format=yuv420p",
+    "-c:v",
+    "libx264",
+    "-preset",
+    "ultrafast",
+    "-crf",
+    "0",
+    "-c:a",
+    "aac",
+    "-b:a",
+    "192k",
+    "-ac",
+    "1",
+    "-color_range",
+    "tv",
+    "-colorspace",
+    "bt709",
+    "-color_primaries",
+    "bt709",
+    "-color_trc",
+    "bt709",
+    "-bsf:v",
+    "h264_metadata=colour_primaries=1:transfer_characteristics=1:matrix_coefficients=1:video_full_range_flag=0",
+    "-movflags",
+    "+faststart",
+    "-shortest",
+    "C:\\Users\\user\\Documents\\Repo\\tiktok-repost\\tiktok-video\\Survival-Fantasy-Content\\out\\004-tangan-pilot-kemarin\\skenario04-rec709-proof-master.mp4"
+  ],
+  "deliveryCommand": [
+    "ffmpeg",
+    "-n",
+    "-hide_banner",
+    "-loglevel",
+    "error",
+    "-i",
+    "C:\\Users\\user\\Documents\\Repo\\tiktok-repost\\tiktok-video\\Survival-Fantasy-Content\\out\\004-tangan-pilot-kemarin\\skenario04-rec709-proof-master.mp4",
+    "-map",
+    "0:v:0",
+    "-map",
+    "0:a:0",
+    "-c:v",
+    "libx264",
+    "-preset",
+    "medium",
+    "-crf",
+    "28",
+    "-pix_fmt",
+    "yuv420p",
+    "-color_range",
+    "tv",
+    "-colorspace",
+    "bt709",
+    "-color_primaries",
+    "bt709",
+    "-color_trc",
+    "bt709",
+    "-bsf:v",
+    "h264_metadata=colour_primaries=1:transfer_characteristics=1:matrix_coefficients=1:video_full_range_flag=0",
+    "-c:a",
+    "aac",
+    "-b:a",
+    "128k",
+    "-ac",
+    "1",
+    "-movflags",
+    "+faststart",
+    "C:\\Users\\user\\Documents\\Repo\\tiktok-repost\\tiktok-video\\Survival-Fantasy-Content\\out\\004-tangan-pilot-kemarin\\skenario04-rec709-proof-review.mp4"
+  ],
+  "ffmpegVersion": "ffmpeg version 8.0-full_build-www.gyan.dev Copyright (c) 2000-2025 the FFmpeg developers",
+  "interpretation": "The fresh source explicitly reports full-range yuvj420p and bt470bg matrix; bt601 is the compatible swscale input matrix. Source primaries and transfer were untagged, so BT.709 SDR primaries/transfer are an output interpretation assumption, not a measured transform of source primaries or transfer. This record does not prove which pixels were used for the prior audited export.",
+  "frameIndices": [
+    6,
+    28,
+    348,
+    750,
+    773,
+    1280,
+    1316,
+    1714,
+    1773,
+    2232,
+    2475,
+    3922,
+    4242,
+    4610,
+    4642
+  ],
+  "comparisons": [
+    {
+      "frame": 6,
+      "timeSec": 0.2,
+      "sourceVsConvertedReference": {
+        "meanAbsoluteCodeDifference": 8.29086,
+        "maxAbsoluteCodeDifference": 25,
+        "differentCodeValues": 2720566,
+        "psnrDb": 27.9632
+      },
+      "convertedReferenceVsLosslessMaster": {
+        "meanAbsoluteCodeDifference": 0.0,
+        "maxAbsoluteCodeDifference": 0,
+        "differentCodeValues": 0,
+        "psnrDb": null
+      },
+      "deliveryVsMaster": {
+        "meanAbsoluteCodeDifference": 0.766818,
+        "maxAbsoluteCodeDifference": 45,
+        "differentCodeValues": 1287909,
+        "psnrDb": 44.1932
+      },
+      "planes": {
+        "Y": {
+          "convertedReferenceVsLosslessMaster": {
+            "meanAbsoluteCodeDifference": 0.0,
+            "maxAbsoluteCodeDifference": 0,
+            "differentCodeValues": 0,
+            "psnrDb": null
+          },
+          "sourceVsConvertedReference": {
+            "meanAbsoluteCodeDifference": 12.014602,
+            "maxAbsoluteCodeDifference": 23,
+            "differentCodeValues": 2064853,
+            "psnrDb": 26.2241
+          },
+          "deliveryVsMaster": {
+            "meanAbsoluteCodeDifference": 0.918436,
+            "maxAbsoluteCodeDifference": 45,
+            "differentCodeValues": 956712,
+            "psnrDb": 42.9871
+          }
+        },
+        "U": {
+          "convertedReferenceVsLosslessMaster": {
+            "meanAbsoluteCodeDifference": 0.0,
+            "maxAbsoluteCodeDifference": 0,
+            "differentCodeValues": 0,
+            "psnrDb": null
+          },
+          "sourceVsConvertedReference": {
+            "meanAbsoluteCodeDifference": 1.275177,
+            "maxAbsoluteCodeDifference": 25,
+            "differentCodeValues": 489336,
+            "psnrDb": 44.3542
+          },
+          "deliveryVsMaster": {
+            "meanAbsoluteCodeDifference": 0.494838,
+            "maxAbsoluteCodeDifference": 16,
+            "differentCodeValues": 173047,
+            "psnrDb": 48.1882
+          }
+        },
+        "V": {
+          "convertedReferenceVsLosslessMaster": {
+            "meanAbsoluteCodeDifference": 0.0,
+            "maxAbsoluteCodeDifference": 0,
+            "differentCodeValues": 0,
+            "psnrDb": null
+          },
+          "sourceVsConvertedReference": {
+            "meanAbsoluteCodeDifference": 0.411574,
+            "maxAbsoluteCodeDifference": 16,
+            "differentCodeValues": 166377,
+            "psnrDb": 49.4113
+          },
+          "deliveryVsMaster": {
+            "meanAbsoluteCodeDifference": 0.432324,
+            "maxAbsoluteCodeDifference": 12,
+            "differentCodeValues": 158150,
+            "psnrDb": 49.128
+          }
+        }
+      }
+    },
+    {
+      "frame": 28,
+      "timeSec": 0.9333333333333333,
+      "sourceVsConvertedReference": {
+        "meanAbsoluteCodeDifference": 7.906427,
+        "maxAbsoluteCodeDifference": 25,
+        "differentCodeValues": 2723156,
+        "psnrDb": 28.2708
+      },
+      "convertedReferenceVsLosslessMaster": {
+        "meanAbsoluteCodeDifference": 0.0,
+        "maxAbsoluteCodeDifference": 0,
+        "differentCodeValues": 0,
+        "psnrDb": null
+      },
+      "deliveryVsMaster": {
+        "meanAbsoluteCodeDifference": 0.848451,
+        "maxAbsoluteCodeDifference": 43,
+        "differentCodeValues": 1381350,
+        "psnrDb": 43.3582
+      },
+      "planes": {
+        "Y": {
+          "convertedReferenceVsLosslessMaster": {
+            "meanAbsoluteCodeDifference": 0.0,
+            "maxAbsoluteCodeDifference": 0,
+            "differentCodeValues": 0,
+            "psnrDb": null
+          },
+          "sourceVsConvertedReference": {
+            "meanAbsoluteCodeDifference": 11.401066,
+            "maxAbsoluteCodeDifference": 24,
+            "differentCodeValues": 2060918,
+            "psnrDb": 26.5379
+          },
+          "deliveryVsMaster": {
+            "meanAbsoluteCodeDifference": 1.013204,
+            "maxAbsoluteCodeDifference": 43,
+            "differentCodeValues": 1005947,
+            "psnrDb": 42.1013
+          }
+        },
+        "U": {
+          "convertedReferenceVsLosslessMaster": {
+            "meanAbsoluteCodeDifference": 0.0,
+            "maxAbsoluteCodeDifference": 0,
+            "differentCodeValues": 0,
+            "psnrDb": null
+          },
+          "sourceVsConvertedReference": {
+            "meanAbsoluteCodeDifference": 1.25147,
+            "maxAbsoluteCodeDifference": 25,
+            "differentCodeValues": 468320,
+            "psnrDb": 44.2666
+          },
+          "deliveryVsMaster": {
+            "meanAbsoluteCodeDifference": 0.542691,
+            "maxAbsoluteCodeDifference": 16,
+            "differentCodeValues": 191239,
+            "psnrDb": 47.7923
+          }
+        },
+        "V": {
+          "convertedReferenceVsLosslessMaster": {
+            "meanAbsoluteCodeDifference": 0.0,
+            "maxAbsoluteCodeDifference": 0,
+            "differentCodeValues": 0,
+            "psnrDb": null
+          },
+          "sourceVsConvertedReference": {
+            "meanAbsoluteCodeDifference": 0.58283,
+            "maxAbsoluteCodeDifference": 16,
+            "differentCodeValues": 193918,
+            "psnrDb": 46.9895
+          },
+          "deliveryVsMaster": {
+            "meanAbsoluteCodeDifference": 0.495201,
+            "maxAbsoluteCodeDifference": 14,
+            "differentCodeValues": 184164,
+            "psnrDb": 48.628
+          }
+        }
+      }
+    },
+    {
+      "frame": 348,
+      "timeSec": 11.6,
+      "sourceVsConvertedReference": {
+        "meanAbsoluteCodeDifference": 7.487292,
+        "maxAbsoluteCodeDifference": 31,
+        "differentCodeValues": 2774068,
+        "psnrDb": 28.8267
+      },
+      "convertedReferenceVsLosslessMaster": {
+        "meanAbsoluteCodeDifference": 0.0,
+        "maxAbsoluteCodeDifference": 0,
+        "differentCodeValues": 0,
+        "psnrDb": null
+      },
+      "deliveryVsMaster": {
+        "meanAbsoluteCodeDifference": 0.71798,
+        "maxAbsoluteCodeDifference": 56,
+        "differentCodeValues": 1101560,
+        "psnrDb": 43.5143
+      },
+      "planes": {
+        "Y": {
+          "convertedReferenceVsLosslessMaster": {
+            "meanAbsoluteCodeDifference": 0.0,
+            "maxAbsoluteCodeDifference": 0,
+            "differentCodeValues": 0,
+            "psnrDb": null
+          },
+          "sourceVsConvertedReference": {
+            "meanAbsoluteCodeDifference": 10.717879,
+            "maxAbsoluteCodeDifference": 31,
+            "differentCodeValues": 2059756,
+            "psnrDb": 27.1
+          },
+          "deliveryVsMaster": {
+            "meanAbsoluteCodeDifference": 0.872779,
+            "maxAbsoluteCodeDifference": 56,
+            "differentCodeValues": 816849,
+            "psnrDb": 42.2343
+          }
+        },
+        "U": {
+          "convertedReferenceVsLosslessMaster": {
+            "meanAbsoluteCodeDifference": 0.0,
+            "maxAbsoluteCodeDifference": 0,
+            "differentCodeValues": 0,
+            "psnrDb": null
+          },
+          "sourceVsConvertedReference": {
+            "meanAbsoluteCodeDifference": 1.389502,
+            "maxAbsoluteCodeDifference": 15,
+            "differentCodeValues": 483518,
+            "psnrDb": 43.9058
+          },
+          "deliveryVsMaster": {
+            "meanAbsoluteCodeDifference": 0.327429,
+            "maxAbsoluteCodeDifference": 21,
+            "differentCodeValues": 126122,
+            "psnrDb": 50.0823
+          }
+        },
+        "V": {
+          "convertedReferenceVsLosslessMaster": {
+            "meanAbsoluteCodeDifference": 0.0,
+            "maxAbsoluteCodeDifference": 0,
+            "differentCodeValues": 0,
+            "psnrDb": null
+          },
+          "sourceVsConvertedReference": {
+            "meanAbsoluteCodeDifference": 0.662733,
+            "maxAbsoluteCodeDifference": 10,
+            "differentCodeValues": 230794,
+            "psnrDb": 46.7449
+          },
+          "deliveryVsMaster": {
+            "meanAbsoluteCodeDifference": 0.489333,
+            "maxAbsoluteCodeDifference": 24,
+            "differentCodeValues": 158589,
+            "psnrDb": 47.4017
+          }
+        }
+      }
+    },
+    {
+      "frame": 750,
+      "timeSec": 25.0,
+      "sourceVsConvertedReference": {
+        "meanAbsoluteCodeDifference": 7.829083,
+        "maxAbsoluteCodeDifference": 30,
+        "differentCodeValues": 2755769,
+        "psnrDb": 28.4567
+      },
+      "convertedReferenceVsLosslessMaster": {
+        "meanAbsoluteCodeDifference": 0.0,
+        "maxAbsoluteCodeDifference": 0,
+        "differentCodeValues": 0,
+        "psnrDb": null
+      },
+      "deliveryVsMaster": {
+        "meanAbsoluteCodeDifference": 0.86401,
+        "maxAbsoluteCodeDifference": 51,
+        "differentCodeValues": 1324714,
+        "psnrDb": 43.2547
+      },
+      "planes": {
+        "Y": {
+          "convertedReferenceVsLosslessMaster": {
+            "meanAbsoluteCodeDifference": 0.0,
+            "maxAbsoluteCodeDifference": 0,
+            "differentCodeValues": 0,
+            "psnrDb": null
+          },
+          "sourceVsConvertedReference": {
+            "meanAbsoluteCodeDifference": 11.269204,
+            "maxAbsoluteCodeDifference": 26,
+            "differentCodeValues": 2066250,
+            "psnrDb": 26.7307
+          },
+          "deliveryVsMaster": {
+            "meanAbsoluteCodeDifference": 1.031861,
+            "maxAbsoluteCodeDifference": 51,
+            "differentCodeValues": 970688,
+            "psnrDb": 42.0878
+          }
+        },
+        "U": {
+          "convertedReferenceVsLosslessMaster": {
+            "meanAbsoluteCodeDifference": 0.0,
+            "maxAbsoluteCodeDifference": 0,
+            "differentCodeValues": 0,
+            "psnrDb": null
+          },
+          "sourceVsConvertedReference": {
+            "meanAbsoluteCodeDifference": 1.422027,
+            "maxAbsoluteCodeDifference": 30,
+            "differentCodeValues": 504714,
+            "psnrDb": 42.922
+          },
+          "deliveryVsMaster": {
+            "meanAbsoluteCodeDifference": 0.538362,
+            "maxAbsoluteCodeDifference": 23,
+            "differentCodeValues": 177433,
+            "psnrDb": 47.1773
+          }
+        },
+        "V": {
+          "convertedReferenceVsLosslessMaster": {
+            "meanAbsoluteCodeDifference": 0.0,
+            "maxAbsoluteCodeDifference": 0,
+            "differentCodeValues": 0,
+            "psnrDb": null
+          },
+          "sourceVsConvertedReference": {
+            "meanAbsoluteCodeDifference": 0.475658,
+            "maxAbsoluteCodeDifference": 19,
+            "differentCodeValues": 184805,
+            "psnrDb": 47.5817
+          },
+          "deliveryVsMaster": {
+            "meanAbsoluteCodeDifference": 0.51825,
+            "maxAbsoluteCodeDifference": 13,
+            "differentCodeValues": 176593,
+            "psnrDb": 47.6715
+          }
+        }
+      }
+    },
+    {
+      "frame": 773,
+      "timeSec": 25.766666666666666,
+      "sourceVsConvertedReference": {
+        "meanAbsoluteCodeDifference": 7.837524,
+        "maxAbsoluteCodeDifference": 26,
+        "differentCodeValues": 2750393,
+        "psnrDb": 28.4265
+      },
+      "convertedReferenceVsLosslessMaster": {
+        "meanAbsoluteCodeDifference": 0.0,
+        "maxAbsoluteCodeDifference": 0,
+        "differentCodeValues": 0,
+        "psnrDb": null
+      },
+      "deliveryVsMaster": {
+        "meanAbsoluteCodeDifference": 0.833423,
+        "maxAbsoluteCodeDifference": 62,
+        "differentCodeValues": 1308982,
+        "psnrDb": 43.5131
+      },
+      "planes": {
+        "Y": {
+          "convertedReferenceVsLosslessMaster": {
+            "meanAbsoluteCodeDifference": 0.0,
+            "maxAbsoluteCodeDifference": 0,
+            "differentCodeValues": 0,
+            "psnrDb": null
+          },
+          "sourceVsConvertedReference": {
+            "meanAbsoluteCodeDifference": 11.316235,
+            "maxAbsoluteCodeDifference": 26,
+            "differentCodeValues": 2066320,
+            "psnrDb": 26.6882
+          },
+          "deliveryVsMaster": {
+            "meanAbsoluteCodeDifference": 1.000503,
+            "maxAbsoluteCodeDifference": 62,
+            "differentCodeValues": 957982,
+            "psnrDb": 42.2779
+          }
+        },
+        "U": {
+          "convertedReferenceVsLosslessMaster": {
+            "meanAbsoluteCodeDifference": 0.0,
+            "maxAbsoluteCodeDifference": 0,
+            "differentCodeValues": 0,
+            "psnrDb": null
+          },
+          "sourceVsConvertedReference": {
+            "meanAbsoluteCodeDifference": 1.343628,
+            "maxAbsoluteCodeDifference": 12,
+            "differentCodeValues": 502790,
+            "psnrDb": 44.4867
+          },
+          "deliveryVsMaster": {
+            "meanAbsoluteCodeDifference": 0.50239,
+            "maxAbsoluteCodeDifference": 13,
+            "differentCodeValues": 175943,
+            "psnrDb": 48.1888
+          }
+        },
+        "V": {
+          "convertedReferenceVsLosslessMaster": {
+            "meanAbsoluteCodeDifference": 0.0,
+            "maxAbsoluteCodeDifference": 0,
+            "differentCodeValues": 0,
+            "psnrDb": null
+          },
+          "sourceVsConvertedReference": {
+            "meanAbsoluteCodeDifference": 0.416574,
+            "maxAbsoluteCodeDifference": 9,
+            "differentCodeValues": 181283,
+            "psnrDb": 50.4357
+          },
+          "deliveryVsMaster": {
+            "meanAbsoluteCodeDifference": 0.496138,
+            "maxAbsoluteCodeDifference": 13,
+            "differentCodeValues": 175057,
+            "psnrDb": 48.1557
+          }
+        }
+      }
+    },
+    {
+      "frame": 1280,
+      "timeSec": 42.666666666666664,
+      "sourceVsConvertedReference": {
+        "meanAbsoluteCodeDifference": 4.71147,
+        "maxAbsoluteCodeDifference": 23,
+        "differentCodeValues": 2822503,
+        "psnrDb": 31.9318
+      },
+      "convertedReferenceVsLosslessMaster": {
+        "meanAbsoluteCodeDifference": 0.0,
+        "maxAbsoluteCodeDifference": 0,
+        "differentCodeValues": 0,
+        "psnrDb": null
+      },
+      "deliveryVsMaster": {
+        "meanAbsoluteCodeDifference": 0.806544,
+        "maxAbsoluteCodeDifference": 48,
+        "differentCodeValues": 1301164,
+        "psnrDb": 43.588
+      },
+      "planes": {
+        "Y": {
+          "convertedReferenceVsLosslessMaster": {
+            "meanAbsoluteCodeDifference": 0.0,
+            "maxAbsoluteCodeDifference": 0,
+            "differentCodeValues": 0,
+            "psnrDb": null
+          },
+          "sourceVsConvertedReference": {
+            "meanAbsoluteCodeDifference": 6.540673,
+            "maxAbsoluteCodeDifference": 23,
+            "differentCodeValues": 2025311,
+            "psnrDb": 30.2304
+          },
+          "deliveryVsMaster": {
+            "meanAbsoluteCodeDifference": 0.941352,
+            "maxAbsoluteCodeDifference": 48,
+            "differentCodeValues": 934853,
+            "psnrDb": 42.4343
+          }
+        },
+        "U": {
+          "convertedReferenceVsLosslessMaster": {
+            "meanAbsoluteCodeDifference": 0.0,
+            "maxAbsoluteCodeDifference": 0,
+            "differentCodeValues": 0,
+            "psnrDb": null
+          },
+          "sourceVsConvertedReference": {
+            "meanAbsoluteCodeDifference": 1.279832,
+            "maxAbsoluteCodeDifference": 16,
+            "differentCodeValues": 473038,
+            "psnrDb": 44.7796
+          },
+          "deliveryVsMaster": {
+            "meanAbsoluteCodeDifference": 0.538148,
+            "maxAbsoluteCodeDifference": 17,
+            "differentCodeValues": 187097,
+            "psnrDb": 47.7542
+          }
+        },
+        "V": {
+          "convertedReferenceVsLosslessMaster": {
+            "meanAbsoluteCodeDifference": 0.0,
+            "maxAbsoluteCodeDifference": 0,
+            "differentCodeValues": 0,
+            "psnrDb": null
+          },
+          "sourceVsConvertedReference": {
+            "meanAbsoluteCodeDifference": 0.826296,
+            "maxAbsoluteCodeDifference": 9,
+            "differentCodeValues": 324154,
+            "psnrDb": 47.1964
+          },
+          "deliveryVsMaster": {
+            "meanAbsoluteCodeDifference": 0.535708,
+            "maxAbsoluteCodeDifference": 13,
+            "differentCodeValues": 179214,
+            "psnrDb": 47.5714
+          }
+        }
+      }
+    },
+    {
+      "frame": 1316,
+      "timeSec": 43.86666666666667,
+      "sourceVsConvertedReference": {
+        "meanAbsoluteCodeDifference": 4.502504,
+        "maxAbsoluteCodeDifference": 29,
+        "differentCodeValues": 2834445,
+        "psnrDb": 32.5024
+      },
+      "convertedReferenceVsLosslessMaster": {
+        "meanAbsoluteCodeDifference": 0.0,
+        "maxAbsoluteCodeDifference": 0,
+        "differentCodeValues": 0,
+        "psnrDb": null
+      },
+      "deliveryVsMaster": {
+        "meanAbsoluteCodeDifference": 0.814594,
+        "maxAbsoluteCodeDifference": 38,
+        "differentCodeValues": 1264068,
+        "psnrDb": 43.3694
+      },
+      "planes": {
+        "Y": {
+          "convertedReferenceVsLosslessMaster": {
+            "meanAbsoluteCodeDifference": 0.0,
+            "maxAbsoluteCodeDifference": 0,
+            "differentCodeValues": 0,
+            "psnrDb": null
+          },
+          "sourceVsConvertedReference": {
+            "meanAbsoluteCodeDifference": 6.204318,
+            "maxAbsoluteCodeDifference": 29,
+            "differentCodeValues": 2026162,
+            "psnrDb": 30.8209
+          },
+          "deliveryVsMaster": {
+            "meanAbsoluteCodeDifference": 0.953004,
+            "maxAbsoluteCodeDifference": 38,
+            "differentCodeValues": 919847,
+            "psnrDb": 42.2447
+          }
+        },
+        "U": {
+          "convertedReferenceVsLosslessMaster": {
+            "meanAbsoluteCodeDifference": 0.0,
+            "maxAbsoluteCodeDifference": 0,
+            "differentCodeValues": 0,
+            "psnrDb": null
+          },
+          "sourceVsConvertedReference": {
+            "meanAbsoluteCodeDifference": 1.341319,
+            "maxAbsoluteCodeDifference": 15,
+            "differentCodeValues": 481917,
+            "psnrDb": 44.1759
+          },
+          "deliveryVsMaster": {
+            "meanAbsoluteCodeDifference": 0.522049,
+            "maxAbsoluteCodeDifference": 22,
+            "differentCodeValues": 172166,
+            "psnrDb": 47.5638
+          }
+        },
+        "V": {
+          "convertedReferenceVsLosslessMaster": {
+            "meanAbsoluteCodeDifference": 0.0,
+            "maxAbsoluteCodeDifference": 0,
+            "differentCodeValues": 0,
+            "psnrDb": null
+          },
+          "sourceVsConvertedReference": {
+            "meanAbsoluteCodeDifference": 0.856433,
+            "maxAbsoluteCodeDifference": 20,
+            "differentCodeValues": 326366,
+            "psnrDb": 46.4139
+          },
+          "deliveryVsMaster": {
+            "meanAbsoluteCodeDifference": 0.553497,
+            "maxAbsoluteCodeDifference": 15,
+            "differentCodeValues": 172055,
+            "psnrDb": 46.965
+          }
+        }
+      }
+    },
+    {
+      "frame": 1714,
+      "timeSec": 57.13333333333333,
+      "sourceVsConvertedReference": {
+        "meanAbsoluteCodeDifference": 8.176852,
+        "maxAbsoluteCodeDifference": 21,
+        "differentCodeValues": 2717725,
+        "psnrDb": 28.1709
+      },
+      "convertedReferenceVsLosslessMaster": {
+        "meanAbsoluteCodeDifference": 0.0,
+        "maxAbsoluteCodeDifference": 0,
+        "differentCodeValues": 0,
+        "psnrDb": null
+      },
+      "deliveryVsMaster": {
+        "meanAbsoluteCodeDifference": 0.560476,
+        "maxAbsoluteCodeDifference": 61,
+        "differentCodeValues": 1036468,
+        "psnrDb": 45.8283
+      },
+      "planes": {
+        "Y": {
+          "convertedReferenceVsLosslessMaster": {
+            "meanAbsoluteCodeDifference": 0.0,
+            "maxAbsoluteCodeDifference": 0,
+            "differentCodeValues": 0,
+            "psnrDb": null
+          },
+          "sourceVsConvertedReference": {
+            "meanAbsoluteCodeDifference": 11.8252,
+            "maxAbsoluteCodeDifference": 21,
+            "differentCodeValues": 2071976,
+            "psnrDb": 26.4332
+          },
+          "deliveryVsMaster": {
+            "meanAbsoluteCodeDifference": 0.722867,
+            "maxAbsoluteCodeDifference": 61,
+            "differentCodeValues": 841422,
+            "psnrDb": 44.3831
+          }
+        },
+        "U": {
+          "convertedReferenceVsLosslessMaster": {
+            "meanAbsoluteCodeDifference": 0.0,
+            "maxAbsoluteCodeDifference": 0,
+            "differentCodeValues": 0,
+            "psnrDb": null
+          },
+          "sourceVsConvertedReference": {
+            "meanAbsoluteCodeDifference": 1.223378,
+            "maxAbsoluteCodeDifference": 5,
+            "differentCodeValues": 460305,
+            "psnrDb": 45.0371
+          },
+          "deliveryVsMaster": {
+            "meanAbsoluteCodeDifference": 0.21963,
+            "maxAbsoluteCodeDifference": 8,
+            "differentCodeValues": 91773,
+            "psnrDb": 53.0535
+          }
+        },
+        "V": {
+          "convertedReferenceVsLosslessMaster": {
+            "meanAbsoluteCodeDifference": 0.0,
+            "maxAbsoluteCodeDifference": 0,
+            "differentCodeValues": 0,
+            "psnrDb": null
+          },
+          "sourceVsConvertedReference": {
+            "meanAbsoluteCodeDifference": 0.536939,
+            "maxAbsoluteCodeDifference": 6,
+            "differentCodeValues": 185444,
+            "psnrDb": 47.5991
+          },
+          "deliveryVsMaster": {
+            "meanAbsoluteCodeDifference": 0.251757,
+            "maxAbsoluteCodeDifference": 9,
+            "differentCodeValues": 103273,
+            "psnrDb": 52.1866
+          }
+        }
+      }
+    },
+    {
+      "frame": 1773,
+      "timeSec": 59.1,
+      "sourceVsConvertedReference": {
+        "meanAbsoluteCodeDifference": 8.515877,
+        "maxAbsoluteCodeDifference": 21,
+        "differentCodeValues": 2672659,
+        "psnrDb": 27.864
+      },
+      "convertedReferenceVsLosslessMaster": {
+        "meanAbsoluteCodeDifference": 0.0,
+        "maxAbsoluteCodeDifference": 0,
+        "differentCodeValues": 0,
+        "psnrDb": null
+      },
+      "deliveryVsMaster": {
+        "meanAbsoluteCodeDifference": 0.540595,
+        "maxAbsoluteCodeDifference": 42,
+        "differentCodeValues": 1053158,
+        "psnrDb": 46.6255
+      },
+      "planes": {
+        "Y": {
+          "convertedReferenceVsLosslessMaster": {
+            "meanAbsoluteCodeDifference": 0.0,
+            "maxAbsoluteCodeDifference": 0,
+            "differentCodeValues": 0,
+            "psnrDb": null
+          },
+          "sourceVsConvertedReference": {
+            "meanAbsoluteCodeDifference": 12.425064,
+            "maxAbsoluteCodeDifference": 21,
+            "differentCodeValues": 2072396,
+            "psnrDb": 26.1159
+          },
+          "deliveryVsMaster": {
+            "meanAbsoluteCodeDifference": 0.684073,
+            "maxAbsoluteCodeDifference": 42,
+            "differentCodeValues": 844584,
+            "psnrDb": 45.2738
+          }
+        },
+        "U": {
+          "convertedReferenceVsLosslessMaster": {
+            "meanAbsoluteCodeDifference": 0.0,
+            "maxAbsoluteCodeDifference": 0,
+            "differentCodeValues": 0,
+            "psnrDb": null
+          },
+          "sourceVsConvertedReference": {
+            "meanAbsoluteCodeDifference": 1.165235,
+            "maxAbsoluteCodeDifference": 3,
+            "differentCodeValues": 481589,
+            "psnrDb": 45.987
+          },
+          "deliveryVsMaster": {
+            "meanAbsoluteCodeDifference": 0.251842,
+            "maxAbsoluteCodeDifference": 5,
+            "differentCodeValues": 104261,
+            "psnrDb": 52.4406
+          }
+        },
+        "V": {
+          "convertedReferenceVsLosslessMaster": {
+            "meanAbsoluteCodeDifference": 0.0,
+            "maxAbsoluteCodeDifference": 0,
+            "differentCodeValues": 0,
+            "psnrDb": null
+          },
+          "sourceVsConvertedReference": {
+            "meanAbsoluteCodeDifference": 0.229769,
+            "maxAbsoluteCodeDifference": 4,
+            "differentCodeValues": 118674,
+            "psnrDb": 54.4856
+          },
+          "deliveryVsMaster": {
+            "meanAbsoluteCodeDifference": 0.255434,
+            "maxAbsoluteCodeDifference": 9,
+            "differentCodeValues": 104313,
+            "psnrDb": 52.1941
+          }
+        }
+      }
+    },
+    {
+      "frame": 2232,
+      "timeSec": 74.4,
+      "sourceVsConvertedReference": {
+        "meanAbsoluteCodeDifference": 5.672234,
+        "maxAbsoluteCodeDifference": 23,
+        "differentCodeValues": 2755963,
+        "psnrDb": 31.1035
+      },
+      "convertedReferenceVsLosslessMaster": {
+        "meanAbsoluteCodeDifference": 0.0,
+        "maxAbsoluteCodeDifference": 0,
+        "differentCodeValues": 0,
+        "psnrDb": null
+      },
+      "deliveryVsMaster": {
+        "meanAbsoluteCodeDifference": 0.971837,
+        "maxAbsoluteCodeDifference": 39,
+        "differentCodeValues": 1524154,
+        "psnrDb": 42.7051
+      },
+      "planes": {
+        "Y": {
+          "convertedReferenceVsLosslessMaster": {
+            "meanAbsoluteCodeDifference": 0.0,
+            "maxAbsoluteCodeDifference": 0,
+            "differentCodeValues": 0,
+            "psnrDb": null
+          },
+          "sourceVsConvertedReference": {
+            "meanAbsoluteCodeDifference": 8.107222,
+            "maxAbsoluteCodeDifference": 23,
+            "differentCodeValues": 2047853,
+            "psnrDb": 29.3748
+          },
+          "deliveryVsMaster": {
+            "meanAbsoluteCodeDifference": 1.168798,
+            "maxAbsoluteCodeDifference": 39,
+            "differentCodeValues": 1120565,
+            "psnrDb": 41.4567
+          }
+        },
+        "U": {
+          "convertedReferenceVsLosslessMaster": {
+            "meanAbsoluteCodeDifference": 0.0,
+            "maxAbsoluteCodeDifference": 0,
+            "differentCodeValues": 0,
+            "psnrDb": null
+          },
+          "sourceVsConvertedReference": {
+            "meanAbsoluteCodeDifference": 0.661958,
+            "maxAbsoluteCodeDifference": 16,
+            "differentCodeValues": 308324,
+            "psnrDb": 48.6205
+          },
+          "deliveryVsMaster": {
+            "meanAbsoluteCodeDifference": 0.565465,
+            "maxAbsoluteCodeDifference": 15,
+            "differentCodeValues": 203111,
+            "psnrDb": 47.7623
+          }
+        },
+        "V": {
+          "convertedReferenceVsLosslessMaster": {
+            "meanAbsoluteCodeDifference": 0.0,
+            "maxAbsoluteCodeDifference": 0,
+            "differentCodeValues": 0,
+            "psnrDb": null
+          },
+          "sourceVsConvertedReference": {
+            "meanAbsoluteCodeDifference": 0.942558,
+            "maxAbsoluteCodeDifference": 11,
+            "differentCodeValues": 399786,
+            "psnrDb": 46.8402
+          },
+          "deliveryVsMaster": {
+            "meanAbsoluteCodeDifference": 0.590365,
+            "maxAbsoluteCodeDifference": 14,
+            "differentCodeValues": 200478,
+            "psnrDb": 47.1929
+          }
+        }
+      }
+    },
+    {
+      "frame": 2475,
+      "timeSec": 82.5,
+      "sourceVsConvertedReference": {
+        "meanAbsoluteCodeDifference": 7.737145,
+        "maxAbsoluteCodeDifference": 27,
+        "differentCodeValues": 2721268,
+        "psnrDb": 28.4073
+      },
+      "convertedReferenceVsLosslessMaster": {
+        "meanAbsoluteCodeDifference": 0.0,
+        "maxAbsoluteCodeDifference": 0,
+        "differentCodeValues": 0,
+        "psnrDb": null
+      },
+      "deliveryVsMaster": {
+        "meanAbsoluteCodeDifference": 0.557128,
+        "maxAbsoluteCodeDifference": 59,
+        "differentCodeValues": 1044695,
+        "psnrDb": 46.4448
+      },
+      "planes": {
+        "Y": {
+          "convertedReferenceVsLosslessMaster": {
+            "meanAbsoluteCodeDifference": 0.0,
+            "maxAbsoluteCodeDifference": 0,
+            "differentCodeValues": 0,
+            "psnrDb": null
+          },
+          "sourceVsConvertedReference": {
+            "meanAbsoluteCodeDifference": 11.171605,
+            "maxAbsoluteCodeDifference": 27,
+            "differentCodeValues": 2049496,
+            "psnrDb": 26.6691
+          },
+          "deliveryVsMaster": {
+            "meanAbsoluteCodeDifference": 0.673953,
+            "maxAbsoluteCodeDifference": 59,
+            "differentCodeValues": 792557,
+            "psnrDb": 45.2582
+          }
+        },
+        "U": {
+          "convertedReferenceVsLosslessMaster": {
+            "meanAbsoluteCodeDifference": 0.0,
+            "maxAbsoluteCodeDifference": 0,
+            "differentCodeValues": 0,
+            "psnrDb": null
+          },
+          "sourceVsConvertedReference": {
+            "meanAbsoluteCodeDifference": 1.261537,
+            "maxAbsoluteCodeDifference": 17,
+            "differentCodeValues": 473384,
+            "psnrDb": 44.6886
+          },
+          "deliveryVsMaster": {
+            "meanAbsoluteCodeDifference": 0.327388,
+            "maxAbsoluteCodeDifference": 11,
+            "differentCodeValues": 128988,
+            "psnrDb": 50.7566
+          }
+        },
+        "V": {
+          "convertedReferenceVsLosslessMaster": {
+            "meanAbsoluteCodeDifference": 0.0,
+            "maxAbsoluteCodeDifference": 0,
+            "differentCodeValues": 0,
+            "psnrDb": null
+          },
+          "sourceVsConvertedReference": {
+            "meanAbsoluteCodeDifference": 0.474911,
+            "maxAbsoluteCodeDifference": 10,
+            "differentCodeValues": 198388,
+            "psnrDb": 49.4894
+          },
+          "deliveryVsMaster": {
+            "meanAbsoluteCodeDifference": 0.319568,
+            "maxAbsoluteCodeDifference": 11,
+            "differentCodeValues": 123150,
+            "psnrDb": 50.731
+          }
+        }
+      }
+    },
+    {
+      "frame": 3922,
+      "timeSec": 130.73333333333332,
+      "sourceVsConvertedReference": {
+        "meanAbsoluteCodeDifference": 7.468494,
+        "maxAbsoluteCodeDifference": 22,
+        "differentCodeValues": 2737545,
+        "psnrDb": 28.8782
+      },
+      "convertedReferenceVsLosslessMaster": {
+        "meanAbsoluteCodeDifference": 0.0,
+        "maxAbsoluteCodeDifference": 0,
+        "differentCodeValues": 0,
+        "psnrDb": null
+      },
+      "deliveryVsMaster": {
+        "meanAbsoluteCodeDifference": 0.554326,
+        "maxAbsoluteCodeDifference": 29,
+        "differentCodeValues": 1083700,
+        "psnrDb": 46.9252
+      },
+      "planes": {
+        "Y": {
+          "convertedReferenceVsLosslessMaster": {
+            "meanAbsoluteCodeDifference": 0.0,
+            "maxAbsoluteCodeDifference": 0,
+            "differentCodeValues": 0,
+            "psnrDb": null
+          },
+          "sourceVsConvertedReference": {
+            "meanAbsoluteCodeDifference": 10.809372,
+            "maxAbsoluteCodeDifference": 22,
+            "differentCodeValues": 2060894,
+            "psnrDb": 27.1377
+          },
+          "deliveryVsMaster": {
+            "meanAbsoluteCodeDifference": 0.670451,
+            "maxAbsoluteCodeDifference": 29,
+            "differentCodeValues": 831674,
+            "psnrDb": 45.8035
+          }
+        },
+        "U": {
+          "convertedReferenceVsLosslessMaster": {
+            "meanAbsoluteCodeDifference": 0.0,
+            "maxAbsoluteCodeDifference": 0,
+            "differentCodeValues": 0,
+            "psnrDb": null
+          },
+          "sourceVsConvertedReference": {
+            "meanAbsoluteCodeDifference": 1.168621,
+            "maxAbsoluteCodeDifference": 20,
+            "differentCodeValues": 491940,
+            "psnrDb": 45.607
+          },
+          "deliveryVsMaster": {
+            "meanAbsoluteCodeDifference": 0.3568,
+            "maxAbsoluteCodeDifference": 11,
+            "differentCodeValues": 136991,
+            "psnrDb": 50.2154
+          }
+        },
+        "V": {
+          "convertedReferenceVsLosslessMaster": {
+            "meanAbsoluteCodeDifference": 0.0,
+            "maxAbsoluteCodeDifference": 0,
+            "differentCodeValues": 0,
+            "psnrDb": null
+          },
+          "sourceVsConvertedReference": {
+            "meanAbsoluteCodeDifference": 0.404855,
+            "maxAbsoluteCodeDifference": 11,
+            "differentCodeValues": 184711,
+            "psnrDb": 50.5503
+          },
+          "deliveryVsMaster": {
+            "meanAbsoluteCodeDifference": 0.287351,
+            "maxAbsoluteCodeDifference": 9,
+            "differentCodeValues": 115035,
+            "psnrDb": 51.4555
+          }
+        }
+      }
+    },
+    {
+      "frame": 4242,
+      "timeSec": 141.4,
+      "sourceVsConvertedReference": {
+        "meanAbsoluteCodeDifference": 5.849003,
+        "maxAbsoluteCodeDifference": 29,
+        "differentCodeValues": 2904816,
+        "psnrDb": 30.5167
+      },
+      "convertedReferenceVsLosslessMaster": {
+        "meanAbsoluteCodeDifference": 0.0,
+        "maxAbsoluteCodeDifference": 0,
+        "differentCodeValues": 0,
+        "psnrDb": null
+      },
+      "deliveryVsMaster": {
+        "meanAbsoluteCodeDifference": 0.737857,
+        "maxAbsoluteCodeDifference": 60,
+        "differentCodeValues": 1401289,
+        "psnrDb": 45.3912
+      },
+      "planes": {
+        "Y": {
+          "convertedReferenceVsLosslessMaster": {
+            "meanAbsoluteCodeDifference": 0.0,
+            "maxAbsoluteCodeDifference": 0,
+            "differentCodeValues": 0,
+            "psnrDb": null
+          },
+          "sourceVsConvertedReference": {
+            "meanAbsoluteCodeDifference": 8.131147,
+            "maxAbsoluteCodeDifference": 26,
+            "differentCodeValues": 2004804,
+            "psnrDb": 28.8186
+          },
+          "deliveryVsMaster": {
+            "meanAbsoluteCodeDifference": 0.972182,
+            "maxAbsoluteCodeDifference": 60,
+            "differentCodeValues": 1186737,
+            "psnrDb": 43.9928
+          }
+        },
+        "U": {
+          "convertedReferenceVsLosslessMaster": {
+            "meanAbsoluteCodeDifference": 0.0,
+            "maxAbsoluteCodeDifference": 0,
+            "differentCodeValues": 0,
+            "psnrDb": null
+          },
+          "sourceVsConvertedReference": {
+            "meanAbsoluteCodeDifference": 1.73733,
+            "maxAbsoluteCodeDifference": 29,
+            "differentCodeValues": 504784,
+            "psnrDb": 42.3449
+          },
+          "deliveryVsMaster": {
+            "meanAbsoluteCodeDifference": 0.267353,
+            "maxAbsoluteCodeDifference": 12,
+            "differentCodeValues": 105511,
+            "psnrDb": 51.4672
+          }
+        },
+        "V": {
+          "convertedReferenceVsLosslessMaster": {
+            "meanAbsoluteCodeDifference": 0.0,
+            "maxAbsoluteCodeDifference": 0,
+            "differentCodeValues": 0,
+            "psnrDb": null
+          },
+          "sourceVsConvertedReference": {
+            "meanAbsoluteCodeDifference": 0.832101,
+            "maxAbsoluteCodeDifference": 17,
+            "differentCodeValues": 395228,
+            "psnrDb": 47.3941
+          },
+          "deliveryVsMaster": {
+            "meanAbsoluteCodeDifference": 0.271057,
+            "maxAbsoluteCodeDifference": 11,
+            "differentCodeValues": 109041,
+            "psnrDb": 51.7036
+          }
+        }
+      }
+    },
+    {
+      "frame": 4610,
+      "timeSec": 153.66666666666666,
+      "sourceVsConvertedReference": {
+        "meanAbsoluteCodeDifference": 6.654223,
+        "maxAbsoluteCodeDifference": 24,
+        "differentCodeValues": 2941467,
+        "psnrDb": 29.9482
+      },
+      "convertedReferenceVsLosslessMaster": {
+        "meanAbsoluteCodeDifference": 0.0,
+        "maxAbsoluteCodeDifference": 0,
+        "differentCodeValues": 0,
+        "psnrDb": null
+      },
+      "deliveryVsMaster": {
+        "meanAbsoluteCodeDifference": 0.715652,
+        "maxAbsoluteCodeDifference": 25,
+        "differentCodeValues": 1411212,
+        "psnrDb": 45.9383
+      },
+      "planes": {
+        "Y": {
+          "convertedReferenceVsLosslessMaster": {
+            "meanAbsoluteCodeDifference": 0.0,
+            "maxAbsoluteCodeDifference": 0,
+            "differentCodeValues": 0,
+            "psnrDb": null
+          },
+          "sourceVsConvertedReference": {
+            "meanAbsoluteCodeDifference": 9.331302,
+            "maxAbsoluteCodeDifference": 24,
+            "differentCodeValues": 2057163,
+            "psnrDb": 28.2436
+          },
+          "deliveryVsMaster": {
+            "meanAbsoluteCodeDifference": 0.878546,
+            "maxAbsoluteCodeDifference": 25,
+            "differentCodeValues": 1090522,
+            "psnrDb": 44.746
+          }
+        },
+        "U": {
+          "convertedReferenceVsLosslessMaster": {
+            "meanAbsoluteCodeDifference": 0.0,
+            "maxAbsoluteCodeDifference": 0,
+            "differentCodeValues": 0,
+            "psnrDb": null
+          },
+          "sourceVsConvertedReference": {
+            "meanAbsoluteCodeDifference": 1.572153,
+            "maxAbsoluteCodeDifference": 13,
+            "differentCodeValues": 481986,
+            "psnrDb": 43.0607
+          },
+          "deliveryVsMaster": {
+            "meanAbsoluteCodeDifference": 0.373686,
+            "maxAbsoluteCodeDifference": 12,
+            "differentCodeValues": 153998,
+            "psnrDb": 50.4591
+          }
+        },
+        "V": {
+          "convertedReferenceVsLosslessMaster": {
+            "meanAbsoluteCodeDifference": 0.0,
+            "maxAbsoluteCodeDifference": 0,
+            "differentCodeValues": 0,
+            "psnrDb": null
+          },
+          "sourceVsConvertedReference": {
+            "meanAbsoluteCodeDifference": 1.027976,
+            "maxAbsoluteCodeDifference": 10,
+            "differentCodeValues": 402318,
+            "psnrDb": 45.4056
+          },
+          "deliveryVsMaster": {
+            "meanAbsoluteCodeDifference": 0.406038,
+            "maxAbsoluteCodeDifference": 13,
+            "differentCodeValues": 166692,
+            "psnrDb": 50.1047
+          }
+        }
+      }
+    },
+    {
+      "frame": 4642,
+      "timeSec": 154.73333333333332,
+      "sourceVsConvertedReference": {
+        "meanAbsoluteCodeDifference": 10.666667,
+        "maxAbsoluteCodeDifference": 16,
+        "differentCodeValues": 2073601,
+        "psnrDb": 25.8093
+      },
+      "convertedReferenceVsLosslessMaster": {
+        "meanAbsoluteCodeDifference": 0.0,
+        "maxAbsoluteCodeDifference": 0,
+        "differentCodeValues": 0,
+        "psnrDb": null
+      },
+      "deliveryVsMaster": {
+        "meanAbsoluteCodeDifference": 0.0,
+        "maxAbsoluteCodeDifference": 0,
+        "differentCodeValues": 0,
+        "psnrDb": null
+      },
+      "planes": {
+        "Y": {
+          "convertedReferenceVsLosslessMaster": {
+            "meanAbsoluteCodeDifference": 0.0,
+            "maxAbsoluteCodeDifference": 0,
+            "differentCodeValues": 0,
+            "psnrDb": null
+          },
+          "sourceVsConvertedReference": {
+            "meanAbsoluteCodeDifference": 16.0,
+            "maxAbsoluteCodeDifference": 16,
+            "differentCodeValues": 2073600,
+            "psnrDb": 24.0484
+          },
+          "deliveryVsMaster": {
+            "meanAbsoluteCodeDifference": 0.0,
+            "maxAbsoluteCodeDifference": 0,
+            "differentCodeValues": 0,
+            "psnrDb": null
+          }
+        },
+        "U": {
+          "convertedReferenceVsLosslessMaster": {
+            "meanAbsoluteCodeDifference": 0.0,
+            "maxAbsoluteCodeDifference": 0,
+            "differentCodeValues": 0,
+            "psnrDb": null
+          },
+          "sourceVsConvertedReference": {
+            "meanAbsoluteCodeDifference": 2e-06,
+            "maxAbsoluteCodeDifference": 1,
+            "differentCodeValues": 1,
+            "psnrDb": 105.2775
+          },
+          "deliveryVsMaster": {
+            "meanAbsoluteCodeDifference": 0.0,
+            "maxAbsoluteCodeDifference": 0,
+            "differentCodeValues": 0,
+            "psnrDb": null
+          }
+        },
+        "V": {
+          "convertedReferenceVsLosslessMaster": {
+            "meanAbsoluteCodeDifference": 0.0,
+            "maxAbsoluteCodeDifference": 0,
+            "differentCodeValues": 0,
+            "psnrDb": null
+          },
+          "sourceVsConvertedReference": {
+            "meanAbsoluteCodeDifference": 0.0,
+            "maxAbsoluteCodeDifference": 0,
+            "differentCodeValues": 0,
+            "psnrDb": null
+          },
+          "deliveryVsMaster": {
+            "meanAbsoluteCodeDifference": 0.0,
+            "maxAbsoluteCodeDifference": 0,
+            "differentCodeValues": 0,
+            "psnrDb": null
+          }
+        }
+      }
+    }
+  ]
+}

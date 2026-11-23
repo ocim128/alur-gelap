@@ -1,0 +1,59 @@
+{
+  "result": "pass",
+  "scope": "All decoded 1080x1920 yuv420p frames compared by framemd5 after explicit source range and matrix conversion. Does not prove unknown source primaries or transfer.",
+  "source": {
+    "path": "out\\004-tangan-pilot-kemarin\\skenario04-rec709-proof-source.mp4",
+    "sha256": "31c6afd06c19c92d0a1216f80b74ad2eca9d2cb365bebc5d3c2f48d5f6ad664f"
+  },
+  "master": {
+    "path": "out\\004-tangan-pilot-kemarin\\skenario04-rec709-proof-master.mp4",
+    "sha256": "24fdb3d40c4ad757d8d41451616bbd8fc0140daaac9777c4877914ebe91fa935"
+  },
+  "delivery": {
+    "path": "out\\004-tangan-pilot-kemarin\\skenario04-rec709-proof-review.mp4",
+    "sha256": "2ac9179086bc5b381723ab6c8a877ad845e26ea84e91b65f31c66f98fdbc593b"
+  },
+  "referenceCommand": [
+    "ffmpeg",
+    "-v",
+    "error",
+    "-i",
+    "C:\\Users\\user\\Documents\\Repo\\tiktok-repost\\tiktok-video\\Survival-Fantasy-Content\\out\\004-tangan-pilot-kemarin\\skenario04-rec709-proof-source.mp4",
+    "-vf",
+    "scale=in_range=full:in_color_matrix=bt601:out_range=limited:out_color_matrix=bt709,format=yuv420p",
+    "-map",
+    "0:v:0",
+    "-fps_mode",
+    "passthrough",
+    "-pix_fmt",
+    "yuv420p",
+    "-f",
+    "framemd5",
+    "-"
+  ],
+  "masterCommand": [
+    "ffmpeg",
+    "-v",
+    "error",
+    "-i",
+    "C:\\Users\\user\\Documents\\Repo\\tiktok-repost\\tiktok-video\\Survival-Fantasy-Content\\out\\004-tangan-pilot-kemarin\\skenario04-rec709-proof-master.mp4",
+    "-map",
+    "0:v:0",
+    "-fps_mode",
+    "passthrough",
+    "-pix_fmt",
+    "yuv420p",
+    "-f",
+    "framemd5",
+    "-"
+  ],
+  "referenceFrameHashes": "episodes\\004-tangan-pilot-kemarin\\verification\\rec709-proof-converted-reference.framemd5",
+  "referenceFrameHashesSha256": "9c592a0e17decb41cb6f9f2e74555aab714c36e86a351011ddcb60453fde7f0b",
+  "masterFrameHashes": "episodes\\004-tangan-pilot-kemarin\\verification\\rec709-proof-master.framemd5",
+  "masterFrameHashesSha256": "9c592a0e17decb41cb6f9f2e74555aab714c36e86a351011ddcb60453fde7f0b",
+  "expectedFrames": 4650,
+  "referenceFrames": 4650,
+  "masterFrames": 4650,
+  "mismatchCount": 0,
+  "firstMismatches": []
+}

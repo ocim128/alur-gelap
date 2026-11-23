@@ -3,6 +3,10 @@ import json, math, re, subprocess, sys
 from pathlib import Path
 import numpy as np
 p=Path(__file__).resolve().parent; root=p.parents[1]; m=json.loads((p/'manifest.json').read_text(encoding='utf-8')); t=m['timing']; fps=m['fps']; sr=m['soundMix']['sampleRate']; vpath=Path(sys.argv[1]); errors=[]
+sys.path.insert(0,str(root/'scripts'))
+from verify_export_common import write_report, next_report_path, export_listening_clips
+out=Path(sys.argv[2]) if len(sys.argv)>2 else next_report_path(p/'verification','export-report')
+if out.exists(): raise FileExistsError(f'Verification report already exists: {out}')
 probe=json.loads(subprocess.check_output(['ffprobe','-v','error','-show_entries','format=duration:stream=codec_type,width,height,r_frame_rate,pix_fmt,color_range,color_space,color_primaries,color_transfer,start_time','-of','json',str(vpath)],text=True))
 v=next(x for x in probe['streams'] if x['codec_type']=='video'); a=next(x for x in probe['streams'] if x['codec_type']=='audio')
 for k,val in {'width':1080,'height':1920,'r_frame_rate':'30/1','pix_fmt':'yuv420p','color_range':'tv','color_space':'bt709','color_primaries':'bt709','color_transfer':'bt709'}.items():
@@ -24,10 +28,10 @@ for item in t['branchRewinds']:
 def rms(x):return float(np.sqrt(np.mean(x.astype(np.float64)**2)))
 def db(x):return round(20*math.log10(max(x,1e-15)),2)
 lo,hi=(round(f*sr/fps) for f in t['dreadSilenceFrames']); section=audio[lo:hi]
-report['dreadSilence']={'startSec':lo/sr,'endSec':hi/sr,'rmsDbfs':db(rms(section)),'peakDbfs':db(float(np.max(np.abs(section)))),'innerRmsDbfs':db(rms(section[480:-480]))}
+report['dreadSilence']={'startSec':lo/sr,'endSec':hi/sr,'rmsDbfs':db(rms(section)),'peakDbfs':db(float(np.max(np.abs(section)))),'innerRmsDbfs':db(rms(section[480:-480])),'isDigitalZero':bool(not np.any(section))}
 if rms(section)>10**(-52/20):errors.append('dread silence exceeds -52 dBFS RMS after AAC')
 jolt=round(t['joltFrame']*sr/fps); section=audio[jolt-round(.15*sr):jolt]
-report['vacuum']={'startSec':(jolt-round(.15*sr))/sr,'endSec':jolt/sr,'rmsDbfs':db(rms(section)),'peakDbfs':db(float(np.max(np.abs(section))))}
+report['vacuum']={'startSec':(jolt-round(.15*sr))/sr,'endSec':jolt/sr,'rmsDbfs':db(rms(section)),'peakDbfs':db(float(np.max(np.abs(section)))),'isDigitalZero':bool(not np.any(section))}
 if rms(section)>10**(-45/20):errors.append('jolt vacuum exceeds -45 dBFS RMS after AAC')
 window=audio[jolt-round(.025*sr):jolt+round(.05*sr)]; hit=np.flatnonzero(np.abs(window)>.001)
 if len(hit):
@@ -60,7 +64,8 @@ if not all(report['captionSpelling'].values()):errors.append('requested caption 
 flash_frames=[f+i for f,length in [(28,8),(m['scenes'][2]['at']+18,8),(t['impact2Frame'],8),(t['joltFrame'],2)] for i in range(length)]
 rewind_frames=[x['startFrame']+offset for x in t['branchRewinds'] for offset in (0,6,11)]
 shake_frames=[t['joltFrame']+i for i in (2,3,4,5,6,7,8,9)]
-frames=sorted(set([6,t['joltFrame']-1,t['blackoutFrame']-1,t['blackoutFrame']]+flash_frames+rewind_frames+shake_frames))
+scan_frames=list(range(t['joltFrame']-4,t['joltFrame']+5))
+frames=sorted(set([6,t['joltFrame']-1,t['blackoutFrame']-1,t['blackoutFrame']]+flash_frames+rewind_frames+shake_frames+scan_frames))
 expr='+'.join(f'eq(n,{f})' for f in frames)
 raw=subprocess.check_output(['ffmpeg','-v','error','-i',str(vpath),'-vf',f"select='{expr}',scale=108:192,format=gray",'-fps_mode','vfr','-f','rawvideo','-'])
 if len(raw)!=len(frames)*108*192:errors.append('missing verification frames')
@@ -69,6 +74,14 @@ else:
  before=images[frames.index(t['joltFrame']-1)].astype(np.int16); after=images[frames.index(t['joltFrame'])].astype(np.int16)
  change=float(np.mean(np.abs(after-before))); report['jolt']['visualFrameChangeMean']=round(change,2)
  if change<2:errors.append('jolt picture transition not independently detected')
+ changes=[]
+ for a,b in zip(scan_frames,scan_frames[1:]):
+  prev=images[frames.index(a)].astype(np.int16); cur=images[frames.index(b)].astype(np.int16)
+  changes.append({'frame':b,'meanAbsoluteChange':round(float(np.mean(np.abs(cur-prev))),3)})
+ detected=next((x['frame'] for x in changes if x['meanAbsoluteChange']>3),None)
+ report['jolt']['visualTransitionScan']={'startFrame':scan_frames[0],'endFrameInclusive':scan_frames[-1],'thresholdMeanAbsoluteChange':3,'firstExceedingFrame':detected,'changes':changes}
+ if detected is None or abs(detected-t['joltFrame'])>1:errors.append('jolt first visual change outside one frame in scan window')
+ if len(hit) and detected is not None and abs(onset-detected/fps)>1/fps:errors.append('stinger differs from detected first visual transition by more than one frame')
  # Find translation in a central crop of the jolt plate after its two-frame flash.
  shifts=[]
  for a,b in zip(shake_frames,shake_frames[1:]):
@@ -91,5 +104,10 @@ else:
  report['loudness']={'integratedLufs':float(loud.group(1)),'truePeakDbtp':float(peak.group(1))}
  if abs(float(loud.group(1))+14)>.5:errors.append('integrated loudness outside -14 ±0.5 LUFS')
  if float(peak.group(1))>-1.5:errors.append('true peak exceeds -1.5 dBTP')
-out=Path(sys.argv[2]) if len(sys.argv)>2 else p/'verification/export-report.json';out.parent.mkdir(exist_ok=True,parents=True)
-text=json.dumps(report,indent=2,allow_nan=False)+'\n';out.write_text(text,encoding='utf-8');print(text);sys.exit(bool(errors))
+events=[{'name':'copilot-narrator','startSec':t['copilotVoiceFrame']/fps,'endSec':t['copilotVoiceFrame']/fps+len(voice)/sr}]
+events += [{'name':f'rewind-{i+1}','startSec':item['startFrame']/fps,'endSec':item['endFrame']/fps} for i,item in enumerate(t['branchRewinds'])]
+events.append({'name':'last-word-jolt','startSec':last,'endSec':t['joltFrame']/fps})
+report['listeningClips']=export_listening_clips(vpath,events,out.parent/(out.stem+'-listening'))
+report['listeningReview']='none for this export'
+write_report(report,out,vpath)
+print(json.dumps(report,indent=2,allow_nan=False)+'\n');sys.exit(bool(errors))

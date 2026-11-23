@@ -1,0 +1,344 @@
+{
+  "video": "out\\004-tangan-pilot-kemarin\\skenario04-rec709-proof-review.mp4",
+  "durationSec": 155.008,
+  "rewinds": [
+    {
+      "startFrame": 1316,
+      "endFrame": 1328,
+      "expectedSec": 43.86666666666667,
+      "detectedSec": 43.866667,
+      "offsetMs": 0.0,
+      "correlation": 0.9277,
+      "visualMidpointChangeMean": 6.24
+    },
+    {
+      "startFrame": 1773,
+      "endFrame": 1785,
+      "expectedSec": 59.1,
+      "detectedSec": 59.1,
+      "offsetMs": 0.0,
+      "correlation": 0.9267,
+      "visualMidpointChangeMean": 8.55
+    },
+    {
+      "startFrame": 2232,
+      "endFrame": 2244,
+      "expectedSec": 74.4,
+      "detectedSec": 74.4,
+      "offsetMs": -0.0,
+      "correlation": 0.9167,
+      "visualMidpointChangeMean": 7.26
+    }
+  ],
+  "errors": [],
+  "dreadSilence": {
+    "startSec": 74.8,
+    "endSec": 76.4,
+    "rmsDbfs": -97.93,
+    "peakDbfs": -64.17,
+    "innerRmsDbfs": -300.0,
+    "isDigitalZero": false
+  },
+  "vacuum": {
+    "startSec": 153.51666666666668,
+    "endSec": 153.66666666666666,
+    "rmsDbfs": -58.36,
+    "peakDbfs": -30.67,
+    "isDigitalZero": false
+  },
+  "jolt": {
+    "frame": 4610,
+    "visualSec": 153.66666666666666,
+    "audioOnsetSec": 153.662833,
+    "offsetMs": -3.833,
+    "visualFrameChangeMean": 11.38,
+    "visualTransitionScan": {
+      "startFrame": 4606,
+      "endFrameInclusive": 4614,
+      "thresholdMeanAbsoluteChange": 3,
+      "firstExceedingFrame": 4610,
+      "changes": [
+        {
+          "frame": 4607,
+          "meanAbsoluteChange": 0.158
+        },
+        {
+          "frame": 4608,
+          "meanAbsoluteChange": 0.234
+        },
+        {
+          "frame": 4609,
+          "meanAbsoluteChange": 0.11
+        },
+        {
+          "frame": 4610,
+          "meanAbsoluteChange": 11.38
+        },
+        {
+          "frame": 4611,
+          "meanAbsoluteChange": 5.199
+        },
+        {
+          "frame": 4612,
+          "meanAbsoluteChange": 8.743
+        },
+        {
+          "frame": 4613,
+          "meanAbsoluteChange": 3.777
+        },
+        {
+          "frame": 4614,
+          "meanAbsoluteChange": 4.002
+        }
+      ]
+    },
+    "measuredShakeFrameTranslationsAt108px": [
+      1,
+      -1,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "finalSpeechEvidence": {
+    "lastStemSampleAboveMinus60DbfsSec": 153.494937,
+    "sourceToDecodedMixLagMs": -0.0,
+    "lastSignalOnExportSec": 153.494937,
+    "finalWordCorrelation": 0.8851,
+    "lastSignalToStingerMs": 167.896,
+    "limitation": "Energy threshold and alignment evidence only; final phoneme requires listening."
+  },
+  "copilotBeat": {
+    "voiceStartSec": 24.966666666666665,
+    "voiceEndSec": 25.68166666666667,
+    "voiceOnsetOffsetMs": 0.0,
+    "voiceCorrelation": 0.8946,
+    "narrationStemRmsDbfs": -65.03
+  },
+  "captionSpelling": {
+    "copilot": true,
+    "jadiin": true
+  },
+  "frames": [
+    {
+      "frame": 6,
+      "meanLuma": 20.77
+    },
+    {
+      "frame": 28,
+      "meanLuma": 22.43
+    },
+    {
+      "frame": 29,
+      "meanLuma": 26.94
+    },
+    {
+      "frame": 30,
+      "meanLuma": 31.49
+    },
+    {
+      "frame": 31,
+      "meanLuma": 32.64
+    },
+    {
+      "frame": 32,
+      "meanLuma": 31.05
+    },
+    {
+      "frame": 33,
+      "meanLuma": 26.42
+    },
+    {
+      "frame": 34,
+      "meanLuma": 22.42
+    },
+    {
+      "frame": 35,
+      "meanLuma": 21.11
+    },
+    {
+      "frame": 348,
+      "meanLuma": 29.81
+    },
+    {
+      "frame": 349,
+      "meanLuma": 33.71
+    },
+    {
+      "frame": 350,
+      "meanLuma": 37.63
+    },
+    {
+      "frame": 351,
+      "meanLuma": 38.45
+    },
+    {
+      "frame": 352,
+      "meanLuma": 36.49
+    },
+    {
+      "frame": 353,
+      "meanLuma": 32.86
+    },
+    {
+      "frame": 354,
+      "meanLuma": 29.42
+    },
+    {
+      "frame": 355,
+      "meanLuma": 28.43
+    },
+    {
+      "frame": 1316,
+      "meanLuma": 58.33
+    },
+    {
+      "frame": 1322,
+      "meanLuma": 64.5
+    },
+    {
+      "frame": 1327,
+      "meanLuma": 60.23
+    },
+    {
+      "frame": 1714,
+      "meanLuma": 16.69
+    },
+    {
+      "frame": 1715,
+      "meanLuma": 22.1
+    },
+    {
+      "frame": 1716,
+      "meanLuma": 27.11
+    },
+    {
+      "frame": 1717,
+      "meanLuma": 27.45
+    },
+    {
+      "frame": 1718,
+      "meanLuma": 25.08
+    },
+    {
+      "frame": 1719,
+      "meanLuma": 20.37
+    },
+    {
+      "frame": 1720,
+      "meanLuma": 16.29
+    },
+    {
+      "frame": 1721,
+      "meanLuma": 15.05
+    },
+    {
+      "frame": 1773,
+      "meanLuma": 13.87
+    },
+    {
+      "frame": 1779,
+      "meanLuma": 20.62
+    },
+    {
+      "frame": 1784,
+      "meanLuma": 15.13
+    },
+    {
+      "frame": 2232,
+      "meanLuma": 38.74
+    },
+    {
+      "frame": 2238,
+      "meanLuma": 45.97
+    },
+    {
+      "frame": 2243,
+      "meanLuma": 40.46
+    },
+    {
+      "frame": 4606,
+      "meanLuma": 30.55
+    },
+    {
+      "frame": 4607,
+      "meanLuma": 30.57
+    },
+    {
+      "frame": 4608,
+      "meanLuma": 30.52
+    },
+    {
+      "frame": 4609,
+      "meanLuma": 30.48
+    },
+    {
+      "frame": 4610,
+      "meanLuma": 35.22
+    },
+    {
+      "frame": 4611,
+      "meanLuma": 39.48
+    },
+    {
+      "frame": 4612,
+      "meanLuma": 33.88
+    },
+    {
+      "frame": 4613,
+      "meanLuma": 33.73
+    },
+    {
+      "frame": 4614,
+      "meanLuma": 33.79
+    },
+    {
+      "frame": 4615,
+      "meanLuma": 33.9
+    },
+    {
+      "frame": 4616,
+      "meanLuma": 33.9
+    },
+    {
+      "frame": 4617,
+      "meanLuma": 34.01
+    },
+    {
+      "frame": 4618,
+      "meanLuma": 33.83
+    },
+    {
+      "frame": 4619,
+      "meanLuma": 34.13
+    },
+    {
+      "frame": 4641,
+      "meanLuma": 34.19
+    },
+    {
+      "frame": 4642,
+      "meanLuma": 0.0
+    }
+  ],
+  "maxFlashMeanLuma": 39.48,
+  "loudness": {
+    "integratedLufs": -14.3,
+    "truePeakDbtp": -2.2
+  },
+  "listeningClips": [
+    "episodes\\004-tangan-pilot-kemarin\\verification\\rec709-proof-delivery-check-listening\\listen-copilot-narrator-23.97s.wav",
+    "episodes\\004-tangan-pilot-kemarin\\verification\\rec709-proof-delivery-check-listening\\listen-rewind-1-42.87s.wav",
+    "episodes\\004-tangan-pilot-kemarin\\verification\\rec709-proof-delivery-check-listening\\listen-rewind-2-58.10s.wav",
+    "episodes\\004-tangan-pilot-kemarin\\verification\\rec709-proof-delivery-check-listening\\listen-rewind-3-73.40s.wav",
+    "episodes\\004-tangan-pilot-kemarin\\verification\\rec709-proof-delivery-check-listening\\listen-last-word-jolt-152.49s.wav"
+  ],
+  "listeningReview": "none for this export",
+  "target": {
+    "filename": "skenario04-rec709-proof-review.mp4",
+    "sha256": "2ac9179086bc5b381723ab6c8a877ad845e26ea84e91b65f31c66f98fdbc593b",
+    "sizeBytes": 18492571
+  }
+}

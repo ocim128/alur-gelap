@@ -1,5 +1,16 @@
 # Scenario 03 — image asset record
 
+## Current thumbnail and cover provenance review · 23 November 2026
+
+These are the existing stills inspected in response to the fresh audit. The owner selected the wording `DIA NGGAK OLENG`; the record located so far does not establish approval of these exact image files, their original generator, source assets, or publication rights. Preserve both originals while the owner decides whether to revise the hand. No modification or rights clearance is claimed.
+
+| File | Dimensions | SHA-256 | Finding |
+| --- | --- | --- | --- |
+| `out/003-goyangan-dek-enam/thumbnail-youtube-v3.jpg` | 1280 × 720 | `ce6436f40da8f7f3e15ac22a7aa0cd56828477a6b222c3f203ebad60edf2ccf9` | Exact owner-selected wording; foreground hand has visible skin tone, inconsistent with the locked matte-black survivor. |
+| `out/003-goyangan-dek-enam/cover-social-9x16.jpg` | 1080 × 1920 | `987156770b17d199e33d5c422f8eff73e77ba98e08882c4612167382670cc3ce` | Same wording and identity issue; the hand sits near the bottom of the centered 3:4 safe area and needs review at the intended crop. |
+
+**Source and rights:** Both files exist locally and their hashes and dimensions were verified. Neither has EXIF provenance; no source, generator, license or publication-rights evidence for these specific stills was found in the episode text records or their git history. Do not infer the stills' provenance from the separately documented panel batch. Original generation records and applicable usage rights remain to be verified before publication. If a revision is authorized, save new versioned files and document their source, tool and rights without replacing these originals.
+
 - **Character silhouette study:** `public/assets/003-goyangan-dek-enam/style-test-01/character-study.png`. The owner approved the hood-up windbreaker survivor and style, then requested a tall entity with small pale eye glints and a four-hand reveal during P19–P22. The study is a raster identity reference, not an editable animation asset. The initial study was retried once to remove entity hair and clothing; see `sources/style-test-01-generation.md`.
 - **Three-panel style test:** `public/assets/003-goyangan-dek-enam/style-test-01/p01.webp`, `p07.webp`, `p19.webp`, each 936 × 1664; overview `style-test-contact.jpg`. The owner approved the style and survivor, and requested revised entity and impact details for the full batch. P01 was reused in the new batch; P07 and P19 were newly generated.
 - **Full batch, still under review:** `public/assets/003-goyangan-dek-enam/master-batch-01/p01.webp` through `p24.webp`; overview `episodes/003-goyangan-dek-enam/panels-contact.jpg` and four larger six-panel sheets. The 24 selected WebP files are distinct and 936 × 1664. P19/P21/P22/P23 show the owner-directed four hands; P20 is an intervening lock close-up. Image status is fail because the side-wall geography and inserted pin are inconsistent in P21–P23, P19/P21 do not conclusively show the arms and shoulders compressed by the hull, and P04's cable attachment is unclear. The owner has not approved the batch. Complete prompt, selection and source-image history is in the `sources/master-batch-01-*.json` records and five-point self-audit in `sources/prompts.md`.

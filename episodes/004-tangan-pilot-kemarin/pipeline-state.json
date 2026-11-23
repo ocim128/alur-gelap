@@ -55,7 +55,7 @@
   },
   "render": {
     "status": "pass",
-    "notes": "Owner-approved 0.600 s copilot-beat polish completed; accepted narrator samples preserved, caption corrections applied, three rewinds and dread silence shifted by 18 frames. Master out/skenario04-owner-polish-final-master.mp4 and compressed review copy out/skenario04-owner-polish-final-master_compressed.mp4 passed verify-export.py and npm run check. Compressed mix -14.3 LUFS / -2.2 dBTP; copilot voice detected on cue with narration-stem RMS -65.03 dBFS. Owner-approved P05/P09/P23 exceptions allow Agent 05 handoff, with image technical verdict FAIL retained; no final Agent 05 audit or publishing approval is claimed. See assembly-polish-handoff.md."
+    "notes": "Fresh Rec.709 evidence delivery out/004-tangan-pilot-kemarin/skenario04-rec709-proof-review.mp4, SHA-256 2ac9179086bc5b381723ab6c8a877ad845e26ea84e91b65f31c66f98fdbc593b. Original audited file remains unchanged. Source yuvj420p full-range bt470bg was explicitly converted to limited-range BT.709 matrix; all 4650 decoded converted source frames match the lossless master exactly, and 15 representative delivery frames were compared to the master. Source primaries and transfer were untagged and BT.709 SDR is an output interpretation assumption. Compressed verifier and npm run check passed; listening review: none for this export. Owner image exceptions and technical FAIL remain unchanged. Rights and independent Agent 05 re-audit pending. See assembly-rec709-proof-handoff.md."
   },
   "audit": {
     "status": "pending",
