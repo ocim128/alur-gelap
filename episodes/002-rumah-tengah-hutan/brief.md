@@ -139,3 +139,9 @@ Narator Investigator adalah satu-satunya pencerita (white captions). Seluruh SFX
 - **Audio Producer (Agent 02):** Gunakan naskah [narasi.txt](narasi.txt) (252 kata). Generate dalam satu kali ShortZ `gemini-3.8-flash-tts` dengan suara Investigator. Siapkan jeda keheningan yang bersih pada timeline 02:34.0 (154.0 s): 0.4 s rewind (00:59.6–01:00.0), 1.6 s silence pasca-rewind (01:00.0–01:01.6), countdown 3 detik sinkron guruh (01:37.0–01:40.0), dan 2.0 s dread silence pasca-guruh (01:55.0–01:57.0) tanpa mempercepat vocal speed.
 - **Image Generator (Agent 03):** Rujuk 24 spesifikasi panel di atas dengan gaya Urban Silhouette Noir (matte `#07080B`, tepi siluet tegas, palet slate/charcoal/petir dingin, aksen warning red hanya di P08–P10). Panel P10 adalah siluet aftermath noir bersih tanpa darah/gore agar lolos filter safety API. Siapkan plate bersih tanpa melukis hujan vertikal di dalam ruangan (hujan hanya di luar).
 - **Remotion Assembler (Agent 04):** Komposisi `Skenario02RumahTengahHutan` (1080 × 1920, 30 fps), durasi timeline **02:34.0 (154.0 s / 4620 frame)**, `pipelineVersion: 2`, `schemaVersion: 2`. Terapkan overlay lightning flash di P05 dan P18, `ImpactMicroShake` lateral di P08 dan P19, serta transisi rewind 0.4 s di 00:59.6.
+
+---
+
+## Legacy exemplar note (added 2026-11-23 — do not remove)
+
+This episode is a **pre-hygiene legacy exemplar** of the studio v2 `branch-rewind` format. Its `narasi.txt` still carries all-caps comic SFX lines (`BRAK!`, `GURUH MENGGELEGAR!`) that the current SFX lint bans from narration: those transients belong in the foley cue sheet. Its 154.0 s single-rewind timeline predates the `triple-branch-rewind` standard (145–160 s, three `branchRewinds`, 245–265 canonical words). Read this brief for structure, cue-sheet discipline and tone **only** — never copy the SFX-into-script pattern or the single-rewind timing into a new scenario.

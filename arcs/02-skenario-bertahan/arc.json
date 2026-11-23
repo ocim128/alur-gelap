@@ -20,6 +20,9 @@
       "episodeNumber": 2,
       "workingTitle": "Rumah Tengah Hutan",
       "status": "in-progress",
+      "engine": "branch-rewind",
+      "finalVideo": "out/002-rumah-tengah-hutan/Skenario02RumahTengahHutan-polish-v2-lossless_compressed.mp4",
+      "durationSec": 154.0,
       "setting": "Abandoned forestry cabin on a cliff edge during a pine forest storm.",
       "mechanics": "A fallen pine tree traps the survivor with a long-armed beast in the porch branches. Smashing the jammed back emergency door with a teak beam alerts the beast unless the strike is acoustic-masked to hit simultaneously with a house-shaking thunderclap 3 seconds after a lightning flash.",
       "briefPath": "episodes/002-rumah-tengah-hutan/brief.md",
@@ -30,11 +33,40 @@
       "episodeNumber": 3,
       "workingTitle": "Goyangan Dek Enam",
       "status": "in-progress",
+      "engine": "branch-rewind",
+      "finalVideo": "out/003-goyangan-dek-enam/Skenario03GoyanganDekEnam-revision-v3-master_compressed.mp4",
+      "durationSec": 158.0,
       "setting": "Outdoor promenade Deck 6 on a cruise ship in the middle of the ocean during a midnight storm.",
       "mechanics": "The survivor is trapped on the promenade with the cabin door padlocked from outside. Jumping overboard triggers lethal propeller suction. The survivor detects the entity because all hanging gear sways with the ship roll while the entity stands rigid against gravity, then releases the manual lifeboat winch brake at peak roll to crush and pin the entity with a 3-ton lifeboat, locking it with a steel pin until dawn.",
       "briefPath": "episodes/003-goyangan-dek-enam/brief.md",
       "scriptPath": "episodes/003-goyangan-dek-enam/narasi.txt",
       "pipelineStatePath": "episodes/003-goyangan-dek-enam/pipeline-state.json"
+    },
+    {
+      "episodeNumber": 4,
+      "workingTitle": "Tangan Pilot Kemarin",
+      "status": "in-progress",
+      "engine": "triple-branch-rewind",
+      "finalVideo": "out/004-tangan-pilot-kemarin/skenario04-owner-polish-final-master_compressed.mp4",
+      "durationSec": 155.0,
+      "setting": "Cockpit of a small helicopter in night flight above a mountain cloud sea, with a second hand already resting on the cyclic.",
+      "mechanics": "Three bad-branch loops each snap back from a 0.4 s tape-snap rewind: pulling toward the map's hand-drawn CELAH circle flies the tail rotor into a dead pine, reaching for the radio lets the previous pilot shove the cyclic full left, and opening the reserve fuel valve feeds a dive into the cloud wall. The winning execution keeps both hands on the cyclic while the survivor steers with their feet, then releases the controls entirely so the pilot from yesterday lands them through the CELAH gap like someone flying home.",
+      "briefPath": "episodes/004-tangan-pilot-kemarin/brief.md",
+      "scriptPath": "episodes/004-tangan-pilot-kemarin/narasi.txt",
+      "pipelineStatePath": "episodes/004-tangan-pilot-kemarin/pipeline-state.json"
+    },
+    {
+      "episodeNumber": 5,
+      "workingTitle": "Sabuk Ketiga",
+      "status": "in-progress",
+      "engine": "triple-branch-rewind",
+      "finalVideo": "out/005-sabuk-ketiga/Skenario05SabukKetiga-owner-polish-master_compressed.mp4",
+      "durationSec": 156.4,
+      "setting": "Small helicopter hung up above a midnight sea of clouds, with a third seatbelt laced tight around an empty rear seat beside a bent-rail sliding door.",
+      "mechanics": "Three bad-branch loops each snap back from a 0.4 s tape-snap rewind: following the tower's descent order flies the tail rotor into the mountain ridge, letting the copilot check the back seat summons a wrong-shaped imitator, and unfastening your own belt drops the cabin onto your unbelted body. The winning execution reads the imitation rule — the entity always copies one beat late, never first — keeps your own belt fastened while only faking the buckle lift, and uses the hard cyclic bank so the unbelted imitator is thrown out through the half-open sliding door into the cloud sea.",
+      "briefPath": "episodes/005-sabuk-ketiga/brief.md",
+      "scriptPath": "episodes/005-sabuk-ketiga/narasi.txt",
+      "pipelineStatePath": "episodes/005-sabuk-ketiga/pipeline-state.json"
     }
   ]
 }

@@ -6,9 +6,9 @@ Act as an independent, fresh-context, **read-only** reviewer at the single post-
 
 ## Required Inputs & Preconditions
 
-Receive the completed MP4, approved brief and script, narration and timing records, manifest/captions, locked sheets and pipeline state. Use panels, contact sheets, prompt records and mix notes as supporting evidence when available.
+Receive the completed MP4, approved brief and script, narration and timing records, manifest/captions, locked sheets and pipeline state. Use panels, contact sheets, prompt records and mix notes as supporting evidence when available. Bind every audit to one artifact: name the exact MP4 under review (and its SHA-256 when reports are generated).
 
-Read any structured stage exceptions and check the assigned `downstreamVerify` items on the export. Record the evidence and apply the normal QA rubric to what you find. Owner permission to assemble is separate from the technical verdict.
+Read any structured stage exceptions and check the assigned `downstreamVerify` items on the export. Record the evidence and apply the normal QA rubric to what you find. Owner permission to assemble is separate from the technical verdict: keep `ownerDisposition: "approved_with_exceptions"` recorded alongside `technicalVerdict: "fail"` and do not re-block the accepted handoff, but audit **new** regressions introduced by later polish (such as framing crops from procedural transforms) as fresh findings under the normal rubric — an accepted exception never covers them.
 
 ## Allowed Write Scope
 
@@ -46,7 +46,7 @@ Never edit source, audio, images, renders, scripts, state or rights records, fix
    - Step through decoded video frames to locate the **first visible jolt or flash**, and record its frame number and presentation timestamp.
    - Decode the MP4's actual AAC mix to PCM. Locate the last speech and the first stinger transient in the waveform, using a close enough time window to resolve one frame. Compare both streams on the same MP4 presentation timeline, accounting for stream offsets and AAC priming or trim as applicable. Manifest cue positions and source WAVs are supporting evidence only.
    - Record the signed stinger-onset offset from the first jolt/flash frame. Require **±1 frame (±33 ms at 30 fps)**, a **120–180 ms vacuum after speech ends and before the stinger**, and **≤ −1.5 dBTP** for new v2 deliveries (≤ −1.0 dBTP for legacy cuts) measured on the exported mix. A breach of any of these limits is a **BLOCKER**. Record integrated loudness against the **−14.0 LUFS** target and verify that the ending delivers the intended jolt.
-5. Run `npm run check`. Write `audit-report.md` with **PASS**, **PASS WITH NOTES**, or **FAIL**. Include evidence, measured limits and the owning-role fix for each blocker. Put any unchecked listening and rights items in one two-line footer:
+5. Run `npm run check`. Write `audit-report.md` with **PASS**, **PASS WITH NOTES**, or **FAIL**. Include evidence, measured limits and the owning-role fix for each blocker. Tag each finding with one evidence label — `signal/timing`, `visual-state`, `motion`, `human-listening`, `experience` (see [README](README.md#evidence-labels-and-review-phrasing)) — so the orchestrator can route it. State the listening-review status in the fixed phrasing: **`listening review: none`** when nothing was heard, or **`owner listened and approved <file> (sha256 <hash>) on YYYY-MM-DD`** when one actually happened. Verification reports must not overwrite an existing report and must bind the audited MP4's filename and SHA-256. Put any unchecked listening and rights items in one two-line footer:
 
    **Human listening:** [Any unchecked items for the orchestrator's final ear-check.]<br>
    **Rights and release:** [Any unchecked account rights and TikTok publish approval for the orchestrator.]

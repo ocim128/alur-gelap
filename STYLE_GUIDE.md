@@ -6,6 +6,18 @@ Give viewers an unbelievable survival experience in an imagined world. Show the 
 
 - **Standalone anthology.** Every Skenario opens cold with a fresh setting, protagonist silhouette and physical escape puzzle. Resolve the puzzle within the video. Draw on Arc 01's high-stakes survival tone and keep its timeline, cast and handoff out of the new story. Draft **Pilot 01** first.
 - **Bahasa Bayi.** Write the way a sharp friend explains a deadly puzzle. Use short sentences and everyday words like `kamu`, `bakal`, `tamat`, `soalnya`, `perhatiin`, `ternyata` and `jangan sampai`. Cut filler, stiff narration and poetic phrasing such as “Hujan memukul jalur,” “Lututmu menghantam tepi beton,” and “Dia menggeleng lalu melihatmu mundur.”
+- **TTS-safe lexicon.** Prefer everyday Indonesian over anglicisms and typo-prone slang, because TTS voices and the ASR verifier handle them more reliably. Reach for the preferred form when writing:
+
+  | Instead of | Write | Why |
+  | --- | --- | --- |
+  | `nose` | `moncong heli` / `moncong` | anglicism; Indonesian aircraft nose |
+  | `full kiri` | `mentok kiri` | anglicism; everyday and unambiguous |
+  | `nyerudut` | `anjlok` | typo-prone slang; standard colloquial `anjlok` |
+  | `nekatin` | `angkat` / `geser` | slang with unstable meaning; name the concrete action |
+  | `kelontang` | `terlempar` | invented onomatope; use the real verb |
+
+  Colloquial-standardization watchwords: the ASR verifier tends to normalize colloquial forms to formal Indonesian (`jadiin` → heard `jadikan`, `bener` → heard `benar`, `Perhatiin` → heard `Perhatikan`, `kemudi` after `tuas` → heard `kemudian`). Keep the colloquial script form consistent and let [`scripts/check-pronunciation.mjs`](scripts/check-pronunciation.mjs) resolve the known artifacts; only new suspects escalate.
+- **Spoken word count.** The canonical count treats a **hyphenated compound as one word** (`baling-baling`, `sekeras-kerasnya` = one word each), because that is how the narrator delivers them. Count with `node scripts/count-narration-words.mjs <narasi.txt>`, which also prints the split count for visibility; record both in the brief. Budgets and validator bands use the canonical count.
 - **Golden spoken voice sample.** “Kamu dikunci di kamar. Salah gerak, tamat. Tiap tiga menit, dia ngintip lalu duduk di kanan, bawa kunci dan pisau. Ada tong dan gang di kiri.” Use its clear, conversational rhythm as a tone reference, and write fresh details for each scenario.
 - **Master Style Anchor.** Use the Urban Silhouette Noir reference images in [`docs/style-anchor/`](docs/style-anchor/). Override rain and urban details for dry or clear shots. A dedicated dry/clear variant may be added to that folder with owner approval. Never substitute previous episode panels or transfer their props or lighting to a new setting.
 - **One inked medium.** Walls, floors, doors, props and characters share the same hand-inked 2D graphic-novel treatment, flat cel-shaded texture, matte `#07080B` silhouettes, practical rim light and grounded shadows. Keep poses expressive and scene-specific. Avoid photorealistic 3D backgrounds, pasted vector cutouts, stiff symmetrical A-poses and white internal diagram outlines from turnaround sheets.
@@ -14,19 +26,22 @@ Give viewers an unbelievable survival experience in an imagined world. Show the 
 - **Answer-Before-Question.** Plant every physical cause of the lethal bad decision and every object or detail needed for the smart escape in the opening, before the choice or danger arrives. Show each clue naturally or establish it casually. Keep clues readable without over-labeling them or announcing their purpose. No hidden flaw or miracle tool can explain the payoff. Map each plant and payoff in the brief's Fair-Play Clue Ledger.
 - **Show-What-You-Say Panel Lock.** Time each narrated threat or visible action to a panel that depicts it. A reaction shot can follow the action. An export that substitutes a reaction for the narrated reveal fails QA.
 - **Audio theater.** Keep Investigator as the narrator and cue multiple separate world-audio or non-narrator voice beats, such as TOA or radio, survivor dialogue or panic, muffled pleas or whispers. Plan deliberate 1–3 s dread silences. Label speakers or use consistent caption colors for dialogue.
+- **Triple-Rewind standard.** New scenarios from Episode 04 onward use `script.engine: "triple-branch-rewind"`: three escalating bad-branch loops, each snapped back by a 0.4 s tape-snap rewind, then the winning execution under pressure. Target **145–160 s total** and **245–265 spoken words** (validator band). Rewinds 1 and 2 snap straight back into action; reserve the 1.2–1.6 s post-rewind dread silence for Rewind 3, immediately before the winning realization.
+- **Multi-Loop Reset Rule.** Each rewind resets the world to the **relevant decision point** of that loop — not to the opening. Only the protagonist's knowledge carries forward; the viewer must be able to say what the protagonist now knows that they did not before. The brief states, per loop, whether the **environment resets identically or degrades** (fuel still lower, damage persists, a moved object stays moved): a degraded world must show that state after the reset, and an identical reset must not silently keep a changed prop state from the failed loop. Replant every causal chain the loop depends on so the next bad decision remains grounded. Map all of this in the brief's **Triple-Rewind Continuity Map**.
+- **Single Timing Authority.** A brief's timings are provisional story order only. Once narration is locked, the PCM-verified `audio-edit-map.json` is the composition timeline authority, and manifest timing, captions, cuts, mix cues and the export verifier consume it. Mismatches fail the validator or verifier loudly; never reconcile them by editing prose or estimates. See the [episode brief template](templates/episode-brief.md#single-timing-authority).
 - **V2 delivery.** Target −14 LUFS integrated and ≤ −1.5 dBTP on the compressed delivery; check after AAC encoding. Deliver limited-range Rec.709 video. Cap procedural flashes at 65% opacity and verify exported flash-frame mean luma is below 190 on an 8-bit scale.
 - **Urban Silhouette Noir.** Characters are solid matte black ink silhouettes (`#07080B`), defined by sharp rim-light contours and minimal flat graphic ink folds: no skin tone or drawn faces, eyes, noses or eyebrows. Only non-human threats or looming figures in deep shadow may have minimal pale pinpoint eye glints. Use crushed black shadows, flat graphic color blocks and harsh practical light contrast; never use soft painterly shading, 3D gradients or anime, manhwa or webtoon face rendering. Choose 1–2 practical light accents that belong to the new setting; shift to harsh red or amber on bad branches.
 - **Panels and motion.** Plan roughly 16–26 purposeful panels for a 2–3 minute cut. Hold atmospheric shots for 5–9 seconds with slow camera motion or practical light flicker. Cut tightly on action and jolt beats. Keep falling rain outdoors or visible beyond a window or doorway. Keep the existing climax and final mix checks, including ±1 frame exported jolt sync.
 
 ### V2 beat map
 
-Target 2.0–3.0 minutes, including dialogue, deliberate silences and the final tail.
+Target **145–160 s for `triple-branch-rewind` scenarios** (validator band; other v2 engines stay inside the 90–210 s planning envelope), including dialogue, deliberate silences and the final tail.
 
 | Approximate time | Beat |
 | --- | --- |
-| 0:00–0:30 | Hook within three seconds. Drop into the trap, establish stakes or timer and plant all physical clues naturally. |
-| 0:30–1:15 | Name the tempting instinct, as in “Kalau kamu pilih X, kamu langsung tamat. Kenapa?” Trace the cause to the setup and show the lethal outcome in harsh red or amber. |
-| 1:15–2:30 | Use `branchRewind` to return to the choice. Chain planted details into a multi-step physical escape, then pressure-test it with a real complication. |
+| 0:00–0:30 | Hook within three seconds (≤6 words, measured ≤3.0 s). Drop into the trap, establish stakes or timer and plant all physical clues naturally. |
+| 0:30–1:15 | Three escalating bad branches: name each tempting instinct, trace its cause to the setup and show the lethal outcome in harsh red or amber, snapping back with a 0.4 s rewind per loop. |
+| 1:15–2:30 | After Rewind 3's dread silence, chain planted details into the multi-step physical escape and pressure-test it with a real complication. |
 | 2:30–2:50 | Deliver the earned escape or a logical twist that changes how viewers read the opening. |
 
 The sections below record the Arc 01 v1 format and shared craft guidance. The standalone v2 runtime, narrative, palette and hold rules above take precedence. Keep shared Indonesian grounding, within-video continuity, cover, caption, sound and editorial checks where compatible.

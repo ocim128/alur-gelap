@@ -111,14 +111,14 @@
       "name": "ep004-bottle-scrape",
       "source": "public/sfx/sources/ep004-bottle-slide-preview.mp3",
       "output": "public/sfx/prepared/ep004-bottle-scrape.wav",
-      "processing": "HQ MP3 preview; excerpt 0.25?1.65 s, highpass 180 Hz, lowpass 7000 Hz, fades; sample-derived PTS; listening pending",
+      "processing": "HQ MP3 preview; excerpt 0.25–1.65 s, highpass 180 Hz, lowpass 7000 Hz, fades; sample-derived PTS; listening pending",
       "license": "CC0 1.0; lucaslara; see LICENSES.md"
     },
     {
       "name": "ep004-survivor-breath",
       "source": "public/sfx/sources/ep004-female-breath-preview.mp3",
       "output": "public/sfx/prepared/ep004-survivor-breath.wav",
-      "processing": "HQ MP3 preview; excerpt 0?1.4 s, highpass 140 Hz, lowpass 7000 Hz, fades; sample-derived PTS; listening pending",
+      "processing": "HQ MP3 preview; excerpt 0–1.4 s, highpass 140 Hz, lowpass 7000 Hz, fades; sample-derived PTS; listening pending",
       "license": "CC0 1.0; Kuroseishin; see LICENSES.md"
     },
     {
@@ -139,7 +139,7 @@
       "name": "ep005-phone-vibration",
       "source": "synthetic FFmpeg 125 Hz sine",
       "output": "public/sfx/prepared/ep005-phone-vibration.wav",
-      "processing": "28 Hz amplitude tremolo, 95?450 Hz bandpass and fades; synthesized locally; listening pending",
+      "processing": "28 Hz amplitude tremolo, 95–450 Hz bandpass and fades; synthesized locally; listening pending",
       "license": "Locally generated synthesized tone, no external recording"
     },
     {
@@ -167,7 +167,7 @@
       "name": "ep007-siren-loop",
       "source": "public/sfx/sources/ep007-tinyworlds-storm-siren.ogg",
       "output": "public/sfx/prepared/ep007-siren-loop.wav",
-      "processing": "CC0 recording: seconds 38?55, 200?1800 Hz filter and endpoint fades; continuous PCM; listening pending",
+      "processing": "CC0 recording: seconds 38–55, 200–1800 Hz filter and endpoint fades; continuous PCM; listening pending",
       "license": "CC0 1.0; TinyWorlds; see LICENSES.md"
     },
     {

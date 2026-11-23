@@ -2,6 +2,8 @@
 
 These WAVs are edited source recordings. The table records the original files and changes. For the CC BY excerpts, retain this notice with redistributed audio and credit the excerpts in published cuts that use them.
 
+**Per-scenario rights records.** To avoid parallel-agent merge conflicts, an episode's or scenario's own audio rights may live in a separate file — under `episodes/<slug>/` (for example `asset-rights.md`) or as `public/sfx/LICENSES-<name>.md` — as long as this file indexes it here with a one-line pointer. Shared-library entries above stay in this file.
+
 ## rubberduck
 
 Source pack `sfx_100_v2.zip`, [100 CC0 SFX #2](https://opengameart.org/content/100-cc0-sfx-2). [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/).
@@ -42,7 +44,7 @@ Source `ambient_horror.ogg`, [Ambient horror](https://opengameart.org/content/am
 
 ## Climax derivatives
 
-`prepared/climax-riser.wav` is a filtered, faded and peak-normalized derivative of techiew's CC0 `tension-rise`. `prepared/climax-stinger.wav` layers dklon's CC BY 3.0 `body-fall` with rubberduck's CC0 `metal-resonance` and techiew's CC0 `sub-drone`, filtered, faded and peak-normalized. Rebuild these two files with `node scripts/prep-sfx.mjs --climax`; originals are retained. The dklon attribution above applies to every cut using the stinger. Peak normalization is to approximately ?1 dBFS, not a true-peak guarantee for the finished mix.
+`prepared/climax-riser.wav` is a filtered, faded and peak-normalized derivative of techiew's CC0 `tension-rise`. `prepared/climax-stinger.wav` layers dklon's CC BY 3.0 `body-fall` with rubberduck's CC0 `metal-resonance` and techiew's CC0 `sub-drone`, filtered, faded and peak-normalized. Rebuild these two files with `node scripts/prep-sfx.mjs --climax`; originals are retained. The dklon attribution above applies to every cut using the stinger. Peak normalization is to approximately −1 dBFS, not a true-peak guarantee for the finished mix.
 
 ## Episode 003 candidate minimarket effects
 
@@ -53,8 +55,8 @@ These candidates and the existing climax derivatives require listening in the ep
 
 ## Episode 004 candidate effects
 
-- `sources/ep004-bottle-slide-preview.mp3`: HQ preview of [Bottle Slide Wood by lucaslara](https://freesound.org/people/lucaslara/sounds/154407/), [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/). SHA-256 `5BFA26012324CF5CA9AF90EC80EE3A1E531C8A13E43BC82C70F9A051E6014AF3`. `prepared/ep004-bottle-scrape.wav` trims 0.25?1.65 seconds, filters 180?7000 Hz and fades. The source is a plastic bottle sliding on wood, used as a candidate for tile/concrete; suitability needs listening.
-- `sources/ep004-female-breath-preview.mp3`: HQ preview of [breathing_female.wav by Kuroseishin](https://freesound.org/people/Kuroseishin/sounds/95567/), [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/). SHA-256 `8B5AE938748E27B08761A5D64B7A29254DAE8A47BABAC74AF1B48B80545CC7C2`. `prepared/ep004-survivor-breath.wav` trims 0?1.4 seconds, filters 140?7000 Hz and fades. Listening in the mix remains pending.
+- `sources/ep004-bottle-slide-preview.mp3`: HQ preview of [Bottle Slide Wood by lucaslara](https://freesound.org/people/lucaslara/sounds/154407/), [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/). SHA-256 `5BFA26012324CF5CA9AF90EC80EE3A1E531C8A13E43BC82C70F9A051E6014AF3`. `prepared/ep004-bottle-scrape.wav` trims 0.25–1.65 seconds, filters 180–7000 Hz and fades. The source is a plastic bottle sliding on wood, used as a candidate for tile/concrete; suitability needs listening.
+- `sources/ep004-female-breath-preview.mp3`: HQ preview of [breathing_female.wav by Kuroseishin](https://freesound.org/people/Kuroseishin/sounds/95567/), [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/). SHA-256 `8B5AE938748E27B08761A5D64B7A29254DAE8A47BABAC74AF1B48B80545CC7C2`. `prepared/ep004-survivor-breath.wav` trims 0–1.4 seconds, filters 140–7000 Hz and fades. Listening in the mix remains pending.
 
 ## Episode 005 in-world voices and phone cue
 
