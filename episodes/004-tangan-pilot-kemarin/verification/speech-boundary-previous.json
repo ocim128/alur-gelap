@@ -1,0 +1,371 @@
+{
+  "video": "out\\skenario04-tangan-pilot-kemarin-mastered_compressed.mp4",
+  "stemLastSampleAboveThresholdDbfs": {
+    "-40": 152.890021,
+    "-50": 152.894896,
+    "-60": 152.894937,
+    "-70": 152.894958,
+    "-80": 152.894958
+  },
+  "finalWordWindowSec": [
+    152.68,
+    152.89
+  ],
+  "stemToExportCorrelation": 0.77789,
+  "finalWordCorrelationLagMs": -0.0,
+  "windows10ms": [
+    {
+      "startSec": 152.75,
+      "stem": {
+        "rmsDbfs": -15.78,
+        "peakDbfs": -1.49
+      },
+      "export": {
+        "rmsDbfs": -16.67,
+        "peakDbfs": -3.13
+      }
+    },
+    {
+      "startSec": 152.76,
+      "stem": {
+        "rmsDbfs": -15.34,
+        "peakDbfs": -4.84
+      },
+      "export": {
+        "rmsDbfs": -17.79,
+        "peakDbfs": -7.55
+      }
+    },
+    {
+      "startSec": 152.77,
+      "stem": {
+        "rmsDbfs": -17.7,
+        "peakDbfs": -6.61
+      },
+      "export": {
+        "rmsDbfs": -17.65,
+        "peakDbfs": -6.57
+      }
+    },
+    {
+      "startSec": 152.78,
+      "stem": {
+        "rmsDbfs": -22.67,
+        "peakDbfs": -10.66
+      },
+      "export": {
+        "rmsDbfs": -19.93,
+        "peakDbfs": -7.94
+      }
+    },
+    {
+      "startSec": 152.79,
+      "stem": {
+        "rmsDbfs": -23.86,
+        "peakDbfs": -10.89
+      },
+      "export": {
+        "rmsDbfs": -18.42,
+        "peakDbfs": -5.01
+      }
+    },
+    {
+      "startSec": 152.8,
+      "stem": {
+        "rmsDbfs": -25.82,
+        "peakDbfs": -17.0
+      },
+      "export": {
+        "rmsDbfs": -18.28,
+        "peakDbfs": -10.77
+      }
+    },
+    {
+      "startSec": 152.81,
+      "stem": {
+        "rmsDbfs": -27.62,
+        "peakDbfs": -18.96
+      },
+      "export": {
+        "rmsDbfs": -18.05,
+        "peakDbfs": -9.26
+      }
+    },
+    {
+      "startSec": 152.82,
+      "stem": {
+        "rmsDbfs": -26.22,
+        "peakDbfs": -15.62
+      },
+      "export": {
+        "rmsDbfs": -15.57,
+        "peakDbfs": -5.17
+      }
+    },
+    {
+      "startSec": 152.83,
+      "stem": {
+        "rmsDbfs": -25.0,
+        "peakDbfs": -16.53
+      },
+      "export": {
+        "rmsDbfs": -12.87,
+        "peakDbfs": -4.95
+      }
+    },
+    {
+      "startSec": 152.84,
+      "stem": {
+        "rmsDbfs": -29.39,
+        "peakDbfs": -20.38
+      },
+      "export": {
+        "rmsDbfs": -15.28,
+        "peakDbfs": -7.48
+      }
+    },
+    {
+      "startSec": 152.85,
+      "stem": {
+        "rmsDbfs": -27.63,
+        "peakDbfs": -18.79
+      },
+      "export": {
+        "rmsDbfs": -13.34,
+        "peakDbfs": -3.77
+      }
+    },
+    {
+      "startSec": 152.86,
+      "stem": {
+        "rmsDbfs": -30.51,
+        "peakDbfs": -19.32
+      },
+      "export": {
+        "rmsDbfs": -15.62,
+        "peakDbfs": -4.45
+      }
+    },
+    {
+      "startSec": 152.87,
+      "stem": {
+        "rmsDbfs": -27.41,
+        "peakDbfs": -15.52
+      },
+      "export": {
+        "rmsDbfs": -14.95,
+        "peakDbfs": -3.04
+      }
+    },
+    {
+      "startSec": 152.88,
+      "stem": {
+        "rmsDbfs": -31.51,
+        "peakDbfs": -21.43
+      },
+      "export": {
+        "rmsDbfs": -17.62,
+        "peakDbfs": -8.58
+      }
+    },
+    {
+      "startSec": 152.89,
+      "stem": {
+        "rmsDbfs": -50.42,
+        "peakDbfs": -37.6
+      },
+      "export": {
+        "rmsDbfs": -26.86,
+        "peakDbfs": -19.81
+      }
+    },
+    {
+      "startSec": 152.9,
+      "stem": {
+        "rmsDbfs": -300.0,
+        "peakDbfs": -300.0
+      },
+      "export": {
+        "rmsDbfs": -32.64,
+        "peakDbfs": -25.54
+      }
+    },
+    {
+      "startSec": 152.91,
+      "stem": {
+        "rmsDbfs": -300.0,
+        "peakDbfs": -300.0
+      },
+      "export": {
+        "rmsDbfs": -24.27,
+        "peakDbfs": -20.26
+      }
+    },
+    {
+      "startSec": 152.92,
+      "stem": {
+        "rmsDbfs": -300.0,
+        "peakDbfs": -300.0
+      },
+      "export": {
+        "rmsDbfs": -22.87,
+        "peakDbfs": -19.91
+      }
+    },
+    {
+      "startSec": 152.93,
+      "stem": {
+        "rmsDbfs": -300.0,
+        "peakDbfs": -300.0
+      },
+      "export": {
+        "rmsDbfs": -26.85,
+        "peakDbfs": -23.47
+      }
+    },
+    {
+      "startSec": 152.94,
+      "stem": {
+        "rmsDbfs": -300.0,
+        "peakDbfs": -300.0
+      },
+      "export": {
+        "rmsDbfs": -27.95,
+        "peakDbfs": -22.37
+      }
+    },
+    {
+      "startSec": 152.95,
+      "stem": {
+        "rmsDbfs": -300.0,
+        "peakDbfs": -300.0
+      },
+      "export": {
+        "rmsDbfs": -21.15,
+        "peakDbfs": -17.57
+      }
+    },
+    {
+      "startSec": 152.96,
+      "stem": {
+        "rmsDbfs": -300.0,
+        "peakDbfs": -300.0
+      },
+      "export": {
+        "rmsDbfs": -20.77,
+        "peakDbfs": -17.03
+      }
+    },
+    {
+      "startSec": 152.97,
+      "stem": {
+        "rmsDbfs": -300.0,
+        "peakDbfs": -300.0
+      },
+      "export": {
+        "rmsDbfs": -24.35,
+        "peakDbfs": -20.78
+      }
+    },
+    {
+      "startSec": 152.98,
+      "stem": {
+        "rmsDbfs": -300.0,
+        "peakDbfs": -300.0
+      },
+      "export": {
+        "rmsDbfs": -24.43,
+        "peakDbfs": -20.51
+      }
+    },
+    {
+      "startSec": 152.99,
+      "stem": {
+        "rmsDbfs": -300.0,
+        "peakDbfs": -300.0
+      },
+      "export": {
+        "rmsDbfs": -20.34,
+        "peakDbfs": -16.56
+      }
+    },
+    {
+      "startSec": 153.0,
+      "stem": {
+        "rmsDbfs": -300.0,
+        "peakDbfs": -300.0
+      },
+      "export": {
+        "rmsDbfs": -20.68,
+        "peakDbfs": -16.87
+      }
+    },
+    {
+      "startSec": 153.01,
+      "stem": {
+        "rmsDbfs": -300.0,
+        "peakDbfs": -300.0
+      },
+      "export": {
+        "rmsDbfs": -25.38,
+        "peakDbfs": -21.44
+      }
+    },
+    {
+      "startSec": 153.02,
+      "stem": {
+        "rmsDbfs": -300.0,
+        "peakDbfs": -300.0
+      },
+      "export": {
+        "rmsDbfs": -26.15,
+        "peakDbfs": -22.64
+      }
+    },
+    {
+      "startSec": 153.03,
+      "stem": {
+        "rmsDbfs": -300.0,
+        "peakDbfs": -300.0
+      },
+      "export": {
+        "rmsDbfs": -22.96,
+        "peakDbfs": -19.18
+      }
+    },
+    {
+      "startSec": 153.04,
+      "stem": {
+        "rmsDbfs": -300.0,
+        "peakDbfs": -300.0
+      },
+      "export": {
+        "rmsDbfs": -27.25,
+        "peakDbfs": -23.77
+      }
+    },
+    {
+      "startSec": 153.05,
+      "stem": {
+        "rmsDbfs": -300.0,
+        "peakDbfs": -300.0
+      },
+      "export": {
+        "rmsDbfs": -73.38,
+        "peakDbfs": -62.71
+      }
+    },
+    {
+      "startSec": 153.06,
+      "stem": {
+        "rmsDbfs": -300.0,
+        "peakDbfs": -300.0
+      },
+      "export": {
+        "rmsDbfs": -300.0,
+        "peakDbfs": -300.0
+      }
+    }
+  ],
+  "interpretation": "Energy and correlation bound signal, not an independently heard phoneme. Human listening remains required."
+}

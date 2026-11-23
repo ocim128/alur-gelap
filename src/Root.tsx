@@ -1,4 +1,8 @@
 import {Skenario03GoyanganDekEnam} from './Skenario03GoyanganDekEnam';
+import {Skenario04TanganPilotKemarin} from './Skenario04TanganPilotKemarin';
+import {Skenario05SabukKetiga} from './Skenario05SabukKetiga';
+import scenario05Manifest from '../episodes/005-sabuk-ketiga/manifest.json';
+import pilot04Manifest from '../episodes/004-tangan-pilot-kemarin/manifest.json';
 import deckManifest from '../episodes/003-goyangan-dek-enam/manifest.json';
 import {Skenario01KamarTerkunci} from './Skenario01KamarTerkunci';
 import {Skenario02RumahTengahHutan} from './Skenario02RumahTengahHutan';
@@ -111,4 +115,6 @@ export const Root = () => <><Composition
 <Composition id="Skenario01KamarTerkunci" component={Skenario01KamarTerkunci} width={1080} height={1920} fps={pilotManifest.fps} durationInFrames={pilotManifest.duration} />
 <Composition id="Skenario02RumahTengahHutan" component={Skenario02RumahTengahHutan} width={1080} height={1920} fps={forestManifest.fps} durationInFrames={forestManifest.duration} />
 <Composition id="Skenario03GoyanganDekEnam" component={Skenario03GoyanganDekEnam} width={1080} height={1920} fps={deckManifest.fps} durationInFrames={deckManifest.duration} />
+<Composition id="Skenario04TanganPilotKemarin" component={Skenario04TanganPilotKemarin} width={1080} height={1920} fps={pilot04Manifest.fps} durationInFrames={pilot04Manifest.duration} />
+<Composition id="Skenario05SabukKetiga" component={Skenario05SabukKetiga} width={1080} height={1920} fps={scenario05Manifest.fps} durationInFrames={scenario05Manifest.duration} />
 </>;

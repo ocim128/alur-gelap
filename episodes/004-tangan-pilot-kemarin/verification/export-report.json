@@ -1,0 +1,217 @@
+{
+  "video": "out\\skenario04-tangan-pilot-kemarin-mastered_compressed.mp4",
+  "durationSec": 154.538,
+  "rewinds": [
+    {
+      "startFrame": 1298,
+      "endFrame": 1310,
+      "expectedSec": 43.266666666666666,
+      "detectedSec": 43.266667,
+      "offsetMs": 0.0,
+      "correlation": 0.9264,
+      "visualMidpointChangeMean": 6.52
+    },
+    {
+      "startFrame": 1755,
+      "endFrame": 1767,
+      "expectedSec": 58.5,
+      "detectedSec": 58.5,
+      "offsetMs": 0.0,
+      "correlation": 0.924,
+      "visualMidpointChangeMean": 8.31
+    },
+    {
+      "startFrame": 2214,
+      "endFrame": 2226,
+      "expectedSec": 73.8,
+      "detectedSec": 73.8,
+      "offsetMs": 0.0,
+      "correlation": 0.9199,
+      "visualMidpointChangeMean": 7.56
+    }
+  ],
+  "errors": [],
+  "dreadSilence": {
+    "startSec": 74.2,
+    "endSec": 75.8,
+    "rmsDbfs": -94.08,
+    "peakDbfs": -61.77,
+    "innerRmsDbfs": -300.0
+  },
+  "vacuum": {
+    "startSec": 153.05,
+    "endSec": 153.2,
+    "rmsDbfs": -73.78,
+    "peakDbfs": -48.14
+  },
+  "jolt": {
+    "frame": 4596,
+    "visualSec": 153.2,
+    "audioOnsetSec": 153.196833,
+    "offsetMs": -3.167,
+    "visualFrameChangeMean": 10.95
+  },
+  "frames": [
+    {
+      "frame": 6,
+      "meanLuma": 22.11
+    },
+    {
+      "frame": 28,
+      "meanLuma": 24.25
+    },
+    {
+      "frame": 29,
+      "meanLuma": 30.08
+    },
+    {
+      "frame": 30,
+      "meanLuma": 35.91
+    },
+    {
+      "frame": 31,
+      "meanLuma": 37.55
+    },
+    {
+      "frame": 32,
+      "meanLuma": 35.3
+    },
+    {
+      "frame": 33,
+      "meanLuma": 29.28
+    },
+    {
+      "frame": 34,
+      "meanLuma": 24.15
+    },
+    {
+      "frame": 35,
+      "meanLuma": 22.49
+    },
+    {
+      "frame": 348,
+      "meanLuma": 31.73
+    },
+    {
+      "frame": 349,
+      "meanLuma": 36.88
+    },
+    {
+      "frame": 350,
+      "meanLuma": 42.06
+    },
+    {
+      "frame": 351,
+      "meanLuma": 43.14
+    },
+    {
+      "frame": 352,
+      "meanLuma": 40.62
+    },
+    {
+      "frame": 353,
+      "meanLuma": 35.67
+    },
+    {
+      "frame": 354,
+      "meanLuma": 31.18
+    },
+    {
+      "frame": 355,
+      "meanLuma": 29.94
+    },
+    {
+      "frame": 1298,
+      "meanLuma": 50.73
+    },
+    {
+      "frame": 1304,
+      "meanLuma": 57.18
+    },
+    {
+      "frame": 1309,
+      "meanLuma": 52.75
+    },
+    {
+      "frame": 1696,
+      "meanLuma": 18.87
+    },
+    {
+      "frame": 1697,
+      "meanLuma": 25.61
+    },
+    {
+      "frame": 1698,
+      "meanLuma": 31.91
+    },
+    {
+      "frame": 1699,
+      "meanLuma": 32.55
+    },
+    {
+      "frame": 1700,
+      "meanLuma": 29.5
+    },
+    {
+      "frame": 1701,
+      "meanLuma": 23.27
+    },
+    {
+      "frame": 1702,
+      "meanLuma": 18.23
+    },
+    {
+      "frame": 1703,
+      "meanLuma": 16.78
+    },
+    {
+      "frame": 1755,
+      "meanLuma": 15.67
+    },
+    {
+      "frame": 1761,
+      "meanLuma": 22.2
+    },
+    {
+      "frame": 1766,
+      "meanLuma": 16.94
+    },
+    {
+      "frame": 2214,
+      "meanLuma": 30.83
+    },
+    {
+      "frame": 2220,
+      "meanLuma": 38.37
+    },
+    {
+      "frame": 2225,
+      "meanLuma": 33.01
+    },
+    {
+      "frame": 4595,
+      "meanLuma": 32.1
+    },
+    {
+      "frame": 4596,
+      "meanLuma": 37.34
+    },
+    {
+      "frame": 4597,
+      "meanLuma": 43.06
+    },
+    {
+      "frame": 4627,
+      "meanLuma": 35.62
+    },
+    {
+      "frame": 4628,
+      "meanLuma": 0.0
+    }
+  ],
+  "maxFlashMeanLuma": 43.14,
+  "loudness": {
+    "integratedLufs": -14.3,
+    "truePeakDbtp": -2.1
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "video": "out/005-sabuk-ketiga/Skenario05SabukKetiga-owner-polish-master_compressed.mp4",
+  "clicks": [
+    {
+      "event": "firstClickFrame",
+      "frame": 2328,
+      "expectedSec": 77.6,
+      "detectedSec": 77.6,
+      "offsetMs": 0.0,
+      "correlation": 0.8926435112953186
+    },
+    {
+      "event": "secondClickFrame",
+      "frame": 2340,
+      "expectedSec": 78.0,
+      "detectedSec": 78.0,
+      "offsetMs": 0.0,
+      "correlation": 0.6694567203521729
+    },
+    {
+      "event": "fakeClickFrame",
+      "frame": 3470,
+      "expectedSec": 115.66666666666667,
+      "detectedSec": 115.66666666666667,
+      "offsetMs": 0.0,
+      "correlation": 0.49350836873054504
+    },
+    {
+      "event": "releaseClickFrame",
+      "frame": 3646,
+      "expectedSec": 121.53333333333333,
+      "detectedSec": 121.53333333333333,
+      "offsetMs": 0.0,
+      "correlation": 0.9516717195510864
+    }
+  ],
+  "pass": true,
+  "limitation": "Synchronization to generated cues does not establish belt-state visibility or narration alignment."
+}

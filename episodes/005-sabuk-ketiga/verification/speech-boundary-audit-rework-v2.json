@@ -1,0 +1,386 @@
+{
+  "video": "out/005-sabuk-ketiga/Skenario05SabukKetiga-audit-rework-v2-master_compressed.mp4",
+  "estimatedSidecarEndSec": 154.94,
+  "lastNonzeroSourceSampleSec": 155.082375,
+  "vacuumStartSec": 155.11666666666667,
+  "joltSec": 155.26666666666668,
+  "sourceZeroFromVacuum": true,
+  "sourceToDeliveryCorrelation": 0.7941005055563185,
+  "windows10ms": [
+    {
+      "startSec": 154.9,
+      "source": {
+        "rmsDbfs": -43.16,
+        "peakDbfs": -31.45
+      },
+      "assemblyPcm": {
+        "rmsDbfs": -32.79,
+        "peakDbfs": -21.16
+      },
+      "delivery": {
+        "rmsDbfs": -33.11,
+        "peakDbfs": -21.65
+      },
+      "sourceToPcmCorrelation": 0.998715234301911,
+      "sourceToDeliveryCorrelation": 0.9895921863663695
+    },
+    {
+      "startSec": 154.91,
+      "source": {
+        "rmsDbfs": -52.1,
+        "peakDbfs": -44.29
+      },
+      "assemblyPcm": {
+        "rmsDbfs": -39.67,
+        "peakDbfs": -31.91
+      },
+      "delivery": {
+        "rmsDbfs": -39.68,
+        "peakDbfs": -31.97
+      },
+      "sourceToPcmCorrelation": 0.998704292279088,
+      "sourceToDeliveryCorrelation": 0.9882368183284435
+    },
+    {
+      "startSec": 154.92,
+      "source": {
+        "rmsDbfs": -53.05,
+        "peakDbfs": -45.5
+      },
+      "assemblyPcm": {
+        "rmsDbfs": -39.05,
+        "peakDbfs": -32.04
+      },
+      "delivery": {
+        "rmsDbfs": -39.34,
+        "peakDbfs": -32.34
+      },
+      "sourceToPcmCorrelation": 0.9992615633583565,
+      "sourceToDeliveryCorrelation": 0.9967394089895448
+    },
+    {
+      "startSec": 154.93,
+      "source": {
+        "rmsDbfs": -56.02,
+        "peakDbfs": -48.37
+      },
+      "assemblyPcm": {
+        "rmsDbfs": -40.74,
+        "peakDbfs": -33.17
+      },
+      "delivery": {
+        "rmsDbfs": -40.68,
+        "peakDbfs": -33.07
+      },
+      "sourceToPcmCorrelation": 0.9994396711616614,
+      "sourceToDeliveryCorrelation": 0.9964374000571039
+    },
+    {
+      "startSec": 154.94,
+      "source": {
+        "rmsDbfs": -63.98,
+        "peakDbfs": -54.46
+      },
+      "assemblyPcm": {
+        "rmsDbfs": -47.32,
+        "peakDbfs": -37.92
+      },
+      "delivery": {
+        "rmsDbfs": -47.41,
+        "peakDbfs": -37.96
+      },
+      "sourceToPcmCorrelation": 0.9995082752156013,
+      "sourceToDeliveryCorrelation": 0.9835877500880764
+    },
+    {
+      "startSec": 154.95,
+      "source": {
+        "rmsDbfs": -63.29,
+        "peakDbfs": -53.04
+      },
+      "assemblyPcm": {
+        "rmsDbfs": -45.91,
+        "peakDbfs": -35.64
+      },
+      "delivery": {
+        "rmsDbfs": -45.96,
+        "peakDbfs": -36.19
+      },
+      "sourceToPcmCorrelation": 0.9999512547427628,
+      "sourceToDeliveryCorrelation": 0.9918328475751433
+    },
+    {
+      "startSec": 154.96,
+      "source": {
+        "rmsDbfs": -64.82,
+        "peakDbfs": -54.32
+      },
+      "assemblyPcm": {
+        "rmsDbfs": -47.22,
+        "peakDbfs": -36.75
+      },
+      "delivery": {
+        "rmsDbfs": -47.49,
+        "peakDbfs": -36.59
+      },
+      "sourceToPcmCorrelation": 0.9999916630708232,
+      "sourceToDeliveryCorrelation": 0.9884853268619718
+    },
+    {
+      "startSec": 154.97,
+      "source": {
+        "rmsDbfs": -65.71,
+        "peakDbfs": -55.82
+      },
+      "assemblyPcm": {
+        "rmsDbfs": -48.09,
+        "peakDbfs": -38.21
+      },
+      "delivery": {
+        "rmsDbfs": -48.12,
+        "peakDbfs": -38.68
+      },
+      "sourceToPcmCorrelation": 0.9999971177778051,
+      "sourceToDeliveryCorrelation": 0.984173549399698
+    },
+    {
+      "startSec": 154.98,
+      "source": {
+        "rmsDbfs": -63.13,
+        "peakDbfs": -53.04
+      },
+      "assemblyPcm": {
+        "rmsDbfs": -45.51,
+        "peakDbfs": -35.42
+      },
+      "delivery": {
+        "rmsDbfs": -45.64,
+        "peakDbfs": -35.49
+      },
+      "sourceToPcmCorrelation": 0.9999982006027538,
+      "sourceToDeliveryCorrelation": 0.993059987454004
+    },
+    {
+      "startSec": 154.99,
+      "source": {
+        "rmsDbfs": -65.54,
+        "peakDbfs": -55.19
+      },
+      "assemblyPcm": {
+        "rmsDbfs": -47.92,
+        "peakDbfs": -37.58
+      },
+      "delivery": {
+        "rmsDbfs": -48.31,
+        "peakDbfs": -37.48
+      },
+      "sourceToPcmCorrelation": 0.999996517119846,
+      "sourceToDeliveryCorrelation": 0.985579107358103
+    },
+    {
+      "startSec": 155.0,
+      "source": {
+        "rmsDbfs": -64.78,
+        "peakDbfs": -53.92
+      },
+      "assemblyPcm": {
+        "rmsDbfs": -47.16,
+        "peakDbfs": -36.3
+      },
+      "delivery": {
+        "rmsDbfs": -47.44,
+        "peakDbfs": -36.31
+      },
+      "sourceToPcmCorrelation": 0.9999973755228297,
+      "sourceToDeliveryCorrelation": 0.9906384426022594
+    },
+    {
+      "startSec": 155.01,
+      "source": {
+        "rmsDbfs": -65.85,
+        "peakDbfs": -55.35
+      },
+      "assemblyPcm": {
+        "rmsDbfs": -48.23,
+        "peakDbfs": -37.73
+      },
+      "delivery": {
+        "rmsDbfs": -48.35,
+        "peakDbfs": -37.41
+      },
+      "sourceToPcmCorrelation": 0.9999954663748364,
+      "sourceToDeliveryCorrelation": 0.9915519069191269
+    },
+    {
+      "startSec": 155.02,
+      "source": {
+        "rmsDbfs": -65.62,
+        "peakDbfs": -54.46
+      },
+      "assemblyPcm": {
+        "rmsDbfs": -48.0,
+        "peakDbfs": -36.85
+      },
+      "delivery": {
+        "rmsDbfs": -48.28,
+        "peakDbfs": -37.59
+      },
+      "sourceToPcmCorrelation": 0.9999953607174078,
+      "sourceToDeliveryCorrelation": 0.9864182448735724
+    },
+    {
+      "startSec": 155.03,
+      "source": {
+        "rmsDbfs": -64.61,
+        "peakDbfs": -52.03
+      },
+      "assemblyPcm": {
+        "rmsDbfs": -46.99,
+        "peakDbfs": -34.41
+      },
+      "delivery": {
+        "rmsDbfs": -47.25,
+        "peakDbfs": -34.65
+      },
+      "sourceToPcmCorrelation": 0.9999961664197299,
+      "sourceToDeliveryCorrelation": 0.9907809378152653
+    },
+    {
+      "startSec": 155.04,
+      "source": {
+        "rmsDbfs": -63.98,
+        "peakDbfs": -51.62
+      },
+      "assemblyPcm": {
+        "rmsDbfs": -46.36,
+        "peakDbfs": -34.0
+      },
+      "delivery": {
+        "rmsDbfs": -46.51,
+        "peakDbfs": -34.44
+      },
+      "sourceToPcmCorrelation": 0.9999965836720518,
+      "sourceToDeliveryCorrelation": 0.9940283843991972
+    },
+    {
+      "startSec": 155.05,
+      "source": {
+        "rmsDbfs": -68.53,
+        "peakDbfs": -57.84
+      },
+      "assemblyPcm": {
+        "rmsDbfs": -50.91,
+        "peakDbfs": -40.22
+      },
+      "delivery": {
+        "rmsDbfs": -51.18,
+        "peakDbfs": -40.18
+      },
+      "sourceToPcmCorrelation": 0.9999877991281153,
+      "sourceToDeliveryCorrelation": 0.9872991212487846
+    },
+    {
+      "startSec": 155.06,
+      "source": {
+        "rmsDbfs": -74.37,
+        "peakDbfs": -63.46
+      },
+      "assemblyPcm": {
+        "rmsDbfs": -56.75,
+        "peakDbfs": -45.81
+      },
+      "delivery": {
+        "rmsDbfs": -56.72,
+        "peakDbfs": -44.99
+      },
+      "sourceToPcmCorrelation": 0.9999746902755391,
+      "sourceToDeliveryCorrelation": 0.9795648246179578
+    },
+    {
+      "startSec": 155.07,
+      "source": {
+        "rmsDbfs": -81.54,
+        "peakDbfs": -69.48
+      },
+      "assemblyPcm": {
+        "rmsDbfs": -63.92,
+        "peakDbfs": -51.85
+      },
+      "delivery": {
+        "rmsDbfs": -63.42,
+        "peakDbfs": -51.74
+      },
+      "sourceToPcmCorrelation": 0.999912236871994,
+      "sourceToDeliveryCorrelation": 0.9593180353386377
+    },
+    {
+      "startSec": 155.08,
+      "source": {
+        "rmsDbfs": -104.82,
+        "peakDbfs": -90.31
+      },
+      "assemblyPcm": {
+        "rmsDbfs": -87.3,
+        "peakDbfs": -72.05
+      },
+      "delivery": {
+        "rmsDbfs": -81.1,
+        "peakDbfs": -68.24
+      },
+      "sourceToPcmCorrelation": 0.9963189346013005,
+      "sourceToDeliveryCorrelation": 0.3714202613217726
+    },
+    {
+      "startSec": 155.09,
+      "source": {
+        "rmsDbfs": -300.0,
+        "peakDbfs": -300.0
+      },
+      "assemblyPcm": {
+        "rmsDbfs": -300.0,
+        "peakDbfs": -300.0
+      },
+      "delivery": {
+        "rmsDbfs": -104.24,
+        "peakDbfs": -92.13
+      },
+      "sourceToPcmCorrelation": null,
+      "sourceToDeliveryCorrelation": null
+    },
+    {
+      "startSec": 155.1,
+      "source": {
+        "rmsDbfs": -300.0,
+        "peakDbfs": -300.0
+      },
+      "assemblyPcm": {
+        "rmsDbfs": -300.0,
+        "peakDbfs": -300.0
+      },
+      "delivery": {
+        "rmsDbfs": -107.16,
+        "peakDbfs": -96.33
+      },
+      "sourceToPcmCorrelation": null,
+      "sourceToDeliveryCorrelation": null
+    },
+    {
+      "startSec": 155.11,
+      "source": {
+        "rmsDbfs": -300.0,
+        "peakDbfs": -300.0
+      },
+      "assemblyPcm": {
+        "rmsDbfs": -300.0,
+        "peakDbfs": -300.0
+      },
+      "delivery": {
+        "rmsDbfs": -134.14,
+        "peakDbfs": -116.78
+      },
+      "sourceToPcmCorrelation": null,
+      "sourceToDeliveryCorrelation": null
+    }
+  ],
+  "interpretation": "The final phoneme and audible truncation cannot be established by energy or correlation alone; listening remains required."
+}

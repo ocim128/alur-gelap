@@ -1,0 +1,69 @@
+{
+  "sampleRate": 48000,
+  "source": "narration-prepared.wav",
+  "sourcePreserved": true,
+  "insertions": [
+    {
+      "sourceSec": 72.6,
+      "samples": 1600,
+      "durationSec": 0.03333333333333333
+    },
+    {
+      "sourceSec": 90.8,
+      "samples": 3200,
+      "durationSec": 0.06666666666666667
+    }
+  ],
+  "windows": [
+    {
+      "frames": [
+        1734,
+        1746
+      ],
+      "nonzeroSamples": 0,
+      "peak": 0
+    },
+    {
+      "frames": [
+        2174,
+        2186
+      ],
+      "nonzeroSamples": 0,
+      "peak": 0
+    },
+    {
+      "frames": [
+        2721,
+        2733
+      ],
+      "nonzeroSamples": 0,
+      "peak": 0
+    },
+    {
+      "frames": [
+        2733,
+        2778
+      ],
+      "nonzeroSamples": 0,
+      "peak": 0
+    }
+  ],
+  "branchRewinds": [
+    {
+      "startFrame": 1734,
+      "endFrame": 1746
+    },
+    {
+      "startFrame": 2174,
+      "endFrame": 2186
+    },
+    {
+      "startFrame": 2721,
+      "endFrame": 2733
+    }
+  ],
+  "dreadSilenceFrames": [
+    2733,
+    2778
+  ]
+}

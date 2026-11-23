@@ -1,0 +1,1388 @@
+{
+  "schemaVersion": 2,
+  "pipelineVersion": 2,
+  "id": "Skenario05SabukKetiga",
+  "fps": 30,
+  "duration": 4693,
+  "captions": "captions.json",
+  "openingTitle": "TIGA SABUK TERPASANG",
+  "narration": {
+    "asset": "assets/005-sabuk-ketiga/narration-assembly-padded.wav",
+    "at": 0,
+    "duration": 4683,
+    "gain": 1
+  },
+  "art": {
+    "styleId": "urban-silhouette-noir",
+    "rasterAssets": {
+      "assets/005-sabuk-ketiga/selected-owner-approved/p01.webp": "urban-silhouette-noir",
+      "assets/005-sabuk-ketiga/selected-owner-approved/p02.webp": "urban-silhouette-noir",
+      "assets/005-sabuk-ketiga/selected-owner-approved/p03.webp": "urban-silhouette-noir",
+      "assets/005-sabuk-ketiga/selected-owner-approved/p04.webp": "urban-silhouette-noir",
+      "assets/005-sabuk-ketiga/selected-owner-approved/p05.webp": "urban-silhouette-noir",
+      "assets/005-sabuk-ketiga/selected-owner-approved/p06.webp": "urban-silhouette-noir",
+      "assets/005-sabuk-ketiga/selected-owner-approved/p07.webp": "urban-silhouette-noir",
+      "assets/005-sabuk-ketiga/selected-owner-approved/p08.webp": "urban-silhouette-noir",
+      "assets/005-sabuk-ketiga/selected-owner-approved/p09.webp": "urban-silhouette-noir",
+      "assets/005-sabuk-ketiga/selected-owner-approved/p10.webp": "urban-silhouette-noir",
+      "assets/005-sabuk-ketiga/selected-owner-approved/p11.webp": "urban-silhouette-noir",
+      "assets/005-sabuk-ketiga/selected-owner-approved/p12.webp": "urban-silhouette-noir",
+      "assets/005-sabuk-ketiga/selected-owner-approved/p13.webp": "urban-silhouette-noir",
+      "assets/005-sabuk-ketiga/selected-owner-approved/p14.webp": "urban-silhouette-noir",
+      "assets/005-sabuk-ketiga/selected-owner-approved/p15.webp": "urban-silhouette-noir",
+      "assets/005-sabuk-ketiga/selected-owner-approved/p16.webp": "urban-silhouette-noir",
+      "assets/005-sabuk-ketiga/selected-owner-approved/p17.webp": "urban-silhouette-noir",
+      "assets/005-sabuk-ketiga/selected-owner-approved/p18.webp": "urban-silhouette-noir",
+      "assets/005-sabuk-ketiga/selected-owner-approved/p19.webp": "urban-silhouette-noir",
+      "assets/005-sabuk-ketiga/selected-owner-approved/p20.webp": "urban-silhouette-noir",
+      "assets/005-sabuk-ketiga/selected-owner-approved/p21.webp": "urban-silhouette-noir",
+      "assets/005-sabuk-ketiga/selected-owner-approved/p22.webp": "urban-silhouette-noir",
+      "assets/005-sabuk-ketiga/selected-owner-approved/p23.webp": "urban-silhouette-noir",
+      "assets/005-sabuk-ketiga/selected-owner-approved/p24.webp": "urban-silhouette-noir"
+    }
+  },
+  "script": {
+    "format": "decision-consequence",
+    "engine": "triple-branch-rewind",
+    "wordCount": 259,
+    "hook": {
+      "at": 0,
+      "line": "Tiga sabuk terpasang. Penumpangnya cuma dua."
+    },
+    "ending": {
+      "at": 4444,
+      "twistAt": 4579,
+      "payoff": "A final jolt after the landing."
+    }
+  },
+  "beds": [],
+  "tensionRamp": {
+    "startSec": 151.32,
+    "endSec": 154.94,
+    "extraScale": 0.01,
+    "vignetteStrength": 0.1
+  },
+  "scenes": [
+    {
+      "id": "P01",
+      "name": "Panel 01",
+      "at": 0,
+      "atCue": "p01StartFrame",
+      "plate": "assets/005-sabuk-ketiga/selected-owner-approved/p01.webp",
+      "camera": {
+        "from": {
+          "scale": 1.02,
+          "x": -6,
+          "y": 0
+        },
+        "to": {
+          "scale": 1.06,
+          "x": 6,
+          "y": 0
+        }
+      },
+      "characters": {
+        "mode": "baked"
+      },
+      "hud": [],
+      "editorial": {
+        "protagonist": "visible",
+        "purpose": "threat-proximity",
+        "evidence": "Owner-approved plate; image exceptions remain open."
+      },
+      "reframes": [
+        {
+          "at": 0,
+          "duration": 30,
+          "scale": 1.02498,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 70,
+          "duration": 30,
+          "scale": 1.0366,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 140,
+          "duration": 30,
+          "scale": 1.04822,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 210,
+          "duration": 30,
+          "scale": 1.05983,
+          "x": 0,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "id": "P02",
+      "name": "Panel 02",
+      "at": 241,
+      "atCue": "p02StartFrame",
+      "plate": "assets/005-sabuk-ketiga/selected-owner-approved/p02.webp",
+      "camera": {
+        "from": {
+          "scale": 1.02,
+          "x": 6,
+          "y": 0
+        },
+        "to": {
+          "scale": 1.06,
+          "x": -6,
+          "y": 0
+        }
+      },
+      "characters": {
+        "mode": "baked"
+      },
+      "hud": [],
+      "editorial": {
+        "protagonist": "absent",
+        "purpose": "threat-proximity",
+        "evidence": "Owner-approved plate; image exceptions remain open."
+      },
+      "reframes": [
+        {
+          "at": 0,
+          "duration": 30,
+          "scale": 1.02529,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 70,
+          "duration": 30,
+          "scale": 1.03762,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 140,
+          "duration": 30,
+          "scale": 1.04996,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 210,
+          "duration": 17,
+          "scale": 1.06,
+          "x": 0,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "id": "P03",
+      "name": "Panel 03",
+      "at": 468,
+      "atCue": "p03StartFrame",
+      "plate": "assets/005-sabuk-ketiga/selected-owner-approved/p03.webp",
+      "camera": {
+        "from": {
+          "scale": 1.02,
+          "x": -6,
+          "y": 0
+        },
+        "to": {
+          "scale": 1.06,
+          "x": 6,
+          "y": 0
+        }
+      },
+      "characters": {
+        "mode": "baked"
+      },
+      "hud": [],
+      "editorial": {
+        "protagonist": "absent",
+        "purpose": "threat-proximity",
+        "evidence": "Owner-approved plate; image exceptions remain open."
+      },
+      "reframes": [
+        {
+          "at": 0,
+          "duration": 30,
+          "scale": 1.02506,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 70,
+          "duration": 30,
+          "scale": 1.03688,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 140,
+          "duration": 30,
+          "scale": 1.04869,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 210,
+          "duration": 27,
+          "scale": 1.06,
+          "x": 0,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "id": "P04",
+      "name": "Panel 04",
+      "at": 705,
+      "atCue": "p04StartFrame",
+      "plate": "assets/005-sabuk-ketiga/selected-owner-approved/p04.webp",
+      "camera": {
+        "from": {
+          "scale": 1.02,
+          "x": 6,
+          "y": 0
+        },
+        "to": {
+          "scale": 1.06,
+          "x": -6,
+          "y": 0
+        }
+      },
+      "characters": {
+        "mode": "baked"
+      },
+      "hud": [],
+      "editorial": {
+        "protagonist": "visible",
+        "purpose": "threat-proximity",
+        "evidence": "Owner-approved plate; image exceptions remain open."
+      },
+      "reframes": [
+        {
+          "at": 0,
+          "duration": 30,
+          "scale": 1.02449,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 70,
+          "duration": 30,
+          "scale": 1.03498,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 140,
+          "duration": 30,
+          "scale": 1.04547,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 210,
+          "duration": 30,
+          "scale": 1.05596,
+          "x": 0,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "id": "P05",
+      "name": "Panel 05",
+      "at": 972,
+      "atCue": "p05StartFrame",
+      "plate": "assets/005-sabuk-ketiga/selected-owner-approved/p05.webp",
+      "camera": {
+        "from": {
+          "scale": 1.02,
+          "x": -6,
+          "y": 0
+        },
+        "to": {
+          "scale": 1.06,
+          "x": 6,
+          "y": 0
+        }
+      },
+      "characters": {
+        "mode": "baked"
+      },
+      "hud": [],
+      "editorial": {
+        "protagonist": "visible",
+        "purpose": "threat-proximity",
+        "evidence": "Owner-approved plate; image exceptions remain open."
+      },
+      "reframes": [
+        {
+          "at": 0,
+          "duration": 30,
+          "scale": 1.02606,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 70,
+          "duration": 30,
+          "scale": 1.0402,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 140,
+          "duration": 30,
+          "scale": 1.05434,
+          "x": 0,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "id": "P06",
+      "name": "Panel 06",
+      "at": 1170,
+      "atCue": "p06StartFrame",
+      "plate": "assets/005-sabuk-ketiga/selected-owner-approved/p06.webp",
+      "camera": {
+        "from": {
+          "scale": 1.02,
+          "x": 6,
+          "y": 0
+        },
+        "to": {
+          "scale": 1.06,
+          "x": -6,
+          "y": 0
+        }
+      },
+      "characters": {
+        "mode": "baked"
+      },
+      "hud": [],
+      "editorial": {
+        "protagonist": "absent",
+        "purpose": "threat-proximity",
+        "evidence": "Owner-approved plate; image exceptions remain open."
+      },
+      "reframes": [
+        {
+          "at": 0,
+          "duration": 30,
+          "scale": 1.02504,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 70,
+          "duration": 30,
+          "scale": 1.03681,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 140,
+          "duration": 30,
+          "scale": 1.04857,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 210,
+          "duration": 28,
+          "scale": 1.06,
+          "x": 0,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "id": "P07",
+      "name": "Panel 07",
+      "at": 1408,
+      "atCue": "p07StartFrame",
+      "plate": "assets/005-sabuk-ketiga/selected-owner-approved/p07.webp",
+      "camera": {
+        "from": {
+          "scale": 1.02,
+          "x": -6,
+          "y": 0
+        },
+        "to": {
+          "scale": 1.06,
+          "x": 6,
+          "y": 0
+        }
+      },
+      "characters": {
+        "mode": "baked"
+      },
+      "hud": [],
+      "editorial": {
+        "protagonist": "visible",
+        "purpose": "threat-proximity",
+        "evidence": "Owner-approved plate; image exceptions remain open."
+      },
+      "reframes": [
+        {
+          "at": 0,
+          "duration": 30,
+          "scale": 1.02355,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 70,
+          "duration": 30,
+          "scale": 1.03183,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 140,
+          "duration": 30,
+          "scale": 1.04012,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 210,
+          "duration": 30,
+          "scale": 1.0484,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 280,
+          "duration": 30,
+          "scale": 1.05669,
+          "x": 0,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "id": "P08",
+      "name": "Panel 08",
+      "at": 1746,
+      "atCue": "p08StartFrame",
+      "plate": "assets/005-sabuk-ketiga/selected-owner-approved/p08.webp",
+      "camera": {
+        "from": {
+          "scale": 1.02,
+          "x": 6,
+          "y": 0
+        },
+        "to": {
+          "scale": 1.06,
+          "x": -6,
+          "y": 0
+        }
+      },
+      "characters": {
+        "mode": "baked"
+      },
+      "hud": [],
+      "editorial": {
+        "protagonist": "visible",
+        "purpose": "threat-proximity",
+        "evidence": "Owner-approved plate; image exceptions remain open."
+      },
+      "reframes": [
+        {
+          "at": 0,
+          "duration": 30,
+          "scale": 1.02571,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 70,
+          "duration": 30,
+          "scale": 1.03905,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 140,
+          "duration": 30,
+          "scale": 1.05238,
+          "x": 0,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "id": "P09",
+      "name": "Panel 09",
+      "at": 1956,
+      "atCue": "p09StartFrame",
+      "plate": "assets/005-sabuk-ketiga/selected-owner-approved/p09.webp",
+      "camera": {
+        "from": {
+          "scale": 1.02,
+          "x": -6,
+          "y": 0
+        },
+        "to": {
+          "scale": 1.06,
+          "x": 6,
+          "y": 0
+        }
+      },
+      "characters": {
+        "mode": "baked"
+      },
+      "hud": [],
+      "editorial": {
+        "protagonist": "absent",
+        "purpose": "threat-proximity",
+        "evidence": "Owner-approved plate; image exceptions remain open."
+      },
+      "reframes": [
+        {
+          "at": 0,
+          "duration": 30,
+          "scale": 1.02522,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 70,
+          "duration": 30,
+          "scale": 1.03739,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 140,
+          "duration": 30,
+          "scale": 1.04957,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 210,
+          "duration": 20,
+          "scale": 1.06,
+          "x": 0,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "id": "P10",
+      "name": "Panel 10",
+      "at": 2186,
+      "atCue": "p10StartFrame",
+      "plate": "assets/005-sabuk-ketiga/selected-owner-approved/p10.webp",
+      "camera": {
+        "from": {
+          "scale": 1.02,
+          "x": 6,
+          "y": 0
+        },
+        "to": {
+          "scale": 1.06,
+          "x": -6,
+          "y": 0
+        }
+      },
+      "characters": {
+        "mode": "baked"
+      },
+      "hud": [],
+      "editorial": {
+        "protagonist": "visible",
+        "purpose": "threat-proximity",
+        "evidence": "Owner-approved plate; image exceptions remain open."
+      },
+      "reframes": [
+        {
+          "at": 0,
+          "duration": 30,
+          "scale": 1.02383,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 70,
+          "duration": 30,
+          "scale": 1.03278,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 140,
+          "duration": 30,
+          "scale": 1.04173,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 210,
+          "duration": 30,
+          "scale": 1.05067,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 280,
+          "duration": 30,
+          "scale": 1.05962,
+          "x": 0,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "id": "P11",
+      "name": "Panel 11",
+      "at": 2499,
+      "atCue": "p11StartFrame",
+      "plate": "assets/005-sabuk-ketiga/selected-owner-approved/p11.webp",
+      "camera": {
+        "from": {
+          "scale": 1.02,
+          "x": -6,
+          "y": 0
+        },
+        "to": {
+          "scale": 1.06,
+          "x": 6,
+          "y": 0
+        }
+      },
+      "characters": {
+        "mode": "baked"
+      },
+      "hud": [],
+      "editorial": {
+        "protagonist": "visible",
+        "purpose": "threat-proximity",
+        "evidence": "Owner-approved plate; image exceptions remain open."
+      },
+      "reframes": [
+        {
+          "at": 0,
+          "duration": 30,
+          "scale": 1.02513,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 70,
+          "duration": 30,
+          "scale": 1.03709,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 140,
+          "duration": 30,
+          "scale": 1.04906,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 210,
+          "duration": 24,
+          "scale": 1.06,
+          "x": 0,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "id": "P12",
+      "name": "Panel 12",
+      "at": 2733,
+      "atCue": "p12StartFrame",
+      "plate": "assets/005-sabuk-ketiga/selected-owner-approved/p12.webp",
+      "camera": {
+        "from": {
+          "scale": 1.02,
+          "x": 6,
+          "y": 0
+        },
+        "to": {
+          "scale": 1.06,
+          "x": -6,
+          "y": 0
+        }
+      },
+      "characters": {
+        "mode": "baked"
+      },
+      "hud": [],
+      "editorial": {
+        "protagonist": "visible",
+        "purpose": "threat-proximity",
+        "evidence": "Owner-approved plate; image exceptions remain open."
+      },
+      "reframes": [
+        {
+          "at": 0,
+          "duration": 30,
+          "scale": 1.03,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 70,
+          "duration": 30,
+          "scale": 1.05333,
+          "x": 0,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "id": "P13",
+      "name": "Panel 13",
+      "at": 2853,
+      "atCue": "p13StartFrame",
+      "plate": "assets/005-sabuk-ketiga/selected-owner-approved/p13.webp",
+      "camera": {
+        "from": {
+          "scale": 1.02,
+          "x": -6,
+          "y": 0
+        },
+        "to": {
+          "scale": 1.06,
+          "x": 6,
+          "y": 0
+        }
+      },
+      "characters": {
+        "mode": "baked"
+      },
+      "hud": [],
+      "editorial": {
+        "protagonist": "visible",
+        "purpose": "threat-proximity",
+        "evidence": "Owner-approved plate; image exceptions remain open."
+      },
+      "reframes": [
+        {
+          "at": 0,
+          "duration": 30,
+          "scale": 1.02533,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 70,
+          "duration": 30,
+          "scale": 1.03778,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 140,
+          "duration": 30,
+          "scale": 1.05022,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 210,
+          "duration": 15,
+          "scale": 1.06,
+          "x": 0,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "id": "P14",
+      "name": "Panel 14",
+      "at": 3078,
+      "atCue": "p14StartFrame",
+      "plate": "assets/005-sabuk-ketiga/selected-owner-approved/p14.webp",
+      "camera": {
+        "from": {
+          "scale": 1.02,
+          "x": 6,
+          "y": 0
+        },
+        "to": {
+          "scale": 1.06,
+          "x": -6,
+          "y": 0
+        }
+      },
+      "characters": {
+        "mode": "baked"
+      },
+      "hud": [],
+      "editorial": {
+        "protagonist": "visible",
+        "purpose": "threat-proximity",
+        "evidence": "Owner-approved plate; image exceptions remain open."
+      },
+      "reframes": [
+        {
+          "at": 0,
+          "duration": 30,
+          "scale": 1.03053,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 70,
+          "duration": 30,
+          "scale": 1.05509,
+          "x": 0,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "id": "P15",
+      "name": "Panel 15",
+      "at": 3192,
+      "atCue": "p15StartFrame",
+      "plate": "assets/005-sabuk-ketiga/selected-owner-approved/p15.webp",
+      "camera": {
+        "from": {
+          "scale": 1.02,
+          "x": -6,
+          "y": 0
+        },
+        "to": {
+          "scale": 1.06,
+          "x": 6,
+          "y": 0
+        }
+      },
+      "characters": {
+        "mode": "baked"
+      },
+      "hud": [],
+      "editorial": {
+        "protagonist": "visible",
+        "purpose": "threat-proximity",
+        "evidence": "Owner-approved plate; image exceptions remain open."
+      },
+      "reframes": [
+        {
+          "at": 0,
+          "duration": 30,
+          "scale": 1.0269,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 70,
+          "duration": 30,
+          "scale": 1.04299,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 140,
+          "duration": 30,
+          "scale": 1.05908,
+          "x": 0,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "id": "P16",
+      "name": "Panel 16",
+      "at": 3366,
+      "atCue": "p16StartFrame",
+      "plate": "assets/005-sabuk-ketiga/selected-owner-approved/p16.webp",
+      "camera": {
+        "from": {
+          "scale": 1.02,
+          "x": 6,
+          "y": 0
+        },
+        "to": {
+          "scale": 1.06,
+          "x": -6,
+          "y": 0
+        }
+      },
+      "characters": {
+        "mode": "baked"
+      },
+      "hud": [],
+      "editorial": {
+        "protagonist": "visible",
+        "purpose": "threat-proximity",
+        "evidence": "Owner-approved plate; image exceptions remain open."
+      },
+      "reframes": [
+        {
+          "at": 0,
+          "duration": 30,
+          "scale": 1.02429,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 70,
+          "duration": 30,
+          "scale": 1.03429,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 140,
+          "duration": 30,
+          "scale": 1.04429,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 210,
+          "duration": 30,
+          "scale": 1.05429,
+          "x": 0,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "id": "P17",
+      "name": "Panel 17",
+      "at": 3646,
+      "atCue": "p17StartFrame",
+      "plate": "assets/005-sabuk-ketiga/selected-owner-approved/p17.webp",
+      "camera": {
+        "from": {
+          "scale": 1.02,
+          "x": -6,
+          "y": 0
+        },
+        "to": {
+          "scale": 1.06,
+          "x": 6,
+          "y": 0
+        }
+      },
+      "characters": {
+        "mode": "baked"
+      },
+      "hud": [],
+      "editorial": {
+        "protagonist": "visible",
+        "purpose": "threat-proximity",
+        "evidence": "Owner-approved plate; image exceptions remain open."
+      },
+      "reframes": [
+        {
+          "at": 0,
+          "duration": 30,
+          "scale": 1.03379,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 70,
+          "duration": 17,
+          "scale": 1.06,
+          "x": 0,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "id": "P18",
+      "name": "Panel 18",
+      "at": 3733,
+      "atCue": "p18StartFrame",
+      "plate": "assets/005-sabuk-ketiga/selected-owner-approved/p18.webp",
+      "camera": {
+        "from": {
+          "scale": 1.02,
+          "x": 6,
+          "y": 0
+        },
+        "to": {
+          "scale": 1.06,
+          "x": -6,
+          "y": 0
+        }
+      },
+      "characters": {
+        "mode": "baked"
+      },
+      "hud": [],
+      "editorial": {
+        "protagonist": "visible",
+        "purpose": "threat-proximity",
+        "evidence": "Owner-approved plate; image exceptions remain open."
+      },
+      "reframes": [
+        {
+          "at": 0,
+          "duration": 30,
+          "scale": 1.02645,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 70,
+          "duration": 30,
+          "scale": 1.04151,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 140,
+          "duration": 30,
+          "scale": 1.05656,
+          "x": 0,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "id": "P19",
+      "name": "Panel 19",
+      "at": 3919,
+      "atCue": "p19StartFrame",
+      "plate": "assets/005-sabuk-ketiga/selected-owner-approved/p19.webp",
+      "camera": {
+        "from": {
+          "scale": 1.02,
+          "x": -6,
+          "y": 0
+        },
+        "to": {
+          "scale": 1.06,
+          "x": 6,
+          "y": 0
+        }
+      },
+      "characters": {
+        "mode": "baked"
+      },
+      "hud": [],
+      "editorial": {
+        "protagonist": "visible",
+        "purpose": "threat-proximity",
+        "evidence": "Owner-approved plate; image exceptions remain open."
+      },
+      "reframes": [
+        {
+          "at": 0,
+          "duration": 30,
+          "scale": 1.02719,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 70,
+          "duration": 30,
+          "scale": 1.04395,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 140,
+          "duration": 27,
+          "scale": 1.06,
+          "x": 0,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "id": "P20",
+      "name": "Panel 20",
+      "at": 4086,
+      "atCue": "p20StartFrame",
+      "plate": "assets/005-sabuk-ketiga/selected-owner-approved/p20.webp",
+      "camera": {
+        "from": {
+          "scale": 1.02,
+          "x": 6,
+          "y": 0
+        },
+        "to": {
+          "scale": 1.06,
+          "x": -6,
+          "y": 0
+        }
+      },
+      "characters": {
+        "mode": "baked"
+      },
+      "hud": [],
+      "editorial": {
+        "protagonist": "visible",
+        "purpose": "threat-proximity",
+        "evidence": "Owner-approved plate; image exceptions remain open."
+      },
+      "reframes": [
+        {
+          "at": 0,
+          "duration": 30,
+          "scale": 1.03101,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 70,
+          "duration": 30,
+          "scale": 1.0567,
+          "x": 0,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "id": "P21",
+      "name": "Panel 21",
+      "at": 4195,
+      "atCue": "p21StartFrame",
+      "plate": "assets/005-sabuk-ketiga/selected-owner-approved/p21.webp",
+      "camera": {
+        "from": {
+          "scale": 1.02,
+          "x": -6,
+          "y": 0
+        },
+        "to": {
+          "scale": 1.06,
+          "x": 6,
+          "y": 0
+        }
+      },
+      "characters": {
+        "mode": "baked"
+      },
+      "hud": [],
+      "editorial": {
+        "protagonist": "visible",
+        "purpose": "threat-proximity",
+        "evidence": "Owner-approved plate; image exceptions remain open."
+      },
+      "reframes": [
+        {
+          "at": 0,
+          "duration": 30,
+          "scale": 1.02645,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 70,
+          "duration": 30,
+          "scale": 1.04151,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 140,
+          "duration": 30,
+          "scale": 1.05656,
+          "x": 0,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "id": "P22",
+      "name": "Panel 22",
+      "at": 4381,
+      "atCue": "p22StartFrame",
+      "plate": "assets/005-sabuk-ketiga/selected-owner-approved/p22.webp",
+      "camera": {
+        "from": {
+          "scale": 1,
+          "x": 0,
+          "y": 0
+        },
+        "to": {
+          "scale": 1.04,
+          "x": 0,
+          "y": 0
+        }
+      },
+      "characters": {
+        "mode": "baked"
+      },
+      "hud": [],
+      "editorial": {
+        "protagonist": "absent",
+        "purpose": "threat-proximity",
+        "evidence": "Owner-approved plate; image exceptions remain open."
+      },
+      "reframes": [
+        {
+          "at": 0,
+          "duration": 30,
+          "scale": 1.03905,
+          "x": 0,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "id": "P23",
+      "name": "Panel 23",
+      "at": 4444,
+      "atCue": "p23StartFrame",
+      "plate": "assets/005-sabuk-ketiga/selected-owner-approved/p23.webp",
+      "camera": {
+        "from": {
+          "scale": 1,
+          "x": 0,
+          "y": 0
+        },
+        "to": {
+          "scale": 1.04,
+          "x": 0,
+          "y": 0
+        }
+      },
+      "characters": {
+        "mode": "baked"
+      },
+      "hud": [],
+      "editorial": {
+        "protagonist": "reaction",
+        "purpose": "threat-proximity",
+        "evidence": "Owner-approved plate; image exceptions remain open."
+      },
+      "reframes": [
+        {
+          "at": 0,
+          "duration": 30,
+          "scale": 1.02889,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 70,
+          "duration": 30,
+          "scale": 1.04963,
+          "x": 0,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "id": "P24",
+      "name": "Panel 24",
+      "at": 4579,
+      "atCue": "p24StartFrame",
+      "plate": "assets/005-sabuk-ketiga/selected-owner-approved/p24.webp",
+      "camera": {
+        "from": {
+          "scale": 1,
+          "x": 0,
+          "y": 0
+        },
+        "to": {
+          "scale": 1.04,
+          "x": 0,
+          "y": 0
+        }
+      },
+      "characters": {
+        "mode": "baked"
+      },
+      "hud": [],
+      "editorial": {
+        "protagonist": "absent",
+        "purpose": "threat-proximity",
+        "evidence": "Owner-approved plate; image exceptions remain open."
+      },
+      "reframes": [
+        {
+          "at": 0,
+          "duration": 30,
+          "scale": 1.03053,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "at": 70,
+          "duration": 30,
+          "scale": 1.05509,
+          "x": 0,
+          "y": 0
+        }
+      ]
+    }
+  ],
+  "soundMix": {
+    "asset": "assets/005-sabuk-ketiga/assembly-mix.wav",
+    "gain": 1,
+    "sampleRate": 48000
+  },
+  "timing": {
+    "p01StartFrame": 0,
+    "p02StartFrame": 241,
+    "p03StartFrame": 468,
+    "p04StartFrame": 705,
+    "p05StartFrame": 972,
+    "p06StartFrame": 1170,
+    "p07StartFrame": 1408,
+    "p08StartFrame": 1746,
+    "p09StartFrame": 1956,
+    "p10StartFrame": 2186,
+    "p11StartFrame": 2499,
+    "p12StartFrame": 2733,
+    "p13StartFrame": 2853,
+    "p14StartFrame": 3078,
+    "p15StartFrame": 3192,
+    "p16StartFrame": 3366,
+    "p17StartFrame": 3646,
+    "p18StartFrame": 3733,
+    "p19StartFrame": 3919,
+    "p20StartFrame": 4086,
+    "p21StartFrame": 4195,
+    "p22StartFrame": 4381,
+    "p23StartFrame": 4444,
+    "p24StartFrame": 4579,
+    "branchRewinds": [
+      {
+        "startFrame": 1734,
+        "endFrame": 1746
+      },
+      {
+        "startFrame": 2174,
+        "endFrame": 2186
+      },
+      {
+        "startFrame": 2721,
+        "endFrame": 2733
+      }
+    ],
+    "dreadSilenceFrames": [
+      2733,
+      2778
+    ],
+    "joltFrame": 4658,
+    "blackoutFrame": 4683,
+    "impact11Frame": 2662,
+    "impact19Frame": 3952,
+    "gripFrame": 1031,
+    "buckleTickFrame": 1043,
+    "fakeClickFrame": 3470,
+    "releaseClickFrame": 3646,
+    "bankRollStartFrame": 3770,
+    "bankRollPeakFrame": 3893,
+    "firstClickFrame": 2328,
+    "secondClickFrame": 2340
+  },
+  "notes": "Image-stage technical failures remain owner-accepted exceptions."
+}

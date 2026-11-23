@@ -1,0 +1,124 @@
+{
+  "video": "out\\005-sabuk-ketiga\\Skenario05SabukKetiga_compressed.mp4",
+  "durationSec": 156.437,
+  "rewinds": [
+    {
+      "startFrame": 1734,
+      "endFrame": 1746,
+      "expectedSec": 57.8,
+      "detectedSec": 57.8,
+      "offsetMs": 0.0,
+      "correlation": 0.9074,
+      "visualMidpointChangeMean": 6.69
+    },
+    {
+      "startFrame": 2174,
+      "endFrame": 2186,
+      "expectedSec": 72.46666666666667,
+      "detectedSec": 72.466667,
+      "offsetMs": -0.0,
+      "correlation": 0.9057,
+      "visualMidpointChangeMean": 6.96
+    },
+    {
+      "startFrame": 2721,
+      "endFrame": 2733,
+      "expectedSec": 90.7,
+      "detectedSec": 90.7,
+      "offsetMs": -0.0,
+      "correlation": 0.9087,
+      "visualMidpointChangeMean": 6.77
+    }
+  ],
+  "errors": [
+    "integrated loudness outside -14 \u00b10.5 LUFS",
+    "true peak exceeds -1.5 dBTP"
+  ],
+  "dreadSilence": {
+    "startSec": 91.1,
+    "endSec": 92.6,
+    "rmsDbfs": -79.12,
+    "peakDbfs": -36.86,
+    "innerRmsDbfs": -300.0
+  },
+  "vacuum": {
+    "startSec": 154.95,
+    "endSec": 155.1,
+    "rmsDbfs": -61.12,
+    "peakDbfs": -27.78
+  },
+  "jolt": {
+    "frame": 4653,
+    "visualSec": 155.1,
+    "audioOnsetSec": 155.097438,
+    "offsetMs": -2.562,
+    "visualFrameChangeMean": 91.21
+  },
+  "frames": [
+    {
+      "frame": 6,
+      "meanLuma": 26.81
+    },
+    {
+      "frame": 1734,
+      "meanLuma": 34.8
+    },
+    {
+      "frame": 1740,
+      "meanLuma": 41.29
+    },
+    {
+      "frame": 1745,
+      "meanLuma": 36.42
+    },
+    {
+      "frame": 2174,
+      "meanLuma": 19.5
+    },
+    {
+      "frame": 2180,
+      "meanLuma": 26.34
+    },
+    {
+      "frame": 2185,
+      "meanLuma": 21.46
+    },
+    {
+      "frame": 2721,
+      "meanLuma": 18.47
+    },
+    {
+      "frame": 2727,
+      "meanLuma": 25.22
+    },
+    {
+      "frame": 2732,
+      "meanLuma": 20.11
+    },
+    {
+      "frame": 4652,
+      "meanLuma": 45.07
+    },
+    {
+      "frame": 4653,
+      "meanLuma": 135.99
+    },
+    {
+      "frame": 4654,
+      "meanLuma": 136.49
+    },
+    {
+      "frame": 4682,
+      "meanLuma": 44.54
+    },
+    {
+      "frame": 4683,
+      "meanLuma": 0.0
+    }
+  ],
+  "maxFlashMeanLuma": 136.49,
+  "loudness": {
+    "integratedLufs": -11.4,
+    "truePeakDbtp": -0.7
+  }
+}

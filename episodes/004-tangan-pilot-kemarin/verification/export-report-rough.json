@@ -1,0 +1,106 @@
+{
+  "video": "out\\skenario04-tangan-pilot-kemarin-master_compressed.mp4",
+  "durationSec": 154.538,
+  "rewinds": [
+    {
+      "startFrame": 1298,
+      "endFrame": 1310,
+      "expectedSec": 43.266666666666666,
+      "detectedSec": 43.266667,
+      "offsetMs": 0.0,
+      "correlation": 0.926
+    },
+    {
+      "startFrame": 1755,
+      "endFrame": 1767,
+      "expectedSec": 58.5,
+      "detectedSec": 58.5,
+      "offsetMs": 0.0,
+      "correlation": 0.9238
+    },
+    {
+      "startFrame": 2214,
+      "endFrame": 2226,
+      "expectedSec": 73.8,
+      "detectedSec": 73.8,
+      "offsetMs": 0.0,
+      "correlation": 0.9188
+    }
+  ],
+  "errors": [
+    "true peak exceeds -1.5 dBTP"
+  ],
+  "dreadSilence": {
+    "startSec": 74.2,
+    "endSec": 75.8,
+    "rmsDbfs": -92.19,
+    "peakDbfs": -59.28,
+    "innerRmsDbfs": -300.0
+  },
+  "vacuum": {
+    "startSec": 153.05,
+    "endSec": 153.2,
+    "rmsDbfs": -72.84,
+    "peakDbfs": -47.91
+  },
+  "jolt": {
+    "frame": 4596,
+    "visualSec": 153.2,
+    "audioOnsetSec": 153.196646,
+    "offsetMs": -3.354
+  },
+  "frames": [
+    {
+      "frame": 6,
+      "meanLuma": 23.25
+    },
+    {
+      "frame": 28,
+      "meanLuma": 25.35
+    },
+    {
+      "frame": 348,
+      "meanLuma": 31.69
+    },
+    {
+      "frame": 1298,
+      "meanLuma": 50.65
+    },
+    {
+      "frame": 1696,
+      "meanLuma": 18.85
+    },
+    {
+      "frame": 1755,
+      "meanLuma": 15.61
+    },
+    {
+      "frame": 2214,
+      "meanLuma": 30.73
+    },
+    {
+      "frame": 4595,
+      "meanLuma": 31.97
+    },
+    {
+      "frame": 4596,
+      "meanLuma": 37.3
+    },
+    {
+      "frame": 4597,
+      "meanLuma": 43.05
+    },
+    {
+      "frame": 4627,
+      "meanLuma": 35.54
+    },
+    {
+      "frame": 4628,
+      "meanLuma": 0.0
+    }
+  ],
+  "loudness": {
+    "integratedLufs": -13.8,
+    "truePeakDbtp": -1.4
+  }
+}

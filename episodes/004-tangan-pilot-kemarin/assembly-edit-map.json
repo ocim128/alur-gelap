@@ -1,0 +1,48 @@
+{
+  "sampleRate": 48000,
+  "source": "narration-prepared.wav",
+  "output": "public\\assets\\004-tangan-pilot-kemarin\\narration-assembly-polish.wav",
+  "insertions": [
+    {
+      "sourceSec": 25.099625,
+      "durationSec": 0.6,
+      "samples": 28800
+    },
+    {
+      "sourceSec": 43.5,
+      "durationSec": 0.04,
+      "samples": 1920
+    },
+    {
+      "sourceSec": 58.6,
+      "durationSec": 0.2,
+      "samples": 9600
+    },
+    {
+      "sourceSec": 74.2,
+      "durationSec": 0.8,
+      "samples": 38400
+    }
+  ],
+  "cumulativeShiftSec": 1.6400000000000001,
+  "branchRewinds": [
+    {
+      "startFrame": 1316,
+      "endFrame": 1328
+    },
+    {
+      "startFrame": 1773,
+      "endFrame": 1785
+    },
+    {
+      "startFrame": 2232,
+      "endFrame": 2244
+    }
+  ],
+  "dreadSilenceFrames": [
+    2244,
+    2292
+  ],
+  "noOriginalSamplesRemoved": true,
+  "zeroNarrationWindowsChecked": true
+}

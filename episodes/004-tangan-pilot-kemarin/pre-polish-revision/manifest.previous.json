@@ -1,0 +1,1388 @@
+{
+  "schemaVersion": 2,
+  "pipelineVersion": 2,
+  "id": "Skenario04TanganPilotKemarin",
+  "fps": 30,
+  "duration": 4632,
+  "captions": "captions.json",
+  "openingTitle": "TANGAN PILOT KEMARIN",
+  "narration": {
+    "asset": "assets/004-tangan-pilot-kemarin/narration-assembly-padded.wav",
+    "at": 0,
+    "duration": 4632,
+    "gain": 1
+  },
+  "art": {
+    "styleId": "urban-silhouette-noir",
+    "rasterAssets": {
+      "assets/004-tangan-pilot-kemarin/owner-approved-exception/panel-01.webp": "urban-silhouette-noir",
+      "assets/004-tangan-pilot-kemarin/owner-approved-exception/panel-02.webp": "urban-silhouette-noir",
+      "assets/004-tangan-pilot-kemarin/owner-approved-exception/panel-03.webp": "urban-silhouette-noir",
+      "assets/004-tangan-pilot-kemarin/owner-approved-exception/panel-04.webp": "urban-silhouette-noir",
+      "assets/004-tangan-pilot-kemarin/owner-approved-exception/panel-05.webp": "urban-silhouette-noir",
+      "assets/004-tangan-pilot-kemarin/owner-approved-exception/panel-06.webp": "urban-silhouette-noir",
+      "assets/004-tangan-pilot-kemarin/owner-approved-exception/panel-07.webp": "urban-silhouette-noir",
+      "assets/004-tangan-pilot-kemarin/owner-approved-exception/panel-08.webp": "urban-silhouette-noir",
+      "assets/004-tangan-pilot-kemarin/owner-approved-exception/panel-09.webp": "urban-silhouette-noir",
+      "assets/004-tangan-pilot-kemarin/owner-approved-exception/panel-10.webp": "urban-silhouette-noir",
+      "assets/004-tangan-pilot-kemarin/owner-approved-exception/panel-11.webp": "urban-silhouette-noir",
+      "assets/004-tangan-pilot-kemarin/owner-approved-exception/panel-12.webp": "urban-silhouette-noir",
+      "assets/004-tangan-pilot-kemarin/owner-approved-exception/panel-13.webp": "urban-silhouette-noir",
+      "assets/004-tangan-pilot-kemarin/owner-approved-exception/panel-14.webp": "urban-silhouette-noir",
+      "assets/004-tangan-pilot-kemarin/owner-approved-exception/panel-15.webp": "urban-silhouette-noir",
+      "assets/004-tangan-pilot-kemarin/owner-approved-exception/panel-16.webp": "urban-silhouette-noir",
+      "assets/004-tangan-pilot-kemarin/owner-approved-exception/panel-17.webp": "urban-silhouette-noir",
+      "assets/004-tangan-pilot-kemarin/owner-approved-exception/panel-18.webp": "urban-silhouette-noir",
+      "assets/004-tangan-pilot-kemarin/owner-approved-exception/panel-19.webp": "urban-silhouette-noir",
+      "assets/004-tangan-pilot-kemarin/owner-approved-exception/panel-20.webp": "urban-silhouette-noir",
+      "assets/004-tangan-pilot-kemarin/owner-approved-exception/panel-21.webp": "urban-silhouette-noir",
+      "assets/004-tangan-pilot-kemarin/owner-approved-exception/panel-22.webp": "urban-silhouette-noir",
+      "assets/004-tangan-pilot-kemarin/owner-approved-exception/panel-23.webp": "urban-silhouette-noir",
+      "assets/004-tangan-pilot-kemarin/owner-approved-exception/panel-24.webp": "urban-silhouette-noir"
+    }
+  },
+  "script": {
+    "format": "decision-consequence",
+    "engine": "triple-branch-rewind",
+    "wordCount": 262,
+    "hook": {
+      "at": 0,
+      "line": "Tangan di tuas bukan tanganmu."
+    },
+    "ending": {
+      "at": 4224,
+      "twistAt": 4478,
+      "payoff": "The checked map marks the completed route."
+    }
+  },
+  "beds": [],
+  "tensionRamp": {
+    "startSec": 149.26,
+    "endSec": 153.04,
+    "extraScale": 0.01,
+    "vignetteStrength": 0.1
+  },
+  "scenes": [
+    {
+      "id": "P01",
+      "name": "Panel 01",
+      "at": 0,
+      "atCue": "p01StartFrame",
+      "plate": "assets/004-tangan-pilot-kemarin/owner-approved-exception/panel-01.webp",
+      "camera": {
+        "from": {
+          "scale": 1.025,
+          "x": -6,
+          "y": 0
+        },
+        "to": {
+          "scale": 1.065,
+          "x": 6,
+          "y": 0
+        }
+      },
+      "characters": {
+        "mode": "baked"
+      },
+      "hud": [],
+      "editorial": {
+        "protagonist": "visible",
+        "purpose": "threat-proximity",
+        "evidence": "Approved exception plate; see image audit for limitations."
+      },
+      "reframes": [
+        {
+          "at": 0,
+          "duration": 30,
+          "scale": 1.03981,
+          "x": -1.556,
+          "y": 0
+        },
+        {
+          "at": 70,
+          "duration": 11,
+          "scale": 1.065,
+          "x": 6.0,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "id": "P02",
+      "name": "Panel 02",
+      "at": 81,
+      "atCue": "p02StartFrame",
+      "plate": "assets/004-tangan-pilot-kemarin/owner-approved-exception/panel-02.webp",
+      "camera": {
+        "from": {
+          "scale": 1.025,
+          "x": 6,
+          "y": 0
+        },
+        "to": {
+          "scale": 1.065,
+          "x": -6,
+          "y": 0
+        }
+      },
+      "characters": {
+        "mode": "baked"
+      },
+      "hud": [],
+      "editorial": {
+        "protagonist": "visible",
+        "purpose": "threat-proximity",
+        "evidence": "Approved exception plate; see image audit for limitations."
+      },
+      "reframes": [
+        {
+          "at": 0,
+          "duration": 30,
+          "scale": 1.02982,
+          "x": 4.554,
+          "y": 0
+        },
+        {
+          "at": 70,
+          "duration": 30,
+          "scale": 1.04106,
+          "x": 1.181,
+          "y": 0
+        },
+        {
+          "at": 140,
+          "duration": 30,
+          "scale": 1.05231,
+          "x": -2.193,
+          "y": 0
+        },
+        {
+          "at": 210,
+          "duration": 30,
+          "scale": 1.06355,
+          "x": -5.566,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "id": "P03",
+      "name": "Panel 03",
+      "at": 330,
+      "atCue": "p03StartFrame",
+      "plate": "assets/004-tangan-pilot-kemarin/owner-approved-exception/panel-03.webp",
+      "camera": {
+        "from": {
+          "scale": 1.025,
+          "x": -6,
+          "y": 0
+        },
+        "to": {
+          "scale": 1.065,
+          "x": 6,
+          "y": 0
+        }
+      },
+      "characters": {
+        "mode": "baked"
+      },
+      "hud": [],
+      "editorial": {
+        "protagonist": "visible",
+        "purpose": "threat-proximity",
+        "evidence": "Approved exception plate; see image audit for limitations."
+      },
+      "reframes": [
+        {
+          "at": 0,
+          "duration": 30,
+          "scale": 1.03452,
+          "x": -3.143,
+          "y": 0
+        },
+        {
+          "at": 70,
+          "duration": 30,
+          "scale": 1.05675,
+          "x": 3.524,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "id": "P04",
+      "name": "Panel 04",
+      "at": 456,
+      "atCue": "p04StartFrame",
+      "plate": "assets/004-tangan-pilot-kemarin/owner-approved-exception/panel-04.webp",
+      "camera": {
+        "from": {
+          "scale": 1.025,
+          "x": 6,
+          "y": 0
+        },
+        "to": {
+          "scale": 1.065,
+          "x": -6,
+          "y": 0
+        }
+      },
+      "characters": {
+        "mode": "baked"
+      },
+      "hud": [],
+      "editorial": {
+        "protagonist": "absent",
+        "purpose": "threat-proximity",
+        "evidence": "Approved exception plate; see image audit for limitations."
+      },
+      "reframes": [
+        {
+          "at": 0,
+          "duration": 30,
+          "scale": 1.03186,
+          "x": 3.943,
+          "y": 0
+        },
+        {
+          "at": 70,
+          "duration": 30,
+          "scale": 1.04786,
+          "x": -0.857,
+          "y": 0
+        },
+        {
+          "at": 140,
+          "duration": 30,
+          "scale": 1.06386,
+          "x": -5.657,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "id": "P05",
+      "name": "Panel 05",
+      "at": 631,
+      "atCue": "p05StartFrame",
+      "plate": "assets/004-tangan-pilot-kemarin/owner-approved-exception/panel-05.webp",
+      "camera": {
+        "from": {
+          "scale": 1.025,
+          "x": -6,
+          "y": 0
+        },
+        "to": {
+          "scale": 1.065,
+          "x": 6,
+          "y": 0
+        }
+      },
+      "characters": {
+        "mode": "baked"
+      },
+      "hud": [],
+      "editorial": {
+        "protagonist": "visible",
+        "purpose": "threat-proximity",
+        "evidence": "Approved exception plate; see image audit for limitations."
+      },
+      "reframes": [
+        {
+          "at": 0,
+          "duration": 30,
+          "scale": 1.03019,
+          "x": -4.442,
+          "y": 0
+        },
+        {
+          "at": 70,
+          "duration": 30,
+          "scale": 1.04232,
+          "x": -0.805,
+          "y": 0
+        },
+        {
+          "at": 140,
+          "duration": 30,
+          "scale": 1.05444,
+          "x": 2.831,
+          "y": 0
+        },
+        {
+          "at": 210,
+          "duration": 21,
+          "scale": 1.065,
+          "x": 6.0,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "id": "P06",
+      "name": "Panel 06",
+      "at": 862,
+      "atCue": "p06StartFrame",
+      "plate": "assets/004-tangan-pilot-kemarin/owner-approved-exception/panel-06.webp",
+      "camera": {
+        "from": {
+          "scale": 1.025,
+          "x": 6,
+          "y": 0
+        },
+        "to": {
+          "scale": 1.065,
+          "x": -6,
+          "y": 0
+        }
+      },
+      "characters": {
+        "mode": "baked"
+      },
+      "hud": [],
+      "editorial": {
+        "protagonist": "visible",
+        "purpose": "threat-proximity",
+        "evidence": "Approved exception plate; see image audit for limitations."
+      },
+      "reframes": [
+        {
+          "at": 0,
+          "duration": 30,
+          "scale": 1.03002,
+          "x": 4.494,
+          "y": 0
+        },
+        {
+          "at": 70,
+          "duration": 30,
+          "scale": 1.04174,
+          "x": 0.979,
+          "y": 0
+        },
+        {
+          "at": 140,
+          "duration": 30,
+          "scale": 1.05345,
+          "x": -2.536,
+          "y": 0
+        },
+        {
+          "at": 210,
+          "duration": 29,
+          "scale": 1.065,
+          "x": -6.0,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "id": "P07",
+      "name": "Panel 07",
+      "at": 1101,
+      "atCue": "p07StartFrame",
+      "plate": "assets/004-tangan-pilot-kemarin/owner-approved-exception/panel-07.webp",
+      "camera": {
+        "from": {
+          "scale": 1.025,
+          "x": -6,
+          "y": 0
+        },
+        "to": {
+          "scale": 1.065,
+          "x": 6,
+          "y": 0
+        }
+      },
+      "characters": {
+        "mode": "baked"
+      },
+      "hud": [],
+      "editorial": {
+        "protagonist": "absent",
+        "purpose": "threat-proximity",
+        "evidence": "Approved exception plate; see image audit for limitations."
+      },
+      "reframes": [
+        {
+          "at": 0,
+          "duration": 30,
+          "scale": 1.03074,
+          "x": -4.278,
+          "y": 0
+        },
+        {
+          "at": 70,
+          "duration": 30,
+          "scale": 1.04414,
+          "x": -0.258,
+          "y": 0
+        },
+        {
+          "at": 140,
+          "duration": 30,
+          "scale": 1.05754,
+          "x": 3.761,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "id": "P08",
+      "name": "Panel 08",
+      "at": 1310,
+      "atCue": "p08StartFrame",
+      "plate": "assets/004-tangan-pilot-kemarin/owner-approved-exception/panel-08.webp",
+      "camera": {
+        "from": {
+          "scale": 1.025,
+          "x": 6,
+          "y": 0
+        },
+        "to": {
+          "scale": 1.065,
+          "x": -6,
+          "y": 0
+        }
+      },
+      "characters": {
+        "mode": "baked"
+      },
+      "hud": [],
+      "editorial": {
+        "protagonist": "visible",
+        "purpose": "threat-proximity",
+        "evidence": "Approved exception plate; see image audit for limitations."
+      },
+      "reframes": [
+        {
+          "at": 0,
+          "duration": 30,
+          "scale": 1.03085,
+          "x": 4.244,
+          "y": 0
+        },
+        {
+          "at": 70,
+          "duration": 30,
+          "scale": 1.04451,
+          "x": 0.146,
+          "y": 0
+        },
+        {
+          "at": 140,
+          "duration": 30,
+          "scale": 1.05817,
+          "x": -3.951,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "id": "P09",
+      "name": "Panel 09",
+      "at": 1515,
+      "atCue": "p09StartFrame",
+      "plate": "assets/004-tangan-pilot-kemarin/owner-approved-exception/panel-09.webp",
+      "camera": {
+        "from": {
+          "scale": 1.025,
+          "x": -6,
+          "y": 0
+        },
+        "to": {
+          "scale": 1.065,
+          "x": 6,
+          "y": 0
+        }
+      },
+      "characters": {
+        "mode": "baked"
+      },
+      "hud": [],
+      "editorial": {
+        "protagonist": "visible",
+        "purpose": "threat-proximity",
+        "evidence": "Approved exception plate; see image audit for limitations."
+      },
+      "reframes": [
+        {
+          "at": 0,
+          "duration": 30,
+          "scale": 1.02976,
+          "x": -4.571,
+          "y": 0
+        },
+        {
+          "at": 70,
+          "duration": 30,
+          "scale": 1.04087,
+          "x": -1.238,
+          "y": 0
+        },
+        {
+          "at": 140,
+          "duration": 30,
+          "scale": 1.05198,
+          "x": 2.095,
+          "y": 0
+        },
+        {
+          "at": 210,
+          "duration": 30,
+          "scale": 1.0631,
+          "x": 5.429,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "id": "P10",
+      "name": "Panel 10",
+      "at": 1767,
+      "atCue": "p10StartFrame",
+      "plate": "assets/004-tangan-pilot-kemarin/owner-approved-exception/panel-10.webp",
+      "camera": {
+        "from": {
+          "scale": 1.025,
+          "x": 6,
+          "y": 0
+        },
+        "to": {
+          "scale": 1.065,
+          "x": -6,
+          "y": 0
+        }
+      },
+      "characters": {
+        "mode": "baked"
+      },
+      "hud": [],
+      "editorial": {
+        "protagonist": "visible",
+        "purpose": "threat-proximity",
+        "evidence": "Approved exception plate; see image audit for limitations."
+      },
+      "reframes": [
+        {
+          "at": 0,
+          "duration": 30,
+          "scale": 1.03029,
+          "x": 4.414,
+          "y": 0
+        },
+        {
+          "at": 70,
+          "duration": 30,
+          "scale": 1.04262,
+          "x": 0.714,
+          "y": 0
+        },
+        {
+          "at": 140,
+          "duration": 30,
+          "scale": 1.05496,
+          "x": -2.987,
+          "y": 0
+        },
+        {
+          "at": 210,
+          "duration": 17,
+          "scale": 1.065,
+          "x": -6.0,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "id": "P11",
+      "name": "Panel 11",
+      "at": 1994,
+      "atCue": "p11StartFrame",
+      "plate": "assets/004-tangan-pilot-kemarin/owner-approved-exception/panel-11.webp",
+      "camera": {
+        "from": {
+          "scale": 1.025,
+          "x": -6,
+          "y": 0
+        },
+        "to": {
+          "scale": 1.065,
+          "x": 6,
+          "y": 0
+        }
+      },
+      "characters": {
+        "mode": "baked"
+      },
+      "hud": [],
+      "editorial": {
+        "protagonist": "absent",
+        "purpose": "threat-proximity",
+        "evidence": "Approved exception plate; see image audit for limitations."
+      },
+      "reframes": [
+        {
+          "at": 0,
+          "duration": 30,
+          "scale": 1.03017,
+          "x": -4.448,
+          "y": 0
+        },
+        {
+          "at": 70,
+          "duration": 30,
+          "scale": 1.04224,
+          "x": -0.828,
+          "y": 0
+        },
+        {
+          "at": 140,
+          "duration": 30,
+          "scale": 1.05431,
+          "x": 2.793,
+          "y": 0
+        },
+        {
+          "at": 210,
+          "duration": 22,
+          "scale": 1.065,
+          "x": 6.0,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "id": "P12",
+      "name": "Panel 12",
+      "at": 2226,
+      "atCue": "p12StartFrame",
+      "plate": "assets/004-tangan-pilot-kemarin/owner-approved-exception/panel-12.webp",
+      "camera": {
+        "from": {
+          "scale": 1.025,
+          "x": 6,
+          "y": 0
+        },
+        "to": {
+          "scale": 1.065,
+          "x": -6,
+          "y": 0
+        }
+      },
+      "characters": {
+        "mode": "baked"
+      },
+      "hud": [],
+      "editorial": {
+        "protagonist": "visible",
+        "purpose": "threat-proximity",
+        "evidence": "Approved exception plate; see image audit for limitations."
+      },
+      "reframes": [
+        {
+          "at": 0,
+          "duration": 30,
+          "scale": 1.03019,
+          "x": 4.442,
+          "y": 0
+        },
+        {
+          "at": 70,
+          "duration": 30,
+          "scale": 1.04232,
+          "x": 0.805,
+          "y": 0
+        },
+        {
+          "at": 140,
+          "duration": 30,
+          "scale": 1.05444,
+          "x": -2.831,
+          "y": 0
+        },
+        {
+          "at": 210,
+          "duration": 21,
+          "scale": 1.065,
+          "x": -6.0,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "id": "P13",
+      "name": "Panel 13",
+      "at": 2457,
+      "atCue": "p13StartFrame",
+      "plate": "assets/004-tangan-pilot-kemarin/owner-approved-exception/panel-13.webp",
+      "camera": {
+        "from": {
+          "scale": 1.025,
+          "x": -6,
+          "y": 0
+        },
+        "to": {
+          "scale": 1.065,
+          "x": 6,
+          "y": 0
+        }
+      },
+      "characters": {
+        "mode": "baked"
+      },
+      "hud": [],
+      "editorial": {
+        "protagonist": "visible",
+        "purpose": "threat-proximity",
+        "evidence": "Approved exception plate; see image audit for limitations."
+      },
+      "reframes": [
+        {
+          "at": 0,
+          "duration": 30,
+          "scale": 1.03245,
+          "x": -3.764,
+          "y": 0
+        },
+        {
+          "at": 70,
+          "duration": 30,
+          "scale": 1.04984,
+          "x": 1.453,
+          "y": 0
+        },
+        {
+          "at": 140,
+          "duration": 21,
+          "scale": 1.065,
+          "x": 6.0,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "id": "P14",
+      "name": "Panel 14",
+      "at": 2618,
+      "atCue": "p14StartFrame",
+      "plate": "assets/004-tangan-pilot-kemarin/owner-approved-exception/panel-14.webp",
+      "camera": {
+        "from": {
+          "scale": 1.025,
+          "x": 6,
+          "y": 0
+        },
+        "to": {
+          "scale": 1.065,
+          "x": -6,
+          "y": 0
+        }
+      },
+      "characters": {
+        "mode": "baked"
+      },
+      "hud": [],
+      "editorial": {
+        "protagonist": "visible",
+        "purpose": "threat-proximity",
+        "evidence": "Approved exception plate; see image audit for limitations."
+      },
+      "reframes": [
+        {
+          "at": 0,
+          "duration": 30,
+          "scale": 1.03264,
+          "x": 3.707,
+          "y": 0
+        },
+        {
+          "at": 70,
+          "duration": 30,
+          "scale": 1.05048,
+          "x": -1.643,
+          "y": 0
+        },
+        {
+          "at": 140,
+          "duration": 17,
+          "scale": 1.065,
+          "x": -6.0,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "id": "P15",
+      "name": "Panel 15",
+      "at": 2775,
+      "atCue": "p15StartFrame",
+      "plate": "assets/004-tangan-pilot-kemarin/owner-approved-exception/panel-15.webp",
+      "camera": {
+        "from": {
+          "scale": 1.025,
+          "x": -6,
+          "y": 0
+        },
+        "to": {
+          "scale": 1.065,
+          "x": 6,
+          "y": 0
+        }
+      },
+      "characters": {
+        "mode": "baked"
+      },
+      "hud": [],
+      "editorial": {
+        "protagonist": "visible",
+        "purpose": "threat-proximity",
+        "evidence": "Approved exception plate; see image audit for limitations."
+      },
+      "reframes": [
+        {
+          "at": 0,
+          "duration": 30,
+          "scale": 1.03163,
+          "x": -4.011,
+          "y": 0
+        },
+        {
+          "at": 70,
+          "duration": 30,
+          "scale": 1.0471,
+          "x": 0.63,
+          "y": 0
+        },
+        {
+          "at": 140,
+          "duration": 30,
+          "scale": 1.06257,
+          "x": 5.271,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "id": "P16",
+      "name": "Panel 16",
+      "at": 2956,
+      "atCue": "p16StartFrame",
+      "plate": "assets/004-tangan-pilot-kemarin/owner-approved-exception/panel-16.webp",
+      "camera": {
+        "from": {
+          "scale": 1.025,
+          "x": 6,
+          "y": 0
+        },
+        "to": {
+          "scale": 1.065,
+          "x": -6,
+          "y": 0
+        }
+      },
+      "characters": {
+        "mode": "baked"
+      },
+      "hud": [],
+      "editorial": {
+        "protagonist": "visible",
+        "purpose": "threat-proximity",
+        "evidence": "Approved exception plate; see image audit for limitations."
+      },
+      "reframes": [
+        {
+          "at": 0,
+          "duration": 30,
+          "scale": 1.03223,
+          "x": 3.831,
+          "y": 0
+        },
+        {
+          "at": 70,
+          "duration": 30,
+          "scale": 1.0491,
+          "x": -1.229,
+          "y": 0
+        },
+        {
+          "at": 140,
+          "duration": 26,
+          "scale": 1.065,
+          "x": -6.0,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "id": "P17",
+      "name": "Panel 17",
+      "at": 3122,
+      "atCue": "p17StartFrame",
+      "plate": "assets/004-tangan-pilot-kemarin/owner-approved-exception/panel-17.webp",
+      "camera": {
+        "from": {
+          "scale": 1.025,
+          "x": -6,
+          "y": 0
+        },
+        "to": {
+          "scale": 1.065,
+          "x": 6,
+          "y": 0
+        }
+      },
+      "characters": {
+        "mode": "baked"
+      },
+      "hud": [],
+      "editorial": {
+        "protagonist": "absent",
+        "purpose": "threat-proximity",
+        "evidence": "Approved exception plate; see image audit for limitations."
+      },
+      "reframes": [
+        {
+          "at": 0,
+          "duration": 30,
+          "scale": 1.03322,
+          "x": -3.534,
+          "y": 0
+        },
+        {
+          "at": 70,
+          "duration": 30,
+          "scale": 1.0524,
+          "x": 2.219,
+          "y": 0
+        },
+        {
+          "at": 140,
+          "duration": 6,
+          "scale": 1.065,
+          "x": 6.0,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "id": "P18",
+      "name": "Panel 18",
+      "at": 3268,
+      "atCue": "p18StartFrame",
+      "plate": "assets/004-tangan-pilot-kemarin/owner-approved-exception/panel-18.webp",
+      "camera": {
+        "from": {
+          "scale": 1.025,
+          "x": 6,
+          "y": 0
+        },
+        "to": {
+          "scale": 1.065,
+          "x": -6,
+          "y": 0
+        }
+      },
+      "characters": {
+        "mode": "baked"
+      },
+      "hud": [],
+      "editorial": {
+        "protagonist": "visible",
+        "purpose": "threat-proximity",
+        "evidence": "Approved exception plate; see image audit for limitations."
+      },
+      "reframes": [
+        {
+          "at": 0,
+          "duration": 30,
+          "scale": 1.03071,
+          "x": 4.286,
+          "y": 0
+        },
+        {
+          "at": 70,
+          "duration": 30,
+          "scale": 1.04405,
+          "x": 0.286,
+          "y": 0
+        },
+        {
+          "at": 140,
+          "duration": 30,
+          "scale": 1.05738,
+          "x": -3.714,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "id": "P19",
+      "name": "Panel 19",
+      "at": 3478,
+      "atCue": "p19StartFrame",
+      "plate": "assets/004-tangan-pilot-kemarin/owner-approved-exception/panel-19.webp",
+      "camera": {
+        "from": {
+          "scale": 1.025,
+          "x": -6,
+          "y": 0
+        },
+        "to": {
+          "scale": 1.065,
+          "x": 6,
+          "y": 0
+        }
+      },
+      "characters": {
+        "mode": "baked"
+      },
+      "hud": [],
+      "editorial": {
+        "protagonist": "absent",
+        "purpose": "threat-proximity",
+        "evidence": "Approved exception plate; see image audit for limitations."
+      },
+      "reframes": [
+        {
+          "at": 0,
+          "duration": 30,
+          "scale": 1.03043,
+          "x": -4.371,
+          "y": 0
+        },
+        {
+          "at": 70,
+          "duration": 30,
+          "scale": 1.0431,
+          "x": -0.57,
+          "y": 0
+        },
+        {
+          "at": 140,
+          "duration": 30,
+          "scale": 1.05577,
+          "x": 3.231,
+          "y": 0
+        },
+        {
+          "at": 210,
+          "duration": 11,
+          "scale": 1.065,
+          "x": 6.0,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "id": "P20",
+      "name": "Panel 20",
+      "at": 3699,
+      "atCue": "p20StartFrame",
+      "plate": "assets/004-tangan-pilot-kemarin/owner-approved-exception/panel-20.webp",
+      "camera": {
+        "from": {
+          "scale": 1.025,
+          "x": 6,
+          "y": 0
+        },
+        "to": {
+          "scale": 1.065,
+          "x": -6,
+          "y": 0
+        }
+      },
+      "characters": {
+        "mode": "baked"
+      },
+      "hud": [],
+      "editorial": {
+        "protagonist": "visible",
+        "purpose": "threat-proximity",
+        "evidence": "Approved exception plate; see image audit for limitations."
+      },
+      "reframes": [
+        {
+          "at": 0,
+          "duration": 30,
+          "scale": 1.03085,
+          "x": 4.244,
+          "y": 0
+        },
+        {
+          "at": 70,
+          "duration": 30,
+          "scale": 1.04451,
+          "x": 0.146,
+          "y": 0
+        },
+        {
+          "at": 140,
+          "duration": 30,
+          "scale": 1.05817,
+          "x": -3.951,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "id": "P21",
+      "name": "Panel 21",
+      "at": 3904,
+      "atCue": "p21StartFrame",
+      "plate": "assets/004-tangan-pilot-kemarin/owner-approved-exception/panel-21.webp",
+      "camera": {
+        "from": {
+          "scale": 1.025,
+          "x": -6,
+          "y": 0
+        },
+        "to": {
+          "scale": 1.065,
+          "x": 6,
+          "y": 0
+        }
+      },
+      "characters": {
+        "mode": "baked"
+      },
+      "hud": [],
+      "editorial": {
+        "protagonist": "visible",
+        "purpose": "threat-proximity",
+        "evidence": "Approved exception plate; see image audit for limitations."
+      },
+      "reframes": [
+        {
+          "at": 0,
+          "duration": 30,
+          "scale": 1.03094,
+          "x": -4.218,
+          "y": 0
+        },
+        {
+          "at": 70,
+          "duration": 30,
+          "scale": 1.0448,
+          "x": -0.059,
+          "y": 0
+        },
+        {
+          "at": 140,
+          "duration": 30,
+          "scale": 1.05866,
+          "x": 4.099,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "id": "P22",
+      "name": "Panel 22",
+      "at": 4106,
+      "atCue": "p22StartFrame",
+      "plate": "assets/004-tangan-pilot-kemarin/owner-approved-exception/panel-22.webp",
+      "camera": {
+        "from": {
+          "scale": 1.025,
+          "x": 6,
+          "y": 0
+        },
+        "to": {
+          "scale": 1.065,
+          "x": -6,
+          "y": 0
+        }
+      },
+      "characters": {
+        "mode": "baked"
+      },
+      "hud": [],
+      "editorial": {
+        "protagonist": "absent",
+        "purpose": "threat-proximity",
+        "evidence": "Approved exception plate; see image audit for limitations."
+      },
+      "reframes": [
+        {
+          "at": 0,
+          "duration": 30,
+          "scale": 1.03517,
+          "x": 2.949,
+          "y": 0
+        },
+        {
+          "at": 70,
+          "duration": 30,
+          "scale": 1.0589,
+          "x": -4.169,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "id": "P23",
+      "name": "Panel 23",
+      "at": 4224,
+      "atCue": "p23StartFrame",
+      "plate": "assets/004-tangan-pilot-kemarin/owner-approved-exception/panel-23.webp",
+      "camera": {
+        "from": {
+          "scale": 1.025,
+          "x": -6,
+          "y": 0
+        },
+        "to": {
+          "scale": 1.065,
+          "x": 6,
+          "y": 0
+        }
+      },
+      "characters": {
+        "mode": "baked"
+      },
+      "hud": [],
+      "editorial": {
+        "protagonist": "reaction",
+        "purpose": "threat-proximity",
+        "evidence": "Approved exception plate; see image audit for limitations."
+      },
+      "reframes": [
+        {
+          "at": 0,
+          "duration": 30,
+          "scale": 1.02972,
+          "x": -4.583,
+          "y": 0
+        },
+        {
+          "at": 70,
+          "duration": 30,
+          "scale": 1.04075,
+          "x": -1.276,
+          "y": 0
+        },
+        {
+          "at": 140,
+          "duration": 30,
+          "scale": 1.05177,
+          "x": 2.031,
+          "y": 0
+        },
+        {
+          "at": 210,
+          "duration": 30,
+          "scale": 1.0628,
+          "x": 5.339,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "id": "P24",
+      "name": "Panel 24",
+      "at": 4478,
+      "atCue": "p24StartFrame",
+      "plate": "assets/004-tangan-pilot-kemarin/owner-approved-exception/panel-24.webp",
+      "camera": {
+        "from": {
+          "scale": 1.025,
+          "x": 6,
+          "y": 0
+        },
+        "to": {
+          "scale": 1.065,
+          "x": -6,
+          "y": 0
+        }
+      },
+      "characters": {
+        "mode": "baked"
+      },
+      "hud": [],
+      "editorial": {
+        "protagonist": "absent",
+        "purpose": "threat-proximity",
+        "evidence": "Approved exception plate; see image audit for limitations."
+      },
+      "reframes": [
+        {
+          "at": 0,
+          "duration": 30,
+          "scale": 1.03279,
+          "x": 3.662,
+          "y": 0
+        },
+        {
+          "at": 70,
+          "duration": 30,
+          "scale": 1.05097,
+          "x": -1.792,
+          "y": 0
+        },
+        {
+          "at": 140,
+          "duration": 14,
+          "scale": 1.065,
+          "x": -6.0,
+          "y": 0
+        }
+      ]
+    }
+  ],
+  "soundMix": {
+    "asset": "assets/004-tangan-pilot-kemarin/assembly-mix-rework.wav",
+    "gain": 1,
+    "sampleRate": 48000
+  },
+  "timing": {
+    "p01StartFrame": 0,
+    "p02StartFrame": 81,
+    "p03StartFrame": 330,
+    "p04StartFrame": 456,
+    "p05StartFrame": 631,
+    "p06StartFrame": 862,
+    "p07StartFrame": 1101,
+    "p08StartFrame": 1310,
+    "p09StartFrame": 1515,
+    "p10StartFrame": 1767,
+    "p11StartFrame": 1994,
+    "p12StartFrame": 2226,
+    "p13StartFrame": 2457,
+    "p14StartFrame": 2618,
+    "p15StartFrame": 2775,
+    "p16StartFrame": 2956,
+    "p17StartFrame": 3122,
+    "p18StartFrame": 3268,
+    "p19StartFrame": 3478,
+    "p20StartFrame": 3699,
+    "p21StartFrame": 3904,
+    "p22StartFrame": 4106,
+    "p23StartFrame": 4224,
+    "p24StartFrame": 4478,
+    "branchRewinds": [
+      {
+        "startFrame": 1298,
+        "endFrame": 1310
+      },
+      {
+        "startFrame": 1755,
+        "endFrame": 1767
+      },
+      {
+        "startFrame": 2214,
+        "endFrame": 2226
+      }
+    ],
+    "dreadSilenceFrames": [
+      2226,
+      2274
+    ],
+    "joltFrame": 4592,
+    "blackoutFrame": 4624,
+    "impact1Frame": 1262,
+    "impact2Frame": 1696,
+    "impact3Frame": 2168
+  },
+  "notes": "Approved image exceptions retained; see sources/prompts.md and assembly handoff."
+}

@@ -1,0 +1,22 @@
+{
+  "video": "out/005-sabuk-ketiga/Skenario05SabukKetiga-audit-rework-master_compressed.mp4",
+  "impacts": [
+    {
+      "event": "impact11Frame",
+      "frame": 2662,
+      "expectedSec": 88.73333333333333,
+      "detectedSec": 88.73333333333333,
+      "offsetMs": 0.0,
+      "correlation": 0.739971399307251
+    },
+    {
+      "event": "impact19Frame",
+      "frame": 3952,
+      "expectedSec": 131.73333333333332,
+      "detectedSec": 131.73333333333332,
+      "offsetMs": 0.0,
+      "correlation": 0.2465282678604126
+    }
+  ],
+  "pass": true
+}

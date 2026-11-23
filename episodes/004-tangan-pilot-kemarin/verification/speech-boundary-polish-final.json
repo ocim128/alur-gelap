@@ -1,0 +1,525 @@
+{
+  "video": "out\\skenario04-owner-polish-final-master_compressed.mp4",
+  "stemLastSampleAboveThresholdDbfs": {
+    "-40": 153.490021,
+    "-50": 153.494896,
+    "-60": 153.494937,
+    "-70": 153.494958,
+    "-80": 153.494958
+  },
+  "finalWordWindowSec": [
+    153.28,
+    153.49
+  ],
+  "stemToExportCorrelation": 0.79101,
+  "finalWordCorrelationLagMs": 0.0,
+  "windows10ms": [
+    {
+      "startSec": 153.217,
+      "stem": {
+        "rmsDbfs": -16.15,
+        "peakDbfs": -10.21
+      },
+      "export": {
+        "rmsDbfs": -9.52,
+        "peakDbfs": -4.19
+      }
+    },
+    {
+      "startSec": 153.227,
+      "stem": {
+        "rmsDbfs": -12.83,
+        "peakDbfs": -6.71
+      },
+      "export": {
+        "rmsDbfs": -9.1,
+        "peakDbfs": -3.11
+      }
+    },
+    {
+      "startSec": 153.237,
+      "stem": {
+        "rmsDbfs": -12.37,
+        "peakDbfs": -6.02
+      },
+      "export": {
+        "rmsDbfs": -9.27,
+        "peakDbfs": -3.04
+      }
+    },
+    {
+      "startSec": 153.247,
+      "stem": {
+        "rmsDbfs": -13.17,
+        "peakDbfs": -7.22
+      },
+      "export": {
+        "rmsDbfs": -9.0,
+        "peakDbfs": -3.18
+      }
+    },
+    {
+      "startSec": 153.257,
+      "stem": {
+        "rmsDbfs": -14.95,
+        "peakDbfs": -7.73
+      },
+      "export": {
+        "rmsDbfs": -10.32,
+        "peakDbfs": -3.08
+      }
+    },
+    {
+      "startSec": 153.267,
+      "stem": {
+        "rmsDbfs": -17.98,
+        "peakDbfs": -10.72
+      },
+      "export": {
+        "rmsDbfs": -13.6,
+        "peakDbfs": -7.02
+      }
+    },
+    {
+      "startSec": 153.277,
+      "stem": {
+        "rmsDbfs": -16.27,
+        "peakDbfs": -9.83
+      },
+      "export": {
+        "rmsDbfs": -10.6,
+        "peakDbfs": -4.01
+      }
+    },
+    {
+      "startSec": 153.287,
+      "stem": {
+        "rmsDbfs": -24.87,
+        "peakDbfs": -18.41
+      },
+      "export": {
+        "rmsDbfs": -16.75,
+        "peakDbfs": -11.28
+      }
+    },
+    {
+      "startSec": 153.297,
+      "stem": {
+        "rmsDbfs": -33.59,
+        "peakDbfs": -28.21
+      },
+      "export": {
+        "rmsDbfs": -22.38,
+        "peakDbfs": -15.63
+      }
+    },
+    {
+      "startSec": 153.307,
+      "stem": {
+        "rmsDbfs": -51.22,
+        "peakDbfs": -41.24
+      },
+      "export": {
+        "rmsDbfs": -27.96,
+        "peakDbfs": -23.86
+      }
+    },
+    {
+      "startSec": 153.317,
+      "stem": {
+        "rmsDbfs": -56.78,
+        "peakDbfs": -47.9
+      },
+      "export": {
+        "rmsDbfs": -31.35,
+        "peakDbfs": -26.53
+      }
+    },
+    {
+      "startSec": 153.327,
+      "stem": {
+        "rmsDbfs": -50.42,
+        "peakDbfs": -37.97
+      },
+      "export": {
+        "rmsDbfs": -29.68,
+        "peakDbfs": -21.98
+      }
+    },
+    {
+      "startSec": 153.337,
+      "stem": {
+        "rmsDbfs": -16.46,
+        "peakDbfs": -5.49
+      },
+      "export": {
+        "rmsDbfs": -14.77,
+        "peakDbfs": -3.1
+      }
+    },
+    {
+      "startSec": 153.347,
+      "stem": {
+        "rmsDbfs": -24.45,
+        "peakDbfs": -15.31
+      },
+      "export": {
+        "rmsDbfs": -23.59,
+        "peakDbfs": -15.48
+      }
+    },
+    {
+      "startSec": 153.357,
+      "stem": {
+        "rmsDbfs": -12.92,
+        "peakDbfs": -1.49
+      },
+      "export": {
+        "rmsDbfs": -14.63,
+        "peakDbfs": -3.15
+      }
+    },
+    {
+      "startSec": 153.367,
+      "stem": {
+        "rmsDbfs": -17.45,
+        "peakDbfs": -6.61
+      },
+      "export": {
+        "rmsDbfs": -17.54,
+        "peakDbfs": -6.47
+      }
+    },
+    {
+      "startSec": 153.377,
+      "stem": {
+        "rmsDbfs": -22.3,
+        "peakDbfs": -10.66
+      },
+      "export": {
+        "rmsDbfs": -19.92,
+        "peakDbfs": -7.42
+      }
+    },
+    {
+      "startSec": 153.387,
+      "stem": {
+        "rmsDbfs": -25.7,
+        "peakDbfs": -17.03
+      },
+      "export": {
+        "rmsDbfs": -22.02,
+        "peakDbfs": -12.4
+      }
+    },
+    {
+      "startSec": 153.397,
+      "stem": {
+        "rmsDbfs": -22.71,
+        "peakDbfs": -10.89
+      },
+      "export": {
+        "rmsDbfs": -16.51,
+        "peakDbfs": -5.31
+      }
+    },
+    {
+      "startSec": 153.407,
+      "stem": {
+        "rmsDbfs": -28.9,
+        "peakDbfs": -19.35
+      },
+      "export": {
+        "rmsDbfs": -19.0,
+        "peakDbfs": -9.64
+      }
+    },
+    {
+      "startSec": 153.417,
+      "stem": {
+        "rmsDbfs": -25.79,
+        "peakDbfs": -15.62
+      },
+      "export": {
+        "rmsDbfs": -15.35,
+        "peakDbfs": -4.9
+      }
+    },
+    {
+      "startSec": 153.427,
+      "stem": {
+        "rmsDbfs": -26.9,
+        "peakDbfs": -16.53
+      },
+      "export": {
+        "rmsDbfs": -14.66,
+        "peakDbfs": -3.82
+      }
+    },
+    {
+      "startSec": 153.437,
+      "stem": {
+        "rmsDbfs": -26.59,
+        "peakDbfs": -17.55
+      },
+      "export": {
+        "rmsDbfs": -14.03,
+        "peakDbfs": -5.19
+      }
+    },
+    {
+      "startSec": 153.447,
+      "stem": {
+        "rmsDbfs": -27.78,
+        "peakDbfs": -19.02
+      },
+      "export": {
+        "rmsDbfs": -13.96,
+        "peakDbfs": -4.8
+      }
+    },
+    {
+      "startSec": 153.457,
+      "stem": {
+        "rmsDbfs": -28.79,
+        "peakDbfs": -18.79
+      },
+      "export": {
+        "rmsDbfs": -14.1,
+        "peakDbfs": -5.09
+      }
+    },
+    {
+      "startSec": 153.467,
+      "stem": {
+        "rmsDbfs": -27.57,
+        "peakDbfs": -15.52
+      },
+      "export": {
+        "rmsDbfs": -14.44,
+        "peakDbfs": -3.15
+      }
+    },
+    {
+      "startSec": 153.477,
+      "stem": {
+        "rmsDbfs": -30.79,
+        "peakDbfs": -21.43
+      },
+      "export": {
+        "rmsDbfs": -17.31,
+        "peakDbfs": -8.23
+      }
+    },
+    {
+      "startSec": 153.487,
+      "stem": {
+        "rmsDbfs": -40.93,
+        "peakDbfs": -28.32
+      },
+      "export": {
+        "rmsDbfs": -22.74,
+        "peakDbfs": -13.83
+      }
+    },
+    {
+      "startSec": 153.497,
+      "stem": {
+        "rmsDbfs": -300.0,
+        "peakDbfs": -300.0
+      },
+      "export": {
+        "rmsDbfs": -22.01,
+        "peakDbfs": -18.85
+      }
+    },
+    {
+      "startSec": 153.507,
+      "stem": {
+        "rmsDbfs": -300.0,
+        "peakDbfs": -300.0
+      },
+      "export": {
+        "rmsDbfs": -25.61,
+        "peakDbfs": -22.38
+      }
+    },
+    {
+      "startSec": 153.517,
+      "stem": {
+        "rmsDbfs": -300.0,
+        "peakDbfs": -300.0
+      },
+      "export": {
+        "rmsDbfs": -76.69,
+        "peakDbfs": -63.73
+      }
+    },
+    {
+      "startSec": 153.527,
+      "stem": {
+        "rmsDbfs": -300.0,
+        "peakDbfs": -300.0
+      },
+      "export": {
+        "rmsDbfs": -300.0,
+        "peakDbfs": -300.0
+      }
+    },
+    {
+      "startSec": 153.537,
+      "stem": {
+        "rmsDbfs": -300.0,
+        "peakDbfs": -300.0
+      },
+      "export": {
+        "rmsDbfs": -300.0,
+        "peakDbfs": -300.0
+      }
+    },
+    {
+      "startSec": 153.547,
+      "stem": {
+        "rmsDbfs": -300.0,
+        "peakDbfs": -300.0
+      },
+      "export": {
+        "rmsDbfs": -300.0,
+        "peakDbfs": -300.0
+      }
+    },
+    {
+      "startSec": 153.557,
+      "stem": {
+        "rmsDbfs": -300.0,
+        "peakDbfs": -300.0
+      },
+      "export": {
+        "rmsDbfs": -300.0,
+        "peakDbfs": -300.0
+      }
+    },
+    {
+      "startSec": 153.567,
+      "stem": {
+        "rmsDbfs": -300.0,
+        "peakDbfs": -300.0
+      },
+      "export": {
+        "rmsDbfs": -300.0,
+        "peakDbfs": -300.0
+      }
+    },
+    {
+      "startSec": 153.577,
+      "stem": {
+        "rmsDbfs": -300.0,
+        "peakDbfs": -300.0
+      },
+      "export": {
+        "rmsDbfs": -300.0,
+        "peakDbfs": -300.0
+      }
+    },
+    {
+      "startSec": 153.587,
+      "stem": {
+        "rmsDbfs": -300.0,
+        "peakDbfs": -300.0
+      },
+      "export": {
+        "rmsDbfs": -300.0,
+        "peakDbfs": -300.0
+      }
+    },
+    {
+      "startSec": 153.597,
+      "stem": {
+        "rmsDbfs": -300.0,
+        "peakDbfs": -300.0
+      },
+      "export": {
+        "rmsDbfs": -300.0,
+        "peakDbfs": -300.0
+      }
+    },
+    {
+      "startSec": 153.607,
+      "stem": {
+        "rmsDbfs": -300.0,
+        "peakDbfs": -300.0
+      },
+      "export": {
+        "rmsDbfs": -300.0,
+        "peakDbfs": -300.0
+      }
+    },
+    {
+      "startSec": 153.617,
+      "stem": {
+        "rmsDbfs": -300.0,
+        "peakDbfs": -300.0
+      },
+      "export": {
+        "rmsDbfs": -300.0,
+        "peakDbfs": -300.0
+      }
+    },
+    {
+      "startSec": 153.627,
+      "stem": {
+        "rmsDbfs": -300.0,
+        "peakDbfs": -300.0
+      },
+      "export": {
+        "rmsDbfs": -300.0,
+        "peakDbfs": -300.0
+      }
+    },
+    {
+      "startSec": 153.637,
+      "stem": {
+        "rmsDbfs": -300.0,
+        "peakDbfs": -300.0
+      },
+      "export": {
+        "rmsDbfs": -300.0,
+        "peakDbfs": -300.0
+      }
+    },
+    {
+      "startSec": 153.647,
+      "stem": {
+        "rmsDbfs": -300.0,
+        "peakDbfs": -300.0
+      },
+      "export": {
+        "rmsDbfs": -300.0,
+        "peakDbfs": -300.0
+      }
+    },
+    {
+      "startSec": 153.657,
+      "stem": {
+        "rmsDbfs": -300.0,
+        "peakDbfs": -300.0
+      },
+      "export": {
+        "rmsDbfs": -46.61,
+        "peakDbfs": -30.67
+      }
+    },
+    {
+      "startSec": 153.667,
+      "stem": {
+        "rmsDbfs": -300.0,
+        "peakDbfs": -300.0
+      },
+      "export": {
+        "rmsDbfs": -9.19,
+        "peakDbfs": -3.39
+      }
+    }
+  ],
+  "interpretation": "Energy and correlation bound signal, not an independently heard phoneme. Human listening remains required."
+}

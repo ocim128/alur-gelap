@@ -1,0 +1,10 @@
+{
+  "newVideo": "out/005-sabuk-ketiga/Skenario05SabukKetiga-owner-polish-master_compressed.mp4",
+  "ownerListenedVideo": "out/005-sabuk-ketiga/Skenario05SabukKetiga-audit-rework-v2-master_compressed.mp4",
+  "comparisonStartSec": 151.0,
+  "pcmBytesIdentical": true,
+  "decodedCorrelation": 0.9996732148917474,
+  "decodedDifferenceRmsDbfs": -46.89750829424496,
+  "decodedDifferencePeakDbfs": -12.012908065479895,
+  "note": "The owner\u2019s listening decision applies to the earlier review copy; this reports technical comparison for the new encoding."
+}

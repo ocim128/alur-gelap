@@ -1,0 +1,2246 @@
+[
+  {
+    "startMs": 0.0,
+    "endMs": 1600.0,
+    "speaker": "NARATOR",
+    "words": [
+      {
+        "text": "TIGA",
+        "color": "white",
+        "startMs": 0.0,
+        "endMs": 600.0
+      },
+      {
+        "text": "SABUK",
+        "color": "yellow",
+        "startMs": 600.0,
+        "endMs": 1000.0
+      },
+      {
+        "text": "TERPASANG,",
+        "color": "white",
+        "startMs": 1000.0,
+        "endMs": 1600.0
+      }
+    ]
+  },
+  {
+    "startMs": 1933.3333333333333,
+    "endMs": 3166.6666666666665,
+    "speaker": "NARATOR",
+    "words": [
+      {
+        "text": "PENUMPANGNYA",
+        "color": "white",
+        "startMs": 1933.3333333333333,
+        "endMs": 2666.6666666666665
+      },
+      {
+        "text": "CUMA",
+        "color": "white",
+        "startMs": 2666.6666666666665,
+        "endMs": 2866.6666666666665
+      },
+      {
+        "text": "DUA,",
+        "color": "white",
+        "startMs": 2866.6666666666665,
+        "endMs": 3166.6666666666665
+      }
+    ]
+  },
+  {
+    "startMs": 3500.0,
+    "endMs": 5700.0,
+    "speaker": "NARATOR",
+    "words": [
+      {
+        "text": "HELI",
+        "color": "white",
+        "startMs": 3500.0,
+        "endMs": 3900.0
+      },
+      {
+        "text": "KECIL",
+        "color": "white",
+        "startMs": 3900.0,
+        "endMs": 4333.333333333333
+      },
+      {
+        "text": "NYANGKUT",
+        "color": "white",
+        "startMs": 4333.333333333333,
+        "endMs": 5500.0
+      },
+      {
+        "text": "DI",
+        "color": "white",
+        "startMs": 5500.0,
+        "endMs": 5700.0
+      }
+    ]
+  },
+  {
+    "startMs": 5700.0,
+    "endMs": 6633.333333333333,
+    "speaker": "NARATOR",
+    "words": [
+      {
+        "text": "ATAS",
+        "color": "white",
+        "startMs": 5700.0,
+        "endMs": 5933.333333333333
+      },
+      {
+        "text": "LAUT",
+        "color": "white",
+        "startMs": 5933.333333333333,
+        "endMs": 6166.666666666667
+      },
+      {
+        "text": "AWAN,",
+        "color": "white",
+        "startMs": 6166.666666666667,
+        "endMs": 6633.333333333333
+      }
+    ]
+  },
+  {
+    "startMs": 6966.666666666667,
+    "endMs": 7700.0,
+    "speaker": "NARATOR",
+    "words": [
+      {
+        "text": "TENGAH",
+        "color": "white",
+        "startMs": 6966.666666666667,
+        "endMs": 7200.0
+      },
+      {
+        "text": "MALAM.",
+        "color": "white",
+        "startMs": 7200.0,
+        "endMs": 7700.0
+      }
+    ]
+  },
+  {
+    "startMs": 8066.666666666667,
+    "endMs": 8900.0,
+    "speaker": "NARATOR",
+    "words": [
+      {
+        "text": "DI",
+        "color": "white",
+        "startMs": 8066.666666666667,
+        "endMs": 8333.333333333334
+      },
+      {
+        "text": "BAWAH,",
+        "color": "white",
+        "startMs": 8333.333333333334,
+        "endMs": 8900.0
+      }
+    ]
+  },
+  {
+    "startMs": 9200.0,
+    "endMs": 10500.0,
+    "speaker": "NARATOR",
+    "words": [
+      {
+        "text": "AWAN",
+        "color": "white",
+        "startMs": 9200.0,
+        "endMs": 9500.0
+      },
+      {
+        "text": "NUTUPIN",
+        "color": "white",
+        "startMs": 9500.0,
+        "endMs": 10066.666666666666
+      },
+      {
+        "text": "GUNUNG,",
+        "color": "white",
+        "startMs": 10066.666666666666,
+        "endMs": 10500.0
+      }
+    ]
+  },
+  {
+    "startMs": 10800.0,
+    "endMs": 12500.0,
+    "speaker": "NARATOR",
+    "words": [
+      {
+        "text": "UJUNG",
+        "color": "white",
+        "startMs": 10800.0,
+        "endMs": 11133.333333333334
+      },
+      {
+        "text": "SATU",
+        "color": "white",
+        "startMs": 11133.333333333334,
+        "endMs": 11500.0
+      },
+      {
+        "text": "PUNCAK",
+        "color": "white",
+        "startMs": 11500.0,
+        "endMs": 11933.333333333334
+      },
+      {
+        "text": "NEMBUS",
+        "color": "white",
+        "startMs": 11933.333333333334,
+        "endMs": 12500.0
+      }
+    ]
+  },
+  {
+    "startMs": 12500.0,
+    "endMs": 12900.0,
+    "speaker": "NARATOR",
+    "words": [
+      {
+        "text": "DIKIT,",
+        "color": "white",
+        "startMs": 12500.0,
+        "endMs": 12900.0
+      }
+    ]
+  },
+  {
+    "startMs": 13233.333333333334,
+    "endMs": 15166.666666666666,
+    "speaker": "NARATOR",
+    "words": [
+      {
+        "text": "RADIO",
+        "color": "white",
+        "startMs": 13233.333333333334,
+        "endMs": 13866.666666666666
+      },
+      {
+        "text": "CUMA",
+        "color": "white",
+        "startMs": 13866.666666666666,
+        "endMs": 14600.0
+      },
+      {
+        "text": "DESIS.",
+        "color": "white",
+        "startMs": 14600.0,
+        "endMs": 15166.666666666666
+      }
+    ]
+  },
+  {
+    "startMs": 15600.0,
+    "endMs": 16266.666666666666,
+    "speaker": "NARATOR",
+    "words": [
+      {
+        "text": "DI",
+        "color": "white",
+        "startMs": 15600.0,
+        "endMs": 15766.666666666666
+      },
+      {
+        "text": "BELAKANG,",
+        "color": "white",
+        "startMs": 15766.666666666666,
+        "endMs": 16266.666666666666
+      }
+    ]
+  },
+  {
+    "startMs": 16666.666666666668,
+    "endMs": 18900.0,
+    "speaker": "NARATOR",
+    "words": [
+      {
+        "text": "SABUK",
+        "color": "yellow",
+        "startMs": 16666.666666666668,
+        "endMs": 17100.0
+      },
+      {
+        "text": "KETIGA",
+        "color": "yellow",
+        "startMs": 17100.0,
+        "endMs": 17533.333333333332
+      },
+      {
+        "text": "KENCENG",
+        "color": "white",
+        "startMs": 17533.333333333332,
+        "endMs": 18266.666666666668
+      },
+      {
+        "text": "NGELILIT",
+        "color": "white",
+        "startMs": 18266.666666666668,
+        "endMs": 18900.0
+      }
+    ]
+  },
+  {
+    "startMs": 18900.0,
+    "endMs": 19766.666666666668,
+    "speaker": "NARATOR",
+    "words": [
+      {
+        "text": "KURSI",
+        "color": "white",
+        "startMs": 18900.0,
+        "endMs": 19300.0
+      },
+      {
+        "text": "KOSONG,",
+        "color": "white",
+        "startMs": 19300.0,
+        "endMs": 19766.666666666668
+      }
+    ]
+  },
+  {
+    "startMs": 20100.0,
+    "endMs": 21800.0,
+    "speaker": "NARATOR",
+    "words": [
+      {
+        "text": "MEPET",
+        "color": "white",
+        "startMs": 20100.0,
+        "endMs": 20433.333333333332
+      },
+      {
+        "text": "PINTU",
+        "color": "yellow",
+        "startMs": 20433.333333333332,
+        "endMs": 20900.0
+      },
+      {
+        "text": "GESER",
+        "color": "white",
+        "startMs": 20900.0,
+        "endMs": 21266.666666666668
+      },
+      {
+        "text": "LONGGAR,",
+        "color": "white",
+        "startMs": 21266.666666666668,
+        "endMs": 21800.0
+      }
+    ]
+  },
+  {
+    "startMs": 22266.666666666668,
+    "endMs": 23200.0,
+    "speaker": "NARATOR",
+    "words": [
+      {
+        "text": "RELNYA",
+        "color": "white",
+        "startMs": 22266.666666666668,
+        "endMs": 22766.666666666668
+      },
+      {
+        "text": "BENGKOK.",
+        "color": "white",
+        "startMs": 22766.666666666668,
+        "endMs": 23200.0
+      }
+    ]
+  },
+  {
+    "startMs": 23500.0,
+    "endMs": 25833.333333333332,
+    "speaker": "NARATOR",
+    "words": [
+      {
+        "text": "COPILOT",
+        "color": "white",
+        "startMs": 23500.0,
+        "endMs": 24000.0
+      },
+      {
+        "text": "TERIKAT",
+        "color": "white",
+        "startMs": 24000.0,
+        "endMs": 24866.666666666668
+      },
+      {
+        "text": "RAPAT",
+        "color": "white",
+        "startMs": 24866.666666666668,
+        "endMs": 25433.333333333332
+      },
+      {
+        "text": "DI",
+        "color": "white",
+        "startMs": 25433.333333333332,
+        "endMs": 25833.333333333332
+      }
+    ]
+  },
+  {
+    "startMs": 25833.333333333332,
+    "endMs": 26566.666666666668,
+    "speaker": "NARATOR",
+    "words": [
+      {
+        "text": "KURSI",
+        "color": "white",
+        "startMs": 25833.333333333332,
+        "endMs": 26266.666666666668
+      },
+      {
+        "text": "KIRI.",
+        "color": "white",
+        "startMs": 26266.666666666668,
+        "endMs": 26566.666666666668
+      }
+    ]
+  },
+  {
+    "startMs": 26566.666666666668,
+    "endMs": 27666.666666666668,
+    "speaker": "NARATOR",
+    "words": [
+      {
+        "text": "DIA",
+        "color": "white",
+        "startMs": 26566.666666666668,
+        "endMs": 27266.666666666668
+      },
+      {
+        "text": "BILANG,",
+        "color": "white",
+        "startMs": 27266.666666666668,
+        "endMs": 27666.666666666668
+      }
+    ]
+  },
+  {
+    "startMs": 28066.666666666668,
+    "endMs": 29566.666666666668,
+    "speaker": "NARATOR",
+    "words": [
+      {
+        "text": "ANGIN",
+        "color": "white",
+        "startMs": 28066.666666666668,
+        "endMs": 28500.0
+      },
+      {
+        "text": "GUNUNG",
+        "color": "white",
+        "startMs": 28500.0,
+        "endMs": 28866.666666666668
+      },
+      {
+        "text": "SUKA",
+        "color": "white",
+        "startMs": 28866.666666666668,
+        "endMs": 29233.333333333332
+      },
+      {
+        "text": "BOLONG.",
+        "color": "white",
+        "startMs": 29233.333333333332,
+        "endMs": 29566.666666666668
+      }
+    ]
+  },
+  {
+    "startMs": 30066.666666666668,
+    "endMs": 30600.0,
+    "speaker": "NARATOR",
+    "words": [
+      {
+        "text": "BENERAN,",
+        "color": "white",
+        "startMs": 30066.666666666668,
+        "endMs": 30600.0
+      }
+    ]
+  },
+  {
+    "startMs": 31066.666666666668,
+    "endMs": 32100.0,
+    "speaker": "NARATOR",
+    "words": [
+      {
+        "text": "HELI",
+        "color": "white",
+        "startMs": 31066.666666666668,
+        "endMs": 31333.333333333332
+      },
+      {
+        "text": "ANJLOK",
+        "color": "white",
+        "startMs": 31333.333333333332,
+        "endMs": 31866.666666666668
+      },
+      {
+        "text": "SEKALI.",
+        "color": "white",
+        "startMs": 31866.666666666668,
+        "endMs": 32100.0
+      }
+    ]
+  },
+  {
+    "startMs": 32400.0,
+    "endMs": 33966.666666666664,
+    "speaker": "NARATOR",
+    "words": [
+      {
+        "text": "KAMU",
+        "color": "white",
+        "startMs": 32400.0,
+        "endMs": 32800.0
+      },
+      {
+        "text": "GANTI",
+        "color": "white",
+        "startMs": 32800.0,
+        "endMs": 33100.0
+      },
+      {
+        "text": "PEGANGAN",
+        "color": "yellow",
+        "startMs": 33100.0,
+        "endMs": 33566.666666666664
+      },
+      {
+        "text": "TUAS",
+        "color": "white",
+        "startMs": 33566.666666666664,
+        "endMs": 33966.666666666664
+      }
+    ]
+  },
+  {
+    "startMs": 33966.666666666664,
+    "endMs": 34366.666666666664,
+    "speaker": "NARATOR",
+    "words": [
+      {
+        "text": "KEMUDI.",
+        "color": "white",
+        "startMs": 33966.666666666664,
+        "endMs": 34366.666666666664
+      }
+    ]
+  },
+  {
+    "startMs": 34866.666666666664,
+    "endMs": 36266.666666666664,
+    "speaker": "NARATOR",
+    "words": [
+      {
+        "text": "KANCING",
+        "color": "white",
+        "startMs": 34866.666666666664,
+        "endMs": 35300.0
+      },
+      {
+        "text": "SABUK",
+        "color": "yellow",
+        "startMs": 35300.0,
+        "endMs": 35700.0
+      },
+      {
+        "text": "KETIGA,",
+        "color": "yellow",
+        "startMs": 35700.0,
+        "endMs": 36266.666666666664
+      }
+    ]
+  },
+  {
+    "startMs": 36766.666666666664,
+    "endMs": 37500.0,
+    "speaker": "NARATOR",
+    "words": [
+      {
+        "text": "IKUT",
+        "color": "white",
+        "startMs": 36766.666666666664,
+        "endMs": 37000.0
+      },
+      {
+        "text": "GESER.",
+        "color": "white",
+        "startMs": 37000.0,
+        "endMs": 37500.0
+      }
+    ]
+  },
+  {
+    "startMs": 37833.333333333336,
+    "endMs": 39000.0,
+    "speaker": "NARATOR",
+    "words": [
+      {
+        "text": "TELAT",
+        "color": "yellow",
+        "startMs": 37833.333333333336,
+        "endMs": 38233.333333333336
+      },
+      {
+        "text": "SATU",
+        "color": "white",
+        "startMs": 38233.333333333336,
+        "endMs": 38700.0
+      },
+      {
+        "text": "KETUKAN.",
+        "color": "white",
+        "startMs": 38700.0,
+        "endMs": 39000.0
+      }
+    ]
+  },
+  {
+    "startMs": 39400.0,
+    "endMs": 41233.333333333336,
+    "speaker": "NARATOR",
+    "words": [
+      {
+        "text": "SUARA",
+        "color": "white",
+        "startMs": 39400.0,
+        "endMs": 39966.666666666664
+      },
+      {
+        "text": "MENARA",
+        "color": "white",
+        "startMs": 39966.666666666664,
+        "endMs": 40533.333333333336
+      },
+      {
+        "text": "RADIO",
+        "color": "white",
+        "startMs": 40533.333333333336,
+        "endMs": 40966.666666666664
+      },
+      {
+        "text": "MASUK.",
+        "color": "white",
+        "startMs": 40966.666666666664,
+        "endMs": 41233.333333333336
+      }
+    ]
+  },
+  {
+    "startMs": 41566.666666666664,
+    "endMs": 41966.666666666664,
+    "speaker": "NARATOR",
+    "words": [
+      {
+        "text": "TENANG,",
+        "color": "white",
+        "startMs": 41566.666666666664,
+        "endMs": 41966.666666666664
+      }
+    ]
+  },
+  {
+    "startMs": 42266.666666666664,
+    "endMs": 42766.666666666664,
+    "speaker": "NARATOR",
+    "words": [
+      {
+        "text": "JERNIH.",
+        "color": "white",
+        "startMs": 42266.666666666664,
+        "endMs": 42766.666666666664
+      }
+    ]
+  },
+  {
+    "startMs": 42800,
+    "endMs": 45420,
+    "speaker": "MENARA RADIO",
+    "words": [
+      {
+        "text": "TURUN,",
+        "color": "yellow"
+      },
+      {
+        "text": "LEWATIN",
+        "color": "yellow"
+      },
+      {
+        "text": "AWAN,",
+        "color": "yellow"
+      }
+    ]
+  },
+  {
+    "startMs": 45720,
+    "endMs": 46780,
+    "speaker": "MENARA RADIO",
+    "words": [
+      {
+        "text": "IZIN",
+        "color": "yellow"
+      },
+      {
+        "text": "DARURAT.",
+        "color": "yellow"
+      }
+    ]
+  },
+  {
+    "startMs": 46966.666666666664,
+    "endMs": 48233.333333333336,
+    "speaker": "NARATOR",
+    "words": [
+      {
+        "text": "INSTINGMU",
+        "color": "white",
+        "startMs": 46966.666666666664,
+        "endMs": 47600.0
+      },
+      {
+        "text": "PATUH.",
+        "color": "white",
+        "startMs": 47600.0,
+        "endMs": 48233.333333333336
+      }
+    ]
+  },
+  {
+    "startMs": 48566.666666666664,
+    "endMs": 50266.666666666664,
+    "speaker": "NARATOR",
+    "words": [
+      {
+        "text": "HELI",
+        "color": "white",
+        "startMs": 48566.666666666664,
+        "endMs": 49000.0
+      },
+      {
+        "text": "MIRING",
+        "color": "white",
+        "startMs": 49000.0,
+        "endMs": 49400.0
+      },
+      {
+        "text": "MASUK",
+        "color": "white",
+        "startMs": 49400.0,
+        "endMs": 49766.666666666664
+      },
+      {
+        "text": "AWAN.",
+        "color": "white",
+        "startMs": 49766.666666666664,
+        "endMs": 50266.666666666664
+      }
+    ]
+  },
+  {
+    "startMs": 50266.666666666664,
+    "endMs": 53266.666666666664,
+    "speaker": "NARATOR",
+    "words": [
+      {
+        "text": "BALING-BALING",
+        "color": "white",
+        "startMs": 50266.666666666664,
+        "endMs": 51766.666666666664
+      },
+      {
+        "text": "EKOR",
+        "color": "white",
+        "startMs": 51766.666666666664,
+        "endMs": 52200.0
+      },
+      {
+        "text": "NYANGKUT",
+        "color": "white",
+        "startMs": 52200.0,
+        "endMs": 52866.666666666664
+      },
+      {
+        "text": "PUNGGUNG",
+        "color": "white",
+        "startMs": 52866.666666666664,
+        "endMs": 53266.666666666664
+      }
+    ]
+  },
+  {
+    "startMs": 53266.666666666664,
+    "endMs": 53700.0,
+    "speaker": "NARATOR",
+    "words": [
+      {
+        "text": "GUNUNG,",
+        "color": "white",
+        "startMs": 53266.666666666664,
+        "endMs": 53700.0
+      }
+    ]
+  },
+  {
+    "startMs": 53966.666666666664,
+    "endMs": 55166.666666666664,
+    "speaker": "NARATOR",
+    "words": [
+      {
+        "text": "MUTER",
+        "color": "white",
+        "startMs": 53966.666666666664,
+        "endMs": 54666.666666666664
+      },
+      {
+        "text": "LIAR,",
+        "color": "white",
+        "startMs": 54666.666666666664,
+        "endMs": 55166.666666666664
+      }
+    ]
+  },
+  {
+    "startMs": 55500.0,
+    "endMs": 56666.666666666664,
+    "speaker": "NARATOR",
+    "words": [
+      {
+        "text": "DITELEN",
+        "color": "white",
+        "startMs": 55500.0,
+        "endMs": 56100.0
+      },
+      {
+        "text": "KABUT,",
+        "color": "white",
+        "startMs": 56100.0,
+        "endMs": 56666.666666666664
+      }
+    ]
+  },
+  {
+    "startMs": 57100.0,
+    "endMs": 57800.0,
+    "speaker": "NARATOR",
+    "words": [
+      {
+        "text": "TAMAT.",
+        "color": "red",
+        "startMs": 57100.0,
+        "endMs": 57800.0
+      }
+    ]
+  },
+  {
+    "startMs": 58200.0,
+    "endMs": 59000.0,
+    "speaker": "NARATOR",
+    "words": [
+      {
+        "text": "BALIK",
+        "color": "white",
+        "startMs": 58200.0,
+        "endMs": 58700.0
+      },
+      {
+        "text": "LAGI,",
+        "color": "white",
+        "startMs": 58700.0,
+        "endMs": 59000.0
+      }
+    ]
+  },
+  {
+    "startMs": 59500.0,
+    "endMs": 61100.0,
+    "speaker": "NARATOR",
+    "words": [
+      {
+        "text": "COPILOT",
+        "color": "white",
+        "startMs": 59500.0,
+        "endMs": 60000.0
+      },
+      {
+        "text": "BUKA",
+        "color": "yellow",
+        "startMs": 60000.0,
+        "endMs": 60500.0
+      },
+      {
+        "text": "SABUKNYA,",
+        "color": "white",
+        "startMs": 60500.0,
+        "endMs": 61100.0
+      }
+    ]
+  },
+  {
+    "startMs": 61400.0,
+    "endMs": 62733.333333333336,
+    "speaker": "NARATOR",
+    "words": [
+      {
+        "text": "MAU",
+        "color": "white",
+        "startMs": 61400.0,
+        "endMs": 61633.333333333336
+      },
+      {
+        "text": "CEK",
+        "color": "white",
+        "startMs": 61633.333333333336,
+        "endMs": 61900.0
+      },
+      {
+        "text": "KURSI",
+        "color": "white",
+        "startMs": 61900.0,
+        "endMs": 62333.333333333336
+      },
+      {
+        "text": "BELAKANG.",
+        "color": "white",
+        "startMs": 62333.333333333336,
+        "endMs": 62733.333333333336
+      }
+    ]
+  },
+  {
+    "startMs": 63066.666666666664,
+    "endMs": 63500.0,
+    "speaker": "NARATOR",
+    "words": [
+      {
+        "text": "NYELIP,",
+        "color": "white",
+        "startMs": 63066.666666666664,
+        "endMs": 63500.0
+      }
+    ]
+  },
+  {
+    "startMs": 63833.333333333336,
+    "endMs": 64900.0,
+    "speaker": "NARATOR",
+    "words": [
+      {
+        "text": "HILANG",
+        "color": "white",
+        "startMs": 63833.333333333336,
+        "endMs": 64233.333333333336
+      },
+      {
+        "text": "DARI",
+        "color": "white",
+        "startMs": 64233.333333333336,
+        "endMs": 64466.666666666664
+      },
+      {
+        "text": "PANDANGAN.",
+        "color": "white",
+        "startMs": 64466.666666666664,
+        "endMs": 64900.0
+      }
+    ]
+  },
+  {
+    "startMs": 65200.0,
+    "endMs": 67100.0,
+    "speaker": "NARATOR",
+    "words": [
+      {
+        "text": "SUARA",
+        "color": "white",
+        "startMs": 65200.0,
+        "endMs": 65633.33333333333
+      },
+      {
+        "text": "COPILOT,",
+        "color": "white",
+        "startMs": 65633.33333333333,
+        "endMs": 66100.0
+      },
+      {
+        "text": "MANGGIL",
+        "color": "white",
+        "startMs": 66300.0,
+        "endMs": 66900.0
+      },
+      {
+        "text": "DARI",
+        "color": "white",
+        "startMs": 66900.0,
+        "endMs": 67100.0
+      }
+    ]
+  },
+  {
+    "startMs": 67100.0,
+    "endMs": 67700.0,
+    "speaker": "NARATOR",
+    "words": [
+      {
+        "text": "BALIK",
+        "color": "white",
+        "startMs": 67100.0,
+        "endMs": 67366.66666666667
+      },
+      {
+        "text": "KURSI,",
+        "color": "white",
+        "startMs": 67366.66666666667,
+        "endMs": 67700.0
+      }
+    ]
+  },
+  {
+    "startMs": 68200.0,
+    "endMs": 69866.66666666667,
+    "speaker": "NARATOR",
+    "words": [
+      {
+        "text": "YANG",
+        "color": "white",
+        "startMs": 68200.0,
+        "endMs": 68400.0
+      },
+      {
+        "text": "BALIK",
+        "color": "white",
+        "startMs": 68400.0,
+        "endMs": 68900.0
+      },
+      {
+        "text": "TELAT",
+        "color": "yellow",
+        "startMs": 68900.0,
+        "endMs": 69533.33333333333
+      },
+      {
+        "text": "SATU",
+        "color": "white",
+        "startMs": 69533.33333333333,
+        "endMs": 69866.66666666667
+      }
+    ]
+  },
+  {
+    "startMs": 69866.66666666667,
+    "endMs": 70266.66666666667,
+    "speaker": "NARATOR",
+    "words": [
+      {
+        "text": "KETUKAN.",
+        "color": "white",
+        "startMs": 69866.66666666667,
+        "endMs": 70266.66666666667
+      }
+    ]
+  },
+  {
+    "startMs": 70566.66666666667,
+    "endMs": 71666.66666666667,
+    "speaker": "NARATOR",
+    "words": [
+      {
+        "text": "NGGAK",
+        "color": "white",
+        "startMs": 70566.66666666667,
+        "endMs": 70866.66666666667
+      },
+      {
+        "text": "MIRIP",
+        "color": "white",
+        "startMs": 70866.66666666667,
+        "endMs": 71400.0
+      },
+      {
+        "text": "DIA,",
+        "color": "white",
+        "startMs": 71400.0,
+        "endMs": 71666.66666666667
+      }
+    ]
+  },
+  {
+    "startMs": 72000.0,
+    "endMs": 72466.66666666667,
+    "speaker": "NARATOR",
+    "words": [
+      {
+        "text": "TAMAT.",
+        "color": "red",
+        "startMs": 72000.0,
+        "endMs": 72466.66666666667
+      }
+    ]
+  },
+  {
+    "startMs": 72900.0,
+    "endMs": 74666.66666666667,
+    "speaker": "NARATOR",
+    "words": [
+      {
+        "text": "INSTING",
+        "color": "white",
+        "startMs": 72900.0,
+        "endMs": 73933.33333333333
+      },
+      {
+        "text": "TERAKHIR,",
+        "color": "white",
+        "startMs": 73933.33333333333,
+        "endMs": 74666.66666666667
+      }
+    ]
+  },
+  {
+    "startMs": 75166.66666666667,
+    "endMs": 76633.33333333333,
+    "speaker": "NARATOR",
+    "words": [
+      {
+        "text": "BUKA",
+        "color": "yellow",
+        "startMs": 75166.66666666667,
+        "endMs": 75733.33333333333
+      },
+      {
+        "text": "SABUKMU",
+        "color": "white",
+        "startMs": 75733.33333333333,
+        "endMs": 76300.0
+      },
+      {
+        "text": "SENDIRI.",
+        "color": "white",
+        "startMs": 76300.0,
+        "endMs": 76633.33333333333
+      }
+    ]
+  },
+  {
+    "startMs": 76933.33333333333,
+    "endMs": 78033.33333333333,
+    "speaker": "NARATOR",
+    "words": [
+      {
+        "text": "SABUKMU",
+        "color": "white",
+        "startMs": 76933.33333333333,
+        "endMs": 77600.0
+      },
+      {
+        "text": "KEBUKA,",
+        "color": "white",
+        "startMs": 77600.0,
+        "endMs": 78033.33333333333
+      }
+    ]
+  },
+  {
+    "startMs": 78700.0,
+    "endMs": 80300.0,
+    "speaker": "NARATOR",
+    "words": [
+      {
+        "text": "SATU",
+        "color": "white",
+        "startMs": 78700.0,
+        "endMs": 79233.33333333333
+      },
+      {
+        "text": "KETUKAN",
+        "color": "white",
+        "startMs": 79233.33333333333,
+        "endMs": 79700.0
+      },
+      {
+        "text": "KEMUDIAN.",
+        "color": "white",
+        "startMs": 79700.0,
+        "endMs": 80300.0
+      }
+    ]
+  },
+  {
+    "startMs": 80633.33333333333,
+    "endMs": 81766.66666666667,
+    "speaker": "NARATOR",
+    "words": [
+      {
+        "text": "SABUK",
+        "color": "yellow",
+        "startMs": 80633.33333333333,
+        "endMs": 81200.0
+      },
+      {
+        "text": "KETIGA,",
+        "color": "yellow",
+        "startMs": 81200.0,
+        "endMs": 81766.66666666667
+      }
+    ]
+  },
+  {
+    "startMs": 82100.0,
+    "endMs": 82833.33333333333,
+    "speaker": "NARATOR",
+    "words": [
+      {
+        "text": "KEBUKA",
+        "color": "white",
+        "startMs": 82100.0,
+        "endMs": 82466.66666666667
+      },
+      {
+        "text": "SENDIRI.",
+        "color": "white",
+        "startMs": 82466.66666666667,
+        "endMs": 82833.33333333333
+      }
+    ]
+  },
+  {
+    "startMs": 83333.33333333333,
+    "endMs": 84433.33333333333,
+    "speaker": "NARATOR",
+    "words": [
+      {
+        "text": "UDARA",
+        "color": "white",
+        "startMs": 83333.33333333333,
+        "endMs": 83800.0
+      },
+      {
+        "text": "BOLONG,",
+        "color": "white",
+        "startMs": 83800.0,
+        "endMs": 84433.33333333333
+      }
+    ]
+  },
+  {
+    "startMs": 84766.66666666667,
+    "endMs": 86266.66666666667,
+    "speaker": "NARATOR",
+    "words": [
+      {
+        "text": "HELI",
+        "color": "white",
+        "startMs": 84766.66666666667,
+        "endMs": 85233.33333333333
+      },
+      {
+        "text": "ANJLOK",
+        "color": "white",
+        "startMs": 85233.33333333333,
+        "endMs": 85900.0
+      },
+      {
+        "text": "DALAM.",
+        "color": "white",
+        "startMs": 85900.0,
+        "endMs": 86266.66666666667
+      }
+    ]
+  },
+  {
+    "startMs": 86600.0,
+    "endMs": 87533.33333333333,
+    "speaker": "NARATOR",
+    "words": [
+      {
+        "text": "KAMU",
+        "color": "white",
+        "startMs": 86600.0,
+        "endMs": 86966.66666666667
+      },
+      {
+        "text": "NGGAK",
+        "color": "white",
+        "startMs": 86966.66666666667,
+        "endMs": 87133.33333333333
+      },
+      {
+        "text": "DIIKAT,",
+        "color": "white",
+        "startMs": 87133.33333333333,
+        "endMs": 87533.33333333333
+      }
+    ]
+  },
+  {
+    "startMs": 87866.66666666667,
+    "endMs": 89866.66666666667,
+    "speaker": "NARATOR",
+    "words": [
+      {
+        "text": "PANEL",
+        "color": "white",
+        "startMs": 87866.66666666667,
+        "endMs": 88133.33333333333
+      },
+      {
+        "text": "KOKPIT",
+        "color": "white",
+        "startMs": 88133.33333333333,
+        "endMs": 88733.33333333333
+      },
+      {
+        "text": "HANTAM",
+        "color": "white",
+        "startMs": 88733.33333333333,
+        "endMs": 89333.33333333333
+      },
+      {
+        "text": "BADANMU.",
+        "color": "white",
+        "startMs": 89333.33333333333,
+        "endMs": 89866.66666666667
+      }
+    ]
+  },
+  {
+    "startMs": 90200.0,
+    "endMs": 90700.0,
+    "speaker": "NARATOR",
+    "words": [
+      {
+        "text": "TAMAT,",
+        "color": "red",
+        "startMs": 90200.0,
+        "endMs": 90700.0
+      }
+    ]
+  },
+  {
+    "startMs": 92666.66666666667,
+    "endMs": 93200.0,
+    "speaker": "NARATOR",
+    "words": [
+      {
+        "text": "BALIK",
+        "color": "white",
+        "startMs": 92666.66666666667,
+        "endMs": 92966.66666666667
+      },
+      {
+        "text": "LAGI.",
+        "color": "white",
+        "startMs": 92966.66666666667,
+        "endMs": 93200.0
+      }
+    ]
+  },
+  {
+    "startMs": 93600.0,
+    "endMs": 94900.0,
+    "speaker": "NARATOR",
+    "words": [
+      {
+        "text": "NGGAK",
+        "color": "white",
+        "startMs": 93600.0,
+        "endMs": 93933.33333333333
+      },
+      {
+        "text": "ADA",
+        "color": "white",
+        "startMs": 93933.33333333333,
+        "endMs": 94233.33333333333
+      },
+      {
+        "text": "YANG",
+        "color": "white",
+        "startMs": 94233.33333333333,
+        "endMs": 94466.66666666667
+      },
+      {
+        "text": "SEMPAT",
+        "color": "white",
+        "startMs": 94466.66666666667,
+        "endMs": 94900.0
+      }
+    ]
+  },
+  {
+    "startMs": 94900.0,
+    "endMs": 95100.0,
+    "speaker": "NARATOR",
+    "words": [
+      {
+        "text": "BUKA",
+        "color": "yellow",
+        "startMs": 94900.0,
+        "endMs": 95100.0
+      }
+    ]
+  },
+  {
+    "startMs": 95166.66666666667,
+    "endMs": 95600.0,
+    "speaker": "NARATOR",
+    "words": [
+      {
+        "text": "SABUK.",
+        "color": "yellow",
+        "startMs": 95166.66666666667,
+        "endMs": 95600.0
+      }
+    ]
+  },
+  {
+    "startMs": 95900.0,
+    "endMs": 96366.66666666667,
+    "speaker": "NARATOR",
+    "words": [
+      {
+        "text": "PERHATIIN,",
+        "color": "white",
+        "startMs": 95900.0,
+        "endMs": 96366.66666666667
+      }
+    ]
+  },
+  {
+    "startMs": 96700.0,
+    "endMs": 99000.0,
+    "speaker": "NARATOR",
+    "words": [
+      {
+        "text": "DIA",
+        "color": "white",
+        "startMs": 96700.0,
+        "endMs": 96933.33333333333
+      },
+      {
+        "text": "NIRU",
+        "color": "white",
+        "startMs": 96933.33333333333,
+        "endMs": 97433.33333333333
+      },
+      {
+        "text": "KAMU",
+        "color": "white",
+        "startMs": 97433.33333333333,
+        "endMs": 97800.0
+      },
+      {
+        "text": "TELAT",
+        "color": "yellow",
+        "startMs": 97800.0,
+        "endMs": 99000.0
+      }
+    ]
+  },
+  {
+    "startMs": 99000.0,
+    "endMs": 99666.66666666667,
+    "speaker": "NARATOR",
+    "words": [
+      {
+        "text": "SATU",
+        "color": "white",
+        "startMs": 99000.0,
+        "endMs": 99266.66666666667
+      },
+      {
+        "text": "KETUKAN.",
+        "color": "white",
+        "startMs": 99266.66666666667,
+        "endMs": 99666.66666666667
+      }
+    ]
+  },
+  {
+    "startMs": 99666.66666666667,
+    "endMs": 101700.0,
+    "speaker": "NARATOR",
+    "words": [
+      {
+        "text": "NGGAK",
+        "color": "white",
+        "startMs": 99666.66666666667,
+        "endMs": 100433.33333333333
+      },
+      {
+        "text": "PERNAH",
+        "color": "white",
+        "startMs": 100433.33333333333,
+        "endMs": 101333.33333333333
+      },
+      {
+        "text": "DULUAN.",
+        "color": "white",
+        "startMs": 101333.33333333333,
+        "endMs": 101700.0
+      }
+    ]
+  },
+  {
+    "startMs": 102033.33333333333,
+    "endMs": 102433.33333333333,
+    "speaker": "NARATOR",
+    "words": [
+      {
+        "text": "ITU",
+        "color": "white",
+        "startMs": 102033.33333333333,
+        "endMs": 102433.33333333333
+      }
+    ]
+  },
+  {
+    "startMs": 102600.0,
+    "endMs": 103066.66666666667,
+    "speaker": "NARATOR",
+    "words": [
+      {
+        "text": "CELAHNYA.",
+        "color": "white",
+        "startMs": 102600.0,
+        "endMs": 103066.66666666667
+      }
+    ]
+  },
+  {
+    "startMs": 103366.66666666667,
+    "endMs": 104466.66666666667,
+    "speaker": "NARATOR",
+    "words": [
+      {
+        "text": "KAMU",
+        "color": "white",
+        "startMs": 103366.66666666667,
+        "endMs": 103733.33333333333
+      },
+      {
+        "text": "DESEK",
+        "color": "white",
+        "startMs": 103733.33333333333,
+        "endMs": 104066.66666666667
+      },
+      {
+        "text": "COPILOT",
+        "color": "white",
+        "startMs": 104066.66666666667,
+        "endMs": 104466.66666666667
+      }
+    ]
+  },
+  {
+    "startMs": 104800.0,
+    "endMs": 105833.33333333333,
+    "speaker": "NARATOR",
+    "words": [
+      {
+        "text": "JANGAN",
+        "color": "white",
+        "startMs": 104800.0,
+        "endMs": 105166.66666666667
+      },
+      {
+        "text": "BUKA",
+        "color": "yellow",
+        "startMs": 105166.66666666667,
+        "endMs": 105533.33333333333
+      },
+      {
+        "text": "SABUK.",
+        "color": "yellow",
+        "startMs": 105533.33333333333,
+        "endMs": 105833.33333333333
+      }
+    ]
+  },
+  {
+    "startMs": 106400.0,
+    "endMs": 106800.0,
+    "speaker": "NARATOR",
+    "words": [
+      {
+        "text": "DUDUK",
+        "color": "white",
+        "startMs": 106400.0,
+        "endMs": 106600.0
+      },
+      {
+        "text": "DIAM.",
+        "color": "white",
+        "startMs": 106600.0,
+        "endMs": 106800.0
+      }
+    ]
+  },
+  {
+    "startMs": 107133.33333333333,
+    "endMs": 108500.0,
+    "speaker": "NARATOR",
+    "words": [
+      {
+        "text": "KAMU",
+        "color": "white",
+        "startMs": 107133.33333333333,
+        "endMs": 107400.0
+      },
+      {
+        "text": "TARIK",
+        "color": "white",
+        "startMs": 107400.0,
+        "endMs": 107866.66666666667
+      },
+      {
+        "text": "PINTU",
+        "color": "yellow",
+        "startMs": 107866.66666666667,
+        "endMs": 108166.66666666667
+      },
+      {
+        "text": "GESER.",
+        "color": "white",
+        "startMs": 108166.66666666667,
+        "endMs": 108500.0
+      }
+    ]
+  },
+  {
+    "startMs": 108966.66666666667,
+    "endMs": 110133.33333333333,
+    "speaker": "NARATOR",
+    "words": [
+      {
+        "text": "RELNYA",
+        "color": "white",
+        "startMs": 108966.66666666667,
+        "endMs": 109566.66666666667
+      },
+      {
+        "text": "BENGKOK.",
+        "color": "white",
+        "startMs": 109566.66666666667,
+        "endMs": 110133.33333333333
+      }
+    ]
+  },
+  {
+    "startMs": 110600.0,
+    "endMs": 111900.0,
+    "speaker": "NARATOR",
+    "words": [
+      {
+        "text": "CUMA",
+        "color": "white",
+        "startMs": 110600.0,
+        "endMs": 110866.66666666667
+      },
+      {
+        "text": "KEBUKA",
+        "color": "white",
+        "startMs": 110866.66666666667,
+        "endMs": 111266.66666666667
+      },
+      {
+        "text": "SETENGAH.",
+        "color": "white",
+        "startMs": 111266.66666666667,
+        "endMs": 111900.0
+      }
+    ]
+  },
+  {
+    "startMs": 112200.0,
+    "endMs": 113566.66666666667,
+    "speaker": "NARATOR",
+    "words": [
+      {
+        "text": "PURA-PURA",
+        "color": "white",
+        "startMs": 112200.0,
+        "endMs": 112700.0
+      },
+      {
+        "text": "BUKA",
+        "color": "yellow",
+        "startMs": 112700.0,
+        "endMs": 113033.33333333333
+      },
+      {
+        "text": "SABUKMU.",
+        "color": "white",
+        "startMs": 113033.33333333333,
+        "endMs": 113566.66666666667
+      }
+    ]
+  },
+  {
+    "startMs": 113900.0,
+    "endMs": 115666.66666666667,
+    "speaker": "NARATOR",
+    "words": [
+      {
+        "text": "ANGKAT",
+        "color": "white",
+        "startMs": 113900.0,
+        "endMs": 114366.66666666667
+      },
+      {
+        "text": "LIDAH",
+        "color": "white",
+        "startMs": 114366.66666666667,
+        "endMs": 114666.66666666667
+      },
+      {
+        "text": "KANCINGNYA",
+        "color": "white",
+        "startMs": 114666.66666666667,
+        "endMs": 115300.0
+      },
+      {
+        "text": "SAMPAI",
+        "color": "white",
+        "startMs": 115300.0,
+        "endMs": 115666.66666666667
+      }
+    ]
+  },
+  {
+    "startMs": 115666.66666666667,
+    "endMs": 116100.0,
+    "speaker": "NARATOR",
+    "words": [
+      {
+        "text": "BUNYI.",
+        "color": "white",
+        "startMs": 115666.66666666667,
+        "endMs": 116100.0
+      }
+    ]
+  },
+  {
+    "startMs": 116433.33333333333,
+    "endMs": 117566.66666666667,
+    "speaker": "NARATOR",
+    "words": [
+      {
+        "text": "JANGAN",
+        "color": "white",
+        "startMs": 116433.33333333333,
+        "endMs": 117033.33333333333
+      },
+      {
+        "text": "DITEKAN.",
+        "color": "white",
+        "startMs": 117033.33333333333,
+        "endMs": 117566.66666666667
+      }
+    ]
+  },
+  {
+    "startMs": 117566.66666666667,
+    "endMs": 119233.33333333333,
+    "speaker": "NARATOR",
+    "words": [
+      {
+        "text": "TAHAN",
+        "color": "white",
+        "startMs": 117566.66666666667,
+        "endMs": 118500.0
+      },
+      {
+        "text": "NAPAS,",
+        "color": "white",
+        "startMs": 118500.0,
+        "endMs": 119233.33333333333
+      }
+    ]
+  },
+  {
+    "startMs": 119566.66666666667,
+    "endMs": 120700.0,
+    "speaker": "NARATOR",
+    "words": [
+      {
+        "text": "SATU",
+        "color": "white",
+        "startMs": 119566.66666666667,
+        "endMs": 120266.66666666667
+      },
+      {
+        "text": "KETUKAN,",
+        "color": "white",
+        "startMs": 120266.66666666667,
+        "endMs": 120700.0
+      }
+    ]
+  },
+  {
+    "startMs": 121533.33333333333,
+    "endMs": 122766.66666666667,
+    "speaker": "NARATOR",
+    "words": [
+      {
+        "text": "SABUK",
+        "color": "yellow",
+        "startMs": 121533.33333333333,
+        "endMs": 122133.33333333333
+      },
+      {
+        "text": "KETIGA,",
+        "color": "yellow",
+        "startMs": 122133.33333333333,
+        "endMs": 122766.66666666667
+      }
+    ]
+  },
+  {
+    "startMs": 123200.0,
+    "endMs": 124000.0,
+    "speaker": "NARATOR",
+    "words": [
+      {
+        "text": "KEBUKA",
+        "color": "white",
+        "startMs": 123200.0,
+        "endMs": 123666.66666666667
+      },
+      {
+        "text": "SENDIRI.",
+        "color": "white",
+        "startMs": 123666.66666666667,
+        "endMs": 124000.0
+      }
+    ]
+  },
+  {
+    "startMs": 124433.33333333333,
+    "endMs": 125366.66666666667,
+    "speaker": "NARATOR",
+    "words": [
+      {
+        "text": "SAAT",
+        "color": "white",
+        "startMs": 124433.33333333333,
+        "endMs": 125000.0
+      },
+      {
+        "text": "ITU,",
+        "color": "white",
+        "startMs": 125000.0,
+        "endMs": 125366.66666666667
+      }
+    ]
+  },
+  {
+    "startMs": 125666.66666666667,
+    "endMs": 128400.0,
+    "speaker": "NARATOR",
+    "words": [
+      {
+        "text": "TANCEP",
+        "color": "white",
+        "startMs": 125666.66666666667,
+        "endMs": 126333.33333333333
+      },
+      {
+        "text": "TUAS",
+        "color": "white",
+        "startMs": 126333.33333333333,
+        "endMs": 126766.66666666667
+      },
+      {
+        "text": "KEMUDI",
+        "color": "white",
+        "startMs": 126766.66666666667,
+        "endMs": 127266.66666666667
+      },
+      {
+        "text": "SEKERAS-KERASNYA.",
+        "color": "white",
+        "startMs": 127266.66666666667,
+        "endMs": 128400.0
+      }
+    ]
+  },
+  {
+    "startMs": 128700.0,
+    "endMs": 130333.33333333333,
+    "speaker": "NARATOR",
+    "words": [
+      {
+        "text": "HELI",
+        "color": "white",
+        "startMs": 128700.0,
+        "endMs": 129266.66666666667
+      },
+      {
+        "text": "MIRING",
+        "color": "white",
+        "startMs": 129266.66666666667,
+        "endMs": 129766.66666666667
+      },
+      {
+        "text": "TAJAM,",
+        "color": "white",
+        "startMs": 129766.66666666667,
+        "endMs": 130333.33333333333
+      }
+    ]
+  },
+  {
+    "startMs": 130666.66666666667,
+    "endMs": 131433.33333333334,
+    "speaker": "NARATOR",
+    "words": [
+      {
+        "text": "YANG",
+        "color": "white",
+        "startMs": 130666.66666666667,
+        "endMs": 130733.33333333333
+      },
+      {
+        "text": "NGGAK",
+        "color": "white",
+        "startMs": 130733.33333333333,
+        "endMs": 130966.66666666667
+      },
+      {
+        "text": "DIIKAT,",
+        "color": "white",
+        "startMs": 130966.66666666667,
+        "endMs": 131433.33333333334
+      }
+    ]
+  },
+  {
+    "startMs": 131766.66666666666,
+    "endMs": 133600.0,
+    "speaker": "NARATOR",
+    "words": [
+      {
+        "text": "TERLEMPAR",
+        "color": "white",
+        "startMs": 131766.66666666666,
+        "endMs": 132466.66666666666
+      },
+      {
+        "text": "KELUAR",
+        "color": "yellow",
+        "startMs": 132466.66666666666,
+        "endMs": 132866.66666666666
+      },
+      {
+        "text": "PINTU",
+        "color": "yellow",
+        "startMs": 132866.66666666666,
+        "endMs": 133266.66666666666
+      },
+      {
+        "text": "GESER.",
+        "color": "white",
+        "startMs": 133266.66666666666,
+        "endMs": 133600.0
+      }
+    ]
+  },
+  {
+    "startMs": 134033.33333333334,
+    "endMs": 135900.0,
+    "speaker": "NARATOR",
+    "words": [
+      {
+        "text": "LAUT",
+        "color": "white",
+        "startMs": 134033.33333333334,
+        "endMs": 134400.0
+      },
+      {
+        "text": "AWAN",
+        "color": "white",
+        "startMs": 134400.0,
+        "endMs": 134966.66666666666
+      },
+      {
+        "text": "NUTUPIN",
+        "color": "white",
+        "startMs": 134966.66666666666,
+        "endMs": 135666.66666666666
+      },
+      {
+        "text": "DIA,",
+        "color": "white",
+        "startMs": 135666.66666666666,
+        "endMs": 135900.0
+      }
+    ]
+  },
+  {
+    "startMs": 136200.0,
+    "endMs": 138100.0,
+    "speaker": "NARATOR",
+    "words": [
+      {
+        "text": "COPILOT",
+        "color": "white",
+        "startMs": 136200.0,
+        "endMs": 136700.0
+      },
+      {
+        "text": "BANTU",
+        "color": "white",
+        "startMs": 136700.0,
+        "endMs": 137300.0
+      },
+      {
+        "text": "NARIK",
+        "color": "white",
+        "startMs": 137300.0,
+        "endMs": 137700.0
+      },
+      {
+        "text": "TUAS.",
+        "color": "white",
+        "startMs": 137700.0,
+        "endMs": 138100.0
+      }
+    ]
+  },
+  {
+    "startMs": 138400.0,
+    "endMs": 139533.33333333334,
+    "speaker": "NARATOR",
+    "words": [
+      {
+        "text": "HELI",
+        "color": "white",
+        "startMs": 138400.0,
+        "endMs": 138800.0
+      },
+      {
+        "text": "DATAR",
+        "color": "white",
+        "startMs": 138800.0,
+        "endMs": 139233.33333333334
+      },
+      {
+        "text": "LAGI,",
+        "color": "white",
+        "startMs": 139233.33333333334,
+        "endMs": 139533.33333333334
+      }
+    ]
+  },
+  {
+    "startMs": 139866.66666666666,
+    "endMs": 141600.0,
+    "speaker": "NARATOR",
+    "words": [
+      {
+        "text": "LANGIT",
+        "color": "white",
+        "startMs": 139866.66666666666,
+        "endMs": 140333.33333333334
+      },
+      {
+        "text": "PELAN-PELAN",
+        "color": "white",
+        "startMs": 140333.33333333334,
+        "endMs": 141100.0
+      },
+      {
+        "text": "CERAH.",
+        "color": "white",
+        "startMs": 141100.0,
+        "endMs": 141600.0
+      }
+    ]
+  },
+  {
+    "startMs": 141600.0,
+    "endMs": 143866.66666666666,
+    "speaker": "NARATOR",
+    "words": [
+      {
+        "text": "SABUK",
+        "color": "yellow",
+        "startMs": 141600.0,
+        "endMs": 142766.66666666666
+      },
+      {
+        "text": "KETIGA",
+        "color": "yellow",
+        "startMs": 142766.66666666666,
+        "endMs": 143233.33333333334
+      },
+      {
+        "text": "KOSONG.",
+        "color": "white",
+        "startMs": 143233.33333333334,
+        "endMs": 143866.66666666666
+      }
+    ]
+  },
+  {
+    "startMs": 144366.66666666666,
+    "endMs": 145666.66666666666,
+    "speaker": "NARATOR",
+    "words": [
+      {
+        "text": "NGGAK",
+        "color": "white",
+        "startMs": 144366.66666666666,
+        "endMs": 144766.66666666666
+      },
+      {
+        "text": "ADA",
+        "color": "white",
+        "startMs": 144766.66666666666,
+        "endMs": 145000.0
+      },
+      {
+        "text": "YANG",
+        "color": "white",
+        "startMs": 145000.0,
+        "endMs": 145166.66666666666
+      },
+      {
+        "text": "NIRU.",
+        "color": "white",
+        "startMs": 145166.66666666666,
+        "endMs": 145666.66666666666
+      }
+    ]
+  },
+  {
+    "startMs": 146066.66666666666,
+    "endMs": 147800.0,
+    "speaker": "NARATOR",
+    "words": [
+      {
+        "text": "HELI",
+        "color": "white",
+        "startMs": 146066.66666666666,
+        "endMs": 146600.0
+      },
+      {
+        "text": "MENDARAT",
+        "color": "white",
+        "startMs": 146600.0,
+        "endMs": 147100.0
+      },
+      {
+        "text": "MULUS.",
+        "color": "white",
+        "startMs": 147100.0,
+        "endMs": 147800.0
+      }
+    ]
+  },
+  {
+    "startMs": 148133.33333333334,
+    "endMs": 150400.0,
+    "speaker": "NARATOR",
+    "words": [
+      {
+        "text": "PINTU",
+        "color": "yellow",
+        "startMs": 148133.33333333334,
+        "endMs": 148566.66666666666
+      },
+      {
+        "text": "GESER",
+        "color": "white",
+        "startMs": 148566.66666666666,
+        "endMs": 149066.66666666666
+      },
+      {
+        "text": "MASIH",
+        "color": "white",
+        "startMs": 149066.66666666666,
+        "endMs": 149700.0
+      },
+      {
+        "text": "KEBUKA",
+        "color": "white",
+        "startMs": 149700.0,
+        "endMs": 150400.0
+      }
+    ]
+  },
+  {
+    "startMs": 150400.0,
+    "endMs": 151000.0,
+    "speaker": "NARATOR",
+    "words": [
+      {
+        "text": "SETENGAH.",
+        "color": "white",
+        "startMs": 150400.0,
+        "endMs": 151000.0
+      }
+    ]
+  },
+  {
+    "startMs": 151333.33333333334,
+    "endMs": 152266.66666666666,
+    "speaker": "NARATOR",
+    "words": [
+      {
+        "text": "CUMA",
+        "color": "white",
+        "startMs": 151333.33333333334,
+        "endMs": 151766.66666666666
+      },
+      {
+        "text": "ANGIN.",
+        "color": "white",
+        "startMs": 151766.66666666666,
+        "endMs": 152266.66666666666
+      }
+    ]
+  },
+  {
+    "startMs": 152666.66666666666,
+    "endMs": 154966.66666666666,
+    "speaker": "NARATOR",
+    "words": [
+      {
+        "text": "KAMU",
+        "color": "white",
+        "startMs": 152666.66666666666,
+        "endMs": 153033.33333333334
+      },
+      {
+        "text": "BERHASIL",
+        "color": "white",
+        "startMs": 153033.33333333334,
+        "endMs": 153766.66666666666
+      },
+      {
+        "text": "BERTAHAN",
+        "color": "white",
+        "startMs": 153766.66666666666,
+        "endMs": 154566.66666666666
+      },
+      {
+        "text": "HIDUP.",
+        "color": "white",
+        "startMs": 154566.66666666666,
+        "endMs": 154966.66666666666
+      }
+    ]
+  }
+]

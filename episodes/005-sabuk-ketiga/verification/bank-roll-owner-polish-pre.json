@@ -1,0 +1,28 @@
+{
+  "video": "out/005-sabuk-ketiga/Skenario05SabukKetiga-owner-polish.mp4",
+  "frames": [
+    {
+      "frame": 3770,
+      "sec": 125.66666666666667,
+      "angleDegrees": -0.005,
+      "scale": 1.0275,
+      "inlierCount": 842
+    },
+    {
+      "frame": 3832,
+      "sec": 127.73333333333333,
+      "angleDegrees": 7.155,
+      "scale": 1.25,
+      "inlierCount": 564
+    },
+    {
+      "frame": 3893,
+      "sec": 129.76666666666668,
+      "angleDegrees": 13.991,
+      "scale": 1.4691,
+      "inlierCount": 503
+    }
+  ],
+  "pass": true,
+  "limitation": "Frame registration measures plate rotation, not independent horizon movement or viewer comprehension."
+}

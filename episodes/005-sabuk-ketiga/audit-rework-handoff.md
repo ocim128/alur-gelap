@@ -1,0 +1,29 @@
+# Scenario 05 post-audit partial rework — return to Agent 05
+
+**Superseded by the owner's 23 November decision and [owner-polish handoff](owner-polish-handoff.md).** The findings below describe the preceding candidate and remain as audit history; the owner accepted the specified image exceptions and approved the ending by listening.
+
+**Status: incomplete; known audit blockers remain.** Review candidate: `out/005-sabuk-ketiga/Skenario05SabukKetiga-audit-rework-v2-master_compressed.mp4` (1080 × 1920, 30 fps, 156.437 s). Master: `out/005-sabuk-ketiga/Skenario05SabukKetiga-audit-rework-v2-master.mp4`. The candidate is intended for the human-operated orchestrator to route to Agent 05 with the unresolved items below; no new QA verdict is claimed. The prior assembly inputs are preserved in `pre-audit-revision/` and older outputs were not intentionally overwritten.
+
+## Changes and evidence
+
+- P16's fake click is at frame 3470 / 115.667 s, during the measured “bunyi”; the cut to the released third belt and release click follow 12 frames later at frame 3482 / 116.067 s. P16 depicts the pilot’s belt still fastened with its lid raised; the still already shows the raised lid, rather than animating the lift. The third-belt spoken release remains substantially later. This is a partial timing correction, not closure of the P16–P17 blocker. See [coverage/timing routing](coverage-rework-request.md).
+- P24 remains the same owner-selected image throughout the final flash and zoom, eliminating the previous change of airframe, sky and terrain due to switching to a different jolt plate. [Phone-size sampled frames](verification/audit-rework-v2-phone.png) show frames before, during and after the flash. This is frame inspection, not full real-time playback; half-open door width and the winning-branch continuity still need review.
+- The jolt moves five frames to frame 4658 / 155.267 s. The 150 ms PCM vacuum is 155.117–155.267 s, after the accepted padded stem's last nonzero sample at 155.082375 s. The narrator master is unchanged (MP3 SHA-256 `A6638C8A0C1E71E8D808160CACD1D2CD51EC74F8727524AA7E3B8B0DDCFBC416`). The rotor bed fades out by 154.900 s to avoid masking the tail. In 10 ms windows between 154.950 and 155.070 s, the compressed audio correlates with the source between approximately 0.980 and 0.994; the PCM derivative correlates approximately 1.0. This supports preservation of the measured low-level signal through the AAC, but does not identify the last phoneme or establish whether the edit sounds natural. [Signal report](verification/speech-boundary-audit-rework-v2.json); clips for human comparison: [source](verification/tail-source-audit-rework.wav) and [compressed delivery](verification/tail-delivery-audit-rework-v2.wav).
+- All three rewind intervals and the 1.5 s dread silence remain as in the earlier edit map. PCM source is zero throughout the vacuum; AAC contains codec residue, not exact digital zero. Decoded vacuum RMS is −74.47 dBFS, dread RMS −88.66 dBFS.
+
+## Remaining blockers
+
+1. P10 selected coverage shows both belts open from the beginning; it does not show the two sequential state changes. The 0.4 s clicks remain audible at 77.600 and 78.000 s, but the third-belt spoken opening starts several seconds later. It is not fixed.
+2. P16–P17 still has the accepted-narration conflict above: the rear-belt image changes about seven seconds before the narrator’s “kebuka” word. Do not treat a frame-accurate click pair as proof of full speech/action alignment.
+3. P18’s near-level interior and cloud view do not establish a physical right bank; P19’s outgoing strap follows without a sufficiently visible cause. Rotating the whole still would rotate the cabin and sky together, not prove aircraft roll.
+4. P11’s contact remains obscured. The impact sound and shake stay synchronized but do not show body-to-panel contact.
+5. P05 action visibility and half-open-door/rail continuity throughout P15–P23 remain unresolved, along with inherited rain differences. Exhausted retry decisions and the owner-approved exception remain intact.
+6. Full listening, final phoneme assessment, normal-speed phone playback, and independent Agent 05 re-audit remain open. Do not infer these from the automated measurements.
+
+The concrete request for the human-operated orchestrator, Agent 03 and Agent 02 is in [coverage-rework-request.md](coverage-rework-request.md). No replacement artwork or narration has been generated.
+
+## Verification and reproduction
+
+`npm run check` passed (35 Node tests, four Python tests). [Compressed export verification](verification/export-report-audit-rework-v2.json) passed: −14.3 LUFS, −1.9 dBTP, limited-range BT.709, 1080 × 1920 at 30 fps; all rewind snaps detected at 0 ms offset; jolt audio onset −3.146 ms relative to flash; maximum flash mean luma 137.69; blackout black. [Buckle cue correlation](verification/buckle-sync-audit-rework-v2.json) and [impact cue correlation](verification/impact-sync-audit-rework-v2.json) pass at the scheduled frames, but those tests do not prove the narrated actions or physical contact are visible.
+
+The latest Remotion picture was rendered as `Skenario05SabukKetiga-audit-rework.mp4`; the final v2 master copies that picture and replaces the audio with the latest mono PCM mix using ffmpeg (`-map 0:v:0 -map 1:a:0 -c:v copy -c:a aac -b:a 192k -ac 1 -ar 48000`), then `npm run compress -- <new-master.mp4>`. Build the inputs with `python episodes/005-sabuk-ketiga/build-assembly.py` and `python episodes/005-sabuk-ketiga/mix.py`; use fresh output names, run `npm run check`, render the composition, and rerun both cue verifiers and `verify-export.py` with fresh report paths. The source and voice rights caveats in [audio-assets.md](audio-assets.md) and [assembly-v2-handoff.md](assembly-v2-handoff.md) remain open; this is not publication approval.

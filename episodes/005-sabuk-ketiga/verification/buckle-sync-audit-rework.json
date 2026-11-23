@@ -1,0 +1,39 @@
+{
+  "video": "out/005-sabuk-ketiga/Skenario05SabukKetiga-audit-rework-master_compressed.mp4",
+  "clicks": [
+    {
+      "event": "firstClickFrame",
+      "frame": 2328,
+      "expectedSec": 77.6,
+      "detectedSec": 77.6,
+      "offsetMs": 0.0,
+      "correlation": 0.6416894197463989
+    },
+    {
+      "event": "secondClickFrame",
+      "frame": 2340,
+      "expectedSec": 78.0,
+      "detectedSec": 78.0,
+      "offsetMs": 0.0,
+      "correlation": 0.48855966329574585
+    },
+    {
+      "event": "fakeClickFrame",
+      "frame": 3470,
+      "expectedSec": 115.66666666666667,
+      "detectedSec": 115.66666666666667,
+      "offsetMs": 0.0,
+      "correlation": 0.38069063425064087
+    },
+    {
+      "event": "releaseClickFrame",
+      "frame": 3482,
+      "expectedSec": 116.06666666666666,
+      "detectedSec": 116.06666666666666,
+      "offsetMs": 0.0,
+      "correlation": 0.6456804871559143
+    }
+  ],
+  "pass": true,
+  "limitation": "Synchronization to generated cues does not establish belt-state visibility or narration alignment."
+}

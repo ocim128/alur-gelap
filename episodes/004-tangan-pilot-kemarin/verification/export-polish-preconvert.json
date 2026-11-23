@@ -1,0 +1,277 @@
+{
+  "video": "out\\skenario04-owner-polish-master_compressed.mp4",
+  "durationSec": 155.008,
+  "rewinds": [
+    {
+      "startFrame": 1316,
+      "endFrame": 1328,
+      "expectedSec": 43.86666666666667,
+      "detectedSec": 43.866667,
+      "offsetMs": 0.0,
+      "correlation": 0.9277,
+      "visualMidpointChangeMean": 6.25
+    },
+    {
+      "startFrame": 1773,
+      "endFrame": 1785,
+      "expectedSec": 59.1,
+      "detectedSec": 59.1,
+      "offsetMs": 0.0,
+      "correlation": 0.9267,
+      "visualMidpointChangeMean": 8.63
+    },
+    {
+      "startFrame": 2232,
+      "endFrame": 2244,
+      "expectedSec": 74.4,
+      "detectedSec": 74.4,
+      "offsetMs": -0.0,
+      "correlation": 0.9167,
+      "visualMidpointChangeMean": 7.52
+    }
+  ],
+  "errors": [],
+  "dreadSilence": {
+    "startSec": 74.8,
+    "endSec": 76.4,
+    "rmsDbfs": -97.93,
+    "peakDbfs": -64.17,
+    "innerRmsDbfs": -300.0
+  },
+  "vacuum": {
+    "startSec": 153.51666666666668,
+    "endSec": 153.66666666666666,
+    "rmsDbfs": -58.36,
+    "peakDbfs": -30.67
+  },
+  "jolt": {
+    "frame": 4610,
+    "visualSec": 153.66666666666666,
+    "audioOnsetSec": 153.662833,
+    "offsetMs": -3.833,
+    "visualFrameChangeMean": 11.74,
+    "measuredShakeFrameTranslationsAt108px": [
+      1,
+      -1,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "finalSpeechEvidence": {
+    "lastStemSampleAboveMinus60DbfsSec": 153.494937,
+    "sourceToDecodedMixLagMs": -0.0,
+    "lastSignalOnExportSec": 153.494937,
+    "finalWordCorrelation": 0.8851,
+    "lastSignalToStingerMs": 167.896,
+    "limitation": "Energy threshold and alignment evidence only; final phoneme requires listening."
+  },
+  "copilotBeat": {
+    "voiceStartSec": 24.966666666666665,
+    "voiceEndSec": 25.68166666666667,
+    "voiceOnsetOffsetMs": 0.0,
+    "voiceCorrelation": 0.8946,
+    "narrationStemRmsDbfs": -65.03
+  },
+  "captionSpelling": {
+    "copilot": true,
+    "jadiin": true
+  },
+  "frames": [
+    {
+      "frame": 6,
+      "meanLuma": 22.07
+    },
+    {
+      "frame": 28,
+      "meanLuma": 24.2
+    },
+    {
+      "frame": 29,
+      "meanLuma": 30.04
+    },
+    {
+      "frame": 30,
+      "meanLuma": 35.86
+    },
+    {
+      "frame": 31,
+      "meanLuma": 37.51
+    },
+    {
+      "frame": 32,
+      "meanLuma": 35.27
+    },
+    {
+      "frame": 33,
+      "meanLuma": 29.25
+    },
+    {
+      "frame": 34,
+      "meanLuma": 24.11
+    },
+    {
+      "frame": 35,
+      "meanLuma": 22.45
+    },
+    {
+      "frame": 348,
+      "meanLuma": 31.69
+    },
+    {
+      "frame": 349,
+      "meanLuma": 36.84
+    },
+    {
+      "frame": 350,
+      "meanLuma": 42.01
+    },
+    {
+      "frame": 351,
+      "meanLuma": 43.14
+    },
+    {
+      "frame": 352,
+      "meanLuma": 40.61
+    },
+    {
+      "frame": 353,
+      "meanLuma": 35.64
+    },
+    {
+      "frame": 354,
+      "meanLuma": 31.13
+    },
+    {
+      "frame": 355,
+      "meanLuma": 29.9
+    },
+    {
+      "frame": 1316,
+      "meanLuma": 61.06
+    },
+    {
+      "frame": 1322,
+      "meanLuma": 67.25
+    },
+    {
+      "frame": 1327,
+      "meanLuma": 62.9
+    },
+    {
+      "frame": 1714,
+      "meanLuma": 18.63
+    },
+    {
+      "frame": 1715,
+      "meanLuma": 25.39
+    },
+    {
+      "frame": 1716,
+      "meanLuma": 31.67
+    },
+    {
+      "frame": 1717,
+      "meanLuma": 32.32
+    },
+    {
+      "frame": 1718,
+      "meanLuma": 29.29
+    },
+    {
+      "frame": 1719,
+      "meanLuma": 23.09
+    },
+    {
+      "frame": 1720,
+      "meanLuma": 17.99
+    },
+    {
+      "frame": 1721,
+      "meanLuma": 16.52
+    },
+    {
+      "frame": 1773,
+      "meanLuma": 15.36
+    },
+    {
+      "frame": 1779,
+      "meanLuma": 22.19
+    },
+    {
+      "frame": 1784,
+      "meanLuma": 16.77
+    },
+    {
+      "frame": 2232,
+      "meanLuma": 41.63
+    },
+    {
+      "frame": 2238,
+      "meanLuma": 49.12
+    },
+    {
+      "frame": 2243,
+      "meanLuma": 43.67
+    },
+    {
+      "frame": 4609,
+      "meanLuma": 31.97
+    },
+    {
+      "frame": 4610,
+      "meanLuma": 37.03
+    },
+    {
+      "frame": 4611,
+      "meanLuma": 42.78
+    },
+    {
+      "frame": 4612,
+      "meanLuma": 35.21
+    },
+    {
+      "frame": 4613,
+      "meanLuma": 35.06
+    },
+    {
+      "frame": 4614,
+      "meanLuma": 35.12
+    },
+    {
+      "frame": 4615,
+      "meanLuma": 35.23
+    },
+    {
+      "frame": 4616,
+      "meanLuma": 35.25
+    },
+    {
+      "frame": 4617,
+      "meanLuma": 35.34
+    },
+    {
+      "frame": 4618,
+      "meanLuma": 35.17
+    },
+    {
+      "frame": 4619,
+      "meanLuma": 35.47
+    },
+    {
+      "frame": 4641,
+      "meanLuma": 35.54
+    },
+    {
+      "frame": 4642,
+      "meanLuma": 0.0
+    }
+  ],
+  "maxFlashMeanLuma": 43.14,
+  "loudness": {
+    "integratedLufs": -14.3,
+    "truePeakDbtp": -2.2
+  }
+}

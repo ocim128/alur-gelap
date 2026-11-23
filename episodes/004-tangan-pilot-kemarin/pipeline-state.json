@@ -5,15 +5,57 @@
   },
   "audio": {
     "status": "pass",
-    "notes": "Owner APPROVED narration-prepared.mp3 on 2026-11-23 (pronunciation, pacing, and the Rewind 3 dread silence clean; no re-roll) after automatic narrator acceptance. Raw master from one ShortZ CLI invocation (gemini-cloud, gemini-3.8-flash-tts, voice_71a5a701-796e-421d-840e-0adc00b0816a, 165.935 s, 19 chunks); raw ASR verification exited 2 and was classified, not regenerated: zero true omissions/insertions, drivers are Whisper chunk-boundary end-truncation flags, the generic wpm gate (Investigator narrates ~95-116 wpm) and normalization pairs (copilot->kopilot, senter->center, kran->keran, jadiin->jadikan, bener->benar, deket->dekat). The 8 phonetic-suspect ASR pairs (beku->begu, alih->ali, petanya->pertanya, betulin->bertulin, statis->status, gunung->gunuh, arah->arh, napas->napa, lega->selega) were resolved by the owner's 2026-11-23 listening approval; no taboo-sounding tokens found. Mandatory pronunciation diff re-run on the prepared narration-timestamps.json (262 words): PASS, only additional omission is the intentional hook fallback drop 'itu'. Prepared stem narration-prepared.mp3 (153.500 s, speech end 152.000 s, 1.500 s tail, -16.2 LUFS, -0.5 dBTP) assembled on one continuous PCM sample timeline via prepare-audio.mjs at 1.0x speed: 29 dead-air gaps tightened to 0.30 s; hook fallback applied by edit (spoken hook 'Tangan di tuas bukan tanganmu.' ends 2.700 s, inside the 00:03.0 limit; captions must match); three branchRewind gaps enforced exactly: rewind 1 0.400 s at 43.440-43.840, rewind 2 0.400 s at 58.500-58.900, rewind 3 2.000 s at 73.300-75.300 = 0.400 s tape-snap + the episode's only 1.600 s true-zero dread silence 73.700-75.300; 'terjepit.'->'Ambruk.' beat protected for the copilot groan. 6,397 MP3 packets 100% strictly monotonic PTS and zero splice deviations via ffprobe. Exact measured anchors for Agent 04 flagged in assembly-handoff.md: locked frames 1380/1773/2172 vs measured drift (rewind 1 2.56 s early, rewind 2 0.60 s early, rewind 3 0.90 s late, speech end 152.000 vs provisional 152.5) to reconcile panel boundaries inside the locked 4620-frame cut; blacktail cue 152.650-153.700 sub-hit window, hard black 153.700-154.000. Voice-sfx delivered as separate assets with sources/rights in public/sfx/LICENSES.md: COPILOT line 'Gantian, bang?' (Gemini 3.8 Flash TTS Charon, ASR-verbatim take, 0.715 s, cue 24.900 s, yellow COPILOT caption) and restrained copilot groan (Charon 'Ugh!' take heard 'URGH', 0.745 s, cue 57.000 s; these two AI-voice clips still need listening-in-context in the mix - owner approval covers the narrator stem only), plus locally synthesized tape-snap-rewind.wav (0.400 s, -1.0 dBFS) reused x3 at 43.440/58.500/73.300. Remaining cue-sheet foley/beds and the final mix (-14 LUFS, <= -1.5 dBTP after AAC) are Agent 04 assembly scope and are NOT covered by this audio pass."
+    "notes": "Owner APPROVED narration-prepared.mp3 on 2026-11-23 (pronunciation, pacing, and the Rewind 3 dread silence clean; no re-roll) after automatic narrator acceptance. Raw master from one ShortZ CLI invocation (gemini-cloud, gemini-3.8-flash-tts, voice_71a5a701-796e-421d-840e-0adc00b0816a, 165.935 s, 19 chunks); raw ASR verification exited 2 and was classified, not regenerated: zero true omissions/insertions, drivers are Whisper chunk-boundary end-truncation flags, the generic wpm gate (Investigator narrates ~95-116 wpm) and normalization pairs (copilot->kopilot, senter->center, kran->keran, jadiin->jadikan, bener->benar, deket->dekat). The 8 phonetic-suspect ASR pairs (beku->begu, alih->ali, petanya->pertanya, betulin->bertulin, statis->status, gunung->gunuh, arah->arh, napas->napa, lega->selega) were resolved by the owner's 2026-11-23 listening approval; no taboo-sounding tokens found. Mandatory pronunciation diff re-run on the prepared narration-timestamps.json (262 words): PASS, only additional omission is the intentional hook fallback drop 'itu'. Prepared stem narration-prepared.mp3 (153.500 s, speech end 152.000 s, 1.500 s tail, -16.2 LUFS, -0.5 dBTP) assembled on one continuous PCM sample timeline via prepare-audio.mjs at 1.0x speed: 29 dead-air gaps tightened to 0.30 s; hook fallback applied by edit (spoken hook 'Tangan di tuas bukan tanganmu.' ends 2.700 s, inside the 00:03.0 limit; captions must match); three branchRewind gaps enforced exactly: rewind 1 0.400 s at 43.440-43.840, rewind 2 0.400 s at 58.500-58.900, rewind 3 2.000 s at 73.300-75.300 = 0.400 s tape-snap + the episode's only 1.600 s true-zero dread silence 73.700-75.300; 'terjepit.'->'Ambruk.' beat protected for the copilot groan. 6,397 MP3 packets 100% strictly monotonic PTS and zero splice deviations via ffprobe. Exact measured anchors for Agent 04 flagged in assembly-handoff.md: locked frames 1380/1773/2172 vs measured drift (rewind 1 2.56 s early, rewind 2 0.60 s early, rewind 3 0.90 s late, speech end 152.000 vs provisional 152.5) to reconcile panel boundaries inside the locked 4620-frame cut; blacktail cue 152.650-153.700 sub-hit window, hard black 153.700-154.000. Voice-sfx delivered as separate assets with sources/rights in public/sfx/LICENSES.md: COPILOT line 'Gantian, bang?' (Gemini 3.8 Flash TTS Charon, ASR-verbatim take, 0.715 s, cue 24.900 s, yellow COPILOT caption) and restrained copilot groan (Charon 'Ugh!' take heard 'URGH', 0.745 s, cue 57.000 s; these two AI-voice clips still need listening-in-context in the mix - owner approval covers the narrator stem only), plus locally synthesized tape-snap-rewind.wav (0.400 s, -1.0 dBFS) reused x3 at 43.440/58.500/73.300. Remaining cue-sheet foley/beds and the final mix (-14 LUFS, <= -1.5 dBTP after AAC) are Agent 04 assembly scope and are NOT covered by this audio pass.",
+    "endingListeningReview": {
+      "status": "pass",
+      "reviewer": "owner",
+      "date": "2026-11-23",
+      "reviewedExport": "out/skenario04-audit-rework-v3-master_compressed.mp4",
+      "finding": "Owner watched and listened and confirmed sampai finishes cleanly with zero clipping before the vacuum and stinger. This approval concerns the reviewed export; the later polish shifts the ending without changing the accepted speech samples."
+    }
   },
   "images": {
-    "status": "pass",
-    "notes": "Owner explicitly directed one last attempt and approval of best available images even if failures remain, 2026-11-23. Owner-approved exception handoff: 24 exact-9:16 WebP plates plus P09 reaction and final jolt at public/assets/004-tangan-pilot-kemarin/owner-approved-exception/. Technical audit remains FAIL: P09 motion and arm/panel contact not depicted; reaction instrument lights inconsistent; P23 cloud gap remains after landing; P14 foot attribution and phone text small; P22 aircraft differs. Owner accepts these exceptions for Agent 04; see sources/prompts.md and panels-contact-owner-approved.jpg. Audio preserved; render and final QA pending."
+    "status": "fail",
+    "notes": "Owner explicitly directed one last attempt and approval of best available images even if failures remain, 2026-11-23. Owner-approved exception handoff: 24 exact-9:16 WebP plates plus P09 reaction and final jolt at public/assets/004-tangan-pilot-kemarin/owner-approved-exception/. Technical audit remains FAIL: P09 motion and arm/panel contact not depicted; reaction instrument lights inconsistent; P23 cloud gap remains after landing; P14 foot attribution and phone text small; P22 aircraft differs. Owner accepts these exceptions for Agent 04; see sources/prompts.md and panels-contact-owner-approved.jpg. Audio preserved; render and final QA pending. Owner formally reaffirmed P05, P09 and P23 coverage exceptions on 2026-11-23 for Agent 05 handoff; the technical image verdict remains FAIL.",
+    "technicalVerdict": "fail",
+    "ownerDisposition": "approved_with_exceptions",
+    "handoffAllowed": true,
+    "exceptions": [
+      {
+        "panel": "P05",
+        "defect": "absent",
+        "evidence": "The copilot foot and pedal are out of frame during the narrated adjustment; owner explicitly accepted this coverage exception.",
+        "downstreamVerify": "Agent 05 acknowledges the owner exception and reports the actual visibility in the final export."
+      },
+      {
+        "panel": "P09",
+        "defect": "absent",
+        "evidence": "Neutral stick and masked slump do not depict all narrated motion, catch, and arm/panel contact; owner explicitly accepted this staging exception.",
+        "downstreamVerify": "Agent 05 checks the approved staging and blackout continuity in the final export without treating the technical finding as resolved."
+      },
+      {
+        "panel": "P23",
+        "defect": "present_conflicting_state",
+        "evidence": "The cloud-gap view remains through the windshield after landing; owner explicitly accepted this continuity exception.",
+        "downstreamVerify": "Agent 05 records the accepted continuity exception and checks the CELAH map and check mark."
+      },
+      {
+        "panel": "P14",
+        "defect": "present_unreadable_at_phone_size",
+        "evidence": "Foot attribution remains ambiguous, previously accepted by owner in the image handoff.",
+        "downstreamVerify": "Agent 05 retains the previously accepted attribution limitation."
+      },
+      {
+        "panel": "P22",
+        "defect": "present_conflicting_state",
+        "evidence": "Aircraft geometry differs, previously accepted by owner in the image handoff.",
+        "downstreamVerify": "Agent 05 retains the previously accepted aircraft continuity limitation."
+      }
+    ]
   },
   "render": {
-    "status": "pending",
-    "notes": ""
+    "status": "pass",
+    "notes": "Owner-approved 0.600 s copilot-beat polish completed; accepted narrator samples preserved, caption corrections applied, three rewinds and dread silence shifted by 18 frames. Master out/skenario04-owner-polish-final-master.mp4 and compressed review copy out/skenario04-owner-polish-final-master_compressed.mp4 passed verify-export.py and npm run check. Compressed mix -14.3 LUFS / -2.2 dBTP; copilot voice detected on cue with narration-stem RMS -65.03 dBFS. Owner-approved P05/P09/P23 exceptions allow Agent 05 handoff, with image technical verdict FAIL retained; no final Agent 05 audit or publishing approval is claimed. See assembly-polish-handoff.md."
   },
   "audit": {
     "status": "pending",

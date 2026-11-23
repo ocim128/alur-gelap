@@ -1,0 +1,342 @@
+{
+  "video": "out/005-sabuk-ketiga/Skenario05SabukKetiga-audit-rework-master_compressed.mp4",
+  "estimatedSidecarEndSec": 154.94,
+  "lastNonzeroSourceSampleSec": 155.082375,
+  "vacuumStartSec": 155.11666666666667,
+  "joltSec": 155.26666666666668,
+  "sourceZeroFromVacuum": true,
+  "sourceToDeliveryCorrelation": 0.7925517280578407,
+  "windows10ms": [
+    {
+      "startSec": 154.9,
+      "source": {
+        "rmsDbfs": -43.16,
+        "peakDbfs": -31.45
+      },
+      "assemblyPcm": {
+        "rmsDbfs": -27.75,
+        "peakDbfs": -20.17
+      },
+      "delivery": {
+        "rmsDbfs": -27.58,
+        "peakDbfs": -20.03
+      }
+    },
+    {
+      "startSec": 154.91,
+      "source": {
+        "rmsDbfs": -52.1,
+        "peakDbfs": -44.29
+      },
+      "assemblyPcm": {
+        "rmsDbfs": -34.61,
+        "peakDbfs": -27.22
+      },
+      "delivery": {
+        "rmsDbfs": -34.13,
+        "peakDbfs": -26.62
+      }
+    },
+    {
+      "startSec": 154.92,
+      "source": {
+        "rmsDbfs": -53.05,
+        "peakDbfs": -45.5
+      },
+      "assemblyPcm": {
+        "rmsDbfs": -32.56,
+        "peakDbfs": -28.63
+      },
+      "delivery": {
+        "rmsDbfs": -32.67,
+        "peakDbfs": -29.07
+      }
+    },
+    {
+      "startSec": 154.93,
+      "source": {
+        "rmsDbfs": -56.02,
+        "peakDbfs": -48.37
+      },
+      "assemblyPcm": {
+        "rmsDbfs": -27.32,
+        "peakDbfs": -21.74
+      },
+      "delivery": {
+        "rmsDbfs": -27.11,
+        "peakDbfs": -21.57
+      }
+    },
+    {
+      "startSec": 154.94,
+      "source": {
+        "rmsDbfs": -63.98,
+        "peakDbfs": -54.46
+      },
+      "assemblyPcm": {
+        "rmsDbfs": -26.82,
+        "peakDbfs": -22.86
+      },
+      "delivery": {
+        "rmsDbfs": -26.76,
+        "peakDbfs": -22.76
+      }
+    },
+    {
+      "startSec": 154.95,
+      "source": {
+        "rmsDbfs": -63.29,
+        "peakDbfs": -53.04
+      },
+      "assemblyPcm": {
+        "rmsDbfs": -31.27,
+        "peakDbfs": -25.25
+      },
+      "delivery": {
+        "rmsDbfs": -31.01,
+        "peakDbfs": -25.15
+      }
+    },
+    {
+      "startSec": 154.96,
+      "source": {
+        "rmsDbfs": -64.82,
+        "peakDbfs": -54.32
+      },
+      "assemblyPcm": {
+        "rmsDbfs": -32.05,
+        "peakDbfs": -27.11
+      },
+      "delivery": {
+        "rmsDbfs": -31.94,
+        "peakDbfs": -27.03
+      }
+    },
+    {
+      "startSec": 154.97,
+      "source": {
+        "rmsDbfs": -65.71,
+        "peakDbfs": -55.82
+      },
+      "assemblyPcm": {
+        "rmsDbfs": -30.07,
+        "peakDbfs": -24.75
+      },
+      "delivery": {
+        "rmsDbfs": -29.98,
+        "peakDbfs": -24.76
+      }
+    },
+    {
+      "startSec": 154.98,
+      "source": {
+        "rmsDbfs": -63.13,
+        "peakDbfs": -53.04
+      },
+      "assemblyPcm": {
+        "rmsDbfs": -30.96,
+        "peakDbfs": -25.42
+      },
+      "delivery": {
+        "rmsDbfs": -30.75,
+        "peakDbfs": -24.87
+      }
+    },
+    {
+      "startSec": 154.99,
+      "source": {
+        "rmsDbfs": -65.54,
+        "peakDbfs": -55.19
+      },
+      "assemblyPcm": {
+        "rmsDbfs": -36.28,
+        "peakDbfs": -29.95
+      },
+      "delivery": {
+        "rmsDbfs": -36.02,
+        "peakDbfs": -29.59
+      }
+    },
+    {
+      "startSec": 155.0,
+      "source": {
+        "rmsDbfs": -64.78,
+        "peakDbfs": -53.92
+      },
+      "assemblyPcm": {
+        "rmsDbfs": -37.42,
+        "peakDbfs": -32.13
+      },
+      "delivery": {
+        "rmsDbfs": -37.44,
+        "peakDbfs": -32.18
+      }
+    },
+    {
+      "startSec": 155.01,
+      "source": {
+        "rmsDbfs": -65.85,
+        "peakDbfs": -55.35
+      },
+      "assemblyPcm": {
+        "rmsDbfs": -33.94,
+        "peakDbfs": -28.7
+      },
+      "delivery": {
+        "rmsDbfs": -33.75,
+        "peakDbfs": -28.7
+      }
+    },
+    {
+      "startSec": 155.02,
+      "source": {
+        "rmsDbfs": -65.62,
+        "peakDbfs": -54.46
+      },
+      "assemblyPcm": {
+        "rmsDbfs": -34.47,
+        "peakDbfs": -29.45
+      },
+      "delivery": {
+        "rmsDbfs": -34.18,
+        "peakDbfs": -29.24
+      }
+    },
+    {
+      "startSec": 155.03,
+      "source": {
+        "rmsDbfs": -64.61,
+        "peakDbfs": -52.03
+      },
+      "assemblyPcm": {
+        "rmsDbfs": -37.36,
+        "peakDbfs": -31.42
+      },
+      "delivery": {
+        "rmsDbfs": -37.41,
+        "peakDbfs": -31.54
+      }
+    },
+    {
+      "startSec": 155.04,
+      "source": {
+        "rmsDbfs": -63.98,
+        "peakDbfs": -51.62
+      },
+      "assemblyPcm": {
+        "rmsDbfs": -39.6,
+        "peakDbfs": -33.51
+      },
+      "delivery": {
+        "rmsDbfs": -39.41,
+        "peakDbfs": -33.37
+      }
+    },
+    {
+      "startSec": 155.05,
+      "source": {
+        "rmsDbfs": -68.53,
+        "peakDbfs": -57.84
+      },
+      "assemblyPcm": {
+        "rmsDbfs": -38.35,
+        "peakDbfs": -32.81
+      },
+      "delivery": {
+        "rmsDbfs": -38.16,
+        "peakDbfs": -33.08
+      }
+    },
+    {
+      "startSec": 155.06,
+      "source": {
+        "rmsDbfs": -74.37,
+        "peakDbfs": -63.46
+      },
+      "assemblyPcm": {
+        "rmsDbfs": -40.34,
+        "peakDbfs": -35.63
+      },
+      "delivery": {
+        "rmsDbfs": -39.93,
+        "peakDbfs": -35.3
+      }
+    },
+    {
+      "startSec": 155.07,
+      "source": {
+        "rmsDbfs": -81.54,
+        "peakDbfs": -69.48
+      },
+      "assemblyPcm": {
+        "rmsDbfs": -48.27,
+        "peakDbfs": -42.76
+      },
+      "delivery": {
+        "rmsDbfs": -48.23,
+        "peakDbfs": -42.3
+      }
+    },
+    {
+      "startSec": 155.08,
+      "source": {
+        "rmsDbfs": -104.82,
+        "peakDbfs": -90.31
+      },
+      "assemblyPcm": {
+        "rmsDbfs": -65.9,
+        "peakDbfs": -62.17
+      },
+      "delivery": {
+        "rmsDbfs": -65.45,
+        "peakDbfs": -60.82
+      }
+    },
+    {
+      "startSec": 155.09,
+      "source": {
+        "rmsDbfs": -300.0,
+        "peakDbfs": -300.0
+      },
+      "assemblyPcm": {
+        "rmsDbfs": -155.74,
+        "peakDbfs": -138.47
+      },
+      "delivery": {
+        "rmsDbfs": -92.36,
+        "peakDbfs": -85.98
+      }
+    },
+    {
+      "startSec": 155.1,
+      "source": {
+        "rmsDbfs": -300.0,
+        "peakDbfs": -300.0
+      },
+      "assemblyPcm": {
+        "rmsDbfs": -300.0,
+        "peakDbfs": -300.0
+      },
+      "delivery": {
+        "rmsDbfs": -100.88,
+        "peakDbfs": -94.25
+      }
+    },
+    {
+      "startSec": 155.11,
+      "source": {
+        "rmsDbfs": -300.0,
+        "peakDbfs": -300.0
+      },
+      "assemblyPcm": {
+        "rmsDbfs": -300.0,
+        "peakDbfs": -300.0
+      },
+      "delivery": {
+        "rmsDbfs": -119.49,
+        "peakDbfs": -108.67
+      }
+    }
+  ],
+  "interpretation": "The final phoneme and audible truncation cannot be established by energy or correlation alone; listening remains required."
+}

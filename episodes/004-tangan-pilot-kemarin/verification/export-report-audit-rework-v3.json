@@ -1,0 +1,266 @@
+{
+  "video": "out\\skenario04-audit-rework-v3-master_compressed.mp4",
+  "durationSec": 154.41,
+  "rewinds": [
+    {
+      "startFrame": 1298,
+      "endFrame": 1310,
+      "expectedSec": 43.266666666666666,
+      "detectedSec": 43.266667,
+      "offsetMs": 0.0,
+      "correlation": 0.9264,
+      "visualMidpointChangeMean": 6.28
+    },
+    {
+      "startFrame": 1755,
+      "endFrame": 1767,
+      "expectedSec": 58.5,
+      "detectedSec": 58.5,
+      "offsetMs": 0.0,
+      "correlation": 0.924,
+      "visualMidpointChangeMean": 8.56
+    },
+    {
+      "startFrame": 2214,
+      "endFrame": 2226,
+      "expectedSec": 73.8,
+      "detectedSec": 73.8,
+      "offsetMs": 0.0,
+      "correlation": 0.9199,
+      "visualMidpointChangeMean": 7.54
+    }
+  ],
+  "errors": [],
+  "dreadSilence": {
+    "startSec": 74.2,
+    "endSec": 75.8,
+    "rmsDbfs": -94.08,
+    "peakDbfs": -61.77,
+    "innerRmsDbfs": -300.0
+  },
+  "vacuum": {
+    "startSec": 152.91666666666666,
+    "endSec": 153.06666666666666,
+    "rmsDbfs": -73.88,
+    "peakDbfs": -48.59
+  },
+  "jolt": {
+    "frame": 4592,
+    "visualSec": 153.06666666666666,
+    "audioOnsetSec": 153.06325,
+    "offsetMs": -3.417,
+    "visualFrameChangeMean": 11.74,
+    "measuredShakeFrameTranslationsAt108px": [
+      1,
+      -1,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "finalSpeechEvidence": {
+    "lastStemSampleAboveMinus60DbfsSec": 152.894937,
+    "sourceToDecodedMixLagMs": -0.0,
+    "lastSignalOnExportSec": 152.894937,
+    "finalWordCorrelation": 0.8828,
+    "lastSignalToStingerMs": 168.313,
+    "limitation": "Energy threshold and alignment evidence only; final phoneme requires listening."
+  },
+  "frames": [
+    {
+      "frame": 6,
+      "meanLuma": 22.07
+    },
+    {
+      "frame": 28,
+      "meanLuma": 24.2
+    },
+    {
+      "frame": 29,
+      "meanLuma": 30.04
+    },
+    {
+      "frame": 30,
+      "meanLuma": 35.86
+    },
+    {
+      "frame": 31,
+      "meanLuma": 37.51
+    },
+    {
+      "frame": 32,
+      "meanLuma": 35.27
+    },
+    {
+      "frame": 33,
+      "meanLuma": 29.25
+    },
+    {
+      "frame": 34,
+      "meanLuma": 24.11
+    },
+    {
+      "frame": 35,
+      "meanLuma": 22.45
+    },
+    {
+      "frame": 348,
+      "meanLuma": 31.69
+    },
+    {
+      "frame": 349,
+      "meanLuma": 36.84
+    },
+    {
+      "frame": 350,
+      "meanLuma": 42.01
+    },
+    {
+      "frame": 351,
+      "meanLuma": 43.14
+    },
+    {
+      "frame": 352,
+      "meanLuma": 40.61
+    },
+    {
+      "frame": 353,
+      "meanLuma": 35.64
+    },
+    {
+      "frame": 354,
+      "meanLuma": 31.13
+    },
+    {
+      "frame": 355,
+      "meanLuma": 29.9
+    },
+    {
+      "frame": 1298,
+      "meanLuma": 61.05
+    },
+    {
+      "frame": 1304,
+      "meanLuma": 67.27
+    },
+    {
+      "frame": 1309,
+      "meanLuma": 62.9
+    },
+    {
+      "frame": 1696,
+      "meanLuma": 18.63
+    },
+    {
+      "frame": 1697,
+      "meanLuma": 25.39
+    },
+    {
+      "frame": 1698,
+      "meanLuma": 31.68
+    },
+    {
+      "frame": 1699,
+      "meanLuma": 32.31
+    },
+    {
+      "frame": 1700,
+      "meanLuma": 29.28
+    },
+    {
+      "frame": 1701,
+      "meanLuma": 23.09
+    },
+    {
+      "frame": 1702,
+      "meanLuma": 17.99
+    },
+    {
+      "frame": 1703,
+      "meanLuma": 16.5
+    },
+    {
+      "frame": 1755,
+      "meanLuma": 15.35
+    },
+    {
+      "frame": 1761,
+      "meanLuma": 22.12
+    },
+    {
+      "frame": 1766,
+      "meanLuma": 16.78
+    },
+    {
+      "frame": 2214,
+      "meanLuma": 41.63
+    },
+    {
+      "frame": 2220,
+      "meanLuma": 49.15
+    },
+    {
+      "frame": 2225,
+      "meanLuma": 43.67
+    },
+    {
+      "frame": 4591,
+      "meanLuma": 31.96
+    },
+    {
+      "frame": 4592,
+      "meanLuma": 37.02
+    },
+    {
+      "frame": 4593,
+      "meanLuma": 42.77
+    },
+    {
+      "frame": 4594,
+      "meanLuma": 35.2
+    },
+    {
+      "frame": 4595,
+      "meanLuma": 35.06
+    },
+    {
+      "frame": 4596,
+      "meanLuma": 35.12
+    },
+    {
+      "frame": 4597,
+      "meanLuma": 35.23
+    },
+    {
+      "frame": 4598,
+      "meanLuma": 35.24
+    },
+    {
+      "frame": 4599,
+      "meanLuma": 35.36
+    },
+    {
+      "frame": 4600,
+      "meanLuma": 35.18
+    },
+    {
+      "frame": 4601,
+      "meanLuma": 35.48
+    },
+    {
+      "frame": 4623,
+      "meanLuma": 35.53
+    },
+    {
+      "frame": 4624,
+      "meanLuma": 0.0
+    }
+  ],
+  "maxFlashMeanLuma": 43.14,
+  "loudness": {
+    "integratedLufs": -14.3,
+    "truePeakDbtp": -2.1
+  }
+}

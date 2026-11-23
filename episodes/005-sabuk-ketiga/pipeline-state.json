@@ -5,15 +5,51 @@
   },
   "audio": {
     "status": "pass",
-    "notes": "Owner APPROVED narration-prepared.mp3 via listening check 2026-11-23 (pronunciation, pacing and the Rewind 3 dread silence clean; no re-roll). Single ShortZ gemini-cloud / gemini-3.8-flash-tts invocation, Investigator voice voice_71a5a701-796e-421d-840e-0adc00b0816a, from narasi.txt (259 words): raw master narration-investigator.mp3 170.125 s, 21 chunks. ShortZ report passed:false (3/21 verified): flags classified as the generic 130±25% WPM pacing gate (accepted takes 67-97 WPM; Bahasa Bayi is deliberately casual) plus Whisper word-match attempts - not treated as proof of mispronunciation, and now moot after the owner listening approval. Mandatory pronunciation diff completed (pronunciation-diff.json): 20 deviations reconciled (18 renames e.g. mapet->mepet, Bangkok->bengkok, anjlok x2, Gak/gak->nggak x3, gesel->geser, tancap->tancep, kopilot->copilot x2; split Gapernah->Nggak pernah; merge kop pilot->copilot) with the reconciled track matching narasi.txt token-for-token; read-back re-verification on the approved narration-timestamps.json also passes; 2 items had been marked suspected-standardization (Perhatikan->Perhatiin, formal kemudian->kemudi in P18), resolved to script text and covered by the owner approval. Preparation via prepare-audio.mjs on one continuous 48 kHz PCM timeline at 1.0x speed (zero atempo): 46 dead-air tightenings (>0.5 s -> 0.32 s retained), 3 exact rewind-gap replacements (57.80-58.20, 72.46-72.86, 90.64-91.04 - each 0.400 s, rewinds 1-2 snap straight back with zero dead air), 1.500 s true-zero dread silence only after Rewind 3 (91.04-92.54, sample-verified zero), protected one-beat lag cues P05 0.50 s / P10 0.68 s / P17 0.84 s, tower window reserved 42.74-46.94 s. narration-prepared.wav/.mp3 155.985 s, speech end 154.84 s, -16.9 LUFS / true peak -1.14 dBTP (approved MP3 SHA-256 A6638C8A0C1E71E8D808160CACD1D2CD51EC74F8727524AA7E3B8B0DDCFBC416); narration-timestamps.json + audio-edit-map.json remapped; 6501 MP3 packets 100% strictly monotonic PTS; derivatives copied to public/assets/005-sabuk-ketiga/. audio-edit-map.json assemblerHandoff block flags branchRewinds[0..2] (frames 1734-1746 / 2174-2186 / 2719-2731 with tape-snap sample offsets 2774400 / 3478400 / 4350400 at 48 kHz), the 1.5 s dread region (2731-2776), lag SFX cue windows, the pa-announcer replacement window and the tail anchors for Agent 04. pa-announcer voice-sfx generated via Google Cloud Gemini 3.8 Flash TTS Orus for 'Turun, lewatin awan, izin darurat.' (public/sfx/sources/scenario05-tower-original.wav, SHA-256 logged; ASR spot-check verbatim, mix listening pending): toa-megaphone radio-bandpass derivative + 4.090 s -1.0 dBFS mixready trim fitting the reserved window; provenance + rights recorded in public/sfx/catalog.json and LICENSES.md (publication terms not independently verified). Agent 04: mute narrator quote words 77-81 non-destructively in the edit map, lay the pa asset with yellow MENARA RADIO caption, anchor all transients to narration-timestamps.json (not panel starts), keep deliberate silent clues and silences, final mix -14 LUFS / <= -1.5 dBTP; final SFX/mix approval remains a separate downstream gate. Provisional 151.0 s / 4530-frame timeline in brief.md is STALE for downstream anchoring: images (Agent 03) and render (Agent 04) must re-anchor panels/frames to the measured spans in audio-edit-map.json / audio-assets.md (cut ~156.3 s, still inside the 145-160 s window; hook starts at exactly 0.000 s so title/cover anchors hold)."
+    "notes": "Owner APPROVED narration-prepared.mp3 via listening check 2026-11-23 (pronunciation, pacing and the Rewind 3 dread silence clean; no re-roll). Single ShortZ gemini-cloud / gemini-3.8-flash-tts invocation, Investigator voice voice_71a5a701-796e-421d-840e-0adc00b0816a, from narasi.txt (259 words): raw master narration-investigator.mp3 170.125 s, 21 chunks. ShortZ report passed:false (3/21 verified): flags classified as the generic 130±25% WPM pacing gate (accepted takes 67-97 WPM; Bahasa Bayi is deliberately casual) plus Whisper word-match attempts - not treated as proof of mispronunciation, and now moot after the owner listening approval. Mandatory pronunciation diff completed (pronunciation-diff.json): 20 deviations reconciled (18 renames e.g. mapet->mepet, Bangkok->bengkok, anjlok x2, Gak/gak->nggak x3, gesel->geser, tancap->tancep, kopilot->copilot x2; split Gapernah->Nggak pernah; merge kop pilot->copilot) with the reconciled track matching narasi.txt token-for-token; read-back re-verification on the approved narration-timestamps.json also passes; 2 items had been marked suspected-standardization (Perhatikan->Perhatiin, formal kemudian->kemudi in P18), resolved to script text and covered by the owner approval. Preparation via prepare-audio.mjs on one continuous 48 kHz PCM timeline at 1.0x speed (zero atempo): 46 dead-air tightenings (>0.5 s -> 0.32 s retained), 3 exact rewind-gap replacements (57.80-58.20, 72.46-72.86, 90.64-91.04 - each 0.400 s, rewinds 1-2 snap straight back with zero dead air), 1.500 s true-zero dread silence only after Rewind 3 (91.04-92.54, sample-verified zero), protected one-beat lag cues P05 0.50 s / P10 0.68 s / P17 0.84 s, tower window reserved 42.74-46.94 s. narration-prepared.wav/.mp3 155.985 s, speech end 154.84 s, -16.9 LUFS / true peak -1.14 dBTP (approved MP3 SHA-256 A6638C8A0C1E71E8D808160CACD1D2CD51EC74F8727524AA7E3B8B0DDCFBC416); narration-timestamps.json + audio-edit-map.json remapped; 6501 MP3 packets 100% strictly monotonic PTS; derivatives copied to public/assets/005-sabuk-ketiga/. audio-edit-map.json assemblerHandoff block flags branchRewinds[0..2] (frames 1734-1746 / 2174-2186 / 2719-2731 with tape-snap sample offsets 2774400 / 3478400 / 4350400 at 48 kHz), the 1.5 s dread region (2731-2776), lag SFX cue windows, the pa-announcer replacement window and the tail anchors for Agent 04. pa-announcer voice-sfx generated via Google Cloud Gemini 3.8 Flash TTS Orus for 'Turun, lewatin awan, izin darurat.' (public/sfx/sources/scenario05-tower-original.wav, SHA-256 logged; ASR spot-check verbatim, mix listening pending): toa-megaphone radio-bandpass derivative + 4.090 s -1.0 dBFS mixready trim fitting the reserved window; provenance + rights recorded in public/sfx/catalog.json and LICENSES.md (publication terms not independently verified). Agent 04: mute narrator quote words 77-81 non-destructively in the edit map, lay the pa asset with yellow MENARA RADIO caption, anchor all transients to narration-timestamps.json (not panel starts), keep deliberate silent clues and silences, final mix -14 LUFS / <= -1.5 dBTP; final SFX/mix approval remains a separate downstream gate. Provisional 151.0 s / 4530-frame timeline in brief.md is STALE for downstream anchoring: images (Agent 03) and render (Agent 04) must re-anchor panels/frames to the measured spans in audio-edit-map.json / audio-assets.md (cut ~156.3 s, still inside the 145-160 s window; hook starts at exactly 0.000 s so title/cover anchors hold).",
+    "endingListening": {
+      "status": "pass",
+      "reviewer": "owner",
+      "date": "2026-11-23",
+      "video": "out/005-sabuk-ketiga/Skenario05SabukKetiga-audit-rework-v2-master_compressed.mp4",
+      "notes": "Owner watched and listened: “Kamu berhasil bertahan hidup.” finishes completely cleanly with zero clipping before the 155.117 s vacuum, stinger and blackout."
+    }
   },
   "images": {
-    "status": "pass",
-    "notes": "Owner explicitly directed one final attempt and advance approval of best available selection even if defects remain, 23 November 2026. Selected 24 distinct 1080x1920 plates + clean jolt under selected-owner-approved; contact sheet and full prompt/self-audit history recorded. This is owner-accepted with known visual limitations, not a clean technical audit: rail shape/door continuity, some night rain, P11 contact and exterior matching require playback review. Agent 04 may assemble subject to normal final QA; see sources/prompts.md owner-directed final selection."
+    "status": "fail",
+    "notes": "Owner explicitly directed one final attempt and advance approval of best available selection even if defects remain, 23 November 2026. Selected 24 distinct 1080x1920 plates + clean jolt under selected-owner-approved; contact sheet and full prompt/self-audit history recorded. This is owner-accepted with known visual limitations, not a clean technical audit: rail shape/door continuity, some night rain, P11 contact and exterior matching require playback review. Agent 04 may assemble subject to normal final QA; see sources/prompts.md owner-directed final selection. Owner confirmed on 23 November 2026 that P05, P10, P11 and minor P15–P24 door/rain variance are approved coverage exceptions and do not block Agent 05 QA. The original technical findings remain documented; the owner requested no image or TTS re-roll.",
+    "technicalVerdict": "fail",
+    "ownerDisposition": "approved_with_exceptions",
+    "handoffAllowed": true,
+    "exceptions": [
+      {
+        "panel": "P05",
+        "defect": "present_unreadable_at_phone_size",
+        "evidence": "Approved plate uses static grip and buckle staging; the delayed physical movement is not separately established.",
+        "downstreamVerify": "Carry this owner-accepted coverage exception into Agent 05 QA without treating it as a blocking image defect."
+      },
+      {
+        "panel": "P10",
+        "defect": "present_conflicting_state",
+        "evidence": "The selected plate shows both the pilot and third belts already open; it does not show sequential opening.",
+        "downstreamVerify": "Carry this owner-accepted coverage exception into Agent 05 QA without treating it as a blocking image defect."
+      },
+      {
+        "panel": "P11",
+        "defect": "present_unreadable_at_phone_size",
+        "evidence": "The pilot is slumped over the panel; direct body-to-panel contact remains partly obscured.",
+        "downstreamVerify": "Carry this owner-accepted aftermath coverage exception into Agent 05 QA without treating it as a blocking image defect."
+      },
+      {
+        "panel": "P15–P24",
+        "defect": "present_unreadable_at_phone_size",
+        "evidence": "The approved shots retain minor differences in the half-open doorway, rail and exterior rain across angles.",
+        "downstreamVerify": "Carry the owner-accepted minor door and rain variance into Agent 05 QA without treating it as a blocking image defect."
+      }
+    ]
   },
   "render": {
-    "status": "pending",
-    "notes": ""
+    "status": "pass",
+    "notes": "Owner-directed P16/P17 reveal and P18 roll rendered as Skenario05SabukKetiga-owner-polish-master_compressed.mp4; npm run check, compressed export, buckle, impact, bank-roll and ending-comparison checks pass. Owner-approved image exceptions do not block Agent 05 QA; technical image verdict remains fail. Phone-size sampled frames show the 14-degree roll crops most of the right-side pilot at its peak; review the new motion and crop at normal speed in independent QA. See owner-polish-handoff.md. Owner listened to and passed the prior v2 ending; the retained PCM ending is byte-identical, while the new AAC was not claimed as newly listened to."
   },
   "audit": {
     "status": "pending",

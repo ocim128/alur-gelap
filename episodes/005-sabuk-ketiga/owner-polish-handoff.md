@@ -1,0 +1,24 @@
+# Scenario 05 owner-directed polish — Agent 05 handoff
+
+Review copy: `out/005-sabuk-ketiga/Skenario05SabukKetiga-owner-polish-master_compressed.mp4`. Rec.709 master: `out/005-sabuk-ketiga/Skenario05SabukKetiga-owner-polish-master.mp4`. Composition `Skenario05SabukKetiga`, 1080 × 1920, 30 fps, 4,693 frames (156.433 s; container 156.437 s). This is a new export; independent Agent 05 re-audit is pending.
+
+## Owner decisions
+
+The owner watched and listened to `Skenario05SabukKetiga-audit-rework-v2-master_compressed.mp4` and reported that “Kamu berhasil bertahan hidup.” finishes completely cleanly, with zero clipping before the 155.117 s vacuum, stinger and blackout. This listening PASS is recorded on the audio stage in [pipeline-state.json](pipeline-state.json); it applies to that named earlier copy. The new mix retains the earlier ending PCM byte-for-byte from 151.0 s through the end. [Ending comparison](verification/owner-ending-polish.json) reports the new AAC comparison; encoded AAC is not claimed byte-identical or newly listened to.
+
+The owner explicitly accepted P05's static grip/buckle staging, P10's two already-open belts, P11's slumped-over-panel aftermath, and minor P15–P24 door/rain variance. These are approved coverage exceptions and do not block Agent 05 QA. The image technical verdict remains **fail**, with `ownerDisposition: approved_with_exceptions` and `handoffAllowed: true`; [pipeline-state.json](pipeline-state.json) retains the specific findings. Earlier [image and post-export audit history](audit-report.md) is unchanged. No image or TTS was regenerated.
+
+## Owner-requested changes
+
+- The pilot's fastened-belt P16 remains on screen through “Jangan ditekan. Tahan napas. Satu ketukan.” The fake latch click remains at frame 3470 / 115.667 s, on “bunyi.” The P17 cut, `SABUK KETIGA: TERBUKA` callout and release clack start together at frame 3646 / 121.533 s, within one frame of the measured “Sabuk” word at 121.520 s. The owner explicitly chose to treat the intervening narration as slow-motion narrative time; do not flag the longer screen-time gap as a failure to maintain a 0.4 s real-time sound interval.
+- P18's whole-plate clockwise roll begins at frame 3770 / 125.667 s on “tancep” and reaches +14° at frame 3893 / 129.767 s on “tajam,” before the P19 cut. [Encoded-frame registration](verification/bank-roll-owner-polish.json) measured −0.022°, +7.145° and +14.140° at start, midpoint and peak. This is a procedural rotation of the approved plate; it does not create independent horizon movement.
+- A 14° rotation in 9:16 requires more than 1.20× overscan to keep the viewport covered. The measured total plate scale at peak is approximately 1.47×, including the player's existing camera scale. [Phone-size sampled frames](verification/owner-polish-compressed-phone.png) show no exposed frame edges, but the right-side pilot is mostly cropped at the roll peak. Agent 05 should evaluate this crop and motion in context; it is not represented as newly approved coverage.
+- P24 continues to use one authorized exterior plate across the flash and jolt. The owner's prior approved image exceptions and source/rights records remain in force.
+
+## Validation
+
+`npm run check` passed (35 Node tests and four Python tests). [Compressed export verification](verification/export-owner-polish.json) passed: 1080 × 1920 at 30 fps, limited-range BT.709 `yuv420p`; −14.4 LUFS integrated; −1.9 dBTP; all three rewind snaps detected at 0 ms offset; final jolt audio 3.146 ms before its flash; maximum flash mean luma 137.69; blackout black. Dread silence measures −88.66 dBFS RMS and the 150 ms final vacuum −74.47 dBFS RMS after AAC; the intentional PCM windows are zero, while AAC contains edge residue. [Buckle cues](verification/buckle-owner-polish.json) and [impact cues](verification/impact-owner-polish.json) are detected at their scheduled frames. These checks establish timing and measured properties, not subjective mix quality or viewer comprehension.
+
+The owner-approved narration MP3 remains unchanged; SHA-256 `A6638C8A0C1E71E8D808160CACD1D2CD51EC74F8727524AA7E3B8B0DDCFBC416`. Build with `python episodes/005-sabuk-ketiga/build-assembly.py`, then `python episodes/005-sabuk-ketiga/mix.py`, `npm run check`, and a fresh-name Remotion render. The final master uses the rendered picture and `public/assets/005-sabuk-ketiga/assembly-mix.wav` via ffmpeg (`-map 0:v:0 -map 1:a:0 -c:v copy -c:a aac -b:a 192k -ac 1 -ar 48000`); `npm run compress -- <new-master.mp4>` produces a review copy. `verify-bank-roll.py` additionally requires Python OpenCV. Use fresh verification output paths.
+
+Normal-speed playback of this new cut, independent Agent 05 re-audit and publication-rights review remain open. No publication or account action was authorized or performed.
