@@ -4,6 +4,8 @@ from pathlib import Path
 import cv2
 import numpy as np
 p=Path(__file__).resolve().parent; root=p.parents[1]
+sys.path.insert(0,str(root/'scripts'))
+from verify_export_common import write_report
 m=json.loads((p/'manifest.json').read_text(encoding='utf-8'));t=m['timing']
 frames=[t['bankRollStartFrame'],round((t['bankRollStartFrame']+t['bankRollPeakFrame'])/2),t['bankRollPeakFrame']]
 expr='+'.join(f'eq(n,{f})' for f in frames)
@@ -28,4 +30,4 @@ ok=abs(output[0]['angleDegrees'])<1 and 12.5<=output[-1]['angleDegrees']<=15.5 a
 report={'video':sys.argv[1],'frames':output,'pass':ok,'limitation':'Frame registration measures plate rotation, not independent horizon movement or viewer comprehension.'}
 out=Path(sys.argv[2]);
 if out.exists():raise FileExistsError(out)
-out.write_text(json.dumps(report,indent=2)+'\n',encoding='utf-8');print(json.dumps(report,indent=2));sys.exit(not ok)
+write_report(report,out,sys.argv[1]);print(json.dumps(report,indent=2));sys.exit(not ok)

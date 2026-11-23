@@ -1,0 +1,27 @@
+{
+  "video": "out/005-sabuk-ketiga/Skenario05-roll-color-review.mp4",
+  "impacts": [
+    {
+      "event": "impact11Frame",
+      "frame": 2662,
+      "expectedSec": 88.73333333333333,
+      "detectedSec": 88.73333333333333,
+      "offsetMs": 0.0,
+      "correlation": 0.871004581451416
+    },
+    {
+      "event": "impact19Frame",
+      "frame": 3952,
+      "expectedSec": 131.73333333333332,
+      "detectedSec": 131.73333333333332,
+      "offsetMs": 0.0,
+      "correlation": 0.34446579217910767
+    }
+  ],
+  "pass": true,
+  "target": {
+    "filename": "Skenario05-roll-color-review.mp4",
+    "sha256": "5bb59cafaf7c6755d05e951b3eb9071db10ebb29e52cfe4e56dbfa410dec34fa",
+    "sizeBytes": 11593899
+  }
+}

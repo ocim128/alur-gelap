@@ -1,0 +1,33 @@
+{
+  "video": "out/005-sabuk-ketiga/Skenario05-roll-color-review.mp4",
+  "frames": [
+    {
+      "frame": 3770,
+      "sec": 125.66666666666667,
+      "angleDegrees": -0.019,
+      "scale": 1.0281,
+      "inlierCount": 784
+    },
+    {
+      "frame": 3832,
+      "sec": 127.73333333333333,
+      "angleDegrees": 7.184,
+      "scale": 0.9772,
+      "inlierCount": 665
+    },
+    {
+      "frame": 3893,
+      "sec": 129.76666666666668,
+      "angleDegrees": 14.004,
+      "scale": 0.9266,
+      "inlierCount": 797
+    }
+  ],
+  "pass": true,
+  "limitation": "Frame registration measures plate rotation, not independent horizon movement or viewer comprehension.",
+  "target": {
+    "filename": "Skenario05-roll-color-review.mp4",
+    "sha256": "5bb59cafaf7c6755d05e951b3eb9071db10ebb29e52cfe4e56dbfa410dec34fa",
+    "sizeBytes": 11593899
+  }
+}

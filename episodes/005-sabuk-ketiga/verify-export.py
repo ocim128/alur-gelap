@@ -2,7 +2,11 @@
 import json, math, re, subprocess, sys
 from pathlib import Path
 import numpy as np
-p=Path(__file__).resolve().parent; root=p.parents[1]; m=json.loads((p/'manifest.json').read_text(encoding='utf-8')); t=m['timing']; fps=m['fps']; sr=m['soundMix']['sampleRate']; vpath=Path(sys.argv[1]); errors=[]
+p=Path(__file__).resolve().parent; root=p.parents[1]; sys.path.insert(0,str(root/'scripts'))
+from verify_export_common import write_report, frame_lumas, export_listening_clips
+m=json.loads((p/'manifest.json').read_text(encoding='utf-8')); t=m['timing']; fps=m['fps']; sr=m['soundMix']['sampleRate']; vpath=Path(sys.argv[1]); errors=[]
+out=Path(sys.argv[2]) if len(sys.argv)>2 else p/'verification/export-report.json'
+if out.exists():raise FileExistsError(f'Report already exists: {out}; choose a fresh path')
 probe=json.loads(subprocess.check_output(['ffprobe','-v','error','-show_entries','format=duration:stream=codec_type,width,height,r_frame_rate,pix_fmt,color_range,color_space,color_primaries,color_transfer,start_time','-of','json',str(vpath)],text=True))
 v=next(x for x in probe['streams'] if x['codec_type']=='video'); a=next(x for x in probe['streams'] if x['codec_type']=='audio')
 for k,val in {'width':1080,'height':1920,'r_frame_rate':'30/1','pix_fmt':'yuv420p','color_range':'tv','color_space':'bt709','color_primaries':'bt709','color_transfer':'bt709'}.items():
@@ -10,7 +14,7 @@ for k,val in {'width':1080,'height':1920,'r_frame_rate':'30/1','pix_fmt':'yuv420
 if abs(float(probe['format']['duration'])-m['duration']/fps)>.04:errors.append('wrong duration')
 if any(abs(float(s.get('start_time',0)))>.001 for s in (v,a)):errors.append('unexpected stream offset')
 def decode(path):return np.frombuffer(subprocess.check_output(['ffmpeg','-v','error','-i',str(path),'-map','0:a:0','-ac','1','-ar',str(sr),'-f','f32le','-']),dtype='<f4')
-audio=decode(vpath); ref=decode(root/'public/assets/004-tangan-pilot-kemarin/sfx/tape-snap-rewind.wav')
+audio=decode(vpath); ref=decode(root/'public/sfx/shared/tape-snap-rewind.wav')
 report={'video':str(vpath),'durationSec':float(probe['format']['duration']),'rewinds':[],'errors':errors}
 if not np.all(np.isfinite(audio)):errors.append('non-finite audio')
 # Match actual encoded snap waveform independently within ±100 ms of every frame.
@@ -35,6 +39,21 @@ if len(hit):
  report['jolt']={'frame':t['joltFrame'],'visualSec':t['joltFrame']/fps,'audioOnsetSec':round(onset,6),'offsetMs':round(diff,3)}
  if abs(diff)>1000/fps:errors.append('jolt audio offset exceeds one frame')
 else:errors.append('jolt audio onset not detected')
+# Scan the surrounding encoded frames, rather than assuming the scheduled frame
+# is necessarily the first visual flash. A 25-level rise separates this flash
+# from the slowly varying P24 picture; flag any earlier flash as a mismatch.
+scan_frames=list(range(t['joltFrame']-12,t['joltFrame']+9))
+scan_lumas=frame_lumas(vpath,scan_frames,width=108,height=192)
+if len(scan_lumas)!=len(scan_frames):errors.append('missing jolt scan frames')
+else:
+ candidates=[scan_frames[i] for i in range(1,len(scan_frames)) if scan_lumas[i]-scan_lumas[i-1]>25]
+ first=candidates[0] if candidates else None
+ report['flashScan']={'frames':[scan_frames[0],scan_frames[-1]],'firstFlashFrame':first,'scheduledFrame':t['joltFrame'],'lumas':scan_lumas}
+ if first!=t['joltFrame']:errors.append(f'first visual flash {first} does not match scheduled jolt frame')
+ if first is not None and 'jolt' in report:
+  report['jolt']['visualSec']=first/fps
+  report['jolt']['offsetMs']=round((report['jolt']['audioOnsetSec']-first/fps)*1000,3)
+  if abs(report['jolt']['offsetMs'])>1000/fps:errors.append('actual flash and audio onset differ by more than one frame')
 flash_frames=[t['joltFrame']+i for i in range(2)]
 rewind_frames=[x['startFrame']+offset for x in t['branchRewinds'] for offset in (0,6,11)]
 frames=sorted(set([6,t['joltFrame']-1,t['blackoutFrame']-1,t['blackoutFrame']]+flash_frames+rewind_frames))
@@ -60,5 +79,9 @@ else:
  report['loudness']={'integratedLufs':float(loud.group(1)),'truePeakDbtp':float(peak.group(1))}
  if abs(float(loud.group(1))+14)>.5:errors.append('integrated loudness outside -14 ±0.5 LUFS')
  if float(peak.group(1))>-1.5:errors.append('true peak exceeds -1.5 dBTP')
-out=Path(sys.argv[2]) if len(sys.argv)>2 else p/'verification/export-report.json';out.parent.mkdir(exist_ok=True,parents=True)
-text=json.dumps(report,indent=2,allow_nan=False)+'\n';out.write_text(text,encoding='utf-8');print(text);sys.exit(bool(errors))
+if len(sys.argv)>3:
+ events=[{'name':f'rewind-{i+1}','startSec':item['startFrame']/fps,'endSec':item['endFrame']/fps} for i,item in enumerate(t['branchRewinds'])]
+ events += [{'name':'radio-voice','startSec':42.74,'endSec':46.94},{'name':'copilot-echo','startSec':65.2,'endSec':67.7},{'name':'fake-click','startSec':t['fakeClickFrame']/fps},{'name':'belt-release','startSec':t['releaseClickFrame']/fps},{'name':'final-word-vacuum-jolt','startSec':153.8,'endSec':t['joltFrame']/fps+.8}]
+ report['listeningClips']=export_listening_clips(vpath,events,sys.argv[3],before_sec=.5,after_sec=.5)
+write_report(report,out,vpath)
+print(json.dumps(report,indent=2,allow_nan=False));sys.exit(bool(errors))

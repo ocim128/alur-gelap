@@ -1,5 +1,7 @@
 # Scenario 05 assembly review — 23 November 2026
 
+**Current re-audit candidate:** [roll-color-rework-handoff.md](roll-color-rework-handoff.md) identifies the new MP4 by SHA-256 and records the P18 motion, color-conversion and export checks. The owner-approved exceptions and the earlier listening decision remain scoped as documented there; independent QA of the new file is pending.
+
 **Later owner-directed polish:** See [owner-polish-handoff.md](owner-polish-handoff.md) for the current export and QA packet. The owner listened to and approved the earlier ending and accepted the specified coverage exceptions; the earlier review below is retained as history. Independent QA of the new reveal timing and P18 roll remains pending.
 
 ## Story and experience

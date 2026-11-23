@@ -1,5 +1,7 @@
 # Scenario 05 owner-directed polish — Agent 05 handoff
 
+**Later fresh-audit rework:** See [roll-color-rework-handoff.md](roll-color-rework-handoff.md) for the current artifact, hash, motion and conversion evidence. This prior owner-polish handoff remains as history.
+
 Review copy: `out/005-sabuk-ketiga/Skenario05SabukKetiga-owner-polish-master_compressed.mp4`. Rec.709 master: `out/005-sabuk-ketiga/Skenario05SabukKetiga-owner-polish-master.mp4`. Composition `Skenario05SabukKetiga`, 1080 × 1920, 30 fps, 4,693 frames (156.433 s; container 156.437 s). This is a new export; independent Agent 05 re-audit is pending.
 
 ## Owner decisions

@@ -34,7 +34,7 @@ def burst(duration,kind,seed):
 def cue(frame,kind,gain=.2):place(burst(.65 if kind=='impact' else .3,kind,frame),sample(frame),gain)
 for name,kind,gain in [('gripFrame','noise',.15),('buckleTickFrame','click',.22),('firstClickFrame','click',.25),('secondClickFrame','click',.18),('impact11Frame','impact',.3),('fakeClickFrame','click',.23),('releaseClickFrame','click',.25),('impact19Frame','impact',.22)]:cue(t[name],kind,gain)
 for x,kind,gain in [(22.24,'noise',.12),(31.32,'impact',.14),(51.3,'impact',.23),(60.0,'click',.2),(66.3,'noise',.09),(106.3,'noise',.12),(109.44,'noise',.18),(125.56,'impact',.16),(146.5,'impact',.12)]:cue(round(shifted(x)*fps),kind,gain)
-snap=dec(root/'public/assets/004-tangan-pilot-kemarin/sfx/tape-snap-rewind.wav')
+snap=dec(root/'public/sfx/shared/tape-snap-rewind.wav')
 for item in t['branchRewinds']:place(snap,sample(item['startFrame']),.28)
 voice=dec(root/'public/sfx/prepared/scenario05-tower-pa-mixready.wav');place(voice,sec(42.74),.40)
 # Behind-wall echo stutter is a quiet filtered derivative of the narrator's copilot line.

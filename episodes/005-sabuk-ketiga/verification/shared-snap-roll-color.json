@@ -1,0 +1,16 @@
+{
+  "sharedPath": "public\\sfx\\shared\\tape-snap-rewind.wav",
+  "previousPath": "public\\assets\\004-tangan-pilot-kemarin\\sfx\\tape-snap-rewind.wav",
+  "sharedSha256": "e1cfb995d718b179f2ad4442177d3bb01053183d682dddb220cead8bd732023b",
+  "previousSha256": "e1cfb995d718b179f2ad4442177d3bb01053183d682dddb220cead8bd732023b",
+  "decodedPcmEqual": true,
+  "mixerReferencesShared": true,
+  "mixerReferencesOldEpisodeCopy": false,
+  "pass": true,
+  "note": "The byte-identical source substitution needs no regeneration of the existing mix; the delivery rewind onsets are checked separately.",
+  "target": {
+    "filename": "Skenario05-roll-color-review.mp4",
+    "sha256": "5bb59cafaf7c6755d05e951b3eb9071db10ebb29e52cfe4e56dbfa410dec34fa",
+    "sizeBytes": 11593899
+  }
+}

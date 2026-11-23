@@ -1,0 +1,91 @@
+{
+  "video": "out\\005-sabuk-ketiga\\Skenario05-roll-color-review.mp4",
+  "master": {
+    "path": "out\\005-sabuk-ketiga\\Skenario05-roll-color-master.mp4",
+    "sha256": "1e5ac8e1029c1cc3d5850c7875a6e86a676d02c2d98fe15538df6d1a0244abd3"
+  },
+  "source": {
+    "directory": "out\\005-sabuk-ketiga\\Skenario05-roll-color-jpeg-source",
+    "format": "JPEG/JFIF yuvj420p",
+    "range": "full / pc",
+    "matrix": "bt470bg / BT.601 coefficients",
+    "primaries": "BT.709 / sRGB",
+    "transfer": "sRGB (Chromium is launched with --force-color-profile=srgb)"
+  },
+  "filter": "zscale=matrixin=bt470bg:rangein=full:primariesin=bt709:transferin=iec61966-2-1:matrix=bt709:range=limited:primaries=bt709:transfer=bt709,format=yuv420p",
+  "frames": [
+    {
+      "frame": 6,
+      "sourceSha256": "0f730081b2c0dac12ffcd092463a06fef45093856c3194cc0dd79b326f59f560",
+      "blockMeanAbsErrorY_Cb_Cr": [
+        0.6342,
+        0.5548,
+        0.5643
+      ],
+      "independentBt709LumaMae": 0.6552,
+      "naiveNoTransferConversionLumaMae": 9.8112
+    },
+    {
+      "frame": 3470,
+      "sourceSha256": "93db978eb5068d3c0181c7e96afbd90ddc90523264e628343da353b1d565b073",
+      "blockMeanAbsErrorY_Cb_Cr": [
+        0.7234,
+        0.4991,
+        0.5719
+      ],
+      "independentBt709LumaMae": 0.768,
+      "naiveNoTransferConversionLumaMae": 10.5978
+    },
+    {
+      "frame": 3646,
+      "sourceSha256": "b0c0d81c448a052e25c11da97f48bff7abb34be9fa3813674dbcd0add8cf4dd9",
+      "blockMeanAbsErrorY_Cb_Cr": [
+        0.3857,
+        0.4685,
+        0.4818
+      ],
+      "independentBt709LumaMae": 0.4152,
+      "naiveNoTransferConversionLumaMae": 10.0591
+    },
+    {
+      "frame": 3832,
+      "sourceSha256": "54de9865352c14e9bb7f5d296e2ad606f51860e9e8c3a09465e33690725d746d",
+      "blockMeanAbsErrorY_Cb_Cr": [
+        0.9349,
+        0.5221,
+        0.6411
+      ],
+      "independentBt709LumaMae": 0.9867,
+      "naiveNoTransferConversionLumaMae": 10.7575
+    },
+    {
+      "frame": 3893,
+      "sourceSha256": "66429c8c697d7c103432d29522c60a5ef937ae096cb15b4c26dd3ad6390ee816",
+      "blockMeanAbsErrorY_Cb_Cr": [
+        0.7136,
+        0.4565,
+        0.4733
+      ],
+      "independentBt709LumaMae": 0.791,
+      "naiveNoTransferConversionLumaMae": 10.7882
+    },
+    {
+      "frame": 4658,
+      "sourceSha256": "4e74f179d6e56827015d683b473af3d292f5a7c27a6f5f31c028d67b191fca90",
+      "blockMeanAbsErrorY_Cb_Cr": [
+        0.6746,
+        0.4773,
+        0.4399
+      ],
+      "independentBt709LumaMae": 0.6972,
+      "naiveNoTransferConversionLumaMae": 5.3375
+    }
+  ],
+  "pass": true,
+  "method": "8x8 luma and 4x4 chroma block means of decoded delivery versus independently re-run source conversion; independent luma model uses the sRGB EOTF, the display-referred BT.1886 inverse EOTF (power 1/2.4) and BT.709 matrix. zimg selects this display-referred path for REC_709: https://github.com/sekrit-twc/zimg/blob/master/src/zimg/colorspace/gamma.cpp. Lossy encoding allows small differences.",
+  "target": {
+    "filename": "Skenario05-roll-color-review.mp4",
+    "sha256": "5bb59cafaf7c6755d05e951b3eb9071db10ebb29e52cfe4e56dbfa410dec34fa",
+    "sizeBytes": 11593899
+  }
+}

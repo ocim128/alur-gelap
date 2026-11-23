@@ -1,0 +1,44 @@
+{
+  "video": "out/005-sabuk-ketiga/Skenario05-roll-color-review.mp4",
+  "clicks": [
+    {
+      "event": "firstClickFrame",
+      "frame": 2328,
+      "expectedSec": 77.6,
+      "detectedSec": 77.6,
+      "offsetMs": 0.0,
+      "correlation": 0.8833684325218201
+    },
+    {
+      "event": "secondClickFrame",
+      "frame": 2340,
+      "expectedSec": 78.0,
+      "detectedSec": 78.0,
+      "offsetMs": 0.0,
+      "correlation": 0.6809270977973938
+    },
+    {
+      "event": "fakeClickFrame",
+      "frame": 3470,
+      "expectedSec": 115.66666666666667,
+      "detectedSec": 115.66666666666667,
+      "offsetMs": 0.0,
+      "correlation": 0.4980096220970154
+    },
+    {
+      "event": "releaseClickFrame",
+      "frame": 3646,
+      "expectedSec": 121.53333333333333,
+      "detectedSec": 121.53333333333333,
+      "offsetMs": 0.0,
+      "correlation": 0.9576964974403381
+    }
+  ],
+  "pass": true,
+  "limitation": "Synchronization to generated cues does not establish belt-state visibility or narration alignment.",
+  "target": {
+    "filename": "Skenario05-roll-color-review.mp4",
+    "sha256": "5bb59cafaf7c6755d05e951b3eb9071db10ebb29e52cfe4e56dbfa410dec34fa",
+    "sizeBytes": 11593899
+  }
+}

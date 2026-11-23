@@ -27,12 +27,19 @@ const plateMotion = ({frame, fps, scene}: StudioV2OverlayContext) => {
  if (scene.id === 'P18') {
   const progress = interpolate(frame, [t.bankRollStartFrame, t.bankRollPeakFrame], [0, 1], {extrapolateLeft:'clamp', extrapolateRight:'clamp', easing:Easing.inOut(Easing.cubic)});
   const angle = 14 * progress;
-  // A portrait image needs more than 1.20x overscan at 14 degrees. Account
-  // for the outer camera's 1.02+ scale to cover the frame at every angle.
-  const radians = angle * Math.PI / 180;
-  const overscan = Math.max(1, (Math.cos(radians) + 1920 / 1080 * Math.sin(radians)) / 1.02 + .02 * progress);
-  return `scale(${overscan}) rotate(${angle}deg)`;
+  // Let the approved plate rotate without the earlier severe overscan crop.
+  // Its soft backing uses the same plate and fills the exposed corners.
+  return `scale(${1 - .12 * progress}) rotate(${angle}deg) translateX(${-40 * progress}px)`;
  }
  return scene.id < 'P20' ? `rotate(${1.4 * Math.sin(frame / fps * .6)}deg)` : '';
 };
-export const Skenario05SabukKetiga = () => <ImpactMicroShake contactFrame={t.impact11Frame}><ImpactMicroShake contactFrame={t.impact19Frame}><StudioV2Player manifest={manifest} captions={captions} plateOverlay={Plate} overlay={Overlay} plateTransform={plateMotion} /></ImpactMicroShake></ImpactMicroShake>;
+const Backdrop = ({scene}: StudioV2OverlayContext) => scene.id === 'P18' ? <AbsoluteFill style={{overflow:'hidden'}}>
+  <Img src={staticFile(scene.plate)} style={{width:'100%',height:'100%',objectFit:'cover',transform:'scale(1.12)',filter:'blur(48px) brightness(.55)'}} />
+</AbsoluteFill> : null;
+const featherPlate = ({frame,scene}: StudioV2OverlayContext) => {
+ if (scene.id !== 'P18' || frame <= t.bankRollStartFrame) return {};
+ const progress=interpolate(frame,[t.bankRollStartFrame,t.bankRollPeakFrame],[0,1],{extrapolateLeft:'clamp',extrapolateRight:'clamp'});
+ const edge=10*progress;
+ return {maskImage:`linear-gradient(to right, transparent, black ${edge}%, black ${100-edge}%, transparent), linear-gradient(to bottom, transparent, black ${edge}%, black ${100-edge}%, transparent)`, maskComposite:'intersect' as const};
+};
+export const Skenario05SabukKetiga = () => <ImpactMicroShake contactFrame={t.impact11Frame}><ImpactMicroShake contactFrame={t.impact19Frame}><StudioV2Player manifest={manifest} captions={captions} plateBackdrop={Backdrop} plateOverlay={Plate} overlay={Overlay} plateTransform={plateMotion} plateStyle={featherPlate} /></ImpactMicroShake></ImpactMicroShake>;

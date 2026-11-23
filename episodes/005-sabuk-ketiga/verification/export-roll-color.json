@@ -1,0 +1,167 @@
+{
+  "video": "out\\005-sabuk-ketiga\\Skenario05-roll-color-review.mp4",
+  "durationSec": 156.433333,
+  "rewinds": [
+    {
+      "startFrame": 1734,
+      "endFrame": 1746,
+      "expectedSec": 57.8,
+      "detectedSec": 57.8,
+      "offsetMs": 0.0,
+      "correlation": 0.9095,
+      "visualMidpointChangeMean": 6.29
+    },
+    {
+      "startFrame": 2174,
+      "endFrame": 2186,
+      "expectedSec": 72.46666666666667,
+      "detectedSec": 72.466667,
+      "offsetMs": -0.0,
+      "correlation": 0.9057,
+      "visualMidpointChangeMean": 6.23
+    },
+    {
+      "startFrame": 2721,
+      "endFrame": 2733,
+      "expectedSec": 90.7,
+      "detectedSec": 90.7,
+      "offsetMs": -0.0,
+      "correlation": 0.9083,
+      "visualMidpointChangeMean": 6.51
+    }
+  ],
+  "errors": [],
+  "dreadSilence": {
+    "startSec": 91.1,
+    "endSec": 92.6,
+    "rmsDbfs": -92.29,
+    "peakDbfs": -57.67,
+    "innerRmsDbfs": -300.0
+  },
+  "vacuum": {
+    "startSec": 155.11666666666667,
+    "endSec": 155.26666666666668,
+    "rmsDbfs": -78.13,
+    "peakDbfs": -50.7
+  },
+  "jolt": {
+    "frame": 4658,
+    "visualSec": 155.26666666666668,
+    "audioOnsetSec": 155.263771,
+    "offsetMs": -2.896,
+    "visualFrameChangeMean": 87.15
+  },
+  "flashScan": {
+    "frames": [
+      4646,
+      4666
+    ],
+    "firstFlashFrame": 4658,
+    "scheduledFrame": 4658,
+    "lumas": [
+      61.73,
+      61.54,
+      61.69,
+      58.67,
+      58.7,
+      58.49,
+      58.62,
+      58.54,
+      58.57,
+      58.38,
+      58.45,
+      58.39,
+      145.53,
+      146.09,
+      58.21,
+      59.3,
+      59.13,
+      59.39,
+      59.13,
+      59.28,
+      59.28
+    ]
+  },
+  "frames": [
+    {
+      "frame": 6,
+      "meanLuma": 38.34
+    },
+    {
+      "frame": 1734,
+      "meanLuma": 46.5
+    },
+    {
+      "frame": 1740,
+      "meanLuma": 52.58
+    },
+    {
+      "frame": 1745,
+      "meanLuma": 47.93
+    },
+    {
+      "frame": 2174,
+      "meanLuma": 31.76
+    },
+    {
+      "frame": 2180,
+      "meanLuma": 37.82
+    },
+    {
+      "frame": 2185,
+      "meanLuma": 33.26
+    },
+    {
+      "frame": 2721,
+      "meanLuma": 30.78
+    },
+    {
+      "frame": 2727,
+      "meanLuma": 37.26
+    },
+    {
+      "frame": 2732,
+      "meanLuma": 32.01
+    },
+    {
+      "frame": 4657,
+      "meanLuma": 55.79
+    },
+    {
+      "frame": 4658,
+      "meanLuma": 142.95
+    },
+    {
+      "frame": 4659,
+      "meanLuma": 143.46
+    },
+    {
+      "frame": 4682,
+      "meanLuma": 56.72
+    },
+    {
+      "frame": 4683,
+      "meanLuma": 0.0
+    }
+  ],
+  "maxFlashMeanLuma": 143.46,
+  "loudness": {
+    "integratedLufs": -14.3,
+    "truePeakDbtp": -1.9
+  },
+  "listeningClips": [
+    "episodes\\005-sabuk-ketiga\\verification\\listen-roll-color\\listen-rewind-1-57.30s.wav",
+    "episodes\\005-sabuk-ketiga\\verification\\listen-roll-color\\listen-rewind-2-71.97s.wav",
+    "episodes\\005-sabuk-ketiga\\verification\\listen-roll-color\\listen-rewind-3-90.20s.wav",
+    "episodes\\005-sabuk-ketiga\\verification\\listen-roll-color\\listen-radio-voice-42.24s.wav",
+    "episodes\\005-sabuk-ketiga\\verification\\listen-roll-color\\listen-copilot-echo-64.70s.wav",
+    "episodes\\005-sabuk-ketiga\\verification\\listen-roll-color\\listen-fake-click-115.17s.wav",
+    "episodes\\005-sabuk-ketiga\\verification\\listen-roll-color\\listen-belt-release-121.03s.wav",
+    "episodes\\005-sabuk-ketiga\\verification\\listen-roll-color\\listen-final-word-vacuum-jolt-153.30s.wav"
+  ],
+  "target": {
+    "filename": "Skenario05-roll-color-review.mp4",
+    "sha256": "5bb59cafaf7c6755d05e951b3eb9071db10ebb29e52cfe4e56dbfa410dec34fa",
+    "sizeBytes": 11593899
+  }
+}

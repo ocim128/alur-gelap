@@ -2,7 +2,9 @@
 import json, subprocess, sys
 from pathlib import Path
 import numpy as np
-p=Path(__file__).resolve().parent; m=json.loads((p/'manifest.json').read_text(encoding='utf-8')); sr=48000; fps=m['fps']
+p=Path(__file__).resolve().parent;sys.path.insert(0,str(p.parents[1]/'scripts'))
+from verify_export_common import write_report
+m=json.loads((p/'manifest.json').read_text(encoding='utf-8')); sr=48000; fps=m['fps']
 audio=np.frombuffer(subprocess.check_output(['ffmpeg','-v','error','-i',sys.argv[1],'-ac','1','-ar',str(sr),'-f','f32le','-']),dtype='<f4')
 items=[]
 for name in ('firstClickFrame','secondClickFrame','fakeClickFrame','releaseClickFrame'):
@@ -16,4 +18,4 @@ ok=all(abs(i['offsetMs'])<=1000/fps and i['correlation']>.025 for i in items)
 result={'video':sys.argv[1],'clicks':items,'pass':ok,'limitation':'Synchronization to generated cues does not establish belt-state visibility or narration alignment.'}
 target=Path(sys.argv[2]) if len(sys.argv)>2 else p/'verification/buckle-sync-audit-rework.json'
 if target.exists(): raise FileExistsError(f'Refusing to overwrite {target}; pass a fresh output path')
-target.write_text(json.dumps(result,indent=2)+'\n',encoding='utf-8');print(json.dumps(result,indent=2));sys.exit(not ok)
+write_report(result,target,sys.argv[1]);print(json.dumps(result,indent=2));sys.exit(not ok)

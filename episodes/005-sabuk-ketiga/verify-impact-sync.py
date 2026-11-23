@@ -3,6 +3,8 @@ import json, subprocess, sys
 from pathlib import Path
 import numpy as np
 p=Path(__file__).resolve().parent
+sys.path.insert(0,str(p.parents[1]/'scripts'))
+from verify_export_common import write_report
 m=json.loads((p/'manifest.json').read_text(encoding='utf-8')); sr=48000; fps=m['fps']
 audio=np.frombuffer(subprocess.check_output(['ffmpeg','-v','error','-i',sys.argv[1],'-ac','1','-ar',str(sr),'-f','f32le','-']),dtype='<f4')
 results=[]
@@ -18,4 +20,4 @@ for name in ('impact11Frame','impact19Frame'):
 ok=all(abs(r['offsetMs'])<=1000/fps and r['correlation']>.04 for r in results)
 out={'video':sys.argv[1],'impacts':results,'pass':ok};target=Path(sys.argv[2]) if len(sys.argv)>2 else p/'verification/impact-sync.json'
 if target.exists(): raise FileExistsError(f'Refusing to overwrite {target}; pass a fresh output path')
-target.write_text(json.dumps(out,indent=2)+'\n');print(json.dumps(out,indent=2));sys.exit(not ok)
+write_report(out,target,sys.argv[1]);print(json.dumps(out,indent=2));sys.exit(not ok)

@@ -49,7 +49,7 @@
   },
   "render": {
     "status": "pass",
-    "notes": "Owner-directed P16/P17 reveal and P18 roll rendered as Skenario05SabukKetiga-owner-polish-master_compressed.mp4; npm run check, compressed export, buckle, impact, bank-roll and ending-comparison checks pass. Owner-approved image exceptions do not block Agent 05 QA; technical image verdict remains fail. Phone-size sampled frames show the 14-degree roll crops most of the right-side pilot at its peak; review the new motion and crop at normal speed in independent QA. See owner-polish-handoff.md. Owner listened to and passed the prior v2 ending; the retained PCM ending is byte-identical, while the new AAC was not claimed as newly listened to."
+    "notes": "Fresh P18 framing and explicit Rec.709 pixel-conversion rework rendered as Skenario05-roll-color-review.mp4, SHA-256 5bb59cafaf7c6755d05e951b3eb9071db10ebb29e52cfe4e56dbfa410dec34fa. Retained source frames and artifact-bound color, cue, rewind, silence, jolt, P18 motion, P24 continuity and shared-snap verification pass; npm run check passes. Muted 1x programmatic playback and sampled frame review completed; no new human listening review. Accepted image exceptions and P16-P17 slow-motion timing remain in force. Independent Agent 05 re-audit pending; see roll-color-rework-handoff.md."
   },
   "audit": {
     "status": "pending",

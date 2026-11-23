@@ -1,0 +1,393 @@
+{
+  "video": "out/005-sabuk-ketiga/Skenario05-roll-color-review.mp4",
+  "sampleStrideFrames": 6,
+  "frames": [
+    {
+      "frame": 3733,
+      "sec": 124.4333,
+      "angleDegrees": -0.008,
+      "geometricVisibleFraction": {
+        "pilot": 0.9462,
+        "controls": 1.0,
+        "leftExit": 1.0
+      },
+      "inliers": 1316
+    },
+    {
+      "frame": 3739,
+      "sec": 124.6333,
+      "angleDegrees": -0.012,
+      "geometricVisibleFraction": {
+        "pilot": 0.9449,
+        "controls": 1.0,
+        "leftExit": 1.0
+      },
+      "inliers": 1375
+    },
+    {
+      "frame": 3745,
+      "sec": 124.8333,
+      "angleDegrees": -0.007,
+      "geometricVisibleFraction": {
+        "pilot": 0.944,
+        "controls": 1.0,
+        "leftExit": 1.0
+      },
+      "inliers": 1298
+    },
+    {
+      "frame": 3751,
+      "sec": 125.0333,
+      "angleDegrees": 0.0,
+      "geometricVisibleFraction": {
+        "pilot": 0.9419,
+        "controls": 1.0,
+        "leftExit": 1.0
+      },
+      "inliers": 1211
+    },
+    {
+      "frame": 3757,
+      "sec": 125.2333,
+      "angleDegrees": -0.007,
+      "geometricVisibleFraction": {
+        "pilot": 0.9426,
+        "controls": 1.0,
+        "leftExit": 1.0
+      },
+      "inliers": 1271
+    },
+    {
+      "frame": 3763,
+      "sec": 125.4333,
+      "angleDegrees": -0.016,
+      "geometricVisibleFraction": {
+        "pilot": 0.9418,
+        "controls": 1.0,
+        "leftExit": 1.0
+      },
+      "inliers": 1367
+    },
+    {
+      "frame": 3769,
+      "sec": 125.6333,
+      "angleDegrees": -0.014,
+      "geometricVisibleFraction": {
+        "pilot": 0.941,
+        "controls": 1.0,
+        "leftExit": 1.0
+      },
+      "inliers": 1365
+    },
+    {
+      "frame": 3770,
+      "sec": 125.6667,
+      "angleDegrees": -0.048,
+      "geometricVisibleFraction": {
+        "pilot": 0.9415,
+        "controls": 1.0,
+        "leftExit": 1.0
+      },
+      "inliers": 616
+    },
+    {
+      "frame": 3775,
+      "sec": 125.8333,
+      "angleDegrees": 0.013,
+      "geometricVisibleFraction": {
+        "pilot": 0.9398,
+        "controls": 1.0,
+        "leftExit": 1.0
+      },
+      "inliers": 659
+    },
+    {
+      "frame": 3781,
+      "sec": 126.0333,
+      "angleDegrees": 0.034,
+      "geometricVisibleFraction": {
+        "pilot": 0.9397,
+        "controls": 1.0,
+        "leftExit": 1.0
+      },
+      "inliers": 668
+    },
+    {
+      "frame": 3787,
+      "sec": 126.2333,
+      "angleDegrees": 0.145,
+      "geometricVisibleFraction": {
+        "pilot": 0.9402,
+        "controls": 1.0,
+        "leftExit": 1.0
+      },
+      "inliers": 622
+    },
+    {
+      "frame": 3793,
+      "sec": 126.4333,
+      "angleDegrees": 0.354,
+      "geometricVisibleFraction": {
+        "pilot": 0.9409,
+        "controls": 1.0,
+        "leftExit": 1.0
+      },
+      "inliers": 640
+    },
+    {
+      "frame": 3799,
+      "sec": 126.6333,
+      "angleDegrees": 0.717,
+      "geometricVisibleFraction": {
+        "pilot": 0.9453,
+        "controls": 1.0,
+        "leftExit": 1.0
+      },
+      "inliers": 584
+    },
+    {
+      "frame": 3805,
+      "sec": 126.8333,
+      "angleDegrees": 1.279,
+      "geometricVisibleFraction": {
+        "pilot": 0.9533,
+        "controls": 1.0,
+        "leftExit": 1.0
+      },
+      "inliers": 625
+    },
+    {
+      "frame": 3811,
+      "sec": 127.0333,
+      "angleDegrees": 2.07,
+      "geometricVisibleFraction": {
+        "pilot": 0.9633,
+        "controls": 1.0,
+        "leftExit": 1.0
+      },
+      "inliers": 622
+    },
+    {
+      "frame": 3817,
+      "sec": 127.2333,
+      "angleDegrees": 3.107,
+      "geometricVisibleFraction": {
+        "pilot": 0.9742,
+        "controls": 1.0,
+        "leftExit": 1.0
+      },
+      "inliers": 635
+    },
+    {
+      "frame": 3823,
+      "sec": 127.4333,
+      "angleDegrees": 4.472,
+      "geometricVisibleFraction": {
+        "pilot": 0.9814,
+        "controls": 1.0,
+        "leftExit": 1.0
+      },
+      "inliers": 629
+    },
+    {
+      "frame": 3829,
+      "sec": 127.6333,
+      "angleDegrees": 6.165,
+      "geometricVisibleFraction": {
+        "pilot": 0.9866,
+        "controls": 1.0,
+        "leftExit": 1.0
+      },
+      "inliers": 630
+    },
+    {
+      "frame": 3835,
+      "sec": 127.8333,
+      "angleDegrees": 8.108,
+      "geometricVisibleFraction": {
+        "pilot": 0.9909,
+        "controls": 1.0,
+        "leftExit": 1.0
+      },
+      "inliers": 541
+    },
+    {
+      "frame": 3841,
+      "sec": 128.0333,
+      "angleDegrees": 9.803,
+      "geometricVisibleFraction": {
+        "pilot": 0.9934,
+        "controls": 1.0,
+        "leftExit": 1.0
+      },
+      "inliers": 479
+    },
+    {
+      "frame": 3847,
+      "sec": 128.2333,
+      "angleDegrees": 11.07,
+      "geometricVisibleFraction": {
+        "pilot": 0.9951,
+        "controls": 1.0,
+        "leftExit": 1.0
+      },
+      "inliers": 452
+    },
+    {
+      "frame": 3853,
+      "sec": 128.4333,
+      "angleDegrees": 12.054,
+      "geometricVisibleFraction": {
+        "pilot": 0.9965,
+        "controls": 1.0,
+        "leftExit": 1.0
+      },
+      "inliers": 933
+    },
+    {
+      "frame": 3859,
+      "sec": 128.6333,
+      "angleDegrees": 12.837,
+      "geometricVisibleFraction": {
+        "pilot": 0.9971,
+        "controls": 1.0,
+        "leftExit": 1.0
+      },
+      "inliers": 829
+    },
+    {
+      "frame": 3865,
+      "sec": 128.8333,
+      "angleDegrees": 13.311,
+      "geometricVisibleFraction": {
+        "pilot": 0.9976,
+        "controls": 1.0,
+        "leftExit": 1.0
+      },
+      "inliers": 756
+    },
+    {
+      "frame": 3871,
+      "sec": 129.0333,
+      "angleDegrees": 13.708,
+      "geometricVisibleFraction": {
+        "pilot": 0.9976,
+        "controls": 1.0,
+        "leftExit": 1.0
+      },
+      "inliers": 631
+    },
+    {
+      "frame": 3877,
+      "sec": 129.2333,
+      "angleDegrees": 13.872,
+      "geometricVisibleFraction": {
+        "pilot": 0.9979,
+        "controls": 1.0,
+        "leftExit": 1.0
+      },
+      "inliers": 729
+    },
+    {
+      "frame": 3883,
+      "sec": 129.4333,
+      "angleDegrees": 13.946,
+      "geometricVisibleFraction": {
+        "pilot": 0.9979,
+        "controls": 1.0,
+        "leftExit": 1.0
+      },
+      "inliers": 699
+    },
+    {
+      "frame": 3889,
+      "sec": 129.6333,
+      "angleDegrees": 14.037,
+      "geometricVisibleFraction": {
+        "pilot": 0.9978,
+        "controls": 1.0,
+        "leftExit": 1.0
+      },
+      "inliers": 678
+    },
+    {
+      "frame": 3893,
+      "sec": 129.7667,
+      "angleDegrees": 13.978,
+      "geometricVisibleFraction": {
+        "pilot": 0.9978,
+        "controls": 1.0,
+        "leftExit": 1.0
+      },
+      "inliers": 732
+    },
+    {
+      "frame": 3895,
+      "sec": 129.8333,
+      "angleDegrees": 14.021,
+      "geometricVisibleFraction": {
+        "pilot": 0.9975,
+        "controls": 1.0,
+        "leftExit": 1.0
+      },
+      "inliers": 652
+    },
+    {
+      "frame": 3901,
+      "sec": 130.0333,
+      "angleDegrees": 14.028,
+      "geometricVisibleFraction": {
+        "pilot": 0.9975,
+        "controls": 1.0,
+        "leftExit": 1.0
+      },
+      "inliers": 726
+    },
+    {
+      "frame": 3907,
+      "sec": 130.2333,
+      "angleDegrees": 13.988,
+      "geometricVisibleFraction": {
+        "pilot": 0.9975,
+        "controls": 1.0,
+        "leftExit": 1.0
+      },
+      "inliers": 710
+    },
+    {
+      "frame": 3913,
+      "sec": 130.4333,
+      "angleDegrees": 14.018,
+      "geometricVisibleFraction": {
+        "pilot": 0.9974,
+        "controls": 1.0,
+        "leftExit": 1.0
+      },
+      "inliers": 835
+    },
+    {
+      "frame": 3918,
+      "sec": 130.6,
+      "angleDegrees": 13.995,
+      "geometricVisibleFraction": {
+        "pilot": 0.9972,
+        "controls": 1.0,
+        "leftExit": 1.0
+      },
+      "inliers": 807
+    }
+  ],
+  "minimumGeometricVisibleFraction": {
+    "pilot": 0.9397,
+    "controls": 1.0,
+    "leftExit": 1.0
+  },
+  "rollMonotonicWithinOneDegree": true,
+  "pass": true,
+  "limitations": "Registration samples the whole P18 motion every 0.2 s plus key frames; geometric visibility does not measure opacity, subjective identification, comprehension or real-time human playback.",
+  "target": {
+    "filename": "Skenario05-roll-color-review.mp4",
+    "sha256": "5bb59cafaf7c6755d05e951b3eb9071db10ebb29e52cfe4e56dbfa410dec34fa",
+    "sizeBytes": 11593899
+  }
+}

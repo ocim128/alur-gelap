@@ -1,0 +1,26 @@
+{
+  "frames": [
+    {
+      "frame": 4657,
+      "inlierCount": 1513,
+      "inlierRatio": 0.9181
+    },
+    {
+      "frame": 4660,
+      "inlierCount": 941,
+      "inlierRatio": 0.8455
+    },
+    {
+      "frame": 4667,
+      "inlierCount": 1130,
+      "inlierRatio": 0.9285
+    }
+  ],
+  "pass": true,
+  "limitation": "Feature correspondence supports common approved plate; it does not establish subjective transition quality.",
+  "target": {
+    "filename": "Skenario05-roll-color-review.mp4",
+    "sha256": "5bb59cafaf7c6755d05e951b3eb9071db10ebb29e52cfe4e56dbfa410dec34fa",
+    "sizeBytes": 11593899
+  }
+}

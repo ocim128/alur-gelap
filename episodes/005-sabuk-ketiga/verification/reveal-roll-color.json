@@ -1,0 +1,40 @@
+{
+  "frames": [
+    {
+      "frame": 3470,
+      "sec": 115.66666666666667,
+      "sourcePlateInliers": {
+        "P16": 998,
+        "P17": 2
+      },
+      "timedCaption": "BUNYI."
+    },
+    {
+      "frame": 3645,
+      "sec": 121.5,
+      "sourcePlateInliers": {
+        "P16": 807,
+        "P17": 3
+      },
+      "timedCaption": ""
+    },
+    {
+      "frame": 3646,
+      "sec": 121.53333333333333,
+      "sourcePlateInliers": {
+        "P16": 3,
+        "P17": 1053
+      },
+      "timedCaption": "SABUK KETIGA,"
+    }
+  ],
+  "fakeClickFrame": 3470,
+  "releaseClickFrame": 3646,
+  "pass": true,
+  "limitation": "Plate registration and caption data do not establish subjective listening or caption OCR; see the exported phone-size frames.",
+  "target": {
+    "filename": "Skenario05-roll-color-review.mp4",
+    "sha256": "5bb59cafaf7c6755d05e951b3eb9071db10ebb29e52cfe4e56dbfa410dec34fa",
+    "sizeBytes": 11593899
+  }
+}
