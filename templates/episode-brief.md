@@ -14,6 +14,14 @@ Copy this into `episodes/<slug>/brief.md`. Complete each step before starting th
 
 Use only the clues and context established within this video. Record the scenario's character sheet in the asset handoff.
 
+### Protagonist
+
+- **Name** — [one two-syllable, TTS-safe name; introduce by approximately 00:10]
+- **Age and role** — [age; ordinary role in this scenario]
+- **Pronoun and perspective** — [`dia` / named third-person by default; an owner-authorized `kamu` blank-vessel override requires the owner's explicit authorization and rationale here]
+- **TTS note** — [pronunciation, avoid ambiguous `e` and final `ng`, expected ASR spelling]
+- **Silhouette ID** — [unique ID and character-sheet link]
+
 ## Single Timing Authority
 
 Precedence is fixed and runs one way:
@@ -27,16 +35,17 @@ Precedence is fixed and runs one way:
 
 - **Narrative engine** — **Triple-Rewind** (`triple-branch-rewind`): three escalating bad-branch loops, then the winning execution under pressure. `earned-consequence` pressure may add cost inside a loop.
 - **Core Dilemma & Bad-Decision Payoff** — [normal instinct, lethal outcome and planted physical cause. Name the harder escape and its complication.]
-- **Hook rule** — the opening line states this scenario's specific danger or constraint, is **at most 6 canonical words** (hyphenated compounds = 1), and must measure **≤ 3.0 s** in the raw take (`scripts/prepare-narration.mjs` enforces this; its default limit is 3.0 s). Never speed the voice to fit. The generic two-sentence warning shape (“…Salah gerak, tamat.”) is forbidden as a hook template.
-- **Hook trim fallback** — [name the exact filler word to drop and its neighboring-word context, so Agent 02 can cut it from the prepared track without a regeneration round-trip if the measured hook exceeds 3.0 s; or write `none needed` when the hook comfortably fits]. Example: drop `itu` in “Tangan di tuas itu bukan tanganmu.” (context: after `dituas`, before `bukan`). *This field is required and validated non-empty.*
+- **Hook rule** — from Studio v2 006 onward, the opening line is pronoun-free and states this scenario's specific danger or constraint, is **at most 6 canonical words** (hyphenated compounds = 1), and must measure **≤ 3.0 s** in the raw take (`scripts/prepare-narration.mjs` enforces this; its default limit is 3.0 s). Never speed the voice to fit. The generic two-sentence warning shape (“…Salah gerak, tamat.”) is forbidden as a hook template.
+- **Hook trim fallback** — [name the exact filler word to drop and its neighboring-word context, so Agent 02 can cut it from the prepared track without a regeneration round-trip if the measured hook exceeds 3.0 s; or write `none needed` when the hook comfortably fits]. Example: drop `memang` in “Pintu bioskop memang terkunci rapat.” (context: after `bioskop`, before `terkunci`). *This field is required and validated non-empty.*
 - **Spoken script** — [link `narasi.txt` and both word counts]. Use Bahasa Bayi with short everyday Indonesian sentences. Let the clues, action and silence set the word count. Keep all-caps comic SFX (`BRAK!`, `KLIK!`) out of the script — they live in the cue sheet.
 
-### Scripting rules (from the Episodes 001–005 narrative audit)
+### Scripting rules: perspective and narrative craft
 
+- **Perspective & naming.** Studio v2 006+ defaults to named third person; 001–005 retain their second-person scripts. Use the protagonist's name on first mention per loop, followed by `dia` / `-nya` only when clear; introduce the name by approximately 00:10 and include it in the closing line. The hook is pronoun-free. Only an explicitly owner-authorized blank-vessel concept may use `kamu`, with the decision and rationale recorded above. Avoid bookish register.
 - **3-Chunk Sensory Opening (P01–P05).** Weave the setup into three connected beats — *Immediate Cage → Uncanny Anomaly → Physical Constraint* — not an eight-item prop inventory dump. [Cage]: … [Anomaly]: … [Constraint]: …
 - **Loop grammar.** Each loop names its **decision owner and human motivation** (grounded panic, trust, guilt, pride — never three identical `Instingmu:` labels); every action and consequence carries an explicit subject; each failed loop ends cleanly on **`Tamat.` + paragraph break** so the TTS release leaves a natural gap for the 0.4 s rewind.
 - **Chronological SFX-anchor syntax.** A sentence anchoring a foley transient carries **one action only**, in *prep → action → isolated sound beat* order. Never place a qualifying clause (e.g. “Jangan ditekan.”) between the sound trigger and its reaction.
-- **Motif, human beat, earned close.** One recurring motif phrase paid off **≥ 3×** (last use recontextualizes it); one brief human warmth/stake beat inside P01–P05; a motif-earned closing line — do not default verbatim to “Kamu berhasil bertahan hidup.” Short diegetic `voice-sfx` lines (caption-labeled) add character color outside the word cap.
+- **Motif, human beat, earned close.** One recurring motif phrase paid off **≥ 3×** (last use recontextualizes it); one brief human warmth/stake beat inside P01–P05; a motif-earned closing line that bookends the protagonist's name — do not default verbatim to “Dia berhasil bertahan hidup.” Short diegetic `voice-sfx` lines (caption-labeled) add character color outside the word cap.
 - **Entity Rule Boundary** — [what the threat/entity can do (its rule)]: … **The defect that traps it** [what it cannot do]: … The winning escape exploits this stated defect.
 - **Spatial vectors** — [only when physics/direction drives the climax: name the direction, origin and target for each climax-critical movement (bank angle, door side, rotor side, gravity)]: …
 
@@ -110,6 +119,7 @@ Complete the ledger for every physical cause of the bad outcome and every object
 - **Measured narration duration** — [___ s]. Allow room for dialogue, foley and deliberate silences inside the 145–160 s band.
 - **Preparation** — run the shared [`scripts/prepare-narration.mjs`](../scripts/prepare-narration.mjs) with an episode `narration-prep.json` (tightening thresholds, exact rewind/dread gaps, the hook trim fallback authorized above, protected beats and world-voice flanking gaps, tail pad). It writes the PCM-verified `audio-edit-map.json` that becomes the timeline authority.
 - **Preparation pronunciation rules** - [optional inline `pronunciation` object in `narration-prep.json`: `renames`, `splits`, `merges`, optional `contextBefore`/`contextAfter` and exact `count`; see the [audio producer contract](../agents/02-audio-producer.md)]. Copy the shared dictionary rules inline if needed; preparation retains raw hyphenated tokens for anchors, while the checker splits them for comparison. Record estimated split boundaries and any actual listening separately.
+- **Protagonist-name pronunciation check (Agent 02)** — [check every raw ASR occurrence against the name above and review `pronunciation.renames`; if ASR mishears the name, record a scoped correction and exact count where appropriate. Verify prepared timestamps and report unresolved uncertainty. ASR alone is not a listening review.]
 - **Pronunciation gate** — run [`scripts/check-pronunciation.mjs`](../scripts/check-pronunciation.mjs); only genuinely new ASR suspects escalate, and ASR text alone never establishes pronunciation.
 - **Diegetic World Voices / Dialogue** — [multiple beats with speaker, line or action, cue time, acoustic perspective, 1–3 s dread silences and caption label or color]
 - **Audio handoff** — [owner-accepted narration, known ASR uncertainties, pauses and gaps reserved for independent SFX; report any review actually performed]
@@ -132,11 +142,11 @@ Audit the final narration for every described in-world sound and stop. Keep `inv
 
 ### Per-Shot State Table
 
-For the 24-panel format, fill every row. Include any separate jolt plate. Record exact narrated wording and the visible action it maps to, or mark a silent beat. Indicate `present`, `absent` or `departed` for the anomaly, `lit`, `dark` or `emergency` for lighting, and `clear`, `rain` or `fog` for weather. List `strobe`, `shake`, `glitch` or `none` in the Remotion effects column. Make rewinds and deliberate changes explicit.
+For the 24-panel format, fill every row. In `Visible people`, use the actual protagonist name recorded above whenever the protagonist is visible, plus each other visible person's name or identity and position. Include any separate jolt plate. Record exact narrated wording and the visible action it maps to, or mark a silent beat. Indicate `present`, `absent` or `departed` for the anomaly, `lit`, `dark` or `emergency` for lighting, and `clear`, `rain` or `fog` for weather. List `strobe`, `shake`, `glitch` or `none` in the Remotion effects column. Make rewinds and deliberate changes explicit.
 
 | Panel | Time / camera vantage | Visible people + positions | Anomaly | Key prop states | Lighting | Weather | Exact narrated line and visible action | Remotion effects |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| P01 | | | | | | | | |
+| P01 | | [protagonist name and position when visible; otherwise absent] | | | | | | |
 | P02 | | | | | | | | |
 | P03 | | | | | | | | |
 | P04 | | | | | | | | |
