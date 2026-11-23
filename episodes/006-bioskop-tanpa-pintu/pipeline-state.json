@@ -1,14 +1,26 @@
 {
   "brief": {
     "status": "ready",
-    "notes": "Named-third-person rewrite, 227 words. Skenario06BioskopRoughCut is ready for a first viewing. See review.md."
+    "notes": "Revised 24 Nov after owner reported bad narration. Script is 243 words, with linked phrases, a clearer false-exit hook and a stage-light motif. Prior audio remains as a historical take. Revised scratch timing is 162.27 seconds and requires Investigator measurement."
   },
   "audio": {
-    "status": "pending",
-    "notes": "The eSpeak NG scratch track is for the storyboard. Record a fresh Investigator take after story review. The former kamu take is retained in 5933a40 and its public derivatives are archival."
+    "status": "ready",
+    "notes": "24 Nov: owner-requested fresh Investigator master and PCM-verified candidate derivatives generated for the current 243-word script; see audio-handoff-20261124-v3.md. ShortZ verification failed, pronunciation/name concerns require targeted listening, and the P22 gap is only 0.82 s by word alignment versus a required two-second hold. Candidate is not locked or approved for assembly. listening review: none."
   },
-  "images": {"status": "pending", "notes": "Temporary diagrams are in the rough cut. Production panel batch is pending."},
-  "render": {"status": "pending", "notes": "Planned production composition ID: Skenario06BioskopTanpaPintu."},
-  "audit": {"status": "pending", "notes": ""},
-  "publish": {"status": "pending", "notes": ""}
+  "images": {
+    "status": "pending",
+    "notes": "24 production panels pending. P09/P23 rough visual changes retained; a separate revised scratch cut has been generated."
+  },
+  "render": {
+    "status": "pending",
+    "notes": "Production composition Skenario06BioskopTanpaPintu is planned, not built; Skenario06BioskopRoughCut is the separate provisional scratch preview. Existing rough-cut timing and audio are stale relative to the fresh candidate and are not a production assembly."
+  },
+  "audit": {
+    "status": "pending",
+    "notes": "Normal-speed producer picture-and-sound review, independent viewer evidence, and final post-export QA remain pending."
+  },
+  "publish": {
+    "status": "pending",
+    "notes": ""
+  }
 }

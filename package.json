@@ -9,7 +9,7 @@
     "dev": "remotion studio src/index.ts",
     "render": "node scripts/render-compressed.mjs",
     "compress": "node scripts/compress-video.mjs",
-    "check": "tsc && node scripts/check-episodes.mjs && node --test scripts/check-episodes.test.mjs scripts/studio-v2-player.test.mjs scripts/compress-video.test.mjs scripts/prepare-narration.test.mjs scripts/count-narration-words.test.mjs scripts/check-pronunciation.test.mjs && python -B -m unittest discover -s scripts -p \"*_test.py\"",
+    "check": "tsc && node scripts/check-episodes.mjs && node --test scripts/check-episodes.test.mjs scripts/studio-v2-player.test.mjs scripts/compress-video.test.mjs scripts/prepare-narration.test.mjs scripts/count-narration-words.test.mjs scripts/review-narration.test.mjs scripts/check-pronunciation.test.mjs && python -B -m unittest discover -s scripts -p \"*_test.py\"",
     "prebuild": "npm run check",
     "build": "remotion bundle src/index.ts"
   },

@@ -5,7 +5,8 @@ Give viewers an unbelievable survival experience in an imagined world. Show the 
 ## Studio v2 Standalone Survival Scenarios
 
 - **Standalone anthology.** Every Skenario opens cold with a fresh setting, protagonist silhouette and physical escape puzzle. Resolve the puzzle within the video. Draw on Arc 01's high-stakes survival tone and keep its timeline, cast and handoff out of the new story. Draft **Pilot 01** first.
-- **Bahasa Bayi.** Write the way a sharp friend explains a deadly puzzle. Use short sentences and everyday words like `bakal`, `tamat`, `soalnya`, `perhatiin`, `ternyata` and `jangan sampai`. Cut filler, stiff narration and poetic phrasing. Avoid bookish verbs and labels such as `menggeleng`, `melangkah`, `mengamati` and `sang pria`; the ordinary pronoun `dia` is welcome when its referent is clear.
+- **Bahasa Bayi.** Write the way a sharp friend explains a deadly puzzle. Use familiar Indonesian, vary the length of sentences and link actions with their consequences when that sounds natural. Words such as `bakal`, `soalnya` and `ternyata` are options when they fit the speaker. Cut filler, stiff narration and poetic phrasing. Avoid bookish verbs and labels such as `menggeleng`, `mengamati` and `sang pria`; use `dia` when its referent is clear.
+- **Natural spoken rhythm.** Write for an Indonesian listener, not for a panel list. Connect actions and consequences in the way someone would actually tell the story; vary sentence length, and use short fragments for emphasis rather than as the default. Use punctuation according to meaning, not as a pause-control device: a comma is not a substitute for a period, and removing punctuation does not guarantee better TTS. Read the whole passage aloud at normal speed before timing it. Check unclear referents, awkward translated phrasing and details that sound unnatural; keep the hook and essential suspense beats concise. Record any actual listener feedback separately from a writer's judgment. See [narration audit](docs/narration-audit-2026-11-24.md).
 - **TTS-safe lexicon.** Prefer everyday Indonesian over anglicisms and typo-prone slang, because TTS voices and the ASR verifier handle them more reliably. Reach for the preferred form when writing:
 
   | Instead of | Write | Why |
@@ -40,7 +41,7 @@ From Studio v2 Episode 006 onward, `@skenarium` defaults to **named third-person
 
 - Give each scenario one protagonist name: **two syllables** and TTS-safe, avoiding ambiguous `e` sounds and final `ng` where they can cause recognition or pronunciation ambiguity. Introduce the name by approximately **00:10**.
 - Keep the opening hook **pronoun-free**. Name the protagonist on the first mention in each loop, then use `dia` or `-nya` when the referent is clear; repeat the name when needed to prevent ambiguity. Bookend the name in the closing line.
-- Keep all narration in short, everyday Bahasa Bayi; avoid bookish register. Agent 02 checks whether the ASR heard the protagonist name correctly and reviews `pronunciation.renames` for any necessary, scoped correction. A transcript is not listening evidence.
+- Keep narration in everyday Bahasa Bayi with sentence lengths chosen for natural speech; avoid bookish register. Agent 02 checks whether the ASR heard the protagonist name correctly and reviews `pronunciation.renames` for any necessary, scoped correction. A transcript is not listening evidence.
 
 ### V2 beat map
 

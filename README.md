@@ -30,6 +30,8 @@ For a standard delivery, `npm run render -- <composition-id> <delivery.mp4>` ren
 
 Manifest asset paths are relative to `public/`; scene and audio positions are in frames. Generic data-driven `Episode` compositions use narration-relative caption milliseconds, while the pilot's custom component reads its captions on the composition timeline. Verify timing against the component used by the episode. The [style guide](STYLE_GUIDE.md) covers the artwork, voice and review requirements.
 
+For a narration read-through, run `node scripts/review-narration.mjs episodes/<slug>/narasi.txt`. To locate joins after a ShortZ take, add `--timestamps <ShortZ-timestamps.json>`. The report identifies passages and actual chunk boundaries for review; it does not judge how the voice sounds.
+
 ## Archive and maintenance
 
 The archived [Arc 01 Episode 001 brief](episodes/arc1/001-kemacetan-terakhir/brief.md), [recut manifest](episodes/arc1/001-kemacetan-terakhir/recut-v2/manifest.json) and [captions](episodes/arc1/001-kemacetan-terakhir/recut-v2/captions.json) document the earlier format. Its schema version 2 is distinct from Studio `pipelineVersion: 2`; use the pilot and current contracts for new standalone scenarios. The [earlier playbook](archive/playbook/) retains prior workflow and decision history. Archived directed prompt records use repository-root-relative paths for assets in this repository; external references remain as originally recorded.

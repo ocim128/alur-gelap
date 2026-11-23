@@ -1,0 +1,1093 @@
+{
+  "version": 1,
+  "voiceId": "voice_71a5a701-796e-421d-840e-0adc00b0816a",
+  "durationSec": 147.72,
+  "master": true,
+  "chunks": [
+    {
+      "index": 0,
+      "tag": null,
+      "text": "Pintu keluar bioskop ini palsu. Ranto lagi jaga proyektor ketika pintu balkon ketutup sendiri. Kuncinya tertinggal di luar.",
+      "start": 0,
+      "end": 10.565,
+      "retries": 0,
+      "status": "verified"
+    },
+    {
+      "index": 1,
+      "tag": null,
+      "text": "Di bawah, barisan kursi terus bertambah, makin dekat ke balkon. Layar tetap di tempat, tapi ujung kainnya terangkat oleh angin dari belakang. Jam tujuh anak Ranto tampil di panggung, dan dia janji nonton.",
+      "start": 10.725,
+      "end": 28.92,
+      "retries": 1,
+      "status": "verified"
+    },
+    {
+      "index": 2,
+      "tag": null,
+      "text": "Kalau anaknya gugup, Ranto selalu bilang, ikutin cahayanya. Ranto lari ke pintu merah bertuliskan keluar, lalu dorong palangnya. Pintunya terbuka ke studio yang sama, tapi lantai di baliknya hilang.",
+      "start": 29.08,
+      "end": 46.445,
+      "retries": 0,
+      "status": "verified"
+    },
+    {
+      "index": 3,
+      "tag": null,
+      "text": "Ranto jatuh. Tamat. Balik lagi.",
+      "start": 46.605,
+      "end": 50.11,
+      "retries": 2,
+      "status": "failed"
+    },
+    {
+      "index": 4,
+      "tag": null,
+      "text": "Ranto mau coba pintu darurat, tapi kali ini dia taruh senter di kursi dekat layar buat tanda. Ranto buka pintu darurat. Kursi yang ditandai senternya bergeser menjauh, sementara layar tetap di tempat.",
+      "start": 50.27,
+      "end": 66.775,
+      "retries": 1,
+      "status": "verified"
+    },
+    {
+      "index": 5,
+      "tag": null,
+      "text": "Ranto telanjur melangkah ke ruang kosong dan jatuh. Tamat. Balik lagi.",
+      "start": 66.935,
+      "end": 73.52,
+      "retries": 2,
+      "status": "failed"
+    },
+    {
+      "index": 6,
+      "tag": null,
+      "text": "Ranto curiga sama proyektornya, lalu matiin lampunya. Layar jadi gelap dan kursi berderak mundur, menghimpit Ranto ke balkon. Tamat.",
+      "start": 73.68,
+      "end": 87.094,
+      "retries": 2,
+      "status": "failed"
+    },
+    {
+      "index": 7,
+      "tag": null,
+      "text": "Balik lagi, lampu proyektor nyala. Kursi bisa bergeser, tapi layar tetap di tempat. Ranto ingat angin yang berembus dari balik kain itu.",
+      "start": 87.994,
+      "end": 101.93,
+      "retries": 2,
+      "status": "failed"
+    },
+    {
+      "index": 8,
+      "tag": null,
+      "text": "Ikutin cahayanya. Ranto turun dan nyusurin lorong tengah, lurus menuju layar. Di belakangnya, kursi berderak dan ruangan makin panjang.",
+      "start": 102.09,
+      "end": 114.305,
+      "retries": 2,
+      "status": "failed"
+    },
+    {
+      "index": 9,
+      "tag": null,
+      "text": "Ranto naik ke panggung dan dorong kain layar. Kainnya berat sampai lututnya hampir lemas. Dia coba lagi pakai bahu.",
+      "start": 114.465,
+      "end": 124.75,
+      "retries": 1,
+      "status": "verified"
+    },
+    {
+      "index": 10,
+      "tag": null,
+      "text": "Kainnya robek, memperlihatkan pipa dan tembok bata di baliknya. Cahaya pagi masuk dari bawah pintu besi. Ranto belok kanan dan nunduk lewat bawah pintu.",
+      "start": 124.91,
+      "end": 138.175,
+      "retries": 2,
+      "status": "failed"
+    },
+    {
+      "index": 11,
+      "tag": null,
+      "text": "Udara dingin langsung kena mukanya. Ikutin cahayanya. Ranto masih sempat nonton anaknya.",
+      "start": 138.335,
+      "end": 146.22,
+      "retries": 2,
+      "status": "failed"
+    }
+  ],
+  "words": [
+    {
+      "start": 0,
+      "end": 0.7
+    },
+    {
+      "start": 0.7,
+      "end": 1.12
+    },
+    {
+      "start": 1.12,
+      "end": 1.72
+    },
+    {
+      "start": 1.72,
+      "end": 1.96
+    },
+    {
+      "start": 1.96,
+      "end": 2.6
+    },
+    {
+      "start": 3.28,
+      "end": 3.78
+    },
+    {
+      "start": 3.78,
+      "end": 4.12
+    },
+    {
+      "start": 4.12,
+      "end": 4.48
+    },
+    {
+      "start": 4.48,
+      "end": 5.18
+    },
+    {
+      "start": 5.66,
+      "end": 5.9
+    },
+    {
+      "start": 5.9,
+      "end": 6.28
+    },
+    {
+      "start": 6.28,
+      "end": 6.78
+    },
+    {
+      "start": 6.78,
+      "end": 7.38
+    },
+    {
+      "start": 7.38,
+      "end": 7.7
+    },
+    {
+      "start": 8.6,
+      "end": 9.34
+    },
+    {
+      "start": 9.34,
+      "end": 10.04
+    },
+    {
+      "start": 10.04,
+      "end": 10.16
+    },
+    {
+      "start": 10.16,
+      "end": 10.5
+    },
+    {
+      "start": 11.06,
+      "end": 11.22
+    },
+    {
+      "start": 11.22,
+      "end": 11.68
+    },
+    {
+      "start": 12.2,
+      "end": 12.6
+    },
+    {
+      "start": 12.6,
+      "end": 13.12
+    },
+    {
+      "start": 13.12,
+      "end": 13.46
+    },
+    {
+      "start": 13.46,
+      "end": 14.18
+    },
+    {
+      "start": 14.7,
+      "end": 15.2
+    },
+    {
+      "start": 15.2,
+      "end": 15.56
+    },
+    {
+      "start": 15.56,
+      "end": 15.76
+    },
+    {
+      "start": 15.76,
+      "end": 16.22
+    },
+    {
+      "start": 16.77,
+      "end": 17.33
+    },
+    {
+      "start": 17.33,
+      "end": 17.87
+    },
+    {
+      "start": 17.87,
+      "end": 18.09
+    },
+    {
+      "start": 18.09,
+      "end": 18.31
+    },
+    {
+      "start": 18.87,
+      "end": 19.13
+    },
+    {
+      "start": 19.13,
+      "end": 19.65
+    },
+    {
+      "start": 19.65,
+      "end": 20.17
+    },
+    {
+      "start": 20.17,
+      "end": 20.87
+    },
+    {
+      "start": 20.87,
+      "end": 21.19
+    },
+    {
+      "start": 21.19,
+      "end": 21.63
+    },
+    {
+      "start": 21.63,
+      "end": 21.91
+    },
+    {
+      "start": 21.91,
+      "end": 22.35
+    },
+    {
+      "start": 23.21,
+      "end": 23.57
+    },
+    {
+      "start": 23.57,
+      "end": 24.07
+    },
+    {
+      "start": 24.63,
+      "end": 24.79
+    },
+    {
+      "start": 24.79,
+      "end": 25.27
+    },
+    {
+      "start": 25.27,
+      "end": 25.89
+    },
+    {
+      "start": 25.89,
+      "end": 26.2
+    },
+    {
+      "start": 26.2,
+      "end": 26.51
+    },
+    {
+      "start": 26.93,
+      "end": 27.27
+    },
+    {
+      "start": 27.27,
+      "end": 27.69
+    },
+    {
+      "start": 27.69,
+      "end": 28.53
+    },
+    {
+      "start": 28.53,
+      "end": 28.81
+    },
+    {
+      "start": 28.81,
+      "end": 29.53
+    },
+    {
+      "start": 29.53,
+      "end": 30.17
+    },
+    {
+      "start": 30.17,
+      "end": 30.61
+    },
+    {
+      "start": 31.39,
+      "end": 31.67
+    },
+    {
+      "start": 31.67,
+      "end": 32.07
+    },
+    {
+      "start": 32.07,
+      "end": 32.41
+    },
+    {
+      "start": 33.21,
+      "end": 33.85
+    },
+    {
+      "start": 33.85,
+      "end": 34.51
+    },
+    {
+      "start": 35.19,
+      "end": 35.81
+    },
+    {
+      "start": 35.81,
+      "end": 36.23
+    },
+    {
+      "start": 36.23,
+      "end": 36.39
+    },
+    {
+      "start": 36.39,
+      "end": 36.69
+    },
+    {
+      "start": 36.69,
+      "end": 37.13
+    },
+    {
+      "start": 37.13,
+      "end": 37.91
+    },
+    {
+      "start": 37.91,
+      "end": 38.29
+    },
+    {
+      "start": 38.89,
+      "end": 39.23
+    },
+    {
+      "start": 39.23,
+      "end": 39.65
+    },
+    {
+      "start": 39.65,
+      "end": 40.25
+    },
+    {
+      "start": 40.89,
+      "end": 41.25
+    },
+    {
+      "start": 41.25,
+      "end": 41.81
+    },
+    {
+      "start": 41.81,
+      "end": 42.05
+    },
+    {
+      "start": 42.05,
+      "end": 42.45
+    },
+    {
+      "start": 42.45,
+      "end": 42.71
+    },
+    {
+      "start": 42.71,
+      "end": 43.01
+    },
+    {
+      "start": 43.71,
+      "end": 44.03
+    },
+    {
+      "start": 44.03,
+      "end": 44.69
+    },
+    {
+      "start": 44.69,
+      "end": 45.02
+    },
+    {
+      "start": 45.02,
+      "end": 45.35
+    },
+    {
+      "start": 45.87,
+      "end": 46.35
+    },
+    {
+      "start": 46.79,
+      "end": 47.27
+    },
+    {
+      "start": 47.27,
+      "end": 47.95
+    },
+    {
+      "start": 48.67,
+      "end": 49.05
+    },
+    {
+      "start": 49.45,
+      "end": 49.73
+    },
+    {
+      "start": 49.73,
+      "end": 50.01
+    },
+    {
+      "start": 50.45,
+      "end": 50.95
+    },
+    {
+      "start": 50.95,
+      "end": 51.27
+    },
+    {
+      "start": 51.27,
+      "end": 51.71
+    },
+    {
+      "start": 51.71,
+      "end": 52.23
+    },
+    {
+      "start": 52.23,
+      "end": 52.65
+    },
+    {
+      "start": 53.25,
+      "end": 53.63
+    },
+    {
+      "start": 53.63,
+      "end": 53.91
+    },
+    {
+      "start": 53.91,
+      "end": 54.15
+    },
+    {
+      "start": 54.15,
+      "end": 54.37
+    },
+    {
+      "start": 54.37,
+      "end": 54.71
+    },
+    {
+      "start": 54.71,
+      "end": 55.29
+    },
+    {
+      "start": 55.29,
+      "end": 55.49
+    },
+    {
+      "start": 55.49,
+      "end": 56.07
+    },
+    {
+      "start": 56.07,
+      "end": 56.35
+    },
+    {
+      "start": 56.35,
+      "end": 56.87
+    },
+    {
+      "start": 56.87,
+      "end": 57.09
+    },
+    {
+      "start": 57.09,
+      "end": 57.57
+    },
+    {
+      "start": 57.57,
+      "end": 59.11
+    },
+    {
+      "start": 59.11,
+      "end": 59.67
+    },
+    {
+      "start": 59.67,
+      "end": 60.15
+    },
+    {
+      "start": 60.15,
+      "end": 60.51
+    },
+    {
+      "start": 61.19,
+      "end": 61.69
+    },
+    {
+      "start": 61.69,
+      "end": 61.79
+    },
+    {
+      "start": 61.79,
+      "end": 62.15
+    },
+    {
+      "start": 62.15,
+      "end": 62.73
+    },
+    {
+      "start": 62.73,
+      "end": 63.51
+    },
+    {
+      "start": 63.51,
+      "end": 64.07
+    },
+    {
+      "start": 64.59,
+      "end": 65.03
+    },
+    {
+      "start": 65.03,
+      "end": 65.51
+    },
+    {
+      "start": 65.51,
+      "end": 66.13
+    },
+    {
+      "start": 66.13,
+      "end": 66.25
+    },
+    {
+      "start": 66.25,
+      "end": 66.61
+    },
+    {
+      "start": 67.07,
+      "end": 67.69
+    },
+    {
+      "start": 67.69,
+      "end": 68.43
+    },
+    {
+      "start": 68.43,
+      "end": 69.05
+    },
+    {
+      "start": 69.05,
+      "end": 69.25
+    },
+    {
+      "start": 69.25,
+      "end": 69.49
+    },
+    {
+      "start": 69.49,
+      "end": 69.97
+    },
+    {
+      "start": 69.97,
+      "end": 70.77
+    },
+    {
+      "start": 70.77,
+      "end": 71.45
+    },
+    {
+      "start": 72.17,
+      "end": 72.61
+    },
+    {
+      "start": 73.01,
+      "end": 73.29
+    },
+    {
+      "start": 73.29,
+      "end": 73.47
+    },
+    {
+      "start": 73.85,
+      "end": 74.33
+    },
+    {
+      "start": 74.33,
+      "end": 75.01
+    },
+    {
+      "start": 75.01,
+      "end": 75.45
+    },
+    {
+      "start": 75.45,
+      "end": 76.19
+    },
+    {
+      "start": 76.79,
+      "end": 77.11
+    },
+    {
+      "start": 77.11,
+      "end": 77.73
+    },
+    {
+      "start": 77.73,
+      "end": 78.33
+    },
+    {
+      "start": 79.15,
+      "end": 79.75
+    },
+    {
+      "start": 79.75,
+      "end": 80.01
+    },
+    {
+      "start": 80.01,
+      "end": 80.39
+    },
+    {
+      "start": 80.95,
+      "end": 81.25
+    },
+    {
+      "start": 81.25,
+      "end": 82.05
+    },
+    {
+      "start": 82.05,
+      "end": 82.61
+    },
+    {
+      "start": 82.61,
+      "end": 83.31
+    },
+    {
+      "start": 83.31,
+      "end": 84.59
+    },
+    {
+      "start": 84.59,
+      "end": 85.01
+    },
+    {
+      "start": 85.01,
+      "end": 85.25
+    },
+    {
+      "start": 85.25,
+      "end": 85.71
+    },
+    {
+      "start": 85.71,
+      "end": 87.01
+    },
+    {
+      "start": 88.81,
+      "end": 89.39
+    },
+    {
+      "start": 89.39,
+      "end": 89.79
+    },
+    {
+      "start": 90.45,
+      "end": 91.13
+    },
+    {
+      "start": 91.13,
+      "end": 91.91
+    },
+    {
+      "start": 91.91,
+      "end": 92.35
+    },
+    {
+      "start": 93.09,
+      "end": 93.55
+    },
+    {
+      "start": 93.55,
+      "end": 93.79
+    },
+    {
+      "start": 93.79,
+      "end": 94.41
+    },
+    {
+      "start": 94.73,
+      "end": 95.27
+    },
+    {
+      "start": 95.27,
+      "end": 95.79
+    },
+    {
+      "start": 95.79,
+      "end": 96.37
+    },
+    {
+      "start": 96.37,
+      "end": 96.51
+    },
+    {
+      "start": 96.51,
+      "end": 96.93
+    },
+    {
+      "start": 97.73,
+      "end": 98.17
+    },
+    {
+      "start": 98.17,
+      "end": 98.69
+    },
+    {
+      "start": 99.25,
+      "end": 99.61
+    },
+    {
+      "start": 99.61,
+      "end": 99.85
+    },
+    {
+      "start": 99.85,
+      "end": 100.47
+    },
+    {
+      "start": 100.47,
+      "end": 100.75
+    },
+    {
+      "start": 100.75,
+      "end": 101.17
+    },
+    {
+      "start": 101.17,
+      "end": 101.57
+    },
+    {
+      "start": 101.57,
+      "end": 101.89
+    },
+    {
+      "start": 102.29,
+      "end": 102.99
+    },
+    {
+      "start": 102.99,
+      "end": 103.83
+    },
+    {
+      "start": 104.67,
+      "end": 105.17
+    },
+    {
+      "start": 105.17,
+      "end": 105.65
+    },
+    {
+      "start": 105.65,
+      "end": 105.83
+    },
+    {
+      "start": 105.83,
+      "end": 106.43
+    },
+    {
+      "start": 106.43,
+      "end": 106.75
+    },
+    {
+      "start": 106.75,
+      "end": 107.21
+    },
+    {
+      "start": 107.67,
+      "end": 108.19
+    },
+    {
+      "start": 108.19,
+      "end": 108.51
+    },
+    {
+      "start": 108.51,
+      "end": 109.05
+    },
+    {
+      "start": 109.6,
+      "end": 109.84
+    },
+    {
+      "start": 109.84,
+      "end": 110.52
+    },
+    {
+      "start": 111.12,
+      "end": 111.54
+    },
+    {
+      "start": 111.54,
+      "end": 112.16
+    },
+    {
+      "start": 112.16,
+      "end": 112.7
+    },
+    {
+      "start": 112.7,
+      "end": 113.22
+    },
+    {
+      "start": 113.22,
+      "end": 113.72
+    },
+    {
+      "start": 113.72,
+      "end": 114.24
+    },
+    {
+      "start": 114.24,
+      "end": 115.06
+    },
+    {
+      "start": 115.06,
+      "end": 115.48
+    },
+    {
+      "start": 115.48,
+      "end": 115.74
+    },
+    {
+      "start": 115.74,
+      "end": 116.22
+    },
+    {
+      "start": 116.22,
+      "end": 116.74
+    },
+    {
+      "start": 116.74,
+      "end": 117.3
+    },
+    {
+      "start": 117.3,
+      "end": 117.56
+    },
+    {
+      "start": 117.56,
+      "end": 118.1
+    },
+    {
+      "start": 118.7,
+      "end": 119.2
+    },
+    {
+      "start": 119.2,
+      "end": 119.62
+    },
+    {
+      "start": 119.62,
+      "end": 120.22
+    },
+    {
+      "start": 120.22,
+      "end": 120.92
+    },
+    {
+      "start": 120.92,
+      "end": 121.4
+    },
+    {
+      "start": 121.4,
+      "end": 121.88
+    },
+    {
+      "start": 122.56,
+      "end": 122.82
+    },
+    {
+      "start": 122.82,
+      "end": 123.26
+    },
+    {
+      "start": 123.26,
+      "end": 123.62
+    },
+    {
+      "start": 123.62,
+      "end": 124.24
+    },
+    {
+      "start": 124.24,
+      "end": 124.62
+    },
+    {
+      "start": 125.08,
+      "end": 125.64
+    },
+    {
+      "start": 125.64,
+      "end": 126.4
+    },
+    {
+      "start": 126.5,
+      "end": 127.32
+    },
+    {
+      "start": 127.32,
+      "end": 127.92
+    },
+    {
+      "start": 127.92,
+      "end": 128.16
+    },
+    {
+      "start": 128.16,
+      "end": 128.66
+    },
+    {
+      "start": 128.66,
+      "end": 129.24
+    },
+    {
+      "start": 129.24,
+      "end": 129.48
+    },
+    {
+      "start": 129.48,
+      "end": 129.92
+    },
+    {
+      "start": 130.72,
+      "end": 131.36
+    },
+    {
+      "start": 131.36,
+      "end": 131.88
+    },
+    {
+      "start": 131.88,
+      "end": 132.32
+    },
+    {
+      "start": 132.32,
+      "end": 132.68
+    },
+    {
+      "start": 132.68,
+      "end": 133.02
+    },
+    {
+      "start": 133.02,
+      "end": 133.46
+    },
+    {
+      "start": 133.46,
+      "end": 133.8
+    },
+    {
+      "start": 134.42,
+      "end": 135
+    },
+    {
+      "start": 135,
+      "end": 135.4
+    },
+    {
+      "start": 135.4,
+      "end": 135.78
+    },
+    {
+      "start": 135.78,
+      "end": 136.36
+    },
+    {
+      "start": 136.36,
+      "end": 136.92
+    },
+    {
+      "start": 136.92,
+      "end": 137.24
+    },
+    {
+      "start": 137.24,
+      "end": 137.64
+    },
+    {
+      "start": 137.64,
+      "end": 138.14
+    },
+    {
+      "start": 138.52,
+      "end": 138.84
+    },
+    {
+      "start": 138.84,
+      "end": 139.36
+    },
+    {
+      "start": 139.82,
+      "end": 140.28
+    },
+    {
+      "start": 140.28,
+      "end": 140.58
+    },
+    {
+      "start": 140.58,
+      "end": 141.08
+    },
+    {
+      "start": 141.9,
+      "end": 142.28
+    },
+    {
+      "start": 142.28,
+      "end": 143.06
+    },
+    {
+      "start": 143.06,
+      "end": 144.44
+    },
+    {
+      "start": 144.44,
+      "end": 144.7
+    },
+    {
+      "start": 144.7,
+      "end": 145.14
+    },
+    {
+      "start": 145.14,
+      "end": 145.6
+    },
+    {
+      "start": 145.6,
+      "end": 146.22
+    }
+  ],
+  "sfx": [],
+  "source": "episodes/006-bioskop-tanpa-pintu/narration-investigator-20261124-v3-timestamps.json",
+  "note": "Assembled on one continuous PCM sample timeline by scripts/prepare-narration.mjs. Claimed-silent windows verified sample-exact at frame boundaries; pad verified sample-preserving; monotonic PTS verified. Zero playback-speed change."
+}

@@ -61,3 +61,7 @@ New P23-v4/v5, P24-v4, P09-reaction and final-jolt candidate files are under `pu
 ## Owner-approved exception image handoff ? 2026-11-23
 
 24 selected 1080?1920 WebP plates, P09 reaction and final-jolt plate: `public/assets/004-tangan-pilot-kemarin/owner-approved-exception/`. Exact original source mapping is in that directory. Built-in imagegen; only master anchors used as style references. The owner approved proceeding despite the technical failures documented in [sources/prompts.md](sources/prompts.md); this is not a technical QA pass. Image-service and publication rights remain unverified.
+
+## Standalone vertical cover ? 2026-11-23
+
+`out/004-tangan-pilot-kemarin/cover-social-9x16.jpg`; built-in image generation using episode reference `public/assets/004-tangan-pilot-kemarin/owner-approved-exception/panel-01.webp` and the master style reference. Exact copy, prompt, source and self-review: [sources/prompts.md](sources/prompts.md). Service terms and publication rights have not been independently verified.

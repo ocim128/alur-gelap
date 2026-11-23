@@ -37,15 +37,15 @@ Precedence is fixed and runs one way:
 - **Core Dilemma & Bad-Decision Payoff** — [normal instinct, lethal outcome and planted physical cause. Name the harder escape and its complication.]
 - **Hook rule** — from Studio v2 006 onward, the opening line is pronoun-free and states this scenario's specific danger or constraint, is **at most 6 canonical words** (hyphenated compounds = 1), and must measure **≤ 3.0 s** in the raw take (`scripts/prepare-narration.mjs` enforces this; its default limit is 3.0 s). Never speed the voice to fit. The generic two-sentence warning shape (“…Salah gerak, tamat.”) is forbidden as a hook template.
 - **Hook trim fallback** — [name the exact filler word to drop and its neighboring-word context, so Agent 02 can cut it from the prepared track without a regeneration round-trip if the measured hook exceeds 3.0 s; or write `none needed` when the hook comfortably fits]. Example: drop `memang` in “Pintu bioskop memang terkunci rapat.” (context: after `bioskop`, before `terkunci`). *This field is required and validated non-empty.*
-- **Spoken script** — [link `narasi.txt` and both word counts]. Use Bahasa Bayi with short everyday Indonesian sentences. Let the clues, action and silence set the word count. Keep all-caps comic SFX (`BRAK!`, `KLIK!`) out of the script — they live in the cue sheet.
+- **Spoken script** — [link `narasi.txt` and both word counts]. Draft connected, conversational Indonesian in story order before assigning picture cuts. Vary sentence length naturally. Let the clues, action and silence set the word count. Keep all-caps comic SFX (`BRAK!`, `KLIK!`) out of the script — they live in the cue sheet.
 
 ### Scripting rules: perspective and narrative craft
 
 - **Perspective & naming.** Studio v2 006+ defaults to named third person; 001–005 retain their second-person scripts. Use the protagonist's name on first mention per loop, followed by `dia` / `-nya` only when clear; introduce the name by approximately 00:10 and include it in the closing line. The hook is pronoun-free. Only an explicitly owner-authorized blank-vessel concept may use `kamu`, with the decision and rationale recorded above. Avoid bookish register.
 - **3-Chunk Sensory Opening (P01–P05).** Weave the setup into three connected beats — *Immediate Cage → Uncanny Anomaly → Physical Constraint* — not an eight-item prop inventory dump. [Cage]: … [Anomaly]: … [Constraint]: …
-- **Loop grammar.** Each loop names its **decision owner and human motivation** (grounded panic, trust, guilt, pride — never three identical `Instingmu:` labels); every action and consequence carries an explicit subject; each failed loop ends cleanly on **`Tamat.` + paragraph break** so the TTS release leaves a natural gap for the 0.4 s rewind.
-- **Chronological SFX-anchor syntax.** A sentence anchoring a foley transient carries **one action only**, in *prep → action → isolated sound beat* order. Never place a qualifying clause (e.g. “Jangan ditekan.”) between the sound trigger and its reaction.
-- **Motif, human beat, earned close.** One recurring motif phrase paid off **≥ 3×** (last use recontextualizes it); one brief human warmth/stake beat inside P01–P05; a motif-earned closing line that bookends the protagonist's name — do not default verbatim to “Dia berhasil bertahan hidup.” Short diegetic `voice-sfx` lines (caption-labeled) add character color outside the word cap.
+- **Loop grammar.** Each loop has a decision owner and human motivation. Keep the actor and consequence clear in natural spoken Indonesian; each failed loop ends on **`Tamat.` + paragraph break**.
+- **Chronological SFX anchors.** Record the spoken trigger word and visible action in the cue sheet. Keep connected actions in a natural sentence when the trigger and reaction remain clear.
+- **Human beat and earned close.** [What makes the situation matter to the protagonist, and how does the ending pay it off?] Include the protagonist's name in the closing line. Use a recurring phrase when it feels natural to the character.
 - **Entity Rule Boundary** — [what the threat/entity can do (its rule)]: … **The defect that traps it** [what it cannot do]: … The winning escape exploits this stated defect.
 - **Spatial vectors** — [only when physics/direction drives the climax: name the direction, origin and target for each climax-critical movement (bank angle, door side, rotor side, gravity)]: …
 
@@ -69,13 +69,21 @@ One distinct fact per loop; if two loops teach the same fact, merge or different
 
 Expected one-sentence explanation for the escape: [writer's answer]. Pronoun audit: every plot-bearing `dia` / `itu` / `yang` / `dua-duanya` has exactly one possible referent on a single listen. [checked / fixed list]. Link the [first-view rough-cut review](review.md#first-view-rough-cut) for viewer evidence.
 
+### Spoken draft review
+
+- Script and canonical word count: [path, count, script SHA-256 from `node scripts/review-narration.mjs episodes/<slug>/narasi.txt`]
+- Evidence: [full read aloud / text-only review / listener feedback, reviewer and date; leave unavailable checks pending]
+- Passage, issue and change: [quote the specific phrase and describe the revised wording, or note no issue found]
+- Story check: [what the audience knows about the danger, why each choice follows, and what makes the payoff satisfying]
+- Timing handoff: [cue-word anchors and picture coverage updated; list any previous audio, captions or timing files made stale by this revision]
+
 ### Three-Loop Grouping
 
 | Panels | Beat | Budget |
 | --- | --- | --- |
 | P01–P05 | Hook (≤3.0 s), setting, and **all** Fair-Play clues planted | ~20–25 s |
-| P06–P11 | Three escalating bad branches, two panels each (~10–14 s per loop including its 0.4 s rewind), a different believable human instinct per loop | ~45–60 s |
-| P12–P24 | Post-rewind-3 realization, the winning survival execution under pressure, climax, clean ending | ~70–90 s |
+| Middle | Three escalating bad branches, including a 0.4 s rewind each; distribute panels and time according to the story | Provisional |
+| Ending | Post-rewind-3 realization, winning execution under pressure, climax and clean ending | Provisional |
 
 ### Triple-Rewind Continuity Map
 
@@ -83,9 +91,9 @@ Fill one row per loop. State what the world does when the tape snaps back.
 
 | Loop | Resets to (decision point) | Decision owner + human motivation | Protagonist knowledge carried forward | Environment state across loops | Panels | Fatal consequence shown |
 | --- | --- | --- | --- | --- | --- | --- |
-| 1 | [the exact choice point the rewind returns to] | [WHO decides, and the grounded motivation: panic / trust / guilt / pride] | [what the protagonist now knows that they did not before] | [resets identically / degrades: describe what persists, e.g. fuel still lower] | P06–P07 | [outcome in red/amber] |
-| 2 | [decision point] | [WHO + motivation] | [new knowledge] | [reset / degrade] | P08–P09 | [outcome] |
-| 3 | [decision point] | [WHO + motivation] | [new knowledge] | [reset / degrade] | P10–P11 | [outcome] |
+| 1 | [the exact choice point the rewind returns to] | [WHO decides, and the grounded motivation: panic / trust / guilt / pride] | [what the protagonist now knows that they did not before] | [reset state] | [panels] | [outcome in red/amber] |
+| 2 | [decision point] | [WHO + motivation] | [new knowledge] | [reset state] | [panels] | [outcome] |
+| 3 | [decision point] | [WHO + motivation] | [new knowledge] | [reset state] | [panels] | [outcome] |
 
 ### `branchRewinds` — **PROVISIONAL until measured**
 

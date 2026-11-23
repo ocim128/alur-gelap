@@ -1,0 +1,522 @@
+{
+  "source": "C:\\Users\\user\\Documents\\Repo\\tiktok-repost\\tiktok-video\\Survival-Fantasy-Content\\episodes\\006-bioskop-tanpa-pintu\\narration-investigator-20261124-v3.mp3",
+  "outputWav": "C:\\Users\\user\\Documents\\Repo\\tiktok-repost\\tiktok-video\\Survival-Fantasy-Content\\episodes\\006-bioskop-tanpa-pintu\\narration-prepared-20261124-v3.wav",
+  "outputMp3": "C:\\Users\\user\\Documents\\Repo\\tiktok-repost\\tiktok-video\\Survival-Fantasy-Content\\episodes\\006-bioskop-tanpa-pintu\\narration-prepared-20261124-v3.mp3",
+  "sourceDurationSec": 146.1,
+  "preparedDurationSec": 147.72,
+  "speechEndSec": 146.22,
+  "hookEndSec": 2.6,
+  "hookWithinLimit": true,
+  "hookLimitSec": 3,
+  "hookFallback": false,
+  "crossfadeSec": 0.01,
+  "tightening": {
+    "thresholdSec": 0.9,
+    "retainedSec": 0.55
+  },
+  "skippedTightenings": [],
+  "tighteningCuts": [
+    {
+      "word1": "balkon.",
+      "word2": "Layar",
+      "originalGapSec": 0.92,
+      "retainedGapSec": 0.55,
+      "mappedStartSec": 16.22,
+      "mappedEndSec": 16.77
+    },
+    {
+      "word1": "layar.",
+      "word2": "Di",
+      "originalGapSec": 0.92,
+      "retainedGapSec": 0.55,
+      "mappedStartSec": 109.05,
+      "mappedEndSec": 109.6
+    }
+  ],
+  "protectedBeats": [
+    {
+      "aStem": "palangnya",
+      "bStem": "pintunya",
+      "why": "Red door reveal"
+    },
+    {
+      "aStem": "tanda",
+      "bStem": "ranto",
+      "why": "Hold flashlight marker"
+    },
+    {
+      "aStem": "lampunya",
+      "bStem": "layar",
+      "why": "Blackout before row surge"
+    },
+    {
+      "aStem": "mukanya",
+      "bStem": "ikutin",
+      "why": "Narration-free exterior wall reveal"
+    }
+  ],
+  "lockedRewindGaps": [
+    {
+      "name": "rewind-1",
+      "afterWord": "tamat,",
+      "afterWordEndSec": 49.05,
+      "beforeWord": "balik",
+      "beforeWordStartSec": 49.45,
+      "rewindSec": 0.4,
+      "dreadSilenceSec": 0,
+      "totalGapSec": 0.4,
+      "naturalGapSec": 0.62,
+      "snapSampleOffset": 2354400,
+      "note": ""
+    },
+    {
+      "name": "rewind-2",
+      "afterWord": "Tamat.",
+      "afterWordEndSec": 72.61,
+      "beforeWord": "Balik",
+      "beforeWordStartSec": 73.01,
+      "rewindSec": 0.4,
+      "dreadSilenceSec": 0,
+      "totalGapSec": 0.4,
+      "naturalGapSec": 0.62,
+      "snapSampleOffset": 3485280,
+      "note": ""
+    },
+    {
+      "name": "rewind-3",
+      "afterWord": "Tamat,",
+      "afterWordEndSec": 87.01,
+      "beforeWord": "balik",
+      "beforeWordStartSec": 88.81,
+      "rewindSec": 0.4,
+      "dreadSilenceSec": 1.4,
+      "totalGapSec": 1.8,
+      "naturalGapSec": 0.32,
+      "snapSampleOffset": 4176480,
+      "note": ""
+    }
+  ],
+  "worldVoiceWindows": [],
+  "claimedSilenceWindows": [
+    {
+      "name": "rewind-1:rewind",
+      "kind": "rewind",
+      "frames": [
+        1472,
+        1483
+      ],
+      "sec": [
+        49.05,
+        49.449999999999996
+      ],
+      "verified": "sample-exact zeros in narration-prepared.wav (PCM boundary gate)"
+    },
+    {
+      "name": "rewind-2:rewind",
+      "kind": "rewind",
+      "frames": [
+        2179,
+        2190
+      ],
+      "sec": [
+        72.61,
+        73.01
+      ],
+      "verified": "sample-exact zeros in narration-prepared.wav (PCM boundary gate)"
+    },
+    {
+      "name": "rewind-3:rewind",
+      "kind": "rewind",
+      "frames": [
+        2611,
+        2622
+      ],
+      "sec": [
+        87.01,
+        87.41000000000001
+      ],
+      "verified": "sample-exact zeros in narration-prepared.wav (PCM boundary gate)"
+    },
+    {
+      "name": "rewind-3:dread",
+      "kind": "dread",
+      "frames": [
+        2623,
+        2664
+      ],
+      "sec": [
+        87.41000000000001,
+        88.81
+      ],
+      "verified": "sample-exact zeros in narration-prepared.wav (PCM boundary gate)"
+    },
+    {
+      "name": "ending:tail-pad",
+      "kind": "ending-pad",
+      "frames": [
+        4392,
+        4431
+      ],
+      "sec": [
+        146.4,
+        147.72
+      ],
+      "verified": "sample-exact zeros in narration-prepared.wav (PCM boundary gate)"
+    }
+  ],
+  "pronunciationRecords": [
+    {
+      "rawIndex": 128,
+      "heard": "proyekturnya.",
+      "scriptFaithful": "proyektornya.",
+      "class": "phonetic-variant",
+      "action": "renamed",
+      "note": "ASR timing anchor only; vowel requires listening."
+    },
+    {
+      "rawIndex": 210,
+      "heard": "batah",
+      "scriptFaithful": "bata",
+      "class": "phonetic-variant",
+      "action": "renamed",
+      "note": "ASR timing anchor only; final sound requires listening."
+    },
+    {
+      "rawIndex": 233,
+      "heard": "Ikuti",
+      "scriptFaithful": "ikutin",
+      "class": "phonetic-variant",
+      "action": "renamed",
+      "note": "ASR timing anchor only; final consonant unverified."
+    },
+    {
+      "rawIndex": 30,
+      "heard": "ditempat,",
+      "scriptFaithful": "di tempat",
+      "class": "merge-split",
+      "action": "split",
+      "note": ""
+    },
+    {
+      "rawIndex": 44,
+      "heard": "dipanggung,",
+      "scriptFaithful": "di panggung",
+      "class": "merge-split",
+      "action": "split",
+      "note": ""
+    },
+    {
+      "rawIndex": 75,
+      "heard": "dibaliknya,",
+      "scriptFaithful": "di baliknya",
+      "class": "merge-split",
+      "action": "split",
+      "note": ""
+    }
+  ],
+  "panelWordSpans": [
+    {
+      "panel": "P01",
+      "fromWord": "Pintu",
+      "toWord": "palsu.",
+      "startSec": 0,
+      "endSec": 2.6,
+      "startFrame": 0,
+      "endFrame": 78,
+      "wordCount": 5
+    },
+    {
+      "panel": "P02",
+      "fromWord": "Ranto",
+      "toWord": "luar.",
+      "startSec": 3.28,
+      "endSec": 10.5,
+      "startFrame": 98,
+      "endFrame": 315,
+      "wordCount": 13
+    },
+    {
+      "panel": "P03",
+      "fromWord": "Di",
+      "toWord": "balkon.",
+      "startSec": 11.06,
+      "endSec": 16.22,
+      "startFrame": 332,
+      "endFrame": 487,
+      "wordCount": 10
+    },
+    {
+      "panel": "P04",
+      "fromWord": "Layar",
+      "toWord": "belakang.",
+      "startSec": 16.77,
+      "endSec": 22.35,
+      "startFrame": 503,
+      "endFrame": 671,
+      "wordCount": 12
+    },
+    {
+      "panel": "P05",
+      "fromWord": "Jam",
+      "toWord": "cahayanya.",
+      "startSec": 23.21,
+      "endSec": 34.51,
+      "startFrame": 696,
+      "endFrame": 1035,
+      "wordCount": 19
+    },
+    {
+      "panel": "P06",
+      "fromWord": "Ranto",
+      "toWord": "palangnya.",
+      "startSec": 35.19,
+      "endSec": 40.25,
+      "startFrame": 1056,
+      "endFrame": 1208,
+      "wordCount": 10
+    },
+    {
+      "panel": "P07",
+      "fromWord": "Pintunya",
+      "toWord": "tamat,",
+      "startSec": 40.89,
+      "endSec": 49.05,
+      "startFrame": 1227,
+      "endFrame": 1472,
+      "wordCount": 14
+    },
+    {
+      "panel": "P08",
+      "fromWord": "balik",
+      "toWord": "tanda.",
+      "startSec": 49.45,
+      "endSec": 57.57,
+      "startFrame": 1484,
+      "endFrame": 1727,
+      "wordCount": 19
+    },
+    {
+      "panel": "P09",
+      "fromWord": "Ranto",
+      "toWord": "Tamat.",
+      "startSec": 57.57,
+      "endSec": 72.61,
+      "startFrame": 1727,
+      "endFrame": 2178,
+      "wordCount": 24
+    },
+    {
+      "panel": "P10",
+      "fromWord": "Balik",
+      "toWord": "lampunya.",
+      "startSec": 73.01,
+      "endSec": 78.33,
+      "startFrame": 2190,
+      "endFrame": 2350,
+      "wordCount": 9
+    },
+    {
+      "panel": "P11",
+      "fromWord": "Layar",
+      "toWord": "Tamat,",
+      "startSec": 79.15,
+      "endSec": 87.01,
+      "startFrame": 2375,
+      "endFrame": 2610,
+      "wordCount": 12
+    },
+    {
+      "panel": "P12",
+      "fromWord": "balik",
+      "toWord": "nyala,",
+      "startSec": 88.81,
+      "endSec": 92.35,
+      "startFrame": 2664,
+      "endFrame": 2771,
+      "wordCount": 5
+    },
+    {
+      "panel": "P13",
+      "fromWord": "kursi",
+      "toWord": "itu,",
+      "startSec": 93.09,
+      "endSec": 101.89,
+      "startFrame": 2793,
+      "endFrame": 3057,
+      "wordCount": 17
+    },
+    {
+      "panel": "P14",
+      "fromWord": "ikutin",
+      "toWord": "cahayanya.",
+      "startSec": 102.29,
+      "endSec": 103.83,
+      "startFrame": 3069,
+      "endFrame": 3115,
+      "wordCount": 2
+    },
+    {
+      "panel": "P15",
+      "fromWord": "Ranto",
+      "toWord": "layar.",
+      "startSec": 104.67,
+      "endSec": 109.05,
+      "startFrame": 3140,
+      "endFrame": 3272,
+      "wordCount": 9
+    },
+    {
+      "panel": "P16",
+      "fromWord": "Di",
+      "toWord": "panjang.",
+      "startSec": 109.6,
+      "endSec": 114.24,
+      "startFrame": 3288,
+      "endFrame": 3427,
+      "wordCount": 8
+    },
+    {
+      "panel": "P17",
+      "fromWord": "Ranto",
+      "toWord": "layar.",
+      "startSec": 114.24,
+      "endSec": 118.1,
+      "startFrame": 3427,
+      "endFrame": 3543,
+      "wordCount": 8
+    },
+    {
+      "panel": "P18",
+      "fromWord": "Kainnya",
+      "toWord": "bahu.",
+      "startSec": 118.7,
+      "endSec": 124.62,
+      "startFrame": 3561,
+      "endFrame": 3739,
+      "wordCount": 11
+    },
+    {
+      "panel": "P19",
+      "fromWord": "Kainnya",
+      "toWord": "baliknya.",
+      "startSec": 125.08,
+      "endSec": 129.92,
+      "startFrame": 3752,
+      "endFrame": 3898,
+      "wordCount": 9
+    },
+    {
+      "panel": "P20",
+      "fromWord": "Cahaya",
+      "toWord": "besi.",
+      "startSec": 130.72,
+      "endSec": 133.8,
+      "startFrame": 3922,
+      "endFrame": 4014,
+      "wordCount": 7
+    },
+    {
+      "panel": "P21",
+      "fromWord": "Ranto",
+      "toWord": "mukanya.",
+      "startSec": 134.42,
+      "endSec": 141.08,
+      "startFrame": 4033,
+      "endFrame": 4232,
+      "wordCount": 13
+    },
+    {
+      "panel": "P23",
+      "fromWord": "ikutin",
+      "toWord": "anaknya.",
+      "startSec": 141.9,
+      "endSec": 146.22,
+      "startFrame": 4257,
+      "endFrame": 4387,
+      "wordCount": 7
+    }
+  ],
+  "timelinePlacement": {
+    "blackoutTail": {
+      "speechReleaseSec": 146.22,
+      "preparedTrackEndSec": 147.72,
+      "assembledVideoCutDurationSec": null,
+      "note": "Tail pad after the final word is exact-zero silence reserved for mix cues (tension ramp, vacuum, jolt, hard cut)."
+    }
+  },
+  "runtimeBudget": {
+    "narrationTrackDurationSec": 147.72,
+    "spokenSpeechEndSec": 146.22,
+    "assembledVideoCutDurationSec": null,
+    "targetWindowSec": [
+      145,
+      160
+    ]
+  },
+  "assemblerHandoff": {
+    "preparedTrack": {
+      "wav": "C:\\Users\\user\\Documents\\Repo\\tiktok-repost\\tiktok-video\\Survival-Fantasy-Content\\episodes\\006-bioskop-tanpa-pintu\\narration-prepared-20261124-v3.wav",
+      "mp3": "C:\\Users\\user\\Documents\\Repo\\tiktok-repost\\tiktok-video\\Survival-Fantasy-Content\\episodes\\006-bioskop-tanpa-pintu\\narration-prepared-20261124-v3.mp3",
+      "sampleRate": 48000,
+      "channels": 1,
+      "durationSec": 147.72
+    },
+    "wordTimingSource": "C:\\Users\\user\\Documents\\Repo\\tiktok-repost\\tiktok-video\\Survival-Fantasy-Content\\episodes\\006-bioskop-tanpa-pintu\\narration-timestamps-20261124-v3.json",
+    "frameRules": {
+      "fps": 30,
+      "sampleOffsetFormula": "Math.round(frame * sampleRate / fps)",
+      "note": "All claimed-silent windows are aligned to fps frame boundaries and were verified sample-exact in the prepared WAV."
+    },
+    "claimedSilenceWindows": [
+      {
+        "name": "rewind-1:rewind",
+        "startFrame": 1472,
+        "endFrame": 1483
+      },
+      {
+        "name": "rewind-2:rewind",
+        "startFrame": 2179,
+        "endFrame": 2190
+      },
+      {
+        "name": "rewind-3:rewind",
+        "startFrame": 2611,
+        "endFrame": 2622
+      },
+      {
+        "name": "rewind-3:dread",
+        "startFrame": 2623,
+        "endFrame": 2664
+      },
+      {
+        "name": "ending:tail-pad",
+        "startFrame": 4392,
+        "endFrame": 4431
+      }
+    ],
+    "rewindSnapAnchors": [
+      {
+        "name": "rewind-1",
+        "startFrame": 1472,
+        "sampleOffset": 2354400
+      },
+      {
+        "name": "rewind-2",
+        "startFrame": 2178,
+        "sampleOffset": 3485280
+      },
+      {
+        "name": "rewind-3",
+        "startFrame": 2610,
+        "sampleOffset": 4176480
+      }
+    ],
+    "tail": {
+      "speechEndSec": 146.22,
+      "padSec": 1.5,
+      "trackEndSec": 147.72
+    },
+    "notes": "Lay cue-sheet SFX and world-voice assets only inside their reserved windows; keep claimed-silent windows silent in the mix."
+  },
+  "notes": "Assembled by scripts/prepare-narration.mjs on a continuous PCM sample timeline; zero playback-speed change (atempo 1.0x preserved); strictly monotonic PTS verified by ffprobe across all packets."
+}

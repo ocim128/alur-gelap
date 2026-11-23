@@ -1,0 +1,62 @@
+{
+  "source": "episodes/006-bioskop-tanpa-pintu/narration-investigator-20261124-v3-timestamps.json",
+  "scriptSha256": "10ce0eba8bf7babcf815153068846a0b931fcb1494e6d7996c67b02ed4fad71d",
+  "result": "suspects",
+  "scriptTokenCount": 243,
+  "heardTokenCount": 243,
+  "reconciliations": [
+    {
+      "rawIndex": 233,
+      "heard": "Ikuti",
+      "scriptFaithful": "ikutin",
+      "class": "phonetic-variant",
+      "action": "renamed",
+      "note": "Known ASR variant; not listening evidence."
+    },
+    {
+      "rawIndex": 30,
+      "heard": "ditempat,",
+      "scriptFaithful": "di tempat",
+      "class": "merge-split",
+      "action": "split",
+      "note": ""
+    },
+    {
+      "rawIndex": 44,
+      "heard": "dipanggung,",
+      "scriptFaithful": "di panggung",
+      "class": "merge-split",
+      "action": "split",
+      "note": ""
+    },
+    {
+      "rawIndex": 75,
+      "heard": "dibaliknya,",
+      "scriptFaithful": "di baliknya",
+      "class": "merge-split",
+      "action": "split",
+      "note": ""
+    }
+  ],
+  "suspects": [
+    {
+      "position": 131,
+      "script": "proyektornya",
+      "heard": "proyekturnya",
+      "context": {
+        "script": "ranto curiga sama proyektornya lalu matiin lampunya",
+        "heard": "ranto curiga sama proyekturnya lalu matiin lampunya"
+      }
+    },
+    {
+      "position": 213,
+      "script": "bata",
+      "heard": "batah",
+      "context": {
+        "script": "pipa dan tembok bata di baliknya cahaya",
+        "heard": "pipa dan tembok batah di baliknya cahaya"
+      }
+    }
+  ],
+  "note": "ASR comparison only. Formatting splits have estimated boundaries; genuine pronunciation is unverified without listening."
+}

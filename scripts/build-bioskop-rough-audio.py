@@ -8,11 +8,13 @@ import wave
 
 parser = argparse.ArgumentParser(description='Build the Scenario 006 scratch narration and storyboard timing.')
 parser.add_argument('--espeak', default='espeak-ng', help='eSpeak NG executable with the Indonesian voice installed')
+parser.add_argument('--output-dir', default='public/assets/006-bioskop-rough-cut')
+parser.add_argument('--timing-output', default='episodes/006-bioskop-tanpa-pintu/rough-cut.json')
 args = parser.parse_args()
 scratch_dir = TemporaryDirectory(prefix='bioskop-rough-')
 root = Path(__file__).resolve().parents[1]
 episode = root / 'episodes/006-bioskop-tanpa-pintu'
-public = root / 'public/assets/006-bioskop-rough-cut'
+public = root / args.output_dir
 temp = Path(scratch_dir.name)
 public.mkdir(exist_ok=True)
 lines = iter((episode / 'narasi.txt').read_text(encoding='utf-8').strip().split('\n\n'))
@@ -81,7 +83,7 @@ subprocess.run([
     '-af', 'loudnorm=I=-21:TP=-3:LRA=7', '-ar', str(hz),
     '-codec:a', 'libmp3lame', '-b:a', '56k', str(public / 'scratch.mp3'),
 ], check=True)
-(episode / 'rough-cut.json').write_text(
+(root / args.timing_output).write_text(
     '{\n  "duration": ' + str(cursor) + ',\n  "rewinds": ' + json.dumps(rewinds) + ',\n  "shots": [\n' +
     ',\n'.join('    ' + json.dumps(shot, ensure_ascii=False) for shot in shots) + '\n  ]\n}\n',
     encoding='utf-8',

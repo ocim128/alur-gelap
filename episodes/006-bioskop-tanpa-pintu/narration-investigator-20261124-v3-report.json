@@ -1,0 +1,1131 @@
+{
+  "version": 1,
+  "voiceId": "voice_71a5a701-796e-421d-840e-0adc00b0816a",
+  "voiceName": "voice_71a5a701-796e-421d-840e-0adc00b0816a",
+  "provider": "gemini-cloud",
+  "model": "gemini-3.8-flash-tts",
+  "master": true,
+  "masterFilter": "highpass=f=85,equalizer=f=140:t=q:w=1.2:g=1,equalizer=f=450:t=q:w=1.5:g=-1,equalizer=f=3200:t=q:w=1.2:g=1,loudnorm=I=-14:LRA=6:TP=-1.5,aformat=sample_fmts=s16",
+  "asrModel": "small",
+  "generatedAt": "2026-11-23T22:32:23.674Z",
+  "passed": false,
+  "totalChunks": 12,
+  "verifiedChunks": 5,
+  "warningChunks": 0,
+  "failedChunks": 7,
+  "plannedDurationSec": 146.1,
+  "finalAlignment": {
+    "transcript": "Pintu keluar bioskop ini palsu. Ranto lagi jaga proyektor, ketika pintu balkon ketutup sendiri. Kuncinya tertinggal di luar. Di bawah, barisan kursi terus bertambah, makin dekat ke balkon. Layar tetap ditempat, tapi ujung kainnya terangkat oleh angin dari belakang. Jam tujuh, anak Ranto tampil dipanggung, dan dia janji nonton. Kalau anaknya gugup, Ranto selalu bilang, ikutin cahayanya. Ranto lari ke pintu merah bertuliskan keluar, lalu dorong palangnya. Pintunya terbuka ke studio yang sama, tapi lantai dibaliknya, hilang. Ranto jatuh, tamat, balik lagi. Ranto mau coba pintu darurat. Tapi kali ini dia taruh senter di kursi dekat layar buat tanda. Ranto buka pintu darurat. Kursi yang ditandai senternya bergeser menjauh. Sementara layar tetap di tempat. Ranto telanjur melangkah ke ruang kosong dan jatuh. Tamat. Balik lagi. Ranto curiga sama proyekturnya. Lalu matiin lampunya. Layar jadi gelap. Dan kursi berderak mundur menghimpit ranto ke balkon. Tamat, balik lagi, lampu proyektor nyala, kursi bisa bergeser, tapi layar tetap di tempat. Ranto ingat, angin yang berembus dari balik kain itu, ikutin cahayanya. Ranto turun dan nyusurin lorong tengah, lurus menuju layar. Di belakangnya, kursi berderak dan ruangan makin panjang. Ranto naik ke panggung dan dorong kain layar. Kainnya berat sampai lututnya hampir lemas. Dia coba lagi pakai bahu. Kainnya robek, memperlihatkan pipa dan tembok batah di baliknya. Cahaya pagi masuk dari bawah pintu besi. Ranto belok kanan dan nunduk lewat bawah pintu. Udara dingin, langsung kena mukanya. Ikuti cahayanya. Ranto masih sempat nonton anaknya.",
+    "mismatches": [
+      {
+        "expected": "proyektornya",
+        "heard": "proyekturnya"
+      },
+      {
+        "expected": "bata",
+        "heard": "batah"
+      },
+      {
+        "expected": "ikutin",
+        "heard": "ikuti"
+      }
+    ],
+    "passed": false
+  },
+  "audioQuality": {
+    "integratedLufs": -16.6,
+    "loudnessRangeLu": 4.1,
+    "noiseFloorDbfs": -19.2,
+    "targets": {
+      "integratedLufs": -14,
+      "loudnessRangeLu": [
+        5,
+        7
+      ]
+    }
+  },
+  "chunks": [
+    {
+      "index": 0,
+      "tag": null,
+      "text": "Pintu keluar bioskop ini palsu. Ranto lagi jaga proyektor ketika pintu balkon ketutup sendiri. Kuncinya tertinggal di luar.",
+      "retries": 0,
+      "status": "verified",
+      "bestSimilarity": 1,
+      "bestWordRatio": 1,
+      "acceptedAttempt": 0,
+      "attempts": [
+        {
+          "seed": 0,
+          "wordRatio": 1,
+          "similarity": 1,
+          "wpm": 102,
+          "expectedWpm": 130,
+          "passed": true,
+          "reasons": [],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Pintu keluar bioskop ini palsu. Ranto lagi jaga proyektor ketika pintu balkon ketutup sendiri. Kuncinya tertinggal di luar.",
+          "mismatches": [],
+          "endTruncated": false,
+          "rawTranscript": "Pintu keluar bioskop ini palsu. Ranto lagi jaga proyektor ketika pintu balkon ketutup sendiri. Kuncinya tertinggal di luar.",
+          "rawMismatches": [],
+          "rawEndTruncated": false,
+          "rawReasons": []
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "tag": null,
+      "text": "Di bawah, barisan kursi terus bertambah, makin dekat ke balkon. Layar tetap di tempat, tapi ujung kainnya terangkat oleh angin dari belakang. Jam tujuh anak Ranto tampil di panggung, dan dia janji nonton.",
+      "retries": 1,
+      "status": "verified",
+      "bestSimilarity": 0.995,
+      "bestWordRatio": 1,
+      "acceptedAttempt": 1,
+      "attempts": [
+        {
+          "seed": 0,
+          "wordRatio": 0.969,
+          "similarity": 0.987,
+          "wpm": 114,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.97): heard \"di bawah barisan kursi terus bertambah makin dekat ke balkon layar tetap di temp\"",
+            "word mismatch (ratio 0.97): heard \"di bawah barisan kursi terus bertambah makin dekat ke balkon layar tetap di temp\""
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Di bawah, barisan kursi terus bertambah, makin dekat ke Balkon. Layar tetap di tempat, tapi ujung kayanya terangkat oleh angin dari belakang. Jam 7, anak ranto tampil dipanggung, dan dia janji nonton.",
+          "mismatches": [
+            {
+              "expected": "kainnya",
+              "heard": "kayanya"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Di bawah, barisan kursi terus bertambah, makin dekat ke balkon. Layar tetap di tempat, tapi ujung kayanya terangkat oleh angin dari belakang. Jam 7, anak ranto tampil dipanggung, dan dia janji nonton.",
+          "rawMismatches": [
+            {
+              "expected": "kainnya",
+              "heard": "kayanya"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.97): heard \"di bawah barisan kursi terus bertambah makin dekat ke balkon layar tetap di temp\""
+          ]
+        },
+        {
+          "seed": 1,
+          "wordRatio": 1,
+          "similarity": 0.995,
+          "wpm": 107,
+          "expectedWpm": 130,
+          "passed": true,
+          "reasons": [],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Di bawah, barisan kursi terus bertambah, makin dekat kebalkon, layar tetap di tempat, tapi ujung kainnya terangkat oleh angin dari belakang. Jam tujuh, anak ranto tampil dipanggung, dan dia janji nonton.",
+          "mismatches": [],
+          "endTruncated": false,
+          "rawTranscript": "Di bawah, barisan kursi terus bertambah, makin dekat ke balkon, layar tetap di tempat, tapi ujung kainnya terangkat oleh angin dari belakang. Jam tujuh, anak ranto tampil dipanggung, dan dia janji nonton.",
+          "rawMismatches": [],
+          "rawEndTruncated": false,
+          "rawReasons": []
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "tag": null,
+      "text": "Kalau anaknya gugup, Ranto selalu bilang, ikutin cahayanya. Ranto lari ke pintu merah bertuliskan keluar, lalu dorong palangnya. Pintunya terbuka ke studio yang sama, tapi lantai di baliknya hilang.",
+      "retries": 0,
+      "status": "verified",
+      "bestSimilarity": 0.997,
+      "bestWordRatio": 1,
+      "acceptedAttempt": 0,
+      "attempts": [
+        {
+          "seed": 0,
+          "wordRatio": 1,
+          "similarity": 0.997,
+          "wpm": 100,
+          "expectedWpm": 130,
+          "passed": true,
+          "reasons": [],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Kalau anaknya gugup, Ranto selalu bilang, ikutin cahayanya. Ranto lari ke pintu merah bertuliskan keluar, lalu dorong palangnya. Pintunya terbuka ke studio yang sama, tapi lantai dibaliknya hilang.",
+          "mismatches": [],
+          "endTruncated": false,
+          "rawTranscript": "Kalau anaknya gugup, Ranto selalu bilang, ikutin cahayanya. Ranto lari ke pintu merah bertuliskan keluar, lalu dorong palangnya. Pintunya terbuka ke studio yang sama, tapi lantai dibaliknya hilang.",
+          "rawMismatches": [],
+          "rawEndTruncated": false,
+          "rawReasons": []
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "tag": null,
+      "text": "Ranto jatuh. Tamat. Balik lagi.",
+      "retries": 2,
+      "status": "failed",
+      "bestSimilarity": 0.964,
+      "bestWordRatio": 0.8,
+      "acceptedAttempt": 1,
+      "attempts": [
+        {
+          "seed": 0,
+          "wordRatio": 0.8,
+          "similarity": 0.947,
+          "wpm": 71,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.80): heard \"rantau jatuh tamat balik lagi\"",
+            "raw: 64 wpm outside 130±25%",
+            "word mismatch (ratio 0.80): heard \"rantau jatuh tamat balik lagi\"",
+            "71 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Rantau jatuh, tamat balik lagi.",
+          "mismatches": [
+            {
+              "expected": "ranto",
+              "heard": "rantau"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Rantau jatuh, tamat balik lagi.",
+          "rawMismatches": [
+            {
+              "expected": "ranto",
+              "heard": "rantau"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.80): heard \"rantau jatuh tamat balik lagi\"",
+            "64 wpm outside 130±25%"
+          ]
+        },
+        {
+          "seed": 1,
+          "wordRatio": 0.8,
+          "similarity": 0.964,
+          "wpm": 81,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: 73 wpm outside 130±25%",
+            "word mismatch (ratio 0.80): heard \"rantu jatuh tamat balik lagi\"",
+            "81 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "rantu jatuh, tamat, balik lagi.",
+          "mismatches": [
+            {
+              "expected": "ranto",
+              "heard": "rantu"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Ranto jatuh, tamat balik lagi.",
+          "rawMismatches": [],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "73 wpm outside 130±25%"
+          ]
+        },
+        {
+          "seed": 2,
+          "wordRatio": 0.8,
+          "similarity": 0.947,
+          "wpm": 76,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.80): heard \"rantau jatuh tamat balik lagi\"",
+            "raw: 70 wpm outside 130±25%",
+            "word mismatch (ratio 0.80): heard \"rantau jatuh tamat balik lagi\"",
+            "76 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Rantau jatuh, tamat. Balik lagi.",
+          "mismatches": [
+            {
+              "expected": "ranto",
+              "heard": "rantau"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Rantau jatuh, tamat. Balik lagi.",
+          "rawMismatches": [
+            {
+              "expected": "ranto",
+              "heard": "rantau"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.80): heard \"rantau jatuh tamat balik lagi\"",
+            "70 wpm outside 130±25%"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "tag": null,
+      "text": "Ranto mau coba pintu darurat, tapi kali ini dia taruh senter di kursi dekat layar buat tanda. Ranto buka pintu darurat. Kursi yang ditandai senternya bergeser menjauh, sementara layar tetap di tempat.",
+      "retries": 1,
+      "status": "verified",
+      "bestSimilarity": 1,
+      "bestWordRatio": 1,
+      "acceptedAttempt": 1,
+      "attempts": [
+        {
+          "seed": 0,
+          "wordRatio": 0.938,
+          "similarity": 0.99,
+          "wpm": 110,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.94): heard \"ranto mau coba pintu darurat tapi kali ini dia taruh center di kursi dekat layar\"",
+            "word mismatch (ratio 0.94): heard \"ranto mau coba pintu darurat tapi kali ini dia taruh center di kursi dekat layar\""
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Ranto mau coba pintu darurat. Tapi kali ini dia taruh center di kursi dekat layar buat tanda. Ranto buka pintu darurat. Kursi yang ditandai centernya bergeser menjauh. Sementara layar tetap di tempat.",
+          "mismatches": [
+            {
+              "expected": "senter",
+              "heard": "center"
+            },
+            {
+              "expected": "senternya",
+              "heard": "centernya"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Ranto mau coba pintu darurat. Tapi kali ini dia taruh center di kursi dekat layar buat tanda. Ranto buka pintu darurat. Kursi yang ditandai centernya bergeser menjauh. Sementara layar tetap di tempat.",
+          "rawMismatches": [
+            {
+              "expected": "senter",
+              "heard": "center"
+            },
+            {
+              "expected": "senternya",
+              "heard": "centernya"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.94): heard \"ranto mau coba pintu darurat tapi kali ini dia taruh center di kursi dekat layar\""
+          ]
+        },
+        {
+          "seed": 1,
+          "wordRatio": 1,
+          "similarity": 1,
+          "wpm": 116,
+          "expectedWpm": 130,
+          "passed": true,
+          "reasons": [],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Ranto mau coba pintu darurat, tapi kali ini dia taruh senter di kursi dekat layar buat tanda. Ranto buka pintu darurat. Kursi yang ditandai senternya bergeser menjauh, sementara layar tetap di tempat.",
+          "mismatches": [],
+          "endTruncated": false,
+          "rawTranscript": "Ranto mau coba pintu darurat, tapi kali ini dia taruh senter di kursi dekat layar buat tanda. Ranto buka pintu darurat. Kursi yang ditandai senternya bergeser menjauh, sementara layar tetap di tempat.",
+          "rawMismatches": [],
+          "rawEndTruncated": false,
+          "rawReasons": []
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "tag": null,
+      "text": "Ranto telanjur melangkah ke ruang kosong dan jatuh. Tamat. Balik lagi.",
+      "retries": 2,
+      "status": "failed",
+      "bestSimilarity": 0.985,
+      "bestWordRatio": 0.909,
+      "acceptedAttempt": 0,
+      "attempts": [
+        {
+          "seed": 0,
+          "wordRatio": 0.909,
+          "similarity": 0.985,
+          "wpm": 97,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.91): heard \"rantu telanjur melangkah ke ruang kosong dan jatuh tamat balik lagi\"",
+            "raw: 93 wpm outside 130±25%",
+            "word mismatch (ratio 0.91): heard \"rantu telanjur melangkah ke ruang kosong dan jatuh tamat balik lagi\"",
+            "97 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Rantu telanjur melangkah ke ruang kosong dan jatuh, tamat. Balik lagi.",
+          "mismatches": [
+            {
+              "expected": "ranto",
+              "heard": "rantu"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Rantu telanjur melangkah ke ruang kosong dan jatuh, tamat. Balik lagi.",
+          "rawMismatches": [
+            {
+              "expected": "ranto",
+              "heard": "rantu"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.91): heard \"rantu telanjur melangkah ke ruang kosong dan jatuh tamat balik lagi\"",
+            "93 wpm outside 130±25%"
+          ]
+        },
+        {
+          "seed": 1,
+          "wordRatio": 0.909,
+          "similarity": 0.985,
+          "wpm": 96,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.91): heard \"rantu telanjur melangkah ke ruang kosong dan jatuh tamat balik lagi\"",
+            "raw: 92 wpm outside 130±25%",
+            "word mismatch (ratio 0.91): heard \"rantu telanjur melangkah ke ruang kosong dan jatuh tamat balik lagi\"",
+            "96 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Rantu telanjur melangkah ke ruang kosong dan jatuh, tamat. Balik lagi.",
+          "mismatches": [
+            {
+              "expected": "ranto",
+              "heard": "rantu"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Rantu telanjur melangkah ke ruang kosong dan jatuh, tamat. Balik lagi.",
+          "rawMismatches": [
+            {
+              "expected": "ranto",
+              "heard": "rantu"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.91): heard \"rantu telanjur melangkah ke ruang kosong dan jatuh tamat balik lagi\"",
+            "92 wpm outside 130±25%"
+          ]
+        },
+        {
+          "seed": 2,
+          "wordRatio": 0.909,
+          "similarity": 0.985,
+          "wpm": 93,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.91): heard \"rantu telanjur melangkah ke ruang kosong dan jatuh tamat balik lagi\"",
+            "raw: 84 wpm outside 130±25%",
+            "word mismatch (ratio 0.91): heard \"rantu telanjur melangkah ke ruang kosong dan jatuh tamat balik lagi\"",
+            "93 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Rantu telanjur melangkah ke ruang kosong, dan jatuh. Tamat. Balik lagi.",
+          "mismatches": [
+            {
+              "expected": "ranto",
+              "heard": "rantu"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Rantu telanjur melangkah ke ruang kosong dan jatuh. Tamat. Balik lagi.",
+          "rawMismatches": [
+            {
+              "expected": "ranto",
+              "heard": "rantu"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.91): heard \"rantu telanjur melangkah ke ruang kosong dan jatuh tamat balik lagi\"",
+            "84 wpm outside 130±25%"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "tag": null,
+      "text": "Ranto curiga sama proyektornya, lalu matiin lampunya. Layar jadi gelap dan kursi berderak mundur, menghimpit Ranto ke balkon. Tamat.",
+      "retries": 2,
+      "status": "failed",
+      "bestSimilarity": 1,
+      "bestWordRatio": 1,
+      "acceptedAttempt": 0,
+      "attempts": [
+        {
+          "seed": 0,
+          "wordRatio": 1,
+          "similarity": 1,
+          "wpm": 85,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: 83 wpm outside 130±25%",
+            "85 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Ranto curiga sama proyektornya, lalu matiin lampunya, layar jadi gelap dan kursi berderak mundur menghimpit ranto ke balkon, tamat.",
+          "mismatches": [],
+          "endTruncated": false,
+          "rawTranscript": "Ranto curiga sama proyektornya, lalu matiin lampunya, layar jadi gelap, dan kursi berderak mundur menghimpit ranto ke balkon. Tamat.",
+          "rawMismatches": [],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "83 wpm outside 130±25%"
+          ]
+        },
+        {
+          "seed": 1,
+          "wordRatio": 0.947,
+          "similarity": 0.996,
+          "wpm": 85,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.95): heard \"ranto curiga sama proyektornya lalu matiin lampunya layar jadi gelap dan kursi b\"",
+            "raw: 84 wpm outside 130±25%",
+            "word mismatch (ratio 0.95): heard \"ranto curiga sama proyektornya lalu matiin lampunya layar jadi gelap dan kursi b\"",
+            "85 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Ranto curiga sama proyektornya. Lalu matiin lampunya. Layar jadi gelap. Dan kursi berdrak mundur menghimpit ranto ke Balkon. Tamat.",
+          "mismatches": [
+            {
+              "expected": "berderak",
+              "heard": "berdrak"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Ranto curiga sama proyektornya. Lalu matiin lampunya. Layar jadi gelap, dan kursi berdrak mundur menghimpit ranto ke Balkon. Tamat.",
+          "rawMismatches": [
+            {
+              "expected": "berderak",
+              "heard": "berdrak"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.95): heard \"ranto curiga sama proyektornya lalu matiin lampunya layar jadi gelap dan kursi b\"",
+            "84 wpm outside 130±25%"
+          ]
+        },
+        {
+          "seed": 2,
+          "wordRatio": 1,
+          "similarity": 1,
+          "wpm": 85,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: 80 wpm outside 130±25%",
+            "85 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Ranto curiga sama proyektornya, lalu matiin lampunya, layar jadi gelap, dan kursi berderak mundur, menghimpit ranto ke balkon, tamat.",
+          "mismatches": [],
+          "endTruncated": false,
+          "rawTranscript": "Ranto curiga sama proyektornya, lalu matiin lampunya, layar jadi gelap, dan kursi berderak mundur, menghimpit ranto ke balkon, tamat.",
+          "rawMismatches": [],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "80 wpm outside 130±25%"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "tag": null,
+      "text": "Balik lagi, lampu proyektor nyala. Kursi bisa bergeser, tapi layar tetap di tempat. Ranto ingat angin yang berembus dari balik kain itu.",
+      "retries": 2,
+      "status": "failed",
+      "bestSimilarity": 0.996,
+      "bestWordRatio": 0.955,
+      "acceptedAttempt": 0,
+      "attempts": [
+        {
+          "seed": 0,
+          "wordRatio": 0.955,
+          "similarity": 0.996,
+          "wpm": 100,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.95): heard \"balik lagi lampu proyektor nyala kursi bisa bergeser tapi layar tetap di tempat \"",
+            "raw: 97 wpm outside 130±25%",
+            "word mismatch (ratio 0.95): heard \"balik lagi lampu proyektor nyala kursi bisa bergeser tapi layar tetap di tempat \""
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Balik lagi, lampu proyektor nyala, kursi bisa bergeser, tapi layar tetap di tempat. Ranto ingat, angin yang berrembus dari balik kain itu.",
+          "mismatches": [
+            {
+              "expected": "berembus",
+              "heard": "berrembus"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Balik lagi. Lampu proyektor nyala. Kursi bisa bergeser, tapi layar tetap di tempat. Ranto ingat, angin yang berrembus dari balik kain itu.",
+          "rawMismatches": [
+            {
+              "expected": "berembus",
+              "heard": "berrembus"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.95): heard \"balik lagi lampu proyektor nyala kursi bisa bergeser tapi layar tetap di tempat \"",
+            "97 wpm outside 130±25%"
+          ]
+        },
+        {
+          "seed": 1,
+          "wordRatio": 0.955,
+          "similarity": 0.992,
+          "wpm": 96,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: 93 wpm outside 130±25%",
+            "word mismatch (ratio 0.95): heard \"balik lagi lampu proyektor nyala kursi bisa bergeser tapi layar tetap di tempat \"",
+            "96 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Balik lagi, lampu proyektor nyala, kursi bisa bergeser, tapi layar tetap di tempat, rantu ingat, angin yang berembus dari balik kain itu.",
+          "mismatches": [
+            {
+              "expected": "ranto",
+              "heard": "rantu"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Balik lagi, lampu proyektor nyala, kursi bisa bergeser, tapi layar tetap di tempat, ranto ingat, angin yang berembus dari balik kain itu.",
+          "rawMismatches": [],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "93 wpm outside 130±25%"
+          ]
+        },
+        {
+          "seed": 2,
+          "wordRatio": 0.955,
+          "similarity": 0.996,
+          "wpm": 96,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.95): heard \"balik lagi lampu proyektor nyala kursi bisa bergeser tapi layar tetap di tempat \"",
+            "raw: 93 wpm outside 130±25%",
+            "word mismatch (ratio 0.95): heard \"balik lagi lampu proyektor nyala kursi bisa bergeser tapi layar tetap di tempat \"",
+            "96 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Balik lagi, lampu proyektor nyala, kursi bisa bergeser, tapi layar tetap di tempat. Ranto ingat, angin yang berhembus dari balik kain itu.",
+          "mismatches": [
+            {
+              "expected": "berembus",
+              "heard": "berhembus"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Balik lagi, lampu proyektor nyala, kursi bisa bergeser, tapi layar tetap di tempat. Ranto ingat, angin yang berhembus dari balik kain itu.",
+          "rawMismatches": [
+            {
+              "expected": "berembus",
+              "heard": "berhembus"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.95): heard \"balik lagi lampu proyektor nyala kursi bisa bergeser tapi layar tetap di tempat \"",
+            "93 wpm outside 130±25%"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "tag": null,
+      "text": "Ikutin cahayanya. Ranto turun dan nyusurin lorong tengah, lurus menuju layar. Di belakangnya, kursi berderak dan ruangan makin panjang.",
+      "retries": 2,
+      "status": "failed",
+      "bestSimilarity": 1,
+      "bestWordRatio": 1,
+      "acceptedAttempt": 0,
+      "attempts": [
+        {
+          "seed": 0,
+          "wordRatio": 1,
+          "similarity": 1,
+          "wpm": 91,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: 89 wpm outside 130±25%",
+            "91 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Ikutin cahayanya, ranto turun dan nyusurin lorong tengah, lurus menuju layar. Di belakangnya, kursi berderak dan ruangan makin panjang.",
+          "mismatches": [],
+          "endTruncated": false,
+          "rawTranscript": "Ikutin cahayanya, ranto turun dan nyusurin lorong tengah, lurus menuju layar. Di belakangnya, kursi berderak dan ruangan makin panjang.",
+          "rawMismatches": [],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "89 wpm outside 130±25%"
+          ]
+        },
+        {
+          "seed": 1,
+          "wordRatio": 0.947,
+          "similarity": 0.996,
+          "wpm": 91,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.95): heard \"ikutin cahayanya ranto turun dan yusurin lorong tengah lurus menuju layar di bel\"",
+            "raw: 88 wpm outside 130±25%",
+            "word mismatch (ratio 0.95): heard \"ikutin cahayanya ranto turun dan yusurin lorong tengah lurus menuju layar di bel\"",
+            "91 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "ikutin cahayanya, ranto turun dan yusurin lorong tengah, lurus menuju layar, di belakangnya kursi berderak dan ruangan makin panjang.",
+          "mismatches": [
+            {
+              "expected": "nyusurin",
+              "heard": "yusurin"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "ikutin cahayanya, ranto turun dan yusurin lorong tengah, lurus menuju layar, di belakangnya kursi berderak dan ruangan makin panjang.",
+          "rawMismatches": [
+            {
+              "expected": "nyusurin",
+              "heard": "yusurin"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.95): heard \"ikutin cahayanya ranto turun dan yusurin lorong tengah lurus menuju layar di bel\"",
+            "88 wpm outside 130±25%"
+          ]
+        },
+        {
+          "seed": 2,
+          "wordRatio": 0.947,
+          "similarity": 0.996,
+          "wpm": 94,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.95): heard \"ikutin cahayanya ranto turun dan yusurin lorong tengah lurus menuju layar di bel\"",
+            "raw: 92 wpm outside 130±25%",
+            "word mismatch (ratio 0.95): heard \"ikutin cahayanya ranto turun dan yusurin lorong tengah lurus menuju layar di bel\"",
+            "94 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Ikutin cahayanya, ranto turun dan yusurin lorong tengah, lurus menuju layar, di belakangnya kursi berderak dan ruangan makin panjang.",
+          "mismatches": [
+            {
+              "expected": "nyusurin",
+              "heard": "yusurin"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Ikutin cahayanya, ranto turun dan yusurin lorong tengah, lurus menuju layar, di belakangnya kursi berderak dan ruangan makin panjang.",
+          "rawMismatches": [
+            {
+              "expected": "nyusurin",
+              "heard": "yusurin"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.95): heard \"ikutin cahayanya ranto turun dan yusurin lorong tengah lurus menuju layar di bel\"",
+            "92 wpm outside 130±25%"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 9,
+      "tag": null,
+      "text": "Ranto naik ke panggung dan dorong kain layar. Kainnya berat sampai lututnya hampir lemas. Dia coba lagi pakai bahu.",
+      "retries": 1,
+      "status": "verified",
+      "bestSimilarity": 1,
+      "bestWordRatio": 1,
+      "acceptedAttempt": 1,
+      "attempts": [
+        {
+          "seed": 0,
+          "wordRatio": 0.947,
+          "similarity": 0.987,
+          "wpm": 106,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.95): heard \"rantun naik ke panggung dan dorong kain layar kainnya berat sampai lututnya hamp\"",
+            "word mismatch (ratio 0.95): heard \"rantun naik ke panggung dan dorong kain layar kainnya berat sampai lututnya hamp\""
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Rantun naik ke panggung dan dorong kain layar. Kainnya berat, sampai lututnya hampir lemas. Dia coba lagi, pakai bahu.",
+          "mismatches": [
+            {
+              "expected": "ranto",
+              "heard": "rantun"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Rantun naik ke panggung dan dorong kain layar. Kainnya berat, sampai lututnya hampir lemas. Dia coba lagi, pakai bahu.",
+          "rawMismatches": [
+            {
+              "expected": "ranto",
+              "heard": "rantun"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.95): heard \"rantun naik ke panggung dan dorong kain layar kainnya berat sampai lututnya hamp\""
+          ]
+        },
+        {
+          "seed": 1,
+          "wordRatio": 1,
+          "similarity": 1,
+          "wpm": 111,
+          "expectedWpm": 130,
+          "passed": true,
+          "reasons": [],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Ranto naik ke panggung dan dorong kain layar. Kainnya berat sampai lututnya hampir lemas. Dia coba lagi pakai bahu.",
+          "mismatches": [],
+          "endTruncated": false,
+          "rawTranscript": "Ranto naik ke panggung dan dorong kain layar. Kainnya berat sampai lututnya hampir lemas. Dia coba lagi pakai bahu.",
+          "rawMismatches": [],
+          "rawEndTruncated": false,
+          "rawReasons": []
+        }
+      ]
+    },
+    {
+      "index": 10,
+      "tag": null,
+      "text": "Kainnya robek, memperlihatkan pipa dan tembok bata di baliknya. Cahaya pagi masuk dari bawah pintu besi. Ranto belok kanan dan nunduk lewat bawah pintu.",
+      "retries": 2,
+      "status": "failed",
+      "bestSimilarity": 0.997,
+      "bestWordRatio": 0.958,
+      "acceptedAttempt": 0,
+      "attempts": [
+        {
+          "seed": 0,
+          "wordRatio": 0.958,
+          "similarity": 0.997,
+          "wpm": 109,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.96): heard \"kainnya robek memperlihatkan pipa dan tembok batah di baliknya cahaya pagi masuk\"",
+            "word mismatch (ratio 0.96): heard \"kainnya robek memperlihatkan pipa dan tembok batah di baliknya cahaya pagi masuk\""
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Kainnya robek, memperlihatkan pipa dan tembok batah di baliknya. Cahaya pagi masuk dari bawah pintu besi, ranto belok kanan, dan nunduk lewat bawah pintu.",
+          "mismatches": [
+            {
+              "expected": "bata",
+              "heard": "batah"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Kainnya robek, memperlihatkan pipa dan tembok batah di baliknya. Cahaya pagi masuk dari bawah pintu besi, ranto belok kanan, dan nunduk lewat bawah pintu.",
+          "rawMismatches": [
+            {
+              "expected": "bata",
+              "heard": "batah"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.96): heard \"kainnya robek memperlihatkan pipa dan tembok batah di baliknya cahaya pagi masuk\""
+          ]
+        },
+        {
+          "seed": 1,
+          "wordRatio": 0.958,
+          "similarity": 0.997,
+          "wpm": 112,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.96): heard \"kainnya robek memperlihatkan pipa dan tembok batah di baliknya cahaya pagi masuk\"",
+            "word mismatch (ratio 0.96): heard \"kainnya robek memperlihatkan pipa dan tembok batah di baliknya cahaya pagi masuk\""
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Kainnya robek, memperlihatkan pipa dan tembok batah di baliknya. Cahaya pagi masuk dari bawah pintu besi. Ranto belok kanan dan nunduk lewat bawah pintu.",
+          "mismatches": [
+            {
+              "expected": "bata",
+              "heard": "batah"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Kainnya robek, memperlihatkan pipa dan tembok batah di baliknya. Cahaya pagi masuk dari bawah pintu besi, ranto belok kanan dan nunduk lewat bawah pintu.",
+          "rawMismatches": [
+            {
+              "expected": "bata",
+              "heard": "batah"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.96): heard \"kainnya robek memperlihatkan pipa dan tembok batah di baliknya cahaya pagi masuk\""
+          ]
+        },
+        {
+          "seed": 2,
+          "wordRatio": 0.917,
+          "similarity": 0.993,
+          "wpm": 110,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.92): heard \"kainya robek memperlihatkan pipa dan tembok batah di baliknya cahaya pagi masuk \"",
+            "word mismatch (ratio 0.92): heard \"kainya robek memperlihatkan pipa dan tembok batah di baliknya cahaya pagi masuk \""
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Kainya robek, memperlihatkan pipa dan tembok batah di baliknya. Cahaya pagi masuk dari bawah pintu besi, ranto belok kanan dan nunduk lewat bawah pintu.",
+          "mismatches": [
+            {
+              "expected": "kainnya",
+              "heard": "kainya"
+            },
+            {
+              "expected": "bata",
+              "heard": "batah"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Kainya robek, memperlihatkan pipa dan tembok batah di baliknya. Cahaya pagi masuk dari bawah pintu besi, ranto belok kanan, dan nunduk lewat bawah pintu.",
+          "rawMismatches": [
+            {
+              "expected": "kainnya",
+              "heard": "kainya"
+            },
+            {
+              "expected": "bata",
+              "heard": "batah"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.92): heard \"kainya robek memperlihatkan pipa dan tembok batah di baliknya cahaya pagi masuk \""
+          ]
+        }
+      ]
+    },
+    {
+      "index": 11,
+      "tag": null,
+      "text": "Udara dingin langsung kena mukanya. Ikutin cahayanya. Ranto masih sempat nonton anaknya.",
+      "retries": 2,
+      "status": "failed",
+      "bestSimilarity": 1,
+      "bestWordRatio": 1,
+      "acceptedAttempt": 2,
+      "attempts": [
+        {
+          "seed": 0,
+          "wordRatio": 0.783,
+          "similarity": 0.982,
+          "wpm": 82,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.78): heard \"udarah dingin langsung kenamukannya ikutin cahayanya ranto masih sempat nonton a\"",
+            "raw: 79 wpm outside 130±25%",
+            "word mismatch (ratio 0.78): heard \"udarah dingin langsung kenamukannya ikutin cahayanya ranto masih sempat nonton a\"",
+            "82 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Udarah dingin langsung kenamukannya, ikutin cahayanya, ranto masih sempat nonton anaknya.",
+          "mismatches": [
+            {
+              "expected": "udara",
+              "heard": "udarah"
+            },
+            {
+              "expected": "kena",
+              "heard": null
+            },
+            {
+              "expected": "mukanya",
+              "heard": "kenamukannya"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Udarah dingin langsung kenamukannya, ikutin cahayanya, ranto masih sempat nonton anaknya.",
+          "rawMismatches": [
+            {
+              "expected": "udara",
+              "heard": "udarah"
+            },
+            {
+              "expected": "kena",
+              "heard": null
+            },
+            {
+              "expected": "mukanya",
+              "heard": "kenamukannya"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.78): heard \"udarah dingin langsung kenamukannya ikutin cahayanya ranto masih sempat nonton a\"",
+            "79 wpm outside 130±25%"
+          ]
+        },
+        {
+          "seed": 1,
+          "wordRatio": 0.87,
+          "similarity": 0.988,
+          "wpm": 83,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.87): heard \"udara dingin langsung kenamukannya ikutin cahayanya ranto masih sempat nonton an\"",
+            "raw: 81 wpm outside 130±25%",
+            "word mismatch (ratio 0.87): heard \"udara dingin langsung kenamukannya ikutin cahayanya ranto masih sempat nonton an\"",
+            "83 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Udara dingin langsung kenamukannya, ikutin cahayanya. Ranto masih sempat nonton anaknya.",
+          "mismatches": [
+            {
+              "expected": "kena",
+              "heard": null
+            },
+            {
+              "expected": "mukanya",
+              "heard": "kenamukannya"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Udara dingin langsung kenamukannya, ikutin cahayanya. Ranto masih sempat nonton anaknya.",
+          "rawMismatches": [
+            {
+              "expected": "kena",
+              "heard": null
+            },
+            {
+              "expected": "mukanya",
+              "heard": "kenamukannya"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.87): heard \"udara dingin langsung kenamukannya ikutin cahayanya ranto masih sempat nonton an\"",
+            "81 wpm outside 130±25%"
+          ]
+        },
+        {
+          "seed": 2,
+          "wordRatio": 1,
+          "similarity": 1,
+          "wpm": 89,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: 85 wpm outside 130±25%",
+            "89 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Udara dingin, langsung kena mukanya, ikutin cahayanya. Ranto masih sempat nonton anaknya.",
+          "mismatches": [],
+          "endTruncated": false,
+          "rawTranscript": "Udara dingin, langsung kena mukanya, ikutin cahayanya. Ranto masih sempat nonton anaknya.",
+          "rawMismatches": [],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "85 wpm outside 130±25%"
+          ]
+        }
+      ]
+    }
+  ]
+}

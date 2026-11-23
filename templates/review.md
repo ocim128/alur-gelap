@@ -7,6 +7,8 @@ Copy into the episode folder. Mark each item `pass`, `needs work`, `not checked`
 - [ ] The opening makes the situation intriguing; the extraordinary element supports the owner's intended unbelievable experience.
 - [ ] The survival threat, world rule, character decision and immediate consequence are understandable without prior episodes.
 - [ ] Narration, images, captions and cause-and-effect agree; factual survival claims are verified or clearly fictional.
+- [ ] Spoken Indonesian flows naturally at normal speed: sentence rhythm varies, linked actions and consequences are clear, and wording sounds familiar in context. Record whether this is a script read, an actual audio listen, or independent listener feedback.
+- [ ] Narration joins and pause cuts have been reviewed when listening is available. Record the master and prepared artifacts, relevant timestamps and actual observations. If listening is unavailable, mark this item not checked and record `listening review: none`.
 - [ ] Character, location and inventory match the brief; the episode has an earned payoff.
 - [ ] Key constraints are visible without relying on narration alone, and each important beat has a clear action or visual change.
 

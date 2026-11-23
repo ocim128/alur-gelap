@@ -1,0 +1,361 @@
+{
+  "episode": "006-bioskop-tanpa-pintu",
+  "publicAssetsDir": "episodes/006-bioskop-tanpa-pintu/audio-candidate-20261124-v3",
+  "fps": 30,
+  "sampleRate": 48000,
+  "tightening": {
+    "thresholdSec": 0.9,
+    "retainedSec": 0.55
+  },
+  "hook": {
+    "limitSec": 3,
+    "finalWordStem": "palsu",
+    "fallback": {
+      "dropWordStem": "ini",
+      "afterStem": "bioskop",
+      "beforeStem": "palsu"
+    }
+  },
+  "rewinds": [
+    {
+      "name": "rewind-1",
+      "tailStem": "tamat",
+      "nextStem": "balik",
+      "occurrence": 1,
+      "rewindSec": 0.4
+    },
+    {
+      "name": "rewind-2",
+      "tailStem": "tamat",
+      "nextStem": "balik",
+      "occurrence": 2,
+      "rewindSec": 0.4
+    },
+    {
+      "name": "rewind-3",
+      "tailStem": "tamat",
+      "nextStem": "balik",
+      "occurrence": 3,
+      "rewindSec": 0.4,
+      "dreadSec": 1.4
+    }
+  ],
+  "protectedBeats": [
+    {
+      "aStem": "palangnya",
+      "bStem": "pintunya",
+      "why": "Red door reveal"
+    },
+    {
+      "aStem": "tanda",
+      "bStem": "ranto",
+      "why": "Hold flashlight marker"
+    },
+    {
+      "aStem": "lampunya",
+      "bStem": "layar",
+      "why": "Blackout before row surge"
+    },
+    {
+      "aStem": "mukanya",
+      "bStem": "ikutin",
+      "why": "Narration-free exterior wall reveal"
+    }
+  ],
+  "tail": {
+    "padSec": 1.5,
+    "releaseFadeSec": 0.05
+  },
+  "targetWindowSec": [
+    145,
+    160
+  ],
+  "panels": [
+    {
+      "panel": "P01",
+      "fromPhrase": [
+        "pintu",
+        "keluar",
+        "bioskop"
+      ],
+      "toPhrase": [
+        "palsu"
+      ]
+    },
+    {
+      "panel": "P02",
+      "fromPhrase": [
+        "ranto",
+        "lagi"
+      ],
+      "toPhrase": [
+        "luar"
+      ]
+    },
+    {
+      "panel": "P03",
+      "fromPhrase": [
+        "di",
+        "bawah"
+      ],
+      "toPhrase": [
+        "balkon"
+      ]
+    },
+    {
+      "panel": "P04",
+      "fromPhrase": [
+        "layar",
+        "tetap",
+        "di",
+        "tempat",
+        "tapi"
+      ],
+      "toPhrase": [
+        "belakang"
+      ]
+    },
+    {
+      "panel": "P05",
+      "fromPhrase": [
+        "jam"
+      ],
+      "toPhrase": [
+        "cahayanya"
+      ]
+    },
+    {
+      "panel": "P06",
+      "fromPhrase": [
+        "ranto",
+        "lari"
+      ],
+      "toPhrase": [
+        "palangnya"
+      ]
+    },
+    {
+      "panel": "P07",
+      "fromPhrase": [
+        "pintunya"
+      ],
+      "toPhrase": [
+        "tamat"
+      ]
+    },
+    {
+      "panel": "P08",
+      "fromPhrase": [
+        "balik",
+        "lagi",
+        "ranto",
+        "mau"
+      ],
+      "toPhrase": [
+        "tanda"
+      ]
+    },
+    {
+      "panel": "P09",
+      "fromPhrase": [
+        "ranto",
+        "buka"
+      ],
+      "toPhrase": [
+        "tamat"
+      ]
+    },
+    {
+      "panel": "P10",
+      "fromPhrase": [
+        "balik",
+        "lagi",
+        "ranto",
+        "curiga"
+      ],
+      "toPhrase": [
+        "lampunya"
+      ]
+    },
+    {
+      "panel": "P11",
+      "fromPhrase": [
+        "layar",
+        "jadi"
+      ],
+      "toPhrase": [
+        "tamat"
+      ]
+    },
+    {
+      "panel": "P12",
+      "fromPhrase": [
+        "balik",
+        "lagi",
+        "lampu"
+      ],
+      "toPhrase": [
+        "nyala"
+      ]
+    },
+    {
+      "panel": "P13",
+      "fromPhrase": [
+        "kursi",
+        "bisa"
+      ],
+      "toPhrase": [
+        "itu"
+      ]
+    },
+    {
+      "panel": "P14",
+      "fromPhrase": [
+        "ikutin",
+        "cahayanya"
+      ],
+      "toPhrase": [
+        "cahayanya"
+      ],
+      "fromOccurrence": 2
+    },
+    {
+      "panel": "P15",
+      "fromPhrase": [
+        "ranto",
+        "turun"
+      ],
+      "toPhrase": [
+        "layar"
+      ]
+    },
+    {
+      "panel": "P16",
+      "fromPhrase": [
+        "di",
+        "belakangnya"
+      ],
+      "toPhrase": [
+        "panjang"
+      ]
+    },
+    {
+      "panel": "P17",
+      "fromPhrase": [
+        "ranto",
+        "naik"
+      ],
+      "toPhrase": [
+        "layar"
+      ]
+    },
+    {
+      "panel": "P18",
+      "fromPhrase": [
+        "kainnya",
+        "berat"
+      ],
+      "toPhrase": [
+        "bahu"
+      ]
+    },
+    {
+      "panel": "P19",
+      "fromPhrase": [
+        "kainnya",
+        "robek"
+      ],
+      "toPhrase": [
+        "baliknya"
+      ]
+    },
+    {
+      "panel": "P20",
+      "fromPhrase": [
+        "cahaya"
+      ],
+      "toPhrase": [
+        "besi"
+      ]
+    },
+    {
+      "panel": "P21",
+      "fromPhrase": [
+        "ranto",
+        "belok"
+      ],
+      "toPhrase": [
+        "mukanya"
+      ]
+    },
+    {
+      "panel": "P23",
+      "fromPhrase": [
+        "ikutin",
+        "cahayanya",
+        "ranto",
+        "masih"
+      ],
+      "toPhrase": [
+        "anaknya"
+      ]
+    }
+  ],
+  "source": "episodes/006-bioskop-tanpa-pintu/narration-investigator-20261124-v3.mp3",
+  "sourceTimestamps": "episodes/006-bioskop-tanpa-pintu/narration-investigator-20261124-v3-timestamps.json",
+  "outputWav": "episodes/006-bioskop-tanpa-pintu/narration-prepared-20261124-v3.wav",
+  "outputMp3": "episodes/006-bioskop-tanpa-pintu/narration-prepared-20261124-v3.mp3",
+  "timingsPath": "episodes/006-bioskop-tanpa-pintu/narration-timestamps-20261124-v3.json",
+  "editMapPath": "episodes/006-bioskop-tanpa-pintu/audio-edit-map-20261124-v3.json",
+  "pronunciation": {
+    "renames": [
+      {
+        "from": "proyekturnya",
+        "to": "proyektornya",
+        "count": 1,
+        "note": "ASR timing anchor only; vowel requires listening."
+      },
+      {
+        "from": "batah",
+        "to": "bata",
+        "count": 1,
+        "note": "ASR timing anchor only; final sound requires listening."
+      },
+      {
+        "from": "ikuti",
+        "to": "ikutin",
+        "contextAfter": [
+          "cahayanya"
+        ],
+        "count": 1,
+        "note": "ASR timing anchor only; final consonant unverified."
+      }
+    ],
+    "splits": [
+      {
+        "from": "ditempat",
+        "to": [
+          "di",
+          "tempat"
+        ],
+        "count": 1
+      },
+      {
+        "from": "dipanggung",
+        "to": [
+          "di",
+          "panggung"
+        ],
+        "count": 1
+      },
+      {
+        "from": "dibaliknya",
+        "to": [
+          "di",
+          "baliknya"
+        ],
+        "count": 1
+      }
+    ]
+  }
+}
