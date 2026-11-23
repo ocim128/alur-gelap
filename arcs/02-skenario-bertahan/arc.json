@@ -71,6 +71,17 @@
       "briefPath": "episodes/005-sabuk-ketiga/brief.md",
       "scriptPath": "episodes/005-sabuk-ketiga/narasi.txt",
       "pipelineStatePath": "episodes/005-sabuk-ketiga/pipeline-state.json"
+    },
+    {
+      "episodeNumber": 6,
+      "workingTitle": "Bioskop Tanpa Pintu",
+      "status": "in-progress",
+      "engine": "triple-branch-rewind",
+      "setting": "A 1970s Indonesian cinema with a rear projection balcony and a loose fabric screen.",
+      "mechanics": "Ranto tries two doors that return him to the same auditorium at balcony height, then tests the projector. A marked seat shifts while the lit screen stays in place. He feels the draft, pushes through the screen and ducks out under the service gate in time for his daughter's performance.",
+      "briefPath": "episodes/006-bioskop-tanpa-pintu/brief.md",
+      "scriptPath": "episodes/006-bioskop-tanpa-pintu/narasi.txt",
+      "pipelineStatePath": "episodes/006-bioskop-tanpa-pintu/pipeline-state.json"
     }
   ]
 }

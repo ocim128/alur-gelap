@@ -67,7 +67,7 @@ One distinct fact per loop; if two loops teach the same fact, merge or different
 | WHAT does it trigger? | | | |
 | WHY is it fatal? | | | |
 
-Stranger test: can someone who has not read this brief explain, in one sentence, why the final move worked? [their sentence]. Pronoun audit: every plot-bearing `dia` / `itu` / `yang` / `dua-duanya` has exactly one possible referent on a single listen. [checked / fixed list].
+Expected one-sentence explanation for the escape: [writer's answer]. Pronoun audit: every plot-bearing `dia` / `itu` / `yang` / `dua-duanya` has exactly one possible referent on a single listen. [checked / fixed list]. Link the [first-view rough-cut review](review.md#first-view-rough-cut) for viewer evidence.
 
 ### Three-Loop Grouping
 

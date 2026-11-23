@@ -10,6 +10,16 @@ Copy into the episode folder. Mark each item `pass`, `needs work`, `not checked`
 - [ ] Character, location and inventory match the brief; the episode has an earned payoff.
 - [ ] Key constraints are visible without relying on narration alone, and each important beat has a clear action or visual change.
 
+## First-view rough cut
+
+Record the composition ID and revision. Show the temporary cut once at phone size and normal speed to someone unfamiliar with the brief. Ask for their own explanation before sharing the intended answer:
+
+1. “Kenapa [nama tokoh] akhirnya [aksi yang berhasil]?”
+2. “Bagian mana yang paling kamu ingat atau kamu suka?”
+3. “Ada bagian yang bikin bingung?”
+
+Record their words, the earliest confusing beat and what made an impression. Link any revision and retest result. If working alone, label the observations producer self-review and record independent viewer evidence as pending.
+
 ## Picture, sound and accessibility
 
 - [ ] Character model sheet and seated pose inspected at full size and phone size. Head, jaw, neck, collar, shoulders, torso and seat connect coherently across the views actually used.

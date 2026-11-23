@@ -1,26 +1,14 @@
 {
   "brief": {
-    "status": "pass",
-    "notes": "Standalone Scenario 06 (Bioskop Tanpa Pintu), 2026-11-23. Owner approved narasi.txt verbatim and requested two visual-hygiene fixes, now applied. Location-as-anomaly premise: one unified 1970s cinema auditorium that rebuilds everything it made (seats, aisles, side and back doors) and always grows away from the screen; the only original fixtures are the fabric screen, the low stage and the projector beam. No creature, ghost, mimic or imitator appears. Engine triple-branch-rewind; 24 real panels; pipelineVersion 2. narasi.txt is 241 canonical words (241 if split) per scripts/count-narration-words.mjs, inside the 225-245 band. Hook: 'Bioskop ini nggak punya pintu.' (5 canonical words), trim fallback drop 'ini' logged in the brief and authorised for Agent 02. Provisional runtime 154.0 s / 4620 frames at 30 fps; provisional branchRewinds at frames 1653, 2265 and 2736 (12 frames each), dread silence frames 2748-2790, blackout frame 4611. Every timing in brief.md is story order only and is superseded by audio-edit-map.json. Panel layout: P01-P05 setup, P06-P07 Loop 1, P08-P09 Loop 2, P10-P11 Loop 3, P12-P18 realization/stage/push, P19 backstage, P20 gate insert, P21 duck-out, P22 brick payoff, P23 final line, P24 gate-slam jolt. All 24 panels are single-vantage plates; there is no black plate. Final tail is 1.5 s after the final spoken word: 150 ms vacuum, 1.05 s gate-slam jolt + shake/flash, 0.3 s procedural black. Loop 1 death: red KELUAR doors at the back of the hall open onto the balcony edge (fall). Loop 2 death: the side fire exit opens onto a rebuilt left balcony ledge, so momentum carries him over; mid-fall he sees the lit flashlight gone from the aisle seat and the screen hem unchanged. Loop 3 death: killing the projector removes the room's only straight reference and the rows in front grind backward, crushing him against the balcony. Winning escape: walk north into the beam footprint, climb the 0.6 m stage, push through the loose bottom hem and corner tear of the screen, cross backstage 6 m stage-right, out the open alley roll-up gate into cold dawn; at the alley corner the cinema's rear wall is solid brick where the red doors would surface. Motif 'Ikutin cahayanya.' is the father's own line to his nervous daughter, reused as his decision, recontextualised at the close ('Kali ini, kamu nggak jatuh.'). Ownership scope: only files under episodes/006-bioskop-tanpa-pintu/ were written; arc.json untouched, no commit made. Next: Agent 02 one-shot Investigator master and Agent 03 24-panel batch. No listening or visual review has been performed."
+    "status": "ready",
+    "notes": "Named-third-person rewrite, 227 words. Skenario06BioskopRoughCut is ready for a first viewing. See review.md."
   },
   "audio": {
-    "status": "pass",
-    "notes": "Owner-accepted Investigator narration per agents/02-audio-producer.md; no separate listening review was performed or is claimed. One ShortZ CLI invocation (gemini-cloud, gemini-3.8-flash-tts, voice_71a5a701-796e-421d-840e-0adc00b0816a, 20 chunks, raw master 149.900 s, -16.8 LUFS, LRA 4.0, sha256 8DEF074453193D38B6257FE836E3E6B4B119E0453865F125AD0FFF74CBFE52AD). ShortZ exited 2 and was classified, not regenerated: every chunk best ASR similarity is >=0.983; failures are the generic 130+/-25% WPM gate (per-chunk 83.3-124.4 WPM, 94.1 overall, inside the Investigator 67-116 band apart from two short-chunk edges), chunk-boundary end-truncation warnings, and ASR normalization variants. Mandatory pronunciation diff: PASS, 0 suspects, after 16 shared-dictionary reconciliations (gak->nggak, 2->tua, nampah->nambah, jahayanya->cahayanya, ikuti->ikutin x3, batam->bata, 6->enam; splits 20->dua puluh, biankeladinya, dikain, dibalik, didinding, luargang). Watchwords nyusurin, ketiup, nyampe, kursinya, matiin and nggak all appear as scripted in the final word track. See pronunciation-diff.json. Hook measured 2.500 s, inside the 3.0 s limit, so the pre-authorized drop of \"ini\" was NOT applied; captions keep \"Bioskop ini nggak punya pintu.\" Prepared stem narration-prepared.mp3: 150.930 s (speech end 149.430 s, 1.500 s exact-zero tail), -16.82 LUFS / -1.13 dBTP, peak sample -1.2 dBFS, no full-scale samples. Tightening 0.9 s threshold / 0.55 s retained with 3 cuts; no protected-beat pause was cut. Three rewind gaps are exactly 0.400 s after each Tamat. (snap sample offsets 2503200 / 3519840 / 4364640); Rewind 3 is followed by the episode-only 1.400 s true-zero dread silence. All five claimed-silence windows verify sample-exact, 7 copied ranges are bit-identical, and 6290 MP3 packets have strictly monotonic PTS with zero discontinuities. 23 panel word spans cover all 241 canonical words (P24 has no narration); P15->P16 and P20->P21 are contiguous boundaries. audio-edit-map.json handoff references public/sfx/shared/tape-snap-rewind.wav (0.400 s, sha256 E1CFB995D718B179F2AD4442177D3BB01053183D682DDDB220CEAD8BD732023B). No world-voice assets are used. Next: Agent 04 consumes the measured map for the mix; an owner listening check remains optional, not a production gate."
-  },
-  "images": {
     "status": "pending",
-    "notes": ""
+    "notes": "The eSpeak NG scratch track is for the storyboard. Record a fresh Investigator take after story review. The former kamu take is retained in 5933a40 and its public derivatives are archival."
   },
-  "render": {
-    "status": "pending",
-    "notes": ""
-  },
-  "audit": {
-    "status": "pending",
-    "notes": ""
-  },
-  "publish": {
-    "status": "pending",
-    "notes": ""
-  }
+  "images": {"status": "pending", "notes": "Temporary diagrams are in the rough cut. Production panel batch is pending."},
+  "render": {"status": "pending", "notes": "Planned production composition ID: Skenario06BioskopTanpaPintu."},
+  "audit": {"status": "pending", "notes": ""},
+  "publish": {"status": "pending", "notes": ""}
 }

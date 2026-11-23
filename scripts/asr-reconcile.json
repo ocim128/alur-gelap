@@ -5,7 +5,7 @@
     "episodes/004-tangan-pilot-kemarin/verification/pronunciation-diff.json",
     "episodes/005-sabuk-ketiga/pronunciation-diff.json",
     "episodes/003-goyangan-dek-enam/prepare-audio.mjs",
-    "episodes/006-bioskop-tanpa-pintu/pronunciation-diff.json"
+    "5933a40:episodes/006-bioskop-tanpa-pintu/pronunciation-diff.json"
   ],
   "renames": [
     {"from": "gak", "to": "nggak", "class": "phonetic-variant", "note": "Whisper colloquial-form normalization; script \"nggak\" (Episode 005: \"Nggak mirip dia\", \"Nggak ada yang sempat\", \"yang nggak diikat\")."},

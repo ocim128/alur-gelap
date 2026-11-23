@@ -14,6 +14,12 @@ On **FAIL**, route each defect only to the owning role with the exact issue and 
 
 Episode 003 (`episodes/003-goyangan-dek-enam`) has the owner-designated brief `pass` and existing narration `pass`; its 263-word script (canonical count, 266 when hyphenated compounds are split) is a pre-existing exception to the current new-script budget. Agent 03 is next. The opening rule's ASR estimate ends at 3.68 s and cue timings are provisional: preserve that uncertainty for assembly and QA, and establish the scenario and rule visually within the first three seconds. Do not silently rewrite the script or regenerate the voice. Episodes 002 and 003 are **pre-hygiene legacy exemplars**: their scripts still carry all-caps comic SFX lines (`BRAK!`, `KLIK!`) that today's SFX lint bans — read them for structure and tone only; never copy their SFX-into-script pattern into a new `narasi.txt`.
 
+## First-view rough cut
+
+Before locking Studio v2 narration or commissioning the final panel batch, the Showrunner prepares a phone-size Remotion storyboard with scratch Indonesian narration, temporary captions and the rewind cue. Give the viewer the same visual evidence as the survivor. Prioritize the opening anomaly, the clue that changes the next decision and the final payoff. Run the [first-view review](../templates/review.md#first-view-rough-cut) during the brief stage. Record the viewer’s own words, revise the confusing beat and replay it. If an unfamiliar viewer is unavailable, record a producer self-review and leave viewer evidence pending. Final export QA follows its existing contract.
+
+Start with [Scenario 006’s rough cut](../episodes/006-bioskop-tanpa-pintu/review.md) for an example.
+
 ## Evidence labels and review phrasing
 
 Tag every finding in an audit, handoff note or verification report with one evidence label so routing is unambiguous:

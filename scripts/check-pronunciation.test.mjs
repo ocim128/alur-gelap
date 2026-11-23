@@ -140,11 +140,12 @@ test('contextAfter scopes each rule type and absent matches need an explicit cou
   assert.doesNotThrow(() => applyRules(raw, {splits:[{from:'missing', to:['a','b'], count:0}]}));
 });
 
-test('the shared dictionary fully reconciles the real Episode 006 word track (regression)', () => {
-  const timing = JSON.parse(readFileSync(join('episodes', '006-bioskop-tanpa-pintu', 'narration-investigator-timestamps.json'), 'utf8'));
-  const script = readFileSync(join('episodes', '006-bioskop-tanpa-pintu', 'narasi.txt'), 'utf8');
+test('the shared dictionary fully reconciles the original Scenario 006 kamu word track', () => {
+  const fixture = join('scripts', 'fixtures', 'scenario06-kamu');
+  const words = JSON.parse(readFileSync(join(fixture, 'words.json'), 'utf8'));
+  const script = readFileSync(join(fixture, 'narasi.txt'), 'utf8');
   const dictionary = JSON.parse(readFileSync(DEFAULT_DICTIONARY_PATH, 'utf8'));
-  const result = reconcile(timing.words, script, dictionary);
+  const result = reconcile(words, script, dictionary);
   assert.equal(result.pass, true, `Episode 006 suspects after reconciliation: ${JSON.stringify(result.suspects.slice(0, 4))}`);
   assert.equal(result.scriptTokenCount, 241, 'the canonical 241-word script is unchanged');
   assert.equal(result.heardTokenCount, 241, 'number normalization and merged tokens are restored to 241 units');
