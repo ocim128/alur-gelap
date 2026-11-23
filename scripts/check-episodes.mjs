@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import {createHash} from "node:crypto";
-import {readFileSync, readdirSync, realpathSync, statSync} from "node:fs";
+import {existsSync, readFileSync, readdirSync, realpathSync, statSync} from "node:fs";
 import {join, relative, resolve, sep} from "node:path";
 import {fileURLToPath} from "node:url";
 import {studioTimingError} from "../src/studio-v2-timing.mjs";
@@ -12,12 +12,32 @@ const readJson = (p) => JSON.parse(readFileSync(p, "utf8"));
 const digest = (data) => createHash("sha256").update(data).digest("hex");
 const styleId = "gritty-dark-anime-comic";
 const assetBatchDir = (manifestPath) => `assets/${manifestPath.slice(0, -"/manifest.json".length)}`;
+// Documented legacy Episodes 001-003 keep their archived all-caps comic SFX lines
+// (BRAK!, KLIK!) — the cue-sheet rule applies to studio v2 episodes from 004 on.
+const legacyEpisodes = new Set(["001-kamar-terkunci", "002-rumah-tengah-hutan", "003-goyangan-dek-enam"]);
+// Directory names that hold provenance/archived copies, never active manifests.
+const archivedDirPattern = /^(?:archive|archives|backup|backups|snapshot|snapshots|old|attic|sources|pre-.+|.+-before)$/i;
 const comparisonManifests = new Map([
   ["001-kemacetan-terakhir/manifest.json", "6a8fc50c2866838e826378c74807190da4606aa7f795c4db2e653094c5364a40"],
   ["001-kemacetan-terakhir/recut-v2/manifest.json", "2bf61aa0f37995353474339debf5457c27bfedaecff26be783a97d57b2086f42"],
   ["001-kemacetan-terakhir/recut-v2-alternate/manifest.json", "8770fdf453b9c33adab467f10abd448acb75265b4c76a6b480cb0256fe01bcf2"],
   ["001-kemacetan-terakhir/attempt-05/manifest.json", "3b9c322738c5dd01398eedac8e52ccc29882296a2d7f2337c5087056cc1f8280"],
 ]);
+// Only a file named exactly manifest.json counts; manifest.previous.json,
+// manifest.snapshot.json and friends are backups by construction.
+const activeManifestName = "manifest.json";
+
+export function findActiveManifests(dir) {
+  return readdirSync(dir, {withFileTypes: true}).flatMap(entry => {
+    if (entry.isDirectory()) return archivedDirPattern.test(entry.name) ? [] : findActiveManifests(join(dir, entry.name));
+    return entry.name === activeManifestName ? [join(dir, entry.name)] : [];
+  });
+}
+
+/** narasi.txt comic-SFX lint: ALL-CAPS runs of 3+ characters ending in "!" (BRAK!, KLIK!) belong in the cue sheet, never in narration. */
+export function findComicSfxTokens(scriptText) {
+  return String(scriptText).match(/[A-Z]{3,}!+/gu) ?? [];
+}
 
 function checkEditorial(scenes, fps, twistAt, fail, studioV2) {
   const visible = scenes.filter(scene => scene.editorial.protagonist !== "absent");
@@ -44,7 +64,7 @@ function alphaCapable(path) {
   return false;
 }
 
-export function validateEpisode(manifest, captions, {publicDir, manifestPath, batchRoots = []} = {}) {
+export function validateEpisode(manifest, captions, {publicDir, manifestPath, batchRoots = [], episodesDir = null} = {}) {
   const {id, duration, fps, narration, beds, scenes} = manifest;
   const prefix = `${id ?? manifestPath ?? "episode"}: `;
   const fail = (condition, message) => assert(condition, prefix + message);
@@ -105,6 +125,11 @@ export function validateEpisode(manifest, captions, {publicDir, manifestPath, ba
     if (manifest.script?.engine === "triple-branch-rewind") {
       fail(timing.branchRewinds?.length === 3, "triple-branch-rewind requires exactly three branchRewinds intervals");
       fail(timing.branchRewinds.every(({startFrame, endFrame}) => endFrame - startFrame === Math.max(1, Math.round(fps * 0.4))), "triple-branch-rewind intervals must last 0.4 s rounded to frames");
+      const runtimeSeconds = duration / fps;
+      fail(runtimeSeconds >= 145 && runtimeSeconds <= 160,
+        `triple-branch-rewind runtime ${runtimeSeconds.toFixed(2)} s is outside the 145–160 s band`);
+      fail(Number.isInteger(manifest.script?.wordCount) && manifest.script.wordCount >= 245 && manifest.script.wordCount <= 265,
+        `triple-branch-rewind spoken word count ${JSON.stringify(manifest.script?.wordCount ?? null)} is outside the 245–265 band`);
     }
     for (const [name, value] of Object.entries(timing)) {
       if (name.endsWith("Frame")) fail(isFrame(value) && value < duration, `${name}: invalid cue frame`);
@@ -164,6 +189,19 @@ export function validateEpisode(manifest, captions, {publicDir, manifestPath, ba
       if (script.wordCount !== undefined) {
         fail(Number.isInteger(script.wordCount) && script.wordCount > 0, "invalid spoken word count");
         if (script.wordCount < 200 || script.wordCount > 480) warnings.push("spoken word count is outside the 200–480 word studio v2 target");
+      }
+      // narasi.txt ALL-CAPS comic-SFX lint. All-caps exclamations (BRAK!, KLIK!) are
+      // cue-sheet sounds; the narrator must never read them. Documented legacy
+      // Episodes 001–003 keep their archived scripts and are exempt.
+      const episodeSlug = manifestPath?.split("/")[0];
+      if (episodesDir && episodeSlug && !legacyEpisodes.has(episodeSlug)) {
+        const narasiPath = resolve(episodesDir, manifestPath.slice(0, -"manifest.json".length), "narasi.txt");
+        fail(existsSync(narasiPath), `missing narasi.txt for a studio v2 episode (expected ${relative(episodesDir, narasiPath)})`);
+        if (existsSync(narasiPath)) {
+          const sfxTokens = findComicSfxTokens(readFileSync(narasiPath, "utf8"));
+          fail(sfxTokens.length === 0,
+            `narasi.txt contains ${sfxTokens.length} ALL-CAPS comic SFX token(s) (${[...new Set(sfxTokens)].join(", ")}); route them to the foley cue sheet instead of the narration script`);
+        }
       }
     } else {
       if (legacyFactoryCut) {
@@ -343,7 +381,11 @@ export function validateEpisode(manifest, captions, {publicDir, manifestPath, ba
 }
 
 function findManifests(dir) {
-  return readdirSync(dir, {withFileTypes: true}).flatMap(entry => entry.isDirectory() ? findManifests(join(dir, entry.name)) : entry.name === "manifest.json" ? [join(dir, entry.name)] : []);
+  // Active manifests only: exact `manifest.json` filenames outside archived/backup
+  // directories. `manifest.previous.json`/`manifest.snapshot.json` files and
+  // provenance folders never enter the scan, so backup copies can never trigger
+  // duplicate composition ID or asset errors.
+  return findActiveManifests(dir);
 }
 
 export function validatePipelineState(state, label = "pipeline-state.json") {
@@ -402,7 +444,7 @@ export function checkAll(root = process.cwd()) {
     const manifest = readJson(path);
     assert(typeof manifest.captions === "string" && /^[\w-]+\.json$/.test(manifest.captions), `Invalid captions path: ${path}`);
     assert(!ids.has(manifest.id), `Duplicate composition ID: ${manifest.id}`); ids.add(manifest.id);
-    const result = validateEpisode(manifest, readJson(join(path, "..", manifest.captions)), {publicDir, manifestPath, batchRoots});
+    const result = validateEpisode(manifest, readJson(join(path, "..", manifest.captions)), {publicDir, manifestPath, batchRoots, episodesDir: episodeDir});
     const episode = manifestPath.split("/")[0];
     const owners = batches.get(episode) ?? new Map();
     batches.set(episode, owners);

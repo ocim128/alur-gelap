@@ -282,5 +282,14 @@
       "processing": "Tail trimmed to 4.090 s (speech ends 4.040 s) with 40 ms release fade; +21.2 dB sample-peak normalization to -1.0 dBFS to fit the 4.200 s reserved narrator-free window; listening pending",
       "license": "Generated via Google Cloud; terms unverified; see LICENSES.md"
     }
+  ],
+  "shared": [
+    {
+      "name": "tape-snap-rewind",
+      "source": "public/assets/004-tangan-pilot-kemarin/sfx/tape-snap-rewind.wav",
+      "output": "public/sfx/shared/tape-snap-rewind.wav",
+      "processing": "Byte-identical canonical copy (SHA-256 E1CFB995D718B179F2AD4442177D3BB01053183D682DDDB220CEAD8BD732023B) of the locally synthesized 0.400 s tape-snap stinger; future v2 episodes cue this shared path instead of another episode folder",
+      "license": "Locally synthesized tone, no external recording; see LICENSES.md"
+    }
   ]
 }

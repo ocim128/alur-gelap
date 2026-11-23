@@ -1,13 +1,13 @@
 import test, {after} from "node:test";
 import assert from "node:assert/strict";
-import {copyFileSync, mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync} from "node:fs";
+import {copyFileSync, cpSync, mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync} from "node:fs";
 import {tmpdir} from "node:os";
 import {dirname, join, resolve} from "node:path";
 import Module from "node:module";
 import React from "react";
 import {renderToStaticMarkup} from "react-dom/server";
 import ts from "typescript";
-import {checkAll, validateEpisode, validatePipelineState} from "./check-episodes.mjs";
+import {checkAll, findActiveManifests, findComicSfxTokens, validateEpisode, validatePipelineState} from "./check-episodes.mjs";
 
 const tempRoot = mkdtempSync(join(tmpdir(), "episode-gates-"));
 after(() => rmSync(tempRoot, {recursive: true, force: true}));
@@ -468,3 +468,137 @@ test("structured stage records preserve technical failures through owner excepti
   assert.throws(() => checkImages({...waived, exceptions: [{...exception, defect: "unreadable"}]}), /invalid image defect label/);
   assert.throws(() => checkImages({status: "fail", notes: "", ownerDisposition: "pending"}), /technicalVerdict must be pass or fail/);
 });
+
+// --- Studio v2 triple-branch-rewind gates and the narasi.txt SFX lint (post-mortems 004/005) ---
+
+const fixtureRoot = join(tempRoot, "v2-fixture");
+const fixturePublic = join(fixtureRoot, "public");
+const fixtureEpisodes = join(fixtureRoot, "episodes");
+mkdirSync(join(fixturePublic, "fonts"), {recursive: true});
+writeFileSync(join(fixturePublic, "fonts", "theboldfont.ttf"), "");
+
+// A valid studio v2 fixture inside its own root, used by the band and lint tests.
+function studioV2Fixture({slug, durationSec = 150, wordCount = 255, engine = "triple-branch-rewind"}) {
+  const fps = 30;
+  const duration = durationSec * fps;
+  const dir = `assets/${slug}`;
+  mkdirSync(join(fixturePublic, dir), {recursive: true});
+  const plates = Array.from({length: 24}, (_, i) => `${dir}/shot-${i}.webp`);
+  for (const [i, plate] of plates.entries()) writeFileSync(join(fixturePublic, plate), Buffer.concat([originalPlate, Buffer.from([60 + i])]));
+  writeFileSync(join(fixturePublic, dir, "narration.mp3"), "");
+  const spacing = Math.floor(duration / plates.length);
+  const manifest = {
+    id: `Fixture${slug}`, schemaVersion: 2, pipelineVersion: 2, fps, duration,
+    openingTitle: "Jangan Buka Kaca",
+    captions: "captions.json",
+    narration: {asset: `${dir}/narration.mp3`, at: 0, duration: duration - fps, gain: 0.7},
+    beds: [],
+    soundMix: {asset: `${dir}/narration.mp3`},
+    timing: {blackoutFrame: duration - 1, branchRewinds: [900, 1800, 2700].map(startFrame => ({startFrame, endFrame: startFrame + 12}))},
+    art: {styleId: "urban-silhouette-noir", rasterAssets: Object.fromEntries(plates.map(plate => [plate, "urban-silhouette-noir"]))},
+    script: {
+      format: "decision-consequence", engine, wordCount,
+      hook: {at: 0, line: "Jangan ikut barisan."},
+      ending: {at: 22 * spacing - 60, twistAt: 22 * spacing, payoff: "Barisan itu menunggu."},
+    },
+    scenes: plates.map((plate, i) => ({
+      id: `t${i}`, at: i * spacing, plate, camera: {...camera, to: {...camera.to, scale: 1.05}},
+      characters: {mode: "baked"}, hud: [],
+      editorial: {protagonist: i < 10 ? "visible" : i === 21 ? "reaction" : "absent", purpose: "threat-proximity", evidence: "Figure closes the distance from the door"},
+    })),
+  };
+  const episodeDir = join(fixtureEpisodes, slug);
+  mkdirSync(episodeDir, {recursive: true});
+  writeFileSync(join(episodeDir, "manifest.json"), JSON.stringify(manifest));
+  writeFileSync(join(episodeDir, "captions.json"), JSON.stringify(captions));
+  writeFileSync(join(episodeDir, "narasi.txt"), "Tiga sabuk terpasang. Penumpangnya cuma dua. Klik sabuknya pelan-pelan, tarik tuasnya, bertahanlah.");
+  return manifest;
+}
+
+const validateFixture = (manifest, slug = "fixture-band") =>
+  validateEpisode(manifest, captions, {publicDir: fixturePublic, manifestPath: `${slug}/manifest.json`, episodesDir: fixtureEpisodes});
+
+test("triple-branch-rewind v2 enforces the 145–160 s runtime and 245–265 word bands", () => {
+  const manifest = studioV2Fixture({slug: "fixture-band"});
+  assert.doesNotThrow(() => validateFixture(manifest));
+  const short = structuredClone(manifest);
+  short.duration = 144 * short.fps;
+  short.narration.duration = short.duration - short.fps;
+  short.timing.blackoutFrame = short.duration - 1;
+  assert.throws(() => validateFixture(short), /runtime 144\.00 s is outside the 145–160 s band/);
+  const long = structuredClone(manifest);
+  long.duration = 161 * long.fps;
+  long.narration.duration = long.duration - long.fps;
+  long.timing.blackoutFrame = long.duration - 1;
+  assert.throws(() => validateFixture(long), /161\.00 s is outside the 145–160 s band/);
+  const fewWords = structuredClone(manifest);
+  fewWords.script.wordCount = 244;
+  assert.throws(() => validateFixture(fewWords), /word count 244 is outside the 245–265 band/);
+  const manyWords = structuredClone(manifest);
+  manyWords.script.wordCount = 266;
+  assert.throws(() => validateFixture(manyWords), /word count 266 is outside the 245–265 band/);
+  const uncounted = structuredClone(manifest);
+  delete uncounted.script.wordCount;
+  assert.throws(() => validateFixture(uncounted), /word count null is outside the 245–265 band/);
+  // Other v2 engines stay on the loose 90–210 s warning and optional word count.
+  const branch = studioV2Fixture({slug: "fixture-branch", engine: "branch-rewind", wordCount: 250, durationSec: 100});
+  const result = validateEpisode(branch, captions, {publicDir: fixturePublic, manifestPath: "fixture-branch/manifest.json", episodesDir: fixtureEpisodes});
+  assert.deepEqual(result.warnings, [], "branch-rewind v2 stays inside the studio v2 warning envelope");
+});
+
+test("narasi.txt ALL-CAPS comic SFX lint fails studio v2 episodes and exempts legacy 001–003", () => {
+  assert.deepEqual(findComicSfxTokens("Kabel lepas, sekoci mengayun dan—BRAK! Menghantam tubuhnya!"), ["BRAK!"]);
+  assert.deepEqual(findComicSfxTokens("KLIK! Besi terkunci."), ["KLIK!"]);
+  assert.deepEqual(findComicSfxTokens("lingkaran tulisan tangan: CELAH."), [], "map labels without an exclamation are not SFX");
+  const manifest = studioV2Fixture({slug: "fixture-sfx"});
+  const opts = {publicDir: fixturePublic, manifestPath: "fixture-sfx/manifest.json", episodesDir: fixtureEpisodes};
+  assert.doesNotThrow(() => validateEpisode(manifest, captions, opts));
+  const narasiPath = join(fixtureEpisodes, "fixture-sfx", "narasi.txt");
+  const cleanNarasi = readFileSync(narasiPath, "utf8");
+  writeFileSync(narasiPath, "Panel gelap. Tiba-tiba: BRAK! KLIK! Hantam palangnya.");
+  assert.throws(() => validateEpisode(manifest, captions, opts), /2 ALL-CAPS comic SFX token\(s\) \(BRAK!, KLIK!\)/);
+  const missing = studioV2Fixture({slug: "fixture-sfx-missing"});
+  rmSync(join(fixtureEpisodes, "fixture-sfx-missing", "narasi.txt"), {force: true});
+  assert.throws(
+    () => validateEpisode(missing, captions, {publicDir: fixturePublic, manifestPath: "fixture-sfx-missing/manifest.json", episodesDir: fixtureEpisodes}),
+    /missing narasi\.txt/);
+  // Documented legacy episodes keep their archived SFX lines.
+  const legacy = studioV2Fixture({slug: "003-goyangan-dek-enam"});
+  writeFileSync(join(fixtureEpisodes, "003-goyangan-dek-enam", "narasi.txt"), cleanNarasi + "\nBRAK! KLIK!\n");
+  assert.doesNotThrow(() => validateEpisode(legacy, captions, {...opts, manifestPath: "003-goyangan-dek-enam/manifest.json"}));
+});
+
+test("active manifest discovery skips archived and backup copies", () => {
+  const root = join(tempRoot, "manifest-scan");
+  const backups = [
+    join(root, "010-active", "pre-audit-revision", "manifest.json"),
+    join(root, "010-active", "archive", "manifest.json"),
+    join(root, "010-active", "sources", "polish-20261122-before", "manifest.json"),
+    join(root, "010-active", "manifest.previous.json"),
+    join(root, "010-active", "manifest.snapshot.json"),
+    join(root, "010-active", "sources", "manifest.bak"),
+  ];
+  mkdirSync(join(root, "010-active"), {recursive: true});
+  writeFileSync(join(root, "010-active", "manifest.json"), "{}");
+  for (const backup of backups) {
+    mkdirSync(dirname(backup), {recursive: true});
+    writeFileSync(backup, "{}");
+  }
+  assert.deepEqual(findActiveManifests(root), [join(root, "010-active", "manifest.json")]);
+  // At the pipeline level, same-ID backup copies must never trigger duplicate ID errors.
+  const dupeRoot = join(tempRoot, "dupe-scan");
+  studioV2Fixture({slug: "010-dupe"});
+  cpSync(fixturePublic, join(dupeRoot, "public"), {recursive: true});
+  mkdirSync(join(dupeRoot, "episodes"), {recursive: true});
+  cpSync(join(fixtureEpisodes, "010-dupe"), join(dupeRoot, "episodes", "010-dupe"), {recursive: true});
+  const dupeEpisodes = join(dupeRoot, "episodes");
+  const backup = join(dupeEpisodes, "010-dupe", "pre-polish-revision", "manifest.json");
+  mkdirSync(dirname(backup), {recursive: true});
+  writeFileSync(backup, readFileSync(join(dupeEpisodes, "010-dupe", "manifest.json"), "utf8"));
+  const results = checkAll(dupeRoot);
+  assert.equal(results.length, 1, "only the active manifest is validated");
+  // The same manifest as a second ACTIVE episode does trip the duplicate ID gate.
+  cpSync(join(dupeEpisodes, "010-dupe"), join(dupeEpisodes, "011-dupe"), {recursive: true});
+  assert.throws(() => checkAll(dupeRoot), /Duplicate composition ID/);
+});
+
