@@ -1,0 +1,120 @@
+{
+  "episode": "006-bioskop-tanpa-pintu",
+  "source": "episodes/006-bioskop-tanpa-pintu/narration-investigator.mp3",
+  "sourceTimestamps": "episodes/006-bioskop-tanpa-pintu/narration-investigator-timestamps.json",
+  "outputWav": "episodes/006-bioskop-tanpa-pintu/narration-prepared.wav",
+  "outputMp3": "episodes/006-bioskop-tanpa-pintu/narration-prepared.mp3",
+  "timingsPath": "episodes/006-bioskop-tanpa-pintu/narration-timestamps.json",
+  "editMapPath": "episodes/006-bioskop-tanpa-pintu/audio-edit-map.json",
+  "publicAssetsDir": "public/assets/006-bioskop-tanpa-pintu",
+  "fps": 30,
+  "sampleRate": 48000,
+  "leadTrimSec": 0.1,
+  "pronunciation": {
+    "renames": [
+      {"from": "gak", "to": "nggak", "count": 2, "class": "phonetic-variant"},
+      {"from": "2", "to": "tua", "contextBefore": ["bioskop"], "count": 1, "class": "phonetic-variant"},
+      {"from": "nampah", "to": "nambah", "count": 1, "class": "phonetic-variant"},
+      {"from": "jahayanya", "to": "cahayanya", "count": 1, "class": "phonetic-variant"},
+      {"from": "ikuti", "to": "ikutin", "count": 3, "class": "phonetic-variant"},
+      {"from": "batam", "to": "bata", "count": 1, "class": "phonetic-variant"},
+      {"from": "6", "to": "enam", "count": 1, "class": "number-normalization"}
+    ],
+    "splits": [
+      {"from": "20", "to": ["dua", "puluh"], "splitRatio": 0.5, "class": "number-normalization"},
+      {"from": "biankeladinya", "to": ["biang", "keladinya"], "splitRatio": 0.4, "class": "merge-split"},
+      {"from": "dikain", "to": ["di", "kain"], "splitRatio": 0.35, "class": "merge-split"},
+      {"from": "dibalik", "to": ["di", "balik"], "splitRatio": 0.4, "class": "merge-split"},
+      {"from": "didinding", "to": ["di", "dinding"], "splitRatio": 0.3, "class": "merge-split"},
+      {"from": "luargang", "to": ["luar", "gang"], "splitRatio": 0.5, "class": "merge-split"}
+    ]
+  },
+  "tightening": {
+    "thresholdSec": 0.9,
+    "retainedSec": 0.55
+  },
+  "hook": {
+    "limitSec": 3.0,
+    "finalWordStem": "pintu",
+    "fallback": {
+      "dropWordStem": "ini",
+      "afterStem": "bioskop",
+      "beforeStem": "nggak"
+    }
+  },
+  "rewinds": [
+    {
+      "name": "rewind-1",
+      "tailStem": "tamat",
+      "nextStem": "balik",
+      "occurrence": 1,
+      "rewindSec": 0.4,
+      "note": "After 'Tamat.' (P07). Exactly 0.400 s tape-snap, then snap straight back into P08 with zero dead air."
+    },
+    {
+      "name": "rewind-2",
+      "tailStem": "tamat",
+      "nextStem": "balik",
+      "occurrence": 2,
+      "rewindSec": 0.4,
+      "note": "After 'Tamat.' (P09). Exactly 0.400 s tape-snap, then snap straight back into P10 with zero dead air."
+    },
+    {
+      "name": "rewind-3",
+      "tailStem": "tamat",
+      "nextStem": "balik",
+      "occurrence": 3,
+      "rewindSec": 0.4,
+      "dreadSec": 1.4,
+      "note": "After 'Tamat.' (P11). Exactly 0.400 s tape-snap, then the episode's only 1.400 s true-zero dread silence before P12."
+    }
+  ],
+  "protectedBeats": [
+    {
+      "aStem": "kebuka",
+      "bStem": "di",
+      "why": "One-beat pause before P07's reveal ('Dua daun merah kebuka.' -> 'Di baliknya bukan lorong.')."
+    },
+    {
+      "aStem": "terang",
+      "bStem": "kamu",
+      "why": "One-beat pause before P09's side-exit run ('Sorotnya terang.' -> 'Kamu lari ke pintu darurat kiri.')."
+    },
+    {
+      "aStem": "aja",
+      "bStem": "layar",
+      "why": "One-beat pause before P11's crush ('matiin aja.' -> 'Layar gelap.')."
+    }
+  ],
+  "tail": {
+    "padSec": 1.5,
+    "releaseFadeSec": 0.05,
+    "note": "1.5 s exact-zero tail after the final word, reserved for the 150 ms vacuum, P24 gate-slam jolt and 0.3 s procedural black in the mix."
+  },
+  "targetWindowSec": [145, 160],
+  "panels": [
+    {"panel": "P01", "fromPhrase": ["bioskop"], "toPhrase": ["pintu"]},
+    {"panel": "P02", "fromPhrase": ["bioskop", "tua"], "toPhrase": ["luar"]},
+    {"panel": "P03", "fromPhrase": ["di", "bawah"], "toPhrase": ["ujung"]},
+    {"panel": "P04", "fromPhrase": ["layar", "putih"], "toPhrase": ["angin"]},
+    {"panel": "P05", "fromPhrase": ["pintu", "keluar", "merah"], "toPhrase": ["nonton"]},
+    {"panel": "P06", "fromPhrase": ["kamu", "lari", "ke", "pintu", "keluar"], "toPhrase": ["kebuka"]},
+    {"panel": "P07", "fromPhrase": ["di", "baliknya"], "toPhrase": ["tamat"]},
+    {"panel": "P08", "fromPhrase": ["balik", "lagi"], "fromOccurrence": 1, "toPhrase": ["terang"]},
+    {"panel": "P09", "fromPhrase": ["kamu", "lari", "ke", "pintu", "darurat", "kiri"], "toPhrase": ["tamat"]},
+    {"panel": "P10", "fromPhrase": ["balik", "lagi"], "fromOccurrence": 2, "toPhrase": ["aja"]},
+    {"panel": "P11", "fromPhrase": ["layar", "gelap"], "toPhrase": ["tamat"]},
+    {"panel": "P12", "fromPhrase": ["balik", "lagi"], "fromOccurrence": 3, "toPhrase": ["nyala"]},
+    {"panel": "P13", "fromPhrase": ["titik", "terang"], "toPhrase": ["berubah"]},
+    {"panel": "P14", "fromPhrase": ["ikutin", "cahayanya"], "fromOccurrence": 2, "toPhrase": ["cahayanya"]},
+    {"panel": "P15", "fromPhrase": ["kamu", "turun"], "toPhrase": ["lantai"]},
+    {"panel": "P16", "fromPhrase": ["di", "belakangmu"], "toPhrase": ["panjang"]},
+    {"panel": "P17", "fromPhrase": ["kamu", "nggak", "noleh"], "toPhrase": ["layar"]},
+    {"panel": "P18", "fromPhrase": ["kainnya", "berat"], "toPhrase": ["lagi"]},
+    {"panel": "P19", "fromPhrase": ["di", "balik", "layar"], "toPhrase": ["belakang"]},
+    {"panel": "P20", "fromPhrase": ["pintu", "besi", "gulung"], "toPhrase": ["dingin"]},
+    {"panel": "P21", "fromPhrase": ["kamu", "jalan", "enam", "meter"], "toPhrase": ["keluar"]},
+    {"panel": "P22", "fromPhrase": ["di", "dinding", "luar", "gang"], "toPhrase": ["ada"]},
+    {"panel": "P23", "fromPhrase": ["ikutin", "cahayanya", "kali", "ini"], "toPhrase": ["jatuh"]}
+  ]
+}

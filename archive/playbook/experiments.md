@@ -1,5 +1,7 @@
 # Hypotheses and decision log
 
+**Scenario 03 owner disposition · 23 November 2026.** The owner approved the v5 motion candidate `out/003-goyangan-dek-enam/Skenario03-motion-candidate-v5-master_compressed.mp4`, SHA-256 `ce8f1b5324d52efc4bb0cdfd8e27cf64c435bd2ed41aa41cebd940650b83328f`, after the remaining P04, P12 cable and pre-impact boat-travel limitations and raw-Y warning were presented. This is approval of the stated handoff with exceptions, not evidence that the defects were corrected, a listening review, independent QA, audience response or publication authorization. See [v5 handoff](../../episodes/003-goyangan-dek-enam/motion-candidate-v5-handoff.md).
+
 These are initial ideas, not validated facts. Status meanings: **proposed** = not tested; **testing** = episode and observation plan exist; **retest** = evidence is inconclusive; **adopted** = owner or repeated observations justify current guidance; **retired** = no longer used. “Adopted” does not mean permanently true.
 
 | ID | Hypothesis | Proposed observation | Status |

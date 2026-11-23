@@ -147,6 +147,47 @@ test('raw hyphenated words remain usable as stem-based anchors in the preparatio
   assert.equal(plan.panelWordSpans[0].wordCount, 2);
 });
 
+test('panel anchors can use phrases to select repeated openers', () => {
+  const repeatedWords = [
+    {word: 'Balik', start: 0.10, end: 0.30},
+    {word: 'lagi.', start: 0.30, end: 0.55},
+    {word: 'Kamu', start: 0.60, end: 0.80},
+    {word: 'taruh', start: 0.80, end: 1.00},
+    {word: 'senter.', start: 1.00, end: 1.30},
+    {word: 'Tamat.', start: 2.00, end: 2.30},
+    {word: 'Balik', start: 3.00, end: 3.20},
+    {word: 'lagi.', start: 3.20, end: 3.45},
+    {word: 'Kamu', start: 3.50, end: 3.70},
+    {word: 'matiin', start: 3.70, end: 4.00},
+    {word: 'proyektor.', start: 4.00, end: 4.40},
+    {word: 'Tamat.', start: 5.00, end: 5.30},
+    {word: 'Balik', start: 6.00, end: 6.20},
+    {word: 'lagi.', start: 6.20, end: 6.45},
+    {word: 'Kamu', start: 6.50, end: 6.70},
+    {word: 'nyalakan', start: 6.70, end: 7.00},
+    {word: 'lampu.', start: 7.00, end: 7.30},
+  ];
+  const repeatedConfig = {
+    episode: 'fixture-repeated-openers',
+    sampleRate: SR,
+    fps: FPS,
+    tail: {padSec: 0.5},
+    panels: [
+      {panel: 'P08', fromPhrase: ['balik', 'lagi', 'kamu', 'taruh'], toPhrase: ['senter']},
+      {panel: 'P10', fromPhrase: ['balik', 'lagi', 'kamu', 'matiin'], toPhrase: ['proyektor']},
+      {panel: 'P12', fromPhrase: ['balik', 'lagi'], fromOccurrence: 3, toPhrase: ['lampu']},
+    ],
+  };
+  const plan = buildPlan(repeatedConfig, {durationSec: 8.0, words: repeatedWords});
+  assert.equal(plan.panelWordSpans[0].startSec, 0.10, 'P08 anchors the first "Balik lagi"');
+  assert.equal(plan.panelWordSpans[0].wordCount, 5);
+  assert.equal(plan.panelWordSpans[1].startSec, 3.00, 'P10 anchors the second "Balik lagi"');
+  assert.equal(plan.panelWordSpans[1].wordCount, 5);
+  assert.equal(plan.panelWordSpans[2].startSec, 6.00, 'P12 selects the third occurrence explicitly');
+  assert.equal(plan.panelWordSpans[2].wordCount, 5);
+  assert.ok(plan.panelWordSpans[2].startSec > plan.panelWordSpans[1].endSec, 'panel spans stay in order');
+});
+
 test('a sample-preserving padded stem passes every gate', () => {
   const plan = buildPlan(config, shortTiming);
   const source = synth(shortTiming.durationSec);

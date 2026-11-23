@@ -140,6 +140,22 @@ test('contextAfter scopes each rule type and absent matches need an explicit cou
   assert.doesNotThrow(() => applyRules(raw, {splits:[{from:'missing', to:['a','b'], count:0}]}));
 });
 
+test('the shared dictionary fully reconciles the real Episode 006 word track (regression)', () => {
+  const timing = JSON.parse(readFileSync(join('episodes', '006-bioskop-tanpa-pintu', 'narration-investigator-timestamps.json'), 'utf8'));
+  const script = readFileSync(join('episodes', '006-bioskop-tanpa-pintu', 'narasi.txt'), 'utf8');
+  const dictionary = JSON.parse(readFileSync(DEFAULT_DICTIONARY_PATH, 'utf8'));
+  const result = reconcile(timing.words, script, dictionary);
+  assert.equal(result.pass, true, `Episode 006 suspects after reconciliation: ${JSON.stringify(result.suspects.slice(0, 4))}`);
+  assert.equal(result.scriptTokenCount, 241, 'the canonical 241-word script is unchanged');
+  assert.equal(result.heardTokenCount, 241, 'number normalization and merged tokens are restored to 241 units');
+  const actions = result.reconciliations.map((record) => `${record.action}:${record.heard}`).sort();
+  assert.ok(actions.some((action) => action.startsWith('split:20')), 'digit-normalized "dua puluh" splits back into two words');
+  assert.ok(actions.some((action) => action.startsWith('split:dikain')), 'merged preposition "di kain" splits back');
+  assert.ok(actions.some((action) => action.startsWith('split:luargang')), 'adjacent words "luar gang" split back');
+  assert.ok(actions.some((action) => action.startsWith('renamed:2')), 'digit-normalized "tua" is restored before "Bioskop"');
+  assert.ok(actions.some((action) => action.startsWith('renamed:Ikuti')), 'final-n elision resolves to "ikutin" before "cahayanya"');
+});
+
 test('context-scoped rules keep Episode 005 whole while splitting the Episode 004 token', () => {
   const dictionary = JSON.parse(readFileSync(DEFAULT_DICTIONARY_PATH, 'utf8'));
   const scoped = reconcile(

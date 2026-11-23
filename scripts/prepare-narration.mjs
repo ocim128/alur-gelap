@@ -289,16 +289,27 @@ export function buildPlan(config, rawTiming, options = {}) {
   });
   if (mappedChunks.length > 0 && mappedWords.length > 0) mappedChunks[mappedChunks.length - 1].end = mappedWords[mappedWords.length - 1].end;
 
-  const panelWordSpans = (config.panels ?? []).map((panel) => {
-    const fromIdx = words.findIndex((word) => stemOf(word.word) === panel.fromStem);
-    let toIdx = -1;
-    for (let i = fromIdx >= 0 ? fromIdx : words.length; i < words.length; i++) {
-      if (stemOf(words[i].word) === panel.toStem) {
-        toIdx = i;
-        break;
-      }
+  // Panel anchors accept either single stems or ordered phrase arrays. Phrases let a
+  // script with repeated openers ("Balik lagi.", "Bioskop ...") anchor the intended
+  // occurrence without brittle global occurrence counts.
+  const phraseAt = (index, phrase) => phrase.every((stem, offset) => words[index + offset] && stemOf(words[index + offset].word) === stem);
+  const findPhrase = (phrase, from = 0, occurrence = 1) => {
+    let seen = 0;
+    for (let i = Math.max(0, from); i <= words.length - phrase.length; i++) {
+      if (phraseAt(i, phrase) && ++seen === occurrence) return i;
     }
-    if (fromIdx < 0 || toIdx < fromIdx) throw new Error(`Panel span "${panel.panel}" ("${panel.fromStem}".."${panel.toStem}") not found in order`);
+    return -1;
+  };
+  const panelWordSpans = (config.panels ?? []).map((panel) => {
+    const fromPhrase = panel.fromPhrase ?? (panel.fromStem ? [panel.fromStem] : null);
+    const toPhrase = panel.toPhrase ?? (panel.toStem ? [panel.toStem] : null);
+    if (!fromPhrase || !toPhrase) throw new Error(`Panel span "${panel.panel}" needs fromPhrase/toPhrase or fromStem/toStem`);
+    const fromIdx = findPhrase(fromPhrase, 0, panel.fromOccurrence ?? 1);
+    const toIdx = fromIdx >= 0 ? findPhrase(toPhrase, fromIdx, panel.toOccurrence ?? 1) : -1;
+    if (fromIdx < 0 || toIdx < fromIdx) {
+      const label = `${fromPhrase.join(' ')}".."${toPhrase.join(' ')}`;
+      throw new Error(`Panel span "${panel.panel}" ("${label}") not found in order`);
+    }
     const mappedFrom = mappedPositionOfSrc.get(fromIdx);
     const mappedTo = mappedPositionOfSrc.get(toIdx);
     if (mappedFrom === undefined || mappedTo === undefined || mappedTo < mappedFrom) throw new Error(`Panel span "${panel.panel}" has no mapped spoken words`);

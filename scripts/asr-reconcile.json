@@ -1,10 +1,11 @@
 {
   "version": 1,
-  "method": "Shared reconciliation dictionary for the mandatory TTS pronunciation diff (agents/02-audio-producer.md). Entries are recurring Indonesian Whisper ASR artifacts observed and resolved in Episodes 003-005. `renames` map a heard ASR form to the script-faithful form (case- and punctuation-tolerant; `contextBefore` scopes a rename to the preceding heard token). `splits` divide one merged heard token into the script pair at `splitRatio` of its span. `merges` join two heard tokens into one script word. Matching is punctuation-tolerant and case-insensitive. Only deviations that stay unexplained after these entries escalate as suspects; ASR text alone never establishes pronunciation.",
+  "method": "Shared reconciliation dictionary for the mandatory TTS pronunciation diff (agents/02-audio-producer.md). Entries are recurring Indonesian Whisper ASR artifacts observed and resolved in Episodes 003-006. `renames` map a heard ASR form to the script-faithful form (case- and punctuation-tolerant; `contextBefore`/`contextAfter` scope a rename to an adjacent heard token). `splits` divide one merged heard token into the script pair at `splitRatio` of its span. `merges` join two heard tokens into one script word. Matching is punctuation-tolerant and case-insensitive. Only deviations that stay unexplained after these entries escalate as suspects; ASR text alone never establishes pronunciation.",
   "provenance": [
     "episodes/004-tangan-pilot-kemarin/verification/pronunciation-diff.json",
     "episodes/005-sabuk-ketiga/pronunciation-diff.json",
-    "episodes/003-goyangan-dek-enam/prepare-audio.mjs"
+    "episodes/003-goyangan-dek-enam/prepare-audio.mjs",
+    "episodes/006-bioskop-tanpa-pintu/pronunciation-diff.json"
   ],
   "renames": [
     {"from": "gak", "to": "nggak", "class": "phonetic-variant", "note": "Whisper colloquial-form normalization; script \"nggak\" (Episode 005: \"Nggak mirip dia\", \"Nggak ada yang sempat\", \"yang nggak diikat\")."},
@@ -34,13 +35,25 @@
     {"from": "gunuh", "to": "gunung", "class": "phonetic-variant", "note": "Final-g drop in ASR (Episode 004)."},
     {"from": "arh", "to": "arah", "class": "phonetic-variant", "note": "ASR truncation (Episode 004)."},
     {"from": "napa", "to": "napas", "class": "phonetic-variant", "note": "Vowel elision in ASR (Episode 004)."},
-    {"from": "selega", "to": "lega", "class": "phonetic-variant", "note": "Cross-word segmentation artifact (napas lega -> napa selega; Episode 004)."}
+    {"from": "selega", "to": "lega", "class": "phonetic-variant", "note": "Cross-word segmentation artifact (napas lega -> napa selega; Episode 004)."},
+    {"from": "2", "to": "tua", "contextBefore": ["bioskop"], "class": "phonetic-variant", "note": "Whisper digit-normalized 'tua' as '2' after 'Bioskop' (Episode 006 P02). ASR text alone is not a pronunciation verdict."},
+    {"from": "nampah", "to": "nambah", "class": "phonetic-variant", "note": "mb/mp confusion (Episode 006 P03)."},
+    {"from": "jahayanya", "to": "cahayanya", "class": "phonetic-variant", "note": "c/j confusion (Episode 006 P23)."},
+    {"from": "ikuti", "to": "ikutin", "contextAfter": ["cahayanya"], "class": "phonetic-variant", "note": "Final-n elision in ASR; script 'ikutin' before 'cahayanya' (Episode 006, three occurrences)."},
+    {"from": "batam", "to": "bata", "contextAfter": ["mentah"], "class": "phonetic-variant", "note": "ASR final-m intrusion; script 'bata mentah' (Episode 006 P19)."},
+    {"from": "6", "to": "enam", "contextAfter": ["meter"], "class": "number-normalization", "note": "Whisper digit normalization of spoken 'enam' before 'meter' (Episode 006 P21)."}
   ],
   "splits": [
     {"from": "dituas", "to": ["di", "tuas"], "splitRatio": 0.5, "class": "merge-split", "note": "Preposition merged into the token by ASR (Episode 004, x2)."},
     {"from": "didalam", "to": ["di", "dalam"], "splitRatio": 0.5, "class": "merge-split", "note": "Preposition merged into the token by ASR (Episode 004)."},
     {"from": "gapernah", "to": ["nggak", "pernah"], "splitRatio": 0.45, "class": "merge-split", "note": "Rapid \"nggak pernah\" merged into one token (Episode 005)."},
-    {"from": "celahnya", "to": ["celah", "nya"], "splitRatio": 0.6, "contextAfter": ["ada"], "class": "merge-split", "note": "Suffix merged into the token by ASR; script \"CELAH-nya\" (Episode 004 P23). Scoped by the following \"ada\" because Episode 005's script writes the solid form \"celahnya\" and its heard token must stay whole."}
+    {"from": "celahnya", "to": ["celah", "nya"], "splitRatio": 0.6, "contextAfter": ["ada"], "class": "merge-split", "note": "Suffix merged into the token by ASR; script \"CELAH-nya\" (Episode 004 P23). Scoped by the following \"ada\" because Episode 005's script writes the solid form \"celahnya\" and its heard token must stay whole."},
+    {"from": "20", "to": ["dua", "puluh"], "splitRatio": 0.5, "contextBefore": ["tadi"], "contextAfter": ["sekarang"], "class": "number-normalization", "note": "Whisper digit normalization of spoken 'dua puluh' between 'tadi' and 'sekarang' (Episode 006 P03)."},
+    {"from": "biankeladinya", "to": ["biang", "keladinya"], "splitRatio": 0.4, "class": "merge-split", "note": "Two-word phrase merged by ASR (Episode 006 P10)."},
+    {"from": "dikain", "to": ["di", "kain"], "splitRatio": 0.35, "class": "merge-split", "note": "Preposition merged into the token by ASR; script 'di kain' (Episode 006 P13)."},
+    {"from": "dibalik", "to": ["di", "balik"], "splitRatio": 0.4, "contextAfter": ["layar"], "class": "merge-split", "note": "Preposition merged before 'layar'; script 'Di balik layar' (Episode 006 P19). Scoped so a legitimate solid 'dibalik' stays whole."},
+    {"from": "didinding", "to": ["di", "dinding"], "splitRatio": 0.3, "class": "merge-split", "note": "Preposition merged into the token by ASR; script 'di dinding luar gang' (Episode 006 P22)."},
+    {"from": "luargang", "to": ["luar", "gang"], "splitRatio": 0.5, "class": "merge-split", "note": "Adjacent words merged by ASR; script 'luar gang' (Episode 006 P22)."}
   ],
   "merges": [
     {"from": ["co", "pilot"], "to": "copilot", "class": "merge-split", "note": "\"copilot\" split by ASR into two tokens (Episode 004 P02)."},

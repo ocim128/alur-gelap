@@ -1,0 +1,10 @@
+{
+  "episodeDir": "episodes/006-bioskop-tanpa-pintu",
+  "dictionary": "C:\\Users\\user\\Documents\\Repo\\tiktok-repost\\tiktok-video\\Survival-Fantasy-Content\\scripts\\asr-reconcile.json",
+  "result": "pass",
+  "scriptTokenCount": 241,
+  "heardTokenCount": 241,
+  "reconciled": 16,
+  "suspects": [],
+  "note": "Dictionary reconciliation only; ASR text cannot establish pronunciation and no listening review is claimed."
+}
