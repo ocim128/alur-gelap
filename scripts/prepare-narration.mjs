@@ -20,6 +20,7 @@ import {spawnSync} from 'node:child_process';
 import {copyFileSync, existsSync, mkdirSync, readFileSync, writeFileSync} from 'node:fs';
 import {join, resolve} from 'node:path';
 import {fileURLToPath} from 'node:url';
+import {applyRules} from './asr-reconcile.mjs';
 
 export const DEFAULT_SAMPLE_RATE = 48000;
 export const DEFAULT_FPS = 30;
@@ -42,61 +43,6 @@ export function frameAlignedWindow(startSec, endSec, fps, sampleRate) {
     startSample: roundToSample(startFrame / fps, sampleRate),
     endSample: roundToSample(endFrame / fps, sampleRate),
   };
-}
-
-/**
- * Apply Episode-005-style reconciliations (renames/splits/merges) to a raw ASR word
- * track before planning. Punctuation-tolerant, optionally context-scoped.
- * `count` on a rename asserts the exact number of occurrences (005 semantics);
- * without `count`, every occurrence is renamed (at least one required).
- */
-export function applyReconciliations(rawWords, {renames = [], splits = [], merges = []} = {}) {
-  const words = rawWords.map((word, index) => ({...word, rawIdx: index}));
-  const records = [];
-  const consumed = new Set();
-  const stem = (w) => String(w).replace(/[.,]$/u, '');
-  const suffix = (w) => w.slice(stem(w).length);
-  for (const rule of renames) {
-    const hits = [];
-    words.forEach((word, i) => {
-      if (consumed.has(i)) return;
-      if (stem(word.word) !== rule.from) return;
-      if (rule.contextBefore && !(words[i - 1] && rule.contextBefore.includes(stem(words[i - 1].word)))) return;
-      hits.push(i);
-    });
-    if (rule.count !== undefined && hits.length !== rule.count) {
-      throw new Error(`Rename "${rule.from}" expected ${rule.count} occurrences, found ${hits.length}`);
-    }
-    if (hits.length === 0) throw new Error(`Rename "${rule.from}" matched no occurrence`);
-    for (const i of hits) {
-      consumed.add(i);
-      const heard = words[i].word;
-      words[i].word = rule.to + suffix(heard);
-      records.push({rawIdx: i, heard, scriptFaithful: words[i].word, class: rule.class ?? 'phonetic-variant', action: 'renamed', note: rule.note ?? ''});
-    }
-  }
-  for (const rule of splits) {
-    const i = words.findIndex((word, j) => stem(word.word) === rule.from && !consumed.has(j));
-    if (i < 0) throw new Error(`Split source "${rule.from}" not found`);
-    consumed.add(i);
-    const word = words[i];
-    const mid = ms(word.start + (word.end - word.start) * (rule.splitRatio ?? 0.5));
-    words[i] = {...word, word: rule.to[0], end: mid};
-    words.splice(i + 1, 0, {...word, word: rule.to[1], start: mid});
-    records.push({rawIdx: i, heard: rule.from, scriptFaithful: rule.to.join(' '), class: rule.class ?? 'merge-split', action: 'split', note: rule.note ?? ''});
-  }
-  for (const rule of merges) {
-    const i = words.findIndex((word, j) => stem(word.word) === rule.from[0] && words[j + 1] && stem(words[j + 1].word) === rule.from[1] && !consumed.has(j) && !consumed.has(j + 1));
-    if (i < 0) throw new Error(`Merge source "${rule.from.join(' ')}" not found`);
-    consumed.add(i);
-    consumed.add(i + 1);
-    const a = words[i];
-    const b = words[i + 1];
-    words[i] = {...a, word: rule.to, end: b.end};
-    words.splice(i + 1, 1);
-    records.push({rawIdx: i, heard: rule.from.join(' '), scriptFaithful: rule.to, class: rule.class ?? 'merge-split', action: 'merged', note: rule.note ?? ''});
-  }
-  return {words, records};
 }
 
 function findPair(words, tailStem, nextStem, occurrence = 1) {
@@ -131,8 +77,8 @@ export function buildPlan(config, rawTiming, options = {}) {
   const timing = {...rawTiming, words: rawTiming.words.map((word) => ({...word}))};
   let pronunciationRecords = [];
   if (config.pronunciation) {
-    const applied = applyReconciliations(timing.words, config.pronunciation);
-    timing.words = applied.words;
+    const applied = applyRules(timing.words, config.pronunciation);
+    timing.words = applied.units;
     pronunciationRecords = applied.records;
   }
   const words = timing.words;
@@ -285,6 +231,13 @@ export function buildPlan(config, rawTiming, options = {}) {
     return ms(t + delta);
   };
 
+  // Boundary mapping belongs to the plan itself, including dry-run consumers.
+  for (const boundary of boundaries) {
+    boundary.mappedEndSec = mapper(boundary.endSec, false);
+    boundary.mappedNextStartSec = mapper(boundary.nextStartSec, true);
+    boundary.mappedGapSec = ms(boundary.mappedNextStartSec - boundary.mappedEndSec);
+  }
+
   const mappedSpeechEndSec = mapper(speechEndSec, false);
   const padSamples = roundToSample(tailPadSec, sampleRate);
   const removedSamples = edits.reduce((sum, edit) => sum + (roundToSample(edit.srcEnd, sampleRate) - roundToSample(edit.srcStart, sampleRate)), 0);
@@ -380,7 +333,8 @@ export function buildPlan(config, rawTiming, options = {}) {
     mappedSfx: (timing.sfx ?? []).map((item) => ({...item, start: mapper(item.start, true), end: mapper(item.end, false)})),
     panelWordSpans,
     speechEndSec: mappedSpeechEndSec,
-    rawHookEndSec: config.hook && hookFinalIdx >= 0 ? mapper(words[hookFinalIdx].end, false) : null,
+    rawHookEndSec: config.hook && hookFinalIdx >= 0 ? words[hookFinalIdx].end : null,
+    mappedHookEndSec: config.hook && hookFinalIdx >= 0 ? mapper(words[hookFinalIdx].end, false) : null,
     hookLimitSec: config.hook ? hookLimitSec : null,
     hookFallbackApplied: edits.some((edit) => edit.name === 'hook-fallback'),
     tailPadSec,
@@ -547,7 +501,7 @@ export function projectTighteningVariations(config, timing, variations) {
       retainedSec: variation.retainedSec,
       preparedDurationSec: plan.projectedDurationSec,
       speechEndSec: plan.speechEndSec,
-      hookEndSec: plan.rawHookEndSec,
+      hookEndSec: plan.mappedHookEndSec,
       edits: plan.edits.length,
       tighteningCuts: plan.tighteningCuts.length,
       isConfig: (variation.thresholdSec ?? Infinity) === (config.tightening?.thresholdSec ?? Infinity) &&
@@ -571,7 +525,7 @@ function encodePcmDerivatives(pcmBuffer, {outputWav, outputMp3, sampleRate}) {
   }
 }
 
-function assertLockedGaps(plan) {
+export function assertLockedGaps(plan) {
   for (const boundary of plan.boundaries) {
     const mappedEndSec = plan.mapper(boundary.endSec, false);
     const mappedNextStartSec = plan.mapper(boundary.nextStartSec, true);
@@ -580,9 +534,6 @@ function assertLockedGaps(plan) {
     if (Math.abs(gapSec - expected) > GAP_TOLERANCE_SEC) {
       throw new Error(`${boundary.name}: locked gap ${gapSec} s != expected ${expected} s`);
     }
-    boundary.mappedGapSec = gapSec;
-    boundary.mappedEndSec = mappedEndSec;
-    boundary.mappedNextStartSec = mappedNextStartSec;
   }
   return plan.boundaries;
 }
@@ -646,8 +597,8 @@ export async function prepareNarration(configPath, {dryRun = false, force = fals
   const preserveCheck = verifySamplePreserving(inputSamples, assembled, plan);
   console.log(`Sample-preserving check: ${preserveCheck.copiedRanges} copied ranges bit-identical; pad ${preserveCheck.padSec} s of exact zeros; tail hold ${preserveCheck.tailSec} s.`);
 
-  if (plan.rawHookEndSec !== null && plan.hookLimitSec !== null && plan.rawHookEndSec > plan.hookLimitSec) {
-    throw new Error(`Mapped hook ends at ${plan.rawHookEndSec} s, beyond the ${plan.hookLimitSec} s measured-hook limit (target <= 3.0 s)`);
+  if (plan.mappedHookEndSec !== null && plan.hookLimitSec !== null && plan.mappedHookEndSec > plan.hookLimitSec) {
+    throw new Error(`Mapped hook ends at ${plan.mappedHookEndSec} s, beyond the ${plan.hookLimitSec} s measured-hook limit (target <= 3.0 s)`);
   }
   assertLockedGaps(plan);
 
@@ -678,8 +629,8 @@ export async function prepareNarration(configPath, {dryRun = false, force = fals
     sourceDurationSec: plan.sourceDurationSec,
     preparedDurationSec,
     speechEndSec: plan.speechEndSec,
-    hookEndSec: plan.rawHookEndSec,
-    hookWithinLimit: config.hook ? plan.rawHookEndSec <= plan.hookLimitSec : null,
+    hookEndSec: plan.mappedHookEndSec,
+    hookWithinLimit: config.hook ? plan.mappedHookEndSec <= plan.hookLimitSec : null,
     hookLimitSec: plan.hookLimitSec,
     hookFallback: plan.hookFallbackApplied,
     crossfadeSec: FADE_SEC,

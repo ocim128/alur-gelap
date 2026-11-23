@@ -7,8 +7,10 @@ import {spawnSync} from 'node:child_process';
 import {existsSync, mkdtempSync, readFileSync, rmSync, writeFileSync} from 'node:fs';
 import {tmpdir} from 'node:os';
 import {join} from 'node:path';
+import {applyRules} from './asr-reconcile.mjs';
+import {DEFAULT_DICTIONARY_PATH, heardUnits, reconcile} from './check-pronunciation.mjs';
 import {
-  applyReconciliations,
+  assertLockedGaps,
   assemblePcm,
   buildPlan,
   frameAlignedWindow,
@@ -83,7 +85,8 @@ test('buildPlan produces frame-aligned claimed-silent windows and applies the do
   const names = plan.windows.map((window) => window.name);
   assert.deepEqual(names, ['rewind-3:rewind', 'rewind-3:dread', 'worldvoice:tower-pa']);
   assert.equal(plan.hookFallbackApplied, true, 'raw hook 3.50 s exceeds the 3.0 s limit, fallback must apply');
-  assert.equal(plan.rawHookEndSec, 2.96, 'mapped hook must land within the 3.0 s limit');
+  assert.equal(plan.rawHookEndSec, 3.50, 'raw hook records the source end');
+  assert.equal(plan.mappedHookEndSec, 2.96, 'mapped hook must land within the 3.0 s limit');
   for (const window of plan.windows) {
     assert.ok(Number.isInteger(window.startFrame) && Number.isInteger(window.endFrame), 'windows are frame-aligned');
     assert.equal(window.startSample, Math.round(window.startFrame / FPS * SR), 'window start sits exactly on its frame');
@@ -95,6 +98,53 @@ test('buildPlan produces frame-aligned claimed-silent windows and applies the do
   assert.equal(plan.panelWordSpans[0].panel, 'P01');
   assert.equal(plan.panelWordSpans[0].wordCount, 4, 'panel spans count spoken words (the dropped filler is excluded)');
   assert.equal(plan.panelWordSpans[0].startFrame, Math.round(plan.panelWordSpans[0].startSec * FPS));
+});
+
+test('locked boundary fields exist before assertion and assertion never mutates the plan', () => {
+  const plan = buildPlan(config, timing);
+  const before = JSON.stringify(plan.boundaries);
+  const boundary = JSON.parse(before)[0];
+  assert.equal(boundary.mappedEndSec, plan.mapper(boundary.endSec, false));
+  assert.equal(boundary.mappedNextStartSec, plan.mapper(boundary.nextStartSec, true));
+  assert.equal(boundary.mappedGapSec, 2);
+  assertLockedGaps(plan);
+  assert.equal(JSON.stringify(plan.boundaries), before);
+  const bad = {...plan, mapper: (time, start) => plan.mapper(time, start) + (start ? 1 : 0)};
+  assert.throws(() => assertLockedGaps(bad), /locked.*gap/i);
+  assert.equal(JSON.stringify(plan.boundaries), before, 'failure also leaves boundaries intact');
+});
+
+test('shared dictionary works in checker and preparation on the real 004 and 005 tracks', () => {
+  const dictionary = JSON.parse(readFileSync(DEFAULT_DICTIONARY_PATH, 'utf8'));
+  for (const slug of ['004-tangan-pilot-kemarin', '005-sabuk-ketiga']) {
+    const folder = join('episodes', slug);
+    const raw = JSON.parse(readFileSync(join(folder, 'narration-investigator-timestamps.json'), 'utf8'));
+    const original = structuredClone(raw);
+    const script = readFileSync(join(folder, 'narasi.txt'), 'utf8');
+    const checked = reconcile(raw.words, script, dictionary);
+    const checkerRules = applyRules(heardUnits(raw.words), dictionary);
+    assert.equal(checked.pass, true, slug);
+    assert.deepEqual(checked.reconciliations, checkerRules.records);
+    const rawRules = applyRules(raw.words, dictionary);
+    const plan = buildPlan({episode: slug, pronunciation: dictionary}, raw);
+    assert.deepEqual(plan.pronunciationRecords, rawRules.records);
+    assert.deepEqual(plan.words, rawRules.units);
+    assert.deepEqual(raw, original, 'preparation and checking do not mutate the input');
+    const compounds = raw.words.filter(word => word.word.includes('-'));
+    for (const word of compounds) {
+      assert.ok(plan.words.some(unit => unit.rawIndex === raw.words.indexOf(word) && unit.word.includes('-')), `${slug}: raw hyphenated anchor retained: ${word.word}`);
+    }
+  }
+});
+
+test('raw hyphenated words remain usable as stem-based anchors in the preparation plan', () => {
+  const source = {durationSec: 3, words: [
+    {word: 'pelan-pelan', start: 0, end: .4},
+    {word: 'keluar.', start: .5, end: .8},
+  ]};
+  const plan = buildPlan({episode: 'hyphen-fixture', pronunciation: {}, panels: [{panel:'P01', fromStem:'pelanpelan', toStem:'keluar'}]}, source);
+  assert.equal(plan.panelWordSpans[0].fromWord, 'pelan-pelan');
+  assert.equal(plan.panelWordSpans[0].wordCount, 2);
 });
 
 test('a sample-preserving padded stem passes every gate', () => {
@@ -173,7 +223,7 @@ test('reconciliations are punctuation-tolerant, context-scoped and assert counts
     {word: 'kop', start: 1.4, end: 1.5},
     {word: 'pilot.', start: 1.5, end: 1.6},
   ];
-  const {words: reconciled, records} = applyReconciliations(raw, {
+  const {units: reconciled, records} = applyRules(raw, {
     renames: [
       {from: 'Gak', to: 'nggak', count: 1, class: 'phonetic-variant'},
       {from: 'kemudian', to: 'kemudi', contextBefore: ['tuas'], class: 'suspected-standardization'},
@@ -188,10 +238,10 @@ test('reconciliations are punctuation-tolerant, context-scoped and assert counts
   assert.equal(reconciled[7].word, 'kemudian', 'the same word outside the context is untouched');
   assert.equal(reconciled[8].word, 'Nggak');
   assert.equal(reconciled[9].start, reconciled[8].end, 'split shares the span at the split ratio');
-  assert.equal(reconciled[10].word, 'copilot');
+  assert.equal(reconciled[10].word, 'copilot.');
   assert.equal(reconciled[10].end, 1.6, 'merge keeps the second token end');
   assert.equal(records.length, 4);
-  assert.throws(() => applyReconciliations(raw, {renames: [{from: 'Gak', to: 'nggak', count: 2}]}), /expected 2 occurrences/);
+  assert.throws(() => applyRules(raw, {renames: [{from: 'Gak', to: 'nggak', count: 2}]}), /expected 2 occurrences/);
 });
 
 test('dry-run projections match the assembled duration and mark the config row', () => {
@@ -271,6 +321,9 @@ test('the CLI pipeline encodes a synthetic take end to end with gates, PTS check
     assert.ok(result.preparedDurationSec > 0);
     const editMap = JSON.parse(readFileSync(join(root, 'audio-edit-map.json'), 'utf8'));
     assert.equal(editMap.hookWithinLimit, true);
+    assert.equal(editMap.hookEndSec, result.plan.mappedHookEndSec);
+    assert.equal(result.plan.rawHookEndSec, 3.5);
+    assert.ok(editMap.lockedRewindGaps.every(gap => Number.isFinite(gap.afterWordEndSec) && Number.isFinite(gap.beforeWordStartSec) && Number.isFinite(gap.totalGapSec)));
     assert.equal(editMap.hookFallback, true, 'the documented hook fallback is recorded in the edit map');
     assert.ok(editMap.assemblerHandoff?.preparedTrack?.durationSec > 0, 'assemblerHandoff block emitted');
     assert.equal(editMap.panelWordSpans?.length, 1, 'panel word-span table emitted');

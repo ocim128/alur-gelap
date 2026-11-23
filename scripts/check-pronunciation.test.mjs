@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {join} from 'node:path';
 import {countNarrationWords} from './count-narration-words.mjs';
-import {canonicalScriptTokens, DEFAULT_DICTIONARY_PATH, heardUnits, reconcile} from './check-pronunciation.mjs';
+import {applyRules, canonicalScriptTokens, DEFAULT_DICTIONARY_PATH, heardUnits, reconcile} from './check-pronunciation.mjs';
 
 test('counting rule: hyphenated compounds are one word, split count is printed for visibility', () => {
   const result = countNarrationWords('Baling-baling ekor nyangkut. Pelan-pelan, dua-duanya kebuka.');
@@ -104,6 +104,40 @@ test('the shared dictionary fully reconciles the real Episode 004 word track (re
   const actions = result.reconciliations.map((record) => record.action);
   assert.ok(actions.includes('split'), 'heard "celahnya" splits against the hyphenated script "CELAH-nya"');
   assert.ok(actions.includes('merged'), 'heard "co pilot"/"kop pilot" merge to "copilot"');
+});
+
+test('shared rules repeat splits and merges without stale index consumption', () => {
+  const raw = ['Dituas', 'Gak', 'Dituas', 'kop', 'pilot.', 'kop', 'pilot!']
+    .map((word, i) => ({word, start: i, end: i + .8}));
+  const original = structuredClone(raw);
+  const result = applyRules(raw, {
+    renames: [{from: 'gak', to: 'nggak', count: 1}],
+    splits: [{from: 'dituas', to: ['di', 'tuas'], count: 2}],
+    merges: [{from: ['kop', 'pilot'], to: 'copilot', count: 2}],
+  });
+  assert.deepEqual(result.units.map(unit => unit.word), ['di', 'tuas', 'nggak', 'di', 'tuas', 'copilot.', 'copilot!']);
+  assert.deepEqual(result.records.map(record => record.rawIndex), [1, 0, 2, 3, 5]);
+  assert.deepEqual(raw, original, 'rule application does not mutate input');
+});
+
+test('contextAfter scopes each rule type and absent matches need an explicit count', () => {
+  const raw = ['Ikuti', 'Cahayanya', 'ikuti', 'arah', 'Dituas', 'ada', 'Dituas', 'tidak', 'kop', 'pilot', 'ada', 'kop', 'pilot', 'tidak']
+    .map((word, i) => ({word, start: i, end: i + .5}));
+  const rules = {
+    renames: [{from:'ikuti', to:'ikutin', contextAfter:['cahayanya'], count:1}, {from:'missing', to:'ignored'}],
+    splits: [{from:'dituas', to:['di','tuas'], contextAfter:['ada'], count:1}],
+    merges: [{from:['kop','pilot'], to:'copilot', contextAfter:['ada'], count:1}],
+  };
+  const {units, records} = applyRules(raw, rules);
+  assert.deepEqual(units.map(unit => unit.word), ['ikutin','Cahayanya','ikuti','arah','di','tuas','ada','Dituas','tidak','copilot','ada','kop','pilot','tidak']);
+  assert.equal(records.length, 3);
+  for (const field of ['renames', 'splits', 'merges']) {
+    const mismatch = structuredClone(rules);
+    mismatch[field][0].count = 2;
+    assert.throws(() => applyRules(raw, mismatch), /expected 2 occurrences, found 1/);
+  }
+  assert.throws(() => applyRules(raw, {renames:[{from:'missing', to:'ignored', count:1}]}), /expected 1 occurrences, found 0/);
+  assert.doesNotThrow(() => applyRules(raw, {splits:[{from:'missing', to:['a','b'], count:0}]}));
 });
 
 test('context-scoped rules keep Episode 005 whole while splitting the Episode 004 token', () => {

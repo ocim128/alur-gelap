@@ -16,8 +16,8 @@ import {fileURLToPath} from 'node:url';
 import {join, resolve} from 'node:path';
 
 export const DEFAULT_DICTIONARY_PATH = join(resolve(fileURLToPath(import.meta.url)), '..', 'asr-reconcile.json');
-const stripTrailingPunctuation = (word) => word.replace(/[.,!?…;:'"’”(.]+$/u, '');
-export const normalizeHeard = (word) => stripTrailingPunctuation(String(word)).toLowerCase();
+import {applyRules, normalizeHeard, stripTrailingPunctuation} from './asr-reconcile.mjs';
+export {applyRules, normalizeHeard} from './asr-reconcile.mjs';
 
 /** Canonical script tokens: whitespace-split, punctuation-stripped, hyphen-split, lowercased (003-005 precedent). */
 export function canonicalScriptTokens(scriptText) {
@@ -56,66 +56,7 @@ export function heardUnits(rawWords) {
  * a pass flag. Pure: no filesystem access.
  */
 export function reconcile(rawWords, scriptText, dictionary = {renames: [], splits: [], merges: []}) {
-  const units = heardUnits(rawWords);
-  const records = [];
-  // Consumption is tracked by object identity: split splices shift indices, so an
-  // index-based set would misdirect consumption marks onto unrelated units.
-  const consumed = new Set();
-  const stem = (unit) => normalizeHeard(unit.word);
-  const suffixOf = (unit) => {
-    const stripped = stripTrailingPunctuation(unit.word);
-    return unit.word.slice(stripped.length);
-  };
-
-  for (const rule of dictionary.renames ?? []) {
-    units.forEach((unit, i) => {
-      if (consumed.has(unit)) return;
-      if (stem(unit) !== rule.from.toLowerCase()) return;
-      if (rule.contextBefore && !(units[i - 1] && rule.contextBefore.map((c) => c.toLowerCase()).includes(stem(units[i - 1])))) return;
-      consumed.add(unit);
-      const heard = unit.word;
-      unit.word = rule.to + suffixOf(unit);
-      records.push({rawIndex: unit.rawIndex, heard, scriptFaithful: unit.word, class: rule.class ?? 'phonetic-variant', action: 'renamed', note: rule.note ?? ''});
-    });
-  }
-  // Split one merged token into the script pair; repeat so every occurrence resolves.
-  const inContext = (units, i, rule, afterCount = 0) => {
-    if (rule.contextBefore && !(units[i - 1] && rule.contextBefore.map((c) => c.toLowerCase()).includes(stem(units[i - 1])))) return false;
-    if (rule.contextAfter && !(units[i + 1 + afterCount] && rule.contextAfter.map((c) => c.toLowerCase()).includes(stem(units[i + 1 + afterCount])))) return false;
-    return true;
-  };
-  for (const rule of dictionary.splits ?? []) {
-    let searchFrom = 0;
-    for (;;) {
-      const i = units.findIndex((unit, j) => j >= searchFrom && !consumed.has(unit) && stem(unit) === rule.from.toLowerCase() && inContext(units, j, rule));
-      if (i < 0) break;
-      const unit = units[i];
-      consumed.add(unit);
-      const mid = unit.start + (unit.end - unit.start) * (rule.splitRatio ?? 0.5);
-      units[i] = {...unit, word: rule.to[0], end: mid};
-      units.splice(i + 1, 0, {...unit, word: rule.to[1], start: mid});
-      records.push({rawIndex: unit.rawIndex, heard: unit.word, scriptFaithful: rule.to.join(' '), class: rule.class ?? 'merge-split', action: 'split', note: rule.note ?? ''});
-      searchFrom = i + 2;
-    }
-  }
-  for (const rule of dictionary.merges ?? []) {
-    let searchFrom = 0;
-    for (;;) {
-      const i = units.findIndex((unit, j) =>
-        j >= searchFrom && !consumed.has(unit) && units[j + 1] && !consumed.has(units[j + 1]) &&
-        stem(unit) === rule.from[0].toLowerCase() && stem(units[j + 1]) === rule.from[1].toLowerCase() &&
-        inContext(units, j, rule, 1));
-      if (i < 0) break;
-      const a = units[i];
-      const b = units[i + 1];
-      consumed.add(a);
-      consumed.add(b);
-      units[i] = {...a, word: rule.to + suffixOf(b), end: b.end};
-      units.splice(i + 1, 1);
-      records.push({rawIndex: a.rawIndex, heard: `${a.word} ${b.word}`, scriptFaithful: rule.to, class: rule.class ?? 'merge-split', action: 'merged', note: rule.note ?? ''});
-      searchFrom = i + 1;
-    }
-  }
+  const {units, records} = applyRules(heardUnits(rawWords), dictionary);
 
   const scriptTokens = canonicalScriptTokens(scriptText);
   const reconciledTokens = units.map((unit) => normalizeHeard(unit.word));
