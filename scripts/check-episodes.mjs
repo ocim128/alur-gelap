@@ -187,7 +187,7 @@ export function validateEpisode(manifest, captions, {publicDir, manifestPath, ba
     factoryCheck(words >= 3 && words <= 4, "openingTitle must contain 3–4 words");
   }
   if (v2) {
-    asset("fonts/theboldfont.ttf", "caption font");
+    if (!studioV2) asset("fonts/theboldfont.ttf", "caption font");
     if (studioV2) {
       const script = manifest.script;
       fail(script?.format === "decision-consequence" && ["branch-rewind", "triple-branch-rewind", "earned-consequence", "both"].includes(script.engine),
@@ -256,7 +256,7 @@ export function validateEpisode(manifest, captions, {publicDir, manifestPath, ba
       fail(style === manifest.art.styleId, `art style map: missing or mixed style ID for ${path}`);
     }
   }
-  fail(Array.isArray(scenes) && scenes[0]?.at === 0 && Array.isArray(beds), "missing scenes, beds, or scene at frame zero");
+  fail(Array.isArray(scenes) && scenes[0]?.at === 0 && (studioV2 ? beds === undefined || Array.isArray(beds) : Array.isArray(beds)), "missing scenes, beds, or scene at frame zero");
   clip(narration, duration, "narration");
   if (studioV2 && (scenes.length < 15 || scenes.length > 28)) {
     warnings.push("scene count is outside the 15–28 panel studio v2 planning range");
@@ -290,32 +290,33 @@ export function validateEpisode(manifest, captions, {publicDir, manifestPath, ba
     const plate = raster(scene.plate, `${scene.id} plate`);
     if (strict) plateUses.push({scene, fingerprint: batchAssets.get(plate).fingerprint});
     fail(scene.camera?.from && scene.camera?.to && [scene.camera.from, scene.camera.to].every(c => Number.isFinite(c.scale) && c.scale > 0 && Number.isFinite(c.x) && Number.isFinite(c.y)), `${scene.id}: invalid camera`);
-    if (studioV2 && length <= 9 * fps && ["x", "y", "scale"].some(key => scene.camera.from[key] !== scene.camera.to[key])) {
+    if (studioV2) {
+      fail(["x", "y", "scale"].some(key => scene.camera.from[key] !== scene.camera.to[key]), `${scene.id}: Studio v2 camera must move`);
       activityInterval(scene.at, end);
     }
     let previousReframeEnd = 0;
-    for (const r of scene.reframes ?? []) {
+    for (const r of (studioV2 ? [] : scene.reframes ?? [])) {
       fail(isFrame(r.at) && isFrame(r.duration) && r.duration > 0 && r.at >= previousReframeEnd && r.at + r.duration <= length && Number.isFinite(r.scale) && r.scale > 0 && Number.isFinite(r.x) && Number.isFinite(r.y), `${scene.id}: invalid reframe`);
       activityInterval(scene.at + r.at, scene.at + r.at + r.duration);
       previousReframeEnd = r.at + r.duration;
     }
-    let layers = scene.layers ?? [];
-    if (v2) {
+    let layers = studioV2 ? [] : scene.layers ?? [];
+    if (v2 && strict) {
+      const e = scene.editorial;
+      fail(e && ["absent", "visible", "reaction"].includes(e.protagonist) &&
+        ["character-emotion", "threat-proximity", "tactical-hud"].includes(e.purpose) && nonempty(e.evidence),
+        `${scene.id}: expected editorial protagonist, shot purpose, and visible evidence`);
+      if (e.purpose === "character-emotion") fail(e.protagonist !== "absent",
+        `${scene.id}: character-emotion requires the visible protagonist`);
+      if (!studioV2 && e.purpose === "tactical-hud") fail(scene.hud?.some(h =>
+        ["radarDiagram", "blueprintOverlay", "supplyChecklist"].includes(h?.type) ||
+        (h?.type === "tacticalCallout" && Array.isArray(h.guide))),
+        `${scene.id}: tactical-hud requires a diagram, checklist, or plotted guide`);
+    }
+    if (v2 && !studioV2) {
       fail(!("layers" in scene) && !("label" in scene), `${scene.id}: legacy layers/label are forbidden`);
       fail(scene.characters?.mode === "baked" || scene.characters?.mode === "masked", `${scene.id}: invalid character mode`);
       fail(Array.isArray(scene.hud), `${scene.id}: hud must be an array`);
-      if (strict) {
-        const e = scene.editorial;
-        fail(e && ["absent", "visible", "reaction"].includes(e.protagonist) &&
-          ["character-emotion", "threat-proximity", "tactical-hud"].includes(e.purpose) && nonempty(e.evidence),
-          `${scene.id}: expected editorial protagonist, shot purpose, and visible evidence`);
-        if (e.purpose === "character-emotion") fail(e.protagonist !== "absent",
-          `${scene.id}: character-emotion requires the visible protagonist`);
-        if (e.purpose === "tactical-hud") fail(scene.hud.some(h =>
-          ["radarDiagram", "blueprintOverlay", "supplyChecklist"].includes(h?.type) ||
-          (h?.type === "tacticalCallout" && Array.isArray(h.guide))),
-          `${scene.id}: tactical-hud requires a diagram, checklist, or plotted guide`);
-      }
       if (scene.characters.mode === "baked") fail(!("layers" in scene.characters) && !("foreground" in scene.characters), `${scene.id}: baked scene has cutouts`);
       if (scene.characters.mode === "masked") {
         layers = scene.characters.layers;
@@ -369,7 +370,7 @@ export function validateEpisode(manifest, captions, {publicDir, manifestPath, ba
       if (distinct) activityInterval(scene.at, scene.at + 1);
     }
   }
-  for (const bed of beds) {clip(bed, duration, bed.name, true); fail(isFrame(bed.fadeIn) && isFrame(bed.fadeOut) && bed.fadeIn + bed.fadeOut <= bed.duration, `${bed.name}: invalid fades`);}
+  for (const bed of beds ?? []) {clip(bed, duration, bed.name, true); fail(isFrame(bed.fadeIn) && isFrame(bed.fadeOut) && bed.fadeIn + bed.fadeOut <= bed.duration, `${bed.name}: invalid fades`);}
   if (v2) {
     activity.sort((a, b) => a[0] - b[0]);
     let cursor = 0;

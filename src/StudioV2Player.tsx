@@ -44,9 +44,7 @@ export function StudioV2Player({manifest, captions, plateBackdrop, plateOverlay,
   const {scene, index, endFrame} = sceneAtFrame(manifest.scenes, manifest.duration, frame);
   const context = {frame, fps, scene, sceneIndex: index, sceneEndFrame: endFrame};
   const progress = interpolate(frame, [scene.at, Math.max(scene.at + 1, endFrame - 1)], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
-  const from = scene.camera?.from ?? {scale: 1.035, x: index % 2 ? 10 : -10, y: 0};
-  const requestedTo = scene.camera?.to ?? {scale: 1.075, x: -from.x, y: 0};
-  const to = from.scale === requestedTo.scale && from.x === requestedTo.x && from.y === requestedTo.y ? {...requestedTo, scale: requestedTo.scale + 0.04} : requestedTo;
+  const {from, to} = scene.camera;
   const scale = from.scale + (to.scale - from.scale) * progress;
   const x = from.x + (to.x - from.x) * progress;
   const y = from.y + (to.y - from.y) * progress;

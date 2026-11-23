@@ -1,5 +1,6 @@
 import test, {after} from "node:test";
 import assert from "node:assert/strict";
+import {createHash} from "node:crypto";
 import {copyFileSync, cpSync, mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync} from "node:fs";
 import {tmpdir} from "node:os";
 import {dirname, join, resolve} from "node:path";
@@ -124,6 +125,50 @@ test("studio v2 accepts a long decision-consequence pilot without changing the v
   assert.throws(() => validate({...pilot, pipelineVersion: 3}), /invalid pipelineVersion/);
   pilot.script.wordCount = 185;
   assert.ok(validate(pilot).warnings.some(warning => /spoken word count/.test(warning)));
+});
+
+test("the 16 existing manifests retain their pre-simplification validation results", () => {
+  // SHA-256 of each JSON.stringify(checkAll()) result captured before the change.
+  // Additional future manifests are allowed; this comparison covers the original 16.
+  const expected = JSON.parse(readFileSync("scripts/validator-baseline-sha256.json", "utf8"));
+  assert.equal(Object.keys(expected).length, 16);
+  const results = checkAll();
+  const byId = new Map(results.map(result => [result.id, result]));
+  for (const [id, hash] of Object.entries(expected)) {
+    assert.ok(byId.has(id), `${id}: missing existing manifest`);
+    assert.equal(createHash("sha256").update(JSON.stringify(byId.get(id))).digest("hex"), hash, id);
+  }
+});
+
+test("studio manifests need moving cameras, not Arc 1 scene metadata", () => {
+  for (const slug of ["001-kamar-terkunci", "002-rumah-tengah-hutan", "003-goyangan-dek-enam", "004-tangan-pilot-kemarin", "005-sabuk-ketiga"]) {
+    const path = `${slug}/manifest.json`;
+    const episode = JSON.parse(readFileSync(join("episodes", path)));
+    const episodeCaptions = JSON.parse(readFileSync(join("episodes", slug, "captions.json")));
+    const check = value => validateEpisode(value, episodeCaptions, {publicDir: resolve("public"), manifestPath: path});
+    delete episode.beds;
+    for (const scene of episode.scenes) {
+      delete scene.reframes;
+      delete scene.characters;
+      delete scene.hud;
+    }
+    assert.doesNotThrow(() => check(episode), slug);
+    if (slug === "002-rumah-tengah-hutan") {
+      assert.ok(episode.scenes.some((scene, i) => (episode.scenes[i + 1]?.at ?? episode.duration) - scene.at > 9 * episode.fps));
+      const staticCamera = structuredClone(episode);
+      staticCamera.scenes[0].camera.to = {...staticCamera.scenes[0].camera.from};
+      assert.throws(() => check(staticCamera), /Studio v2 camera must move/);
+      const missingCamera = structuredClone(episode);
+      delete missingCamera.scenes[0].camera;
+      assert.throws(() => check(missingCamera), /invalid camera/);
+      const missingEditorial = structuredClone(episode);
+      delete missingEditorial.scenes[0].editorial;
+      assert.throws(() => check(missingEditorial), /expected editorial/);
+    }
+  }
+  const arc = clone();
+  delete arc.scenes[0].characters;
+  assert.throws(() => validate(arc), /invalid character mode/);
 });
 
 test("studio player rejects missing mix, invalid blackout and invalid rewind intervals", () => {

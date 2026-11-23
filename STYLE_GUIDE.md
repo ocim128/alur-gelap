@@ -124,7 +124,7 @@ For Episode 007, place the crowd’s synchronized head-snap jolt after the final
 ## Narration, captions and sound
 
 - Write natural conversational Bahasa Indonesia. Keep the delivery masculine and mature, with clear articulation and deliberate pauses. Keep the clean ShortZ Gemini Flash master and word-timing record with the episode.
-- Time the captions to the final narration. Aim for **3–4 words per beat**, with an absolute maximum of four. Use **bold uppercase condensed type** with a crisp dark stroke or drop shadow. Place captions in the **lower-middle safe zone above TikTok UI**. Dark semi-transparent pill backgrounds are prohibited.
+- Time the captions to the final narration. Use **1–4 words per beat**, aiming for 3–4 when timing, sentence and panel boundaries allow. Use **bold uppercase condensed type** with a crisp dark stroke or drop shadow. Place captions in the **lower-middle safe zone above TikTok UI**. Dark semi-transparent pill backgrounds are prohibited.
 - Show the narrator's caption text in white by default, with semantic highlights where appropriate, and without a `NARATOR` or `NARRATOR` speaker label. Show a colored speaker label for each non-narrator diegetic voice, such as yellow `PENCULIK`.
 - Set semantic color per word in `captions.json`. Use `white` by default, `yellow` for key survival terms and `red` for danger or scare words. Check readability and sync at phone size.
 - Use digits and match numeric formatting to the HUD, such as `60%`, `03:00` or `PUKUL 3 PAGI`. Spell numbers as needed in the spoken source and use the numeric form on screen.
