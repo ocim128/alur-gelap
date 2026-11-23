@@ -4,6 +4,7 @@ import {existsSync, readFileSync, readdirSync, realpathSync, statSync} from "nod
 import {join, relative, resolve, sep} from "node:path";
 import {fileURLToPath} from "node:url";
 import {studioTimingError} from "../src/studio-v2-timing.mjs";
+import {countNarrationWords} from "./count-narration-words.mjs";
 
 const isFrame = (v) => Number.isInteger(v) && v >= 0;
 const nonempty = (v) => typeof v === "string" && v.trim().length > 0;
@@ -15,6 +16,10 @@ const assetBatchDir = (manifestPath) => `assets/${manifestPath.slice(0, -"/manif
 // Documented legacy Episodes 001-003 keep their archived all-caps comic SFX lines
 // (BRAK!, KLIK!) — the cue-sheet rule applies to studio v2 episodes from 004 on.
 const legacyEpisodes = new Set(["001-kamar-terkunci", "002-rumah-tengah-hutan", "003-goyangan-dek-enam"]);
+// Episodes 001-005 were produced before the 2026-11-23 word-budget recalibration
+// (245–265 -> 225–245 canonical words) and the hook gates; they stay valid under
+// the earlier bounds. New episodes use the recalibrated band and hook gates.
+const grandfatheredEpisodes = new Set([...legacyEpisodes, "004-tangan-pilot-kemarin", "005-sabuk-ketiga"]);
 // Directory names that hold provenance/archived copies, never active manifests.
 const archivedDirPattern = /^(?:archive|archives|backup|backups|snapshot|snapshots|old|attic|sources|pre-.+|.+-before)$/i;
 const comparisonManifests = new Map([
@@ -66,6 +71,7 @@ function alphaCapable(path) {
 
 export function validateEpisode(manifest, captions, {publicDir, manifestPath, batchRoots = [], episodesDir = null} = {}) {
   const {id, duration, fps, narration, beds, scenes} = manifest;
+  const episodeSlug = manifestPath?.split("/")[0];
   const prefix = `${id ?? manifestPath ?? "episode"}: `;
   const fail = (condition, message) => assert(condition, prefix + message);
   const comparison = comparisonManifests.has(manifestPath) &&
@@ -128,8 +134,12 @@ export function validateEpisode(manifest, captions, {publicDir, manifestPath, ba
       const runtimeSeconds = duration / fps;
       fail(runtimeSeconds >= 145 && runtimeSeconds <= 160,
         `triple-branch-rewind runtime ${runtimeSeconds.toFixed(2)} s is outside the 145–160 s band`);
-      fail(Number.isInteger(manifest.script?.wordCount) && manifest.script.wordCount >= 245 && manifest.script.wordCount <= 265,
-        `triple-branch-rewind spoken word count ${JSON.stringify(manifest.script?.wordCount ?? null)} is outside the 245–265 band`);
+      // Word band recalibrated 2026-11-23 (measured ~1.70 w/s delivery + rewinds +
+      // dread silence + tail): Episodes 001-005 stay on the grandfathered band.
+      const grandfathered = episodeSlug !== undefined && grandfatheredEpisodes.has(episodeSlug);
+      const [wordLow, wordHigh] = grandfathered ? [245, 265] : [225, 245];
+      fail(Number.isInteger(manifest.script?.wordCount) && manifest.script.wordCount >= wordLow && manifest.script.wordCount <= wordHigh,
+        `triple-branch-rewind spoken word count ${JSON.stringify(manifest.script?.wordCount ?? null)} is outside the ${wordLow}–${wordHigh} band${grandfathered ? " (grandfathered)" : ""}`);
     }
     for (const [name, value] of Object.entries(timing)) {
       if (name.endsWith("Frame")) fail(isFrame(value) && value < duration, `${name}: invalid cue frame`);
@@ -193,7 +203,6 @@ export function validateEpisode(manifest, captions, {publicDir, manifestPath, ba
       // narasi.txt ALL-CAPS comic-SFX lint. All-caps exclamations (BRAK!, KLIK!) are
       // cue-sheet sounds; the narrator must never read them. Documented legacy
       // Episodes 001–003 keep their archived scripts and are exempt.
-      const episodeSlug = manifestPath?.split("/")[0];
       if (episodesDir && episodeSlug && !legacyEpisodes.has(episodeSlug)) {
         const narasiPath = resolve(episodesDir, manifestPath.slice(0, -"manifest.json".length), "narasi.txt");
         fail(existsSync(narasiPath), `missing narasi.txt for a studio v2 episode (expected ${relative(episodesDir, narasiPath)})`);
@@ -202,6 +211,22 @@ export function validateEpisode(manifest, captions, {publicDir, manifestPath, ba
           fail(sfxTokens.length === 0,
             `narasi.txt contains ${sfxTokens.length} ALL-CAPS comic SFX token(s) (${[...new Set(sfxTokens)].join(", ")}); route them to the foley cue sheet instead of the narration script`);
         }
+      }
+      // Hook gates for new studio v2 episodes (Episodes 001–005 grandfathered):
+      // the opening hook is at most 6 canonical words, and the brief pre-authorizes
+      // a trim fallback (or states "none needed") so the measured ≤3.0 s gate in
+      // scripts/prepare-narration.mjs always has a documented action to take.
+      if (episodesDir && episodeSlug && !grandfatheredEpisodes.has(episodeSlug)) {
+        const hookWords = countNarrationWords(String(script.hook?.line ?? "")).words;
+        fail(nonempty(script.hook?.line) && hookWords <= 6,
+          `hook ${JSON.stringify(script.hook?.line ?? null)} counts ${hookWords} canonical words; the opening hook must be at most 6 words`);
+        const briefPath = resolve(episodesDir, manifestPath.slice(0, -"manifest.json".length), "brief.md");
+        fail(existsSync(briefPath), `missing brief.md for a studio v2 episode (expected ${relative(episodesDir, briefPath)})`);
+        const fallbackMatch = existsSync(briefPath)
+          ? readFileSync(briefPath, "utf8").match(/\*\*Hook trim fallback\*\* —(.+)/)
+          : null;
+        fail(fallbackMatch !== null && fallbackMatch[1].trim().length > 0,
+          `missing or empty "Hook trim fallback" field in brief.md; pre-authorize the filler-word trim (or state "none needed")`);
       }
     } else {
       if (legacyFactoryCut) {

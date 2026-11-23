@@ -478,7 +478,7 @@ mkdirSync(join(fixturePublic, "fonts"), {recursive: true});
 writeFileSync(join(fixturePublic, "fonts", "theboldfont.ttf"), "");
 
 // A valid studio v2 fixture inside its own root, used by the band and lint tests.
-function studioV2Fixture({slug, durationSec = 150, wordCount = 255, engine = "triple-branch-rewind"}) {
+function studioV2Fixture({slug, durationSec = 150, wordCount = 235, engine = "triple-branch-rewind", hookLine = "Jangan ikut barisan.", hookFallback = "none needed; the 3-word hook measures well under 3.0 s."}) {
   const fps = 30;
   const duration = durationSec * fps;
   const dir = `assets/${slug}`;
@@ -498,7 +498,7 @@ function studioV2Fixture({slug, durationSec = 150, wordCount = 255, engine = "tr
     art: {styleId: "urban-silhouette-noir", rasterAssets: Object.fromEntries(plates.map(plate => [plate, "urban-silhouette-noir"]))},
     script: {
       format: "decision-consequence", engine, wordCount,
-      hook: {at: 0, line: "Jangan ikut barisan."},
+      hook: {at: 0, line: hookLine},
       ending: {at: 22 * spacing - 60, twistAt: 22 * spacing, payoff: "Barisan itu menunggu."},
     },
     scenes: plates.map((plate, i) => ({
@@ -512,13 +512,14 @@ function studioV2Fixture({slug, durationSec = 150, wordCount = 255, engine = "tr
   writeFileSync(join(episodeDir, "manifest.json"), JSON.stringify(manifest));
   writeFileSync(join(episodeDir, "captions.json"), JSON.stringify(captions));
   writeFileSync(join(episodeDir, "narasi.txt"), "Tiga sabuk terpasang. Penumpangnya cuma dua. Klik sabuknya pelan-pelan, tarik tuasnya, bertahanlah.");
+  writeFileSync(join(episodeDir, "brief.md"), `# Brief\n\n- **Hook trim fallback** — ${hookFallback}\n`);
   return manifest;
 }
 
 const validateFixture = (manifest, slug = "fixture-band") =>
   validateEpisode(manifest, captions, {publicDir: fixturePublic, manifestPath: `${slug}/manifest.json`, episodesDir: fixtureEpisodes});
 
-test("triple-branch-rewind v2 enforces the 145–160 s runtime and 245–265 word bands", () => {
+test("triple-branch-rewind v2 enforces the 145–160 s runtime and the recalibrated 225–245 word band", () => {
   const manifest = studioV2Fixture({slug: "fixture-band"});
   assert.doesNotThrow(() => validateFixture(manifest));
   const short = structuredClone(manifest);
@@ -532,18 +533,51 @@ test("triple-branch-rewind v2 enforces the 145–160 s runtime and 245–265 wor
   long.timing.blackoutFrame = long.duration - 1;
   assert.throws(() => validateFixture(long), /161\.00 s is outside the 145–160 s band/);
   const fewWords = structuredClone(manifest);
-  fewWords.script.wordCount = 244;
-  assert.throws(() => validateFixture(fewWords), /word count 244 is outside the 245–265 band/);
+  fewWords.script.wordCount = 224;
+  assert.throws(() => validateFixture(fewWords), /word count 224 is outside the 225–245 band/);
   const manyWords = structuredClone(manifest);
-  manyWords.script.wordCount = 266;
-  assert.throws(() => validateFixture(manyWords), /word count 266 is outside the 245–265 band/);
+  manyWords.script.wordCount = 246;
+  assert.throws(() => validateFixture(manyWords), /word count 246 is outside the 225–245 band/);
   const uncounted = structuredClone(manifest);
   delete uncounted.script.wordCount;
-  assert.throws(() => validateFixture(uncounted), /word count null is outside the 245–265 band/);
+  assert.throws(() => validateFixture(uncounted), /word count null is outside the 225–245 band/);
   // Other v2 engines stay on the loose 90–210 s warning and optional word count.
   const branch = studioV2Fixture({slug: "fixture-branch", engine: "branch-rewind", wordCount: 250, durationSec: 100});
   const result = validateEpisode(branch, captions, {publicDir: fixturePublic, manifestPath: "fixture-branch/manifest.json", episodesDir: fixtureEpisodes});
   assert.deepEqual(result.warnings, [], "branch-rewind v2 stays inside the studio v2 warning envelope");
+});
+
+test("Episodes 001–005 keep the grandfathered 245–265 word band", () => {
+  const grandfathered = studioV2Fixture({slug: "004-tangan-pilot-kemarin", wordCount: 262});
+  assert.doesNotThrow(() => validateFixture(grandfathered, "004-tangan-pilot-kemarin"));
+  const aboveOldBand = structuredClone(grandfathered);
+  aboveOldBand.script.wordCount = 266;
+  assert.throws(() => validateFixture(aboveOldBand, "004-tangan-pilot-kemarin"), /word count 266 is outside the 245–265 band \(grandfathered\)/);
+  const belowOldBand = structuredClone(grandfathered);
+  belowOldBand.script.wordCount = 240;
+  assert.throws(() => validateFixture(belowOldBand, "004-tangan-pilot-kemarin"), /word count 240 is outside the 245–265 band \(grandfathered\)/);
+});
+
+test("new studio v2 hooks are capped at 6 canonical words with a pre-authorized fallback", () => {
+  const manifest = studioV2Fixture({slug: "fixture-hook"});
+  assert.doesNotThrow(() => validateFixture(manifest, "fixture-hook"));
+  const sevenWords = structuredClone(manifest);
+  sevenWords.script.hook.line = "Tiga sabuk terpasang. Penumpangnya cuma tiga orang.";
+  assert.throws(() => validateFixture(sevenWords, "fixture-hook"), /counts 7 canonical words; the opening hook must be at most 6 words/);
+  const sixWords = structuredClone(manifest);
+  sixWords.script.hook.line = "Tiga sabuk terpasang. Penumpangnya cuma dua.";
+  assert.doesNotThrow(() => validateFixture(sixWords, "fixture-hook"));
+  const hyphenated = structuredClone(manifest);
+  hyphenated.script.hook.line = "Baling-baling ekor nyangkut di atas.";
+  assert.doesNotThrow(() => validateFixture(hyphenated, "fixture-hook"), undefined, "hyphenated compounds count as one canonical word");
+  const noFallback = studioV2Fixture({slug: "fixture-hook-nofallback", hookFallback: "   "});
+  assert.throws(() => validateFixture(noFallback, "fixture-hook-nofallback"), /missing or empty "Hook trim fallback" field in brief\.md/);
+  rmSync(join(fixtureEpisodes, "fixture-hook-nofallback", "brief.md"));
+  assert.throws(() => validateFixture(noFallback, "fixture-hook-nofallback"), /missing brief\.md for a studio v2 episode/);
+  // Grandfathered episodes keep the earlier hook shape without the gates.
+  const legacy = studioV2Fixture({slug: "005-sabuk-ketiga", wordCount: 259, hookLine: "Tiga sabuk terpasang. Penumpangnya cuma dua."});
+  rmSync(join(fixtureEpisodes, "005-sabuk-ketiga", "brief.md"), {force: true});
+  assert.doesNotThrow(() => validateFixture(legacy, "005-sabuk-ketiga"), "grandfathered episodes skip the hook gates");
 });
 
 test("narasi.txt ALL-CAPS comic SFX lint fails studio v2 episodes and exempts legacy 001–003", () => {
@@ -563,7 +597,7 @@ test("narasi.txt ALL-CAPS comic SFX lint fails studio v2 episodes and exempts le
     () => validateEpisode(missing, captions, {publicDir: fixturePublic, manifestPath: "fixture-sfx-missing/manifest.json", episodesDir: fixtureEpisodes}),
     /missing narasi\.txt/);
   // Documented legacy episodes keep their archived SFX lines.
-  const legacy = studioV2Fixture({slug: "003-goyangan-dek-enam"});
+  const legacy = studioV2Fixture({slug: "003-goyangan-dek-enam", wordCount: 263});
   writeFileSync(join(fixtureEpisodes, "003-goyangan-dek-enam", "narasi.txt"), cleanNarasi + "\nBRAK! KLIK!\n");
   assert.doesNotThrow(() => validateEpisode(legacy, captions, {...opts, manifestPath: "003-goyangan-dek-enam/manifest.json"}));
 });

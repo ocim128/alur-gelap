@@ -188,21 +188,23 @@ export function buildPlan(config, rawTiming, options = {}) {
   }
 
   // Hook trim fallback: only when the raw hook would exceed its limit, drop the
-  // documented filler word (with its overlong trailing pause).
+  // documented filler word (with its overlong trailing pause). The measured
+  // hook-end gate defaults to 3.0 s when the config omits limitSec.
+  const hookLimitSec = config.hook?.limitSec ?? 3.0;
   const hookFinalIdx = config.hook ? words.findIndex((word) => stemOf(word.word) === config.hook.finalWordStem) : -1;
   if (config.hook) {
     if (hookFinalIdx < 0) throw new Error(`Hook final word "${config.hook.finalWordStem}" not found`);
     const rawHookEndSec = words[hookFinalIdx].end;
     const fallback = config.hook.fallback;
-    if (rawHookEndSec > config.hook.limitSec && !fallback) {
-      throw new Error(`Raw hook ends at ${ms(rawHookEndSec)} s, beyond the ${config.hook.limitSec} s limit, and no fallback is configured`);
+    if (rawHookEndSec > hookLimitSec && !fallback) {
+      throw new Error(`Raw hook ends at ${ms(rawHookEndSec)} s, beyond the ${hookLimitSec} s limit, and no fallback is configured`);
     }
-    if (fallback && rawHookEndSec > config.hook.limitSec) {
+    if (fallback && rawHookEndSec > hookLimitSec) {
       const dropIdx = words.findIndex((word, i) =>
         i > 0 && stemOf(word.word) === fallback.dropWordStem &&
         stemOf(words[i - 1].word) === fallback.afterStem &&
         stemOf(words[i + 1]?.word ?? '') === fallback.beforeStem);
-      if (dropIdx < 0) throw new Error(`Hook fallback word "${fallback.dropWordStem}" (${fallback.afterStem}->${fallback.beforeStem} context) not found; the raw hook (${ms(rawHookEndSec)} s) exceeds the ${config.hook.limitSec} s limit`);
+      if (dropIdx < 0) throw new Error(`Hook fallback word "${fallback.dropWordStem}" (${fallback.afterStem}->${fallback.beforeStem} context) not found; the raw hook (${ms(rawHookEndSec)} s) exceeds the ${hookLimitSec} s limit`);
       const dropped = words[dropIdx];
       const next = words[dropIdx + 1];
       edits.push({name: 'hook-fallback', srcStart: ms(dropped.start), srcEnd: ms(Math.max(dropped.end, next.start - 0.06)), silenceSec: 0});
@@ -379,6 +381,7 @@ export function buildPlan(config, rawTiming, options = {}) {
     panelWordSpans,
     speechEndSec: mappedSpeechEndSec,
     rawHookEndSec: config.hook && hookFinalIdx >= 0 ? mapper(words[hookFinalIdx].end, false) : null,
+    hookLimitSec: config.hook ? hookLimitSec : null,
     hookFallbackApplied: edits.some((edit) => edit.name === 'hook-fallback'),
     tailPadSec,
     releaseFadeSec,
@@ -643,8 +646,8 @@ export async function prepareNarration(configPath, {dryRun = false, force = fals
   const preserveCheck = verifySamplePreserving(inputSamples, assembled, plan);
   console.log(`Sample-preserving check: ${preserveCheck.copiedRanges} copied ranges bit-identical; pad ${preserveCheck.padSec} s of exact zeros; tail hold ${preserveCheck.tailSec} s.`);
 
-  if (plan.rawHookEndSec !== null && config.hook && plan.rawHookEndSec > config.hook.limitSec) {
-    throw new Error(`Mapped hook ends at ${plan.rawHookEndSec} s, beyond the ${config.hook.limitSec} s limit`);
+  if (plan.rawHookEndSec !== null && plan.hookLimitSec !== null && plan.rawHookEndSec > plan.hookLimitSec) {
+    throw new Error(`Mapped hook ends at ${plan.rawHookEndSec} s, beyond the ${plan.hookLimitSec} s measured-hook limit (target <= 3.0 s)`);
   }
   assertLockedGaps(plan);
 
@@ -676,7 +679,8 @@ export async function prepareNarration(configPath, {dryRun = false, force = fals
     preparedDurationSec,
     speechEndSec: plan.speechEndSec,
     hookEndSec: plan.rawHookEndSec,
-    hookWithinLimit: config.hook ? plan.rawHookEndSec <= config.hook.limitSec : null,
+    hookWithinLimit: config.hook ? plan.rawHookEndSec <= plan.hookLimitSec : null,
+    hookLimitSec: plan.hookLimitSec,
     hookFallback: plan.hookFallbackApplied,
     crossfadeSec: FADE_SEC,
     tightening: config.tightening ?? null,

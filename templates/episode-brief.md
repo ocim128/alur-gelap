@@ -7,7 +7,7 @@ Copy this into `episodes/<slug>/brief.md`. Complete each step before starting th
 - **Collection and scenario** — [collection link and independent scenario title. Start with Pilot 01 only.]
 - **Pipeline Version (v2)** — [set manifest `pipelineVersion: 2`; `script.engine: "triple-branch-rewind"` for new scenarios]
 - **Target Runtime** — **145–160 s total** (validator band for `triple-branch-rewind`), including dialogue, deliberate silences and the final tail
-- **Spoken budget** — **245–265 canonical words**: hyphenated compounds such as `baling-baling` count as **one** word (`node scripts/count-narration-words.mjs <narasi.txt>`; record both counts in the brief)
+- **Spoken budget** — **225–245 canonical words** for new scenarios (recalibrated 2026-11-23: at the measured ~1.70 words/s delivery this is 132–144 s of speech, leaving room for the rewinds, dread silence and tail without crushing pauses; Episodes 001–005 keep the grandfathered 245–265 band). Hyphenated compounds such as `baling-baling` count as **one** word (`node scripts/count-narration-words.mjs <narasi.txt>`; record both counts in the brief)
 - **Setting and opening state** — [fresh location, immediate trap, stakes or timer, and objects available at the start]
 - **Protagonist silhouette** — [fresh identity, shape and clothing. Link the scenario's character sheet when available.]
 - **Self-contained resolution** — [how this video resolves its puzzle]
@@ -27,8 +27,38 @@ Precedence is fixed and runs one way:
 
 - **Narrative engine** — **Triple-Rewind** (`triple-branch-rewind`): three escalating bad-branch loops, then the winning execution under pressure. `earned-consequence` pressure may add cost inside a loop.
 - **Core Dilemma & Bad-Decision Payoff** — [normal instinct, lethal outcome and planted physical cause. Name the harder escape and its complication.]
-- **Hook rule** — the opening line states this scenario's specific danger or constraint, is **at most 6 words**, and must measure **≤ 3.0 s** in the raw take. **Pre-authorize the trim fallback here**: name the exact filler word to drop (and its neighboring words as context), so Agent 02 may cut it from the prepared track without a regeneration round-trip if the measured hook exceeds 3.0 s. Example: fallback = drop `itu` in “Tangan di tuas itu bukan tanganmu.” Never speed the voice to fit.
+- **Hook rule** — the opening line states this scenario's specific danger or constraint, is **at most 6 canonical words** (hyphenated compounds = 1), and must measure **≤ 3.0 s** in the raw take (`scripts/prepare-narration.mjs` enforces this; its default limit is 3.0 s). Never speed the voice to fit. The generic two-sentence warning shape (“…Salah gerak, tamat.”) is forbidden as a hook template.
+- **Hook trim fallback** — [name the exact filler word to drop and its neighboring-word context, so Agent 02 can cut it from the prepared track without a regeneration round-trip if the measured hook exceeds 3.0 s; or write `none needed` when the hook comfortably fits]. Example: drop `itu` in “Tangan di tuas itu bukan tanganmu.” (context: after `dituas`, before `bukan`). *This field is required and validated non-empty.*
 - **Spoken script** — [link `narasi.txt` and both word counts]. Use Bahasa Bayi with short everyday Indonesian sentences. Let the clues, action and silence set the word count. Keep all-caps comic SFX (`BRAK!`, `KLIK!`) out of the script — they live in the cue sheet.
+
+### Scripting rules (from the Episodes 001–005 narrative audit)
+
+- **3-Chunk Sensory Opening (P01–P05).** Weave the setup into three connected beats — *Immediate Cage → Uncanny Anomaly → Physical Constraint* — not an eight-item prop inventory dump. [Cage]: … [Anomaly]: … [Constraint]: …
+- **Loop grammar.** Each loop names its **decision owner and human motivation** (grounded panic, trust, guilt, pride — never three identical `Instingmu:` labels); every action and consequence carries an explicit subject; each failed loop ends cleanly on **`Tamat.` + paragraph break** so the TTS release leaves a natural gap for the 0.4 s rewind.
+- **Chronological SFX-anchor syntax.** A sentence anchoring a foley transient carries **one action only**, in *prep → action → isolated sound beat* order. Never place a qualifying clause (e.g. “Jangan ditekan.”) between the sound trigger and its reaction.
+- **Motif, human beat, earned close.** One recurring motif phrase paid off **≥ 3×** (last use recontextualizes it); one brief human warmth/stake beat inside P01–P05; a motif-earned closing line — do not default verbatim to “Kamu berhasil bertahan hidup.” Short diegetic `voice-sfx` lines (caption-labeled) add character color outside the word cap.
+- **Entity Rule Boundary** — [what the threat/entity can do (its rule)]: … **The defect that traps it** [what it cannot do]: … The winning escape exploits this stated defect.
+- **Spatial vectors** — [only when physics/direction drives the climax: name the direction, origin and target for each climax-critical movement (bank angle, door side, rotor side, gravity)]: …
+
+### Loop Learning Map
+
+One distinct fact per loop; if two loops teach the same fact, merge or differentiate them.
+
+| Loop | Distinct fact revealed (what the survivor now knows) |
+| --- | --- |
+| 1 | |
+| 2 | |
+| 3 | |
+
+### Brief-closed cold-read audit (log before handoff)
+
+| Question | Loop 1 | Loop 2 | Loop 3 |
+| --- | --- | --- | --- |
+| WHO acts (explicit subject)? | | | |
+| WHAT does it trigger? | | | |
+| WHY is it fatal? | | | |
+
+Stranger test: can someone who has not read this brief explain, in one sentence, why the final move worked? [their sentence]. Pronoun audit: every plot-bearing `dia` / `itu` / `yang` / `dua-duanya` has exactly one possible referent on a single listen. [checked / fixed list].
 
 ### Three-Loop Grouping
 
@@ -42,11 +72,11 @@ Precedence is fixed and runs one way:
 
 Fill one row per loop. State what the world does when the tape snaps back.
 
-| Loop | Resets to (decision point) | Protagonist knowledge carried forward | Environment state across loops | Panels | Fatal consequence shown |
-| --- | --- | --- | --- | --- | --- |
-| 1 | [the exact choice point the rewind returns to] | [what the protagonist now knows that they did not before] | [resets identically / degrades: describe what persists, e.g. fuel still lower] | P06–P07 | [outcome in red/amber] |
-| 2 | [decision point] | [new knowledge] | [reset / degrade] | P08–P09 | [outcome] |
-| 3 | [decision point] | [new knowledge] | [reset / degrade] | P10–P11 | [outcome] |
+| Loop | Resets to (decision point) | Decision owner + human motivation | Protagonist knowledge carried forward | Environment state across loops | Panels | Fatal consequence shown |
+| --- | --- | --- | --- | --- | --- | --- |
+| 1 | [the exact choice point the rewind returns to] | [WHO decides, and the grounded motivation: panic / trust / guilt / pride] | [what the protagonist now knows that they did not before] | [resets identically / degrades: describe what persists, e.g. fuel still lower] | P06–P07 | [outcome in red/amber] |
+| 2 | [decision point] | [WHO + motivation] | [new knowledge] | [reset / degrade] | P08–P09 | [outcome] |
+| 3 | [decision point] | [WHO + motivation] | [new knowledge] | [reset / degrade] | P10–P11 | [outcome] |
 
 ### `branchRewinds` — **PROVISIONAL until measured**
 
@@ -68,11 +98,11 @@ The frame numbers below come from this brief, **not from measured audio**. Agent
 
 ### Fair-Play Clue Ledger
 
-Complete the ledger for every physical cause of the bad outcome and every object or detail used in the escape. Plant each one naturally before the decision or danger. Let the viewer see it or pick it up casually before revealing its purpose.
+Complete the ledger for every physical cause of the bad outcome and every object or detail used in the escape. Plant each one naturally before the decision or danger. Let the viewer see it or pick it up casually before revealing its purpose. The inference column is the audit: if the viewer cannot make the inference from the evidence alone, the row is not yet a clue.
 
-| Clue ID | Planted at Panel/Line (Setup) | How It Pays Off (Bad Outcome or Smart Escape) |
-| --- | --- | --- |
-| [ID and physical detail] | [Opening panel and/or line where the clue is readable] | [Outcome or escape step that depends on it] |
+| Clue ID | Planted at Panel/Line (Setup) | Viewer Inference (evidence → inference → enables escape) | How It Pays Off (Bad Outcome or Smart Escape) |
+| --- | --- | --- | --- |
+| [ID and physical detail] | [Opening panel and/or line where the clue is readable] | [observable evidence → what the viewer infers → how it enables the escape] | [Outcome or escape step that depends on it] |
 
 ## 2. Lock one ShortZ master
 

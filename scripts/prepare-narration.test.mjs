@@ -152,6 +152,11 @@ test('a hook beyond its limit without a configured fallback fails the plan', () 
   const satisfiedHook = {...config, hook: {limitSec: 4.0, finalWordStem: 'tanganmu', fallback: config.hook.fallback}};
   const plan = buildPlan(satisfiedHook, timing);
   assert.equal(plan.hookFallbackApplied, false, 'fallback is skipped when the raw hook already fits');
+  const defaulted = {...config, hook: {finalWordStem: 'tanganmu', fallback: config.hook.fallback}};
+  const defaultedPlan = buildPlan(defaulted, timing);
+  assert.equal(defaultedPlan.hookLimitSec, 3.0, 'the measured hook limit defaults to 3.0 s');
+  assert.equal(defaultedPlan.hookFallbackApplied, true, 'the default 3.0 s gate still authorizes the fallback trim');
+  assert.throws(() => buildPlan({...defaulted, hook: {finalWordStem: 'tanganmu'}}, timing), /no fallback is configured/, 'the default limit still blocks a raw hook without a fallback');
 });
 
 test('reconciliations are punctuation-tolerant, context-scoped and assert counts', () => {
