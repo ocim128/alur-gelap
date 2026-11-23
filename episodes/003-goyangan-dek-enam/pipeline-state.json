@@ -8,19 +8,67 @@
     "notes": "Single-speaker Investigator narration generated via ShortZ CLI (gemini-cloud, gemini-3.8-flash-tts, custom voice voice_71a5a701-796e-421d-840e-0adc00b0816a) from narasi.txt (263 words, raw master 151.125 s). Owner explicitly approved narration take. Continuous PCM sample preparation via prepare-audio.mjs tightened 13 non-protected dead-air gaps to 0.42 s (saving 5.090 s) at 1.0x speed, and spliced 3 deliberate story pauses: 0.400 s branchRewind gap (70.400–71.520 s), 1.600 s post-rewind dread silence (75.800–77.400 s), and 2.000 s post-pin dread silence (135.460–138.120 s). Preserved un-tightened execution and impact beats (110.200–117.280 s). Mandatory pronunciation check completed: reconciled 33 Whisper ASR phonetic/formatting artifacts in narration-timestamps.json against approved narasi.txt (including oleg->oleng, ngedot->nyedot, kecilah->ke celah, kenangan->genangan, berak->BRAK!, Klik->KLIK!, Gak->nggak, phajar->fajar). Literal comic SFX (BRAK! and KLIK!) routed to Agent 01 and mapped to cue-sheet anchors. Complete cue-sheet sound handoff delivered with 10 pre-mastered SFX assets under public/assets/003-goyangan-dek-enam/sfx/ and episodes/003-goyangan-dek-enam/sfx/ (-1.0 dBFS sample peak for one-shots, -12.0 dBFS for continuous bed, dklon CC BY 3.0 attribution recorded for lifeboat-impact.wav). Final blackout-hit.wav (0.350 s 50 Hz sine) scheduled at 153.500–153.850 s with 150 ms silent margin before 154.000 s cut to black, flagged for Agent 04 to resolve and measure in finished MP4 export. 100% strictly monotonic PTS verified across all 6,295 MP3 packets."
   },
   "images": {
-    "status": "pass",
-    "notes": "Owner approved proceeding with the current selected image batch on 2026-11-22 after the documented image-stage failure. This approval does not assert the recorded P04 or P19?P23 visual defects were corrected. Previous assessment: Agent 05-directed phone-size and full-size image recheck: P04 hoist cable ends in a loose ring; P19/P21 do not establish compression against the established side wall; P21-P23 change wall geography and do not consistently carry the P20 inserted locking pin. P04 and original P19-P22 had two correction passes plus owner-directed four-hand alternatives, and are routed to the human orchestrator. P23 used its remaining second correction; candidate remains unselected because the entity acquired hair and the locking pin/fixed support are unclear. Selected plates were preserved and contact sheets rebuilt. Further remedy requires orchestrator direction under the retry policy. See sources/prompts.md and sources/master-batch-01-p23-retry-02.json."
+    "status": "fail",
+    "notes": "Owner approved proceeding with the current selected image batch on 2026-11-22 after the documented image-stage failure. This approval does not assert the recorded P04 or P19?P23 visual defects were corrected. Previous assessment: Agent 05-directed phone-size and full-size image recheck: P04 hoist cable ends in a loose ring; P19/P21 do not establish compression against the established side wall; P21-P23 change wall geography and do not consistently carry the P20 inserted locking pin. P04 and original P19-P22 had two correction passes plus owner-directed four-hand alternatives, and are routed to the human orchestrator. P23 used its remaining second correction; candidate remains unselected because the entity acquired hair and the locking pin/fixed support are unclear. Selected plates were preserved and contact sheets rebuilt. Further remedy requires orchestrator direction under the retry policy. See sources/prompts.md and sources/master-batch-01-p23-retry-02.json.",
+    "technicalVerdict": "fail",
+    "ownerDisposition": "approved_with_exceptions",
+    "handoffAllowed": true,
+    "exceptions": [
+      {
+        "panel": "P04",
+        "defect": "present_unreadable_at_phone_size",
+        "evidence": "Selected plate cable ends in a free ring; owner authorized the existing batch despite this failure.",
+        "downstreamVerify": "Agent 04 and Agent 05 report the actual compressed view; further correction requires orchestrator direction."
+      },
+      {
+        "panel": "P19-P23",
+        "defect": "present_conflicting_state",
+        "evidence": "Impact contact, side-wall geography and the fixed locking pin are not consistently readable; owner authorized this batch despite the recorded failure.",
+        "downstreamVerify": "Agent 04 and Agent 05 inspect the compressed cut; preserve the owner-directed four hands and route additional coverage."
+      }
+    ]
   },
   "render": {
     "status": "fail",
-    "notes": "Revision v3 rendered and compressed at out/003-goyangan-dek-enam/Skenario03GoyanganDekEnam-revision-v3-master_compressed.mp4 (158.000 s, -14.1 LUFS / -1.9 dBTP). Encoded verification passed for Rec.709, impact and blackout sync, caption corrections and deliberate silence; hening was rejoined before the 135.800-137.800 s silence without shifting subsequent narration. The owner-selected plates remain approved, but P04/P12 independent sway, P13 gravity contrast, the actual pre-impact swing, P04 hoist connection and P19-P23 wall/contact/pin continuity remain unresolved. P16 uses a water-motion proxy needing normal-speed phone review. Exact missing states are routed to Agent 03 and the human orchestrator in agent03-handoff.md. Full listening, rights checks and independent QA remain outstanding."
+    "notes": "Owner directed assembly after Agent 03 work. Inspection-only Skenario03MotionCoverageTest output out/003-goyangan-dek-enam/Skenario03-motion-candidate-v5-master_compressed.mp4 SHA-256 ce8f1b5324d52efc4bb0cdfd8e27cf64c435bd2ed41aa41cebd940650b83328f. P12 fused jacket candidate and P13 counter-rolling figure are approximate; P04 and cable remain missing, P18 changes boat state without continuous travel. Four-handed P19 stays at frame 3518; accepted narration and original plates retained. Standard compression raw-Y warning; source transfer/primaries unspecified. Encoded measurements passed, phone-speed playback and listening not done, rights unverified. listening review: none. See motion-candidate-v5-handoff.md. Owner approved this v5 handoff on 2026-11-23 after the documented exceptions were presented; technical findings, raw-Y warning and listening review: none remain unchanged. Owner subsequently watched and accepted this v5 MP4 as the completed delivery on 2026-11-23; see completion. No fresh Agent 05 QA pass was run.",
+    "technicalVerdict": "fail",
+    "ownerDisposition": "approved_with_exceptions",
+    "handoffAllowed": true,
+    "exceptions": [
+      {
+        "panel": "P04/P12",
+        "defect": "missing_or_unregistered_motion_coverage",
+        "evidence": "P04 has no new motion layers; P12 jackets use an approximate fused group and the cable layer is unregistered.",
+        "downstreamVerify": "Agent 05 checks the actual v5 playback and reports remaining readability and continuity limits."
+      },
+      {
+        "panel": "P13",
+        "defect": "unverified_figure_registration",
+        "evidence": "The candidate figure is scaled and counter-rotated; exact identity and foot registration are unverified.",
+        "downstreamVerify": "Agent 05 checks the candidate at phone size and reports identity and grounding."
+      },
+      {
+        "panel": "P18-P19",
+        "defect": "noncontinuous_boat_travel",
+        "evidence": "A pre-impact still changes the boat position without a continuous path and alters hull and cable geometry; P19 starts at frame 3518.",
+        "downstreamVerify": "Agent 05 checks the release-to-impact sequence without treating the four-handed reveal or earlier owner exceptions as errors."
+      }
+    ]
   },
   "audit": {
     "status": "pending",
-    "notes": ""
+    "notes": "No fresh Agent 05 QA pass was run on v5. The prior v4 FAIL is historical and retained; the owner watched and accepted v5 as completed on 2026-11-23. No Agent 05 routing is requested. listening review: none."
   },
   "publish": {
     "status": "pending",
     "notes": "No publishing requested or authorized."
+  },
+  "completion": {
+    "status": "completed",
+    "ownerDisposition": "approved",
+    "finalVideo": "out/003-goyangan-dek-enam/Skenario03-motion-candidate-v5-master_compressed.mp4",
+    "sha256": "ce8f1b5324d52efc4bb0cdfd8e27cf64c435bd2ed41aa41cebd940650b83328f",
+    "ownerReviewDate": "2026-11-23",
+    "notes": "Owner watched and accepted the v5 MP4 as the completed delivery. No fresh Agent 05 QA pass was run on v5. Earlier technical findings and exceptions remain recorded; listening review: none."
   }
 }

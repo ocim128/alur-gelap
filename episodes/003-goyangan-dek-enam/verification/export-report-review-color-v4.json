@@ -1,0 +1,84 @@
+{
+  "video": "out\\003-goyangan-dek-enam\\Skenario03GoyanganDekEnam-review-color-v4-2026-11-23.mp4",
+  "durationSec": 158.0,
+  "silences": {
+    "postRewind": {
+      "startSec": 75.8,
+      "endSec": 77.4,
+      "peakDbfs": -61.13,
+      "rmsDbfs": -94.93,
+      "interiorPeakDbfs": -300.0,
+      "interiorEdgeTrimMs": 10.0
+    },
+    "postPin": {
+      "startSec": 135.8,
+      "endSec": 137.8,
+      "peakDbfs": -79.16,
+      "rmsDbfs": -118.68,
+      "interiorPeakDbfs": -300.0,
+      "interiorEdgeTrimMs": 10.0
+    },
+    "blackoutLead": {
+      "startSec": 153.85,
+      "endSec": 154.0,
+      "peakDbfs": -73.2,
+      "rmsDbfs": -96.43,
+      "interiorPeakDbfs": -106.91,
+      "interiorEdgeTrimMs": 10.0
+    }
+  },
+  "errors": [],
+  "restoredWordRelease": {
+    "originalSourceSec": 137.46,
+    "restoredSec": 135.46,
+    "durationSec": 0.26,
+    "encodedCorrelation": 0.8109
+  },
+  "captionText": {
+    "doorPhrasePresent": true,
+    "tamatPeriodPresent": true
+  },
+  "blackoutAudio": {
+    "frame": 4620,
+    "visualSec": 154.0,
+    "onsetSec": 154.000167,
+    "offsetMs": 0.167,
+    "threshold": 0.001
+  },
+  "impactAudio": {
+    "anchorSec": 117.28,
+    "detectedSec": 117.28,
+    "offsetMs": 0.0,
+    "normalizedCorrelation": 0.7998
+  },
+  "visualFrames": [
+    {
+      "frame": 3517,
+      "meanLuma": 54.31
+    },
+    {
+      "frame": 3518,
+      "meanLuma": 163.27
+    },
+    {
+      "frame": 3519,
+      "meanLuma": 162.71
+    },
+    {
+      "frame": 3520,
+      "meanLuma": 163.76
+    },
+    {
+      "frame": 3521,
+      "meanLuma": 61.22
+    },
+    {
+      "frame": 4619,
+      "meanLuma": 29.83
+    },
+    {
+      "frame": 4620,
+      "meanLuma": 0.0
+    }
+  ]
+}

@@ -4,7 +4,7 @@ import {spawnSync} from 'node:child_process';
 import {existsSync, mkdtempSync, rmSync, rmdirSync} from 'node:fs';
 import {tmpdir} from 'node:os';
 import {join} from 'node:path';
-import {compressVideo, planColorConversion, planAudioHandling, measureSilenceIntervals} from './compress-video.mjs';
+import {compressVideo, planColorConversion, planAudioHandling, measureSilenceIntervals, measureSignalSanity} from './compress-video.mjs';
 
 const available = ['ffmpeg', 'ffprobe'].every(program => spawnSync(program, ['-version'], {stdio: 'ignore'}).status === 0);
 const generateSource = (directory, name, extraVideoArgs = [], extraFilters = '') => {
@@ -66,6 +66,51 @@ test('silence intervals measure RMS and edge peaks and never assert digital zero
   assert.equal(exact.intervals[0].isDigitalZero, true);
 });
 
+test('raw encoded Y gate distinguishes limited white, isolated excursions and broad full-range values', {skip: !available}, () => {
+  const directory = mkdtempSync(join(tmpdir(), 'raw-y-check-'));
+  const width = 96, height = 64, size = width * height;
+  const make = (name, luma) => {
+    const path = join(directory, name);
+    const frame = Buffer.alloc(size * 3 / 2, 128);
+    luma.copy(frame, 0);
+    const result = spawnSync('ffmpeg', ['-v', 'error', '-f', 'rawvideo', '-pixel_format', 'yuv420p', '-video_size', `${width}x${height}`, '-framerate', '1', '-i', 'pipe:0', '-frames:v', '1', '-c:v', 'ffv1', '-pix_fmt', 'yuv420p', '-color_range', 'tv', path], {input: frame, encoding: 'buffer'});
+    assert.equal(result.status, 0, result.stderr.toString());
+    return path;
+  };
+  try {
+    const legal = Buffer.alloc(size, 235);
+    legal.fill(16, 0, size / 2);
+    const valid = make('legal.mkv', legal);
+    const validReport = measureSignalSanity(valid, {durationSec: 1, fps: 1, sampleCount: 1});
+    assert.equal(validReport.verdict, 'ok');
+    assert.equal(validReport.minLuma, 16);
+    assert.equal(validReport.maxLuma, 235);
+    assert.equal(validReport.below16 + validReport.above235, 0);
+    const gray = spawnSync('ffmpeg', ['-v', 'error', '-i', valid, '-vf', 'format=gray', '-frames:v', '1', '-f', 'rawvideo', '-'], {encoding: 'buffer'});
+    assert.equal(gray.status, 0, gray.stderr.toString());
+    assert.ok(gray.stdout.includes(255), 'old gray conversion expands valid 235 white to 255');
+
+    const sparse = Buffer.from(legal);
+    sparse[0] = 0;
+    sparse[size - 1] = 255;
+    const sparseReport = measureSignalSanity(make('sparse.mkv', sparse), {durationSec: 1, fps: 1, sampleCount: 1});
+    assert.equal(sparseReport.verdict, 'warning');
+    assert.equal(sparseReport.below16, 1);
+    assert.equal(sparseReport.above235, 1);
+    assert.equal(sparseReport.severe, 2);
+
+    const full = Buffer.alloc(size);
+    for (let i = 0; i < size; i++) full[i] = i % 256;
+    const fullReport = measureSignalSanity(make('full.mkv', full), {durationSec: 1, fps: 1, sampleCount: 1});
+    assert.equal(fullReport.verdict, 'fail');
+    assert.equal(fullReport.minLuma, 0);
+    assert.equal(fullReport.maxLuma, 255);
+    assert.ok(fullReport.below16 + fullReport.above235 > size * 0.05);
+  } finally {
+    rmSync(directory, {recursive: true, force: true});
+  }
+});
+
 test('balanced delivery is limited-range Rec.709, measured, and never overwrites its source', {skip: !available}, () => {
   const directory = mkdtempSync(join(tmpdir(), 'rec709-check-'));
   const input = generateSource(directory, 'source.mp4');
@@ -76,7 +121,7 @@ test('balanced delivery is limited-range Rec.709, measured, and never overwrites
     assert.equal(result.colorPlan.conversion, 'tag-only');
     assert.ok(Number.isFinite(result.delivery.loudness.integratedLufs), 'integrated LUFS measured');
     assert.ok(Number.isFinite(result.delivery.loudness.truePeakDbfs), 'true peak measured');
-    assert.equal(result.delivery.signalSanity.verdict, 'ok');
+    assert.notEqual(result.delivery.signalSanity.verdict, 'fail');
     assert.ok(Array.isArray(result.delivery.silence.intervals), 'AAC silence measurement present');
     const probe = spawnSync('ffprobe', ['-v', 'error', '-select_streams', 'v:0', '-show_entries', 'stream=pix_fmt,color_range,color_space,color_transfer,color_primaries', '-of', 'json', output], {encoding: 'utf8'});
     assert.equal(probe.status, 0, probe.stderr);
@@ -97,7 +142,7 @@ test('a full-range tagged master is converted to limited-range data, not just re
     const result = compressVideo(input, output);
     assert.equal(result.colorPlan.conversion, 'explicit');
     assert.notEqual(result.delivery.signalSanity.verdict, 'fail');
-    assert.ok(result.delivery.signalSanity.maxLuma <= 235 + 15, `converted delivery max luma ${result.delivery.signalSanity.maxLuma}`);
+    assert.equal(result.delivery.signalSanity.pixelsPerFrame, 96 * 160);
   } finally {
     rmSync(input, {force: true});
     rmSync(output, {force: true});

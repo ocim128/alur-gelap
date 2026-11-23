@@ -1,4 +1,4 @@
-import {AbsoluteFill} from 'remotion';
+import {AbsoluteFill, staticFile} from 'remotion';
 import {StudioV2Player, type StudioV2OverlayContext} from './StudioV2Player';
 import {FlashOverlay, ImpactMicroShake, SilhouetteAtmosphereLayer} from './components/StudioV2';
 import {DeckGravityClues} from './components/DeckGravityClues';
@@ -23,4 +23,30 @@ const UnderwayAtmosphere = ({frame, fps, scene}: StudioV2OverlayContext) => {
 
 export const Skenario03GoyanganDekEnam = () => <ImpactMicroShake contactFrame={manifest.timing.impactFrame} durationFrames={10} jitterPx={5} pushPx={8}>
   <StudioV2Player manifest={manifest} captions={captions} plateTransform={({frame, fps, scene}) => scene.id === 'P13' ? '' : `rotate(${2.4 * Math.sin(2 * Math.PI * frame / (fps * 5))}deg)`} plateOverlay={DeckGravityClues} overlay={UnderwayAtmosphere} />
+</ImpactMicroShake>;
+
+// Non-final inspection cut using Agent 03's incomplete motion candidates. The
+// original composition and selected plates stay intact; these candidates must
+// not be represented as a passed image handoff or a continuous boat swing.
+const coverage = 'assets/003-goyangan-dek-enam/motion-coverage-attempt-01/';
+const testManifest = {...manifest, scenes: manifest.scenes.map(scene => ({...scene,
+  plate: scene.id === 'P12' ? `${coverage}p12-clean.png` : scene.id === 'P13' ? `${coverage}p13-clean.png` : scene.plate,
+}))};
+const MotionCandidateOverlay = (context: StudioV2OverlayContext) => {
+  const {scene, frame, fps} = context;
+  const roll = 2.4 * Math.sin(2 * Math.PI * frame / (fps * 5));
+  if (scene.id === 'P12') return <svg viewBox="0 0 941 1672" preserveAspectRatio="none" style={{position:'absolute',width:'100%',height:'100%'}}>
+    {/* Fused jackets: approximate group placement and pivot, not verified registration. */}
+    <g transform={`rotate(${6 * Math.sin(2 * Math.PI * frame / (fps * 5))} 375 585)`}><image href={staticFile(`${coverage}p12-vests.png`)} x="182" y="465" width="405" height="719" /></g>
+  </svg>;
+  if (scene.id === 'P13') return <svg viewBox="0 0 941 1672" preserveAspectRatio="none" style={{position:'absolute',width:'100%',height:'100%'}}>
+    {/* Counter-roll keeps the candidate upright; its exact silhouette/foot registration is not verified. */}
+    <g transform={`rotate(${-roll} 470.5 836)`}><image href={staticFile(`${coverage}p13-entity.png`)} x="177" y="503" width="451" height="802" /></g>
+  </svg>;
+  if (scene.id === 'P18' && frame >= 3446) return <img src={staticFile(`${coverage}p18-travel-retry.png`)} style={{position:'absolute',width:'100%',height:'100%',objectFit:'cover'}} />;
+  return <DeckGravityClues {...context} />;
+};
+
+export const Skenario03MotionCoverageTest = () => <ImpactMicroShake contactFrame={manifest.timing.impactFrame} durationFrames={10} jitterPx={5} pushPx={8}>
+  <StudioV2Player manifest={testManifest} captions={captions} plateTransform={({frame, fps}) => `rotate(${2.4 * Math.sin(2 * Math.PI * frame / (fps * 5))}deg)`} plateOverlay={MotionCandidateOverlay} overlay={UnderwayAtmosphere} />
 </ImpactMicroShake>;

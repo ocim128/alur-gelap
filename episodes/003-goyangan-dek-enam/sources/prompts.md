@@ -37,3 +37,7 @@ The selected study has front, side and back views and legible feet; the owner su
 5. **Indonesian text — pass at full-size inspection, phone readability still requires playback review.** P06's warning is spelled `BAHAYA PUSARAN BALING-BALING` / `JANGAN MELOMPAT SAAT KAPAL BERLAYAR`; the pictogram is clear on the contact sheet. No newly generated text or timed effects were selected.
 
 **Routing:** The orchestrator should specify an authorized remedy for P04 and P19–P23, including whether further scoped retries or another directed method may be used, and lock a single boat/cable/wheel/pin arrangement before further sequence changes. No retry-limit waiver or assembly approval is inferred from this handoff.
+
+
+## Motion-coverage attempts ? 23 November 2026
+Owner directed coverage for P04/P12/P13/P18?P19 while preserving selected plates and recorded retry limits. P04 was already exhausted and routed to orchestrator. P12 prior one retry plus one new multi-component correction is exhausted; P13 and P18 each received two scoped attempts. The P12 jacket/cable layers are not registered individual pivotable props; P13 figure extraction is redrawn/unregistered; P18 travel retry has a continuity mismatch and is only an inspection candidate. No approved replacement or completed motion claimed. Full source hashes, paths, rough unvalidated anchors and next steps are in [motion coverage handoff](../agent03-motion-coverage-handoff.md) and [source record](motion-coverage-attempt-01.json). Existing image exception and four-hand reveal remain intact.

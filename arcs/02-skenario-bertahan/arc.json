@@ -32,15 +32,19 @@
     {
       "episodeNumber": 3,
       "workingTitle": "Goyangan Dek Enam",
-      "status": "in-progress",
+      "status": "completed",
       "engine": "branch-rewind",
-      "finalVideo": "out/003-goyangan-dek-enam/Skenario03GoyanganDekEnam-revision-v3-master_compressed.mp4",
+      "finalVideo": "out/003-goyangan-dek-enam/Skenario03-motion-candidate-v5-master_compressed.mp4",
       "durationSec": 158.0,
       "setting": "Outdoor promenade Deck 6 on a cruise ship in the middle of the ocean during a midnight storm.",
       "mechanics": "The survivor is trapped on the promenade with the cabin door padlocked from outside. Jumping overboard triggers lethal propeller suction. The survivor detects the entity because all hanging gear sways with the ship roll while the entity stands rigid against gravity, then releases the manual lifeboat winch brake at peak roll to crush and pin the entity with a 3-ton lifeboat, locking it with a steel pin until dawn.",
       "briefPath": "episodes/003-goyangan-dek-enam/brief.md",
       "scriptPath": "episodes/003-goyangan-dek-enam/narasi.txt",
-      "pipelineStatePath": "episodes/003-goyangan-dek-enam/pipeline-state.json"
+      "pipelineStatePath": "episodes/003-goyangan-dek-enam/pipeline-state.json",
+      "ownerDisposition": "approved",
+      "ownerReviewDate": "2026-11-23",
+      "finalVideoSha256": "ce8f1b5324d52efc4bb0cdfd8e27cf64c435bd2ed41aa41cebd940650b83328f",
+      "completionNotes": "Owner watched and accepted v5 as completed. No fresh Agent 05 QA pass was run on v5; prior technical findings and exceptions remain recorded in the episode pipeline state."
     },
     {
       "episodeNumber": 4,

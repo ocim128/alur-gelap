@@ -1,5 +1,9 @@
 # Agent 04 assembly handoff — Goyangan Dek Enam
 
+> **Final owner completion, 23 November 2026:** The owner watched and accepted [v5](motion-candidate-v5-handoff.md) as the completed MP4. No fresh Agent 05 QA pass was run on v5. The sections below preserve earlier production and audit history.
+
+> **Fresh audit follow-up, 23 November 2026:** The master named immediately below was not found at that exact path. A differently named recovered master has since been located, but its relationship to the historical v3 encode has not been proven. A new, explicitly converted **partial review copy**, its hashes, reproducible measurements, unresolved coverage and listening/rights status are recorded in [review-color-v4-handoff.md](review-color-v4-handoff.md). The visual blockers remain open; this is not a completed repair or a QA pass. The rest of this file preserves earlier production claims and history.
+
 **Revised delivery:** `out/003-goyangan-dek-enam/Skenario03GoyanganDekEnam-revision-v3-master_compressed.mp4`; its retained lossless-audio master is `out/003-goyangan-dek-enam/Skenario03GoyanganDekEnam-revision-v3-master.mp4`. The previously named master `out/003-goyangan-dek-enam/Skenario03GoyanganDekEnam-master.mp4` is not present; its pre-revision assembly audio is preserved at `episodes/003-goyangan-dek-enam/sources/before-audit-revision/assembly-mix.wav`. Composition `Skenario03GoyanganDekEnam`, 1080 × 1920, 30 fps, 4,740 frames / 158.000 s. The extra four seconds after the 154.000 s cut provide the brief's black tail. The owner approved proceeding with the selected 24 plates on 22 November 2026; the prior image audit's P04 hoist connection and P19–P23 wall/contact/pin findings remain visible concerns, not claims of repaired art. No selected plate or accepted narration source was overwritten.
 
 ## Timeline and sound

@@ -1,0 +1,114 @@
+{
+  "p12-clean": {
+    "path": "public/assets/003-goyangan-dek-enam/motion-coverage-attempt-01/p12-clean.png",
+    "sha256": "c065df31f5c2e6b4f7528e8b980d254fbaac4c562403cdd49eb4f662009e6645",
+    "generated_source": "C:/Users/user/.codex/generated_images/01a20449-25bd-70e3-8ebf-0679ede9bbc5/exec-111b7adf-29cf-4d0e-8f5f-86991f5f165f.png",
+    "input_plate": "public/assets/003-goyangan-dek-enam/master-batch-01/p12.webp",
+    "tool": "built-in imagegen",
+    "selection": "candidate for inspection, not assembly-approved",
+    "prompt": "Edit input image 1, preserving its camera position, dimensions, ship wall, railing, pulley, boat, light, texture and perspective exactly. Remove the four hanging life jackets and the suspended diagonal cable, reconstruct only their unobstructed backing wall and deck so separate objects can pivot over it. Keep existing hooks and fixed pulley/mount points. Clean neutral still, no motion effects. Images 2?4 are style references only.",
+    "style_references": [
+      "docs/style-anchor/shot-a-rhd-mirror.webp",
+      "docs/style-anchor/shot-b-minimarket-doors.webp",
+      "docs/style-anchor/shot-c-underpass-exit.webp"
+    ]
+  },
+  "p12-vests": {
+    "path": "public/assets/003-goyangan-dek-enam/motion-coverage-attempt-01/p12-vests.png",
+    "sha256": "598203b5bdcbc1612020657220559555feca9c5f3a80e5f632af5f9b34c38e61",
+    "generated_source": "C:/Users/user/.codex/generated_images/01a20449-25bd-70e3-8ebf-0679ede9bbc5/exec-5ec51f3c-43cd-417a-859d-f7695dd816c8.png",
+    "input_plate": "public/assets/003-goyangan-dek-enam/master-batch-01/p12.webp",
+    "tool": "built-in imagegen",
+    "selection": "candidate for inspection, not assembly-approved",
+    "prompt": "Extract from input image 1 the four orange hanging life jackets exactly as depicted, with black straps and silhouettes, on transparent background. Retain their positions and scale in a full-frame transparent canvas; no wall, hooks, shadows, lettering or extra objects. Preserve the individual tops at their hook positions. Images 2?4 are style references only.",
+    "style_references": [
+      "docs/style-anchor/shot-a-rhd-mirror.webp",
+      "docs/style-anchor/shot-b-minimarket-doors.webp",
+      "docs/style-anchor/shot-c-underpass-exit.webp"
+    ]
+  },
+  "p12-cable": {
+    "path": "public/assets/003-goyangan-dek-enam/motion-coverage-attempt-01/p12-cable.png",
+    "sha256": "6cff4f0838ba534d077d54a15984835198a3963683976ad1b55fd21d9c7221b5",
+    "generated_source": "C:/Users/user/.codex/generated_images/01a20449-25bd-70e3-8ebf-0679ede9bbc5/exec-a8b23dca-1e63-4799-ba40-9e8fc4bce6d3.png",
+    "input_plate": "public/assets/003-goyangan-dek-enam/master-batch-01/p12.webp",
+    "tool": "built-in imagegen",
+    "selection": "candidate for inspection, not assembly-approved",
+    "prompt": "Extract only the long diagonal hanging cable from input image 1, preserving its exact original shape, thickness, position and scale in a full-frame transparent canvas. No deck, wall, hooks, boat, lever or other objects. True transparent background. Images 2?4 are style references only.",
+    "style_references": [
+      "docs/style-anchor/shot-a-rhd-mirror.webp",
+      "docs/style-anchor/shot-b-minimarket-doors.webp",
+      "docs/style-anchor/shot-c-underpass-exit.webp"
+    ]
+  },
+  "p13-clean": {
+    "path": "public/assets/003-goyangan-dek-enam/motion-coverage-attempt-01/p13-clean.png",
+    "sha256": "a1542787d99981f0effb1c7349dcfc275330aa1b00685f82d08f012e2bce2d7d",
+    "generated_source": "C:/Users/user/.codex/generated_images/01a20449-25bd-70e3-8ebf-0679ede9bbc5/exec-5da6e12c-fd5a-48d6-8de6-a2f5df15835e.png",
+    "input_plate": "public/assets/003-goyangan-dek-enam/master-batch-01/p13.webp",
+    "tool": "built-in imagegen",
+    "selection": "candidate for inspection, not assembly-approved",
+    "prompt": "Edit input image 1. Remove only the tall black figure and its shadow, reconstruct the matching ship deck, bulkhead, railing and existing fixtures behind it. Preserve the camera, composition, portholes, life jackets, lifeboat and light. Static clean plate for later animation; no new figures or text. Images 2?4 are style references only.",
+    "style_references": [
+      "docs/style-anchor/shot-a-rhd-mirror.webp",
+      "docs/style-anchor/shot-b-minimarket-doors.webp",
+      "docs/style-anchor/shot-c-underpass-exit.webp"
+    ]
+  },
+  "p13-entity": {
+    "path": "public/assets/003-goyangan-dek-enam/motion-coverage-attempt-01/p13-entity.png",
+    "sha256": "210f5a10bf30b021d21d3f15f76df7fafc6be24c5abd095b09140261045eb486",
+    "generated_source": "C:/Users/user/.codex/generated_images/01a20449-25bd-70e3-8ebf-0679ede9bbc5/exec-ab854f5b-2fd0-49b0-9293-50811fb683bc.png",
+    "input_plate": "public/assets/003-goyangan-dek-enam/master-batch-01/p13.webp",
+    "tool": "built-in imagegen",
+    "selection": "candidate for inspection, not assembly-approved",
+    "prompt": "Extract only the upright tall thin black silhouette from input image 1, faithfully preserving its two arms, two legs, tiny pale eye glints, feet and original exact pose, shape, placement and scale on a full-frame transparent canvas. No deck, wall, boat, shadow or other objects. Transparent background. Images 2?4 are style references only.",
+    "style_references": [
+      "docs/style-anchor/shot-a-rhd-mirror.webp",
+      "docs/style-anchor/shot-b-minimarket-doors.webp",
+      "docs/style-anchor/shot-c-underpass-exit.webp"
+    ]
+  },
+  "p13-entity-retry": {
+    "path": "public/assets/003-goyangan-dek-enam/motion-coverage-attempt-01/p13-entity-retry.png",
+    "sha256": "468bf2959dbafb1a9d142007c308a6ebcbae906e4539a3edcc9f833c70f487e5",
+    "generated_source": "C:/Users/user/.codex/generated_images/01a20449-25bd-70e3-8ebf-0679ede9bbc5/exec-737474ca-617c-4cc2-898a-af2a3912928a.png",
+    "input_plate": "public/assets/003-goyangan-dek-enam/master-batch-01/p13.webp",
+    "tool": "built-in imagegen",
+    "selection": "candidate for inspection, not assembly-approved",
+    "prompt": "Extract the existing tall standing figure from the first input exactly, as a precise cutout with alpha transparency, not a redraw. Keep the full canvas and preserve pixel coordinates of head, hands and both feet, preserve original proportions and pose. Remove all other content. Output true transparency with no background. The remaining inputs are style references only.",
+    "style_references": [
+      "docs/style-anchor/shot-a-rhd-mirror.webp",
+      "docs/style-anchor/shot-b-minimarket-doors.webp",
+      "docs/style-anchor/shot-c-underpass-exit.webp"
+    ]
+  },
+  "p18-travel": {
+    "path": "public/assets/003-goyangan-dek-enam/motion-coverage-attempt-01/p18-travel.png",
+    "sha256": "fdf1bf9bb6d094e01d4daf62b85c46cc04a305f1105eda7a3e3dec6b9caf0646",
+    "generated_source": "C:/Users/user/.codex/generated_images/01a20449-25bd-70e3-8ebf-0679ede9bbc5/exec-e2840325-476f-407f-82a6-e3606ae14fd8.png",
+    "input_plate": "public/assets/003-goyangan-dek-enam/master-batch-01/p18.webp",
+    "tool": "built-in imagegen",
+    "selection": "candidate for inspection, not assembly-approved",
+    "prompt": "Edit input image 1 to show one single clear pre-impact state after the brake is released: the same orange lifeboat on the same cable has begun to swing inward toward the open gap beside the ship's left bulkhead. Depict the boat large and its cable connected to the davit, preserve lengthwise corridor left bulkhead and right railing, lighting and graphic noir. Do not reveal any figure or hands on the vessel. One single still frame, no effects, no montage, no impact. Images 2?4 are style references only.",
+    "style_references": [
+      "docs/style-anchor/shot-a-rhd-mirror.webp",
+      "docs/style-anchor/shot-b-minimarket-doors.webp",
+      "docs/style-anchor/shot-c-underpass-exit.webp"
+    ]
+  },
+  "p18-travel-retry": {
+    "path": "public/assets/003-goyangan-dek-enam/motion-coverage-attempt-01/p18-travel-retry.png",
+    "sha256": "330528996dcf720c6605638c368591b3dcb27ee6899892c8beedd2c0f4aa4940",
+    "generated_source": "C:/Users/user/.codex/generated_images/01a20449-25bd-70e3-8ebf-0679ede9bbc5/exec-45daa943-7532-4ee7-85b8-2cdfc7182823.png",
+    "input_plate": "public/assets/003-goyangan-dek-enam/master-batch-01/p18.webp",
+    "tool": "built-in imagegen",
+    "selection": "candidate for inspection, not assembly-approved",
+    "prompt": "In first input preserve fixed camera, same lengthwise corridor, same left wall and right railing, same winch and cable attachment and same boat design. Create one distinct later pre-impact still: move the orange suspended lifeboat into the corridor's gap just short of the left wall, connected to its taut diagonal hoist cable; show its complete hull so its destination is legible. Keep foreground hand and lever from the first input. No figure or hands on the boat and no impact, no motion streak or overlay. Other input images are style references only.",
+    "style_references": [
+      "docs/style-anchor/shot-a-rhd-mirror.webp",
+      "docs/style-anchor/shot-b-minimarket-doors.webp",
+      "docs/style-anchor/shot-c-underpass-exit.webp"
+    ]
+  }
+}

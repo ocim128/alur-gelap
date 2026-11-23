@@ -1,0 +1,55 @@
+{
+  "source": "out\\003-goyangan-dek-enam\\Skenario03-motion-candidate-v5-master.mp4",
+  "sourceSha256": "64d402ab6c410babbca10571b36bef88c6bf41e349df4f68e547b726bc5be4a7",
+  "delivery": "out\\003-goyangan-dek-enam\\Skenario03-motion-candidate-v5-master_compressed.mp4",
+  "deliverySha256": "ce8f1b5324d52efc4bb0cdfd8e27cf64c435bd2ed41aa41cebd940650b83328f",
+  "filter": "scale=in_range=full:in_color_matrix=bt470:out_range=limited:out_color_matrix=bt709,format=yuv420p",
+  "samples": [
+    {
+      "sec": 20,
+      "deliveryEncodedYMin": 10,
+      "deliveryEncodedYMax": 221,
+      "deliveryYBelow16Percent": 0.0015,
+      "deliveryYAbove235Percent": 0.0,
+      "meanAbsSourceConversionDeltaAllPlanes": 4.3188,
+      "meanAbsDeliveryVsConvertedAllPlanes": 1.6766,
+      "meanAbsDeliveryVsUnconvertedAllPlanes": 4.9706
+    },
+    {
+      "sec": 85,
+      "deliveryEncodedYMin": 0,
+      "deliveryEncodedYMax": 255,
+      "deliveryYBelow16Percent": 0.1561,
+      "deliveryYAbove235Percent": 0.1143,
+      "meanAbsSourceConversionDeltaAllPlanes": 4.3767,
+      "meanAbsDeliveryVsConvertedAllPlanes": 1.6463,
+      "meanAbsDeliveryVsUnconvertedAllPlanes": 4.9645
+    },
+    {
+      "sec": 105,
+      "deliveryEncodedYMin": 5,
+      "deliveryEncodedYMax": 230,
+      "deliveryYBelow16Percent": 0.0057,
+      "deliveryYAbove235Percent": 0.0,
+      "meanAbsSourceConversionDeltaAllPlanes": 5.95,
+      "meanAbsDeliveryVsConvertedAllPlanes": 1.5898,
+      "meanAbsDeliveryVsUnconvertedAllPlanes": 6.4156
+    },
+    {
+      "sec": 117.3,
+      "deliveryEncodedYMin": 0,
+      "deliveryEncodedYMax": 237,
+      "deliveryYBelow16Percent": 0.1503,
+      "deliveryYAbove235Percent": 0.0001,
+      "meanAbsSourceConversionDeltaAllPlanes": 7.2351,
+      "meanAbsDeliveryVsConvertedAllPlanes": 0.759,
+      "meanAbsDeliveryVsUnconvertedAllPlanes": 7.2608
+    }
+  ],
+  "rewind": {
+    "scheduledSec": 70.4,
+    "detectedSec": 70.4,
+    "correlation": 0.9344
+  },
+  "limitations": "Four sampled decoded frames only; lossy re-encoding changes pixels. Source primaries and transfer are unspecified, so 709 tags assume their compatibility rather than demonstrating a primaries/transfer conversion."
+}

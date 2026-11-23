@@ -1,0 +1,96 @@
+{
+  "file": "out/003-goyangan-dek-enam/Skenario03GoyanganDekEnam-review-color-v4-2026-11-23.mp4",
+  "sha256": "1313e05b92b905d0c6cb7235ff200980bf9ebd8de1b032a6ae89cf52a4bb8c5b",
+  "checker": "scripts/compress-video.mjs",
+  "checkerSha256": "10f673c6efdc19a1645f44b59bb2b167fbdc9273316cae283bfcb94f27e7c777",
+  "signal": {
+    "sampledFrames": 12,
+    "pixelsPerFrame": 2073600,
+    "minLuma": 0,
+    "maxLuma": 255,
+    "below16": 28513,
+    "above235": 19880,
+    "severe": 846,
+    "perFrame": [
+      {
+        "frame": 0,
+        "below16": 3543,
+        "above235": 3670,
+        "severe": 157
+      },
+      {
+        "frame": 395,
+        "below16": 3039,
+        "above235": 2151,
+        "severe": 80
+      },
+      {
+        "frame": 790,
+        "below16": 2628,
+        "above235": 1226,
+        "severe": 63
+      },
+      {
+        "frame": 1185,
+        "below16": 978,
+        "above235": 1051,
+        "severe": 38
+      },
+      {
+        "frame": 1580,
+        "below16": 3232,
+        "above235": 2636,
+        "severe": 150
+      },
+      {
+        "frame": 1975,
+        "below16": 2241,
+        "above235": 1194,
+        "severe": 33
+      },
+      {
+        "frame": 2370,
+        "below16": 3573,
+        "above235": 2232,
+        "severe": 72
+      },
+      {
+        "frame": 2765,
+        "below16": 16,
+        "above235": 0,
+        "severe": 0
+      },
+      {
+        "frame": 3160,
+        "below16": 78,
+        "above235": 0,
+        "severe": 0
+      },
+      {
+        "frame": 3555,
+        "below16": 3891,
+        "above235": 2433,
+        "severe": 94
+      },
+      {
+        "frame": 3950,
+        "below16": 2731,
+        "above235": 1268,
+        "severe": 76
+      },
+      {
+        "frame": 4345,
+        "below16": 2563,
+        "above235": 2019,
+        "severe": 83
+      }
+    ],
+    "thresholds": {
+      "severeCodes": "0-4 or 251-255",
+      "severeFractionPerFrame": 0.01,
+      "outsideNominalFractionPerFrame": 0.05
+    },
+    "verdict": "warning",
+    "note": "Direct decoded Y samples; any out-of-range values are reported. Failure means at least 1% severe or 5% outside 16–235 in a sampled frame, requiring review; it does not prove full-range mislabeling. Sampling cannot certify the whole video."
+  }
+}

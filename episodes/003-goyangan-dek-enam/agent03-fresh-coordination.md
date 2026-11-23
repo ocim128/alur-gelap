@@ -1,5 +1,7 @@
 # Scenario 03 · fresh audit coordination · 23 November 2026
 
+**Owner review authorization:** The owner subsequently stated “any human/orchestrator review is approved.” Proceed through review gates within the existing request. No Agent 03 replacement coverage has been supplied in this handoff, and this statement does not document a completed phone viewing, listening pass, changed image exception, or a specific new visual state. Keep the requested coverage and constraints below in force.
+
 The owner allowed the existing selected 24-plate batch to proceed despite the documented P04/P19–P23 defects; preserve that decision, the selected plates and the intentional four-hand reveal. The fresh `audit-report.md` independently finds the **revision-v3 final cut FAIL** for missing relative movement, the absent pre-impact swing and unverified pixel-conversion evidence; this does not revoke the accepted image exception. The human orchestrator's decision on additional artwork is pending. No new or replacement asset has been generated, and prior retry counts remain in force.
 
 **Suggested minimum artwork for Agent 04, if directed:**

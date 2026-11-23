@@ -183,31 +183,60 @@ function measureLoudness(file) {
 }
 
 /**
- * Sample frames across the delivery and verify the luma signal stays inside the
- * limited-range code space it is tagged with. Full-range data mislabeled as limited
- * shows up as luma values above 235; a few counts of overshoot are tolerated, ≥251 is
- * treated as a mislabeled full-range signal and fails the delivery.
+ * Read decoded Y samples directly, before any gray conversion or resizing. A
+ * gray conversion can expand TV-range 16..235 to 0..255, and a single outlier
+ * can be codec ringing, so neither proves that the whole signal is full range.
+ * Per-frame excursion rates are a conservative sanity gate, not a legal-range
+ * certification or proof of the original source's color space.
  */
 export function measureSignalSanity(file, {sampleCount = 12, durationSec, fps = 30} = {}) {
+  const video = probe(file).streams.find(stream => stream.codec_type === 'video');
+  if (!video || video.pix_fmt !== 'yuv420p' || !video.width || !video.height) {
+    throw new Error('Signal sanity requires an 8-bit yuv420p video with known dimensions');
+  }
+  if (!Number.isFinite(durationSec) || durationSec <= 0 || !Number.isFinite(fps) || fps <= 0 || !Number.isInteger(sampleCount) || sampleCount <= 0) {
+    throw new Error('Signal sanity requires positive duration, fps and integer sample count');
+  }
   const totalFrames = Math.max(1, Math.round(durationSec * fps));
   const stride = Math.max(1, Math.floor(totalFrames / sampleCount));
-  const proc = spawnSync('ffmpeg', ['-hide_banner', '-loglevel', 'error', '-i', file, '-vf', `select='not(mod(n\\,${stride}))',scale=64:360:flags=neighbor,format=gray`, '-fps_mode', 'vfr', '-frames:v', String(sampleCount), '-f', 'rawvideo', 'pipe:1'], {encoding: 'buffer', maxBuffer: 64 * 1024 * 1024});
+  const frameSize = video.width * video.height;
+  const proc = spawnSync('ffmpeg', ['-hide_banner', '-loglevel', 'error', '-i', file, '-vf', `select='not(mod(n\\,${stride}))',extractplanes=y`, '-fps_mode', 'vfr', '-frames:v', String(sampleCount), '-pix_fmt', 'gray', '-f', 'rawvideo', 'pipe:1'], {encoding: 'buffer', maxBuffer: frameSize * sampleCount + 1024 * 1024});
   if (proc.status !== 0 || !proc.stdout?.length) throw new Error(`signal sanity decode failed: ${proc.stderr}`);
-  const frames = Math.floor(proc.stdout.length / (64 * 360));
+  if (proc.stdout.length % frameSize !== 0) throw new Error('signal sanity decoded an incomplete Y frame');
+  const frames = proc.stdout.length / frameSize;
+  if (frames !== Math.min(sampleCount, Math.ceil(totalFrames / stride))) throw new Error(`signal sanity expected sampled frames but decoded ${frames}`);
   let min = 255;
   let max = 0;
-  for (let i = 0; i < proc.stdout.length; i++) {
-    if (proc.stdout[i] < min) min = proc.stdout[i];
-    if (proc.stdout[i] > max) max = proc.stdout[i];
+  let below = 0, above = 0, severe = 0;
+  const perFrame = [];
+  for (let frame = 0; frame < frames; frame++) {
+    let frameBelow = 0, frameAbove = 0, frameSevere = 0;
+    for (let i = frame * frameSize; i < (frame + 1) * frameSize; i++) {
+      const y = proc.stdout[i];
+      min = Math.min(min, y);
+      max = Math.max(max, y);
+      if (y < 16) frameBelow++;
+      if (y > 235) frameAbove++;
+      if (y <= 4 || y >= 251) frameSevere++;
+    }
+    below += frameBelow; above += frameAbove; severe += frameSevere;
+    perFrame.push({frame: frame * stride, below16: frameBelow, above235: frameAbove, severe: frameSevere});
   }
+  // Conservative review thresholds per sampled frame. They are policy, not a
+  // mathematical determination of whether data was mislabeled as full range.
+  const failed = perFrame.some(f => f.severe / frameSize >= 0.01 || (f.below16 + f.above235) / frameSize >= 0.05);
   return {
     sampledFrames: frames,
+    pixelsPerFrame: frameSize,
     minLuma: min,
     maxLuma: max,
-    verdict: max >= 251 ? 'fail' : max > 235 ? 'warning' : 'ok',
-    note: max > 235
-      ? 'luma above 235 sampled in a limited-range delivery; values ≥251 would indicate full-range data tagged limited'
-      : 'sampled luma stays inside the limited-range code space',
+    below16: below,
+    above235: above,
+    severe,
+    perFrame,
+    thresholds: {severeCodes: '0-4 or 251-255', severeFractionPerFrame: 0.01, outsideNominalFractionPerFrame: 0.05},
+    verdict: failed ? 'fail' : below || above ? 'warning' : 'ok',
+    note: 'Direct decoded Y samples; any out-of-range values are reported. Failure means at least 1% severe or 5% outside 16–235 in a sampled frame, requiring review; it does not prove full-range mislabeling. Sampling cannot certify the whole video.',
   };
 }
 
@@ -243,7 +272,7 @@ export function compressVideo(sourcePath, outputPath, options = {}) {
     const loudness = measureLoudness(temporary);
     const signalSanity = measureSignalSanity(temporary, {durationSec: secondsAfter, fps: Number.isFinite(fps) && fps > 0 ? fps : 30});
     if (signalSanity.verdict === 'fail') {
-      throw new Error(`Delivery fails signal sanity: max sampled luma ${signalSanity.maxLuma} (≥251) with limited-range tags; the color conversion did not produce limited-range data. Delivery not written.`);
+      throw new Error(`Delivery fails raw-Y signal sanity: a sampled frame exceeds the excursion thresholds; review the source and conversion. Delivery not written. ${JSON.stringify(signalSanity)}`);
     }
     const silence = inputAudio ? measureSilenceIntervals(decodeMono16(temporary, audioPlan.sampleRate ?? 48000), audioPlan.sampleRate ?? 48000) : {thresholdDbfs: null, intervals: [], note: 'no audio stream'};
     copyFileSync(temporary, output, constants.COPYFILE_EXCL);

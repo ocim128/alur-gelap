@@ -1,0 +1,72 @@
+{
+  "schemaVersion": 1,
+  "compositionId": "Skenario03MotionCoverageTest",
+  "composition": {
+    "id": "Skenario03MotionCoverageTest",
+    "width": 1080,
+    "height": 1920,
+    "fps": 30,
+    "durationInFrames": 4740
+  },
+  "remotion": "4.0.544",
+  "imageFormat": "png",
+  "node": "v22.16.0",
+  "stills": [
+    {
+      "frame": 2400,
+      "file": "frame-02400.png",
+      "bytes": 3162630,
+      "sha256": "af5b2aa7722f5589ce780fed74dba3bf07ce205679085fc2b0e114bdea26fda7",
+      "pngSignature": true
+    },
+    {
+      "frame": 2475,
+      "file": "frame-02475.png",
+      "bytes": 3146317,
+      "sha256": "1d29dc246d4dd6a4ed9114228f3b2685d67b5c98e59cddbce3dde0fbc86c0d79",
+      "pngSignature": true
+    },
+    {
+      "frame": 2670,
+      "file": "frame-02670.png",
+      "bytes": 3458673,
+      "sha256": "3fc8d0fcdecba5fce22615b44e2074f1835d3b4d8b415d56a708cfbd3a88f4a2",
+      "pngSignature": true
+    },
+    {
+      "frame": 2700,
+      "file": "frame-02700.png",
+      "bytes": 3429058,
+      "sha256": "feea224b0fd796fe8444ffda92bec7ece9be30a97abbafe69da0c41bf1cbc499",
+      "pngSignature": true
+    },
+    {
+      "frame": 3445,
+      "file": "frame-03445.png",
+      "bytes": 3393815,
+      "sha256": "ce3c9d901515f079aefa46e457325aec8d093fe11d510a10b4b484a5c61dee14",
+      "pngSignature": true
+    },
+    {
+      "frame": 3465,
+      "file": "frame-03465.png",
+      "bytes": 3351921,
+      "sha256": "55d693fb529bc55ccffc9a3e4bbbfd5bb56bb8c6f3a7c45789c971dbea9a545f",
+      "pngSignature": true
+    },
+    {
+      "frame": 3517,
+      "file": "frame-03517.png",
+      "bytes": 3375050,
+      "sha256": "448978f5b465695b8950a10a66685a3cc77747654dd36862ad4a46879bf05ad2",
+      "pngSignature": true
+    },
+    {
+      "frame": 3518,
+      "file": "frame-03518.png",
+      "bytes": 2897271,
+      "sha256": "f5cdb59d4fc271df9c8ae0b09b8781e31b22e9913c7bbaa64c3c18ebfd748803",
+      "pngSignature": true
+    }
+  ]
+}
