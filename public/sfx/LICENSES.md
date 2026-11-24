@@ -1,5 +1,9 @@
 # Shared foley and ambience
 
+## Studio v3 · ARSIP #002
+
+`public/assets/008-pagi-jam-dua/` contains original in-repository synthesized wind, canvas, gravel, insect/bird-like cues, breath, tension and UI pops. No third-party recordings were used for these effects. Source generator, per-file hashes, voice service and unverified AI publication terms are recorded in [the episode asset record](../../episodes/008-pagi-jam-dua/assets.md). The shared Tanpa Nama ping retains its existing entry below.
+
 These WAVs are edited source recordings. The table records the original files and changes. For the CC BY excerpts, retain this notice with redistributed audio and credit the excerpts in published cuts that use them.
 
 **Per-scenario rights records.** To avoid parallel-agent merge conflicts, an episode's or scenario's own audio rights may live in a separate file — under `episodes/<slug>/` (for example `asset-rights.md`) or as `public/sfx/LICENSES-<name>.md` — as long as this file indexes it here with a one-line pointer. Shared-library entries above stay in this file.

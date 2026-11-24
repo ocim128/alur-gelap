@@ -380,7 +380,7 @@ export function ArsipPlayer({script}: ArsipPlayerProps) {
 
         {/* Full-bleed overlays with critical content inside safe zone */}
         {photoEvents.map((event) => (
-          <PhotoZoomOverlay key={`zoom-${event.id}`} event={event} sender={characterMap.get(event.from)} />
+          <PhotoZoomOverlay key={`zoom-${event.id}`} event={event} sender={characterMap.get(event.from)} focusBottom={script.id === 'arsip02-pagi-jam-dua' && (event.id === 'm1' || event.id === 'm16')} focusRight={script.id === 'arsip02-pagi-jam-dua' && event.id === 'm16'} />
         ))}
         {cctvEvents.map((event) => (
           <CctvFrame key={`cctv-${event.id}`} event={event} />

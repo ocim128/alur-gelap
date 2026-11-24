@@ -1,0 +1,162 @@
+{
+  "version": 1,
+  "voiceId": "Leda",
+  "voiceName": "Leda",
+  "provider": "gemini-cloud",
+  "model": "gemini-3.8-flash-tts",
+  "master": false,
+  "masterFilter": null,
+  "asrModel": "small",
+  "generatedAt": "2026-11-24T21:35:39.528Z",
+  "passed": false,
+  "totalChunks": 1,
+  "verifiedChunks": 0,
+  "warningChunks": 0,
+  "failedChunks": 1,
+  "plannedDurationSec": 3.565,
+  "finalAlignment": {
+    "transcript": "Burung pagi, wir, cahayanya turun ke sini.",
+    "mismatches": [],
+    "passed": true
+  },
+  "audioQuality": {
+    "integratedLufs": -12.6,
+    "loudnessRangeLu": 0.7,
+    "noiseFloorDbfs": -13.3,
+    "targets": {
+      "integratedLufs": -14,
+      "loudnessRangeLu": [
+        5,
+        7
+      ]
+    }
+  },
+  "chunks": [
+    {
+      "index": 0,
+      "tag": null,
+      "text": "Burung pagi? Wir, cahayanya turun ke sini!",
+      "retries": 2,
+      "status": "failed",
+      "bestSimilarity": 1,
+      "bestWordRatio": 1,
+      "acceptedAttempt": 2,
+      "attempts": [
+        {
+          "seed": 0,
+          "wordRatio": 0.667,
+          "similarity": 0.933,
+          "wpm": 168,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.83): heard \"burung pagi wih cahayanya turun kesini\"",
+            "raw: last word missing, truncated, or has invalid timestamps",
+            "word mismatch (ratio 0.67): heard \"burung pagi wih cayanya turun kesini\"",
+            "last word missing, truncated, or has invalid timestamps",
+            "char similarity 0.93 < 0.94",
+            "168 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Burung pagi? Wih, cayanya turun kesini!",
+          "mismatches": [
+            {
+              "expected": "wir",
+              "heard": "wih"
+            },
+            {
+              "expected": "cahayanya",
+              "heard": "cayanya"
+            }
+          ],
+          "endTruncated": true,
+          "rawTranscript": "Burung pagi? Wih, cahayanya turun kesini!",
+          "rawMismatches": [
+            {
+              "expected": "wir",
+              "heard": "wih"
+            }
+          ],
+          "rawEndTruncated": true,
+          "rawReasons": [
+            "word mismatch (ratio 0.83): heard \"burung pagi wih cahayanya turun kesini\"",
+            "last word missing, truncated, or has invalid timestamps"
+          ]
+        },
+        {
+          "seed": 1,
+          "wordRatio": 0.667,
+          "similarity": 0.935,
+          "wpm": 154,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.67): heard \"murung pagi wih cahayanya turun kesini\"",
+            "raw: last word missing, truncated, or has invalid timestamps",
+            "raw: char similarity 0.94 < 0.94",
+            "word mismatch (ratio 0.67): heard \"murung pagi wih cahayanya turun kesini\"",
+            "last word missing, truncated, or has invalid timestamps",
+            "char similarity 0.94 < 0.94"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Murung pagi! Wih, cahayanya turun kesini!",
+          "mismatches": [
+            {
+              "expected": "burung",
+              "heard": "murung"
+            },
+            {
+              "expected": "wir",
+              "heard": "wih"
+            }
+          ],
+          "endTruncated": true,
+          "rawTranscript": "Murung pagi. Wih, cahayanya turun kesini!",
+          "rawMismatches": [
+            {
+              "expected": "burung",
+              "heard": "murung"
+            },
+            {
+              "expected": "wir",
+              "heard": "wih"
+            }
+          ],
+          "rawEndTruncated": true,
+          "rawReasons": [
+            "word mismatch (ratio 0.67): heard \"murung pagi wih cahayanya turun kesini\"",
+            "last word missing, truncated, or has invalid timestamps",
+            "char similarity 0.94 < 0.94"
+          ]
+        },
+        {
+          "seed": 2,
+          "wordRatio": 1,
+          "similarity": 1,
+          "wpm": 118,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: last word missing, truncated, or has invalid timestamps"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Burung pagi. Wir, cahayanya turun ke sini.",
+          "mismatches": [],
+          "endTruncated": false,
+          "rawTranscript": "Burung pagi, wir, cahayanya turun kesini.",
+          "rawMismatches": [],
+          "rawEndTruncated": true,
+          "rawReasons": [
+            "last word missing, truncated, or has invalid timestamps"
+          ]
+        }
+      ]
+    }
+  ]
+}

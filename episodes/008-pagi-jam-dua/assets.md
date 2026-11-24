@@ -1,0 +1,38 @@
+# ARSIP #002 asset and rights record — 2026-11-25
+
+Composition `Arsip02PagiJamDua`; asset paths below are relative to `public/assets/008-pagi-jam-dua/` unless stated otherwise. **listening review: none**. AI service, voice and image commercial/publication rights remain **unverified**. None of these records grant publication permission.
+
+## Images
+
+Generated with the built-in OpenAI image generation tool on 2026-11-25; original PNGs and 540 × 960 inspection previews are in `sources/image-attempts/`. The JPEGs below were transcoded from the selected PNGs. All stills were inspected at 540 × 960. Selected still 05's dark disk at the pole is ambiguous as a physical foot versus a shadow; the actual zoom was checked and needs independent visual judgment. The m1 bubble crops the feet at frame zero, but its later zoom shows the compact shadows.
+
+| File / event | Selected source | SHA-256 of selected JPEG | Inspection note |
+| --- | --- | --- | --- |
+| `still-01-pos2.jpg` / m1 | 01-03 | `52574d5ad7a7881cd1fe55c56af2f02f830295332a1b22cd3547087333ffd3da` | Two male hikers; m1 zoom displays small underfoot dark patches. |
+| `still-02-lereng.jpg` / m5 | 02-01 | `2e37158fe30fa30b5ed3135be9d0ab960a8216ae1ba50315a5936c4061345a4b` | Tent mesh and bright upper boundary; boundary could read as horizon, review in context. |
+| `still-03-pos2-putih.jpg` / m9 | 03-01 | `fcc576de4053c5f458c7db9f5f86b831f7dcd9d89e65857e31bfd034411807b0` | POS 2 and rock contours visible. |
+| `still-04-tenda-salsa.jpg` / m14 | 04-01 | `0baf36a65db9d6b1c24e5ec4b271790b63c6fc451b172e5b62c5e3224795a77d` | Empty open yellow tent and lit lamp. |
+| `still-05-camp.jpg` / m16 | 05-02 | `2dd904d691e77616e71fd2a1c4f35015a2881bdf5e19c16e3ab7fb17016c4a24` | Tent continuity and bright ground edge; dark pole-foot disk is ambiguous. |
+| `still-06-sosok.jpg` / m19 | 06-01 | `b9df58ca18a2cb98bef04d6986e5188b007ac63868d449bd366317fc82da5482` | Figure and dark ridge/tent edges visible. |
+
+Attempt log: IDs refer to `sources/image-attempts/still-NN-attempt-NN.png`. Prompts requested photorealistic amateur phone captures, no gore or illustration. 01-01: two hikers on ridge, overhead shadows (`f0b9b93e2ffd12c6b2b34bff044334b3630a71ac262d441547368e32136e5244`, 941×1672); rejected because one hiker appeared female. 01-02: edit to two male hikers and compact shadows (`a5a09e4878bb3e3f50da98749786709302ac550b69ff26992e1fa16dcf3faf1c`, 941×1671). 01-03: edit to improve shoe placement and legibility (`e46cae66dedaaffac53d7277e5b2473280c5cb6acd1d91f73be9c971a8f4e425`, 941×1670; selected).
+
+02-01: dark mesh POV and bright boundary on mountain slope (`07f614da824065cc8bdbae65ca7f118a7fb445f6cd4b19f5499273c2055f101f`, 941×1672); 03-01: blinding trail light with legible POS 2 and rocks (`71093a55b2032e21ce0c515e55b1f197c3c448fcfa263b895cc3865453fb825f`, 1086×1448); 04-01: mesh POV, empty open yellow tent and lit headlamp (`16b19088dee5b26968954715e295540c839ac1c5964f3381dcd14dc348dd9fb0`, 941×1672).
+
+05-01: yellow tent and overhead pole shadow (`2790f0d3a40cf20dfbe04b1bab3422e5dc701505427207f165bbd0604f5a8575`, 941×1672); rejected because campsite and bright boundary did not match. 05-02: edit of 04-01 to preserve tent and add sharp light boundary and compact pole-foot shadow (`11279b2be09ec376dc846df7a5b6d4b6c1a53c2c44e240c0f79b2145e30293d2`, 941×1672; selected with ambiguity above). 05-03: edit requesting center pole (`a5537381ce8f9c7070554a86ec9b3ab2b5672ac7b89b166cb82be2e2c35d51f8`, 941×1672); rejected because added pole looked artificial. 06-01: solitary back-facing silhouette in bright fog with dark tent and ridge edges (`b24cb1a9f38e2d4df61335794cb15710f5e640d0067ccc490a7bc8af9b0a0b58`, 1086×1448).
+
+## Voice notes
+
+Google Cloud Agent Platform `gemini-3.8-flash-tts` via local ShortZ `gemini-cloud`; requested style and reproducible wrapper: `sources/generate-voices.ts`. ShortZ output MP3s are processed by ShortZ (not untouched provider WAV); sidecar reports and timestamps are retained beside every take. The derivatives use phone bandpass/compression, synthesized wind/canvas/gravel/birds and, for Salsa, a synthesized breath. No pitch or speed changes. PCM durations measured with ffprobe. All takes have onset warnings; no boundary or naturalness judgment has been made by ear.
+
+| Event | Selected source and voice | WAV / SHA-256 | Duration / ASR |
+| --- | --- | --- | --- |
+| m3 Aji | `vn-aji-retake2.mp3`, Puck; source SHA-256 `031d799ee0849ed4db794c5872cf109cdf14877f38f192d7b8942a5f76c545f0` | `vn-aji.wav` / `b2f882077dee631ff31732de1375bec61814579907369b96dade29b91aa293df` | 3.365 s; final alignment and ShortZ overall pass; onset warning. |
+| m6 Salsa | `vn-salsa-retake.mp3`, Leda; source SHA-256 `2fea79620b1efd35c8bedce485fe2f479fb738ae2c2a87d93777f547d49c3bd7` | `vn-salsa.wav` / `af302573c766063601585460a7249b80ab6862545f1a34943ab0cb0e114dc2e9` | 3.565 s; final text alignment passes; ShortZ overall fails due raw last-word timing/truncation warning. Audible boundary remains unverified. |
+| m7 Nino | `vn-nino-source.mp3`, `voice_71a5a701-796e-421d-840e-0adc00b0816a`; source SHA-256 `12de6d541fad6be148cfb20d06ffd1eff679cdc0bdb40533f15156a137ed9710` | `vn-nino.wav` / `c08c9ab301ed49f95d9b8ff0c597c7832d7bdfacfe37306e8ae0b6f9d406b98c` | 5.285 s; ShortZ final alignment fails on two `nggak` → `gak` transcription differences, otherwise recognized. The spelling variants can represent the same informal word, but actual pronunciation is unverified. The m8 pop arrives 0.952 s before the clip ends. |
+
+Other retained source attempts: Aji source `e5d9aad9ca9f93877c120e92ba82b0aec69bf9de1e7d19d2dfe3a6e785625b55`; Salsa source `d0dcf5c92aadcc8e07e08ed349cbdd960f9673face326c22a92f391dd276168e`, Salsa retake2 `77542cd8db0c2a8df8ced01b1490baefbb35002702b7549f1c4600078a3bd503`; Nino retake `ce68582b249f81eb154310db17a1d297786f41189551fa7669036b91db204c7c`, Nino retake2 `f248a8bca61f70ad9c4321b399933a4e34e929d97642684ac5adce55c33d4ee9`.
+
+## SFX
+
+Original in-repo synthesis via `scripts/generate-pagi-soundscape.mjs` and its imported `generate-ronda-soundscape.mjs`; no third-party recordings. `ambience-gunung.wav` (`8336e77234451870343f82d361168b9e1d729a0ed14708375089f8e7293b0de9`) contains synthetic wind, canvas, gravel, crickets that end by 1.5 s, and bird-like chirps; their recognizability and phone audibility are **not verified by listening**. `tension-cahaya.wav` (`9cd3b4e86d3036dda42d40af057027fef533e3781a14a6ae8e4921a545a1831a`) is non-melodic sub and 90–220 Hz pressure. `ui-pop-in.wav` (`7999dd3d5dd9e9d141cd4907881700ef431b38e208f493672d0f835a0552157a`); `ui-pop-out.wav` (`f4749986a67f84b4c56701eac516ffd83ccda5ef94f03224eeb1d3ec313ee1ed`). Shared `public/sfx/shared/tanpa-nama-ping.wav` is the original documented series asset, used for m19 only; see `public/sfx/LICENSES.md`.

@@ -1,0 +1,186 @@
+{
+  "version": 1,
+  "voiceId": "voice_71a5a701-796e-421d-840e-0adc00b0816a",
+  "voiceName": "voice_71a5a701-796e-421d-840e-0adc00b0816a",
+  "provider": "gemini-cloud",
+  "model": "gemini-3.8-flash-tts",
+  "master": false,
+  "masterFilter": null,
+  "asrModel": "small",
+  "generatedAt": "2026-11-24T21:32:38.109Z",
+  "passed": false,
+  "totalChunks": 1,
+  "verifiedChunks": 0,
+  "warningChunks": 0,
+  "failedChunks": 1,
+  "plannedDurationSec": 5.285,
+  "finalAlignment": {
+    "transcript": "Kok gak capek ya? Kayak siang tapi gak ada angetnya.",
+    "mismatches": [
+      {
+        "expected": "nggak",
+        "heard": "gak"
+      },
+      {
+        "expected": "nggak",
+        "heard": "gak"
+      }
+    ],
+    "passed": false
+  },
+  "audioQuality": {
+    "integratedLufs": -20.2,
+    "loudnessRangeLu": 1.5,
+    "noiseFloorDbfs": -20.9,
+    "targets": {
+      "integratedLufs": -14,
+      "loudnessRangeLu": [
+        5,
+        7
+      ]
+    }
+  },
+  "chunks": [
+    {
+      "index": 0,
+      "tag": null,
+      "text": "Kok nggak capek ya? Kayak siang, tapi nggak ada angetnya.",
+      "retries": 2,
+      "status": "failed",
+      "bestSimilarity": 0.962,
+      "bestWordRatio": 0.8,
+      "acceptedAttempt": 0,
+      "attempts": [
+        {
+          "seed": 0,
+          "wordRatio": 0.8,
+          "similarity": 0.962,
+          "wpm": 114,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.80): heard \"kok gak capek ya kayak siang tapi gak ada angetnya\"",
+            "word mismatch (ratio 0.80): heard \"kok gak capek ya kayak siang tapi gak ada angetnya\""
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Kok gak capek ya? Kayak siang tapi gak ada angetnya.",
+          "mismatches": [
+            {
+              "expected": "nggak",
+              "heard": "gak"
+            },
+            {
+              "expected": "nggak",
+              "heard": "gak"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Kok gak capek ya? Kayak siang tapi gak ada angetnya.",
+          "rawMismatches": [
+            {
+              "expected": "nggak",
+              "heard": "gak"
+            },
+            {
+              "expected": "nggak",
+              "heard": "gak"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.80): heard \"kok gak capek ya kayak siang tapi gak ada angetnya\""
+          ]
+        },
+        {
+          "seed": 1,
+          "wordRatio": 0.8,
+          "similarity": 0.962,
+          "wpm": 97,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.80): heard \"kok gak capek ya kayak siang tapi gak ada angetnya\"",
+            "raw: 91 wpm outside 130±25%",
+            "word mismatch (ratio 0.80): heard \"kok gak capek ya kayak siang tapi gak ada angetnya\"",
+            "97 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Kok gak capek ya? Kayak siang, tapi gak ada angetnya.",
+          "mismatches": [
+            {
+              "expected": "nggak",
+              "heard": "gak"
+            },
+            {
+              "expected": "nggak",
+              "heard": "gak"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Kok gak capek ya? Kayak siang, tapi gak ada angetnya.",
+          "rawMismatches": [
+            {
+              "expected": "nggak",
+              "heard": "gak"
+            },
+            {
+              "expected": "nggak",
+              "heard": "gak"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.80): heard \"kok gak capek ya kayak siang tapi gak ada angetnya\"",
+            "91 wpm outside 130±25%"
+          ]
+        },
+        {
+          "seed": 2,
+          "wordRatio": 0.8,
+          "similarity": 0.962,
+          "wpm": 116,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.80): heard \"kok gak capek ya kayak siang tapi gak ada angetnya\"",
+            "word mismatch (ratio 0.80): heard \"kok gak capek ya kayak siang tapi gak ada angetnya\""
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Kok gak capek ya, kayak siang tapi gak ada angetnya.",
+          "mismatches": [
+            {
+              "expected": "nggak",
+              "heard": "gak"
+            },
+            {
+              "expected": "nggak",
+              "heard": "gak"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Kok gak capek ya, kayak siang tapi gak ada angetnya.",
+          "rawMismatches": [
+            {
+              "expected": "nggak",
+              "heard": "gak"
+            },
+            {
+              "expected": "nggak",
+              "heard": "gak"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.80): heard \"kok gak capek ya kayak siang tapi gak ada angetnya\""
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,171 @@
+{
+  "version": 1,
+  "voiceId": "Puck",
+  "voiceName": "Puck",
+  "provider": "gemini-cloud",
+  "model": "gemini-3.8-flash-tts",
+  "master": false,
+  "masterFilter": null,
+  "asrModel": "small",
+  "generatedAt": "2026-11-24T21:31:34.515Z",
+  "passed": false,
+  "totalChunks": 1,
+  "verifiedChunks": 0,
+  "warningChunks": 0,
+  "failedChunks": 1,
+  "plannedDurationSec": 3.645,
+  "finalAlignment": {
+    "transcript": "Terang banget, tapi dinginnya kayak es.",
+    "mismatches": [],
+    "passed": true
+  },
+  "audioQuality": {
+    "integratedLufs": -18.9,
+    "loudnessRangeLu": 1.4,
+    "noiseFloorDbfs": -19.3,
+    "targets": {
+      "integratedLufs": -14,
+      "loudnessRangeLu": [
+        5,
+        7
+      ]
+    }
+  },
+  "chunks": [
+    {
+      "index": 0,
+      "tag": null,
+      "text": "Terang banget, tapi dinginnya kayak es.",
+      "retries": 2,
+      "status": "failed",
+      "bestSimilarity": 1,
+      "bestWordRatio": 1,
+      "acceptedAttempt": 2,
+      "attempts": [
+        {
+          "seed": 0,
+          "wordRatio": 0.667,
+          "similarity": 0.972,
+          "wpm": 104,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.83): heard \"terang banget tapi dinginnya kayak s\"",
+            "raw: last word missing, truncated, or has invalid timestamps",
+            "raw: 95 wpm outside 130±25%",
+            "word mismatch (ratio 0.67): heard \"terang banget tapi dinginnya kaya s\"",
+            "last word missing, truncated, or has invalid timestamps"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Terang banget, tapi dinginnya kaya S",
+          "mismatches": [
+            {
+              "expected": "kayak",
+              "heard": "kaya"
+            },
+            {
+              "expected": "es",
+              "heard": "s"
+            }
+          ],
+          "endTruncated": true,
+          "rawTranscript": "Terang banget, tapi dinginnya kayak S",
+          "rawMismatches": [
+            {
+              "expected": "es",
+              "heard": "s"
+            }
+          ],
+          "rawEndTruncated": true,
+          "rawReasons": [
+            "word mismatch (ratio 0.83): heard \"terang banget tapi dinginnya kayak s\"",
+            "last word missing, truncated, or has invalid timestamps",
+            "95 wpm outside 130±25%"
+          ]
+        },
+        {
+          "seed": 1,
+          "wordRatio": 0.667,
+          "similarity": 0.972,
+          "wpm": 88,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.67): heard \"terang banget tapi dinginnya kaya s\"",
+            "raw: last word missing, truncated, or has invalid timestamps",
+            "raw: 81 wpm outside 130±25%",
+            "word mismatch (ratio 0.67): heard \"terang banget tapi dinginnya kaya s\"",
+            "last word missing, truncated, or has invalid timestamps",
+            "88 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Terang banget, tapi dinginnya kaya S",
+          "mismatches": [
+            {
+              "expected": "kayak",
+              "heard": "kaya"
+            },
+            {
+              "expected": "es",
+              "heard": "s"
+            }
+          ],
+          "endTruncated": true,
+          "rawTranscript": "Terang banget, tapi dinginnya kaya S.",
+          "rawMismatches": [
+            {
+              "expected": "kayak",
+              "heard": "kaya"
+            },
+            {
+              "expected": "es",
+              "heard": "s"
+            }
+          ],
+          "rawEndTruncated": true,
+          "rawReasons": [
+            "word mismatch (ratio 0.67): heard \"terang banget tapi dinginnya kaya s\"",
+            "last word missing, truncated, or has invalid timestamps",
+            "81 wpm outside 130±25%"
+          ]
+        },
+        {
+          "seed": 2,
+          "wordRatio": 1,
+          "similarity": 1,
+          "wpm": 99,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.83): heard \"terang banget tapi dinginnya kayak s\"",
+            "raw: last word missing, truncated, or has invalid timestamps",
+            "raw: 91 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Terang banget, tapi dinginnya kayak es.",
+          "mismatches": [],
+          "endTruncated": false,
+          "rawTranscript": "Terang banget, tapi dinginnya kayak S.",
+          "rawMismatches": [
+            {
+              "expected": "es",
+              "heard": "s"
+            }
+          ],
+          "rawEndTruncated": true,
+          "rawReasons": [
+            "word mismatch (ratio 0.83): heard \"terang banget tapi dinginnya kayak s\"",
+            "last word missing, truncated, or has invalid timestamps",
+            "91 wpm outside 130±25%"
+          ]
+        }
+      ]
+    }
+  ]
+}

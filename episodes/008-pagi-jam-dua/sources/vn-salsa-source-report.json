@@ -1,0 +1,183 @@
+{
+  "version": 1,
+  "voiceId": "Leda",
+  "voiceName": "Leda",
+  "provider": "gemini-cloud",
+  "model": "gemini-3.8-flash-tts",
+  "master": false,
+  "masterFilter": null,
+  "asrModel": "small",
+  "generatedAt": "2026-11-24T21:32:34.942Z",
+  "passed": false,
+  "totalChunks": 1,
+  "verifiedChunks": 0,
+  "warningChunks": 0,
+  "failedChunks": 1,
+  "plannedDurationSec": 3.465,
+  "finalAlignment": {
+    "transcript": "Burung pagi. Uir, cahayanya turun kesini.",
+    "mismatches": [
+      {
+        "expected": "wir",
+        "heard": "uir"
+      }
+    ],
+    "passed": false
+  },
+  "audioQuality": {
+    "integratedLufs": -11.9,
+    "loudnessRangeLu": 1,
+    "noiseFloorDbfs": -12.4,
+    "targets": {
+      "integratedLufs": -14,
+      "loudnessRangeLu": [
+        5,
+        7
+      ]
+    }
+  },
+  "chunks": [
+    {
+      "index": 0,
+      "tag": null,
+      "text": "Burung pagi? Wir, cahayanya turun ke sini!",
+      "retries": 2,
+      "status": "failed",
+      "bestSimilarity": 0.961,
+      "bestWordRatio": 0.833,
+      "acceptedAttempt": 1,
+      "attempts": [
+        {
+          "seed": 0,
+          "wordRatio": 0.667,
+          "similarity": 0.868,
+          "wpm": 120,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.67): heard \"buzet pagi uir cahayanya turun kesini\"",
+            "raw: last word missing, truncated, or has invalid timestamps",
+            "raw: char similarity 0.87 < 0.94",
+            "word mismatch (ratio 0.67): heard \"buzet pagi uir cahayanya turun kesini\"",
+            "last word missing, truncated, or has invalid timestamps",
+            "char similarity 0.87 < 0.94"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Buzet, pagi. Uir, cahayanya turun kesini.",
+          "mismatches": [
+            {
+              "expected": "burung",
+              "heard": "buzet"
+            },
+            {
+              "expected": "wir",
+              "heard": "uir"
+            }
+          ],
+          "endTruncated": true,
+          "rawTranscript": "Buzet. Pagi. Uir, cahayanya turun kesini.",
+          "rawMismatches": [
+            {
+              "expected": "burung",
+              "heard": "buzet"
+            },
+            {
+              "expected": "wir",
+              "heard": "uir"
+            }
+          ],
+          "rawEndTruncated": true,
+          "rawReasons": [
+            "word mismatch (ratio 0.67): heard \"buzet pagi uir cahayanya turun kesini\"",
+            "last word missing, truncated, or has invalid timestamps",
+            "char similarity 0.87 < 0.94"
+          ]
+        },
+        {
+          "seed": 1,
+          "wordRatio": 0.833,
+          "similarity": 0.961,
+          "wpm": 121,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.83): heard \"burung pagi uir cahayanya turun kesini\"",
+            "raw: last word missing, truncated, or has invalid timestamps",
+            "word mismatch (ratio 0.83): heard \"burung pagi uir cahayanya turun kesini\"",
+            "last word missing, truncated, or has invalid timestamps"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Burung pagi. Uir, cahayanya turun kesini.",
+          "mismatches": [
+            {
+              "expected": "wir",
+              "heard": "uir"
+            }
+          ],
+          "endTruncated": true,
+          "rawTranscript": "Burung pagi. Uir, cahayanya turun kesini.",
+          "rawMismatches": [
+            {
+              "expected": "wir",
+              "heard": "uir"
+            }
+          ],
+          "rawEndTruncated": true,
+          "rawReasons": [
+            "word mismatch (ratio 0.83): heard \"burung pagi uir cahayanya turun kesini\"",
+            "last word missing, truncated, or has invalid timestamps"
+          ]
+        },
+        {
+          "seed": 2,
+          "wordRatio": 0.714,
+          "similarity": 0.909,
+          "wpm": 123,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.71): heard \"berum pagi uir cahayanya turun ke sini\"",
+            "raw: char similarity 0.91 < 0.94",
+            "word mismatch (ratio 0.71): heard \"berum pagi uir cahayanya turun ke sini\"",
+            "char similarity 0.91 < 0.94"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Berum pagi. Uir, cahayanya turun ke sini.",
+          "mismatches": [
+            {
+              "expected": "burung",
+              "heard": "berum"
+            },
+            {
+              "expected": "wir",
+              "heard": "uir"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Berum pagi. Uir, cahayanya turun ke sini.",
+          "rawMismatches": [
+            {
+              "expected": "burung",
+              "heard": "berum"
+            },
+            {
+              "expected": "wir",
+              "heard": "uir"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.71): heard \"berum pagi uir cahayanya turun ke sini\"",
+            "char similarity 0.91 < 0.94"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "version": 1,
+  "voiceId": "Puck",
+  "voiceName": "Puck",
+  "provider": "gemini-cloud",
+  "model": "gemini-3.8-flash-tts",
+  "master": false,
+  "masterFilter": null,
+  "asrModel": "small",
+  "generatedAt": "2026-11-24T21:38:11.384Z",
+  "passed": true,
+  "totalChunks": 1,
+  "verifiedChunks": 1,
+  "warningChunks": 0,
+  "failedChunks": 0,
+  "plannedDurationSec": 3.365,
+  "finalAlignment": {
+    "transcript": "Terang banget, tapi dinginnya kayak es.",
+    "mismatches": [],
+    "passed": true
+  },
+  "audioQuality": {
+    "integratedLufs": -19.1,
+    "loudnessRangeLu": 20.7,
+    "noiseFloorDbfs": -19.4,
+    "targets": {
+      "integratedLufs": -14,
+      "loudnessRangeLu": [
+        5,
+        7
+      ]
+    }
+  },
+  "chunks": [
+    {
+      "index": 0,
+      "tag": null,
+      "text": "Terang banget, tapi dinginnya kayak es.",
+      "retries": 0,
+      "status": "verified",
+      "bestSimilarity": 1,
+      "bestWordRatio": 1,
+      "acceptedAttempt": 0,
+      "attempts": [
+        {
+          "seed": 0,
+          "wordRatio": 1,
+          "similarity": 1,
+          "wpm": 107,
+          "expectedWpm": 130,
+          "passed": true,
+          "reasons": [],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Terang banget, tapi dinginnya kayak es.",
+          "mismatches": [],
+          "endTruncated": false,
+          "rawTranscript": "Terang banget, tapi dinginnya kayak es.",
+          "rawMismatches": [],
+          "rawEndTruncated": false,
+          "rawReasons": []
+        }
+      ]
+    }
+  ]
+}

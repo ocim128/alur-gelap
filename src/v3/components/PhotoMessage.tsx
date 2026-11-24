@@ -131,7 +131,7 @@ export type PhotoZoomOverlayProps = {
 };
 
 /** Full-bleed dark lightbox whose critical photo clue, sender header, and caption stay strictly inside V3_CRITICAL_REGIONS.photoLightboxContent. */
-export function PhotoZoomOverlay({event, sender}: PhotoZoomOverlayProps) {
+export function PhotoZoomOverlay({event, sender, focusBottom = false, focusRight = false}: PhotoZoomOverlayProps & {focusBottom?: boolean; focusRight?: boolean}) {
   const frame = useCurrentFrame();
   const zoom = event.zoom;
   if (!zoom) return null;
@@ -227,8 +227,9 @@ export function PhotoZoomOverlay({event, sender}: PhotoZoomOverlayProps) {
               width: '100%',
               height: '100%',
               objectFit: 'cover',
-              transform: `translate(${panX.toFixed(2)}%, ${panY.toFixed(2)}%) scale(${scale.toFixed(4)})`,
-              transformOrigin: 'center center',
+              objectPosition: focusBottom ? `${focusRight ? 'right' : 'center'} bottom` : 'center center',
+              transform: `translate(${(focusRight ? 0 : panX).toFixed(2)}%, ${(focusBottom ? 0 : panY).toFixed(2)}%) scale(${scale.toFixed(4)})`,
+              transformOrigin: focusBottom ? `${focusRight ? 'right' : 'center'} bottom` : 'center center',
             }}
           />
         </div>

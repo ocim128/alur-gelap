@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "voiceId": "Puck",
+  "durationSec": 3.365,
+  "master": false,
+  "chunks": [
+    {
+      "index": 0,
+      "tag": null,
+      "text": "Terang banget, tapi dinginnya kayak es.",
+      "start": 0,
+      "end": 3.365,
+      "retries": 0,
+      "status": "verified"
+    }
+  ],
+  "words": [
+    {
+      "word": "Terang",
+      "start": 0,
+      "end": 0.5,
+      "chunk": 0
+    },
+    {
+      "word": "banget,",
+      "start": 0.5,
+      "end": 1,
+      "chunk": 0
+    },
+    {
+      "word": "tapi",
+      "start": 1.46,
+      "end": 1.82,
+      "chunk": 0
+    },
+    {
+      "word": "dinginnya",
+      "start": 1.82,
+      "end": 2.64,
+      "chunk": 0
+    },
+    {
+      "word": "kayak",
+      "start": 2.64,
+      "end": 2.78,
+      "chunk": 0
+    },
+    {
+      "word": "es.",
+      "start": 2.78,
+      "end": 3.3,
+      "chunk": 0
+    }
+  ],
+  "sfx": []
+}

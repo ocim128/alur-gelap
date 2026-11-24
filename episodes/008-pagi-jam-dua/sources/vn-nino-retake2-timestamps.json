@@ -1,0 +1,80 @@
+{
+  "version": 1,
+  "voiceId": "voice_71a5a701-796e-421d-840e-0adc00b0816a",
+  "durationSec": 5.625,
+  "master": false,
+  "chunks": [
+    {
+      "index": 0,
+      "tag": null,
+      "text": "Kok nggak capek ya? Kayak siang, tapi nggak ada angetnya.",
+      "start": 0,
+      "end": 5.625,
+      "retries": 2,
+      "status": "failed"
+    }
+  ],
+  "words": [
+    {
+      "word": "Kok",
+      "start": 0,
+      "end": 0.52,
+      "chunk": 0
+    },
+    {
+      "word": "gak",
+      "start": 0.52,
+      "end": 0.74,
+      "chunk": 0
+    },
+    {
+      "word": "capek",
+      "start": 0.74,
+      "end": 1.5,
+      "chunk": 0
+    },
+    {
+      "word": "ya?",
+      "start": 1.5,
+      "end": 1.64,
+      "chunk": 0
+    },
+    {
+      "word": "Kayak",
+      "start": 2.28,
+      "end": 2.82,
+      "chunk": 0
+    },
+    {
+      "word": "siang",
+      "start": 2.82,
+      "end": 3.96,
+      "chunk": 0
+    },
+    {
+      "word": "tapi",
+      "start": 3.96,
+      "end": 4.58,
+      "chunk": 0
+    },
+    {
+      "word": "gak",
+      "start": 4.58,
+      "end": 4.82,
+      "chunk": 0
+    },
+    {
+      "word": "ada",
+      "start": 4.82,
+      "end": 5,
+      "chunk": 0
+    },
+    {
+      "word": "angetnya.",
+      "start": 5,
+      "end": 5.52,
+      "chunk": 0
+    }
+  ],
+  "sfx": []
+}

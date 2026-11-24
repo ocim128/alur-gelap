@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "voiceId": "Leda",
+  "durationSec": 3.465,
+  "master": false,
+  "chunks": [
+    {
+      "index": 0,
+      "tag": null,
+      "text": "Burung pagi? Wir, cahayanya turun ke sini!",
+      "start": 0,
+      "end": 3.465,
+      "retries": 2,
+      "status": "failed"
+    }
+  ],
+  "words": [
+    {
+      "word": "Burung",
+      "start": 0,
+      "end": 0.54,
+      "chunk": 0
+    },
+    {
+      "word": "pagi.",
+      "start": 0.54,
+      "end": 0.9,
+      "chunk": 0
+    },
+    {
+      "word": "Uir,",
+      "start": 1.64,
+      "end": 1.96,
+      "chunk": 0
+    },
+    {
+      "word": "cahayanya",
+      "start": 2.32,
+      "end": 2.78,
+      "chunk": 0
+    },
+    {
+      "word": "turun",
+      "start": 2.78,
+      "end": 3,
+      "chunk": 0
+    },
+    {
+      "word": "kesini.",
+      "start": 3,
+      "end": 3.34,
+      "chunk": 0
+    }
+  ],
+  "sfx": []
+}

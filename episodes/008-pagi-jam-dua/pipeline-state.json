@@ -1,11 +1,11 @@
 {
-  "brief": {"status": "ready", "notes": "Revised Step 2 draft for owner review; fresh-context model proxy cold-read recorded in brief. No owner approval claimed."},
-  "audio": {"status": "pending", "notes": "No episode audio generated. Owner selected Leda and Puck from separate phone auditions; episode audio listening review: none."},
-  "images": {"status": "pending", "notes": "Six stills planned; none generated or reviewed."},
-  "render": {"status": "pending", "notes": "Composition ID reserved; composition not registered or rendered."},
-  "audit": {"status": "pending", "notes": "No rendered artifact exists for independent audit."},
+  "brief": {"status": "pass", "notes": "Owner approved checkpoint 1 for script SHA-256 c8ef58ec335d18400d38900449e316d0ddae42bcda7593aac7b429fbaa38836f; recorded model-proxy cold read remains unchanged."},
+  "audio": {"status": "fail", "notes": "Clips and SFX generated; mix measurements pass. Salsa raw final-word warning and Nino ASR nggak/gak mismatches remain; onset warnings on all, m7 overlaps m8 pop. listening review: none. See assets.md and review.md."},
+  "images": {"status": "fail", "notes": "Six generated stills inspected; m16 dark circle may read as a pole foot rather than its shadow, and m5 light boundary may read as horizon. Independent visual review remains needed; no owner exception recorded."},
+  "render": {"status": "ready", "notes": "v1 MP4, 540p preview, contact sheet and key frames exist; requested audio measurements pass. Upstream audio and image findings remain open; see review.md. This candidate is not a technical handoff pass."},
+  "audit": {"status": "pending", "notes": "Independent Agent 05 QA of the rendered v1 hash has not occurred."},
   "publish": {"status": "pending", "notes": "Not authorized."},
-  "latestRendered": null,
+  "latestRendered": {"path": "out/008-pagi-jam-dua/arsip02-pagi-jam-dua-v1.mp4", "sha256": "35807d420e1956f801c21f7d534e63a145174220d21a8121918a98fcf4dc0718"},
   "independentlyAudited": null,
   "ownerReviewed": null,
   "published": null
