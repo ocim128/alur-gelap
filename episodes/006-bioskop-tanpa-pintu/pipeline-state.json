@@ -8,8 +8,50 @@
     "notes": "24 Nov: owner-requested fresh Investigator master and PCM-verified candidate derivatives generated for the current 243-word script; see audio-handoff-20261124-v3.md. ShortZ verification failed, pronunciation/name concerns require targeted listening, and the P22 gap is only 0.82 s by word alignment versus a required two-second hold. Candidate is not locked or approved for assembly. listening review: none."
   },
   "images": {
-    "status": "pending",
-    "notes": "24 production panels pending. P09/P23 rough visual changes retained; a separate revised scratch cut has been generated."
+    "status": "fail",
+    "notes": "Owner-authorized targeted revisions and provisional schematic motion preview completed; prior expansion exceptions preserved. New P05/P06 level, screen/projector consistency, P08/P09 readability, cloth action and motion remain unresolved. See sources/prompts.md; assembly handoff blocked.",
+    "technicalVerdict": "fail",
+    "ownerDisposition": "pending",
+    "handoffAllowed": false,
+    "exceptions": [],
+    "expansionGate": {
+      "technicalVerdict": "fail",
+      "ownerDisposition": "approved_with_exceptions",
+      "handoffAllowed": true,
+      "handoffScope": "Permission to expand visual development only; not assembly or publication.",
+      "exceptions": [
+        {
+          "panel": "episode",
+          "defect": "present_conflicting_state",
+          "evidence": "Original character and hook studies have internally lit clothing; P01 projector geometry and screen landing patch are unclear.",
+          "downstreamVerify": "If assembly is later authorized, Agent 04 checks the affected action and continuity in the compressed export at phone size; Agent 05 reports independently."
+        },
+        {
+          "panel": "P08-P09",
+          "defect": "present_conflicting_state",
+          "evidence": "P08 marked flashlight is not nearest the screen and projector appears on stage; P09 threshold/drop is unclear and fall is not depicted.",
+          "downstreamVerify": "If assembly is later authorized, Agent 04 checks the affected action and continuity in the compressed export at phone size; Agent 05 reports independently. Check the marked row moves against a fixed screen, then the threshold crossing and fall at normal speed."
+        },
+        {
+          "panel": "P18-P19",
+          "defect": "present_conflicting_state",
+          "evidence": "P18 stage projector and ambiguous shoulder load; P19 tear and viewpoint conflict with the preceding cloth state.",
+          "downstreamVerify": "If assembly is later authorized, Agent 04 checks the affected action and continuity in the compressed export at phone size; Agent 05 reports independently. Check contact, tear and passage in order."
+        },
+        {
+          "panel": "P05-P22",
+          "defect": "present_conflicting_state",
+          "evidence": "P05 red doors appear at balcony level, west exit is absent, and the inside-to-outside wall axis is not established.",
+          "downstreamVerify": "If assembly is later authorized, Agent 04 checks the affected action and continuity in the compressed export at phone size; Agent 05 reports independently. Agent 02 must deliver and verify the narration-free P22 hold."
+        },
+        {
+          "panel": "P23-P24",
+          "defect": "present_conflicting_state",
+          "evidence": "P23 v2 has an unrequested white arrow; P24 places Ranto on an inconsistent shutter side and changes gate view.",
+          "downstreamVerify": "If assembly is later authorized, Agent 04 checks the affected action and continuity in the compressed export at phone size; Agent 05 reports independently. Verify final-word gap, shutter slam, jolt and black against the measured map."
+        }
+      ]
+    }
   },
   "render": {
     "status": "pending",
