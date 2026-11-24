@@ -1,5 +1,16 @@
 # Asset & Rights Record (Studio v3 · Arsip Terakhir) — 007 · Grup Ronda RT 07
 
+## v4 audio revision (2026-11-24)
+
+The six approved stills remain byte-for-byte unchanged from v3. This v4 audio revision uses new filenames so the v3 media remain available. No new stills were generated.
+
+| Asset | SHA-256 | Source and processing |
+| --- | --- | --- |
+| `public/assets/007-grup-ronda-rt07/vn-02-hendra-odd-v4.mp3` | `0458b8810e374f1a320b5cc3f9a9139588d55331d348faa898f92c6a409a999f` | 3.565 s; `scripts/generate-ronda-v4-vn.py` combines the retained Hendra TTS master, CC0 `night-air.wav`, and `sources/sfx-m6-laugh-src.mp3`. A 0.42 s band-limited excerpt is placed at 1.63–2.05 s in the speech gap. Before encoding, its 300–2500 Hz RMS was set 7 dB below speech RMS measured at 0.88–1.60 s; the common output gain preserves their ratio. Listening on a phone remains pending. |
+| `public/assets/007-grup-ronda-rt07/tension-ronda-drone-v4.wav` | `d1cea5fc8bf63619b7697c433cfc69b707f19fc3d2663e6a1bcfce6b00ad67c2` | 38.2 s; synthesized with `node scripts/generate-ronda-soundscape.mjs --drone-v4`, adding non-melodic 90–220 Hz room pressure and harmonics to the sub rumble. Phone-speaker audibility remains pending listening. |
+
+Google Cloud speech and generated-laugh commercial/publication terms remain unverified. The owner listened to v3 on a phone and reported that crickets worked, the scary factor was acceptable for now, and the m6 laugh was missed; this is feedback on v3 only. **v4: `listening review: none`.**
+
 ## Checkpoint 6b revision — current assets (2026-11-24)
 
 The entries below supersede the v2 measurements and asset references retained in the historical sections below. Current timeline: 66.5 s / 1995 frames. `listening review: none`.

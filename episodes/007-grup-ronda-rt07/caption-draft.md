@@ -21,4 +21,4 @@ ada 1 petunjuk di 10 detik pertama yang ngejelasin semuanya. udah nemu? 👀
 - [ ] Verify caption includes **`#fiksi`** and **`#ceritahorror`**.
 - [ ] Switch **ON** the platform's built-in **AI-generated-content** label at upload (TikTok / Reels / Shorts).
 - [ ] Confirm `@skenarium` account bio states fiction.
-- [ ] Complete human watch & listening review of `out/007-grup-ronda-rt07/arsip01-grup-ronda-rt07-v3.mp4` before any publish decision.
+- [ ] Complete human watch & listening review of `out/007-grup-ronda-rt07/arsip01-grup-ronda-rt07-v4.mp4` before any publish decision.

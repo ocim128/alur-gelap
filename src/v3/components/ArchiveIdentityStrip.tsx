@@ -15,7 +15,7 @@ export type ArchiveIdentityStripProps = {
  * Full-width solid series identity strip directly below ChatHeader:
  * displays "ARSIP #NNN · @skenarium" plus optional factual evidence tag
  * (e.g. "HP milik: Bayu") at >= 42 px inside V3_CRITICAL_REGIONS.identityStripContent.
- * Scrolling messages clip strictly below this strip (y = 330) so no message passes behind it.
+ * Scrolling messages clip strictly below this strip so no message passes behind it.
  */
 export function ArchiveIdentityStrip({archiveNumber, metadataLine}: ArchiveIdentityStripProps) {
   const strip = V3_CHROME_REGIONS.identityStrip;

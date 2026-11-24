@@ -25,7 +25,7 @@ Never add a narrator track, burned-in narration captions, melodic music, rewind 
    - **Overlay transition rule:** Limit overlay fades (`PhotoZoomOverlay`, `CctvFrame`, `CallScreen`, `EvidenceTagOverlay`, `Notification`) to **`<= 6` frames** or hard cuts with opaque backdrops so readable text never appears doubled/ghosted.
 2. **Enforce phone readability, safe zones and reading pace:**
    - All readable on-screen text (identity strip, archive metadata labels, chat messages, voice-note subtitles, notifications, system messages) must be **minimum ~42 px** at 1080 width.
-   - Keep critical readable content inside the vertical platform UI safe zone: **avoid top ~10% (`y >= 192`), bottom ~22% (`y <= 1497`), and right ~12% (`x + w <= 950`)**.
+   - Keep all story-readable text, including ChatHeader group name and member count, strictly inside `x >= 0`, `x + w <= 950`, `y >= 192`, `y + h <= 1497`. Decorative ambient chrome (top status clock/battery and bottom `Tulis pesan...` input bar) may remain outside that zone.
    - Hold every new message for at least **`180 ms × words + 600 ms`**, minimum **`1.2 s`**, and keep the hook artifact visible at **frame 0 (`00:00.0`)**.
    - Use an original, generic dark/neutral chat UI aesthetic — never imitate WhatsApp, Telegram or Line branding, colors or icons.
 3. **Mix, validate and render:**

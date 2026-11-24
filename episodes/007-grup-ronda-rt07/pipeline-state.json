@@ -1,23 +1,23 @@
 {
   "brief": {
-    "status": "pass",
-    "notes": "Owner approved Checkpoint 6a rev 4 on 2026-11-24 with the m14c half-empty 4th-glass continuity adjustment synced in brief.md and chat-script.json."
+    "status": "ready",
+    "notes": "v4 revised after v3 audit and owner rule change; exact strict-input fresh-context model answers recorded in brief.md, including uncertainty. New m13 and evidence label strengthen Bayu's missing-person outcome; no separate owner approval of the revision claimed."
   },
   "audio": {
     "status": "pass",
-    "notes": "6b non-melodic diegetic sound design built and measured: ambience-ronda-bed.wav (66.50 s, -24.5 dBFS RMS, -8.9 dBFS peak), tension-ronda-drone.wav (38.20 s, -18.0 dBFS RMS, -6.5 dBFS peak) via scripts/generate-ronda-soundscape.mjs, plus all 4 VNs remixed with environments (m4 4.925 s -4.4 dBTP; m6 3.565 s -4.3 dBTP with faint dry chuckle Audio Clue C3 at 1.52-2.59 s; m9 3.680 s -4.4 dBTP with alley wind + CC0 footsteps + hard mid-word cutoff; m17 2.375 s -5.9 dBTP reused m4 tail). listening review: none."
+    "notes": "v4 m6 uses a 0.42 s laugh in the 1.63–2.05 s speech gap at -7 dB relative to band-limited speech RMS; v4 drone adds 90–220 Hz pressure. Owner phone-listened to v3 only: crickets worked, scary factor okay for now, m6 laugh missed. v4 listening review: none."
   },
   "images": {
     "status": "pass",
-    "notes": "Three matched-angle CCTV stills generated with built-in imagegen; 540x960 visual count passes for 03a and 03c. The empty frame required a second imagegen edit to move the phone into the safe area. See assets.md for counts, hashes, provenance and limitations. Compressed-export framing remains to be checked."
+    "notes": "All six owner-approved stills reused byte-for-byte; no regeneration. Counting and provenance in assets.md."
   },
   "render": {
     "status": "pass",
-    "notes": "Rendered compressed v3 MP4, 540p preview, contact sheet and key frames; source checks pass, technical measurements and builder visual inspection recorded in review.md. Final video SHA-256 30e173d2aba2a45f40535edd9ed481d41943b656cbe4ab1ab7f14a25d45a1084. listening review: none. Independent QA remains pending."
+    "notes": "Rendered compressed v4 MP4, 540p preview, contact sheet and key frames. Builder measurements and limitations are in review.md. MP4 SHA-256 4e6e1dd67e8a6fa8e17dca649861780b0815041df6669e458a1ab6ab94b99dae. v4 listening review: none."
   },
   "audit": {
     "status": "pending",
-    "notes": "Independent fresh-context post-MP4 QA remains pending; builder inspection and measurements are recorded in review.md and are not an independent audit."
+    "notes": "Agent 05's v3 FAIL is retained in audit-report.md. Independent fresh-context re-audit of the v4 hash is pending; builder inspection and measurements are not an independent audit."
   },
   "publish": {
     "status": "pending",

@@ -46,6 +46,10 @@ test('audio plan preserves layout by default and compensates explicit changes', 
   const downmix = planAudioHandling(stereo, {channels: 1});
   assert.ok(downmix.args.includes('pan=mono|c0=0.5*c0+0.5*c1,volume=3dB'));
   assert.throws(() => planAudioHandling(stereo, {channels: 6}), /Unsupported explicit channel change/);
+  const mastered = planAudioHandling(stereo, {masterGainDb: 6.5});
+  assert.match(mastered.args[mastered.args.indexOf('-af') + 1], /aresample=192000,volume=6\.5dB,alimiter=.*aresample=48000/);
+  assert.throws(() => planAudioHandling(stereo, {masterGainDb: 13}), /between 0 and 12/);
+  assert.throws(() => planAudioHandling(stereo, {channels: 1, masterGainDb: 6}), /requires preserved channel layout/);
 });
 
 test('silence intervals measure RMS and edge peaks and never assert digital zero implicitly', () => {

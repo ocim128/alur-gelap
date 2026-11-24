@@ -15,7 +15,7 @@
     "theme": "dark",
     "selfId": "bayu"
   },
-  "startClock": "23:47:26",
+  "startClock": "23:47:42",
   "startBattery": 38,
   "endBattery": 31,
   "characters": [
@@ -50,7 +50,7 @@
       "gain": 0.42
     },
     "tension": {
-      "src": "assets/007-grup-ronda-rt07/tension-ronda-drone.wav",
+      "src": "assets/007-grup-ronda-rt07/tension-ronda-drone-v4.wav",
       "startFrame": 504,
       "endFrame": 1650,
       "startGain": 0.08,
@@ -60,7 +60,7 @@
       {
         "startFrame": 1650,
         "endFrame": 1734,
-        "reason": "Deliberate hard drop to near-silence after mimic message m13 through evidence tag m15 ('ditemukan: portal barat · 05.12'), broken by Tanpa Nama ping at m16."
+        "reason": "Deliberate hard drop to near-silence after mimic message m13 through evidence tag m15 ('Bayu hilang · HP: portal barat 05.12'), broken by Tanpa Nama ping at m16."
       }
     ],
     "uiSfx": {
@@ -74,7 +74,7 @@
       "at": 0,
       "type": "text",
       "from": "darto",
-      "text": "mas td yg ketawa di pos siapa? kita kan cuma bertiga",
+      "text": "mas td yg ketawa di pos siapa? pdhl kita bertiga kepisah",
       "timeLabel": "23.47"
     },
     {
@@ -126,10 +126,10 @@
       "at": 594,
       "type": "voice",
       "from": "hendra",
-      "src": "assets/007-grup-ronda-rt07/vn-02-hendra-odd.mp3",
+      "src": "assets/007-grup-ronda-rt07/vn-02-hendra-odd-v4.mp3",
       "subtitle": "Hah... aku di pos, Pak. Aku dari tadi di pos.",
       "typingFrames": 20,
-      "timeLabel": "23.47"
+      "timeLabel": "23.48"
     },
     {
       "id": "m7",
@@ -138,7 +138,7 @@
       "from": "darto",
       "text": "mas bayu denger ga sih? suara hendra kok aneh banget",
       "typingFrames": 22,
-      "timeLabel": "23.47"
+      "timeLabel": "23.48"
     },
     {
       "id": "m8",
@@ -147,7 +147,7 @@
       "from": "darto",
       "src": "assets/007-grup-ronda-rt07/still-02-gang-gelap.jpg",
       "caption": "itu hendra bukan??",
-      "timeLabel": "23.47",
+      "timeLabel": "23.48",
       "zoom": {
         "x": 0.55,
         "y": 0.55,
@@ -163,7 +163,7 @@
       "from": "darto",
       "src": "assets/007-grup-ronda-rt07/vn-03-darto-panic.mp3",
       "subtitle": "Mas Bayu jawab dong! Dia nengok ke sini, dia lari—",
-      "timeLabel": "23.47"
+      "timeLabel": "23.48"
     },
     {
       "id": "m14a",
@@ -173,7 +173,7 @@
       "durationFrames": 84,
       "src": "assets/007-grup-ronda-rt07/still-03a-cctv-hendra-photo.jpg",
       "cameraLabel": "CAM 01 • POS RONDA RT 07",
-      "timestampLabel": "23:47:31"
+      "timestampLabel": "23:47:47"
     },
     {
       "id": "m14b",
@@ -183,7 +183,7 @@
       "durationFrames": 54,
       "src": "assets/007-grup-ronda-rt07/still-03b-cctv-standing.jpg",
       "cameraLabel": "CAM 01 • POS RONDA RT 07",
-      "timestampLabel": "23:47:36"
+      "timestampLabel": "23:47:52"
     },
     {
       "id": "m14c",
@@ -193,7 +193,7 @@
       "durationFrames": 96,
       "src": "assets/007-grup-ronda-rt07/still-03c-cctv-empty.jpg",
       "cameraLabel": "CAM 01 • POS RONDA RT 07",
-      "timestampLabel": "23:47:40",
+      "timestampLabel": "23:47:56",
       "zoom": {
         "x": 1.0,
         "y": 1.0,
@@ -231,7 +231,7 @@
       "at": 1566,
       "type": "text",
       "from": "hendra",
-      "text": "bayu jangan diam aja, balas dulu",
+      "text": "bayu aku udah di belakang kamu. balas dulu",
       "typingFrames": 24,
       "timeLabel": "23.48"
     },
@@ -240,7 +240,7 @@
       "at": 1650,
       "type": "evidence",
       "durationFrames": 84,
-      "text": "ditemukan: portal barat · 05.12"
+      "text": "Bayu hilang · HP: portal barat 05.12"
     },
     {
       "id": "m16",
@@ -278,7 +278,7 @@
       "clue": "Hendra membuat 3 gelas kopi (m2), namun foto pos (m3) menunjukkan 4 gelas kopi (3 penuh, 1 setengah habis)",
       "plantedIn": "m3",
       "paidOffIn": "m14a",
-      "note": "Payoff in CCTV PLAYBACK m14a (23:47:31) recasts m3: Hendra is holding his phone photographing the glasses while the dark figure sits right beside him just outside his camera frame (the 4th glass belonged to the figure); m14c (23:47:40) shows the empty pos with 1 dropped phone and the 3 full + 1 half-empty glasses untouched (matching m3/m14a)."
+      "note": "Payoff in CCTV PLAYBACK m14a (23:47:47) recasts m3: Hendra is holding his phone photographing the glasses while the dark figure sits right beside him just outside his camera frame (the 4th glass belonged to the figure); m14c (23:47:56) shows the empty pos with 1 dropped phone and the 3 full + 1 half-empty glasses untouched (matching m3/m14a)."
     },
     {
       "clue": "Grup ronda hanya beranggotakan 3 orang (m1 + header tetap '3 anggota' tanpa pesan gabung/keluar)",
@@ -290,7 +290,7 @@
       "clue": "Hook menanyakan siapa yang tertawa di pos (m1), lalu terdengar tawa pelan di latar belakang voice note Hendra (m6)",
       "plantedIn": "m1",
       "paidOffIn": "m6",
-      "note": "Phone-audible faint dry chuckle layered behind Hendra's flat mimic delivery in m6 (after Hendra was already taken at 23:47:40 in m14c)."
+      "note": "Phone-audible faint dry chuckle layered behind Hendra's flat mimic delivery in m6 (after Hendra was already taken at 23:47:56 in m14c)."
     }
   ]
 }

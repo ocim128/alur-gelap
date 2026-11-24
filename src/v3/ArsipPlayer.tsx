@@ -41,7 +41,9 @@ type ThreadEvent = TextEventV3 | PhotoEventV3 | VoiceEventV3 | SystemEventV3;
 
 const THREAD_GAP = 24;
 const THREAD_TOP_PAD = 18;
-const THREAD_BOTTOM_PAD = 36;
+// Preserve space below the newest message so the preceding one scrolls clear
+// of the identity strip instead of leaving its text cut in half at rest.
+const THREAD_BOTTOM_PAD = 180;
 const TYPING_BUBBLE_HEIGHT = 100;
 
 function isThreadEvent(event: ChatEventV3): event is ThreadEvent {
@@ -177,7 +179,7 @@ export function ArsipPlayer({script}: ArsipPlayerProps) {
           src={staticFile(script.audio.ambience.src)}
           volume={(f) => {
             const base = script.audio?.ambience?.gain ?? 0.35;
-            return isSilenceDropAt(f) ? 0.015 : base;
+            return isSilenceDropAt(f) ? 0.009 : base;
           }}
           loop
         />
@@ -203,11 +205,7 @@ export function ArsipPlayer({script}: ArsipPlayerProps) {
                 extrapolateLeft: 'clamp',
                 extrapolateRight: 'clamp',
               });
-              const tailOut = interpolate(localF, [Math.max(0, span - 6), span], [1, 0], {
-                extrapolateLeft: 'clamp',
-                extrapolateRight: 'clamp',
-              });
-              return ramp * tailOut;
+              return ramp;
             }}
             loop
           />
@@ -253,6 +251,8 @@ export function ArsipPlayer({script}: ArsipPlayerProps) {
         endBattery={script.endBattery}
         glitches={script.glitches}
       >
+        {/* Leave the platform's top tab band clear before story-readable header text. */}
+        <div style={{height: V3_CHROME_REGIONS.chatHeader.y - V3_CHROME_REGIONS.statusBar.height}} />
         <ChatHeader
           groupName={script.app.groupName}
           memberCount={script.app.memberCount}
@@ -260,7 +260,7 @@ export function ArsipPlayer({script}: ArsipPlayerProps) {
           statusText={script.app.statusText}
         />
 
-        {/* Reserve solid space matching the full-width identity strip so the chat thread starts and clips strictly below y = 282 */}
+        {/* Reserve the strip's space so the thread starts and clips directly below it. */}
         <div style={{height: V3_CHROME_REGIONS.identityStrip.height, backgroundColor: V3_THEME.identityStripBg}} />
 
         {/* Full-bleed chat thread canvas; active readable content stays inside V3_CRITICAL_REGIONS.chatContent */}

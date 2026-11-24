@@ -11,7 +11,10 @@ import {compressVideo} from './compress-video.mjs';
 // reusable master.
 const [composition, outputArg, ...options] = process.argv.slice(2);
 const keepMaster = options.includes('--keep-master');
-const remotionOptions = options.filter(option => option !== '--keep-master');
+// A positional spelling survives npm argument filtering on Windows PowerShell.
+const isMasterGainOption = option => /^(--)?audio-master-gain-db=/.test(option);
+const masterGainOption = options.find(isMasterGainOption);
+const remotionOptions = options.filter(option => option !== '--keep-master' && !isMasterGainOption(option));
 if (!composition || !outputArg || extname(outputArg).toLowerCase() !== '.mp4') {
   console.error('Usage: npm run render -- <composition-id> <delivery.mp4> [Remotion options] [--keep-master]');
   process.exitCode = 1;
@@ -28,7 +31,8 @@ if (!composition || !outputArg || extname(outputArg).toLowerCase() !== '.mp4') {
     if (result.status !== 0) throw new Error(`Remotion failed (${result.status})`);
     // The delivery step enforces explicit limited-range Rec.709 conversion/tags and
     // yuv420p, and measures loudness/color/silence on the compressed delivery.
-    compressVideo(master, output);
+    const audio = masterGainOption ? {masterGainDb: Number(masterGainOption.split('=')[1])} : undefined;
+    compressVideo(master, output, {audio});
     if (keepMaster) console.log(`Master retained for revision work: ${master}`);
     else rmSync(master);
   } catch (error) {

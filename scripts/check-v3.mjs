@@ -121,6 +121,7 @@ export function validateV3Layout(layout = V3_LAYOUT) {
   }
 
   assert(layout.criticalRegions && typeof layout.criticalRegions === "object", "v3 layout: missing criticalRegions");
+  assert(layout.criticalRegions.chatHeaderContent, "v3 layout: chatHeaderContent must be defined inside criticalRegions");
   assert(
     layout.criticalRegions.identityStripContent,
     "v3 layout: identityStripContent must be defined inside criticalRegions",
@@ -142,6 +143,16 @@ export function validateV3Layout(layout = V3_LAYOUT) {
       `v3 layout: criticalRegions.${name} bottom edge (${box.y + box.height} px) intrudes into bottom 22% danger zone (max ${maxY} px)`,
     );
   }
+
+  const header = layout.chromeRegions.chatHeader;
+  const headerContent = layout.criticalRegions.chatHeaderContent;
+  const strip = layout.chromeRegions.identityStrip;
+  const chat = layout.criticalRegions.chatContent;
+  assert(header && strip && chat, "v3 layout: header, strip and chat geometry are required");
+  assert(headerContent.y === header.y && headerContent.height === header.height,
+    "v3 layout: chatHeaderContent must match rendered header vertical bounds");
+  assert(strip.y === header.y + header.height, "v3 layout: identity strip must immediately follow chat header");
+  assert(chat.y === strip.y + strip.height, "v3 layout: chat must clip immediately below identity strip");
 
   assert(
     layout.overlayFadeFrames && typeof layout.overlayFadeFrames === "object",

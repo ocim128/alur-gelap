@@ -24,8 +24,8 @@
       "reviewPath": "episodes/007-grup-ronda-rt07/review.md",
       "captionDraftPath": "episodes/007-grup-ronda-rt07/caption-draft.md",
       "pipelineStatePath": "episodes/007-grup-ronda-rt07/pipeline-state.json",
-      "finalVideo": "out/007-grup-ronda-rt07/arsip01-grup-ronda-rt07-v3.mp4",
-      "finalVideoSha256": "30e173d2aba2a45f40535edd9ed481d41943b656cbe4ab1ab7f14a25d45a1084"
+      "finalVideo": "out/007-grup-ronda-rt07/arsip01-grup-ronda-rt07-v4.mp4",
+      "finalVideoSha256": "4e6e1dd67e8a6fa8e17dca649861780b0815041df6669e458a1ab6ab94b99dae"
     }
   ]
 }

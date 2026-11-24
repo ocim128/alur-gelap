@@ -98,6 +98,15 @@ export function planAudioHandling(audioStream, requested = {}) {
   } else {
     throw new Error(`Unsupported explicit channel change ${sourceChannels}ch → ${channels}ch; preserve the master layout or extend planAudioHandling.`);
   }
+  if (requested.masterGainDb !== undefined) {
+    const gain = Number(requested.masterGainDb);
+    if (!Number.isFinite(gain) || gain < 0 || gain > 12) throw new Error('masterGainDb must be between 0 and 12 dB');
+    if (channels !== sourceChannels) throw new Error('masterGainDb requires preserved channel layout');
+    // Oversampled limiting before the final AAC encode reduces intersample peaks;
+    // the actual compressed file is still measured after encoding.
+    args.push('-af', `aresample=192000,volume=${gain}dB,alimiter=limit=0.74:attack=5:release=50:level=disabled:latency=1,aresample=${sampleRate}`);
+    note += `; explicit +${gain} dB master gain and oversampled peak limiting`;
+  }
   return {args, channels, sampleRate, note};
 }
 

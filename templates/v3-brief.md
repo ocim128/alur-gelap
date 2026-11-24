@@ -11,13 +11,13 @@ Copy this into `episodes/<slug>/brief.md`. Complete and get owner sign-off befor
 - **Target Runtime** — **45–75 s** (`1350–2250` frames at 30 fps), **1080 × 1920**
 - **Local Setting** — [familiar Indonesian setting: kos, minimarket shift malam, pos ronda, KKN, rumah nenek, ojol, etc. — no real place names that could defame anyone]
 - **Archive Premise** — [2–3 sentences: whose phone/archive this is, what normal situation opens it, and what goes wrong]
-- **Survival Angle (fiction only)** — [who survives or nearly survives by noticing the clue or obeying the rule; never frame as real-world safety advice]
+- **Survival Angle (fiction only)** — [who survives or nearly escapes by noticing the clue or obeying the rule, OR the tragic ending and clearly visible fatal mistake; never frame either as real-world safety advice]
 
 ## Local Entity / Rule & `Tanpa Nama` (Never Explained Aloud)
 
 - **The one local entity or rule** — [describe the exact local supernatural behavior or rule privately for production alignment]
 - **How the viewer infers it** — [what observable contradictions, timing delays, phrasing errors or visual details let a viewer deduce the rule without narration]
-- **Why someone survives (or almost does)** — [concrete action/inaction inside the archive]
+- **Survival or tragic mistake** — [concrete action/inaction and consequence visible inside the archive]
 - **`Tanpa Nama` appearance (series constant, not a second explained rule)** — [which final artifact event(s) `Tanpa Nama` sends — fixed display name `"Tanpa Nama"`, fixed grey default avatar, no phone number, signature ping only on `Tanpa Nama` events — plus any optional subtle earlier cross-episode clue. Record on-screen appearances in `arcs/03-arsip-terakhir/lore.md`.]
 
 ## Characters & Texting Voices

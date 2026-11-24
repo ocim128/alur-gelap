@@ -89,6 +89,7 @@ export declare const V3_CHROME_REGIONS: {
 };
 
 export declare const V3_CRITICAL_REGIONS: {
+  readonly chatHeaderContent: LayoutBox;
   readonly identityStripContent: LayoutBox;
   readonly chatContent: LayoutBox;
   readonly notificationBanner: LayoutBox;

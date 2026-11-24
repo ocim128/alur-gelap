@@ -97,7 +97,7 @@ export const V3_FONT_SIZES = Object.freeze({
   statusBar: 42,
   identityStrip: 42,
   archiveMetadata: 42,
-  evidenceTag: 46,
+  evidenceTag: 42,
   headerGroupName: 48,
   headerSubtitle: 42,
   senderName: 42,
@@ -122,9 +122,9 @@ export const V3_FONT_SIZES = Object.freeze({
 export const V3_CHROME_REGIONS = Object.freeze({
   canvas: Object.freeze({x: 0, y: 0, width: 1080, height: 1920}),
   statusBar: Object.freeze({x: 0, y: 0, width: 1080, height: 86}),
-  chatHeader: Object.freeze({x: 0, y: 86, width: 1080, height: 126}),
-  identityStrip: Object.freeze({x: 0, y: 212, width: 1080, height: 118}),
-  threadBackdrop: Object.freeze({x: 0, y: 330, width: 1080, height: 1466}),
+  chatHeader: Object.freeze({x: 0, y: 200, width: 1080, height: 126}),
+  identityStrip: Object.freeze({x: 0, y: 326, width: 1080, height: 118}),
+  threadBackdrop: Object.freeze({x: 0, y: 444, width: 1080, height: 1352}),
   inputBar: Object.freeze({x: 0, y: 1796, width: 1080, height: 124}),
 });
 
@@ -135,13 +135,14 @@ export const V3_CHROME_REGIONS = Object.freeze({
  *   x >= 0, x + width <= maxX (950), y >= minCriticalY (192), y + height <= maxY (1497).
  */
 export const V3_CRITICAL_REGIONS = Object.freeze({
-  identityStripContent: Object.freeze({x: 28, y: 218, width: 916, height: 106}),
-  chatContent: Object.freeze({x: 28, y: 330, width: 916, height: 1158}),
-  notificationBanner: Object.freeze({x: 28, y: 330, width: 916, height: 220}),
-  photoLightboxContent: Object.freeze({x: 28, y: 330, width: 916, height: 1158}),
-  callContent: Object.freeze({x: 28, y: 330, width: 916, height: 1158}),
-  cctvContent: Object.freeze({x: 28, y: 330, width: 916, height: 1158}),
-  evidenceTagContent: Object.freeze({x: 28, y: 330, width: 916, height: 1158}),
+  chatHeaderContent: Object.freeze({x: 28, y: 200, width: 916, height: 126}),
+  identityStripContent: Object.freeze({x: 28, y: 332, width: 916, height: 106}),
+  chatContent: Object.freeze({x: 28, y: 444, width: 916, height: 1044}),
+  notificationBanner: Object.freeze({x: 28, y: 444, width: 916, height: 220}),
+  photoLightboxContent: Object.freeze({x: 28, y: 444, width: 916, height: 1044}),
+  callContent: Object.freeze({x: 28, y: 444, width: 916, height: 1044}),
+  cctvContent: Object.freeze({x: 28, y: 444, width: 916, height: 1044}),
+  evidenceTagContent: Object.freeze({x: 28, y: 444, width: 916, height: 1044}),
 });
 
 /** Original generic midnight-slate palette (distinct from WhatsApp/Telegram/Line). */

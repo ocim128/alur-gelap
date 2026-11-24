@@ -257,6 +257,16 @@ test("v3 layout enforces identity strip safe zone, >= 42 px fonts, fixed handle,
   assert.ok(V3_LAYOUT.fontSizes.messageText >= 46 && V3_LAYOUT.fontSizes.messageText <= 48);
   assert.ok(V3_LAYOUT.fontSizes.identityStrip >= 42);
 
+  const missingHeader = structuredClone(V3_LAYOUT);
+  delete missingHeader.criticalRegions.chatHeaderContent;
+  assert.throws(() => validateV3Layout(missingHeader), /chatHeaderContent must be defined/);
+  const unsafeHeader = structuredClone(V3_LAYOUT);
+  unsafeHeader.criticalRegions.chatHeaderContent.y = 191;
+  assert.throws(() => validateV3Layout(unsafeHeader), /criticalRegions\.chatHeaderContent top edge \(191 px\)/);
+  const misplacedHeader = structuredClone(V3_LAYOUT);
+  misplacedHeader.chromeRegions.chatHeader.y = 86;
+  assert.throws(() => validateV3Layout(misplacedHeader), /chatHeaderContent must match rendered header/);
+
   const smallFont = structuredClone(V3_LAYOUT);
   smallFont.fontSizes.identityStrip = 40;
   assert.throws(() => validateV3Layout(smallFont), /font size "identityStrip" \(40 px\) is below minimum 42 px/);

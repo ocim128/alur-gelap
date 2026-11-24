@@ -128,7 +128,7 @@ export function PhoneFrame({
         </div>
       </div>
 
-      {/* Main full-bleed screen content below status bar */}
+      {/* Main screen starts below decorative status chrome; its header reserves the top safe band. */}
       <div style={{position: 'relative', width: '100%', height: box.height - statusHeight, overflow: 'hidden'}}>
         {children}
       </div>

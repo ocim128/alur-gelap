@@ -1,5 +1,5 @@
 import {useCurrentFrame} from 'remotion';
-import {V3_CHROME_REGIONS, V3_FONT_SIZES, V3_THEME} from '../layout.mjs';
+import {V3_CHROME_REGIONS, V3_CRITICAL_REGIONS, V3_FONT_SIZES, V3_THEME} from '../layout.mjs';
 
 export type ChatHeaderProps = {
   groupName: string;
@@ -31,7 +31,7 @@ export function ChatHeader({groupName, memberCount, typingName, statusText}: Cha
       data-v3="chat-header"
       style={{
         height: V3_CHROME_REGIONS.chatHeader.height,
-        padding: '0 148px 0 28px',
+        padding: `0 ${V3_CHROME_REGIONS.chatHeader.width - V3_CRITICAL_REGIONS.chatHeaderContent.x - V3_CRITICAL_REGIONS.chatHeaderContent.width}px 0 ${V3_CRITICAL_REGIONS.chatHeaderContent.x}px`,
         display: 'flex',
         alignItems: 'center',
         gap: 20,

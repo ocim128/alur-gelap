@@ -234,7 +234,7 @@ export function generateRondaBed(durationSec = 66.5) {
   return normalizeRms(out, -24.5, -6.5);
 }
 
-export function generateTensionDrone(durationSec = 38.2) {
+export function generateTensionDrone(durationSec = 38.2, phoneHarmonics = false) {
   const n = Math.round(durationSec * SAMPLE_RATE);
   const out = new Float64Array(n);
   const rng = makeRng(90012026);
@@ -243,6 +243,8 @@ export function generateTensionDrone(durationSec = 38.2) {
   const subHP = makeOnePoleHP(34);
   const airLP = makeOnePoleLP(310);
   const airHP = makeOnePoleHP(140);
+  const presenceLP = makeOnePoleLP(220);
+  const presenceHP = makeOnePoleHP(90);
 
   let brown = 0;
   for (let i = 0; i < n; i++) {
@@ -257,7 +259,14 @@ export function generateTensionDrone(durationSec = 38.2) {
       (0.55 + 0.45 * Math.sin(2 * Math.PI * 0.23 * t));
     const darkAir = airHP(airLP(white)) * (0.4 + 0.35 * Math.sin(2 * Math.PI * 0.31 * t));
 
-    out[i] = rumble * 0.58 + throb * 0.28 + darkAir * 0.26;
+    // Low-mid room pressure: rough band-limited noise and slightly drifting
+    // harmonics of the existing sub. No note sequence or melody.
+    const roomPressure = phoneHarmonics
+      ? presenceHP(presenceLP(white)) * 0.8 +
+        (Math.sin(2 * Math.PI * 92 * t) + 0.42 * Math.sin(2 * Math.PI * 139.2 * t)) *
+          (0.35 + 0.16 * Math.sin(2 * Math.PI * 0.19 * t))
+      : 0;
+    out[i] = rumble * 0.58 + throb * 0.28 + darkAir * 0.26 + roomPressure * 0.32;
   }
 
   return normalizeRms(out, -18.0, -6.0);
@@ -266,6 +275,14 @@ export function generateTensionDrone(durationSec = 38.2) {
 const isMain = process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url);
 if (isMain) {
   const outDir = resolve(process.cwd(), "public/assets/007-grup-ronda-rt07");
+  if (process.argv.includes("--drone-v4")) {
+    const dronePath = resolve(outDir, "tension-ronda-drone-v4.wav");
+    if ((await import("node:fs")).existsSync(dronePath)) throw new Error(`Refusing to overwrite ${dronePath}`);
+    const drone = generateTensionDrone(38.2, true);
+    writeMonoWav(dronePath, drone);
+    console.log(`Generated ${dronePath} (${(drone.length / SAMPLE_RATE).toFixed(2)} s)`);
+    process.exit(0);
+  }
   const bedPath = resolve(outDir, "ambience-ronda-bed.wav");
   const dronePath = resolve(outDir, "tension-ronda-drone.wav");
   const bed = generateRondaBed(66.5);
