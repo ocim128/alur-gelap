@@ -42,7 +42,7 @@ export function VoiceNoteBubble({event, sender, isSelf = false}: VoiceNoteBubble
   const waveform = useAudioWaveform(event.src, fps, 24);
 
   const local = frame - event.at;
-  if (local < 0) return null;
+  if (local < 0 || !waveform) return null;
 
   const entrance =
     event.at === 0

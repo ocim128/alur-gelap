@@ -58,9 +58,10 @@ After **one** watch, a cold viewer must be able to answer Q1–Q4 from on-screen
 
 ## Cold-Read Result (Model Proxy — NOT Audience Evidence)
 
-> Run a fresh-context Cold-Read Gate BEFORE generating any assets. Provide ONLY what a viewer perceives: chat texts, VN subtitles, archive metadata tags, and one-line literal descriptions of each photo/CCTV still (what is visible, never what it means). Record the reviewer's answers verbatim below. Revise the script if any answer misses intent.
+> Generate strict blind-review input via `node scripts/export-cold-read-input.mjs episodes/<slug>` BEFORE generating any assets. Provide ONLY that strict output (chat texts, VN subtitles, archive metadata tags, PLAYBACK badges/timestamps, and one-line literal still descriptions — zero brief prose, zero clue ledger, zero audio notes) to a fresh-context reviewer. Always cite the exact **`chat-script.json` SHA-256** below so stale cold-reads are immediately obvious. Record answers verbatim; revise and re-run if any answer misses intent.
 
 - **Status:** `[pending / pass — model proxy only, not human audience evidence]`
+- **Script SHA-256:** `[exact sha256 from export-cold-read-input.mjs]`
 - **Q1:** `[verbatim cold-read answer]`
 - **Q2:** `[verbatim cold-read answer]`
 - **Q3:** `[verbatim cold-read answer]`

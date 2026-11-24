@@ -34,6 +34,11 @@ Verification copies live under `episodes/007-grup-ronda-rt07/sources/verify-540p
 
 `sfx/shared/tanpa-nama-ping.wav` is reserved for Tanpa Nama events m16 and m17 in the current script. Sound sources and licensing notes are in `public/sfx/LICENSES.md`; TTS and generator publication terms remain unverified.
 
+## Social cover and upload copy · 2026-11-24
+
+- `out/007-grup-ronda-rt07/cover-social-9x16.jpg` is a 1080 × 1920 promotional still for `Arsip01GrupRondaRT07`. Generated with built-in ImageGen using the episode's `still-01-pos-aman.jpg` as the setting reference. The prompt frames the pos ronda from the dark lane and uses the opening question, “SIAPA YANG KETAWA DI POS RONDA?”, under `ARSIP #001 · @skenarium`. A second pass moved the text into the centered 3:4 crop, which was inspected at 300 × 400. Generator publication terms have not been independently verified.
+- `out/007-grup-ronda-rt07/caption.txt` adapts [caption-draft.md](caption-draft.md) into separate upload copy for TikTok, YouTube, Instagram Reels and Facebook Page. Each version includes `#fiksi` and `#ceritahorror`.
+
 ## Historical v2 asset record
 
 - **Episode folder:** `episodes/007-grup-ronda-rt07/`

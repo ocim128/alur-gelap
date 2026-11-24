@@ -4,5 +4,9 @@
   "images": {"status": "pending", "notes": ""},
   "render": {"status": "pending", "notes": ""},
   "audit": {"status": "pending", "notes": ""},
-  "publish": {"status": "pending", "notes": ""}
+  "publish": {"status": "pending", "notes": ""},
+  "latestRendered": null,
+  "independentlyAudited": null,
+  "ownerReviewed": null,
+  "published": null
 }

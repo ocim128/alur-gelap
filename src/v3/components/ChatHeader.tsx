@@ -22,9 +22,9 @@ export function ChatHeader({groupName, memberCount, typingName, statusText}: Cha
       .map((part) => part[0]?.toUpperCase() ?? '')
       .join('') || 'AR';
 
-  const subtitle = typingName
-    ? `${typingName} mengetik${dots}`
-    : statusText ?? (memberCount ? `${memberCount} anggota` : 'Arsip grup');
+  const memberLabel = memberCount ? `${memberCount} anggota` : null;
+  const typingLabel = typingName ? `${typingName} mengetik${dots}` : null;
+  const idleSubtitle = statusText ?? memberLabel ?? 'Arsip grup';
 
   return (
     <div
@@ -74,17 +74,30 @@ export function ChatHeader({groupName, memberCount, typingName, statusText}: Cha
           {groupName}
         </div>
         <div
+          data-v3="chat-header-subtitle"
           style={{
-            color: typingName ? V3_THEME.accent : V3_THEME.textSecondary,
+            color: typingLabel && !memberLabel ? V3_THEME.accent : V3_THEME.textSecondary,
             fontSize: V3_FONT_SIZES.headerSubtitle,
-            fontWeight: typingName ? 600 : 400,
+            fontWeight: typingLabel ? 600 : 400,
             lineHeight: 1.12,
             whiteSpace: 'nowrap',
             overflow: 'hidden',
             textOverflow: 'ellipsis',
           }}
         >
-          {subtitle}
+          {typingLabel ? (
+            memberLabel ? (
+              <>
+                <span style={{color: V3_THEME.textSecondary, fontWeight: 400}}>{memberLabel}</span>
+                <span style={{color: V3_THEME.textMuted, fontWeight: 400}}> · </span>
+                <span style={{color: V3_THEME.accent, fontWeight: 600}}>{typingLabel}</span>
+              </>
+            ) : (
+              typingLabel
+            )
+          ) : (
+            idleSubtitle
+          )}
         </div>
       </div>
     </div>

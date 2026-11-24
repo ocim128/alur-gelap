@@ -189,6 +189,8 @@ export type ChatScriptV3 = {
       notification?: string;
     };
   };
+  /** Optional map of event ID or asset src -> one-line literal still description for automated strict cold-read export. */
+  stillDescriptions?: Record<string, string>;
   events: ChatEventV3[];
   glitches?: GlitchSpecV3[];
   clueLedger: ClueLedgerEntryV3[];

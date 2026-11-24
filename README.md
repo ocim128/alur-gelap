@@ -13,7 +13,9 @@ npm run check
 npm run build
 ```
 
-The terminal prints the Remotion Studio URL. Historical Studio v2 compositions (such as `Skenario01KamarTerkunci` through `Skenario05SabukKetiga`) and Arc 01 compositions (`KemacetanTerakhirMotionComic`, `KemacetanTerakhirMotionComicRecut`, etc.) remain registered for archive compatibility. Studio v3 reusable player compositions (`src/v3/ArsipPlayer.tsx`, `ArsipDemo`, and `Arsip01GrupRondaRT07`) are introduced under the Studio v3 pipeline. Checks require Python for archived caption tests; the Rec.709 compression test runs when FFmpeg and FFprobe are available.
+The terminal prints the Remotion Studio URL. Historical Studio v2 compositions (such as `Skenario01KamarTerkunci` through `Skenario05SabukKetiga`) and Arc 01 compositions (`KemacetanTerakhirMotionComic`, `KemacetanTerakhirMotionComicRecut`, etc.) remain registered for archive compatibility. Studio v3 reusable player compositions (`src/v3/ArsipPlayer.tsx`, `ArsipDemo`, and `Arsip01GrupRondaRT07`) are introduced under the Studio v3 pipeline.
+
+**System dependencies:** **Python 3** (standard library only) and **FFmpeg / FFprobe** on `PATH` are required for `npm run check` (including Python unit tests and Rec.709 / v3 audio verification tests), `npm run render`, `npm run compress`, and `python scripts/verify-v3-export.py <delivery.mp4> <chat-script.json>`.
 
 `npm run build` runs the checks before bundling. Checks validate source and schema constraints; they do not replace playback, listening, rights review or independent QA.
 

@@ -4,6 +4,8 @@ import {mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync} from "node:
 import {tmpdir} from "node:os";
 import {join} from "node:path";
 import {formatArchiveIdentity, V3_LAYOUT, V3_TANPA_NAMA} from "../src/v3/layout.mjs";
+import {decodeWaveformFromUrl} from "../src/v3/audio-analysis-core.mjs";
+import {buildStrictColdReadInput, exportColdReadInput, sha256Buffer} from "./export-cold-read-input.mjs";
 import {
   checkAllV3,
   countChatWords,
@@ -344,4 +346,113 @@ test("templates/chat-script.example.json obeys single-source-of-truth, clock con
   assert.equal(Number.isInteger(example.archiveNumber), true);
   assert.doesNotMatch(JSON.stringify(example), /sandal/i, "template must not pre-empt Pilot 01 sandals clue");
   assert.doesNotThrow(() => validateV3Script(example, {requireAssets: false}));
+});
+
+test("v3 audio waveform decoder fails loudly on decode failure for a >3 s clip instead of falling back to 3 s", async () => {
+  const longClipPath = join(publicDir, assetDir, "vn-long-valid.wav");
+  writeSilentWav(longClipPath, 4.925);
+  const longBytes = readFileSync(longClipPath);
+  const mockFetch = async () => ({
+    ok: true,
+    status: 200,
+    async arrayBuffer() {
+      return longBytes.buffer.slice(longBytes.byteOffset, longBytes.byteOffset + longBytes.byteLength);
+    },
+  });
+
+  // Decode failure MUST reject with clear error — never resolve {durationSec: 3}.
+  class FailingAudioContext {
+    async decodeAudioData() {
+      throw new Error("EncodingError: unable to decode audio data");
+    }
+    async close() {}
+  }
+
+  await assert.rejects(
+    () =>
+      decodeWaveformFromUrl("/public/assets/vn-long-valid.wav", 30, 24, {
+        fetch: mockFetch,
+        AudioContext: FailingAudioContext,
+      }),
+    /Failed to decode audio waveform.*EncodingError/,
+  );
+
+  // Missing AudioContext MUST also reject loudly instead of returning 3 s fallback.
+  await assert.rejects(
+    () =>
+      decodeWaveformFromUrl("/public/assets/vn-long-valid.wav", 30, 24, {
+        fetch: mockFetch,
+        AudioContext: undefined,
+      }),
+    /AudioContext is unavailable/,
+  );
+
+  // Valid decode of >3 s clip preserves real >3 s duration without 3 s truncation.
+  class ValidLongAudioContext {
+    async decodeAudioData() {
+      const sampleCount = Math.round(4.925 * 16000);
+      const pcm = new Float32Array(sampleCount);
+      for (let i = 0; i < sampleCount; i++) pcm[i] = 0.25 * Math.sin(i * 0.05);
+      return {
+        duration: 4.925,
+        getChannelData: () => pcm,
+      };
+    }
+    async close() {}
+  }
+
+  const decoded = await decodeWaveformFromUrl("/public/assets/vn-long-valid.wav", 30, 24, {
+    fetch: mockFetch,
+    AudioContext: ValidLongAudioContext,
+  });
+  assert.equal(decoded.durationSec, 4.925);
+  assert.equal(decoded.bars.length, 24);
+  assert.equal(decoded.framePeaks.length, Math.ceil(4.925 * 30));
+
+  // Verify hook uses cancelRender and contains no silent 3 s fallback literal.
+  const hookSource = readFileSync("src/v3/audio-analysis.ts", "utf8");
+  assert.match(hookSource, /cancelRender\(/);
+  assert.doesNotMatch(hookSource, /durationSec:\s*3\b/);
+});
+
+test("export-cold-read-input emits exact script SHA-256 and permitted fields while omitting clueLedger and audio notes", () => {
+  const sampleScript = clone();
+  sampleScript.archiveMetadata = {stripLine: "HP milik: Raka"};
+  sampleScript.audio = {
+    ambience: {src: "assets/bed.wav", gain: 0.42},
+    tension: {src: "assets/drone.wav", startFrame: 300, endFrame: 900},
+    silenceDrops: [{startFrame: 900, endFrame: 960, reason: "SECRET_SILENCE_NOTE"}],
+  };
+  sampleScript.events[3].playback = true;
+  sampleScript.stillDescriptions = {
+    m2: "Flash photo of an empty dim hallway.",
+    m4: "Monochrome security view of the hallway showing an open padlock.",
+  };
+  sampleScript.clueLedger[0].note = "SECRET_CLUE_PAYOFF_EXPLANATION";
+  sampleScript.characters[0].voice = "SECRET_TTS_VOICE_ID";
+
+  const fakeHash = sha256Buffer(Buffer.from(JSON.stringify(sampleScript), "utf8"));
+  const output = buildStrictColdReadInput({script: sampleScript, scriptSha256: fakeHash});
+
+  assert.match(output, new RegExp(fakeHash));
+  assert.match(output, /On-screen chat header: Grup Uji · 3 anggota/);
+  assert.match(output, /Evidence label: HP milik: Raka/);
+  assert.match(output, /siapa ketuk pintu\? kita bertiga/);
+  assert.match(output, /voice-note subtitle: Jangan buka pintu dulu ya\./);
+  assert.match(output, /PLAYBACK 23:46:10\. Still m4: Monochrome security view/);
+  assert.match(output, /Photo m2: Flash photo of an empty dim hallway\./);
+
+  // Forbidden fields must NEVER appear in strict cold-read output.
+  assert.doesNotMatch(output, /SECRET_CLUE_PAYOFF_EXPLANATION/);
+  assert.doesNotMatch(output, /Gembok luar terkunci/);
+  assert.doesNotMatch(output, /SECRET_SILENCE_NOTE/);
+  assert.doesNotMatch(output, /SECRET_TTS_VOICE_ID/);
+  assert.doesNotMatch(output, /assets\/bed\.wav/);
+  assert.doesNotMatch(output, /assets\/drone\.wav/);
+
+  // Real episode directory export works and matches chat-script.json SHA-256.
+  const ep = exportColdReadInput("episodes/007-grup-ronda-rt07");
+  assert.equal(ep.scriptSha256.length, 64);
+  assert.match(ep.markdown, new RegExp(ep.scriptSha256));
+  assert.doesNotMatch(ep.markdown, /clueLedger|tension-ronda-drone|ambience-ronda-bed|male-masc-id/);
 });

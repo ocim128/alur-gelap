@@ -22,5 +22,12 @@
   "publish": {
     "status": "pending",
     "notes": "Not authorized. Do not publish, schedule, or upload."
-  }
+  },
+  "latestRendered": {
+    "path": "out/007-grup-ronda-rt07/arsip01-grup-ronda-rt07-v4.mp4",
+    "sha256": "4e6e1dd67e8a6fa8e17dca649861780b0815041df6669e458a1ab6ab94b99dae"
+  },
+  "independentlyAudited": null,
+  "ownerReviewed": null,
+  "published": null
 }
