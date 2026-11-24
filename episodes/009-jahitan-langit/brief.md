@@ -79,6 +79,17 @@ Setelah **satu** tontonan, penonton dingin harus bisa menjawab Q1–Q4 dari arte
   - `The sideways smoke and the rain that doesn't land are both weird, but nothing links them or explains them separately.`
 - **Gate decision:** No Q1–Q4 answer failed. No script revision required. The scale confusion is about the exact geometry of the rule (a permitted *why/what* mystery), not about what happened; it should be rechecked with human viewers after render. The impossible camera position is the intended `Tanpa Nama` artifact, not a comprehension failure.
 
+### Fresh-context recheck after m2 zoom revision (2026-11-25)
+
+Model proxy only, not audience evidence. Reviewer saw only `sources/cold-read-input.md`; its SHA-256 matches the actual revised script: `a1060a68751014cb16fbac899f7209679842202f030ca857215f640c405a6e37`. A 63-character value quoted in the request omitted the `a` in `405a6e37`; the hash in the exported input is the correctly measured 64-character value. Reviewer answers and confusion notes are verbatim:
+
+- **Q1:** ?Gilang?s phone.?
+- **Q2:** ?The sky over their campsite was a huge stitched fabric covering. Bima found a giant zipper, opened it, and saw an empty, windless space outside.?
+- **Q3:** ?Bima went toward the opening and disappeared. Nadia went after him, could not find him in the darkness, and also disappeared.?
+- **Q4:** ?Gilang went to look for them and probably disappeared too; his phone was left on the log at the campsite.?
+- **Confusion:** ?I cannot tell exactly where the three went or whether Bima actually crossed through the opening. The final image makes the campsite look enclosed behind the zipper, which then closes. The name Tanpa Nama does not establish who took the image or made the recording.?
+- **Gate:** pass for Q1?Q4. The locations and fate remain inferential; first-viewer human verification remains pending. The reviewer flagged the transcribed-hash discrepancy; the file itself was independently hashed as above.
+
 ## Fair-Play Clue Ledger
 
 Minimal satu clue visual berada di **40% pertama** dan terbaca di ukuran ponsel. Payoff selalu ditunjukkan lewat artefak, tidak pernah dijelaskan karakter.

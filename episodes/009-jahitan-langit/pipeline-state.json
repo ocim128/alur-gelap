@@ -1,7 +1,7 @@
 {
   "brief": {
-    "status": "ready",
-    "notes": "Owner requested production; previous model-proxy cold-read reviewed identical strict content, but a fresh-context recheck for the timing-only revised script is pending. No new result claimed."
+    "status": "pass",
+    "notes": "Owner authorized production; fresh-context proxy cold-read passes Q1?Q4 for script SHA-256 a1060a68751014cb16fbac899f7209679842202f030ca857215f640c405a6e37. Not audience evidence."
   },
   "audio": {
     "status": "pending",
