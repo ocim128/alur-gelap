@@ -1,0 +1,12 @@
+{
+  "brief": {"status": "ready", "notes": "Revised Step 2 draft for owner review; fresh-context model proxy cold-read recorded in brief. No owner approval claimed."},
+  "audio": {"status": "pending", "notes": "No episode audio generated. Owner selected Leda and Puck from separate phone auditions; episode audio listening review: none."},
+  "images": {"status": "pending", "notes": "Six stills planned; none generated or reviewed."},
+  "render": {"status": "pending", "notes": "Composition ID reserved; composition not registered or rendered."},
+  "audit": {"status": "pending", "notes": "No rendered artifact exists for independent audit."},
+  "publish": {"status": "pending", "notes": "Not authorized."},
+  "latestRendered": null,
+  "independentlyAudited": null,
+  "ownerReviewed": null,
+  "published": null
+}

@@ -31,6 +31,26 @@
       "independentlyAudited": null,
       "ownerReviewed": null,
       "published": null
+    },
+    {
+      "episodeNumber": 2,
+      "archiveNumber": 2,
+      "archiveLabel": "ARSIP #002",
+      "workingTitle": "Pagi Jam Dua",
+      "compositionId": "Arsip02PagiJamDua",
+      "status": "brief-draft",
+      "durationSec": 69.66666666666667,
+      "setting": "Perkemahan dan jalur gunung fiktif, Pos 1 dan Pos 2, sekitar pukul 02.41.",
+      "briefPath": "episodes/008-pagi-jam-dua/brief.md",
+      "scriptPath": "episodes/008-pagi-jam-dua/chat-script.json",
+      "assetsPath": "episodes/008-pagi-jam-dua/assets.md",
+      "reviewPath": "episodes/008-pagi-jam-dua/review.md",
+      "captionDraftPath": "episodes/008-pagi-jam-dua/caption-draft.md",
+      "pipelineStatePath": "episodes/008-pagi-jam-dua/pipeline-state.json",
+      "latestRendered": null,
+      "independentlyAudited": null,
+      "ownerReviewed": null,
+      "published": null
     }
   ]
 }

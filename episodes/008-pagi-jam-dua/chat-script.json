@@ -1,0 +1,56 @@
+{
+  "pipelineVersion": 3,
+  "archiveNumber": 2,
+  "archiveMetadata": {"stripLine": "HP milik: Wira"},
+  "id": "arsip02-pagi-jam-dua",
+  "compositionId": "Arsip02PagiJamDua",
+  "fps": 30,
+  "durationInFrames": 2090,
+  "app": {"name": "Pesan", "groupName": "Kemah Pos 1", "memberCount": 4, "theme": "dark", "selfId": "wira"},
+  "startClock": "02:41:20",
+  "startBattery": 42,
+  "endBattery": 37,
+  "characters": [
+    {"id": "wira", "name": "Wira", "color": "#C4B5FD"},
+    {"id": "aji", "name": "Aji", "color": "#FDBA74", "voice": "male-young-id"},
+    {"id": "nino", "name": "Nino", "color": "#6EE7B7", "voice": "male-masc-id"},
+    {"id": "salsa", "name": "Salsa", "color": "#F9A8D4", "voice": "female-expressive-id"},
+    {"id": "unknown", "name": "Tanpa Nama", "color": "#94A3B8"}
+  ],
+  "audio": {
+    "ambience": {"src": "assets/008-pagi-jam-dua/ambience-gunung.wav", "gain": 0.42},
+    "tension": {"src": "assets/008-pagi-jam-dua/tension-cahaya.wav", "startFrame": 120, "endFrame": 1840, "startGain": 0.08, "peakGain": 0.48},
+    "silenceDrops": [{"startFrame": 1840, "endFrame": 1940, "reason": "Hard drop at missing-person evidence; ends on the final Tanpa Nama ping."}],
+    "uiSfx": {"messageIn": "assets/008-pagi-jam-dua/ui-pop-in.wav", "messageOut": "assets/008-pagi-jam-dua/ui-pop-out.wav"}
+  },
+  "stillDescriptions": {
+    "m1": "Dua pendaki berdiri di punggungan di bawah langit biru cerah; bayangan kecil berada tepat di bawah kaki mereka.",
+    "m5": "Dari balik jaring tenda terlihat jalur berkabut gelap dan batas cahaya putih terang melintang di lereng atas.",
+    "m9": "Jalur berbatu dan papan Pos 2 tampak terendam cahaya putih sangat terang; tepi cahaya dan kontur tanah masih terlihat.",
+    "m14": "Dari balik jaring tenda terlihat tenda kubah kuning terbuka dan kosong dengan lampu kepala menyala di dalamnya; jalur dan kabut terang terlihat di belakangnya.",
+    "m16": "Dari balik jaring tenda terlihat tenda kuning terbuka dan batas cahaya putih di tanah; bayangan pendek berada tepat di bawah tiang tenda.",
+    "m19": "Sebuah sosok kecil membelakangi kamera di tengah kabut putih terang; tepi tenda dan garis punggungan gelap terlihat di kedua sisi."
+  },
+  "events": [
+    {"id": "m1", "at": 0, "type": "photo", "from": "aji", "src": "assets/008-pagi-jam-dua/still-01-pos2.jpg", "caption": "udah pagi di pos 2 woy", "timeLabel": "02.41", "zoom": {"x": 0.5, "y": 0.7, "scale": 1.55, "atOffset": 42, "durationFrames": 65}},
+    {"id": "m2", "at": 120, "type": "text", "from": "wira", "text": "ji lo sama nino di pos 2? ini jam 2.41", "timeLabel": "02.41", "ticks": "read"},
+    {"id": "m3", "at": 200, "type": "voice", "from": "aji", "src": "assets/008-pagi-jam-dua/vn-aji.wav", "subtitle": "Terang banget, tapi dinginnya kayak es.", "timeLabel": "02.41"},
+    {"id": "m5", "at": 405, "type": "photo", "from": "wira", "src": "assets/008-pagi-jam-dua/still-02-lereng.jpg", "caption": "liat itu turun", "timeLabel": "02.41", "ticks": "read"},
+    {"id": "m6", "at": 525, "type": "voice", "from": "salsa", "src": "assets/008-pagi-jam-dua/vn-salsa.wav", "subtitle": "Burung pagi? Wir, cahayanya turun ke sini!", "timeLabel": "02.41"},
+    {"id": "m7", "at": 660, "type": "voice", "from": "nino", "src": "assets/008-pagi-jam-dua/vn-nino.wav", "subtitle": "Kok nggak capek ya? Kayak siang, tapi nggak ada angetnya.", "timeLabel": "02.41"},
+    {"id": "m8", "at": 790, "type": "text", "from": "aji", "text": "iya gw sama nino di pos 2 wkwk", "timeLabel": "02.41"},
+    {"id": "m9", "at": 870, "type": "photo", "from": "aji", "src": "assets/008-pagi-jam-dua/still-03-pos2-putih.jpg", "caption": "nih", "timeLabel": "02.41", "zoom": {"x": 0.52, "y": 0.53, "scale": 1.25, "atOffset": 24, "durationFrames": 78}},
+    {"id": "m10", "at": 990, "type": "text", "from": "wira", "text": "ji? nin? jawab dong", "timeLabel": "02.41", "ticks": "delivered"},
+    {"id": "m11", "at": 1070, "type": "text", "from": "salsa", "text": "aku naik dikit cek mereka, foto bentar", "timeLabel": "02.41"},
+    {"id": "m12", "at": 1160, "type": "text", "from": "wira", "text": "sal jangan naik, balik ke tenda", "timeLabel": "02.41", "ticks": "delivered"},
+    {"id": "m13", "at": 1250, "type": "text", "from": "wira", "text": "sal? gw masih di tenda, resleting ketutup", "timeLabel": "02.42", "ticks": "delivered"},
+    {"id": "m14", "at": 1340, "type": "photo", "from": "wira", "src": "assets/008-pagi-jam-dua/still-04-tenda-salsa.jpg", "caption": "tenda kuning lo kebuka sal", "timeLabel": "02.42", "ticks": "delivered"},
+    {"id": "m15", "at": 1470, "type": "text", "from": "wira", "text": "sal jawab, cahaya udah sampe sini", "timeLabel": "02.42", "ticks": "delivered"},
+    {"id": "m16", "at": 1560, "type": "photo", "from": "wira", "src": "assets/008-pagi-jam-dua/still-05-camp.jpg", "caption": "terang banget", "timeLabel": "02.42", "ticks": "delivered", "zoom": {"x": 0.55, "y": 0.72, "scale": 1.55, "atOffset": 24, "durationFrames": 60}},
+    {"id": "m16a", "at": 1650, "type": "text", "from": "salsa", "text": "keluar aja wir, udah pagi", "timeLabel": "02.42"},
+    {"id": "m17", "at": 1730, "type": "text", "from": "wira", "text": "sal? gw keluar bentar", "timeLabel": "02.42", "ticks": "delivered"},
+    {"id": "m18", "at": 1840, "type": "evidence", "durationFrames": 100, "text": "Wira, Salsa, Aji, Nino hilang · 03.49"},
+    {"id": "m19", "at": 1940, "type": "photo", "from": "unknown", "src": "assets/008-pagi-jam-dua/still-06-sosok.jpg", "timeLabel": "02.42"}
+  ],
+  "clueLedger": [{"clue": "Bayangan kecil tepat di bawah kaki dua pendaki saat langit tampak pagi.", "plantedIn": "m1", "paidOffIn": "m16", "note": "Foto perkemahan menunjukkan cahaya telah tiba, dengan bayangan pendek tepat di bawah tiang tenda; arah cahaya tidak dijelaskan dalam dialog."}]
+}
