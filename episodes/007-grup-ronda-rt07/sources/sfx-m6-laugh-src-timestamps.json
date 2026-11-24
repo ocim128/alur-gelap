@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "voiceId": "Fenrir",
+  "durationSec": 2.6,
+  "master": true,
+  "chunks": [
+    {
+      "index": 0,
+      "tag": null,
+      "text": "[whisper] Heh... heh... heh...",
+      "start": 0,
+      "end": 2.6,
+      "retries": 2,
+      "status": "failed"
+    }
+  ],
+  "words": [
+    {
+      "word": "HAH!",
+      "start": 0,
+      "end": 0.66,
+      "chunk": 0
+    },
+    {
+      "word": "HAH!",
+      "start": 1.28,
+      "end": 1.72,
+      "chunk": 0
+    },
+    {
+      "word": "HAH!",
+      "start": 1.96,
+      "end": 1.98,
+      "chunk": 0
+    }
+  ],
+  "sfx": []
+}

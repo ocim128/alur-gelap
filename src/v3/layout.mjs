@@ -67,6 +67,8 @@ export const V3_OVERLAY_FADE_FRAMES = Object.freeze({
   cctvOut: 0,
   callIn: 0,
   callOut: 0,
+  evidenceIn: 0,
+  evidenceOut: 0,
   notificationIn: 4,
   notificationOut: 4,
 });
@@ -94,6 +96,8 @@ export const V3_MIN_FONT_SIZE = 42;
 export const V3_FONT_SIZES = Object.freeze({
   statusBar: 42,
   identityStrip: 42,
+  archiveMetadata: 42,
+  evidenceTag: 46,
   headerGroupName: 48,
   headerSubtitle: 42,
   senderName: 42,
@@ -119,23 +123,25 @@ export const V3_CHROME_REGIONS = Object.freeze({
   canvas: Object.freeze({x: 0, y: 0, width: 1080, height: 1920}),
   statusBar: Object.freeze({x: 0, y: 0, width: 1080, height: 86}),
   chatHeader: Object.freeze({x: 0, y: 86, width: 1080, height: 126}),
-  identityStrip: Object.freeze({x: 0, y: 212, width: 1080, height: 70}),
-  threadBackdrop: Object.freeze({x: 0, y: 282, width: 1080, height: 1514}),
+  identityStrip: Object.freeze({x: 0, y: 212, width: 1080, height: 118}),
+  threadBackdrop: Object.freeze({x: 0, y: 330, width: 1080, height: 1466}),
   inputBar: Object.freeze({x: 0, y: 1796, width: 1080, height: 124}),
 });
 
 /**
- * Story-critical content regions (series identity strip label, chat bubbles, subtitles,
- * photo clues, CCTV labels, notifications, call info). Validator asserts every box stays strictly within:
+ * Story-critical content regions (series identity strip label, optional archive metadata,
+ * chat bubbles, subtitles, photo clues, CCTV labels, notifications, call info, evidence tag).
+ * Validator asserts every box stays strictly within:
  *   x >= 0, x + width <= maxX (950), y >= minCriticalY (192), y + height <= maxY (1497).
  */
 export const V3_CRITICAL_REGIONS = Object.freeze({
-  identityStripContent: Object.freeze({x: 28, y: 218, width: 916, height: 58}),
-  chatContent: Object.freeze({x: 28, y: 282, width: 916, height: 1206}),
-  notificationBanner: Object.freeze({x: 28, y: 282, width: 916, height: 220}),
-  photoLightboxContent: Object.freeze({x: 28, y: 282, width: 916, height: 1206}),
-  callContent: Object.freeze({x: 28, y: 282, width: 916, height: 1206}),
-  cctvContent: Object.freeze({x: 28, y: 282, width: 916, height: 1206}),
+  identityStripContent: Object.freeze({x: 28, y: 218, width: 916, height: 106}),
+  chatContent: Object.freeze({x: 28, y: 330, width: 916, height: 1158}),
+  notificationBanner: Object.freeze({x: 28, y: 330, width: 916, height: 220}),
+  photoLightboxContent: Object.freeze({x: 28, y: 330, width: 916, height: 1158}),
+  callContent: Object.freeze({x: 28, y: 330, width: 916, height: 1158}),
+  cctvContent: Object.freeze({x: 28, y: 330, width: 916, height: 1158}),
+  evidenceTagContent: Object.freeze({x: 28, y: 330, width: 916, height: 1158}),
 });
 
 /** Original generic midnight-slate palette (distinct from WhatsApp/Telegram/Line). */

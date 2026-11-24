@@ -8,17 +8,20 @@ import {
 
 export type ArchiveIdentityStripProps = {
   archiveNumber: number;
+  metadataLine?: string;
 };
 
 /**
  * Full-width solid series identity strip directly below ChatHeader:
- * displays "ARSIP #NNN · @skenarium" (>= 42 px) inside V3_CRITICAL_REGIONS.identityStripContent.
- * Scrolling messages clip strictly below this strip (y = 282) so no message passes behind it.
+ * displays "ARSIP #NNN · @skenarium" plus optional factual evidence tag
+ * (e.g. "HP milik: Bayu") at >= 42 px inside V3_CRITICAL_REGIONS.identityStripContent.
+ * Scrolling messages clip strictly below this strip (y = 330) so no message passes behind it.
  */
-export function ArchiveIdentityStrip({archiveNumber}: ArchiveIdentityStripProps) {
+export function ArchiveIdentityStrip({archiveNumber, metadataLine}: ArchiveIdentityStripProps) {
   const strip = V3_CHROME_REGIONS.identityStrip;
   const box = V3_CRITICAL_REGIONS.identityStripContent;
   const padded = String(archiveNumber).padStart(3, '0');
+  const trimmedMeta = metadataLine?.trim();
 
   return (
     <div
@@ -45,22 +48,40 @@ export function ArchiveIdentityStrip({archiveNumber}: ArchiveIdentityStripProps)
           width: box.width,
           height: box.height,
           display: 'flex',
-          alignItems: 'center',
-          gap: 14,
+          flexDirection: 'column',
+          justifyContent: 'center',
+          gap: 10,
           fontFamily: 'system-ui, -apple-system, Segoe UI, Roboto, sans-serif',
-          fontSize: V3_FONT_SIZES.identityStrip,
           fontVariantNumeric: 'tabular-nums',
           lineHeight: 1,
           whiteSpace: 'nowrap',
         }}
       >
-        <span style={{color: V3_THEME.identityStripText, fontWeight: 800, letterSpacing: 1.5}}>
-          ARSIP #{padded}
-        </span>
-        <span style={{color: V3_THEME.accent, fontWeight: 700}}>·</span>
-        <span style={{color: V3_THEME.identityStripHandle, fontWeight: 600, letterSpacing: 0.4}}>
-          {V3_SERIES_HANDLE}
-        </span>
+        <div style={{display: 'flex', alignItems: 'center', gap: 14, fontSize: V3_FONT_SIZES.identityStrip}}>
+          <span style={{color: V3_THEME.identityStripText, fontWeight: 800, letterSpacing: 1.5}}>
+            ARSIP #{padded}
+          </span>
+          <span style={{color: V3_THEME.accent, fontWeight: 700}}>·</span>
+          <span style={{color: V3_THEME.identityStripHandle, fontWeight: 600, letterSpacing: 0.4}}>
+            {V3_SERIES_HANDLE}
+          </span>
+        </div>
+
+        {trimmedMeta && (
+          <div
+            data-v3="archive-metadata-strip"
+            style={{
+              fontFamily: 'Consolas, Menlo, monospace',
+              fontSize: V3_FONT_SIZES.archiveMetadata,
+              fontWeight: 600,
+              color: '#CBD5E1',
+              letterSpacing: 0.4,
+              lineHeight: 1,
+            }}
+          >
+            {trimmedMeta}
+          </div>
+        )}
       </div>
     </div>
   );

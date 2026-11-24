@@ -1,5 +1,30 @@
 # Asset & Rights Record (Studio v3 · Arsip Terakhir) — 007 · Grup Ronda RT 07
 
+## Checkpoint 6b revision — current assets (2026-11-24)
+
+The entries below supersede the v2 measurements and asset references retained in the historical sections below. Current timeline: 66.5 s / 1995 frames. `listening review: none`.
+
+| Current CCTV still | Event | SHA-256 | Attempts, provenance and visual count |
+| --- | --- | --- | --- |
+| `still-03a-cctv-hendra-photo.jpg` | m14a | `708fbc52af29eafc1f7a9c546f2e9971f969221d9a4551acfc38f44eafcc2842` | Built-in imagegen, 1 new attempt in this session; earlier generator attempt 2 rejected for five glasses. 1080×1920 JPEG. At 540×960: one man, one hooded figure with black face; four glasses, three full and one half-full; one phone in man's hands. No composite. |
+| `still-03b-cctv-standing.jpg` | m14b | `c2ccbd26df418d4780a1e2132da5e7c7c8419e89299e9693574aa015e992562b` | Built-in imagegen, 1 attempt, editing 03a as fixed-angle reference. One recoiling man and one standing hooded figure, four glasses; horizontal static. 1080×1920 JPEG. No composite. |
+| `still-03c-cctv-empty.jpg` | m14c | `277912e9092ebd2316025e50696a26bfb722bce10f3458c839982718ed442077` | Built-in imagegen, 2 attempts: initial edit of 03a, then a targeted edit moving phone higher for framing. At 540×960: no people; four glasses, three full and one half-full; one lit phone on floor. 1080×1920 JPEG. No manual composite. |
+
+Verification copies live under `episodes/007-grup-ronda-rt07/sources/verify-540p/`; prompt summaries are in `sources/prompts.md`. The 03b and 03c images are AI edits based on 03a; while the view and props are closely matched, generative edits can alter details. Image-generation commercial/publication terms remain unverified.
+
+| Current audio | SHA-256 | 6b revision |
+| --- | --- | --- |
+| `ambience-ronda-bed.wav` | `8e772f127a1e03fafd4bacb0c3896aa61ea3e1574c4e274b4055f0ec976b33f2` | 66.50 s; synthesized via `scripts/generate-ronda-soundscape.mjs`. |
+| `tension-ronda-drone.wav` | `bf558a92d0adc38fab1b0ed322b592774d7c00b335ef79c533ace93f3188ce32` | 38.20 s; synthesized in the same script. |
+| `vn-01-bayu.mp3` | `0b5d62820fc5f9d2bfaf8b26e2ec642c54015f522b70339ecb444148071a4802` | 4.925 s, remixed environment. |
+| `vn-02-hendra-odd.mp3` | `25d449c995ef9afd9ed31e8cd3f92da2289bb8d74031b8de0ad1e29ce084f3b5` | 3.565 s, remixed; faint generated chuckle at 1.52–2.59 s, source in `sources/sfx-m6-laugh-src.mp3`. |
+| `vn-03-darto-panic.mp3` | `9e69dd34ea061a69f861f01e71a8a2acfc24690a081c45f8c2240a6d0ceff0d6` | 3.680 s, remixed with alley wind and CC0 footsteps, intentional hard cutoff. |
+| `vn-04-unknown-bayu.mp3` | `6a16101428976c7a3ce47d23a46531d92904bb64d0ce999648545ce0383b0fe5` | 2.375 s; derived from m4 source tail, remixed. |
+
+`sfx/shared/tanpa-nama-ping.wav` is reserved for Tanpa Nama events m16 and m17 in the current script. Sound sources and licensing notes are in `public/sfx/LICENSES.md`; TTS and generator publication terms remain unverified.
+
+## Historical v2 asset record
+
 - **Episode folder:** `episodes/007-grup-ronda-rt07/`
 - **Composition ID:** `Arsip01GrupRondaRT07`
 - **Pipeline Version:** `3` (`chat-script.json`, 64.00 s / 1920 frames @ 30 fps)

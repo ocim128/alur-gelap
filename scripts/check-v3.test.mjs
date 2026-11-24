@@ -186,6 +186,21 @@ test("v3 enforces in-world clock consistency and requires anomaly exceptions to 
   unlistedAnomaly.events[0].anomaly = true; // m1 is not in clueLedger
   assert.throws(() => validate(unlistedAnomaly), /anomaly: true must be referenced in clueLedger/);
 
+  // CCTV playback: true accepts recorded timestamps earlier than phone clock, but still rejects future timestamps without anomaly.
+  const playbackEarlier = clone();
+  playbackEarlier.events[3].playback = true;
+  playbackEarlier.events[3].timestampLabel = "23:45:42"; // phone is 23:46:12 at frame 960
+  assert.doesNotThrow(() => validate(playbackEarlier));
+
+  const playbackFuture = clone();
+  playbackFuture.events[3].playback = true;
+  playbackFuture.events[3].timestampLabel = "23:46:25"; // ahead of phone 23:46:12 without anomaly
+  assert.throws(() => validate(playbackFuture), /ahead of phone clock/);
+
+  const playbackBadType = clone();
+  playbackBadType.events[3].playback = "yes";
+  assert.throws(() => validate(playbackBadType), /cctv playback must be a boolean/);
+
   // Midnight rollover consistency (23:59:45 -> 00:00:27).
   const midnight = clone();
   midnight.startClock = "23:59:45";
@@ -284,6 +299,33 @@ test("v3 receipts (ticks) are allowed only on phone owner outgoing messages and 
   const unreadTicks = clone();
   unreadTicks.events[2].ticks = "unread";
   assert.throws(() => validate(unreadTicks), /invalid ticks "unread"/);
+});
+
+test("v3 enforces archiveMetadata <= 2 factual lines, evidence reading hold, and valid tension/silenceDrops ranges", () => {
+  const twoLinesOk = clone();
+  twoLinesOk.archiveMetadata = {stripLine: "HP milik: Raka"};
+  twoLinesOk.events.splice(4, 0, {
+    id: "m4b",
+    at: 1140,
+    type: "evidence",
+    durationFrames: 90,
+    text: "ditemukan: kamar 4 · 05.12",
+  });
+  assert.doesNotThrow(() => validate(twoLinesOk));
+
+  const threeLinesFail = structuredClone(twoLinesOk);
+  threeLinesFail.events.splice(5, 0, {
+    id: "m4c",
+    at: 1200,
+    type: "evidence",
+    durationFrames: 50,
+    text: "status: baterai 2%",
+  });
+  assert.throws(() => validate(threeLinesFail), /archive metadata exceeds maximum of 2 factual lines/);
+
+  const badSilenceDrop = clone();
+  badSilenceDrop.audio = {silenceDrops: [{startFrame: 1200, endFrame: 1100}]};
+  assert.throws(() => validate(badSilenceDrop), /audio\.silenceDrops\[0\] has invalid frame range/);
 });
 
 test("templates/chat-script.example.json obeys single-source-of-truth, clock consistency, archiveNumber, and Tanpa Nama rules", () => {

@@ -1,4 +1,18 @@
-# Episode review (Studio v3 · Arsip Terakhir) — ARSIP #001 (`007 · Grup Ronda RT 07`) / v2 / 2026-11-24
+# Episode review — ARSIP #001 (`episodes/007-grup-ronda-rt07`) / v3 / 2026-11-24
+
+## Checkpoint 6b — builder inspection of compressed v3
+
+- **[signal/timing] Artifact:** `out/007-grup-ronda-rt07/arsip01-grup-ronda-rt07-v3.mp4`, SHA-256 `30e173d2aba2a45f40535edd9ed481d41943b656cbe4ab1ab7f14a25d45a1084`, 7,175,082 bytes. Composition `Arsip01GrupRondaRT07`; 1080×1920, 30 fps, 1995 video frames (66.5 s video; container 66.517 s), H.264 limited-range Rec.709, AAC 48 kHz stereo. Compressed 540p preview: `out/007-grup-ronda-rt07/arsip01-grup-ronda-rt07-v3-preview-540p.mp4`.
+- **[signal/timing] Mix:** FFmpeg EBU R128 integrated `-21.5 LUFS`, true peak `-3.6 dBTP` (ceiling `-1.5 dBTP`). Decoded stereo mix measured in 64 nonoverlapping windows up to 1 second, covering 0–55.0 s and 57.8–66.5 s: minimum RMS `-34.85 dBFS` at 4–5 s; zero windows below `-50 dBFS`. This measures the complete mix, not the isolated ambience stem; it does not prove phone-speaker audibility or rule out every shorter low-level interval.
+- **[signal/timing] Deliberate silence-1**, 55.0–57.8 s: `-61.14 dBFS` RMS, `-42.24 dBFS` sample peak, `digitalZeros: 0` of 268,800 decoded channel samples. Interior 55.1–57.7 s: `-61.32 dBFS` RMS, `-48.01 dBFS` sample peak, `digitalZeros: 0`. Edge peak includes codec transition energy. Measurement script and individual windows are in ignored `out/007-grup-ronda-rt07/measure-v3-audio.py` and `audio-measurements-v3.json`.
+- **[visual-state]** Inspected contact sheet `out/007-grup-ronda-rt07/contact-sheet-3s-v3.jpg` and full-size compressed-export frames `frame-v3-00s.png`, `frame-v3-m3.png`, `frame-v3-m14a.png`, `frame-v3-m14b.png`, `frame-v3-m14c.png`, `frame-v3-m15.png`, `frame-v3-end.png` in the same directory. Additional `frame-v3-m14c-start.png` and `frame-v3-m14c-end.png` show the zoom endpoints. The hook and owner label appear at frame 0; the CCTV sequence shows the seated and standing figure, then an empty pos with four glasses and a lit phone; frame 1290 displays `23:47:40`; the evidence tag is one line; frame 1994 shows Tanpa Nama's grey avatar and played voice note without an amber ring. CCTV playback timestamps were held fixed to the stills' recorded times.
+- **[visual-state]** The 03a/03c source images passed the visual 540×960 count documented in `assets.md`. The frame-1290 phone and glasses are visible within the critical area; the phone is close to the right boundary at the initial CCTV transition and platform overlay fit remains untested. The image-generated CCTV shelter/props are not pixel-identical to the earlier phone photo; continuity should be judged during playback.
+- **[signal/timing]** Compressor color sanity sampled 12 frames and reported **warning**, with at most 615 severe out-of-range luma samples in one 2,073,600-pixel frame, below its 1% fail threshold. This sampling does not certify the entire video.
+- **[signal/timing]** `npm run check` completed with 89/89 Node tests and 16/16 Python tests passing, zero failures and zero skips; TypeScript and both episode validators also passed. Existing archived-episode warnings remain in the check log.
+- **[human-listening]** `listening review: none`.
+- **[experience] Not verified:** independent fresh-context post-MP4 QA; human watch and listening of this exact MP4, including speech pronunciation, chuckle, signature-ping character, phone-speaker audibility and sync; real-phone playback, platform overlay fit, full-frame-by-frame transitions, and first-view audience comprehension; commercial/publication terms for generated images, TTS and generated chuckle; any publication approval. Automated checks and this builder review are not independent QA or audience evidence.
+
+## Historical v2 review (superseded)
 
 ## Artifact Binding
 

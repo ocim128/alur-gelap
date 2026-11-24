@@ -101,8 +101,19 @@ export type CctvEventV3 = {
   src: string;
   cameraLabel: string;
   timestampLabel: string;
+  /** True when viewing a recorded CCTV clip (renders visible PLAYBACK badge; timestamp may precede live phone clock). */
+  playback?: boolean;
   anomaly?: boolean;
   zoom?: ZoomSpec;
+};
+
+/** Factual evidence-label card (e.g. "ditemukan: portal barat · 05.12") before final Tanpa Nama artifact. */
+export type EvidenceEventV3 = {
+  id: string;
+  at: number;
+  type: 'evidence';
+  durationFrames: number;
+  text: string;
 };
 
 export type ChatEventV3 =
@@ -112,7 +123,8 @@ export type ChatEventV3 =
   | SystemEventV3
   | NotificationEventV3
   | CallEventV3
-  | CctvEventV3;
+  | CctvEventV3
+  | EvidenceEventV3;
 
 export type GlitchSpecV3 = {
   at: number;
@@ -127,10 +139,29 @@ export type ClueLedgerEntryV3 = {
   note?: string;
 };
 
+export type SilenceDropSpecV3 = {
+  startFrame: number;
+  endFrame: number;
+  reason?: string;
+};
+
+export type TensionLayerSpecV3 = {
+  src: string;
+  startFrame: number;
+  endFrame: number;
+  startGain?: number;
+  peakGain?: number;
+};
+
 export type ChatScriptV3 = {
   pipelineVersion: 3;
   /** Public archive sequence number (e.g. 1 -> "ARSIP #001 · @skenarium"). */
   archiveNumber: number;
+  /** Optional factual evidence metadata (max 2 lines total including any `evidence` event). */
+  archiveMetadata?: {
+    /** Short factual line inside the identity strip area, e.g. "HP milik: Bayu". */
+    stripLine?: string;
+  };
   id: string;
   compositionId?: string;
   fps: number;
@@ -149,6 +180,8 @@ export type ChatScriptV3 = {
   characters: CharacterV3[];
   audio?: {
     ambience?: {src: string; gain?: number};
+    tension?: TensionLayerSpecV3;
+    silenceDrops?: SilenceDropSpecV3[];
     uiSfx?: {
       messageIn?: string;
       messageOut?: string;

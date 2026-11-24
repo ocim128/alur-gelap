@@ -20,6 +20,7 @@ Copy into `episodes/<slug>/review.md`. Mark each item `pass`, `needs work`, `not
 - [ ] **No narrator / no recap:** Story is reconstructed strictly from found-phone/found-footage artifacts; no narration track, no narration captions, no rewind loops, no `"Kamu berhasil bertahan hidup."` ending.
 - [ ] **Frame-zero hook (`00:00.0`):** First message/artifact appears at frame 0, is readable within 2 s, and contains an impossible detail.
 - [ ] **One local entity/rule + `Tanpa Nama` constant:** Local rule is never explained aloud; `Tanpa Nama` (fixed grey default avatar, no phone number, never explained) sends the final artifact and is logged in `arcs/03-arsip-terakhir/lore.md`; survival angle is never presented as real-world safety advice.
+- [ ] **One-Watch Comprehension & Cold-Read Gate:** `brief.md` records a verbatim `Cold-Read Result` (Q1–Q4, labeled as model proxy), exported MP4 delivers Q1–Q4 clearly on one watch, and archive metadata tags use ≤ 2 short factual lines (`>= 42 px`, inside safe zone, no adjectives/explanation/narration).
 - [ ] **Fair-play visual clue (≤ 40%):** Clue planted in the first 40%, clearly readable at phone size on the exported MP4 / contact sheet, and pays off visually via artifact per the Clue Ledger.
 - [ ] **Texting voices & Indonesian grounding:** Everyday Indonesian chat style is consistent and distinct per character; setting feels locally grounded.
 - [ ] **Amateur photo / CCTV look (3–6 stills):** Stills look like raw low-light/flash phone photos or CCTV frames, not illustrations, and are gore-free.
@@ -46,7 +47,7 @@ Copy into `episodes/<slug>/review.md`. Mark each item `pass`, `needs work`, `not
 ## Audio Measurements (Compressed MP4)
 
 - [ ] **Loudness measured (`ebur128` / `loudnorm`):** Integrated `[__ LUFS]`, True Peak `[__ dBTP]`.
-- [ ] **Silence & ambience check:** Measured deliberate silent gaps and ambience floor on the compressed AAC stream; zero mood-explaining music.
+- [ ] **Bed level & deliberate silence beats:** Measured on the compressed AAC stream: no interval below **`-50 dBFS`** except deliberate silence beats explicitly listed in the cue sheet; audible diegetic location bed + rising non-melodic tension layer + reveal hard drop; zero melodic music.
 - [ ] **Voice notes (2–6 s each):** Durations verified via `ffprobe`; masculine Indonesian voice used as an in-world male character, not a narrator; subtitles match lines.
 - [ ] **Human ear-check (NOT verified by automated checks):** `listening review: none` — owner ear-check required before any publication decision.
 

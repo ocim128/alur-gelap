@@ -117,4 +117,5 @@ For the Episode 007 assembly, `prepared/ep007-pa-mixready.wav` adds 22 dB to the
 
 ## Studio v3 · Arsip Terakhir Episode 007 — Grup Ronda RT 07 (ARSIP #001)
 
-- Per-episode audio/visual provenance and rights record (including CC0 `rubberduck` `night-air.wav` derivative, synthesized UI pops, and Google Cloud Gemini 3.8 Flash TTS voice notes) lives in `episodes/007-grup-ronda-rt07/assets.md`.
+- `public/assets/007-grup-ronda-rt07/ambience-ronda-bed.wav` (`66.50 s`, `48000 Hz` mono 16-bit PCM, `-24.5 dBFS` RMS, `-8.9 dBFS` peak) and `public/assets/007-grup-ronda-rt07/tension-ronda-drone.wav` (`38.20 s`, `48000 Hz` mono 16-bit PCM, `-18.0 dBFS` RMS, `-6.5 dBFS` peak): deterministically synthesized in-repo from pure math via [`scripts/generate-ronda-soundscape.mjs`](../../scripts/generate-ronda-soundscape.mjs) (tropical crickets, night wind, distant village dog barks, far bamboo *kentongan*, far motorbike, and non-melodic sub-rumble/air drone). Zero third-party recordings; full rights belong to this repository.
+- Per-episode audio/visual provenance and rights record (including CC0 `rubberduck` `night-air.wav` / `shoe-left.wav` / `shoe-right.wav` derivatives, synthesized UI pops, and Google Cloud Gemini 3.8 Flash TTS voice notes + `sfx-m6-laugh-src.mp3`) lives in `episodes/007-grup-ronda-rt07/assets.md`.

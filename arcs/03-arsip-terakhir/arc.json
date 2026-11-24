@@ -16,7 +16,7 @@
       "workingTitle": "Grup Ronda RT 07",
       "compositionId": "Arsip01GrupRondaRT07",
       "status": "in-progress",
-      "durationSec": 64.0,
+      "durationSec": 66.5,
       "setting": "Pos ronda dan gang kampung fiktif RT 07 menjelang tengah malam (23:47–23:48).",
       "briefPath": "episodes/007-grup-ronda-rt07/brief.md",
       "scriptPath": "episodes/007-grup-ronda-rt07/chat-script.json",
@@ -24,8 +24,8 @@
       "reviewPath": "episodes/007-grup-ronda-rt07/review.md",
       "captionDraftPath": "episodes/007-grup-ronda-rt07/caption-draft.md",
       "pipelineStatePath": "episodes/007-grup-ronda-rt07/pipeline-state.json",
-      "finalVideo": "out/007-grup-ronda-rt07/arsip001-grup-ronda-rt07-v2.mp4",
-      "finalVideoSha256": "137d82c2e285dd9fa5fef63c3442b4c3ef6765033b7ec4607af4127d8d6f4fc6"
+      "finalVideo": "out/007-grup-ronda-rt07/arsip01-grup-ronda-rt07-v3.mp4",
+      "finalVideoSha256": "30e173d2aba2a45f40535edd9ed481d41943b656cbe4ab1ab7f14a25d45a1084"
     }
   ]
 }

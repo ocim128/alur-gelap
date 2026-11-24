@@ -39,6 +39,8 @@ export declare const V3_OVERLAY_FADE_FRAMES: {
   readonly cctvOut: number;
   readonly callIn: number;
   readonly callOut: number;
+  readonly evidenceIn: number;
+  readonly evidenceOut: number;
   readonly notificationIn: number;
   readonly notificationOut: number;
 };
@@ -57,6 +59,8 @@ export declare const V3_MIN_FONT_SIZE: number;
 export declare const V3_FONT_SIZES: {
   readonly statusBar: number;
   readonly identityStrip: number;
+  readonly archiveMetadata: number;
+  readonly evidenceTag: number;
   readonly headerGroupName: number;
   readonly headerSubtitle: number;
   readonly senderName: number;
@@ -91,6 +95,7 @@ export declare const V3_CRITICAL_REGIONS: {
   readonly photoLightboxContent: LayoutBox;
   readonly callContent: LayoutBox;
   readonly cctvContent: LayoutBox;
+  readonly evidenceTagContent: LayoutBox;
 };
 
 export declare const V3_THEME: {

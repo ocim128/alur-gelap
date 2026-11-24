@@ -4,6 +4,7 @@ import {ArchiveIdentityStrip} from './components/ArchiveIdentityStrip';
 import {CallScreen} from './components/CallScreen';
 import {CctvFrame} from './components/CctvFrame';
 import {ChatHeader} from './components/ChatHeader';
+import {EvidenceTagOverlay} from './components/EvidenceTagOverlay';
 import {MessageBubble} from './components/MessageBubble';
 import {Notification} from './components/Notification';
 import {PhoneFrame} from './components/PhoneFrame';
@@ -24,6 +25,7 @@ import type {
   CharacterV3,
   ChatEventV3,
   ChatScriptV3,
+  EvidenceEventV3,
   NotificationEventV3,
   PhotoEventV3,
   SystemEventV3,
@@ -148,6 +150,9 @@ export function ArsipPlayer({script}: ArsipPlayerProps) {
   const notificationEvents = script.events.filter((e): e is NotificationEventV3 => e.type === 'notification');
   const callEvents = script.events.filter((e): e is CallEventV3 => e.type === 'call');
   const cctvEvents = script.events.filter((e): e is CctvEventV3 => e.type === 'cctv');
+  const evidenceEvents = script.events.filter((e): e is EvidenceEventV3 => e.type === 'evidence');
+  const silenceDrops = script.audio?.silenceDrops ?? [];
+  const isSilenceDropAt = (f: number) => silenceDrops.some((d) => f >= d.startFrame && f < d.endFrame);
 
   const typingEvent = threadEvents.find((event) => {
     if (event.type === 'system' || !event.typingFrames || event.typingFrames <= 0) return false;
@@ -166,13 +171,47 @@ export function ArsipPlayer({script}: ArsipPlayerProps) {
 
   return (
     <AbsoluteFill style={{backgroundColor: V3_THEME.canvasBg, overflow: 'hidden'}}>
-      {/* Ambient bed */}
+      {/* Location ambience bed — drops hard to near-silence during scripted silenceDrops */}
       {script.audio?.ambience && (
         <Audio
           src={staticFile(script.audio.ambience.src)}
-          volume={script.audio.ambience.gain ?? 0.16}
+          volume={(f) => {
+            const base = script.audio?.ambience?.gain ?? 0.35;
+            return isSilenceDropAt(f) ? 0.015 : base;
+          }}
           loop
         />
+      )}
+
+      {/* Non-melodic tension layer (sub rumble/drone rising from odd detail through escalation) */}
+      {script.audio?.tension && script.audio.tension.endFrame > script.audio.tension.startFrame && (
+        <Sequence
+          from={script.audio.tension.startFrame}
+          durationInFrames={script.audio.tension.endFrame - script.audio.tension.startFrame}
+          layout="none"
+        >
+          <Audio
+            src={staticFile(script.audio.tension.src)}
+            volume={(localF) => {
+              const t = script.audio!.tension!;
+              const absF = t.startFrame + localF;
+              if (isSilenceDropAt(absF)) return 0;
+              const span = Math.max(1, t.endFrame - t.startFrame);
+              const startGain = t.startGain ?? 0.08;
+              const peakGain = t.peakGain ?? 0.45;
+              const ramp = interpolate(localF, [0, span], [startGain, peakGain], {
+                extrapolateLeft: 'clamp',
+                extrapolateRight: 'clamp',
+              });
+              const tailOut = interpolate(localF, [Math.max(0, span - 6), span], [1, 0], {
+                extrapolateLeft: 'clamp',
+                extrapolateRight: 'clamp',
+              });
+              return ramp * tailOut;
+            }}
+            loop
+          />
+        </Sequence>
       )}
 
       {/* Per-event UI sound cues: Tanpa Nama signature ping plays ONLY on Tanpa Nama events */}
@@ -349,13 +388,19 @@ export function ArsipPlayer({script}: ArsipPlayerProps) {
         {callEvents.map((event) => (
           <CallScreen key={`call-${event.id}`} event={event} />
         ))}
+        {evidenceEvents.map((event) => (
+          <EvidenceTagOverlay key={`evidence-${event.id}`} event={event} />
+        ))}
         {notificationEvents.map((event) => (
           <Notification key={`notif-${event.id}`} event={event} />
         ))}
       </PhoneFrame>
 
-      {/* Always-visible series identity strip ("ARSIP #NNN · @skenarium") directly below chat header */}
-      <ArchiveIdentityStrip archiveNumber={script.archiveNumber} />
+      {/* Always-visible series identity strip ("ARSIP #NNN · @skenarium") + optional factual metadata line */}
+      <ArchiveIdentityStrip
+        archiveNumber={script.archiveNumber}
+        metadataLine={script.archiveMetadata?.stripLine}
+      />
     </AbsoluteFill>
   );
 }

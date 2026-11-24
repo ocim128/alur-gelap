@@ -1,0 +1,256 @@
+{
+  "version": 1,
+  "voiceId": "Fenrir",
+  "voiceName": "Fenrir",
+  "provider": "gemini-cloud",
+  "model": "gemini-3.8-flash-tts",
+  "master": true,
+  "masterFilter": "highpass=f=85,equalizer=f=140:t=q:w=1.2:g=1,equalizer=f=450:t=q:w=1.5:g=-1,equalizer=f=3200:t=q:w=1.2:g=1,loudnorm=I=-14:LRA=6:TP=-1.5,aformat=sample_fmts=s16",
+  "asrModel": "small",
+  "generatedAt": "2026-11-24T12:56:04.519Z",
+  "passed": false,
+  "totalChunks": 1,
+  "verifiedChunks": 0,
+  "warningChunks": 0,
+  "failedChunks": 1,
+  "plannedDurationSec": 2.6,
+  "finalAlignment": {
+    "transcript": "HAH! HAH! HAH!",
+    "mismatches": [
+      {
+        "expected": "whisper",
+        "heard": null
+      },
+      {
+        "expected": "heh",
+        "heard": "hah"
+      },
+      {
+        "expected": "heh",
+        "heard": "hah"
+      },
+      {
+        "expected": "heh",
+        "heard": "hah"
+      }
+    ],
+    "passed": false
+  },
+  "audioQuality": {
+    "integratedLufs": -20.7,
+    "loudnessRangeLu": 0,
+    "noiseFloorDbfs": -24,
+    "targets": {
+      "integratedLufs": -14,
+      "loudnessRangeLu": [
+        5,
+        7
+      ]
+    }
+  },
+  "chunks": [
+    {
+      "index": 0,
+      "tag": null,
+      "text": "[whisper] Heh... heh... heh...",
+      "retries": 2,
+      "status": "failed",
+      "bestSimilarity": 0.533,
+      "bestWordRatio": 0,
+      "acceptedAttempt": 1,
+      "attempts": [
+        {
+          "seed": 0,
+          "wordRatio": 0,
+          "similarity": 0,
+          "wpm": 102,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.00): heard \"\"",
+            "raw: last word missing, truncated, or has invalid timestamps",
+            "raw: char similarity 0.00 < 0.94",
+            "word mismatch (ratio 0.00): heard \"\"",
+            "last word missing, truncated, or has invalid timestamps",
+            "char similarity 0.00 < 0.94"
+          ],
+          "warnings": [],
+          "transcript": "",
+          "mismatches": [
+            {
+              "expected": "whisper",
+              "heard": null
+            },
+            {
+              "expected": "heh",
+              "heard": null
+            },
+            {
+              "expected": "heh",
+              "heard": null
+            },
+            {
+              "expected": "heh",
+              "heard": null
+            }
+          ],
+          "endTruncated": true,
+          "rawTranscript": "",
+          "rawMismatches": [
+            {
+              "expected": "whisper",
+              "heard": null
+            },
+            {
+              "expected": "heh",
+              "heard": null
+            },
+            {
+              "expected": "heh",
+              "heard": null
+            },
+            {
+              "expected": "heh",
+              "heard": null
+            }
+          ],
+          "rawEndTruncated": true,
+          "rawReasons": [
+            "word mismatch (ratio 0.00): heard \"\"",
+            "last word missing, truncated, or has invalid timestamps",
+            "char similarity 0.00 < 0.94"
+          ]
+        },
+        {
+          "seed": 1,
+          "wordRatio": 0,
+          "similarity": 0.533,
+          "wpm": 92,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.00): heard \"hah hah hah\"",
+            "raw: last word missing, truncated, or has invalid timestamps",
+            "raw: char similarity 0.53 < 0.94",
+            "raw: 92 wpm outside 130±25%",
+            "word mismatch (ratio 0.00): heard \"hah hah hah\"",
+            "last word missing, truncated, or has invalid timestamps",
+            "char similarity 0.53 < 0.94",
+            "92 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "HAH! HAH! HAH!",
+          "mismatches": [
+            {
+              "expected": "whisper",
+              "heard": null
+            },
+            {
+              "expected": "heh",
+              "heard": "hah"
+            },
+            {
+              "expected": "heh",
+              "heard": "hah"
+            },
+            {
+              "expected": "heh",
+              "heard": "hah"
+            }
+          ],
+          "endTruncated": true,
+          "rawTranscript": "HAH.. HAH.. HAH..",
+          "rawMismatches": [
+            {
+              "expected": "whisper",
+              "heard": null
+            },
+            {
+              "expected": "heh",
+              "heard": "hah"
+            },
+            {
+              "expected": "heh",
+              "heard": "hah"
+            },
+            {
+              "expected": "heh",
+              "heard": "hah"
+            }
+          ],
+          "rawEndTruncated": true,
+          "rawReasons": [
+            "word mismatch (ratio 0.00): heard \"hah hah hah\"",
+            "last word missing, truncated, or has invalid timestamps",
+            "char similarity 0.53 < 0.94",
+            "92 wpm outside 130±25%"
+          ]
+        },
+        {
+          "seed": 2,
+          "wordRatio": 0,
+          "similarity": 0,
+          "wpm": 113,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.00): heard \"\"",
+            "raw: last word missing, truncated, or has invalid timestamps",
+            "raw: char similarity 0.00 < 0.94",
+            "word mismatch (ratio 0.00): heard \"\"",
+            "last word missing, truncated, or has invalid timestamps",
+            "char similarity 0.00 < 0.94"
+          ],
+          "warnings": [],
+          "transcript": "",
+          "mismatches": [
+            {
+              "expected": "whisper",
+              "heard": null
+            },
+            {
+              "expected": "heh",
+              "heard": null
+            },
+            {
+              "expected": "heh",
+              "heard": null
+            },
+            {
+              "expected": "heh",
+              "heard": null
+            }
+          ],
+          "endTruncated": true,
+          "rawTranscript": "",
+          "rawMismatches": [
+            {
+              "expected": "whisper",
+              "heard": null
+            },
+            {
+              "expected": "heh",
+              "heard": null
+            },
+            {
+              "expected": "heh",
+              "heard": null
+            },
+            {
+              "expected": "heh",
+              "heard": null
+            }
+          ],
+          "rawEndTruncated": true,
+          "rawReasons": [
+            "word mismatch (ratio 0.00): heard \"\"",
+            "last word missing, truncated, or has invalid timestamps",
+            "char similarity 0.00 < 0.94"
+          ]
+        }
+      ]
+    }
+  ]
+}

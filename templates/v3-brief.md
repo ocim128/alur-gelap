@@ -44,6 +44,28 @@ Shape: **Normal → odd detail → escalation → silence or reveal**.
 | 00:24–00:48 | 720–1440 | Escalation | | |
 | 00:48–00:60 | 1440–1800 | Silence & Recasting Reveal | | |
 
+## One-Watch Comprehension Plan (Q1–Q4) & Archive Metadata
+
+After **one** watch, a cold viewer must be able to answer Q1–Q4 from on-screen artifacts alone (mystery is allowed in *why/what* the entity is, never zero clue about *what happened*):
+
+- **Q1 (Whose phone is this archive?):** [how the viewer knows immediately, e.g. factual evidence label `"HP milik: ..."` + outgoing bubbles]
+- **Q2 (What was wrong?):** [the observable anomaly/event a cold viewer catches on watch 1]
+- **Q3 (What happened to the others?):** [concrete visual/audio event showing the other characters' fate]
+- **Q4 (What probably happened to the phone owner?):** [strong factual/artifact hint at the owner's fate before/at the ending]
+- **Archive metadata tags (max 2 short factual lines, `>= 42 px`, inside safe zone, facts only — no adjectives/explanation/narration):**
+  1. `[e.g. HP milik: Bayu]` (header/identity-strip area)
+  2. `[e.g. ditemukan: portal barat · 05.12]` (end evidence tag before final `Tanpa Nama` artifact, optional)
+
+## Cold-Read Result (Model Proxy — NOT Audience Evidence)
+
+> Run a fresh-context Cold-Read Gate BEFORE generating any assets. Provide ONLY what a viewer perceives: chat texts, VN subtitles, archive metadata tags, and one-line literal descriptions of each photo/CCTV still (what is visible, never what it means). Record the reviewer's answers verbatim below. Revise the script if any answer misses intent.
+
+- **Status:** `[pending / pass — model proxy only, not human audience evidence]`
+- **Q1:** `[verbatim cold-read answer]`
+- **Q2:** `[verbatim cold-read answer]`
+- **Q3:** `[verbatim cold-read answer]`
+- **Q4:** `[verbatim cold-read answer]`
+
 ## Fair-Play Clue Ledger
 
 At least one visual clue must be planted within the **first 40%** of the cut and clearly readable at phone size. **The payoff is shown, never stated** — pay it off with an artifact (such as a later photo, CCTV still, or voice note) so the viewer connects the dots themselves; no character explains the clue in chat or voice notes. Keep a single source of truth in `chat-script.json`: store frame positions in `at` and let the validator derive timestamps and measure voice-note durations directly from the audio files.
@@ -75,13 +97,20 @@ Style: authentic low-light handheld smartphone photo or grainy CCTV capture (ISO
 | --- | --- | --- | --- | --- |
 | `assets/<slug>/still-01.jpg` | `m2` | `phone-photo` | | |
 
-## Audio Cue Sheet (Voice Notes + UI/Ambience SFX — No Mood Music)
+## Audio & Sound-Design Cue Sheet (No Melodic Music; Diegetic Bed + Tension + Silence Drops)
 
-Voice notes are **2–6 s** each. Layer UI pings, typing clicks, low-key ambience and deliberate silence. **No music that explains the mood.**
+**No melodic music.** Non-melodic, mostly diegetic sound design is required:
+- **Location bed:** audible on phone speakers (`>= -50 dBFS` across the export except deliberate silence beats listed below).
+- **Voice notes (`2–6 s` each):** carry their own environment (wind, footsteps, breath, room) and may hide one phone-audible audio clue.
+- **Tension layer:** low non-melodic sub rumble/drone rising from the odd detail through escalation.
+- **Reveal drop:** deliberate hard drop to near-silence at the reveal.
+- All sounds synthesized in-repo or licensed with records in `public/sfx/LICENSES.md`.
 
-| Event / Cue ID | Time (s) | Type (`voice-note` / `ui-sfx` / `ambience` / `silence`) | Speaker / Asset | Exact Spoken Line or Sound Description | Target Duration (s) |
+| Layer / Cue ID | Frame Range (30 fps) | Time (s) | Type (`location-bed` / `tension-drone` / `voice-note` / `ui-sfx` / `tanpa-nama-ping` / `silence-drop`) | Speaker / Asset | Exact Line / Sound Design & Target Level |
 | --- | --- | --- | --- | --- | --- |
-| `m3` | | `voice-note` | | | 2–6 s |
+| `bed` | `0–...` | `00:00–...` | `location-bed` | | |
+| `tension` | | | `tension-drone` | | |
+| `silence-1` | | | `silence-drop` | *(deliberate silence beat)* | |
 
 ## Series Identity, Brand Safety & Upload Disclosure Checklist
 

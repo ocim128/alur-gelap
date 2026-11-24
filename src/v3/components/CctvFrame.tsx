@@ -60,7 +60,8 @@ export function CctvFrame({event}: CctvFrameProps) {
     panY = (0.5 - event.zoom.y) * (scale - 1) * 100;
   }
 
-  const liveTimestamp = advanceTimestamp(event.timestampLabel, local / fps);
+  // Playback events represent dated stills; their evidence timestamps stay fixed.
+  const liveTimestamp = event.playback ? event.timestampLabel : advanceTimestamp(event.timestampLabel, local / fps);
   const grainSeed = Math.floor(random(`cctv-grain-${frame}`) * 9999);
   const statusHeight = V3_CHROME_REGIONS.statusBar.height;
   const box = V3_CRITICAL_REGIONS.cctvContent;
@@ -142,22 +143,53 @@ export function CctvFrame({event}: CctvFrameProps) {
         <div
           style={{
             display: 'flex',
-            alignItems: 'center',
-            gap: 14,
+            flexDirection: 'column',
+            alignItems: 'flex-start',
+            gap: 10,
             fontFamily: 'Consolas, Menlo, monospace',
             color: '#E2F5EA',
             textShadow: '0 2px 8px rgba(0,0,0,0.9)',
           }}
         >
-          <div
-            style={{
-              width: 22,
-              height: 22,
-              borderRadius: '50%',
-              backgroundColor: recVisible ? V3_THEME.danger : 'rgba(239,68,68,0.2)',
-            }}
-          />
-          <span style={{fontSize: V3_FONT_SIZES.cctvLabel, fontWeight: 700}}>{event.cameraLabel}</span>
+          {event.playback && (
+            <div
+              data-v3="cctv-playback-badge"
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: 12,
+                padding: '6px 16px',
+                borderRadius: 8,
+                backgroundColor: 'rgba(16, 20, 30, 0.88)',
+                border: `2px solid ${V3_THEME.warning}`,
+                color: V3_THEME.warning,
+                fontSize: V3_FONT_SIZES.cctvLabel,
+                fontWeight: 800,
+                letterSpacing: 2,
+                lineHeight: 1.05,
+              }}
+            >
+              <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
+                <polygon points="4,3 21,12 4,21" fill={V3_THEME.warning} />
+              </svg>
+              <span>PLAYBACK</span>
+            </div>
+          )}
+          <div style={{display: 'flex', alignItems: 'center', gap: 14}}>
+            <div
+              style={{
+                width: 22,
+                height: 22,
+                borderRadius: '50%',
+                backgroundColor: event.playback
+                  ? V3_THEME.warning
+                  : recVisible
+                    ? V3_THEME.danger
+                    : 'rgba(239,68,68,0.2)',
+              }}
+            />
+            <span style={{fontSize: V3_FONT_SIZES.cctvLabel, fontWeight: 700}}>{event.cameraLabel}</span>
+          </div>
         </div>
 
         <div

@@ -17,7 +17,7 @@ const nonempty = (v) => typeof v === "string" && v.trim().length > 0;
 const isFrame = (v) => Number.isInteger(v) && v >= 0;
 const readJson = (p) => JSON.parse(readFileSync(p, "utf8"));
 const archivedDirPattern = /^(?:archive|archives|backup|backups|snapshot|snapshots|old|attic|sources|pre-.+|.+-before)$/i;
-const validEventTypes = new Set(["text", "photo", "voice", "system", "notification", "call", "cctv"]);
+const validEventTypes = new Set(["text", "photo", "voice", "system", "notification", "call", "cctv", "evidence"]);
 
 export function countChatWords(text) {
   if (typeof text !== "string") return 0;
@@ -241,6 +241,27 @@ export function validateV3Script(
   if (script.audio?.ambience) {
     checkAsset(script.audio.ambience.src, "audio.ambience");
   }
+  if (script.audio?.tension) {
+    const t = script.audio.tension;
+    checkAsset(t.src, "audio.tension");
+    fail(
+      isFrame(t.startFrame) && isFrame(t.endFrame) && t.endFrame > t.startFrame && t.endFrame <= script.durationInFrames,
+      `audio.tension frame range [${t.startFrame}, ${t.endFrame}] is invalid for duration ${script.durationInFrames}`,
+    );
+  }
+  if (script.audio?.silenceDrops !== undefined) {
+    fail(Array.isArray(script.audio.silenceDrops), "audio.silenceDrops must be an array");
+    for (const [idx, drop] of script.audio.silenceDrops.entries()) {
+      fail(
+        drop &&
+          isFrame(drop.startFrame) &&
+          isFrame(drop.endFrame) &&
+          drop.endFrame > drop.startFrame &&
+          drop.endFrame <= script.durationInFrames,
+        `audio.silenceDrops[${idx}] has invalid frame range`,
+      );
+    }
+  }
   if (script.audio?.uiSfx) {
     for (const [key, src] of Object.entries(script.audio.uiSfx)) {
       if (src !== undefined) checkAsset(src, `audio.uiSfx.${key}`);
@@ -360,6 +381,9 @@ export function validateV3Script(
     if (event.type === "cctv") {
       checkAsset(event.src, `${event.id} cctv`);
       fail(nonempty(event.cameraLabel) && nonempty(event.timestampLabel), `${event.id}: cctv requires labels`);
+      if (event.playback !== undefined) {
+        fail(typeof event.playback === "boolean", `${event.id}: cctv playback must be a boolean`);
+      }
       fail(
         Number.isInteger(event.durationFrames) &&
           event.durationFrames > 0 &&
@@ -367,7 +391,29 @@ export function validateV3Script(
         `${event.id}: invalid cctv durationFrames`,
       );
     }
+
+    if (event.type === "evidence") {
+      fail(nonempty(event.text), `${event.id}: evidence event requires non-empty factual text`);
+      fail(
+        Number.isInteger(event.durationFrames) &&
+          event.durationFrames > 0 &&
+          event.at + event.durationFrames <= script.durationInFrames,
+        `${event.id}: invalid evidence durationFrames`,
+      );
+    }
   }
+
+  // Archive metadata evidence-tag limit: at most 2 short factual lines total (stripLine + evidence events).
+  const stripMetaLine = script.archiveMetadata?.stripLine;
+  if (stripMetaLine !== undefined) {
+    fail(nonempty(stripMetaLine), "archiveMetadata.stripLine must be a non-empty factual line");
+  }
+  const evidenceEventCount = script.events.filter((e) => e.type === "evidence").length;
+  const totalMetadataLines = (stripMetaLine ? 1 : 0) + evidenceEventCount;
+  fail(
+    totalMetadataLines <= 2,
+    `archive metadata exceeds maximum of 2 factual lines (got ${totalMetadataLines})`,
+  );
 
   // Universe rule: the last artifact event of every archive MUST be sent by "Tanpa Nama".
   const lastEvent = script.events[script.events.length - 1];
@@ -381,7 +427,7 @@ export function validateV3Script(
   for (let i = 0; i < script.events.length; i++) {
     const event = script.events[i];
     let readableText = null;
-    if (event.type === "text" || event.type === "system") readableText = event.text;
+    if (event.type === "text" || event.type === "system" || event.type === "evidence") readableText = event.text;
     else if (event.type === "voice") readableText = event.subtitle;
     else if (event.type === "photo" && nonempty(event.caption)) readableText = event.caption;
     else if (event.type === "notification") readableText = `${event.title} ${event.body}`;
@@ -469,7 +515,7 @@ function isPreAssetBriefDraft(scriptPath) {
   const statePath = join(dirname(scriptPath), "pipeline-state.json");
   if (!statSync(statePath, {throwIfNoEntry: false})?.isFile()) return false;
   const state = readJson(statePath);
-  return state?.audio?.status === "pending" && state?.images?.status === "pending";
+  return state?.audio?.status === "pending" || state?.images?.status === "pending";
 }
 
 export function checkAllV3(root = process.cwd()) {

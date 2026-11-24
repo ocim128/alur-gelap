@@ -1,10 +1,13 @@
 {
   "pipelineVersion": 3,
   "archiveNumber": 1,
+  "archiveMetadata": {
+    "stripLine": "HP milik: Bayu"
+  },
   "id": "arsip01-grup-ronda-rt07",
   "compositionId": "Arsip01GrupRondaRT07",
   "fps": 30,
-  "durationInFrames": 1920,
+  "durationInFrames": 1995,
   "app": {
     "name": "Pesan",
     "groupName": "Ronda RT 07",
@@ -12,7 +15,7 @@
     "theme": "dark",
     "selfId": "bayu"
   },
-  "startClock": "23:47:28",
+  "startClock": "23:47:26",
   "startBattery": 38,
   "endBattery": 31,
   "characters": [
@@ -43,9 +46,23 @@
   ],
   "audio": {
     "ambience": {
-      "src": "assets/007-grup-ronda-rt07/ambience-night-village.wav",
-      "gain": 0.22
+      "src": "assets/007-grup-ronda-rt07/ambience-ronda-bed.wav",
+      "gain": 0.42
     },
+    "tension": {
+      "src": "assets/007-grup-ronda-rt07/tension-ronda-drone.wav",
+      "startFrame": 504,
+      "endFrame": 1650,
+      "startGain": 0.08,
+      "peakGain": 0.48
+    },
+    "silenceDrops": [
+      {
+        "startFrame": 1650,
+        "endFrame": 1734,
+        "reason": "Deliberate hard drop to near-silence after mimic message m13 through evidence tag m15 ('ditemukan: portal barat · 05.12'), broken by Tanpa Nama ping at m16."
+      }
+    ],
     "uiSfx": {
       "messageIn": "assets/007-grup-ronda-rt07/ui-pop-in.wav",
       "messageOut": "assets/007-grup-ronda-rt07/ui-pop-out.wav"
@@ -136,78 +153,106 @@
         "y": 0.55,
         "scale": 2.0,
         "atOffset": 36,
-        "durationFrames": 84
+        "durationFrames": 78
       }
     },
     {
       "id": "m9",
-      "at": 966,
+      "at": 960,
       "type": "voice",
       "from": "darto",
       "src": "assets/007-grup-ronda-rt07/vn-03-darto-panic.mp3",
       "subtitle": "Mas Bayu jawab dong! Dia nengok ke sini, dia lari—",
-      "timeLabel": "23.48"
+      "timeLabel": "23.47"
+    },
+    {
+      "id": "m14a",
+      "at": 1092,
+      "type": "cctv",
+      "playback": true,
+      "durationFrames": 84,
+      "src": "assets/007-grup-ronda-rt07/still-03a-cctv-hendra-photo.jpg",
+      "cameraLabel": "CAM 01 • POS RONDA RT 07",
+      "timestampLabel": "23:47:31"
+    },
+    {
+      "id": "m14b",
+      "at": 1176,
+      "type": "cctv",
+      "playback": true,
+      "durationFrames": 54,
+      "src": "assets/007-grup-ronda-rt07/still-03b-cctv-standing.jpg",
+      "cameraLabel": "CAM 01 • POS RONDA RT 07",
+      "timestampLabel": "23:47:36"
+    },
+    {
+      "id": "m14c",
+      "at": 1230,
+      "type": "cctv",
+      "playback": true,
+      "durationFrames": 96,
+      "src": "assets/007-grup-ronda-rt07/still-03c-cctv-empty.jpg",
+      "cameraLabel": "CAM 01 • POS RONDA RT 07",
+      "timestampLabel": "23:47:40",
+      "zoom": {
+        "x": 1.0,
+        "y": 1.0,
+        "scale": 1.15,
+        "atOffset": 24,
+        "durationFrames": 66
+      }
     },
     {
       "id": "m10",
-      "at": 1110,
+      "at": 1326,
       "type": "text",
       "from": "darto",
       "text": "bayu kamu di mana? jawab aku bayu",
-      "typingFrames": 30,
+      "typingFrames": 24,
       "timeLabel": "23.48"
     },
     {
       "id": "m11",
-      "at": 1206,
+      "at": 1422,
       "type": "call",
-      "durationFrames": 105,
+      "durationFrames": 78,
       "caller": "Darto",
       "status": "incoming",
       "subtitle": "Panggilan masuk…"
     },
     {
       "id": "m12",
-      "at": 1332,
+      "at": 1506,
       "type": "system",
       "text": "Panggilan tak terjawab dari Darto"
     },
     {
       "id": "m13",
-      "at": 1398,
+      "at": 1566,
       "type": "text",
       "from": "hendra",
       "text": "bayu jangan diam aja, balas dulu",
-      "typingFrames": 26,
+      "typingFrames": 24,
       "timeLabel": "23.48"
     },
     {
-      "id": "m14",
-      "at": 1482,
-      "type": "cctv",
-      "durationFrames": 165,
-      "src": "assets/007-grup-ronda-rt07/still-03-cctv-pos.jpg",
-      "cameraLabel": "CAM 01 • POS RONDA RT 07",
-      "timestampLabel": "23:48:15",
-      "zoom": {
-        "x": 0.48,
-        "y": 0.52,
-        "scale": 1.55,
-        "atOffset": 45,
-        "durationFrames": 105
-      }
+      "id": "m15",
+      "at": 1650,
+      "type": "evidence",
+      "durationFrames": 84,
+      "text": "ditemukan: portal barat · 05.12"
     },
     {
-      "id": "m15",
-      "at": 1668,
+      "id": "m16",
+      "at": 1734,
       "type": "photo",
       "from": "unknown",
       "src": "assets/007-grup-ronda-rt07/still-04-portal-barat.jpg",
       "timeLabel": "23.48"
     },
     {
-      "id": "m16",
-      "at": 1746,
+      "id": "m17",
+      "at": 1812,
       "type": "voice",
       "from": "unknown",
       "src": "assets/007-grup-ronda-rt07/vn-04-unknown-bayu.mp3",
@@ -218,23 +263,34 @@
   ],
   "glitches": [
     {
-      "at": 1650,
+      "at": 1174,
       "durationFrames": 10,
-      "intensity": 0.65
+      "intensity": 0.72
+    },
+    {
+      "at": 1224,
+      "durationFrames": 8,
+      "intensity": 0.8
     }
   ],
   "clueLedger": [
     {
-      "clue": "Hendra membuat 3 gelas kopi (m2), namun foto pos (m3) menunjukkan 4 gelas kopi di bangku dengan 1 sudah diminum setengah",
+      "clue": "Hendra membuat 3 gelas kopi (m2), namun foto pos (m3) menunjukkan 4 gelas kopi (3 penuh, 1 setengah habis)",
       "plantedIn": "m3",
-      "paidOffIn": "m14",
-      "note": "Payoff is shown visually in CCTV m14 (pos kosong, semua 4 gelas kopi sudah habis diminum, ponsel di lantai) — never stated by any character."
+      "paidOffIn": "m14a",
+      "note": "Payoff in CCTV PLAYBACK m14a (23:47:31) recasts m3: Hendra is holding his phone photographing the glasses while the dark figure sits right beside him just outside his camera frame (the 4th glass belonged to the figure); m14c (23:47:40) shows the empty pos with 1 dropped phone and the 3 full + 1 half-empty glasses untouched (matching m3/m14a)."
     },
     {
       "clue": "Grup ronda hanya beranggotakan 3 orang (m1 + header tetap '3 anggota' tanpa pesan gabung/keluar)",
       "plantedIn": "m1",
-      "paidOffIn": "m15",
-      "note": "Payoff is shown when the nameless 4th sender sends m15 (foto luar portal barat) and m16 (VN suara Bayu) while memberCount remains 3."
+      "paidOffIn": "m16",
+      "note": "Payoff is shown when Tanpa Nama sends m16 (foto luar portal barat) and m17 (VN suara Bayu) while memberCount remains 3."
+    },
+    {
+      "clue": "Hook menanyakan siapa yang tertawa di pos (m1), lalu terdengar tawa pelan di latar belakang voice note Hendra (m6)",
+      "plantedIn": "m1",
+      "paidOffIn": "m6",
+      "note": "Phone-audible faint dry chuckle layered behind Hendra's flat mimic delivery in m6 (after Hendra was already taken at 23:47:40 in m14c)."
     }
   ]
 }

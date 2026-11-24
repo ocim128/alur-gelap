@@ -1,26 +1,26 @@
 {
   "brief": {
     "status": "pass",
-    "notes": "Owner approved Checkpoint 3 brief and Checkpoint 4 decisions on 2026-11-24: public numbering ARSIP #001 (archiveNumber: 1), solid identity strip 'ARSIP #001 · @skenarium' replacing FIKSI, Tanpa Nama series constant logged in arcs/03-arsip-terakhir/lore.md, upload disclosure moved to caption-draft.md."
+    "notes": "Owner approved Checkpoint 6a rev 4 on 2026-11-24 with the m14c half-empty 4th-glass continuity adjustment synced in brief.md and chat-script.json."
   },
   "audio": {
     "status": "pass",
-    "notes": "All 4 voice notes inside 2-6 s (m4 4.925 s, m6 3.565 s, m9 3.625 s abrupt mid-word cutoff, m16 2.375 s derived from m4 'Pos aman.' tail), CC0 night ambience, regular UI pops, plus original in-repo synthesized Tanpa Nama signature ping (public/sfx/shared/tanpa-nama-ping.wav, 0.420 s, -8.0 dBFS peak) played ONLY on m15/m16. No music. listening review: none."
+    "notes": "6b non-melodic diegetic sound design built and measured: ambience-ronda-bed.wav (66.50 s, -24.5 dBFS RMS, -8.9 dBFS peak), tension-ronda-drone.wav (38.20 s, -18.0 dBFS RMS, -6.5 dBFS peak) via scripts/generate-ronda-soundscape.mjs, plus all 4 VNs remixed with environments (m4 4.925 s -4.4 dBTP; m6 3.565 s -4.3 dBTP with faint dry chuckle Audio Clue C3 at 1.52-2.59 s; m9 3.680 s -4.4 dBTP with alley wind + CC0 footsteps + hard mid-word cutoff; m17 2.375 s -5.9 dBTP reused m4 tail). listening review: none."
   },
   "images": {
     "status": "pass",
-    "notes": "All 4 amateur photo/CCTV stills verified at 540x960: still-01 (4 glasses, 1 half-drunk, attempt 1), still-02 (dark alley, attempt 2), still-03 (CCTV 4 empty glasses + glowing phone on floor, attempt 1), still-04 ('PORTAL BARAT' legible, attempt 1). Zero composites needed."
+    "notes": "Three matched-angle CCTV stills generated with built-in imagegen; 540x960 visual count passes for 03a and 03c. The empty frame required a second imagegen edit to move the phone into the safe area. See assets.md for counts, hashes, provenance and limitations. Compressed-export framing remains to be checked."
   },
   "render": {
     "status": "pass",
-    "notes": "Re-rendered v2 via npm run render to out/007-grup-ronda-rt07/arsip001-grup-ronda-rt07-v2.mp4 (7,188,219 B, SHA-256 137d82c2e285dd9fa5fef63c3442b4c3ef6765033b7ec4607af4127d8d6f4fc6, 1080x1920, 30 fps, 64.000 s, yuv420p limited bt709, -16.3 LUFS, -4.1 dBTP) plus 540p preview. Prior v1 export preserved untouched."
+    "notes": "Rendered compressed v3 MP4, 540p preview, contact sheet and key frames; source checks pass, technical measurements and builder visual inspection recorded in review.md. Final video SHA-256 30e173d2aba2a45f40535edd9ed481d41943b656cbe4ab1ab7f14a25d45a1084. listening review: none. Independent QA remains pending."
   },
   "audit": {
-    "status": "ready",
-    "notes": "Checkpoint 5 automated checks, compressed v2 audio metrics, 3 s contact sheet, and full-size frames verified in episodes/007-grup-ronda-rt07/review.md (zero overlay ghosting, clean 3-state m16 voice note, ARSIP #001 · @skenarium strip). Awaiting owner watch + human listening review (listening review: none)."
+    "status": "pending",
+    "notes": "Independent fresh-context post-MP4 QA remains pending; builder inspection and measurements are recorded in review.md and are not an independent audit."
   },
   "publish": {
     "status": "pending",
-    "notes": "Not authorized. Caption draft prepared in episodes/007-grup-ronda-rt07/caption-draft.md (not posted). Do not publish, schedule, or upload."
+    "notes": "Not authorized. Do not publish, schedule, or upload."
   }
 }
