@@ -1,6 +1,12 @@
 import {Easing, Img, interpolate, random, staticFile, useCurrentFrame, useVideoConfig} from 'remotion';
 import {formatHmsClock, parseInWorldClock} from '../clock.mjs';
-import {V3_CHROME_REGIONS, V3_CRITICAL_REGIONS, V3_FONT_SIZES, V3_THEME} from '../layout.mjs';
+import {
+  V3_CHROME_REGIONS,
+  V3_CRITICAL_REGIONS,
+  V3_FONT_SIZES,
+  V3_OVERLAY_FADE_FRAMES,
+  V3_THEME,
+} from '../layout.mjs';
 import type {CctvEventV3} from '../types';
 
 export type CctvFrameProps = {
@@ -20,11 +26,19 @@ export function CctvFrame({event}: CctvFrameProps) {
   const local = frame - event.at;
   if (local < 0 || local >= event.durationFrames) return null;
 
-  const fadeIn = interpolate(local, [0, 6], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
-  const fadeOut = interpolate(local, [Math.max(6, event.durationFrames - 6), event.durationFrames], [1, 0], {
-    extrapolateLeft: 'clamp',
-    extrapolateRight: 'clamp',
-  });
+  const fadeInFrames = V3_OVERLAY_FADE_FRAMES.cctvIn;
+  const fadeOutFrames = V3_OVERLAY_FADE_FRAMES.cctvOut;
+  const fadeIn =
+    fadeInFrames > 0
+      ? interpolate(local, [0, fadeInFrames], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'})
+      : 1;
+  const fadeOut =
+    fadeOutFrames > 0
+      ? interpolate(local, [Math.max(fadeInFrames, event.durationFrames - fadeOutFrames), event.durationFrames], [1, 0], {
+          extrapolateLeft: 'clamp',
+          extrapolateRight: 'clamp',
+        })
+      : 1;
   const opacity = Math.min(fadeIn, fadeOut);
 
   const jitterX = (random(`cctv-x-${frame}`) - 0.5) * 4;

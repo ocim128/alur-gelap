@@ -110,3 +110,11 @@ For the Episode 007 assembly, `prepared/ep007-pa-mixready.wav` adds 22 dB to the
 ## Shared rewind stinger (canonical cross-episode asset)
 
 - `shared/tape-snap-rewind.wav`: byte-identical copy (SHA-256 `E1CFB995D718B179F2AD4442177D3BB01053183D682DDDB220CEAD8BD732023B`) of the locally synthesized Episode 004 tape-snap stinger described above. It lives in the shared `public/sfx/shared/` library so future episodes cue the canonical rewind stinger through their own folder contract instead of referencing another episode's directory. Same provenance: locally synthesized with FFmpeg (exponential pitch-drop tape stop, filtered noise snap, 50 Hz sub thump; 0.400 s, sample peak -1.0 dBFS); no third-party recording; no attribution required.
+
+## Studio v3 · Arsip Terakhir shared signature sound (`Tanpa Nama`)
+
+- `shared/tanpa-nama-ping.wav`: SHA-256 `188fecbc64386c3a4abf2a03333d71080e600c5d4386eb9c9adb46ec56cbb82f` (`40,364` bytes, `0.420 s`, `48000 Hz` mono 16-bit PCM, true peak `-8.0 dBFS`). Deterministically synthesized from pure math in-repo via [`scripts/generate-tanpa-nama-sfx.mjs`](../../scripts/generate-tanpa-nama-sfx.mjs) (cold two-pulse metallic dyad: 740 Hz / 1046.5 Hz + 110 Hz damped body knock followed at 115 ms by a 587.33 Hz / 583.53 Hz beating echo, 35 ms zero taper). Zero third-party recordings, zero stock packs, and no WhatsApp/Telegram/Line imitation — full rights belong to this repository; no attribution required. Plays **only** when a `Tanpa Nama` event arrives.
+
+## Studio v3 · Arsip Terakhir Episode 007 — Grup Ronda RT 07 (ARSIP #001)
+
+- Per-episode audio/visual provenance and rights record (including CC0 `rubberduck` `night-air.wav` derivative, synthesized UI pops, and Google Cloud Gemini 3.8 Flash TTS voice notes) lives in `episodes/007-grup-ronda-rt07/assets.md`.

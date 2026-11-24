@@ -1,0 +1,68 @@
+{
+  "version": 1,
+  "voiceId": "Charon",
+  "durationSec": 3.565,
+  "master": true,
+  "chunks": [
+    {
+      "index": 0,
+      "tag": "tactical",
+      "text": "Hah... aku di pos, Pak. Aku dari tadi di pos.",
+      "start": 0,
+      "end": 3.565,
+      "retries": 2,
+      "status": "failed"
+    }
+  ],
+  "words": [
+    {
+      "word": "Hah,",
+      "start": 0,
+      "end": 0.42,
+      "chunk": 0
+    },
+    {
+      "word": "aku",
+      "start": 0.88,
+      "end": 1.1,
+      "chunk": 0
+    },
+    {
+      "word": "dipost",
+      "start": 1.1,
+      "end": 1.42,
+      "chunk": 0
+    },
+    {
+      "word": "pak.",
+      "start": 1.42,
+      "end": 1.6,
+      "chunk": 0
+    },
+    {
+      "word": "Aku",
+      "start": 2.08,
+      "end": 2.42,
+      "chunk": 0
+    },
+    {
+      "word": "dari",
+      "start": 2.42,
+      "end": 2.66,
+      "chunk": 0
+    },
+    {
+      "word": "tadi",
+      "start": 2.66,
+      "end": 2.98,
+      "chunk": 0
+    },
+    {
+      "word": "dipost.",
+      "start": 2.98,
+      "end": 3.48,
+      "chunk": 0
+    }
+  ],
+  "sfx": []
+}

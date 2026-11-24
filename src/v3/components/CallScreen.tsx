@@ -1,5 +1,11 @@
 import {interpolate, useCurrentFrame} from 'remotion';
-import {V3_CHROME_REGIONS, V3_CRITICAL_REGIONS, V3_FONT_SIZES, V3_THEME} from '../layout.mjs';
+import {
+  V3_CHROME_REGIONS,
+  V3_CRITICAL_REGIONS,
+  V3_FONT_SIZES,
+  V3_OVERLAY_FADE_FRAMES,
+  V3_THEME,
+} from '../layout.mjs';
 import type {CallEventV3} from '../types';
 
 export type CallScreenProps = {
@@ -11,11 +17,19 @@ export function CallScreen({event}: CallScreenProps) {
   const local = frame - event.at;
   if (local < 0 || local >= event.durationFrames) return null;
 
-  const fadeIn = interpolate(local, [0, 8], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
-  const fadeOut = interpolate(local, [Math.max(8, event.durationFrames - 8), event.durationFrames], [1, 0], {
-    extrapolateLeft: 'clamp',
-    extrapolateRight: 'clamp',
-  });
+  const fadeInFrames = V3_OVERLAY_FADE_FRAMES.callIn;
+  const fadeOutFrames = V3_OVERLAY_FADE_FRAMES.callOut;
+  const fadeIn =
+    fadeInFrames > 0
+      ? interpolate(local, [0, fadeInFrames], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'})
+      : 1;
+  const fadeOut =
+    fadeOutFrames > 0
+      ? interpolate(local, [Math.max(fadeInFrames, event.durationFrames - fadeOutFrames), event.durationFrames], [1, 0], {
+          extrapolateLeft: 'clamp',
+          extrapolateRight: 'clamp',
+        })
+      : 1;
   const opacity = Math.min(fadeIn, fadeOut);
 
   const ringPhase = (local % 36) / 36;

@@ -1,13 +1,10 @@
 {
   "pipelineVersion": 3,
+  "archiveNumber": 1,
   "id": "arsip01-grup-ronda-rt07",
   "compositionId": "Arsip01GrupRondaRT07",
   "fps": 30,
-  "durationInFrames": 1860,
-  "fiksiTag": {
-    "visible": true,
-    "label": "FIKSI"
-  },
+  "durationInFrames": 1920,
   "app": {
     "name": "Pesan",
     "groupName": "Ronda RT 07",
@@ -15,7 +12,7 @@
     "theme": "dark",
     "selfId": "bayu"
   },
-  "startClock": "23:47:30",
+  "startClock": "23:47:28",
   "startBattery": 38,
   "endBattery": 31,
   "characters": [
@@ -39,7 +36,7 @@
     },
     {
       "id": "unknown",
-      "name": "",
+      "name": "Tanpa Nama",
       "color": "#94A3B8",
       "voice": "male-masc-id"
     }
@@ -47,7 +44,7 @@
   "audio": {
     "ambience": {
       "src": "assets/007-grup-ronda-rt07/ambience-night-village.wav",
-      "gain": 0.18
+      "gain": 0.22
     },
     "uiSfx": {
       "messageIn": "assets/007-grup-ronda-rt07/ui-pop-in.wav",
@@ -81,9 +78,9 @@
       "caption": "pos aman",
       "timeLabel": "23.47",
       "zoom": {
-        "x": 0.5,
-        "y": 0.72,
-        "scale": 2.0,
+        "x": 0.57,
+        "y": 0.58,
+        "scale": 1.32,
         "atOffset": 42,
         "durationFrames": 96
       }
@@ -100,7 +97,7 @@
     },
     {
       "id": "m5",
-      "at": 462,
+      "at": 504,
       "type": "text",
       "from": "darto",
       "text": "lho mas hendra tadi bukannya barusan lewat gang 2?",
@@ -109,7 +106,7 @@
     },
     {
       "id": "m6",
-      "at": 552,
+      "at": 594,
       "type": "voice",
       "from": "hendra",
       "src": "assets/007-grup-ronda-rt07/vn-02-hendra-odd.mp3",
@@ -119,7 +116,7 @@
     },
     {
       "id": "m7",
-      "at": 696,
+      "at": 732,
       "type": "text",
       "from": "darto",
       "text": "mas bayu denger ga sih? suara hendra kok aneh banget",
@@ -128,23 +125,23 @@
     },
     {
       "id": "m8",
-      "at": 792,
+      "at": 828,
       "type": "photo",
       "from": "darto",
       "src": "assets/007-grup-ronda-rt07/still-02-gang-gelap.jpg",
       "caption": "itu hendra bukan??",
       "timeLabel": "23.47",
       "zoom": {
-        "x": 0.5,
-        "y": 0.56,
-        "scale": 1.85,
+        "x": 0.55,
+        "y": 0.55,
+        "scale": 2.0,
         "atOffset": 36,
         "durationFrames": 84
       }
     },
     {
       "id": "m9",
-      "at": 930,
+      "at": 966,
       "type": "voice",
       "from": "darto",
       "src": "assets/007-grup-ronda-rt07/vn-03-darto-panic.mp3",
@@ -153,7 +150,7 @@
     },
     {
       "id": "m10",
-      "at": 1068,
+      "at": 1110,
       "type": "text",
       "from": "darto",
       "text": "bayu kamu di mana? jawab aku bayu",
@@ -162,7 +159,7 @@
     },
     {
       "id": "m11",
-      "at": 1164,
+      "at": 1206,
       "type": "call",
       "durationFrames": 105,
       "caller": "Darto",
@@ -171,13 +168,13 @@
     },
     {
       "id": "m12",
-      "at": 1290,
+      "at": 1332,
       "type": "system",
       "text": "Panggilan tak terjawab dari Darto"
     },
     {
       "id": "m13",
-      "at": 1356,
+      "at": 1398,
       "type": "text",
       "from": "hendra",
       "text": "bayu jangan diam aja, balas dulu",
@@ -186,23 +183,23 @@
     },
     {
       "id": "m14",
-      "at": 1440,
+      "at": 1482,
       "type": "cctv",
       "durationFrames": 165,
       "src": "assets/007-grup-ronda-rt07/still-03-cctv-pos.jpg",
       "cameraLabel": "CAM 01 • POS RONDA RT 07",
-      "timestampLabel": "23:48:16",
+      "timestampLabel": "23:48:15",
       "zoom": {
-        "x": 0.5,
-        "y": 0.7,
-        "scale": 1.85,
+        "x": 0.48,
+        "y": 0.52,
+        "scale": 1.55,
         "atOffset": 45,
         "durationFrames": 105
       }
     },
     {
       "id": "m15",
-      "at": 1626,
+      "at": 1668,
       "type": "photo",
       "from": "unknown",
       "src": "assets/007-grup-ronda-rt07/still-04-portal-barat.jpg",
@@ -210,7 +207,7 @@
     },
     {
       "id": "m16",
-      "at": 1704,
+      "at": 1746,
       "type": "voice",
       "from": "unknown",
       "src": "assets/007-grup-ronda-rt07/vn-04-unknown-bayu.mp3",
@@ -221,7 +218,7 @@
   ],
   "glitches": [
     {
-      "at": 1608,
+      "at": 1650,
       "durationFrames": 10,
       "intensity": 0.65
     }

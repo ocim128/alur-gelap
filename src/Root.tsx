@@ -3,6 +3,7 @@ import {Skenario04TanganPilotKemarin} from './Skenario04TanganPilotKemarin';
 import {Skenario05SabukKetiga} from './Skenario05SabukKetiga';
 import {Skenario06BioskopRoughCut, bioskopRoughCutDuration} from './Skenario06BioskopRoughCut';
 import {ArsipDemo, arsipDemoScript} from './v3/ArsipDemo';
+import {Arsip01GrupRondaRT07, arsip01Script} from './v3/Arsip01GrupRondaRT07';
 import scenario05Manifest from '../episodes/005-sabuk-ketiga/manifest.json';
 import pilot04Manifest from '../episodes/004-tangan-pilot-kemarin/manifest.json';
 import deckManifest from '../episodes/003-goyangan-dek-enam/manifest.json';
@@ -122,4 +123,5 @@ export const Root = () => <><Composition
 <Composition id="Skenario05SabukKetiga" component={Skenario05SabukKetiga} width={1080} height={1920} fps={scenario05Manifest.fps} durationInFrames={scenario05Manifest.duration} />
 <Composition id="Skenario06BioskopRoughCut" component={Skenario06BioskopRoughCut} width={1080} height={1920} fps={30} durationInFrames={bioskopRoughCutDuration} />
 <Composition id="ArsipDemo" component={ArsipDemo} width={1080} height={1920} fps={arsipDemoScript.fps} durationInFrames={arsipDemoScript.durationInFrames} />
+<Composition id="Arsip01GrupRondaRT07" component={Arsip01GrupRondaRT07} width={1080} height={1920} fps={arsip01Script.fps} durationInFrames={arsip01Script.durationInFrames} />
 </>;

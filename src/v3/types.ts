@@ -129,14 +129,12 @@ export type ClueLedgerEntryV3 = {
 
 export type ChatScriptV3 = {
   pipelineVersion: 3;
+  /** Public archive sequence number (e.g. 1 -> "ARSIP #001 · @skenarium"). */
+  archiveNumber: number;
   id: string;
   compositionId?: string;
   fps: number;
   durationInFrames: number;
-  fiksiTag: {
-    visible: boolean;
-    label: string;
-  };
   app: {
     name?: string;
     groupName: string;

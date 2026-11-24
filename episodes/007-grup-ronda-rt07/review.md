@@ -1,0 +1,76 @@
+# Episode review (Studio v3 · Arsip Terakhir) — ARSIP #001 (`007 · Grup Ronda RT 07`) / v2 / 2026-11-24
+
+## Artifact Binding
+
+- **Public Archive Number** — `ARSIP #001` (`archiveNumber: 1`, rendered as `ARSIP #001 · @skenarium`)
+- **Composition ID** — `Arsip01GrupRondaRT07`
+- **Exported compressed MP4 (v2)** — `out/007-grup-ronda-rt07/arsip001-grup-ronda-rt07-v2.mp4` (`7,188,219` bytes / `6.86 MiB`)
+- **MP4 SHA-256 (v2)** — `137d82c2e285dd9fa5fef63c3442b4c3ef6765033b7ec4607af4127d8d6f4fc6`
+- **540p preview MP4 (v2)** — `out/007-grup-ronda-rt07/arsip001-grup-ronda-rt07-v2-preview-540p.mp4` (`4,410,378` bytes, SHA-256 `9c33a6797f3673eef043d02b0dfaa0bd60f61a5e8750297cb15c484c250da2a4`, downscaled directly from v2 delivery MP4)
+- **Prior v1 delivery (preserved untouched)** — `out/arsip01-grup-ronda-rt07.mp4` (SHA-256 `28eb83e2e659075d3151557fb161b53400895912a4a97e04070504ead49b83ea`)
+- **Measured video specs (`ffprobe`)** — `1080 × 1920`, `30 fps`, `64.000 s`, `h264` (`yuv420p`, limited-range `tv`, `bt709/bt709/bt709`), audio `aac 48000 Hz stereo`
+- **Contact sheet (v2, every 3 s)** — `out/007-grup-ronda-rt07/contact-sheet-3s-v2.jpg` (`539,687` B, SHA-256 `ef09f528987633b464ec0351863454cc95d4bf973f611ad52749a4821e374ef3`)
+- **Full-size key frames inspected (from compressed v2 MP4)** —
+  - `out/007-grup-ronda-rt07/frame-v2-00s.png` (frame `0`, hook + `ARSIP #001 · @skenarium` strip)
+  - `out/007-grup-ronda-rt07/frame-v2-m3-zoom.png` (frame `258`, `m3` 4-glass coffee zoom, hard-cut opaque backdrop)
+  - `out/007-grup-ronda-rt07/frame-v2-m14-zoom.png` (frame `1580`, `m14` CCTV 4 empty glasses + glowing phone on floor)
+  - `out/007-grup-ronda-rt07/frame-v2-end.png` (frame `1919`, final frame: `Tanpa Nama` grey avatar, played `m16` state with amber ring gone + play icon)
+  - Diagnostic state checks: `frame-v2-m16-unplayed.png` (frame `1752`, amber ring visible pre-play) & `frame-v2-m16-playing.png` (frame `1790`, amber ring gone, lavender pause icon + mid-playback waveform)
+- **Caption draft (not posted)** — `episodes/007-grup-ronda-rt07/caption-draft.md`
+- **Listening review** — `listening review: none`
+
+## Automated Validation
+
+- [x] **pass** — `npm run check` passed end-to-end (`tsc --noEmit`, `check-episodes.mjs`, `check-v3.mjs` enforcing `archiveNumber`, `ARSIP #NNN · @skenarium` safe zone & `>= 42 px`, overlay fade `<= 6 frames`, last artifact from `Tanpa Nama`, `tanpa-nama-ping.wav` existence, `unplayed` preplay overrun check, 88/88 Node unit tests, and 16/16 Python tests).
+
+## Story, Clue & Format Compliance
+
+- [x] **pass — No narrator / no recap:** Reconstructed purely from group chat messages, 4 short in-world voice notes, 3 phone photos, 1 incoming call screen, 1 missed-call system line, and 1 CCTV still. Zero narration, zero rewind loops, zero `"Kamu berhasil bertahan hidup."`.
+- [x] **pass — Frame-zero hook (`00:00.0`):** `m1` (`"mas td yg ketawa di pos siapa? kita kan cuma bertiga"`) renders at `opacity: 1` on frame 0 (`frame-v2-00s.png`).
+- [x] **pass — One local entity/rule + `Tanpa Nama` constant:** Local mimic rule is never explained aloud; Bayu "nearly survives" via silence after `m4`. `Tanpa Nama` (fixed grey default avatar, no phone number, never explained) sends `m15` and final artifact `m16`, logged in `arcs/03-arsip-terakhir/lore.md`. Never framed as real-world safety advice.
+- [x] **pass — Fair-play visual clues (≤ 40%):** `C1` planted at `m3` (`8.75%` ≤ 40%, 4 glasses vs 3 made) and paid off visually via CCTV `m14` (4 empty glasses + phone on floor); `C2` planted at `m1` (`0.0%`, `3 anggota`) and paid off visually at `m15`/`m16` (`Tanpa Nama` appears with no join message while header remains `3 anggota`).
+- [x] **pass — Texting voices & Indonesian grounding:** Distinct per character (`bayu`, `hendra`, `darto`), grounded in fictional `RT 07`.
+- [x] **pass — Amateur photo / CCTV look (4 stills, gore-free):** All 4 stills verified at `540 × 960` (`assets.md`).
+
+## Readability, Safe Zones & Motion (Contact Sheet + Key Frames)
+
+- [x] **pass — Minimum ~42 px text:** `ARSIP #001 · @skenarium` (`42 px`), chat body (`48 px`), VN subtitles (`46 px`), timestamps (`42 px`); all legible on `contact-sheet-3s-v2.jpg` and full-size frames.
+- [x] **pass — Platform UI safe zones:** All critical regions (`identityStripContent`, `chatContent`, `photoLightboxContent`, `callContent`, `cctvContent`, `notificationBanner`) clear top 10% (`y >= 192`), bottom 22% (`y <= 1497`), and right 12% (`x + w <= 950`).
+- [x] **pass — Clean overlay transitions (`<= 6` frames / hard cut):** Full-screen overlays (`PhotoZoomOverlay`, `CctvFrame`, `CallScreen`) now use 0-frame hard cuts with 100% opaque backdrops; `Notification` uses 4-frame fade (`<= 6`). Confirmed zero double-exposure ghosting across all tiles of `contact-sheet-3s-v2.jpg` (including ~30 s and ~51 s) and full-size frames.
+- [x] **pass — Final voice note 3-state transition:** Verified frame-by-frame in `frame-v2-m16-unplayed.png` (amber ring + play icon during 15-frame pre-play arrival), `frame-v2-m16-playing.png` (amber ring gone, pause icon + moving waveform during playback), and `frame-v2-end.png` (amber ring gone, resting play icon + full played waveform at frame 1919).
+- [x] **pass — Solid identity strip clipping & motion discipline:** Scrolling messages clip strictly below `ARSIP #001 · @skenarium` (`y = 282`); all motion driven by `useCurrentFrame()`, zero CSS animations.
+
+## Series Identity, Brand Safety & Publishing Checklist (Upload Step Only)
+
+- [x] **pass — Series identity strip (`ARSIP #001 · @skenarium`):** Rendered cleanly in solid strip directly under `ChatHeader`; no on-screen `FIKSI` tag (owner decision 2026-11-24; account bio states fiction).
+- [x] **pass — Original generic chat UI & signature sound:** Zero WhatsApp/Telegram/Line trademarks, colors, icons, or audio; `tanpa-nama-ping.wav` synthesized in-repo via `scripts/generate-tanpa-nama-sfx.mjs` and played ONLY on `Tanpa Nama` events (`m15`, `m16`).
+- [x] **pass — No real PII / defamation:** Zero real people, real phone numbers, or defamatory real place names.
+- [x] **pass (with caveat) — Provenance & rights (`assets.md` + `public/sfx/LICENSES.md`):** All assets logged; commercial/publication terms for Google Cloud TTS and AI image generation have not been independently verified by legal counsel.
+- [ ] **pending upload step (owner/human publisher ONLY — do NOT publish without authorization):**
+  - Caption draft ready in `episodes/007-grup-ronda-rt07/caption-draft.md` with **`#fiksi`** and **`#ceritahorror`**.
+  - Switch **ON** the platform's built-in **AI-generated-content label** at upload.
+  - Confirm `@skenarium` account bio states fiction.
+
+## Audio Measurements (Compressed v2 MP4)
+
+- [x] **pass — Loudness measured on compressed `out/007-grup-ronda-rt07/arsip001-grup-ronda-rt07-v2.mp4`:**
+  - Integrated loudness: **`-16.3 LUFS`**
+  - True peak: **`-4.1 dBTP`** (passes `<= -1.5 dBTP` ceiling with `2.6 dB` headroom)
+- [x] **pass — Silence & ambience check:** `verify_export_common.py` measured `6` low-ambience intervals (`-60.82` to `-60.69 dBFS` RMS, `digitalZeros: 0`); zero mood-explaining music.
+- [x] **pass — Voice notes (2–6 s each) & signature ping:** All 4 voice notes verified inside 2–6 s via `ffprobe`; `m16` derived directly from `m4` `"Pos aman."` tail; `tanpa-nama-ping.wav` (`0.420 s`, `-8.0 dBFS` peak) triggers at `m15` and `m16` (during `m16`'s 0.5 s pre-play beat so it clears before `"Pos aman."` plays).
+- [ ] **not checked — Human ear-check:** `listening review: none` — owner ear-check is required before any publication decision.
+
+## Honest Summary: Verified vs Unverified
+
+- **Verified:**
+  - `npm run check` green end-to-end (`tsc`, `check-episodes.mjs`, `check-v3.mjs`, 88/88 Node tests, 16/16 Python tests).
+  - `npm run render -- Arsip01GrupRondaRT07 out/007-grup-ronda-rt07/arsip001-grup-ronda-rt07-v2.mp4` completed without overwriting v1; `ffprobe` confirms `1080×1920`, `30 fps`, `64.000 s`, limited-range `yuv420p` `bt709`, `aac 48000 Hz 2ch`.
+  - Compressed v2 MP4 audio measured via `render-compressed.mjs` and `verify_export_common.py`: **`-16.3 LUFS`**, **`-4.1 dBTP`**, `6` low-ambience intervals (`digitalZeros: 0`), zero music.
+  - Compressor `signalSanity` logged `"verdict": "warning"` (`58` severe out-of-range pixels across 12 sampled frames, max `21` / `2,073,600` = `0.001%`, well under the `1%` fail gate) — disclosed transparently.
+  - Visual inspection of `contact-sheet-3s-v2.jpg`, `frame-v2-00s.png`, `frame-v2-m3-zoom.png`, `frame-v2-m14-zoom.png`, `frame-v2-end.png`, `frame-v2-m16-unplayed.png`, and `frame-v2-m16-playing.png` confirmed `ARSIP #001 · @skenarium` legibility, zero `FIKSI` tag, zero overlay ghosting, fixed grey `Tanpa Nama` avatar, and exact 3-state `m16` voice-note lifecycle.
+- **Unverified / NOT checked:**
+  - **`listening review: none`** — no human has listened to the v2 MP4, the 4 voice notes, or the new synthesized `tanpa-nama-ping.wav` by ear.
+  - Subjective audio tone/vibe of `tanpa-nama-ping.wav` (whether the cold two-pulse metallic ping feels unsettling and clearly distinct from regular UI pops on phone speakers) and voice-note pronunciation/delivery (`m4`, `m6` flat take, `m9` mid-word cutoff, `m16` reused tail) have **not** been judged by ear.
+  - Continuous 30 fps playback feel on a real phone (hard-cut overlay cadence, scroll rhythm, `0.5 s` pre-play timing on `m16`, glitch timing) has **not** been watched by a human (540p preview provided for owner playback).
+  - Independent first-watch viewer comprehension and live TikTok/Reels/Shorts upload overlay fit + commercial legal terms for Google Cloud TTS / AI image generation have **not** been independently verified.
+- **Verdict:** **`ready for owner review (Checkpoint 5)`** — awaiting owner watch + listening review. Publishing/uploading remains strictly unauthorized until explicit owner approval.

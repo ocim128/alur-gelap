@@ -1,16 +1,23 @@
 import {Audio} from '@remotion/media';
 import {AbsoluteFill, Easing, interpolate, Sequence, staticFile, useCurrentFrame} from 'remotion';
+import {ArchiveIdentityStrip} from './components/ArchiveIdentityStrip';
 import {CallScreen} from './components/CallScreen';
 import {CctvFrame} from './components/CctvFrame';
 import {ChatHeader} from './components/ChatHeader';
-import {FiksiTag} from './components/FiksiTag';
 import {MessageBubble} from './components/MessageBubble';
 import {Notification} from './components/Notification';
 import {PhoneFrame} from './components/PhoneFrame';
 import {PhotoMessage, PhotoZoomOverlay} from './components/PhotoMessage';
 import {SystemMessage} from './components/SystemMessage';
 import {VoiceNoteBubble} from './components/VoiceNoteBubble';
-import {V3_CHROME_REGIONS, V3_CRITICAL_REGIONS, V3_FONT_SIZES, V3_THEME} from './layout.mjs';
+import {
+  isTanpaNamaCharacter,
+  V3_CHROME_REGIONS,
+  V3_CRITICAL_REGIONS,
+  V3_FONT_SIZES,
+  V3_TANPA_NAMA,
+  V3_THEME,
+} from './layout.mjs';
 import type {
   CallEventV3,
   CctvEventV3,
@@ -41,19 +48,19 @@ function isThreadEvent(event: ChatEventV3): event is ThreadEvent {
 
 function estimateEventHeight(event: ThreadEvent): number {
   if (event.type === 'text') {
-    const lines = Math.max(1, Math.ceil((event.text.length + (event.edited ? 9 : 0)) / 24));
-    return 108 + lines * 62;
+    const lines = Math.max(1, Math.ceil((event.text.length + (event.edited ? 9 : 0)) / 30));
+    return 94 + lines * 58;
   }
   if (event.type === 'photo') {
-    const captionLines = event.caption ? Math.max(1, Math.ceil(event.caption.length / 26)) : 0;
-    return 544 + (captionLines > 0 ? 14 + captionLines * 58 : 0);
+    const captionLines = event.caption ? Math.max(1, Math.ceil(event.caption.length / 30)) : 0;
+    return 534 + (captionLines > 0 ? 12 + captionLines * 56 : 0);
   }
   if (event.type === 'voice') {
-    const subLines = Math.max(1, Math.ceil((event.subtitle.length + 2) / 25));
-    return 216 + 40 + subLines * 58;
+    const subLines = Math.max(1, Math.ceil((event.subtitle.length + 2) / 30));
+    return 214 + 34 + subLines * 56;
   }
-  const sysLines = Math.max(1, Math.ceil(event.text.length / 28));
-  return 38 + sysLines * 56;
+  const sysLines = Math.max(1, Math.ceil(event.text.length / 34));
+  return 34 + sysLines * 52;
 }
 
 function computeScrollOffset(
@@ -168,29 +175,37 @@ export function ArsipPlayer({script}: ArsipPlayerProps) {
         />
       )}
 
-      {/* Per-event UI sound cues */}
-      {uiSfx &&
-        script.events.map((event) => {
-          if (event.at <= 0) return null;
-          if (event.type === 'notification' && uiSfx.notification) {
+      {/* Per-event UI sound cues: Tanpa Nama signature ping plays ONLY on Tanpa Nama events */}
+      {script.events.map((event) => {
+        if (event.at <= 0) return null;
+        if (event.type === 'notification' && uiSfx?.notification) {
+          return (
+            <Sequence key={`sfx-${event.id}`} from={event.at} durationInFrames={30} layout="none">
+              <Audio src={staticFile(uiSfx.notification)} volume={0.65} />
+            </Sequence>
+          );
+        }
+        if (event.type === 'text' || event.type === 'photo' || event.type === 'voice') {
+          const sender = characterMap.get(event.from);
+          if (isTanpaNamaCharacter(sender, event.from)) {
             return (
-              <Sequence key={`sfx-${event.id}`} from={event.at} durationInFrames={30} layout="none">
-                <Audio src={staticFile(uiSfx.notification)} volume={0.65} />
+              <Sequence key={`sfx-${event.id}`} from={event.at} durationInFrames={18} layout="none">
+                <Audio src={staticFile(V3_TANPA_NAMA.signatureSfx)} volume={0.75} />
               </Sequence>
             );
           }
-          if (event.type === 'text' || event.type === 'photo' || event.type === 'voice') {
-            const isSelf = event.from === script.app.selfId;
-            const sfxPath = isSelf ? uiSfx.messageOut : uiSfx.messageIn;
-            if (!sfxPath) return null;
-            return (
-              <Sequence key={`sfx-${event.id}`} from={event.at} durationInFrames={24} layout="none">
-                <Audio src={staticFile(sfxPath)} volume={0.55} />
-              </Sequence>
-            );
-          }
-          return null;
-        })}
+          if (!uiSfx) return null;
+          const isSelf = event.from === script.app.selfId;
+          const sfxPath = isSelf ? uiSfx.messageOut : uiSfx.messageIn;
+          if (!sfxPath) return null;
+          return (
+            <Sequence key={`sfx-${event.id}`} from={event.at} durationInFrames={24} layout="none">
+              <Audio src={staticFile(sfxPath)} volume={0.55} />
+            </Sequence>
+          );
+        }
+        return null;
+      })}
 
       {/* Full-bleed 1080x1920 phone interface */}
       <PhoneFrame
@@ -206,6 +221,9 @@ export function ArsipPlayer({script}: ArsipPlayerProps) {
           statusText={script.app.statusText}
         />
 
+        {/* Reserve solid space matching the full-width identity strip so the chat thread starts and clips strictly below y = 282 */}
+        <div style={{height: V3_CHROME_REGIONS.identityStrip.height, backgroundColor: V3_THEME.identityStripBg}} />
+
         {/* Full-bleed chat thread canvas; active readable content stays inside V3_CRITICAL_REGIONS.chatContent */}
         <div
           data-v3="chat-viewport"
@@ -218,12 +236,12 @@ export function ArsipPlayer({script}: ArsipPlayerProps) {
             overflow: 'hidden',
           }}
         >
-          {/* Clipped critical safe-zone column so bubbles never bleed into right 12% or sit active inside bottom 22% */}
+          {/* Clipped critical safe-zone column so bubbles never bleed into right 12% or pass behind the identity strip */}
           <div
             style={{
               position: 'absolute',
               left: chatSafeBox.x,
-              top: chatSafeBox.y - (V3_CHROME_REGIONS.statusBar.height + V3_CHROME_REGIONS.chatHeader.height),
+              top: 0,
               width: chatSafeBox.width,
               height: chatSafeBox.height,
               overflow: 'hidden',
@@ -336,8 +354,8 @@ export function ArsipPlayer({script}: ArsipPlayerProps) {
         ))}
       </PhoneFrame>
 
-      {/* Always-visible FIKSI disclosure tag in top-band safe clearance */}
-      <FiksiTag visible={script.fiksiTag.visible} label={script.fiksiTag.label} />
+      {/* Always-visible series identity strip ("ARSIP #NNN · @skenarium") directly below chat header */}
+      <ArchiveIdentityStrip archiveNumber={script.archiveNumber} />
     </AbsoluteFill>
   );
 }

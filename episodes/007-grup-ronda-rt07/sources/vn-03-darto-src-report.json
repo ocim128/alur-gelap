@@ -1,0 +1,118 @@
+{
+  "version": 1,
+  "voiceId": "Orus",
+  "voiceName": "Orus",
+  "provider": "gemini-cloud",
+  "model": "gemini-3.8-flash-tts",
+  "master": true,
+  "masterFilter": "highpass=f=85,equalizer=f=140:t=q:w=1.2:g=1,equalizer=f=450:t=q:w=1.5:g=-1,equalizer=f=3200:t=q:w=1.2:g=1,loudnorm=I=-14:LRA=6:TP=-1.5,aformat=sample_fmts=s16",
+  "asrModel": "small",
+  "generatedAt": "2026-11-24T06:54:56.493Z",
+  "passed": false,
+  "totalChunks": 1,
+  "verifiedChunks": 0,
+  "warningChunks": 0,
+  "failedChunks": 1,
+  "plannedDurationSec": 4.145,
+  "finalAlignment": {
+    "transcript": "Mas Bayu, jawab dong. Dia nengok kesini. Dia lari kesini.",
+    "mismatches": [],
+    "passed": true
+  },
+  "audioQuality": {
+    "integratedLufs": -13.9,
+    "loudnessRangeLu": 0.9,
+    "noiseFloorDbfs": -14.3,
+    "targets": {
+      "integratedLufs": -14,
+      "loudnessRangeLu": [
+        5,
+        7
+      ]
+    }
+  },
+  "chunks": [
+    {
+      "index": 0,
+      "tag": "hook",
+      "text": "Mas Bayu jawab dong! Dia nengok ke sini, dia lari ke sini!",
+      "retries": 2,
+      "status": "failed",
+      "bestSimilarity": 0.981,
+      "bestWordRatio": 1,
+      "acceptedAttempt": 0,
+      "attempts": [
+        {
+          "seed": 0,
+          "wordRatio": 1,
+          "similarity": 0.981,
+          "wpm": 174,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: last word missing, truncated, or has invalid timestamps",
+            "last word missing, truncated, or has invalid timestamps",
+            "174 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Mas Bayu, jawab dong. Dia nengok kesini. Dia lari kesini.",
+          "mismatches": [],
+          "endTruncated": true,
+          "rawTranscript": "Mas Bayu, jawab dong. Dia nengok kesini. Dia lari kesini.",
+          "rawMismatches": [],
+          "rawEndTruncated": true,
+          "rawReasons": [
+            "last word missing, truncated, or has invalid timestamps"
+          ]
+        },
+        {
+          "seed": 1,
+          "wordRatio": 1,
+          "similarity": 0.981,
+          "wpm": 152,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: last word missing, truncated, or has invalid timestamps",
+            "last word missing, truncated, or has invalid timestamps"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Mas Bayu, jawab dong. Dia nengok kesini. Dia lari kesini.",
+          "mismatches": [],
+          "endTruncated": true,
+          "rawTranscript": "Mas Bayu, jawab dong. Dia nengok kesini. Dia lari kesini.",
+          "rawMismatches": [],
+          "rawEndTruncated": true,
+          "rawReasons": [
+            "last word missing, truncated, or has invalid timestamps"
+          ]
+        },
+        {
+          "seed": 2,
+          "wordRatio": 1,
+          "similarity": 0.981,
+          "wpm": 160,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "last word missing, truncated, or has invalid timestamps"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Mas Bayu, jawab dong. Dia nengok kesini. Dia lari kesini.",
+          "mismatches": [],
+          "endTruncated": true,
+          "rawTranscript": "Mas Bayu, jawab dong. Dia nengok ke sini. Dia lari ke sini.",
+          "rawMismatches": [],
+          "rawEndTruncated": false,
+          "rawReasons": []
+        }
+      ]
+    }
+  ]
+}

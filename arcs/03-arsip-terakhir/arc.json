@@ -5,17 +5,27 @@
   "productionMode": "standalone-found-footage",
   "status": "active",
   "adoptedOn": "2026-11-24",
-  "formatSummary": "No narrator. Found-phone and found-footage vertical archives (45–75 s, 1080x1920, 30 fps) reconstructed from group chats, short character voice notes, amateur phone photos, CCTV stills, call logs, notifications and timestamps. One unstated entity or rule, one early visual fair-play clue planted in the first 40%, original non-trademarked chat UI, and a visible FIKSI tag.",
+  "seriesHandle": "@skenarium",
+  "lorePath": "arcs/03-arsip-terakhir/lore.md",
+  "formatSummary": "No narrator. Standalone found-phone and found-footage vertical archives (45–75 s, 1080x1920, 30 fps) with one local entity/rule per episode and one recurring series presence ('Tanpa Nama', fixed grey default avatar, exclusive synthesized signature ping, always sending the final artifact). Public numbering restarts at ARSIP #001 with solid 'ARSIP #NNN · @skenarium' strip; fiction disclosure moves to upload (#fiksi #ceritahorror + platform AI label).",
   "episodes": [
     {
       "episodeNumber": 1,
+      "archiveNumber": 1,
+      "archiveLabel": "ARSIP #001",
       "workingTitle": "Grup Ronda RT 07",
       "compositionId": "Arsip01GrupRondaRT07",
-      "status": "brief-draft",
+      "status": "in-progress",
+      "durationSec": 64.0,
       "setting": "Pos ronda dan gang kampung fiktif RT 07 menjelang tengah malam (23:47–23:48).",
       "briefPath": "episodes/007-grup-ronda-rt07/brief.md",
       "scriptPath": "episodes/007-grup-ronda-rt07/chat-script.json",
-      "pipelineStatePath": "episodes/007-grup-ronda-rt07/pipeline-state.json"
+      "assetsPath": "episodes/007-grup-ronda-rt07/assets.md",
+      "reviewPath": "episodes/007-grup-ronda-rt07/review.md",
+      "captionDraftPath": "episodes/007-grup-ronda-rt07/caption-draft.md",
+      "pipelineStatePath": "episodes/007-grup-ronda-rt07/pipeline-state.json",
+      "finalVideo": "out/007-grup-ronda-rt07/arsip001-grup-ronda-rt07-v2.mp4",
+      "finalVideoSha256": "137d82c2e285dd9fa5fef63c3442b4c3ef6765033b7ec4607af4127d8d6f4fc6"
     }
   ]
 }

@@ -4,7 +4,8 @@ Copy this into `episodes/<slug>/brief.md`. Complete and get owner sign-off befor
 
 ## Archive Overview
 
-- **Collection** — [arcs/03-arsip-terakhir/arc.json](../../arcs/03-arsip-terakhir/arc.json)
+- **Collection** — [arcs/03-arsip-terakhir/arc.json](../../arcs/03-arsip-terakhir/arc.json) · [Canon Ledger (`Tanpa Nama`)](../../arcs/03-arsip-terakhir/lore.md)
+- **Public Archive Number** — `ARSIP #NNN` (`archiveNumber: N` in `chat-script.json`, rendered as `ARSIP #NNN · @skenarium`)
 - **Pipeline Version** — `3` (`chat-script.json`, no narrator)
 - **Composition ID** — `[ArsipNNSlug]`
 - **Target Runtime** — **45–75 s** (`1350–2250` frames at 30 fps), **1080 × 1920**
@@ -12,11 +13,12 @@ Copy this into `episodes/<slug>/brief.md`. Complete and get owner sign-off befor
 - **Archive Premise** — [2–3 sentences: whose phone/archive this is, what normal situation opens it, and what goes wrong]
 - **Survival Angle (fiction only)** — [who survives or nearly survives by noticing the clue or obeying the rule; never frame as real-world safety advice]
 
-## Entity / Rule (Never Explained Aloud)
+## Local Entity / Rule & `Tanpa Nama` (Never Explained Aloud)
 
-- **The one entity or rule** — [describe the exact supernatural behavior or rule privately for production alignment]
+- **The one local entity or rule** — [describe the exact local supernatural behavior or rule privately for production alignment]
 - **How the viewer infers it** — [what observable contradictions, timing delays, phrasing errors or visual details let a viewer deduce the rule without narration]
 - **Why someone survives (or almost does)** — [concrete action/inaction inside the archive]
+- **`Tanpa Nama` appearance (series constant, not a second explained rule)** — [which final artifact event(s) `Tanpa Nama` sends — fixed display name `"Tanpa Nama"`, fixed grey default avatar, no phone number, signature ping only on `Tanpa Nama` events — plus any optional subtle earlier cross-episode clue. Record on-screen appearances in `arcs/03-arsip-terakhir/lore.md`.]
 
 ## Characters & Texting Voices
 
@@ -81,11 +83,11 @@ Voice notes are **2–6 s** each. Layer UI pings, typing clicks, low-key ambienc
 | --- | --- | --- | --- | --- | --- |
 | `m3` | | `voice-note` | | | 2–6 s |
 
-## Labels, Brand Safety & Rights Checklist
+## Series Identity, Brand Safety & Upload Disclosure Checklist
 
-- **On-screen `FIKSI` tag** — Visible throughout video (`fiksiTag.visible: true`), clear of platform safe-zone edges.
-- **Upload caption fiction notice** — Draft line stating the archive is fiction (for owner review when publishing is separately authorized): `"[Draft caption noting FIKSI / cerita fiksi]"`
+- **Series identity strip** — Solid full-width strip directly under `ChatHeader` showing **`ARSIP #NNN · @skenarium`** (`>= 42 px`, inside critical safe zone; `archiveNumber` integer in `chat-script.json`, handle fixed series-wide). No on-screen `FIKSI` tag (account bio states fiction).
+- **Upload caption & AI label (`caption-draft.md`)** — Draft short Indonesian hook + pinned clue-hunt comment + mandatory **`#fiksi`** and **`#ceritahorror`** tags + explicit reminder to switch ON the platform's built-in **AI-generated-content label** at upload (publishing requires separate owner authorization).
 - **Generic original chat UI** — Does not copy WhatsApp, Telegram, or Line branding, signature greens/blues, or icons.
-- **Defamation / privacy check** — Zero real people, zero real phone numbers, zero real village/store/place names that could defame anyone.
+- **Defamation / privacy check** — Zero real people, zero real phone numbers (including on `Tanpa Nama`), zero real village/store/place names that could defame anyone.
 - **Gore check** — Strictly gore-free.
-- **Provenance & rights log** — Record every generated voice note, still, and sourced SFX in `episodes/<slug>/assets.md`.
+- **Provenance & rights log** — Record every generated voice note, still, and sourced SFX in `episodes/<slug>/assets.md`, and log on-screen `Tanpa Nama` appearances in `arcs/03-arsip-terakhir/lore.md`.

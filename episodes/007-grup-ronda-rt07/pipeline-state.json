@@ -1,26 +1,26 @@
 {
   "brief": {
-    "status": "ready",
-    "notes": "Studio v3 Pilot 01 brief and chat-script.json drafted for Checkpoint 3 owner review before any audio or image asset generation."
+    "status": "pass",
+    "notes": "Owner approved Checkpoint 3 brief and Checkpoint 4 decisions on 2026-11-24: public numbering ARSIP #001 (archiveNumber: 1), solid identity strip 'ARSIP #001 · @skenarium' replacing FIKSI, Tanpa Nama series constant logged in arcs/03-arsip-terakhir/lore.md, upload disclosure moved to caption-draft.md."
   },
   "audio": {
-    "status": "pending",
-    "notes": "Pending Checkpoint 3 approval."
+    "status": "pass",
+    "notes": "All 4 voice notes inside 2-6 s (m4 4.925 s, m6 3.565 s, m9 3.625 s abrupt mid-word cutoff, m16 2.375 s derived from m4 'Pos aman.' tail), CC0 night ambience, regular UI pops, plus original in-repo synthesized Tanpa Nama signature ping (public/sfx/shared/tanpa-nama-ping.wav, 0.420 s, -8.0 dBFS peak) played ONLY on m15/m16. No music. listening review: none."
   },
   "images": {
-    "status": "pending",
-    "notes": "Pending Checkpoint 3 approval."
+    "status": "pass",
+    "notes": "All 4 amateur photo/CCTV stills verified at 540x960: still-01 (4 glasses, 1 half-drunk, attempt 1), still-02 (dark alley, attempt 2), still-03 (CCTV 4 empty glasses + glowing phone on floor, attempt 1), still-04 ('PORTAL BARAT' legible, attempt 1). Zero composites needed."
   },
   "render": {
-    "status": "pending",
-    "notes": ""
+    "status": "pass",
+    "notes": "Re-rendered v2 via npm run render to out/007-grup-ronda-rt07/arsip001-grup-ronda-rt07-v2.mp4 (7,188,219 B, SHA-256 137d82c2e285dd9fa5fef63c3442b4c3ef6765033b7ec4607af4127d8d6f4fc6, 1080x1920, 30 fps, 64.000 s, yuv420p limited bt709, -16.3 LUFS, -4.1 dBTP) plus 540p preview. Prior v1 export preserved untouched."
   },
   "audit": {
-    "status": "pending",
-    "notes": ""
+    "status": "ready",
+    "notes": "Checkpoint 5 automated checks, compressed v2 audio metrics, 3 s contact sheet, and full-size frames verified in episodes/007-grup-ronda-rt07/review.md (zero overlay ghosting, clean 3-state m16 voice note, ARSIP #001 · @skenarium strip). Awaiting owner watch + human listening review (listening review: none)."
   },
   "publish": {
     "status": "pending",
-    "notes": ""
+    "notes": "Not authorized. Caption draft prepared in episodes/007-grup-ronda-rt07/caption-draft.md (not posted). Do not publish, schedule, or upload."
   }
 }

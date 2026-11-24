@@ -1,5 +1,11 @@
 import {Easing, interpolate, useCurrentFrame} from 'remotion';
-import {V3_CHROME_REGIONS, V3_CRITICAL_REGIONS, V3_FONT_SIZES, V3_THEME} from '../layout.mjs';
+import {
+  V3_CHROME_REGIONS,
+  V3_CRITICAL_REGIONS,
+  V3_FONT_SIZES,
+  V3_OVERLAY_FADE_FRAMES,
+  V3_THEME,
+} from '../layout.mjs';
 import type {NotificationEventV3} from '../types';
 
 export type NotificationProps = {
@@ -11,15 +17,28 @@ export function Notification({event}: NotificationProps) {
   const local = frame - event.at;
   if (local < 0 || local >= event.durationFrames) return null;
 
-  const slideIn = interpolate(local, [0, 12], [0, 1], {
-    extrapolateLeft: 'clamp',
-    extrapolateRight: 'clamp',
-    easing: Easing.out(Easing.cubic),
-  });
-  const slideOut = interpolate(local, [Math.max(12, event.durationFrames - 10), event.durationFrames], [1, 0], {
-    extrapolateLeft: 'clamp',
-    extrapolateRight: 'clamp',
-  });
+  const fadeInFrames = V3_OVERLAY_FADE_FRAMES.notificationIn;
+  const fadeOutFrames = V3_OVERLAY_FADE_FRAMES.notificationOut;
+  const slideIn =
+    fadeInFrames > 0
+      ? interpolate(local, [0, fadeInFrames], [0, 1], {
+          extrapolateLeft: 'clamp',
+          extrapolateRight: 'clamp',
+          easing: Easing.out(Easing.cubic),
+        })
+      : 1;
+  const slideOut =
+    fadeOutFrames > 0
+      ? interpolate(
+          local,
+          [Math.max(fadeInFrames, event.durationFrames - fadeOutFrames), event.durationFrames],
+          [1, 0],
+          {
+            extrapolateLeft: 'clamp',
+            extrapolateRight: 'clamp',
+          },
+        )
+      : 1;
   const visibility = Math.min(slideIn, slideOut);
 
   const statusHeight = V3_CHROME_REGIONS.statusBar.height;
@@ -37,7 +56,7 @@ export function Notification({event}: NotificationProps) {
         minHeight: 170,
         padding: '22px 28px',
         borderRadius: 24,
-        backgroundColor: 'rgba(21, 27, 40, 0.97)',
+        backgroundColor: '#151B28',
         border: `2px solid ${V3_THEME.warning}`,
         boxShadow: '0 18px 44px rgba(0, 0, 0, 0.72)',
         display: 'flex',

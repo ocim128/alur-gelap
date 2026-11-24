@@ -1,0 +1,67 @@
+{
+  "version": 1,
+  "voiceId": "voice_71a5a701-796e-421d-840e-0adc00b0816a",
+  "voiceName": "voice_71a5a701-796e-421d-840e-0adc00b0816a",
+  "provider": "gemini-cloud",
+  "model": "gemini-3.8-flash-tts",
+  "master": true,
+  "masterFilter": "highpass=f=85,equalizer=f=140:t=q:w=1.2:g=1,equalizer=f=450:t=q:w=1.5:g=-1,equalizer=f=3200:t=q:w=1.2:g=1,loudnorm=I=-14:LRA=6:TP=-1.5,aformat=sample_fmts=s16",
+  "asrModel": "small",
+  "generatedAt": "2026-11-24T06:53:30.382Z",
+  "passed": true,
+  "totalChunks": 1,
+  "verifiedChunks": 1,
+  "warningChunks": 0,
+  "failedChunks": 0,
+  "plannedDurationSec": 4.925,
+  "finalAlignment": {
+    "transcript": "Gue di portal Barat Bentar. Nanti balik ke POS. POS. AMAN.",
+    "mismatches": [],
+    "passed": true
+  },
+  "audioQuality": {
+    "integratedLufs": -17.4,
+    "loudnessRangeLu": 3,
+    "noiseFloorDbfs": -19.9,
+    "targets": {
+      "integratedLufs": -14,
+      "loudnessRangeLu": [
+        5,
+        7
+      ]
+    }
+  },
+  "chunks": [
+    {
+      "index": 0,
+      "tag": null,
+      "text": "Gue di portal barat bentar, nanti balik ke pos. Pos aman.",
+      "retries": 0,
+      "status": "verified",
+      "bestSimilarity": 1,
+      "bestWordRatio": 1,
+      "acceptedAttempt": 0,
+      "attempts": [
+        {
+          "seed": 0,
+          "wordRatio": 1,
+          "similarity": 1,
+          "wpm": 134,
+          "expectedWpm": 130,
+          "passed": true,
+          "reasons": [],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Gue di portal Barat Bentar. Nanti balik ke POS. POS. AMAN.",
+          "mismatches": [],
+          "endTruncated": false,
+          "rawTranscript": "Gue di portal Barat Bentar. Nanti balik ke POS. POS. Aman.",
+          "rawMismatches": [],
+          "rawEndTruncated": false,
+          "rawReasons": []
+        }
+      ]
+    }
+  ]
+}

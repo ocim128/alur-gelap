@@ -4,7 +4,14 @@ import {readFileSync, readdirSync, statSync} from "node:fs";
 import {dirname, join, relative, resolve, sep} from "node:path";
 import {fileURLToPath} from "node:url";
 import {isEventClockConsistent, parseInWorldClock} from "../src/v3/clock.mjs";
-import {V3_LAYOUT, V3_MIN_FONT_SIZE} from "../src/v3/layout.mjs";
+import {
+  isTanpaNamaCharacter,
+  V3_LAYOUT,
+  V3_MIN_FONT_SIZE,
+  V3_SERIES_HANDLE,
+  V3_TANPA_NAMA,
+  V3_UNPLAYED_PREPLAY_FRAMES,
+} from "../src/v3/layout.mjs";
 
 const nonempty = (v) => typeof v === "string" && v.trim().length > 0;
 const isFrame = (v) => Number.isInteger(v) && v >= 0;
@@ -73,22 +80,32 @@ function assertValidBox(box, label, width, height) {
 
 /**
  * Validate Studio v3 layout constants:
- * - Every font size >= 42 px
+ * - Fixed series handle constant (@skenarium)
+ * - Every font size >= 42 px (including identityStrip)
  * - Chrome regions may extend full-bleed across 1080x1920
- * - Critical regions (FIKSI tag, bubbles, subtitles, photo clues, CCTV HUD, notifications, calls)
+ * - Critical regions (identityStripContent, bubbles, subtitles, photo clues, CCTV HUD, notifications, calls)
  *   must avoid top 10% (y >= 192), right 12% (x + width <= 950), and bottom 22% (y + height <= 1497).
+ * - Overlay transition fades must be <= 6 frames so readable text never doubles/ghosts.
  */
 export function validateV3Layout(layout = V3_LAYOUT) {
   assert(layout && typeof layout === "object", "v3 layout: expected layout object");
   const width = layout.canvas?.width;
   const height = layout.canvas?.height;
   assert(width === 1080 && height === 1920, `v3 layout: canvas must be 1080x1920, got ${width}x${height}`);
+  assert(
+    layout.seriesHandle === V3_SERIES_HANDLE,
+    `v3 layout: seriesHandle must be fixed series constant "${V3_SERIES_HANDLE}"`,
+  );
 
   const minCriticalY = Math.ceil(height * 0.1); // avoid top 10% (TikTok tabs)
   const maxX = Math.floor(width * (1 - 0.12)); // avoid right 12%
   const maxY = Math.floor(height * (1 - 0.22)); // avoid bottom 22%
 
   assert(layout.fontSizes && typeof layout.fontSizes === "object", "v3 layout: missing fontSizes");
+  assert(
+    Number.isFinite(layout.fontSizes.identityStrip),
+    "v3 layout: fontSizes.identityStrip is required",
+  );
   const fontEntries = Object.entries(layout.fontSizes);
   assert(fontEntries.length > 0, "v3 layout: fontSizes must not be empty");
   for (const [name, size] of fontEntries) {
@@ -104,7 +121,10 @@ export function validateV3Layout(layout = V3_LAYOUT) {
   }
 
   assert(layout.criticalRegions && typeof layout.criticalRegions === "object", "v3 layout: missing criticalRegions");
-  assert(layout.criticalRegions.fiksiTag, "v3 layout: fiksiTag must be defined inside criticalRegions");
+  assert(
+    layout.criticalRegions.identityStripContent,
+    "v3 layout: identityStripContent must be defined inside criticalRegions",
+  );
   const criticalEntries = Object.entries(layout.criticalRegions);
   assert(criticalEntries.length > 0, "v3 layout: criticalRegions must not be empty");
   for (const [name, box] of criticalEntries) {
@@ -120,6 +140,20 @@ export function validateV3Layout(layout = V3_LAYOUT) {
     assert(
       box.y + box.height <= maxY,
       `v3 layout: criticalRegions.${name} bottom edge (${box.y + box.height} px) intrudes into bottom 22% danger zone (max ${maxY} px)`,
+    );
+  }
+
+  assert(
+    layout.overlayFadeFrames && typeof layout.overlayFadeFrames === "object",
+    "v3 layout: overlayFadeFrames must be defined",
+  );
+  const maxFade = layout.overlayFadeFrames.maxAllowed ?? 6;
+  assert(Number.isInteger(maxFade) && maxFade <= 6, `v3 layout: overlayFadeFrames.maxAllowed (${maxFade}) exceeds 6`);
+  for (const [name, frames] of Object.entries(layout.overlayFadeFrames)) {
+    if (name === "maxAllowed") continue;
+    assert(
+      Number.isInteger(frames) && frames >= 0 && frames <= maxFade,
+      `v3 layout: overlayFadeFrames.${name} (${frames} frames) exceeds max ${maxFade} frames`,
     );
   }
 
@@ -149,6 +183,10 @@ export function validateV3Script(
   validateV3Layout(layout);
 
   fail(script.pipelineVersion === 3, "pipelineVersion must be 3");
+  fail(
+    Number.isInteger(script.archiveNumber) && script.archiveNumber >= 0 && script.archiveNumber <= 999,
+    "archiveNumber is required and must be an integer between 0 and 999",
+  );
   fail(nonempty(script.id) && /^[a-zA-Z0-9-]+$/.test(script.id), "invalid script id");
   fail(Number.isInteger(script.fps) && script.fps > 0, "invalid fps");
   fail(Number.isInteger(script.durationInFrames) && script.durationInFrames > 0, "invalid durationInFrames");
@@ -159,24 +197,25 @@ export function validateV3Script(
     `duration ${durationSec.toFixed(2)} s is outside the 45–75 s Studio v3 band`,
   );
 
-  fail(
-    script.fiksiTag?.visible === true &&
-      typeof script.fiksiTag?.label === "string" &&
-      script.fiksiTag.label.trim().toUpperCase() === "FIKSI",
-    'FIKSI tag must be present with {visible: true, label: "FIKSI"}',
-  );
-
   fail(nonempty(script.app?.groupName), "app.groupName is required");
   fail(parseInWorldClock(script.startClock) !== null, "startClock must be valid HH:MM or HH:MM:SS");
 
   fail(Array.isArray(script.characters) && script.characters.length > 0, "characters must be a non-empty array");
   const characterIds = new Set();
+  const characterById = new Map();
   for (const char of script.characters) {
     fail(char && typeof char === "object", "invalid character entry");
     fail(nonempty(char.id) && !characterIds.has(char.id), `duplicate/missing character id ${char.id}`);
     fail(typeof char.name === "string", `character ${char.id}: name must be a string`);
     fail(nonempty(char.color), `character ${char.id}: missing color`);
+    if (isTanpaNamaCharacter(char, char.id)) {
+      fail(
+        !/(\+?\d[\d\s-]{6,})/.test(char.name),
+        `character ${char.id}: Tanpa Nama must never carry a phone number`,
+      );
+    }
     characterIds.add(char.id);
+    characterById.set(char.id, char);
   }
   if (script.app.selfId !== undefined) {
     fail(characterIds.has(script.app.selfId), `app.selfId "${script.app.selfId}" does not match any character`);
@@ -194,6 +233,10 @@ export function validateV3Script(
     );
     return full;
   };
+
+  if (requireAssets) {
+    checkAsset(V3_TANPA_NAMA.signatureSfx, "Tanpa Nama signatureSfx");
+  }
 
   if (script.audio?.ambience) {
     checkAsset(script.audio.ambience.src, "audio.ambience");
@@ -280,9 +323,10 @@ export function validateV3Script(
           Number.isFinite(measuredSec) && measuredSec >= 2 && measuredSec <= 6,
           `${event.id}: voice note measured duration ${Number(measuredSec).toFixed(2)} s is outside 2–6 s`,
         );
+        const preplayFrames = event.unplayed && event.from !== script.app.selfId ? V3_UNPLAYED_PREPLAY_FRAMES : 0;
         fail(
-          event.at + Math.ceil(measuredSec * script.fps) <= script.durationInFrames,
-          `${event.id}: voice note (${measuredSec.toFixed(2)} s) overruns durationInFrames`,
+          event.at + preplayFrames + Math.ceil(measuredSec * script.fps) <= script.durationInFrames,
+          `${event.id}: voice note (${measuredSec.toFixed(2)} s + ${preplayFrames}f preplay) overruns durationInFrames`,
         );
         measuredVoiceDurations.set(event.id, measuredSec);
       }
@@ -324,6 +368,14 @@ export function validateV3Script(
       );
     }
   }
+
+  // Universe rule: the last artifact event of every archive MUST be sent by "Tanpa Nama".
+  const lastEvent = script.events[script.events.length - 1];
+  const lastSender = typeof lastEvent.from === "string" ? characterById.get(lastEvent.from) : undefined;
+  fail(
+    typeof lastEvent.from === "string" && isTanpaNamaCharacter(lastSender, lastEvent.from),
+    `last artifact event "${lastEvent.id}" must be sent by the Tanpa Nama character (got ${lastEvent.from ? `"${lastEvent.from}"` : `type "${lastEvent.type}" without sender`})`,
+  );
 
   // Reading-time minimum check per message event.
   for (let i = 0; i < script.events.length; i++) {

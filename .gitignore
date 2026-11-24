@@ -2,3 +2,4 @@
 /build/
 /out/
 /.codegraph/
+scripts/__pycache__/

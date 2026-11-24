@@ -19,16 +19,17 @@ Never add a narrator track, burned-in narration captions, mood-explaining music,
 ## Studio v3 · Assembly Contract
 
 1. **Use `src/v3/ArsipPlayer.tsx` and `src/v3/components/`:**
-   - Drive the composition from `episodes/<slug>/chat-script.json` (`pipelineVersion: 3`, **1080 × 1920**, **30 fps**, **45–75 s**).
-   - Compose with reusable v3 UI primitives: `PhoneFrame` (draining battery + advancing in-world clock), `ChatHeader` (group name, member count, `"mengetik…"`), `MessageBubble` (sender name/color, timestamp, read ticks, deleted/edited states), `PhotoMessage` (tap-to-expand zoom on generated still), `VoiceNoteBubble` (waveform driven by actual audio + playback + short subtitle under the bubble), `SystemMessage`, `Notification`, `CallScreen`, `CctvFrame` (timestamp, noise, scanlines, subtle jitter), and **`FiksiTag`** (always visible).
+   - Drive the composition from `episodes/<slug>/chat-script.json` (`pipelineVersion: 3`, required integer `archiveNumber`, **1080 × 1920**, **30 fps**, **45–75 s**).
+   - Compose with reusable v3 UI primitives: `PhoneFrame` (draining battery + advancing in-world clock), `ChatHeader` (group name, member count, `"mengetik…"`), **`ArchiveIdentityStrip`** (solid full-width strip directly under `ChatHeader` displaying **`ARSIP #NNN · @skenarium`** at `>= 42 px` inside the critical safe zone; no on-screen `FIKSI` tag), `MessageBubble` (sender name/color, fixed grey default avatar for `Tanpa Nama`, timestamp, self-only read receipts, deleted/edited states), `PhotoMessage` (tap-to-expand zoom on generated still), `VoiceNoteBubble` (waveform driven by actual audio + clean unplayed → playing → played state transition + short subtitle under the bubble), `SystemMessage`, `Notification`, `CallScreen`, and `CctvFrame` (timestamp, noise, scanlines, subtle jitter).
    - Keep **every animation strictly driven by `useCurrentFrame()`** (real-phone auto-scroll, typing indicators before messages, kinetic zoom/pan into details to invite attention without explaining, optional scripted glitch beats). Zero CSS animations.
+   - **Overlay transition rule:** Limit overlay fades (`PhotoZoomOverlay`, `CctvFrame`, `CallScreen`, `Notification`) to **`<= 6` frames** or hard cuts with opaque backdrops so readable text never appears doubled/ghosted.
 2. **Enforce phone readability, safe zones and reading pace:**
-   - All readable on-screen text (chat messages, voice-note subtitles, notifications, system messages) must be **minimum ~42 px** at 1080 width.
-   - Keep interactive/readable content inside the vertical platform UI safe zone: **avoid the bottom ~22% (~422 px)** and the **right ~12% (~130 px)**.
+   - All readable on-screen text (identity strip, chat messages, voice-note subtitles, notifications, system messages) must be **minimum ~42 px** at 1080 width.
+   - Keep critical readable content inside the vertical platform UI safe zone: **avoid top ~10% (`y >= 192`), bottom ~22% (`y <= 1497`), and right ~12% (`x + w <= 950`)**.
    - Hold every new message for at least **`180 ms × words + 600 ms`**, minimum **`1.2 s`**, and keep the hook artifact visible at **frame 0 (`00:00.0`)**.
    - Use an original, generic dark/neutral chat UI aesthetic — never imitate WhatsApp, Telegram or Line branding, colors or icons.
 3. **Mix, validate and render:**
-   - Time voice notes, UI notification pings, typing sounds, low-key ambience and deliberate silences cleanly; **no music that explains the mood**.
+   - Time voice notes, normal UI pops (for non-Tanpa-Nama characters), the **Tanpa Nama signature ping** (`public/sfx/shared/tanpa-nama-ping.wav`, ONLY when a `Tanpa Nama` event arrives), typing sounds, low-key ambience and deliberate silences cleanly; **no music that explains the mood**.
    - Run `npm run check` (including v3 validation and tests) before rendering.
    - Render via `npm run render -- <composition-id> out/<delivery>.mp4` without overwriting existing exports.
    - Export a **contact sheet of stills every 3 s** and run **loudness and silence checks on the compressed MP4** (since AAC encoding can shift loudness and silence floors). Record actual measurements and honest **`listening review: none`** (unless a human actually listened) in the handoff.

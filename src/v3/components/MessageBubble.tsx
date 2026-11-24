@@ -1,6 +1,7 @@
 import {Easing, interpolate, useCurrentFrame} from 'remotion';
-import {V3_FONT_SIZES, V3_THEME} from '../layout.mjs';
+import {isTanpaNamaCharacter, V3_FONT_SIZES, V3_TANPA_NAMA, V3_THEME} from '../layout.mjs';
 import type {CharacterV3, MessageTicks, TextEventV3} from '../types';
+import {TanpaNamaAvatar} from './TanpaNamaAvatar';
 
 export type MessageBubbleProps = {
   event: TextEventV3;
@@ -58,8 +59,13 @@ export function MessageBubble({event, sender, isSelf = false}: MessageBubbleProp
           easing: Easing.out(Easing.cubic),
         });
   const isDeleted = event.deletedAt !== undefined && frame >= event.deletedAt;
-  const displayName = sender?.name?.trim() ? sender.name : 'Tanpa Nama';
-  const nameColor = sender?.color ?? V3_THEME.textSecondary;
+  const isTanpaNama = !isSelf && isTanpaNamaCharacter(sender, event.from);
+  const displayName = isTanpaNama
+    ? V3_TANPA_NAMA.displayName
+    : sender?.name?.trim()
+      ? sender.name
+      : V3_TANPA_NAMA.displayName;
+  const nameColor = isTanpaNama ? V3_TANPA_NAMA.color : (sender?.color ?? V3_THEME.textSecondary);
 
   return (
     <div
@@ -87,16 +93,19 @@ export function MessageBubble({event, sender, isSelf = false}: MessageBubbleProp
         }}
       >
         <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 20}}>
-          <span
-            style={{
-              color: isSelf ? '#D8CCFF' : nameColor,
-              fontSize: V3_FONT_SIZES.senderName,
-              fontWeight: 700,
-              lineHeight: 1.15,
-            }}
-          >
-            {displayName}
-          </span>
+          <div style={{display: 'flex', alignItems: 'center', gap: 12}}>
+            {isTanpaNama && <TanpaNamaAvatar size={42} />}
+            <span
+              style={{
+                color: isSelf ? '#D8CCFF' : nameColor,
+                fontSize: V3_FONT_SIZES.senderName,
+                fontWeight: 700,
+                lineHeight: 1.15,
+              }}
+            >
+              {displayName}
+            </span>
+          </div>
           <div style={{display: 'flex', alignItems: 'center', gap: 12}}>
             {event.timeLabel && (
               <span

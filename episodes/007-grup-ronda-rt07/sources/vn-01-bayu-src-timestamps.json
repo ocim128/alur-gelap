@@ -1,0 +1,86 @@
+{
+  "version": 1,
+  "voiceId": "voice_71a5a701-796e-421d-840e-0adc00b0816a",
+  "durationSec": 4.925,
+  "master": true,
+  "chunks": [
+    {
+      "index": 0,
+      "tag": null,
+      "text": "Gue di portal barat bentar, nanti balik ke pos. Pos aman.",
+      "start": 0,
+      "end": 4.925,
+      "retries": 0,
+      "status": "verified"
+    }
+  ],
+  "words": [
+    {
+      "word": "Gue",
+      "start": 0,
+      "end": 0.4,
+      "chunk": 0
+    },
+    {
+      "word": "di",
+      "start": 0.4,
+      "end": 0.58,
+      "chunk": 0
+    },
+    {
+      "word": "portal",
+      "start": 0.58,
+      "end": 0.8,
+      "chunk": 0
+    },
+    {
+      "word": "Barat",
+      "start": 0.8,
+      "end": 1.12,
+      "chunk": 0
+    },
+    {
+      "word": "Bentar.",
+      "start": 1.12,
+      "end": 1.42,
+      "chunk": 0
+    },
+    {
+      "word": "Nanti",
+      "start": 2.06,
+      "end": 2.5,
+      "chunk": 0
+    },
+    {
+      "word": "balik",
+      "start": 2.5,
+      "end": 2.72,
+      "chunk": 0
+    },
+    {
+      "word": "ke",
+      "start": 2.72,
+      "end": 2.78,
+      "chunk": 0
+    },
+    {
+      "word": "POS.",
+      "start": 2.78,
+      "end": 2.98,
+      "chunk": 0
+    },
+    {
+      "word": "POS.",
+      "start": 3.7,
+      "end": 4.2,
+      "chunk": 0
+    },
+    {
+      "word": "AMAN.",
+      "start": 4.6,
+      "end": 4.9,
+      "chunk": 0
+    }
+  ],
+  "sfx": []
+}

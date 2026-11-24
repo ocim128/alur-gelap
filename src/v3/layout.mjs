@@ -1,7 +1,9 @@
 /**
- * Single source of truth for Studio v3 (Arsip Terakhir) layout and typography constants.
+ * Single source of truth for Studio v3 (Arsip Terakhir) layout, series identity,
+ * Tanpa Nama constants, overlay transition bounds, and typography.
+ *
  * Full-bleed 1080x1920 chat UI: chrome/backgrounds extend edge-to-edge, while ALL CRITICAL
- * content regions (including FIKSI tag, chat bubbles, subtitles, photo clues, CCTV labels,
+ * content regions (series identity strip text, chat bubbles, subtitles, photo clues, CCTV labels,
  * notifications, and call info) stay strictly inside the platform safe zone
  * (avoid top 10%, right 12%, bottom 22%).
  */
@@ -9,6 +11,64 @@
 export const V3_CANVAS = Object.freeze({
   width: 1080,
   height: 1920,
+});
+
+/** Fixed series-wide account handle (never per episode). */
+export const V3_SERIES_HANDLE = '@skenarium';
+
+/** Format the series identity strip label, e.g. "ARSIP #001 · @skenarium". */
+export function formatArchiveIdentity(archiveNumber) {
+  const padded = String(archiveNumber).padStart(3, '0');
+  return `ARSIP #${padded} · ${V3_SERIES_HANDLE}`;
+}
+
+/**
+ * Fixed series-level identity for "Tanpa Nama" (the one recurring presence across
+ * standalone Arsip Terakhir episodes). Never explained, no phone number, fixed grey
+ * default avatar, and exclusive signature ping sound.
+ */
+export const V3_TANPA_NAMA = Object.freeze({
+  id: 'unknown',
+  displayName: 'Tanpa Nama',
+  color: '#94A3B8',
+  avatarBg: '#475569',
+  avatarFg: '#CBD5E1',
+  avatarBorder: '#64748B',
+  signatureSfx: 'sfx/shared/tanpa-nama-ping.wav',
+});
+
+/** True if the character or sender ID represents the series constant "Tanpa Nama". */
+export function isTanpaNamaCharacter(character, senderId = character?.id) {
+  if (senderId === V3_TANPA_NAMA.id || character?.id === V3_TANPA_NAMA.id) return true;
+  if (typeof character?.name === 'string') {
+    const normalized = character.name.trim().toLowerCase();
+    if (normalized === V3_TANPA_NAMA.displayName.toLowerCase()) return true;
+  }
+  return false;
+}
+
+/**
+ * Pre-play arrival beat (0.5 s at 30 fps) for unplayed incoming voice notes so the
+ * amber unplayed indicator is briefly visible, disappears when playback begins, and
+ * the bubble then plays and rests in its played state.
+ */
+export const V3_UNPLAYED_PREPLAY_FRAMES = 15;
+
+/**
+ * Overlay transition fade limits (in frames at 30 fps).
+ * Full-screen overlays use 0-frame hard cuts with opaque backdrops so readable chat
+ * and overlay text can never appear doubled/ghosted. All fades must be <= 6 frames.
+ */
+export const V3_OVERLAY_FADE_FRAMES = Object.freeze({
+  maxAllowed: 6,
+  photoZoomIn: 0,
+  photoZoomOut: 0,
+  cctvIn: 0,
+  cctvOut: 0,
+  callIn: 0,
+  callOut: 0,
+  notificationIn: 4,
+  notificationOut: 4,
 });
 
 // Platform UI safe zone for critical content:
@@ -33,7 +93,7 @@ export const V3_MIN_FONT_SIZE = 42;
  */
 export const V3_FONT_SIZES = Object.freeze({
   statusBar: 42,
-  fiksiTag: 42,
+  identityStrip: 42,
   headerGroupName: 48,
   headerSubtitle: 42,
   senderName: 42,
@@ -59,17 +119,18 @@ export const V3_CHROME_REGIONS = Object.freeze({
   canvas: Object.freeze({x: 0, y: 0, width: 1080, height: 1920}),
   statusBar: Object.freeze({x: 0, y: 0, width: 1080, height: 86}),
   chatHeader: Object.freeze({x: 0, y: 86, width: 1080, height: 126}),
-  threadBackdrop: Object.freeze({x: 0, y: 212, width: 1080, height: 1584}),
+  identityStrip: Object.freeze({x: 0, y: 212, width: 1080, height: 70}),
+  threadBackdrop: Object.freeze({x: 0, y: 282, width: 1080, height: 1514}),
   inputBar: Object.freeze({x: 0, y: 1796, width: 1080, height: 124}),
 });
 
 /**
- * Story-critical content regions (FIKSI tag, chat bubbles, subtitles, photo clues,
- * CCTV labels, notifications, call info). Validator asserts every box stays strictly within:
+ * Story-critical content regions (series identity strip label, chat bubbles, subtitles,
+ * photo clues, CCTV labels, notifications, call info). Validator asserts every box stays strictly within:
  *   x >= 0, x + width <= maxX (950), y >= minCriticalY (192), y + height <= maxY (1497).
  */
 export const V3_CRITICAL_REGIONS = Object.freeze({
-  fiksiTag: Object.freeze({x: 28, y: 222, width: 176, height: 50}),
+  identityStripContent: Object.freeze({x: 28, y: 218, width: 916, height: 58}),
   chatContent: Object.freeze({x: 28, y: 282, width: 916, height: 1206}),
   notificationBanner: Object.freeze({x: 28, y: 282, width: 916, height: 220}),
   photoLightboxContent: Object.freeze({x: 28, y: 282, width: 916, height: 1206}),
@@ -85,6 +146,9 @@ export const V3_THEME = Object.freeze({
   statusBarBg: '#11151F',
   headerBg: '#151A25',
   headerBorder: '#242C3D',
+  identityStripBg: '#10141E',
+  identityStripText: '#E2E8F0',
+  identityStripHandle: '#94A3B8',
   threadBg: '#0C0F16',
   incomingBubbleBg: '#1B2130',
   incomingBubbleBorder: '#2D364D',
@@ -98,13 +162,14 @@ export const V3_THEME = Object.freeze({
   accent: '#A78BFA',
   warning: '#F59E0B',
   danger: '#EF4444',
-  fiksiBg: 'rgba(18, 22, 32, 0.90)',
-  fiksiBorder: 'rgba(168, 179, 199, 0.45)',
-  fiksiText: '#DCE3F0',
 });
 
 export const V3_LAYOUT = Object.freeze({
   canvas: V3_CANVAS,
+  seriesHandle: V3_SERIES_HANDLE,
+  tanpaNama: V3_TANPA_NAMA,
+  unplayedPreplayFrames: V3_UNPLAYED_PREPLAY_FRAMES,
+  overlayFadeFrames: V3_OVERLAY_FADE_FRAMES,
   safeZone: V3_SAFE_ZONE,
   minFontSize: V3_MIN_FONT_SIZE,
   fontSizes: V3_FONT_SIZES,

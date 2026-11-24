@@ -1,0 +1,80 @@
+{
+  "version": 1,
+  "voiceId": "Orus",
+  "durationSec": 4.145,
+  "master": true,
+  "chunks": [
+    {
+      "index": 0,
+      "tag": "hook",
+      "text": "Mas Bayu jawab dong! Dia nengok ke sini, dia lari ke sini!",
+      "start": 0,
+      "end": 4.145,
+      "retries": 2,
+      "status": "failed"
+    }
+  ],
+  "words": [
+    {
+      "word": "Mas",
+      "start": 0,
+      "end": 0.4,
+      "chunk": 0
+    },
+    {
+      "word": "Bayu,",
+      "start": 0.4,
+      "end": 0.68,
+      "chunk": 0
+    },
+    {
+      "word": "jawab",
+      "start": 0.94,
+      "end": 1.32,
+      "chunk": 0
+    },
+    {
+      "word": "dong.",
+      "start": 1.32,
+      "end": 1.48,
+      "chunk": 0
+    },
+    {
+      "word": "Dia",
+      "start": 2.06,
+      "end": 2.3,
+      "chunk": 0
+    },
+    {
+      "word": "nengok",
+      "start": 2.3,
+      "end": 2.58,
+      "chunk": 0
+    },
+    {
+      "word": "kesini.",
+      "start": 2.58,
+      "end": 2.94,
+      "chunk": 0
+    },
+    {
+      "word": "Dia",
+      "start": 3.36,
+      "end": 3.54,
+      "chunk": 0
+    },
+    {
+      "word": "lari",
+      "start": 3.54,
+      "end": 3.76,
+      "chunk": 0
+    },
+    {
+      "word": "kesini.",
+      "start": 3.76,
+      "end": 4.08,
+      "chunk": 0
+    }
+  ],
+  "sfx": []
+}

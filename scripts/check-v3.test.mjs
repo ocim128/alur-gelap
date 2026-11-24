@@ -3,7 +3,7 @@ import assert from "node:assert/strict";
 import {mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync} from "node:fs";
 import {tmpdir} from "node:os";
 import {join} from "node:path";
-import {V3_LAYOUT} from "../src/v3/layout.mjs";
+import {formatArchiveIdentity, V3_LAYOUT, V3_TANPA_NAMA} from "../src/v3/layout.mjs";
 import {
   checkAllV3,
   countChatWords,
@@ -19,6 +19,7 @@ after(() => rmSync(tempRoot, {recursive: true, force: true}));
 const publicDir = join(tempRoot, "public");
 const assetDir = "assets/fixture-v3";
 mkdirSync(join(publicDir, assetDir), {recursive: true});
+mkdirSync(join(publicDir, "sfx/shared"), {recursive: true});
 
 function writeSilentWav(path, durationSec, sampleRate = 16000) {
   const numSamples = Math.round(durationSec * sampleRate);
@@ -44,24 +45,27 @@ writeFileSync(join(publicDir, assetDir, "cctv.jpg"), Buffer.from([0xff, 0xd8, 0x
 writeSilentWav(join(publicDir, assetDir, "vn-valid.wav"), 3.2);
 writeSilentWav(join(publicDir, assetDir, "vn-short.wav"), 1.4);
 writeSilentWav(join(publicDir, assetDir, "vn-long.wav"), 6.8);
+writeSilentWav(join(publicDir, V3_TANPA_NAMA.signatureSfx), 0.42);
 
 const baseScript = {
   pipelineVersion: 3,
+  archiveNumber: 1,
   id: "fixture-v3",
   fps: 30,
   durationInFrames: 1500, // 50 s
-  fiksiTag: {visible: true, label: "FIKSI"},
   app: {groupName: "Grup Uji", memberCount: 3, theme: "dark", selfId: "raka"},
   startClock: "23:45:40",
   characters: [
     {id: "raka", name: "Raka", color: "#7DD3FC", voice: "male-masc-id"},
     {id: "dina", name: "Dina", color: "#FDBA74"},
+    {id: "unknown", name: "Tanpa Nama", color: "#94A3B8"},
   ],
   events: [
     {id: "m1", at: 0, type: "text", from: "dina", text: "siapa ketuk pintu? kita bertiga", timeLabel: "23.45"}, // 5 words -> 1.5s = 45f
     {id: "m2", at: 180, type: "photo", from: "raka", src: `${assetDir}/photo.jpg`, caption: "kosong kok", timeLabel: "23.45"}, // 12% <= 40%
     {id: "m3", at: 630, type: "voice", from: "raka", src: `${assetDir}/vn-valid.wav`, subtitle: "Jangan buka pintu dulu ya.", timeLabel: "23.46"}, // 21s -> 23:46:01
     {id: "m4", at: 960, type: "cctv", durationFrames: 180, src: `${assetDir}/cctv.jpg`, cameraLabel: "CAM 01", timestampLabel: "23:46:10"}, // 32s -> 23:46:12
+    {id: "m5", at: 1260, type: "voice", from: "unknown", src: `${assetDir}/vn-valid.wav`, subtitle: "Kosong kok.", timeLabel: "23.46", unplayed: true}, // 42s -> 23:46:22
   ],
   clueLedger: [{clue: "Gembok luar terkunci", plantedIn: "m2", paidOffIn: "m4"}],
 };
@@ -69,21 +73,37 @@ const baseScript = {
 const clone = () => structuredClone(baseScript);
 const validate = (script, extra = {}) => validateV3Script(script, {publicDir, ...extra});
 
-test("valid v3 script and repository ArsipDemo pass all checks", () => {
+test("valid v3 script and repository ArsipDemo + Pilot 01 pass all checks", () => {
+  assert.equal(formatArchiveIdentity(1), "ARSIP #001 · @skenarium");
+  assert.equal(formatArchiveIdentity(42), "ARSIP #042 · @skenarium");
+
   const res = validate(clone());
   assert.equal(res.durationSec, 50);
-  assert.equal(res.voiceCount, 1);
+  assert.equal(res.voiceCount, 2);
   assert.equal(res.clues, 1);
   assert.ok(Math.abs(measureAudioDurationSec(join(publicDir, assetDir, "vn-valid.wav")) - 3.2) < 0.01);
 
   const repoResults = checkAllV3();
   assert.ok(repoResults.some((r) => r.id === "arsip-demo"), "ArsipDemo must be discovered and validated");
+  assert.ok(repoResults.some((r) => r.id === "arsip01-grup-ronda-rt07"), "ARSIP #001 must be discovered and validated");
 });
 
-test("v3 rejects invalid pipelineVersion, duration outside 45-75 s, and non-zero hook", () => {
+test("v3 rejects invalid pipelineVersion, missing/bad archiveNumber, duration outside 45-75 s, and non-zero hook", () => {
   const badVer = clone();
   badVer.pipelineVersion = 2;
   assert.throws(() => validate(badVer), /pipelineVersion must be 3/);
+
+  const missingNum = clone();
+  delete missingNum.archiveNumber;
+  assert.throws(() => validate(missingNum), /archiveNumber is required/);
+
+  const negativeNum = clone();
+  negativeNum.archiveNumber = -1;
+  assert.throws(() => validate(negativeNum), /archiveNumber is required/);
+
+  const floatNum = clone();
+  floatNum.archiveNumber = 1.5;
+  assert.throws(() => validate(floatNum), /archiveNumber is required/);
 
   const tooShort = clone();
   tooShort.durationInFrames = 44 * 30;
@@ -166,13 +186,14 @@ test("v3 enforces in-world clock consistency and requires anomaly exceptions to 
   unlistedAnomaly.events[0].anomaly = true; // m1 is not in clueLedger
   assert.throws(() => validate(unlistedAnomaly), /anomaly: true must be referenced in clueLedger/);
 
-  // Midnight rollover consistency (23:59:45 -> 00:00:15).
+  // Midnight rollover consistency (23:59:45 -> 00:00:27).
   const midnight = clone();
   midnight.startClock = "23:59:45";
   midnight.events[0].timeLabel = "23.59";
   midnight.events[1].timeLabel = "23.59"; // at 6 s -> 23:59:51
   midnight.events[2].timeLabel = "00.00"; // at 21 s -> 00:00:06
   midnight.events[3].timestampLabel = "00:00:16"; // at 32 s -> 00:00:17
+  midnight.events[4].timeLabel = "00.00"; // at 42 s -> 00:00:27
   assert.doesNotThrow(() => validate(midnight));
 });
 
@@ -188,53 +209,67 @@ test("v3 fails when a voice-note file measured duration is outside 2-6 s or hand
   const redundantDur = clone();
   redundantDur.events[2].durationSec = 3.2;
   assert.throws(() => validate(redundantDur), /must not hand-enter durationSec/);
+
+  const unplayedOverrun = clone();
+  unplayedOverrun.events[4].at = 1395; // 1395 + 15 preplay + 96 (3.2s) = 1506 > 1500
+  assert.throws(() => validate(unplayedOverrun), /overruns durationInFrames/);
 });
 
-test("v3 fails on missing asset paths or missing/hidden FIKSI tag", () => {
+test("v3 enforces Tanpa Nama universe rule: last artifact must be from Tanpa Nama with no phone number", () => {
+  const nonTanpaNamaEnd = clone();
+  nonTanpaNamaEnd.events[4].from = "dina";
+  assert.throws(() => validate(nonTanpaNamaEnd), /last artifact event "m5" must be sent by the Tanpa Nama character/);
+
+  const cctvEnd = clone();
+  cctvEnd.events.pop(); // ends on m4 (cctv)
+  assert.throws(() => validate(cctvEnd), /last artifact event "m4" must be sent by the Tanpa Nama character/);
+
+  const phoneNumberTanpaNama = clone();
+  phoneNumberTanpaNama.characters[2].name = "+62 812-3456-7890";
+  assert.throws(() => validate(phoneNumberTanpaNama), /Tanpa Nama must never carry a phone number/);
+
   const missingPhoto = clone();
   missingPhoto.events[1].src = `${assetDir}/does-not-exist.jpg`;
   assert.throws(() => validate(missingPhoto), /missing asset/);
-
-  const hiddenFiksi = clone();
-  hiddenFiksi.fiksiTag.visible = false;
-  assert.throws(() => validate(hiddenFiksi), /FIKSI tag must be present/);
-
-  const wrongLabel = clone();
-  wrongLabel.fiksiTag.label = "DRAMA";
-  assert.throws(() => validate(wrongLabel), /FIKSI tag must be present/);
 });
 
-test("v3 layout encodes full-bleed chrome with critical regions inside top-10%/right-12%/bottom-22% safe zone and fonts >= 42 px", () => {
+test("v3 layout enforces identity strip safe zone, >= 42 px fonts, fixed handle, and overlay fades <= 6 frames", () => {
   assert.doesNotThrow(() => validateV3Layout(V3_LAYOUT));
   // Full-bleed chrome extends to full 1080x1920 without failing.
   assert.equal(V3_LAYOUT.chromeRegions.canvas.width, 1080);
   assert.equal(V3_LAYOUT.chromeRegions.inputBar.y + V3_LAYOUT.chromeRegions.inputBar.height, 1920);
-  // Message body font is 46-48 px.
+  // Message body font is 46-48 px and identity strip font is >= 42 px.
   assert.ok(V3_LAYOUT.fontSizes.messageText >= 46 && V3_LAYOUT.fontSizes.messageText <= 48);
+  assert.ok(V3_LAYOUT.fontSizes.identityStrip >= 42);
 
   const smallFont = structuredClone(V3_LAYOUT);
-  smallFont.fontSizes.voiceSubtitle = 41;
-  assert.throws(() => validateV3Layout(smallFont), /font size "voiceSubtitle" \(41 px\) is below minimum 42 px/);
+  smallFont.fontSizes.identityStrip = 40;
+  assert.throws(() => validateV3Layout(smallFont), /font size "identityStrip" \(40 px\) is below minimum 42 px/);
 
   const topIntrusion = structuredClone(V3_LAYOUT);
-  topIntrusion.criticalRegions.chatContent = {x: 28, y: 180, width: 916, height: 1200}; // y=180 < 192
-  assert.throws(() => validateV3Layout(topIntrusion), /top edge \(180 px\) intrudes into top 10% danger zone/);
+  topIntrusion.criticalRegions.identityStripContent = {x: 28, y: 180, width: 916, height: 58}; // y=180 < 192
+  assert.throws(
+    () => validateV3Layout(topIntrusion),
+    /criticalRegions\.identityStripContent top edge \(180 px\) intrudes into top 10% danger zone/,
+  );
 
   const rightIntrusion = structuredClone(V3_LAYOUT);
-  rightIntrusion.criticalRegions.chatContent = {x: 50, y: 224, width: 901, height: 1200}; // 951 > 950
-  assert.throws(() => validateV3Layout(rightIntrusion), /right edge \(951 px\) intrudes into right 12% danger zone/);
+  rightIntrusion.criticalRegions.identityStripContent = {x: 50, y: 218, width: 901, height: 58}; // 951 > 950
+  assert.throws(
+    () => validateV3Layout(rightIntrusion),
+    /criticalRegions\.identityStripContent right edge \(951 px\) intrudes into right 12% danger zone/,
+  );
 
   const bottomIntrusion = structuredClone(V3_LAYOUT);
-  bottomIntrusion.criticalRegions.chatContent = {x: 28, y: 224, width: 916, height: 1274}; // 1498 > 1497
-  assert.throws(() => validateV3Layout(bottomIntrusion), /bottom edge \(1498 px\) intrudes into bottom 22% danger zone/);
+  bottomIntrusion.criticalRegions.chatContent = {x: 28, y: 282, width: 916, height: 1216}; // 1498 > 1497
+  assert.throws(
+    () => validateV3Layout(bottomIntrusion),
+    /bottom edge \(1498 px\) intrudes into bottom 22% danger zone/,
+  );
 
-  const fiksiTopIntrusion = structuredClone(V3_LAYOUT);
-  fiksiTopIntrusion.criticalRegions.fiksiTag = {x: 560, y: 16, width: 184, height: 54}; // y=16 < 192 (TikTok tabs)
-  assert.throws(() => validateV3Layout(fiksiTopIntrusion), /criticalRegions\.fiksiTag top edge \(16 px\) intrudes into top 10% danger zone/);
-
-  const fiksiRightIntrusion = structuredClone(V3_LAYOUT);
-  fiksiRightIntrusion.criticalRegions.fiksiTag = {x: 800, y: 222, width: 160, height: 50}; // 960 > 950
-  assert.throws(() => validateV3Layout(fiksiRightIntrusion), /criticalRegions\.fiksiTag right edge/);
+  const slowOverlayFade = structuredClone(V3_LAYOUT);
+  slowOverlayFade.overlayFadeFrames.photoZoomIn = 7;
+  assert.throws(() => validateV3Layout(slowOverlayFade), /overlayFadeFrames\.photoZoomIn \(7 frames\) exceeds max 6 frames/);
 });
 
 test("v3 receipts (ticks) are allowed only on phone owner outgoing messages and never as unread ticks", () => {
@@ -251,9 +286,10 @@ test("v3 receipts (ticks) are allowed only on phone owner outgoing messages and 
   assert.throws(() => validate(unreadTicks), /invalid ticks "unread"/);
 });
 
-test("templates/chat-script.example.json obeys single-source-of-truth, clock consistency, and non-sandal rules", () => {
+test("templates/chat-script.example.json obeys single-source-of-truth, clock consistency, archiveNumber, and Tanpa Nama rules", () => {
   const example = JSON.parse(readFileSync("templates/chat-script.example.json", "utf8"));
   assert.equal(example.pipelineVersion, 3);
+  assert.equal(Number.isInteger(example.archiveNumber), true);
   assert.doesNotMatch(JSON.stringify(example), /sandal/i, "template must not pre-empt Pilot 01 sandals clue");
   assert.doesNotThrow(() => validateV3Script(example, {requireAssets: false}));
 });

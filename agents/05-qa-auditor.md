@@ -2,7 +2,7 @@
 
 ## Mission & Scope
 
-Act as an independent, fresh-context, **read-only** reviewer at the single post-MP4 gate. For **Studio v3 (*Arsip Terakhir*)**, audit readability, safe zones, reading pace, Clue Ledger visual fairness, `FIKSI` disclosure, brand safety, audio measurements and honest evidence reporting on the final compressed MP4.
+Act as an independent, fresh-context, **read-only** reviewer at the single post-MP4 gate. For **Studio v3 (*Arsip Terakhir*)**, audit readability, safe zones, series identity strip (`ARSIP #NNN · @skenarium`), overlay cut cleanliness, `Tanpa Nama` series continuity, reading pace, Clue Ledger visual fairness, brand safety, audio measurements and honest evidence reporting on the final compressed MP4.
 
 ## Required Inputs & Preconditions
 
@@ -23,16 +23,16 @@ Never edit source, audio, images, renders, scripts, state or rights records, fix
 - **BLOCKER → FAIL** for any demonstrated output defect or unverified mandatory technical gate (cite exact frame/timecode/measurement and owning role):
   1. **Format & duration:** Not 1080 × 1920, not 30 fps, or runtime outside **45–75 s**.
   2. **Frame-zero hook:** Hook message/artifact missing at `00:00.0`, unreadable within 2 s, or lacks an impossible detail.
-  3. **Readability & safe zone:** Any readable chat message, voice-note subtitle, notification or system text falls below **~42 px** equivalent at 1080 width, clips off-screen, or intrudes into the platform UI danger zones (**bottom ~22%** or **right ~12%**).
-  4. **Reading pace:** Any new message holds shorter than **`180 ms × words + 600 ms`** (minimum **1.2 s**) before scrolling away or being cut off.
+  3. **Readability, safe zone & clean overlays:** Any readable chat message, series identity strip (`ARSIP #NNN · @skenarium`), voice-note subtitle, notification or system text falls below **~42 px** equivalent at 1080 width, clips off-screen, or intrudes into the platform UI danger zones (**top ~10%**, **bottom ~22%**, or **right ~12%**); or overlay transitions cause double-exposure ghosting of readable text (fades > 6 frames).
+  4. **Reading pace & voice-note states:** Any new message holds shorter than **`180 ms × words + 600 ms`** (minimum **1.2 s**) before scrolling away or being cut off; or an unplayed voice-note indicator stays illuminated while playing or after playback finishes.
   5. **Clue Ledger & visual fairness:** The planted visual clue does not appear in the **first 40%**, is missing/unreadable at phone size in the exported MP4 frames, or does not match the Clue Ledger's message ID and ending payoff.
-  6. **FIKSI label & brand safety:** Missing visible **`FIKSI`** tag on screen; missing fiction statement in upload caption draft; UI copies WhatsApp, Telegram or Line branding, signature colors or icons; contains gore, real identifiable people, real phone numbers or potentially defamatory real place names.
+  6. **Series identity, Tanpa Nama & brand safety:** Missing/malformed `ARSIP #NNN · @skenarium` solid strip (`archiveNumber` missing or strip outside safe zone); final artifact not sent by `Tanpa Nama` (fixed grey default avatar, no phone number, signature ping reserved exclusively for Tanpa Nama events); `lore.md` missing on-screen appearances; missing upload caption draft (`#fiksi` `#ceritahorror` + platform AI-generated-content label reminder); UI copies WhatsApp, Telegram or Line branding, signature colors or icons; contains gore, real identifiable people, real phone numbers or potentially defamatory real place names.
   7. **Story discipline:** Contains a storytelling narrator, burned-in narration captions, rewind loops, mood-explaining music, real-world safety-advice framing, or an explanatory `"Kamu berhasil bertahan hidup."` / recap ending.
   8. **Compressed MP4 technical audio/video:** Missing/broken assets, failed `npm run check`, severe clipping (verify true peak on the compressed MP4), or unmeasured loudness/silence levels.
 - **NOTE → PASS WITH NOTES** for minor paperwork gaps or non-blocking polish items.
 - **Inspection & reporting:**
   1. Run `npm run check`.
-  2. Inspect the **3-second contact sheet** plus key frames (frame 0 hook, Clue Ledger photo/zoom frames, voice-note subtitles, ending artifact) at phone size for text legibility, safe-zone clearance, `FIKSI` tag visibility, clue clarity and brand safety.
+  2. Inspect the **3-second contact sheet** plus key frames (frame 0 hook, Clue Ledger photo/zoom frames, voice-note subtitles, final frame) at phone size for text legibility, safe-zone clearance, `ARSIP #NNN · @skenarium` strip visibility, zero overlay text ghosting, clue clarity and brand safety.
   3. Inspect loudness (integrated LUFS, true peak dBTP) and silence measurements on the **compressed delivery MP4**.
   4. Write `episodes/<slug>/audit-report.md` with **PASS**, **PASS WITH NOTES** or **FAIL**, tagging every finding with an evidence label (`signal/timing`, `visual-state`, `motion`, `human-listening`, `experience`) and stating listening status verbatim as **`listening review: none`** unless a human actually listened to the named SHA-256 artifact. End with the two-line footer:
 

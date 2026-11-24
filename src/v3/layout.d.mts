@@ -10,6 +10,39 @@ export declare const V3_CANVAS: {
   readonly height: number;
 };
 
+export declare const V3_SERIES_HANDLE: string;
+
+export declare function formatArchiveIdentity(archiveNumber: number): string;
+
+export declare const V3_TANPA_NAMA: {
+  readonly id: string;
+  readonly displayName: string;
+  readonly color: string;
+  readonly avatarBg: string;
+  readonly avatarFg: string;
+  readonly avatarBorder: string;
+  readonly signatureSfx: string;
+};
+
+export declare function isTanpaNamaCharacter(
+  character?: {readonly id?: string; readonly name?: string},
+  senderId?: string,
+): boolean;
+
+export declare const V3_UNPLAYED_PREPLAY_FRAMES: number;
+
+export declare const V3_OVERLAY_FADE_FRAMES: {
+  readonly maxAllowed: number;
+  readonly photoZoomIn: number;
+  readonly photoZoomOut: number;
+  readonly cctvIn: number;
+  readonly cctvOut: number;
+  readonly callIn: number;
+  readonly callOut: number;
+  readonly notificationIn: number;
+  readonly notificationOut: number;
+};
+
 export declare const V3_SAFE_ZONE: {
   readonly avoidTopRatio: number;
   readonly avoidRightRatio: number;
@@ -23,7 +56,7 @@ export declare const V3_MIN_FONT_SIZE: number;
 
 export declare const V3_FONT_SIZES: {
   readonly statusBar: number;
-  readonly fiksiTag: number;
+  readonly identityStrip: number;
   readonly headerGroupName: number;
   readonly headerSubtitle: number;
   readonly senderName: number;
@@ -46,12 +79,13 @@ export declare const V3_CHROME_REGIONS: {
   readonly canvas: LayoutBox;
   readonly statusBar: LayoutBox;
   readonly chatHeader: LayoutBox;
+  readonly identityStrip: LayoutBox;
   readonly threadBackdrop: LayoutBox;
   readonly inputBar: LayoutBox;
 };
 
 export declare const V3_CRITICAL_REGIONS: {
-  readonly fiksiTag: LayoutBox;
+  readonly identityStripContent: LayoutBox;
   readonly chatContent: LayoutBox;
   readonly notificationBanner: LayoutBox;
   readonly photoLightboxContent: LayoutBox;
@@ -66,6 +100,9 @@ export declare const V3_THEME: {
   readonly statusBarBg: string;
   readonly headerBg: string;
   readonly headerBorder: string;
+  readonly identityStripBg: string;
+  readonly identityStripText: string;
+  readonly identityStripHandle: string;
   readonly threadBg: string;
   readonly incomingBubbleBg: string;
   readonly incomingBubbleBorder: string;
@@ -79,13 +116,14 @@ export declare const V3_THEME: {
   readonly accent: string;
   readonly warning: string;
   readonly danger: string;
-  readonly fiksiBg: string;
-  readonly fiksiBorder: string;
-  readonly fiksiText: string;
 };
 
 export declare const V3_LAYOUT: {
   readonly canvas: typeof V3_CANVAS;
+  readonly seriesHandle: string;
+  readonly tanpaNama: typeof V3_TANPA_NAMA;
+  readonly unplayedPreplayFrames: number;
+  readonly overlayFadeFrames: typeof V3_OVERLAY_FADE_FRAMES;
   readonly safeZone: typeof V3_SAFE_ZONE;
   readonly minFontSize: number;
   readonly fontSizes: typeof V3_FONT_SIZES;
