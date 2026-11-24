@@ -54,6 +54,26 @@
       "independentlyAudited": null,
       "ownerReviewed": null,
       "published": null
+    },
+    {
+      "episodeNumber": 3,
+      "archiveNumber": 3,
+      "archiveLabel": "ARSIP #003",
+      "workingTitle": "Jahitan Langit",
+      "compositionId": "Arsip03JahitanLangit",
+      "status": "in-progress",
+      "durationSec": 64,
+      "setting": "Perkemahan fiktif Bukit Lengang pada malam hari.",
+      "briefPath": "episodes/009-jahitan-langit/brief.md",
+      "scriptPath": "episodes/009-jahitan-langit/chat-script.json",
+      "assetsPath": "episodes/009-jahitan-langit/assets.md",
+      "reviewPath": "episodes/009-jahitan-langit/review.md",
+      "captionDraftPath": "episodes/009-jahitan-langit/caption-draft.md",
+      "pipelineStatePath": "episodes/009-jahitan-langit/pipeline-state.json",
+      "latestRendered": null,
+      "independentlyAudited": null,
+      "ownerReviewed": null,
+      "published": null
     }
   ]
 }

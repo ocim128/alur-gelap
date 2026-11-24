@@ -27,3 +27,12 @@ This file is the single canon ledger for recurring appearances of **Tanpa Nama**
 | **ARSIP #002** | `episodes/008-pagi-jam-dua` | `m19` | `64.67 s` / frame `1940` | Final artifact (photo) | In the rendered v1, `Tanpa Nama`, with the fixed grey avatar, sends an uncaptioned photo of a small figure centered in bright haze between tent and dark ridge edges. The timeline cues the signature ping at its arrival. |
 
 This is an observed candidate-render appearance, not owner-approved canon; no earlier appearance is scripted. The figure's orientation and the ping require visual and listening review respectively.
+
+## ARSIP #003 Scripted On-Screen Appearances
+
+| Archive | Episode Folder | Event ID | Time / Frame (30 fps) | Role | Scripted On-Screen Appearance |
+| --- | --- | --- | --- | --- | --- |
+| **ARSIP #003** | `episodes/009-jahitan-langit` | `m21` | `57.40 s` / frame `1722` | Final sequence (photo) | `Tanpa Nama` sends an uncaptioned photo taken from outside through an open zipper, showing a dome tent, dying campfire, two empty chairs, and a lit phone on a log. |
+| **ARSIP #003** | `episodes/009-jahitan-langit` | `m22` | `60.20 s` / frame `1806` | Final artifact (voice note) | `Tanpa Nama` sends a voice note subtitled `[suara resleting besar menutup]`. |
+
+These are scripted appearances; the episode has not been rendered or reviewed.

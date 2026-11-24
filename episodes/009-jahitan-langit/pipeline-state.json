@@ -1,0 +1,30 @@
+{
+  "brief": {
+    "status": "ready",
+    "notes": "Owner requested production; previous model-proxy cold-read reviewed identical strict content, but a fresh-context recheck for the timing-only revised script is pending. No new result claimed."
+  },
+  "audio": {
+    "status": "pending",
+    "notes": "No episode audio generated. Voice roster roles assigned; episode listening review: none."
+  },
+  "images": {
+    "status": "pending",
+    "notes": "Five stills planned; none generated or reviewed."
+  },
+  "render": {
+    "status": "pending",
+    "notes": "Composition ID reserved; composition not registered or rendered."
+  },
+  "audit": {
+    "status": "pending",
+    "notes": "No rendered artifact exists for independent audit."
+  },
+  "publish": {
+    "status": "pending",
+    "notes": "Not authorized."
+  },
+  "latestRendered": null,
+  "independentlyAudited": null,
+  "ownerReviewed": null,
+  "published": null
+}
