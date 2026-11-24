@@ -1,0 +1,3 @@
+# Hash-bound strict cold-read input must reproduce identically on Windows checkout.
+episodes/008-pagi-jam-dua/chat-script.json text eol=lf
+episodes/008-pagi-jam-dua/sources/cold-read-input.md text eol=lf

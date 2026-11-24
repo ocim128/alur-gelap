@@ -174,7 +174,20 @@ export function ArsipPlayer({script}: ArsipPlayerProps) {
   return (
     <AbsoluteFill style={{backgroundColor: V3_THEME.canvasBg, overflow: 'hidden'}}>
       {/* Location ambience bed — drops hard to near-silence during scripted silenceDrops */}
-      {script.audio?.ambience && (
+      {script.audio?.ambience && script.id === 'arsip02-pagi-jam-dua' && script.durationInFrames > 2090 ? (
+        <>
+          <Sequence from={0} durationInFrames={2090} layout="none">
+            <Audio
+              src={staticFile(script.audio.ambience.src)}
+              volume={(f) => isSilenceDropAt(f) ? 0.009 : (script.audio?.ambience?.gain ?? 0.35)}
+            />
+          </Sequence>
+          {/* The v1 bed ends at 69.67 s. Reuse its later ambience, not its opening cricket clue, for the v2 extension. */}
+          <Sequence from={2090} durationInFrames={script.durationInFrames - 2090} layout="none">
+            <Audio src={staticFile(script.audio.ambience.src)} trimBefore={90} volume={script.audio.ambience.gain ?? 0.35} />
+          </Sequence>
+        </>
+      ) : script.audio?.ambience && (
         <Audio
           src={staticFile(script.audio.ambience.src)}
           volume={(f) => {

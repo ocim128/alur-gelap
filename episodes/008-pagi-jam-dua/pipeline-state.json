@@ -1,11 +1,11 @@
 {
-  "brief": {"status": "pass", "notes": "Owner approved checkpoint 1 for script SHA-256 c8ef58ec335d18400d38900449e316d0ddae42bcda7593aac7b429fbaa38836f; recorded model-proxy cold read remains unchanged."},
-  "audio": {"status": "fail", "notes": "Clips and SFX generated; mix measurements pass. Salsa raw final-word warning and Nino ASR nggak/gak mismatches remain; onset warnings on all, m7 overlaps m8 pop. listening review: none. See assets.md and review.md."},
-  "images": {"status": "fail", "notes": "Six generated stills inspected; m16 dark circle may read as a pole foot rather than its shadow, and m5 light boundary may read as horizon. Independent visual review remains needed; no owner exception recorded."},
-  "render": {"status": "ready", "notes": "v1 MP4, 540p preview, contact sheet and key frames exist; requested audio measurements pass. Upstream audio and image findings remain open; see review.md. This candidate is not a technical handoff pass."},
-  "audit": {"status": "pending", "notes": "Independent Agent 05 QA of the rendered v1 hash has not occurred."},
+  "brief": {"status": "ready", "notes": "Owner requested the v2 wording/timing change. Strict fresh-context model-proxy cold read retained and bound to SHA-256 087eb49702c170bb95b0eed058eecabe2f80140147523ed9161e863c18671587. Post-v1-asset gate; original pre-v1 gate input remains unavailable."},
+  "audio": {"status": "fail", "notes": "m7 ends 0.248 s before m8; m6 replaced, final ASR aligned and signal metrics recorded. ShortZ still flags onset and kesini/sini token comparison; Aji retained source has strong final 20 ms. Clean spoken boundaries require actual listening; listening review: none. See assets.md and review.md."},
+  "images": {"status": "ready", "notes": "Only m16 regenerated: textured cast shadow reviewed at 540x960 and in exported v2 zoom; five owner-retained photos unchanged. Independent Agent 05 judgment pending; m5 may read as horizon."},
+  "render": {"status": "ready", "notes": "User-requested v2 rendered with 540p preview, contact sheet and m16 frame; automated mix measurements pass. Audio boundary evidence and independent QA remain open; candidate is not an approved handoff."},
+  "audit": {"status": "pending", "notes": "v1 FAIL remains in audit-report.md; independent Agent 05 audit of v2 has not occurred."},
   "publish": {"status": "pending", "notes": "Not authorized."},
-  "latestRendered": {"path": "out/008-pagi-jam-dua/arsip02-pagi-jam-dua-v1.mp4", "sha256": "35807d420e1956f801c21f7d534e63a145174220d21a8121918a98fcf4dc0718"},
+  "latestRendered": {"path": "out/008-pagi-jam-dua/arsip02-pagi-jam-dua-v2.mp4", "sha256": "50889b13a27c782be5a72e83a4742ae3959a352670579e25e35ba5afbcc9b815"},
   "independentlyAudited": null,
   "ownerReviewed": null,
   "published": null

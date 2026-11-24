@@ -1,0 +1,67 @@
+{
+  "version": 1,
+  "voiceId": "Leda",
+  "voiceName": "Leda",
+  "provider": "gemini-cloud",
+  "model": "gemini-3.8-flash-tts",
+  "master": false,
+  "masterFilter": null,
+  "asrModel": "small",
+  "generatedAt": "2026-11-24T23:12:30.456Z",
+  "passed": true,
+  "totalChunks": 1,
+  "verifiedChunks": 1,
+  "warningChunks": 0,
+  "failedChunks": 0,
+  "plannedDurationSec": 3.885,
+  "finalAlignment": {
+    "transcript": "Kok ada suara burung? Wir, cahayanya turun kesini.",
+    "mismatches": [],
+    "passed": true
+  },
+  "audioQuality": {
+    "integratedLufs": -13.2,
+    "loudnessRangeLu": 2.4,
+    "noiseFloorDbfs": -13.7,
+    "targets": {
+      "integratedLufs": -14,
+      "loudnessRangeLu": [
+        5,
+        7
+      ]
+    }
+  },
+  "chunks": [
+    {
+      "index": 0,
+      "tag": null,
+      "text": "Kok ada suara burung? Wir, cahayanya turun ke sini!",
+      "retries": 0,
+      "status": "verified",
+      "bestSimilarity": 1,
+      "bestWordRatio": 1,
+      "acceptedAttempt": 0,
+      "attempts": [
+        {
+          "seed": 0,
+          "wordRatio": 1,
+          "similarity": 1,
+          "wpm": 139,
+          "expectedWpm": 130,
+          "passed": true,
+          "reasons": [],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Kok ada suara burung? Wir, cahayanya turun ke sini?",
+          "mismatches": [],
+          "endTruncated": false,
+          "rawTranscript": "Kok ada suara burung? Wir, cahayanya turun ke sini?",
+          "rawMismatches": [],
+          "rawEndTruncated": false,
+          "rawReasons": []
+        }
+      ]
+    }
+  ]
+}

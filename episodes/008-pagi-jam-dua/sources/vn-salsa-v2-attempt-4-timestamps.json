@@ -1,0 +1,74 @@
+{
+  "version": 1,
+  "voiceId": "Leda",
+  "durationSec": 4.225,
+  "master": false,
+  "chunks": [
+    {
+      "index": 0,
+      "tag": null,
+      "text": "Kok ada suara burung? Wir, cahayanya turun ke sini!",
+      "start": 0,
+      "end": 4.225,
+      "retries": 2,
+      "status": "failed"
+    }
+  ],
+  "words": [
+    {
+      "word": "Kok",
+      "start": 0,
+      "end": 0.42,
+      "chunk": 0
+    },
+    {
+      "word": "ada",
+      "start": 0.42,
+      "end": 1.06,
+      "chunk": 0
+    },
+    {
+      "word": "suara",
+      "start": 1.06,
+      "end": 1.34,
+      "chunk": 0
+    },
+    {
+      "word": "burung?",
+      "start": 1.34,
+      "end": 1.66,
+      "chunk": 0
+    },
+    {
+      "word": "Wier,",
+      "start": 2.06,
+      "end": 2.66,
+      "chunk": 0
+    },
+    {
+      "word": "cahayanya",
+      "start": 3.04,
+      "end": 3.62,
+      "chunk": 0
+    },
+    {
+      "word": "turun",
+      "start": 3.62,
+      "end": 3.9,
+      "chunk": 0
+    },
+    {
+      "word": "ke",
+      "start": 3.9,
+      "end": 3.96,
+      "chunk": 0
+    },
+    {
+      "word": "sini.",
+      "start": 3.96,
+      "end": 4.2,
+      "chunk": 0
+    }
+  ],
+  "sfx": []
+}

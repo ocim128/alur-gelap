@@ -1,4 +1,21 @@
-# ARSIP #002 — v1 builder review, 2026-11-25
+# ARSIP #002 — v2 builder review, 2026-11-25
+
+## v2 artifact and verification
+
+- `Arsip02PagiJamDua`; `out/008-pagi-jam-dua/arsip02-pagi-jam-dua-v2.mp4`, SHA-256 `50889b13a27c782be5a72e83a4742ae3959a352670579e25e35ba5afbcc9b815`; 1080 × 1920, 30 fps, 2,126 frames / 70.867 s script duration. V1 is preserved.
+- `out/008-pagi-jam-dua/arsip02-pagi-jam-dua-v2-preview-540p.mp4`, `out/008-pagi-jam-dua/contact-sheet-3s-v2.jpg`, `out/008-pagi-jam-dua/frame-v2-m16-zoom.png` and `frame-v2-m19.png`.
+- **signal/timing:** `npm run check`: 91 Node tests and 20 Python tests pass; 0 failed, 0 skipped. `python scripts/verify-v3-export.py out/008-pagi-jam-dua/arsip02-pagi-jam-dua-v2.mp4 episodes/008-pagi-jam-dua/chat-script.json` passes, including target band: −16.0 LUFS integrated, −2.3 dBTP, minimum active-window RMS −42.02 dBFS / 0 below −50 over 672 windows; silence interior aggregate −66.71 dBFS and max window −63.92 dBFS; 0 exact zero samples in both interior and whole decode. Full report `out/008-pagi-jam-dua/verify-v3-export-v2.json`.
+- **signal/timing:** m8–m19, tension end and silence boundaries shifted +36 frames. The 5.285 s Nino VN finishes approximately 0.248 s before the frame-826 m8 pop. Salsa's v2 3.585 s derivative fits the 4.5 s m6 hold; no pitch or speed changes. Because the retained ambience stem was 69.667 s long, the v2 extension reuses a later portion of that same stem without repeating its opening cricket cue; the source asset is unchanged. Render used `audio-master-gain-db=8.8`, limiting and one delivery AAC encode via the repository render wrapper.
+- **visual-state:** The single regenerated m16 image was inspected at 540 × 960 and again at exported frame 1650. It shows a short translucent dark patch with gravel texture adjacent to and beneath the pole on bright soil. The identical v1 m5 may still read as a horizon; the owner explicitly instructed its retention. Five other photos and the Aji/Nino WAVs remain byte-identical. Independent phone-size visual judgment is pending.
+- **experience:** Owner wording is now `Kok ada suara burung? Wir, cahayanya turun ke sini!` in both subtitle and generated take. The retained [strict blind input](sources/cold-read-input.md) binds script SHA-256 `087eb49702c170bb95b0eed058eecabe2f80140147523ed9161e863c18671587`; the fresh-context model-proxy Q1–Q4 are quoted verbatim in `brief.md`. This was after v1 assets existed and before replacement generation. It does not establish the missing pre-v1 gate evidence or a human first-watch result. The two hash-bound files have LF checkout attributes so Git on Windows does not change their bytes.
+- **signal/timing — unresolved:** Salsa's final ASR matches the line and reports its last word ending 165 ms before source end, with final 20 ms at −52.56 dBFS. ShortZ nevertheless flags its raw/processed end check because the recognized token is `kesini` and the expected final token is `sini`; it and the retained Aji/Nino takes also carry an onset warning. Nino is recognized as `gak` twice where the script says `nggak`. Aji's final 20 ms source RMS is −18.30 dBFS. See `sources/voice-boundary-v2-evidence.json` and `assets.md`; waveform/ASR evidence does not prove spoken onset or final syllables are audibly unclipped.
+- **human-listening — not verified:** **listening review: none**. Owner phone listening remains necessary for Aji/Salsa/Nino boundaries, m7/m8 separation and intelligibility, birds, wind, tent sounds, the tension, the hard drop, signature ping and limiter. Image/voice commercial rights, independent Agent 05 audit and cold human viewing remain open. No owner approval, audience result or permission to publish is claimed.
+
+The source-stage `audio` remains `fail` because clean audible boundaries are not established. The rendered v2 is a candidate for independent QA, not a claim that all three v1 blockers are closed; the original audit is preserved. See `assets.md` for attempt logs, hashes and rights status.
+
+---
+
+# v1 builder review — historical
 
 ## Artifact binding
 

@@ -39,7 +39,7 @@
       "workingTitle": "Pagi Jam Dua",
       "compositionId": "Arsip02PagiJamDua",
       "status": "in-progress",
-      "durationSec": 69.66666666666667,
+      "durationSec": 70.86666666666666,
       "setting": "Perkemahan dan jalur gunung fiktif, Pos 1 dan Pos 2, sekitar pukul 02.41.",
       "briefPath": "episodes/008-pagi-jam-dua/brief.md",
       "scriptPath": "episodes/008-pagi-jam-dua/chat-script.json",
@@ -48,8 +48,8 @@
       "captionDraftPath": "episodes/008-pagi-jam-dua/caption-draft.md",
       "pipelineStatePath": "episodes/008-pagi-jam-dua/pipeline-state.json",
       "latestRendered": {
-        "path": "out/008-pagi-jam-dua/arsip02-pagi-jam-dua-v1.mp4",
-        "sha256": "35807d420e1956f801c21f7d534e63a145174220d21a8121918a98fcf4dc0718"
+        "path": "out/008-pagi-jam-dua/arsip02-pagi-jam-dua-v2.mp4",
+        "sha256": "50889b13a27c782be5a72e83a4742ae3959a352670579e25e35ba5afbcc9b815"
       },
       "independentlyAudited": null,
       "ownerReviewed": null,

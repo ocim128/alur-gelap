@@ -1,0 +1,151 @@
+{
+  "version": 1,
+  "voiceId": "Leda",
+  "voiceName": "Leda",
+  "provider": "gemini-cloud",
+  "model": "gemini-3.8-flash-tts",
+  "master": false,
+  "masterFilter": null,
+  "asrModel": "small",
+  "generatedAt": "2026-11-24T23:14:46.774Z",
+  "passed": false,
+  "totalChunks": 1,
+  "verifiedChunks": 0,
+  "warningChunks": 0,
+  "failedChunks": 1,
+  "plannedDurationSec": 4.965,
+  "finalAlignment": {
+    "transcript": "Kok ada suara burung? Wir! Cahayanya turun ke sini!",
+    "mismatches": [],
+    "passed": true
+  },
+  "audioQuality": {
+    "integratedLufs": -12.4,
+    "loudnessRangeLu": 3,
+    "noiseFloorDbfs": -14.9,
+    "targets": {
+      "integratedLufs": -14,
+      "loudnessRangeLu": [
+        5,
+        7
+      ]
+    }
+  },
+  "chunks": [
+    {
+      "index": 0,
+      "tag": null,
+      "text": "Kok ada suara burung? Wir, cahayanya turun ke sini!",
+      "retries": 2,
+      "status": "failed",
+      "bestSimilarity": 0.989,
+      "bestWordRatio": 1,
+      "acceptedAttempt": 2,
+      "attempts": [
+        {
+          "seed": 0,
+          "wordRatio": 0.75,
+          "similarity": 0.958,
+          "wpm": 124,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.75): heard \"kok ada suara burung wier jahayanya turun kesini\"",
+            "raw: last word missing, truncated, or has invalid timestamps",
+            "word mismatch (ratio 0.75): heard \"kok ada suara burung wier jahayanya turun kesini\"",
+            "last word missing, truncated, or has invalid timestamps"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Kok ada suara burung? Wier, jahayanya turun kesini!",
+          "mismatches": [
+            {
+              "expected": "wir",
+              "heard": "wier"
+            },
+            {
+              "expected": "cahayanya",
+              "heard": "jahayanya"
+            }
+          ],
+          "endTruncated": true,
+          "rawTranscript": "Kok ada suara burung? Wier, jahayanya turun kesini!",
+          "rawMismatches": [
+            {
+              "expected": "wir",
+              "heard": "wier"
+            },
+            {
+              "expected": "cahayanya",
+              "heard": "jahayanya"
+            }
+          ],
+          "rawEndTruncated": true,
+          "rawReasons": [
+            "word mismatch (ratio 0.75): heard \"kok ada suara burung wier jahayanya turun kesini\"",
+            "last word missing, truncated, or has invalid timestamps"
+          ]
+        },
+        {
+          "seed": 1,
+          "wordRatio": 0.875,
+          "similarity": 0.968,
+          "wpm": 136,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.88): heard \"kok ada suara burung uir cahayanya turun kesini\"",
+            "raw: last word missing, truncated, or has invalid timestamps",
+            "word mismatch (ratio 0.88): heard \"kok ada suara burung uir cahayanya turun kesini\"",
+            "last word missing, truncated, or has invalid timestamps"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Kok ada suara burung? Uir, cahayanya turun kesini!",
+          "mismatches": [
+            {
+              "expected": "wir",
+              "heard": "uir"
+            }
+          ],
+          "endTruncated": true,
+          "rawTranscript": "Kok ada suara burung? Uir, cahayanya turun kesini!",
+          "rawMismatches": [
+            {
+              "expected": "wir",
+              "heard": "uir"
+            }
+          ],
+          "rawEndTruncated": true,
+          "rawReasons": [
+            "word mismatch (ratio 0.88): heard \"kok ada suara burung uir cahayanya turun kesini\"",
+            "last word missing, truncated, or has invalid timestamps"
+          ]
+        },
+        {
+          "seed": 2,
+          "wordRatio": 1,
+          "similarity": 0.989,
+          "wpm": 109,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "last word missing, truncated, or has invalid timestamps"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Kok ada suara burung? Wir, cahayanya turun kesini.",
+          "mismatches": [],
+          "endTruncated": true,
+          "rawTranscript": "Kok ada suara burung? Wir, cahayanya turun ke sini!",
+          "rawMismatches": [],
+          "rawEndTruncated": false,
+          "rawReasons": []
+        }
+      ]
+    }
+  ]
+}
