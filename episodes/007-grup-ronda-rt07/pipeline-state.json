@@ -1,0 +1,26 @@
+{
+  "brief": {
+    "status": "ready",
+    "notes": "Studio v3 Pilot 01 brief and chat-script.json drafted for Checkpoint 3 owner review before any audio or image asset generation."
+  },
+  "audio": {
+    "status": "pending",
+    "notes": "Pending Checkpoint 3 approval."
+  },
+  "images": {
+    "status": "pending",
+    "notes": "Pending Checkpoint 3 approval."
+  },
+  "render": {
+    "status": "pending",
+    "notes": ""
+  },
+  "audit": {
+    "status": "pending",
+    "notes": ""
+  },
+  "publish": {
+    "status": "pending",
+    "notes": ""
+  }
+}

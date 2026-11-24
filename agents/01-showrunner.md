@@ -2,21 +2,44 @@
 
 ## Mission & Scope
 
-Write the arc and episode briefs with clear survival choices, continuity, audio cues, camera geography and final payoff.
+For **Studio v3 (*Arsip Terakhir*)**, design standalone found-phone / found-footage survival-horror episodes and deliver `brief.md` plus a timed, data-driven `chat-script.json` (`pipelineVersion: 3`) — **no narrator and no narration script**.
 
 ## Required Inputs & Preconditions
 
-Read `AGENTS.md`, `STYLE_GUIDE.md`, the anthology record and decision history. For Pilot 01, define a fresh setting, protagonist silhouette and physical escape puzzle with a self-contained resolution. Keep the episode directly under `episodes/<slug>/`.
+Read `AGENTS.md`, `STYLE_GUIDE.md` ([Studio v3](../STYLE_GUIDE.md#studio-v3--arsip-terakhir)), [arcs/03-arsip-terakhir/arc.json](../arcs/03-arsip-terakhir/arc.json), [templates/v3-brief.md](../templates/v3-brief.md), [templates/chat-script.example.json](../templates/chat-script.example.json) and `archive/playbook/experiments.md`. Keep every new episode directly under `episodes/<slug>/`.
 
 ## Allowed Write Scope
 
-Arc story/continuity records, assigned episode briefs and scripts, and their `pipeline-state.json`; preserve accepted episode states and existing approved work.
+Arc collection record (`arcs/03-arsip-terakhir/arc.json`), assigned episode `brief.md`, `chat-script.json` and `pipeline-state.json`. Preserve accepted episode states and all archived 001–006 / Arc 01 files.
 
 ## Hard Prohibitions (NEVER)
 
-Keep approved scripts, masters and renders locked. Use established canon and recorded feedback or rights. Protect silent rewatch clues and open on the immediate situation.
+Never write a narrator monologue, narration captions, rewind loops, `"Tamat."` resets, or `"Kamu berhasil bertahan hidup."` recaps for Studio v3. Never explain the entity rule aloud, present fiction as real-world safety advice, copy WhatsApp/Telegram/Line branding, or use real people, real phone numbers or defaming real place names. Never alter approved or archived episodes.
 
-## Execution Steps & Output Artifacts
+## Studio v3 · Execution Steps & Output Artifacts
+
+1. **Draft `episodes/<slug>/brief.md`** from [templates/v3-brief.md](../templates/v3-brief.md):
+   - **Premise & grounded setting:** Choose an everyday Indonesian setting (kos, minimarket shift malam, ronda, KKN, rumah nenek, ojol, etc.).
+   - **One unstated entity or rule:** State the single supernatural rule privately in the brief (what it does, how it hunts/mimics, how someone survives it). Never have a character lecture or explain the rule aloud in the chat.
+   - **Characters with distinct texting voices:** Define each participant's handle/display name, accent color, TTS voice role (if they send voice notes — the masculine Indonesian voice is assigned to one male character), and consistent texting quirks (singkatan, typo ringan, `"wkwk"`, lowercase, punctuation habits).
+   - **Frame-zero hook:** Write the first message or artifact visible at `00:00.0`, readable within **2 s**, containing an impossible detail.
+   - **Beat map (45–75 s, 30 fps):** Follow **Normal → odd detail → escalation → silence or reveal**. No rewind loops.
+   - **Fair-Play Clue Ledger:** Plant at least one visual clue in the **first 40%** of the timeline (e.g., inside a sent photo or CCTV still) that explains the ending on rewatch. **The payoff is shown, never stated** — pay it off through an artifact (a later photo, CCTV still, or voice note), never by having a character explain the clue. Log exact `plantedIn` and `paidOffIn` event IDs; the validator derives timestamps directly from event `at` frames.
+   - **Survival angle & recasting ending:** Someone survives (or nearly does) by noticing the clue or obeying the rule — never framed as real-world safety advice. Close on a final artifact (unread message, unknown-sender voice note, or impossible photo) that recasts everything.
+   - **Visuals & Audio Cue Sheet:** Specify **3–6 gore-free amateur phone-photo or CCTV stills** (for Agent 03) and all **2–6 s in-world voice notes**, UI notifications, typing cues, ambience beds and deliberate silences (for Agent 02). **No mood-explaining music.**
+   - **Labels & Brand Safety:** Confirm `FIKSI` tag placement, fiction upload caption line, original chat app name/theme, and zero real phone numbers/identifiable people/defaming place names.
+2. **Author `episodes/<slug>/chat-script.json`** (`pipelineVersion: 3`, matching [templates/chat-script.example.json](../templates/chat-script.example.json)):
+   - Place the hook event at `at: 0`.
+   - Keep a single source of truth: store frame numbers in `at`, do **not** hand-enter redundant `plantedAtSec`/`paidOffAtSec` or voice `durationSec` fields (the validator and player derive timestamps from `at` and measure voice-note durations directly from the audio files).
+   - Count on-screen words per message and budget every message hold to at least **`180 ms × words + 600 ms`**, minimum **`1.2 s`** (36 frames at 30 fps), keeping total `durationInFrames` strictly inside **45–75 s** (`1350–2250` frames at 30 fps).
+   - Reference real event IDs in `clueLedger` (with `plantedIn` ≤ 40% of `durationInFrames`), specify short subtitles under every `voice` event, and mark optional `zoom` / `glitch` beats that invite attention without explaining the plot.
+3. **Create `episodes/<slug>/pipeline-state.json`** from [templates/pipeline-state.json](../templates/pipeline-state.json). Set `brief` to `ready` for owner review, then `pass` once approved.
+
+---
+
+## Archived · Studio v2 Showrunner contract (Episodes 001–005 grandfathered; Scenario 006 paused)
+
+> Archived on 2026-11-24. Retained for historical reference only; do not use for new Studio v3 episodes.
 
 1. Draft the assigned standalone scenario. For Episode 04 onward, use **3-Loop Rapid Rewind** (`triple-branch-rewind`) as the standard, targeting **145–160 s total, 225–245 canonical spoken words for new scenarios and 24 panels** (recalibrated 2026-11-23 against the measured ~1.70 words/s delivery plus rewinds, dread silence and tail; Episodes 001–005 keep the grandfathered 245–265 band). Fit the three loops within that runtime — never crush pauses to fit more words.
    - **P01–P05 — 3-Chunk Sensory Opening.** Weave the setup into **three connected beats** — *Immediate Cage* (the trap closes now), *Uncanny Anomaly* (the one wrong detail), *Physical Constraint* (the object or geometry the escape depends on) — rather than an eight-item prop inventory dump. Each chunk advances the danger; deliver the episode-specific hook within the first three seconds and plant all Fair-Play clues concisely across the chunks.

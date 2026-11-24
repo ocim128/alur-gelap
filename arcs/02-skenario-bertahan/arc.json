@@ -3,6 +3,9 @@
   "workingTitle": "Skenario Bertahan",
   "pipelineVersion": 2,
   "productionMode": "standalone-anthology",
+  "status": "archived-grandfathered",
+  "archivedOn": "2026-11-24",
+  "archiveNotes": "Studio v2 (triple-branch-rewind, narrator, 24 panels, word bands, Urban Silhouette Noir, Perspective & Naming) is grandfathered for published Episodes 001–005. Unfinished Episode 006-bioskop-tanpa-pintu is paused with its files preserved untouched. New episodes use Studio v3 (arcs/03-arsip-terakhir/arc.json).",
   "episodes": [
     {
       "episodeNumber": 1,
@@ -75,7 +78,9 @@
     {
       "episodeNumber": 6,
       "workingTitle": "Bioskop Tanpa Pintu",
-      "status": "in-progress",
+      "status": "paused",
+      "pausedOn": "2026-11-24",
+      "pauseReason": "Unfinished when the owner approved switching to Studio v3 (Arsip Terakhir) on 2026-11-24. Files left untouched.",
       "engine": "triple-branch-rewind",
       "setting": "A 1970s Indonesian cinema with a rear projection balcony and a loose fabric screen.",
       "mechanics": "Ranto tries two doors that return him to the same auditorium at balcony height, then tests the projector. A marked seat shifts while the lit screen stays in place. He feels the draft, pushes through the screen and ducks out under the service gate in time for his daughter's performance.",

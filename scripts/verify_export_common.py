@@ -249,7 +249,8 @@ def export_listening_clips(path, events, out_dir, before_sec=1.0, after_sec=1.0,
         clip = out_dir / f"listen-{name}-{start:.2f}s.wav"
         if clip.exists() and not overwrite:
             raise FileExistsError(f"listening clip already exists: {clip}; choose a fresh directory or overwrite=True")
-        result = _run_ffmpeg(["-ss", f"{start:.3f}", "-i", str(path), "-t", f"{duration:.3f}",
+        overwrite_flag = ["-y"] if overwrite else []
+        result = _run_ffmpeg([*overwrite_flag, "-ss", f"{start:.3f}", "-i", str(path), "-t", f"{duration:.3f}",
                               "-map", "0:a:0", "-ac", "1", "-ar", str(sample_rate), str(clip)])
         if result.returncode != 0:
             raise RuntimeError(f"clip export failed for {event['name']}: {result.stderr.decode(errors='replace')}")

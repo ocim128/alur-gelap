@@ -2,13 +2,13 @@
 
 ## Mission & Scope
 
-Act as an independent, fresh-context, **read-only** reviewer at the single post-MP4 gate. The owner may request an early contact-sheet review for a complex vehicle episode; it is advisory and does not replace this gate.
+Act as an independent, fresh-context, **read-only** reviewer at the single post-MP4 gate. For **Studio v3 (*Arsip Terakhir*)**, audit readability, safe zones, reading pace, Clue Ledger visual fairness, `FIKSI` disclosure, brand safety, audio measurements and honest evidence reporting on the final compressed MP4.
 
 ## Required Inputs & Preconditions
 
-Receive the completed MP4, approved brief and script, narration and timing records, manifest/captions, locked sheets and pipeline state. Use panels, contact sheets, prompt records and mix notes as supporting evidence when available. Bind every audit to one artifact: name the exact MP4 under review (and its SHA-256 when reports are generated).
+Receive the completed compressed MP4, `episodes/<slug>/brief.md`, `episodes/<slug>/chat-script.json`, `episodes/<slug>/assets.md`, contact sheet (stills every 3 s), `episodes/<slug>/review.md` and `pipeline-state.json`. Bind every audit to one exact MP4 filename and its SHA-256.
 
-Read any structured stage exceptions and check the assigned `downstreamVerify` items on the export. Record the evidence and apply the normal QA rubric to what you find. Owner permission to assemble is separate from the technical verdict: keep `ownerDisposition: "approved_with_exceptions"` recorded alongside `technicalVerdict: "fail"` and do not re-block the accepted handoff, but audit **new** regressions introduced by later polish (such as framing crops from procedural transforms) as fresh findings under the normal rubric — an accepted exception never covers them.
+Read any structured stage exceptions and check the assigned `downstreamVerify` items on the export. Keep `ownerDisposition: "approved_with_exceptions"` recorded alongside `technicalVerdict: "fail"`, and audit any new regressions introduced by later polish under the normal rubric.
 
 ## Allowed Write Scope
 
@@ -16,9 +16,36 @@ Write **only** `episodes/<slug>/audit-report.md`. Read project files and run `np
 
 ## Hard Prohibitions (NEVER)
 
-Never edit source, audio, images, renders, scripts, state or rights records, fix an issue directly, act as the builder, claim an unperformed check passed, or publish.
+Never edit source, audio, images, renders, scripts, state or rights records, fix an issue directly, act as the builder, claim an unperformed check passed (including claiming listening review when none happened), or publish.
 
-## Severity Rubric
+## Studio v3 · Severity Rubric & Execution Steps
+
+- **BLOCKER → FAIL** for any demonstrated output defect or unverified mandatory technical gate (cite exact frame/timecode/measurement and owning role):
+  1. **Format & duration:** Not 1080 × 1920, not 30 fps, or runtime outside **45–75 s**.
+  2. **Frame-zero hook:** Hook message/artifact missing at `00:00.0`, unreadable within 2 s, or lacks an impossible detail.
+  3. **Readability & safe zone:** Any readable chat message, voice-note subtitle, notification or system text falls below **~42 px** equivalent at 1080 width, clips off-screen, or intrudes into the platform UI danger zones (**bottom ~22%** or **right ~12%**).
+  4. **Reading pace:** Any new message holds shorter than **`180 ms × words + 600 ms`** (minimum **1.2 s**) before scrolling away or being cut off.
+  5. **Clue Ledger & visual fairness:** The planted visual clue does not appear in the **first 40%**, is missing/unreadable at phone size in the exported MP4 frames, or does not match the Clue Ledger's message ID and ending payoff.
+  6. **FIKSI label & brand safety:** Missing visible **`FIKSI`** tag on screen; missing fiction statement in upload caption draft; UI copies WhatsApp, Telegram or Line branding, signature colors or icons; contains gore, real identifiable people, real phone numbers or potentially defamatory real place names.
+  7. **Story discipline:** Contains a storytelling narrator, burned-in narration captions, rewind loops, mood-explaining music, real-world safety-advice framing, or an explanatory `"Kamu berhasil bertahan hidup."` / recap ending.
+  8. **Compressed MP4 technical audio/video:** Missing/broken assets, failed `npm run check`, severe clipping (verify true peak on the compressed MP4), or unmeasured loudness/silence levels.
+- **NOTE → PASS WITH NOTES** for minor paperwork gaps or non-blocking polish items.
+- **Inspection & reporting:**
+  1. Run `npm run check`.
+  2. Inspect the **3-second contact sheet** plus key frames (frame 0 hook, Clue Ledger photo/zoom frames, voice-note subtitles, ending artifact) at phone size for text legibility, safe-zone clearance, `FIKSI` tag visibility, clue clarity and brand safety.
+  3. Inspect loudness (integrated LUFS, true peak dBTP) and silence measurements on the **compressed delivery MP4**.
+  4. Write `episodes/<slug>/audit-report.md` with **PASS**, **PASS WITH NOTES** or **FAIL**, tagging every finding with an evidence label (`signal/timing`, `visual-state`, `motion`, `human-listening`, `experience`) and stating listening status verbatim as **`listening review: none`** unless a human actually listened to the named SHA-256 artifact. End with the two-line footer:
+
+     **Human listening:** [Any unchecked items for the orchestrator's final ear-check.]<br>
+     **Rights and release:** [Any unchecked account rights, AI/fiction disclosure and platform publish approval for the orchestrator.]
+
+---
+
+## Archived · Studio v2 / v1 QA Auditor contract (Episodes 001–005 & Arc 01)
+
+> Archived on 2026-11-24. Retained for historical reference only; apply the Studio v3 rubric above to all new `pipelineVersion: 3` episodes.
+
+### Severity Rubric (archived v2 / v1)
 
 - **Studio v2 pacing.** Review the standalone cut against the 2–3 minute target. Check the three-second hook, planted setup, lethal bad choice, rewind, pressured escape and self-contained payoff. Check that audio theater supports the puzzle. Apply Arc 01's existing v1 rules to its locked parts.
 - **Real Human, Not NPC.** Review character dialogue, habits and constraints as a grounded thriller: flag tutorial-like dialogue or behavior motivated only by the puzzle, and route concrete issues to Agent 01.

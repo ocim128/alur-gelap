@@ -1,0 +1,180 @@
+{
+  "pipelineVersion": 3,
+  "id": "arsip-demo",
+  "compositionId": "ArsipDemo",
+  "fps": 30,
+  "durationInFrames": 1500,
+  "fiksiTag": {
+    "visible": true,
+    "label": "FIKSI"
+  },
+  "app": {
+    "name": "Pesan",
+    "groupName": "Grup Kos Melati",
+    "memberCount": 4,
+    "theme": "dark",
+    "selfId": "raka"
+  },
+  "startClock": "02:14:40",
+  "startBattery": 29,
+  "endBattery": 22,
+  "characters": [
+    {
+      "id": "raka",
+      "name": "Raka",
+      "color": "#7DD3FC",
+      "voice": "male-masc-id"
+    },
+    {
+      "id": "dina",
+      "name": "Dina",
+      "color": "#FDBA74",
+      "voice": "female-id"
+    },
+    {
+      "id": "tio",
+      "name": "Tio",
+      "color": "#C4B5FD",
+      "voice": "male-2-id"
+    },
+    {
+      "id": "unknown",
+      "name": "",
+      "color": "#94A3B8",
+      "voice": "male-masc-id"
+    }
+  ],
+  "audio": {
+    "ambience": {
+      "src": "assets/arsip-demo/room-ambience.wav",
+      "gain": 0.25
+    },
+    "uiSfx": {
+      "messageIn": "assets/arsip-demo/ui-pop-in.wav",
+      "messageOut": "assets/arsip-demo/ui-pop-out.wav",
+      "notification": "assets/arsip-demo/ui-notif.wav"
+    }
+  },
+  "events": [
+    {
+      "id": "m1",
+      "at": 0,
+      "type": "text",
+      "from": "dina",
+      "text": "siapa barusan ketuk pintu kamar 4? kita cuma bertiga",
+      "timeLabel": "02.14"
+    },
+    {
+      "id": "m2",
+      "at": 96,
+      "type": "text",
+      "from": "tio",
+      "text": "hah serius? gw di kamar 2 udh kunci",
+      "typingFrames": 24,
+      "timeLabel": "02.14",
+      "edited": true
+    },
+    {
+      "id": "m3",
+      "at": 195,
+      "type": "photo",
+      "from": "raka",
+      "src": "assets/arsip-demo/hallway-flash.jpg",
+      "caption": "lorong kosong kok",
+      "timeLabel": "02.14",
+      "ticks": "read",
+      "zoom": {
+        "x": 0.63,
+        "y": 0.51,
+        "scale": 2.2,
+        "atOffset": 55,
+        "durationFrames": 120
+      }
+    },
+    {
+      "id": "m4",
+      "at": 390,
+      "type": "text",
+      "from": "dina",
+      "text": "bentar gw cek dari jendela kamar dulu",
+      "typingFrames": 24,
+      "timeLabel": "02.14",
+      "deletedAt": 560
+    },
+    {
+      "id": "m5",
+      "at": 495,
+      "type": "notification",
+      "durationFrames": 95,
+      "appName": "Pesan",
+      "title": "Dina",
+      "body": "Panggilan tak terjawab"
+    },
+    {
+      "id": "m6",
+      "at": 615,
+      "type": "system",
+      "text": "Tio keluar dari grup"
+    },
+    {
+      "id": "m7",
+      "at": 690,
+      "type": "voice",
+      "from": "raka",
+      "src": "assets/arsip-demo/vn-demo-01.wav",
+      "subtitle": "Jangan buka pintu dulu, tunggu sampai suaranya lewat.",
+      "timeLabel": "02.15",
+      "ticks": "read"
+    },
+    {
+      "id": "m8",
+      "at": 855,
+      "type": "call",
+      "durationFrames": 150,
+      "caller": "Dina",
+      "status": "incoming",
+      "subtitle": "Panggilan masuk…"
+    },
+    {
+      "id": "m9",
+      "at": 1065,
+      "type": "cctv",
+      "durationFrames": 210,
+      "src": "assets/arsip-demo/cctv-hallway.jpg",
+      "cameraLabel": "CAM 02 • LORONG LT 2",
+      "timestampLabel": "02:15:14",
+      "zoom": {
+        "x": 0.63,
+        "y": 0.51,
+        "scale": 1.9,
+        "atOffset": 60,
+        "durationFrames": 120
+      }
+    },
+    {
+      "id": "m10",
+      "at": 1320,
+      "type": "voice",
+      "from": "unknown",
+      "src": "assets/arsip-demo/vn-demo-02.wav",
+      "subtitle": "Lorong kosong kok.",
+      "timeLabel": "02.15",
+      "unplayed": true
+    }
+  ],
+  "glitches": [
+    {
+      "at": 1308,
+      "durationFrames": 10,
+      "intensity": 0.65
+    }
+  ],
+  "clueLedger": [
+    {
+      "clue": "Gembok luar pintu kamar 4 masih terkunci di foto lorong pertama",
+      "plantedIn": "m3",
+      "paidOffIn": "m9",
+      "note": "Demo placeholder clue: planted early at 13% and paid off visually via CCTV without any character stating it."
+    }
+  ]
+}

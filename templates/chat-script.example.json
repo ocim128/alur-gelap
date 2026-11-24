@@ -1,0 +1,180 @@
+{
+  "pipelineVersion": 3,
+  "id": "arsip-example-00",
+  "compositionId": "ArsipExample00",
+  "fps": 30,
+  "durationInFrames": 1650,
+  "fiksiTag": {
+    "visible": true,
+    "label": "FIKSI"
+  },
+  "app": {
+    "name": "Pesan",
+    "groupName": "Grup Kos Melati",
+    "memberCount": 4,
+    "theme": "dark",
+    "selfId": "raka"
+  },
+  "startClock": "02:14:40",
+  "startBattery": 29,
+  "endBattery": 24,
+  "characters": [
+    {
+      "id": "raka",
+      "name": "Raka",
+      "color": "#7DD3FC",
+      "voice": "male-masc-id"
+    },
+    {
+      "id": "dina",
+      "name": "Dina",
+      "color": "#FDBA74",
+      "voice": "female-id"
+    },
+    {
+      "id": "tio",
+      "name": "Tio",
+      "color": "#C4B5FD",
+      "voice": "male-2-id"
+    },
+    {
+      "id": "unknown",
+      "name": "",
+      "color": "#94A3B8",
+      "voice": "male-masc-id"
+    }
+  ],
+  "audio": {
+    "ambience": {
+      "src": "sfx/shared/night-room-tone.wav",
+      "gain": 0.16
+    },
+    "uiSfx": {
+      "messageIn": "sfx/shared/ui-pop-in.wav",
+      "messageOut": "sfx/shared/ui-pop-out.wav",
+      "typing": "sfx/shared/ui-typing.wav",
+      "notification": "sfx/shared/ui-notif.wav"
+    }
+  },
+  "events": [
+    {
+      "id": "m1",
+      "at": 0,
+      "type": "text",
+      "from": "dina",
+      "text": "siapa barusan ketuk pintu kamar 4? kita kan cuma bertiga di kos",
+      "timeLabel": "02.14"
+    },
+    {
+      "id": "m2",
+      "at": 90,
+      "type": "text",
+      "from": "tio",
+      "text": "hah serius? gw di kamar 2 udh kunci drtd",
+      "typingFrames": 24,
+      "timeLabel": "02.14"
+    },
+    {
+      "id": "m3",
+      "at": 180,
+      "type": "photo",
+      "from": "raka",
+      "src": "assets/arsip-example-00/lorong-kos.jpg",
+      "caption": "lorong kosong kok",
+      "typingFrames": 20,
+      "timeLabel": "02.14",
+      "ticks": "read",
+      "zoom": {
+        "x": 0.72,
+        "y": 0.56,
+        "scale": 2.1,
+        "atOffset": 36,
+        "durationFrames": 60
+      }
+    },
+    {
+      "id": "m4",
+      "at": 360,
+      "type": "voice",
+      "from": "raka",
+      "src": "assets/arsip-example-00/vn-raka-01.mp3",
+      "subtitle": "Jangan buka pintu dulu ya, tunggu sampai suaranya lewat.",
+      "timeLabel": "02.14",
+      "ticks": "read"
+    },
+    {
+      "id": "m5",
+      "at": 540,
+      "type": "system",
+      "text": "Tio keluar dari grup"
+    },
+    {
+      "id": "m6",
+      "at": 630,
+      "type": "cctv",
+      "durationFrames": 150,
+      "src": "assets/arsip-example-00/cctv-lorong-01.jpg",
+      "cameraLabel": "CAM 02 • LORONG LT 2",
+      "timestampLabel": "02:15:00"
+    },
+    {
+      "id": "m7",
+      "at": 840,
+      "type": "call",
+      "durationFrames": 120,
+      "caller": "Dina",
+      "status": "missed",
+      "subtitle": "Panggilan tak terjawab"
+    },
+    {
+      "id": "m8",
+      "at": 1020,
+      "type": "notification",
+      "durationFrames": 120,
+      "appName": "Pesan",
+      "title": "Grup Kos Melati",
+      "body": "Pesan suara baru"
+    },
+    {
+      "id": "m9",
+      "at": 1200,
+      "type": "cctv",
+      "durationFrames": 180,
+      "src": "assets/arsip-example-00/cctv-lorong-02.jpg",
+      "cameraLabel": "CAM 02 • LORONG LT 2",
+      "timestampLabel": "02:15:18",
+      "zoom": {
+        "x": 0.72,
+        "y": 0.56,
+        "scale": 2.0,
+        "atOffset": 45,
+        "durationFrames": 75
+      }
+    },
+    {
+      "id": "m10",
+      "at": 1410,
+      "type": "voice",
+      "from": "unknown",
+      "src": "assets/arsip-example-00/vn-unknown-end.mp3",
+      "subtitle": "Lorong kosong kok.",
+      "timeLabel": "02.15",
+      "unplayed": true
+    }
+  ],
+  "glitches": [
+    {
+      "at": 1395,
+      "durationFrames": 10,
+      "intensity": 0.65
+    }
+  ],
+  "clueLedger": [
+    {
+      "clue": "Gembok luar pintu kamar 4 masih terpasang terkunci pada foto lorong pertama",
+      "plantedIn": "m3",
+      "paidOffIn": "m9",
+      "note": "Payoff is shown via the later CCTV frame (gembok tergantung terbuka padahal lorong tetap kosong), never stated by a character."
+    }
+  ]
+}

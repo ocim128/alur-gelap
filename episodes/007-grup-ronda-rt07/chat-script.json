@@ -1,0 +1,243 @@
+{
+  "pipelineVersion": 3,
+  "id": "arsip01-grup-ronda-rt07",
+  "compositionId": "Arsip01GrupRondaRT07",
+  "fps": 30,
+  "durationInFrames": 1860,
+  "fiksiTag": {
+    "visible": true,
+    "label": "FIKSI"
+  },
+  "app": {
+    "name": "Pesan",
+    "groupName": "Ronda RT 07",
+    "memberCount": 3,
+    "theme": "dark",
+    "selfId": "bayu"
+  },
+  "startClock": "23:47:30",
+  "startBattery": 38,
+  "endBattery": 31,
+  "characters": [
+    {
+      "id": "bayu",
+      "name": "Bayu",
+      "color": "#7DD3FC",
+      "voice": "male-masc-id"
+    },
+    {
+      "id": "hendra",
+      "name": "Hendra",
+      "color": "#FDBA74",
+      "voice": "Charon"
+    },
+    {
+      "id": "darto",
+      "name": "Darto",
+      "color": "#6EE7B7",
+      "voice": "Orus"
+    },
+    {
+      "id": "unknown",
+      "name": "",
+      "color": "#94A3B8",
+      "voice": "male-masc-id"
+    }
+  ],
+  "audio": {
+    "ambience": {
+      "src": "assets/007-grup-ronda-rt07/ambience-night-village.wav",
+      "gain": 0.18
+    },
+    "uiSfx": {
+      "messageIn": "assets/007-grup-ronda-rt07/ui-pop-in.wav",
+      "messageOut": "assets/007-grup-ronda-rt07/ui-pop-out.wav"
+    }
+  },
+  "events": [
+    {
+      "id": "m1",
+      "at": 0,
+      "type": "text",
+      "from": "darto",
+      "text": "mas td yg ketawa di pos siapa? kita kan cuma bertiga",
+      "timeLabel": "23.47"
+    },
+    {
+      "id": "m2",
+      "at": 84,
+      "type": "text",
+      "from": "hendra",
+      "text": "wkwk angin kali pak, kopi udh gw bikinin 3 ya",
+      "typingFrames": 18,
+      "timeLabel": "23.47"
+    },
+    {
+      "id": "m3",
+      "at": 168,
+      "type": "photo",
+      "from": "hendra",
+      "src": "assets/007-grup-ronda-rt07/still-01-pos-aman.jpg",
+      "caption": "pos aman",
+      "timeLabel": "23.47",
+      "zoom": {
+        "x": 0.5,
+        "y": 0.72,
+        "scale": 2.0,
+        "atOffset": 42,
+        "durationFrames": 96
+      }
+    },
+    {
+      "id": "m4",
+      "at": 330,
+      "type": "voice",
+      "from": "bayu",
+      "src": "assets/007-grup-ronda-rt07/vn-01-bayu.mp3",
+      "subtitle": "Gue di portal barat bentar, nanti balik ke pos. Pos aman.",
+      "timeLabel": "23.47",
+      "ticks": "read"
+    },
+    {
+      "id": "m5",
+      "at": 462,
+      "type": "text",
+      "from": "darto",
+      "text": "lho mas hendra tadi bukannya barusan lewat gang 2?",
+      "typingFrames": 24,
+      "timeLabel": "23.47"
+    },
+    {
+      "id": "m6",
+      "at": 552,
+      "type": "voice",
+      "from": "hendra",
+      "src": "assets/007-grup-ronda-rt07/vn-02-hendra-odd.mp3",
+      "subtitle": "Hah... aku di pos, Pak. Aku dari tadi di pos.",
+      "typingFrames": 20,
+      "timeLabel": "23.47"
+    },
+    {
+      "id": "m7",
+      "at": 696,
+      "type": "text",
+      "from": "darto",
+      "text": "mas bayu denger ga sih? suara hendra kok aneh banget",
+      "typingFrames": 22,
+      "timeLabel": "23.47"
+    },
+    {
+      "id": "m8",
+      "at": 792,
+      "type": "photo",
+      "from": "darto",
+      "src": "assets/007-grup-ronda-rt07/still-02-gang-gelap.jpg",
+      "caption": "itu hendra bukan??",
+      "timeLabel": "23.47",
+      "zoom": {
+        "x": 0.5,
+        "y": 0.56,
+        "scale": 1.85,
+        "atOffset": 36,
+        "durationFrames": 84
+      }
+    },
+    {
+      "id": "m9",
+      "at": 930,
+      "type": "voice",
+      "from": "darto",
+      "src": "assets/007-grup-ronda-rt07/vn-03-darto-panic.mp3",
+      "subtitle": "Mas Bayu jawab dong! Dia nengok ke sini, dia lari—",
+      "timeLabel": "23.48"
+    },
+    {
+      "id": "m10",
+      "at": 1068,
+      "type": "text",
+      "from": "darto",
+      "text": "bayu kamu di mana? jawab aku bayu",
+      "typingFrames": 30,
+      "timeLabel": "23.48"
+    },
+    {
+      "id": "m11",
+      "at": 1164,
+      "type": "call",
+      "durationFrames": 105,
+      "caller": "Darto",
+      "status": "incoming",
+      "subtitle": "Panggilan masuk…"
+    },
+    {
+      "id": "m12",
+      "at": 1290,
+      "type": "system",
+      "text": "Panggilan tak terjawab dari Darto"
+    },
+    {
+      "id": "m13",
+      "at": 1356,
+      "type": "text",
+      "from": "hendra",
+      "text": "bayu jangan diam aja, balas dulu",
+      "typingFrames": 26,
+      "timeLabel": "23.48"
+    },
+    {
+      "id": "m14",
+      "at": 1440,
+      "type": "cctv",
+      "durationFrames": 165,
+      "src": "assets/007-grup-ronda-rt07/still-03-cctv-pos.jpg",
+      "cameraLabel": "CAM 01 • POS RONDA RT 07",
+      "timestampLabel": "23:48:16",
+      "zoom": {
+        "x": 0.5,
+        "y": 0.7,
+        "scale": 1.85,
+        "atOffset": 45,
+        "durationFrames": 105
+      }
+    },
+    {
+      "id": "m15",
+      "at": 1626,
+      "type": "photo",
+      "from": "unknown",
+      "src": "assets/007-grup-ronda-rt07/still-04-portal-barat.jpg",
+      "timeLabel": "23.48"
+    },
+    {
+      "id": "m16",
+      "at": 1704,
+      "type": "voice",
+      "from": "unknown",
+      "src": "assets/007-grup-ronda-rt07/vn-04-unknown-bayu.mp3",
+      "subtitle": "Pos aman.",
+      "timeLabel": "23.48",
+      "unplayed": true
+    }
+  ],
+  "glitches": [
+    {
+      "at": 1608,
+      "durationFrames": 10,
+      "intensity": 0.65
+    }
+  ],
+  "clueLedger": [
+    {
+      "clue": "Hendra membuat 3 gelas kopi (m2), namun foto pos (m3) menunjukkan 4 gelas kopi di bangku dengan 1 sudah diminum setengah",
+      "plantedIn": "m3",
+      "paidOffIn": "m14",
+      "note": "Payoff is shown visually in CCTV m14 (pos kosong, semua 4 gelas kopi sudah habis diminum, ponsel di lantai) — never stated by any character."
+    },
+    {
+      "clue": "Grup ronda hanya beranggotakan 3 orang (m1 + header tetap '3 anggota' tanpa pesan gabung/keluar)",
+      "plantedIn": "m1",
+      "paidOffIn": "m15",
+      "note": "Payoff is shown when the nameless 4th sender sends m15 (foto luar portal barat) and m16 (VN suara Bayu) while memberCount remains 3."
+    }
+  ]
+}

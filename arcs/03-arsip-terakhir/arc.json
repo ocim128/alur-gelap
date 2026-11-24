@@ -1,0 +1,21 @@
+{
+  "arcId": "03-arsip-terakhir",
+  "workingTitle": "Arsip Terakhir",
+  "pipelineVersion": 3,
+  "productionMode": "standalone-found-footage",
+  "status": "active",
+  "adoptedOn": "2026-11-24",
+  "formatSummary": "No narrator. Found-phone and found-footage vertical archives (45–75 s, 1080x1920, 30 fps) reconstructed from group chats, short character voice notes, amateur phone photos, CCTV stills, call logs, notifications and timestamps. One unstated entity or rule, one early visual fair-play clue planted in the first 40%, original non-trademarked chat UI, and a visible FIKSI tag.",
+  "episodes": [
+    {
+      "episodeNumber": 1,
+      "workingTitle": "Grup Ronda RT 07",
+      "compositionId": "Arsip01GrupRondaRT07",
+      "status": "brief-draft",
+      "setting": "Pos ronda dan gang kampung fiktif RT 07 menjelang tengah malam (23:47–23:48).",
+      "briefPath": "episodes/007-grup-ronda-rt07/brief.md",
+      "scriptPath": "episodes/007-grup-ronda-rt07/chat-script.json",
+      "pipelineStatePath": "episodes/007-grup-ronda-rt07/pipeline-state.json"
+    }
+  ]
+}

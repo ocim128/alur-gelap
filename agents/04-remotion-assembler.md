@@ -2,21 +2,42 @@
 
 ## Mission & Scope
 
-Deterministically assemble the approved script, audio and panel batch with Remotion motion, captions and sound kinetics.
+For **Studio v3 (*Arsip Terakhir*)**, assemble data-driven found-phone and found-footage UI timelines from `episodes/<slug>/chat-script.json` (`pipelineVersion: 3`) using `src/v3/ArsipPlayer.tsx` and reusable UI components under `src/v3/components/`.
 
 ## Required Inputs & Preconditions
 
-Read the episode brief, cue sheet, arc record, owner-accepted narration with timing/edit map, available cue record, approved panels/contact sheet and current pipeline state. For `brief`, `audio` and `images`, require `handoffAllowed: true` on structured records or `status: "pass"` on older records. Carry each accepted exception into the assembly handoff and perform its `downstreamVerify` check when assigned. Leave the source stage's technical verdict intact. Follow installed Remotion guidance.
+Read `episodes/<slug>/brief.md`, `episodes/<slug>/chat-script.json`, `episodes/<slug>/assets.md`, generated voice notes/SFX (from Agent 02), generated stills (from Agent 03), `STYLE_GUIDE.md` ([Studio v3](../STYLE_GUIDE.md#studio-v3--arsip-terakhir)) and `pipeline-state.json`. Require `brief`, `audio` and `images` approved (`handoffAllowed: true` or `status: "pass"`). Follow installed Remotion guidance.
 
 ## Allowed Write Scope
 
-Assigned episode manifest, captions, assembly scripts, composition registration and components needed for the episode, output MP4 and verification stills, episode review/asset handoff, and `render` pipeline state. For Arc 01, also source or prepare missing cue-sheet SFX and explicitly mentioned in-world voice SFX, with provenance in `public/sfx/catalog.json` and `public/sfx/LICENSES.md`. Respect any narrower owner file scope.
+Assigned episode `chat-script.json` timing refinements (preserving approved copy/clues), composition registration in `src/Root.tsx`, reusable components under `src/v3/` when needed, output MP4 under `out/`, contact-sheet verification stills, `episodes/<slug>/review.md` / assembly notes, and `render` pipeline state. Preserve all archived 001–006 and Arc 01 code and exports.
 
 ## Hard Prohibitions (NEVER)
 
-Never regenerate the main narration TTS, rewrite scripts, invent or generate replacement panels, change accepted source audio, add stray unlabeled `BlueprintOverlay` arrows, cover faces with `PERSEDIAAN`, or publish. Route missing or defective panels or narration to their owning role; handle missing Arc 01 SFX as specified below.
+Never add a narrator track, burned-in narration captions, mood-explaining music, rewind loops, CSS animations (`@keyframes` / CSS `transition`), or WhatsApp/Telegram/Line trademarks, brand greens/blues or icons. Never overwrite existing exports or publish without authorization.
 
-## Execution Steps & Output Artifacts
+## Studio v3 · Assembly Contract
+
+1. **Use `src/v3/ArsipPlayer.tsx` and `src/v3/components/`:**
+   - Drive the composition from `episodes/<slug>/chat-script.json` (`pipelineVersion: 3`, **1080 × 1920**, **30 fps**, **45–75 s**).
+   - Compose with reusable v3 UI primitives: `PhoneFrame` (draining battery + advancing in-world clock), `ChatHeader` (group name, member count, `"mengetik…"`), `MessageBubble` (sender name/color, timestamp, read ticks, deleted/edited states), `PhotoMessage` (tap-to-expand zoom on generated still), `VoiceNoteBubble` (waveform driven by actual audio + playback + short subtitle under the bubble), `SystemMessage`, `Notification`, `CallScreen`, `CctvFrame` (timestamp, noise, scanlines, subtle jitter), and **`FiksiTag`** (always visible).
+   - Keep **every animation strictly driven by `useCurrentFrame()`** (real-phone auto-scroll, typing indicators before messages, kinetic zoom/pan into details to invite attention without explaining, optional scripted glitch beats). Zero CSS animations.
+2. **Enforce phone readability, safe zones and reading pace:**
+   - All readable on-screen text (chat messages, voice-note subtitles, notifications, system messages) must be **minimum ~42 px** at 1080 width.
+   - Keep interactive/readable content inside the vertical platform UI safe zone: **avoid the bottom ~22% (~422 px)** and the **right ~12% (~130 px)**.
+   - Hold every new message for at least **`180 ms × words + 600 ms`**, minimum **`1.2 s`**, and keep the hook artifact visible at **frame 0 (`00:00.0`)**.
+   - Use an original, generic dark/neutral chat UI aesthetic — never imitate WhatsApp, Telegram or Line branding, colors or icons.
+3. **Mix, validate and render:**
+   - Time voice notes, UI notification pings, typing sounds, low-key ambience and deliberate silences cleanly; **no music that explains the mood**.
+   - Run `npm run check` (including v3 validation and tests) before rendering.
+   - Render via `npm run render -- <composition-id> out/<delivery>.mp4` without overwriting existing exports.
+   - Export a **contact sheet of stills every 3 s** and run **loudness and silence checks on the compressed MP4** (since AAC encoding can shift loudness and silence floors). Record actual measurements and honest **`listening review: none`** (unless a human actually listened) in the handoff.
+
+---
+
+## Archived · Studio v2 / v1 Assembler contract (Episodes 001–005 & Arc 01)
+
+> Archived on 2026-11-24. Preserved for existing `StudioV2Player` and Arc 01 compositions only; do not apply narrator/panel/jolt assembly rules to Studio v3 episodes.
 
 1. Assemble the owner-accepted narration and approved panels into a 9:16 manifest/composition, finalizing provisional caption and cue timing against the available sidecars and footage. Keep title safe-zone timing, captions of 1–4 words (aim for 3–4 when boundaries allow), HUD numbers and silent clues correct; ensure visible character reactions and purposeful motion.
    - **Single Timing Authority.** The brief's timings are provisional story order; the PCM-verified `audio-edit-map.json` is the composition timeline authority. Re-anchor every provisional frame number (including the brief's `branchRewinds` block) to the measured map — for tape snaps use `assemblerHandoff.rewindSnapAnchors` and derive sample offsets as `Math.round(mappedSeconds * sampleRate)` — and set manifest `timing.*`, captions, cuts and mix cues from `audio-edit-map.json` plus `narration-timestamps.json`. Never reconcile a mismatch by editing prose or sidecars: a drift fails the validator and the export verifier loudly.

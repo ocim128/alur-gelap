@@ -2,17 +2,40 @@
 
 ## Mission & Scope
 
-Prepare and review single-narrator audio, timed world voices and sourced foley for the approved brief.
+For **Studio v3 (*Arsip Terakhir*)**, generate short in-world character **voice notes (2–6 s each)** via TTS plus UI notification sounds, typing clicks, low-key environmental ambience and deliberate silences — **not a narrator master and no mood-explaining music**.
 
 ## Required Inputs & Preconditions
 
-Read the brief and cue sheet, script, existing narration and reports, current pipeline state, `STYLE_GUIDE.md`, `public/sfx/catalog.json` and `public/sfx/LICENSES.md`. The brief must be `pass`. The owner automatically accepts Investigator narration; a separate listening approval is not a production gate. Skip this role for Arc 01 Episodes 003–007, whose prepared takes and timing files already exist.
+Read the approved `episodes/<slug>/brief.md`, `episodes/<slug>/chat-script.json`, current `pipeline-state.json`, `STYLE_GUIDE.md` ([Studio v3](../STYLE_GUIDE.md#studio-v3--arsip-terakhir)), `public/sfx/catalog.json` and `public/sfx/LICENSES.md`. The brief must be `pass` (or owner-approved at checkpoint).
 
-The owner's ShortZ app is at `C:\Users\user\Documents\Repo\tiktok-repost\shortz\run.bat`. Use the **Investigator** narrator with `gemini-cloud`, model `gemini-3.8-flash-tts`, voice ID `voice_71a5a701-796e-421d-840e-0adc00b0816a`. This is a Google Cloud project-scoped voice: use the owning project's configured credentials and ShortZ environment; do not print or copy secrets into this repository.
+The owner's ShortZ app is at `C:\Users\user\Documents\Repo\tiktok-repost\shortz\run.bat`. By owner decision on 2026-11-24, the masculine Indonesian voice (`gemini-cloud`, model `gemini-3.8-flash-tts`, voice ID `voice_71a5a701-796e-421d-840e-0adc00b0816a`) is now used as an **in-world male character voice**, not a narrator. Other characters use distinct voices from the ShortZ/Gemini TTS roster (such as `Charon`, `Orus`, `Fenrir`, `Algenib`) or documented licensed alternatives. Never print or copy credentials into this repository.
 
 ## Allowed Write Scope
 
-Assigned episode audio derivatives, timing/edit maps and audio records; approved narration copies under `public/assets/<episode>/`; spoken world-voice (`pa-announcer`, crew, `entity-female`) and rewind/tail stinger assets under `public/sfx/` with their `catalog.json` and `LICENSES.md` entries; the episode's `audio` pipeline state. Preserve originals and existing rights records.
+Assigned episode voice-note sources, sidecar reports, prepared voice-note clips under `public/assets/<episode>/`, UI/ambience SFX assets under `public/sfx/` with `catalog.json` and `LICENSES.md` entries, `episodes/<slug>/assets.md` audio entries, and the episode's `audio` pipeline state. Preserve originals and existing rights records.
+
+## Hard Prohibitions (NEVER)
+
+Never generate a storytelling narrator track for Studio v3, add music that explains the mood, speed up speech with `atempo`, overwrite retained masters, claim ASR as a listening review, or claim unverified licensing.
+
+## Studio v3 · Execution Steps & Output Artifacts
+
+1. **Generate in-world character voice notes (2–6 s each):**
+   - Synthesize each scripted voice note from `chat-script.json` as an individual clip using the character's assigned TTS voice (with the masculine Indonesian voice assigned to one male character).
+   - Keep raw masters and ShortZ `-report.json` / `-timestamps.json` sidecars in `episodes/<slug>/sources/` (or the episode folder), and place phone-mic / voice-note derivatives (optional subtle voice-note bandpass/compression via FFmpeg so it sounds recorded on a phone) under `public/assets/<episode>/`.
+   - Measure each clip's actual PCM duration via `ffprobe` and hand back exact durations so Agent 04 / `chat-script.json` aligns waveform playback and bubble holds cleanly.
+   - Run an ASR spot-check where available and classify formatting diffs honestly. Record **`listening review: none`** unless a human actually listened.
+2. **Prepare UI & world SFX (no mood music):**
+   - Provide clean, original UI sounds (message pop/ping, subtle typing taps, incoming call ringtone/vibrate if used) and restrained environmental ambience (e.g., night crickets/distant village wind for pos ronda) with explicit rights recorded in `public/sfx/LICENSES.md` and `episodes/<slug>/assets.md`.
+   - Never supply soundtrack music that tells the viewer how to feel. Preserve scripted silent beats.
+3. **Update `assets.md` and `pipeline-state.json`:**
+   - Record every clip's path, duration, voice preset/tool, synthesis/sourcing date, license/provenance, and `listening review: none` (until reviewed by ear). Set `audio` to `pass` (technical delivery complete, listening unverified) or `ready`/`fail` with explicit notes.
+
+---
+
+## Archived · Studio v2 / v1 Audio Producer contract (Episodes 001–005 & Arc 01)
+
+> Archived on 2026-11-24. Retained for historical reference only; do not use single-narrator masters or rewind/jolt stingers for Studio v3 episodes.
 
 ### v2 Foley ownership split
 

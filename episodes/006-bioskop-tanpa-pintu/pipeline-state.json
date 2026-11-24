@@ -1,4 +1,7 @@
 {
+  "episodeStatus": "paused",
+  "pausedOn": "2026-11-24",
+  "pauseReason": "Paused by owner decision on 2026-11-24 when switching the repository to Studio v3 (Arsip Terakhir) after audiences did not respond to Studio v2 (Episodes 001–005). All existing Scenario 006 files are preserved untouched.",
   "brief": {
     "status": "ready",
     "notes": "Revised 24 Nov after owner reported bad narration. Script is 243 words, with linked phrases, a clearer false-exit hook and a stage-light motif. Prior audio remains as a historical take. Revised scratch timing is 162.27 seconds and requires Investigator measurement."
