@@ -1,7 +1,7 @@
 # Strict Cold-Read Input
 
 - **Script ID:** `arsip03-jahitan-langit`
-- **Script SHA-256:** `8f92e9cfc64151a23aded2a3aa50fe8eae9dc9c5efd55ec5c972ee6f2d520639`
+- **Script SHA-256:** `55a377652d896c9856bf14317116eeb76e78388baa51c391a9334e1953508c43`
 
 This document contains ONLY the permitted on-screen/subtitle blind-review fields (no brief prose, no clue ledger, no audio/production notes). Answer Q1–Q4 based strictly on the material below.
 
@@ -31,6 +31,6 @@ Nadia, 23.13: bima? gw ke sana
 Nadia, 23.13, voice-note subtitle: Bima? ... Gil, di sini gelap banget. Gw ga nemu—
 Gilang, 23.13: nadia? bima?
 Gilang, 23.13, voice-note subtitle: Gw nyusul bentar.
-Evidence label: Gilang, Bima, Nadia hilang · HP ditemukan 03.42 di log kayu
+Evidence label: Gilang, Bima, Nadia hilang · 03.42
 Tanpa Nama, 23.13, photo m21: Flash photo taken from outside through a wide-open metal zipper in a dark fabric wall, looking slightly down into a small campsite: a compact dome tent, a dying campfire, two empty folding chairs, and a lit smartphone resting on a wooden log.
 Tanpa Nama, 23.13, voice-note subtitle: [suara resleting besar menutup]

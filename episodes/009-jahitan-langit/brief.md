@@ -45,7 +45,7 @@ Shape: **Normal → odd detail → escalation → silence or reveal**. Hook suda
 | 00:10.8–00:24.2 | 324–726 | Clue plant + escalation | `m5`–`m10` | Hujan terdengar di atas, tanah kering; Bima menyorot senter ke atas dan menemukan kain berjahit ganda; Nadia menyuruh turun; Bima mengikuti jalur jahitan ke bawah. |
 | 00:24.2–00:39.2 | 726–1176 | Escalation | `m10`–`m15` | Bima menemukan resleting raksasa, membukanya sedikit, lalu melapor dari luar: kosong, tanpa angin, tanpa apa pun. |
 | 00:39.2–00:54.6 | 1176–1638 | Escalation / silence | `m15`–`m19` | Nadia menyusul dan terputus; pesan Gilang tidak dibaca; Gilang meninggalkan ponsel dan menyusul. |
-| 00:54.6–00:57.4 | 1638–1722 | Silence / evidence | `m20` | Kartu bukti: tiga orang hilang, ponsel ditemukan pukul 03.42 di log kayu. Hard drop keheningan. |
+| 00:54.6–00:57.4 | 1638–1722 | Silence / evidence | `m20` | Kartu bukti menyebut tiga orang hilang dan pukul 03.42. Hard drop keheningan. |
 | 00:57.4–01:04.0 | 1722–1920 | Reveal | `m21`–`m22` | `Tanpa Nama` mengirim foto dari luar resleting yang terbuka, lalu VN resleting besar menutup. |
 
 ## One-Watch Comprehension Plan (Q1–Q4) & Archive Metadata
@@ -55,10 +55,10 @@ Setelah **satu** tontonan, penonton dingin harus bisa menjawab Q1–Q4 dari arte
 - **Q1 (Whose phone is this archive?):** Strip `HP milik: Gilang` + bubble keluar di sisi kanan dari `selfId: gilang` (m3, m7, m11, m18, m19). Nama grup “Kemah Bukit Lengang · 3 anggota” dan ketiga nama peserta konsisten.
 - **Q2 (What was wrong?):** Jahitan ganda di langit (m1), asap mendatar (m2), hujan di atas kain tapi tanah kering (m5–m6), kain tenun berjahit ganda saat senter diarahkan ke atas (m8), dan resleting logam raksasa (m12). Penonton menyimpulkan: langit adalah atap kanvas; resleting adalah satu-satunya bukaan.
 - **Q3 (What happened to the others?):** Bima membuka resleting dan melapor dari luar bahwa di sana kosong dan tanpa angin (m13–m15), lalu berhenti membalas. Nadia menyusul, VN-nya terputus saat mencari Bima (m16–m17), lalu diam. Kartu bukti menyatakan Bima dan Nadia hilang.
-- **Q4 (What probably happened to the phone owner?):** Gilang menulis “nadia? bima?” dengan tanda `delivered` tetapi tidak pernah `read` (m18), lalu VN “Gw nyusul bentar.” (m19). Kartu bukti menyatakan ketiganya hilang dan ponsel ditemukan di log kayu pukul 03.42; foto terakhir memperlihatkan ponselnya masih menyala di log. Penonton menyimpulkan Gilang keluar menyusul dan tidak kembali.
+- **Q4 (What probably happened to the phone owner?):** Gilang menulis “nadia? bima?” dengan tanda `delivered` tetapi tidak pernah `read` (m18), lalu VN “Gw nyusul bentar.” (m19). Kartu bukti menyatakan ketiganya hilang dan menampilkan pukul 03.42; foto terakhir memperlihatkan ponsel menyala di log yang kemungkinan miliknya. Arti waktu 03.42 tidak dinyatakan dalam label. Penonton menyimpulkan Gilang keluar menyusul dan tidak kembali.
 - **Archive metadata tags (max 2 short factual lines, `>= 42 px`, inside safe zone, facts only):**
   1. `HP milik: Gilang` (strip identitas di bawah header)
-  2. `Gilang, Bima, Nadia hilang · HP ditemukan 03.42 di log kayu` (kartu bukti sebelum artefak terakhir `Tanpa Nama`)
+  2. `Gilang, Bima, Nadia hilang · 03.42` (kartu bukti sebelum artefak terakhir `Tanpa Nama`)
 
 ## Cold-Read Result (Model Proxy — NOT Audience Evidence)
 
@@ -90,9 +90,20 @@ Model proxy only, not audience evidence. Reviewer saw only `sources/cold-read-in
 - **Confusion:** ?I cannot tell exactly where the three went or whether Bima actually crossed through the opening. The final image makes the campsite look enclosed behind the zipper, which then closes. The name Tanpa Nama does not establish who took the image or made the recording.?
 - **Gate:** pass for Q1?Q4. The locations and fate remain inferential; first-viewer human verification remains pending. The reviewer flagged the transcribed-hash discrepancy; the file itself was independently hashed as above.
 
-### Timing-only rebind after voice generation
+### Historical v1 timing-only rebind after voice generation
 
-Current script SHA-256: `8f92e9cfc64151a23aded2a3aa50fe8eae9dc9c5efd55ec5c972ee6f2d520639`. Six event positions changed solely to fit measured clips: m6 432?437, m11 852?854, m16 1284?1322, m17 1350?1363, m18 1476?1513 and m19 1530?1550. The exporter output before and after these changes is byte-for-byte identical after excluding its SHA line; the fresh-context answers above remain the original verbatim answers, not a newly performed review. No dialogue or literal still description changed. See `sources/cold-read-input-initial.md` and `sources/cold-read-input.md`.
+V1 script SHA-256: `8f92e9cfc64151a23aded2a3aa50fe8eae9dc9c5efd55ec5c972ee6f2d520639`. Six event positions changed solely to fit measured clips: m6 432 to 437, m11 852 to 854, m16 1284 to 1322, m17 1350 to 1363, m18 1476 to 1513 and m19 1530 to 1550. The exporter output before and after these changes is byte-for-byte identical after excluding its SHA line; the fresh-context answers above remain the original verbatim answers, not a newly performed review. No dialogue or literal still description changed. See `sources/cold-read-input-initial.md` and `sources/cold-read-input-v1.md`.
+
+### Fresh-context blind cold-read - v2 evidence label (2026-11-25)
+
+Model proxy, not audience evidence. The reviewer saw only `sources/cold-read-input.md`, whose printed script SHA-256 `55a377652d896c9856bf14317116eeb76e78388baa51c391a9334e1953508c43` matches the locally measured script. The reviewer did not independently hash the script. Answers and confusion notes below are verbatim:
+
+- **Q1:** Gilang’s phone; the evidence label says “HP milik: Gilang.”
+- **Q2:** The sky above the campsite was apparently a stitched fabric enclosure rather than an ordinary sky. Bima found and opened a huge zipper; he said that outside was empty. This enclosure interpretation is an inference from the photos and dialogue, while the sideways smoke and rain that did not reach the ground are observed/reported oddities.
+- **Q3:** Bima went to the zipper and spoke from a dark, empty outside; Nadia went after him and then her voice note cut off while she searched for him. The later evidence label says Bima and Nadia are missing; their precise fate is unknown.
+- **Q4:** Gilang likely went after them and disappeared too, leaving his phone at the campsite. The label says he is missing, the final photo shows a lit phone on the log, and the zipper-closing sound suggests the enclosure closed again; his exact location and fate are unknown.
+- **Ambiguity/confusion:** The evidence label supplies the missing-person outcome explicitly rather than showing each disappearance. The photo does not establish with certainty that the phone on the log is Gilang’s, nor exactly where the three people went. The photo and closing sound support an enclosure/zipper reading but do not establish who closed it.
+- **Gate decision:** Q1-Q4 pass as a model proxy; causal and ownership uncertainties above remain for a human cold-watch review. The earlier v1 cold-read results remain historical records and refer to the earlier evidence wording.
 
 ## Fair-Play Clue Ledger
 
@@ -116,8 +127,8 @@ Formula: setiap pesan baru ditahan minimal **`180 ms × kata + 600 ms`**, minimu
 
 - **Script file** — `episodes/009-jahitan-langit/chat-script.json`
 - **Total events / text messages / voice notes / stills / evidence cards** — `22 / 9 / 7 / 5 / 1`
-- **Total on-screen words (chat + caption + VN subtitle + evidence)** — `105`
-- **Minimum required reading hold sum vs planned runtime** — **≈ 33.8 s** total hold minimum; planned **64.00 s**, semua jarak antar-event lolos.
+- **Total on-screen words (chat + caption + VN subtitle + evidence)** — `100`
+- **Minimum required reading hold sum vs planned runtime** — **≈ 31.7 s** total hold minimum; planned **64.00 s**, semua jarak antar-event lolos.
 
 | Event | At (frame) | Time (s) | Type | Words | Min Hold (s) | Gap to Next (s) |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -140,7 +151,7 @@ Formula: setiap pesan baru ditahan minimal **`180 ms × kata + 600 ms`**, minimu
 | `m17` | 1363 | 45.43 | voice | 9 | 2.22 | 5.00 |
 | `m18` | 1513 | 50.43 | text | 2 | 1.20 | 1.23 |
 | `m19` | 1550 | 51.67 | voice | 3 | 1.20 | 2.93 |
-| `m20` | 1638 | 54.60 | evidence | 10 | 2.40 | 2.80 |
+| `m20` | 1638 | 54.60 | evidence | 5 | 1.50 | 2.80 |
 | `m21` | 1722 | 57.40 | photo | 0 | 1.20 | 2.80 |
 | `m22` | 1806 | 60.20 | voice (unplayed) | 4 | 1.32 | 3.80 tail |
 

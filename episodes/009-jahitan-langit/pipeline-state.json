@@ -1,7 +1,7 @@
 {
   "brief": {
     "status": "pass",
-    "notes": "Fresh-context model proxy passed Q1?Q4 for a1060a68751014cb16fbac899f7209679842202f030ca857215f640c405a6e37; input-equivalent timing-only rebind to 8f92e9cfc64151a23aded2a3aa50fe8eae9dc9c5efd55ec5c972ee6f2d520639. Not audience evidence."
+    "notes": "Fresh-context blind model proxy passed Q1-Q4 for v2 script SHA-256 55a377652d896c9856bf14317116eeb76e78388baa51c391a9334e1953508c43; not human audience evidence."
   },
   "audio": {
     "status": "pass",
@@ -13,19 +13,19 @@
   },
   "render": {
     "status": "ready",
-    "notes": "64 s v1 rendered and measured; all required checks pass, source and delivery still require listening and independent review. SHA-256 43b450d765360ac04ee8c1329211f6bafec144fd16ef070f3f4318fba1b330c0."
+    "notes": "v2 rendered and measured; m20 displays one physical line. Fresh independent v2 audit and owner listening remain pending. SHA-256 00fb9a85bceb2ff8168c87622806a4a88d1b000680e7c3cbc663de4d52aae8da."
   },
   "audit": {
     "status": "pending",
-    "notes": "No rendered artifact exists for independent audit."
+    "notes": "Agent 05 failed v1 on the m20 rendered metadata line count; v2 needs an independent post-export audit. See audit-report.md for v1."
   },
   "publish": {
     "status": "pending",
     "notes": "Not authorized."
   },
   "latestRendered": {
-    "path": "out/009-jahitan-langit/arsip03-jahitan-langit-v1.mp4",
-    "sha256": "43b450d765360ac04ee8c1329211f6bafec144fd16ef070f3f4318fba1b330c0"
+    "path": "out/009-jahitan-langit/arsip03-jahitan-langit-v2.mp4",
+    "sha256": "00fb9a85bceb2ff8168c87622806a4a88d1b000680e7c3cbc663de4d52aae8da"
   },
   "independentlyAudited": null,
   "ownerReviewed": null,

@@ -35,4 +35,4 @@ This is an observed candidate-render appearance, not owner-approved canon; no ea
 | **ARSIP #003** | `episodes/009-jahitan-langit` | `m21` | `57.40 s` / frame `1722` | Final sequence (photo) | `Tanpa Nama` sends an uncaptioned photo taken from outside through an open zipper, showing a dome tent, dying campfire, two empty chairs, and a lit phone on a log. |
 | **ARSIP #003** | `episodes/009-jahitan-langit` | `m22` | `60.20 s` / frame `1806` | Final artifact (voice note) | `Tanpa Nama` sends a voice note subtitled `[suara resleting besar menutup]`. |
 
-These are scripted appearances; the episode has not been rendered or reviewed.
+The v1 candidate was rendered and its m21 and m22 appearances inspected in the Agent 05 audit. That audit failed v1 for a separate evidence-label line-count issue; no owner approval or v2 audit is claimed.

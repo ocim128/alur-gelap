@@ -1,4 +1,16 @@
-# Review ? ARSIP #003 ?Jahitan Langit? v1
+# Review - ARSIP #003 v2 (2026-11-25)
+
+- **Delivery:** `out/009-jahitan-langit/arsip03-jahitan-langit-v2.mp4` (SHA-256 `00fb9a85bceb2ff8168c87622806a4a88d1b000680e7c3cbc663de4d52aae8da`), `Arsip03JahitanLangit`, 64.00 s, 1080 x 1920, 30 fps. The 540p preview is `out/009-jahitan-langit/arsip03-jahitan-langit-v2-preview-540p.mp4`.
+- **visual-state:** Agent 05 failed v1 because the evidence card wrapped to two physical lines in addition to the owner strip. The v2 frame `out/009-jahitan-langit/frame-v2-m20.png`, decoded at frame 1645 from the final compressed MP4, shows `Gilang, Bima, Nadia hilang · 03.42` on one line and `HP milik: Gilang` on one line. This is the builder's observation; the new export still requires independent audit.
+- **experience:** Fresh-context blind model proxy passed Q1-Q4 against the revised script SHA-256 `55a377652d896c9856bf14317116eeb76e78388baa51c391a9334e1953508c43`; exact answers and ambiguity notes are in `brief.md`. It is not audience evidence.
+- **signal/timing:** `npm run check` passed: 91 Node tests and 20 Python tests, zero failures and skips. `verify-v3-export.py` passed on the final v2: -15.7 LUFS, -3.2 dBTP; 610 active 100 ms windows, minimum -39.85 dBFS; 54.65-57.35 s silence-drop interior -67.50 dBFS RMS, maximum window -62.75 dBFS; zero exact digital-zero samples out of 6,144,000. Hash-bound report: `out/009-jahitan-langit/verify-v2.json`.
+- **signal/timing:** The v2 render's video stream was remuxed with the existing v1 final AAC audio using `ffmpeg -i <v2-render-initial.mp4> -i <v1.mp4> -map 0:v:0 -map 1:a:0 -c copy -movflags +faststart <v2.mp4>`. Compressed audio payload SHA-256 is `5baa53966b4d919180ebe6dbcbefe018094315147f72ffc15626cf7d6c9bdc8c` in both files. No still or audio asset was regenerated. The v1 MP4 is preserved.
+- **human-listening:** listening review: none. No human listening review is claimed for v2; VN delivery and cutoff, sound mix and final zipper recognizability remain unverified. First-watch comprehension, full-motion phone viewing, color, rights, owner review and independent v2 audit remain open.
+- **visual-state:** Contact sheet `out/009-jahitan-langit/contact-sheet-3s-v2.jpg` samples the compressed MP4 every 90 frames from frame 0. The previous v1 independent audit and its FAIL verdict remain historical and apply only to the v1 hash, not v2.
+
+---
+
+# Review - ARSIP #003 Jahitan Langit v1 (historical, before Agent 05 audit)
 
 - **Composition:** `Arsip03JahitanLangit`, 1920 frames / 64.00 s, 1080 ? 1920, 30 fps.
 - **Delivery:** `out/009-jahitan-langit/arsip03-jahitan-langit-v1.mp4`; SHA-256 `43b450d765360ac04ee8c1329211f6bafec144fd16ef070f3f4318fba1b330c0`. Preview: `out/009-jahitan-langit/arsip03-jahitan-langit-v1-preview-540p.mp4`.
