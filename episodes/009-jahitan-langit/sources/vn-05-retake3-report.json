@@ -1,0 +1,142 @@
+{
+  "version": 1,
+  "voiceId": "Leda",
+  "voiceName": "Leda",
+  "provider": "gemini-cloud",
+  "model": "gemini-3.8-flash-tts",
+  "master": false,
+  "masterFilter": null,
+  "asrModel": "small",
+  "generatedAt": "2026-11-24T22:35:35.564Z",
+  "passed": false,
+  "totalChunks": 1,
+  "verifiedChunks": 0,
+  "warningChunks": 0,
+  "failedChunks": 1,
+  "plannedDurationSec": 5.285,
+  "finalAlignment": {
+    "transcript": "Bima, Gil. Di sini gelap banget. Gue ga nemu.",
+    "mismatches": [
+      {
+        "expected": "gak",
+        "heard": "ga"
+      }
+    ],
+    "passed": false
+  },
+  "audioQuality": {
+    "integratedLufs": -11.7,
+    "loudnessRangeLu": 1.9,
+    "noiseFloorDbfs": -12.9,
+    "targets": {
+      "integratedLufs": -14,
+      "loudnessRangeLu": [
+        5,
+        7
+      ]
+    }
+  },
+  "chunks": [
+    {
+      "index": 0,
+      "tag": null,
+      "text": "Bima, Gil, di sini gelap banget, gue gak nemu",
+      "retries": 2,
+      "status": "failed",
+      "bestSimilarity": 1,
+      "bestWordRatio": 1,
+      "acceptedAttempt": 1,
+      "attempts": [
+        {
+          "seed": 0,
+          "wordRatio": 0.778,
+          "similarity": 0.93,
+          "wpm": 117,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.75): heard \"bima gil disini gelap banget aku nggak nemu\"",
+            "raw: char similarity 0.92 < 0.94",
+            "word mismatch (ratio 0.78): heard \"bima gil di sini gelap banget aku nggak nemu\"",
+            "char similarity 0.93 < 0.94"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Bima, Gil. Di sini gelap banget. Aku nggak nemu.",
+          "mismatches": [
+            {
+              "expected": "gue",
+              "heard": "aku"
+            },
+            {
+              "expected": "gak",
+              "heard": "nggak"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Bima, Gil, disini gelap banget, aku nggak nemu.",
+          "rawMismatches": [
+            {
+              "expected": "gue",
+              "heard": "aku"
+            },
+            {
+              "expected": "gak",
+              "heard": "nggak"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.75): heard \"bima gil disini gelap banget aku nggak nemu\"",
+            "char similarity 0.92 < 0.94"
+          ]
+        },
+        {
+          "seed": 1,
+          "wordRatio": 1,
+          "similarity": 1,
+          "wpm": 102,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: 92 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Bima, Gil, di sini gelap banget, gue gak nemu.",
+          "mismatches": [],
+          "endTruncated": false,
+          "rawTranscript": "Bima, Gil, di sini gelap banget, gue gak nemu.",
+          "rawMismatches": [],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "92 wpm outside 130±25%"
+          ]
+        },
+        {
+          "seed": 2,
+          "wordRatio": 1,
+          "similarity": 1,
+          "wpm": 172,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "172 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Bima, Gil, di sini gelap banget. Gue gak nemu.",
+          "mismatches": [],
+          "endTruncated": false,
+          "rawTranscript": "Bima, Gil, di sini gelap banget. Gue gak nemu.",
+          "rawMismatches": [],
+          "rawEndTruncated": false,
+          "rawReasons": []
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,168 @@
+{
+  "version": 1,
+  "voiceId": "Puck",
+  "voiceName": "Puck",
+  "provider": "gemini-cloud",
+  "model": "gemini-3.8-flash-tts",
+  "master": false,
+  "masterFilter": null,
+  "asrModel": "small",
+  "generatedAt": "2026-11-24T22:30:29.670Z",
+  "passed": false,
+  "totalChunks": 1,
+  "verifiedChunks": 0,
+  "warningChunks": 0,
+  "failedChunks": 1,
+  "plannedDurationSec": 4.205,
+  "finalAlignment": {
+    "transcript": "Iya, ada jalur jahitannya ke bawah. Gue ikutin dulu.",
+    "mismatches": [
+      {
+        "expected": "gw",
+        "heard": "gue"
+      }
+    ],
+    "passed": false
+  },
+  "audioQuality": {
+    "integratedLufs": -14.8,
+    "loudnessRangeLu": 1,
+    "noiseFloorDbfs": -16,
+    "targets": {
+      "integratedLufs": -14,
+      "loudnessRangeLu": [
+        5,
+        7
+      ]
+    }
+  },
+  "chunks": [
+    {
+      "index": 0,
+      "tag": null,
+      "text": "Iya. Ada jalur jahitannya ke bawah. Gw ikutin dulu.",
+      "retries": 2,
+      "status": "failed",
+      "bestSimilarity": 0.969,
+      "bestWordRatio": 0.889,
+      "acceptedAttempt": 0,
+      "attempts": [
+        {
+          "seed": 0,
+          "wordRatio": 0.889,
+          "similarity": 0.969,
+          "wpm": 128,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.89): heard \"iya ada jalur jahitannya ke bawah gue ikutin dulu\"",
+            "word mismatch (ratio 0.89): heard \"iya ada jalur jahitannya ke bawah gue ikutin dulu\""
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Iya, ada jalur jahitannya ke bawah. Gue ikutin dulu.",
+          "mismatches": [
+            {
+              "expected": "gw",
+              "heard": "gue"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Iya, ada jalur jahitannya ke bawah. Gue ikutin dulu.",
+          "rawMismatches": [
+            {
+              "expected": "gw",
+              "heard": "gue"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.89): heard \"iya ada jalur jahitannya ke bawah gue ikutin dulu\""
+          ]
+        },
+        {
+          "seed": 1,
+          "wordRatio": 0.778,
+          "similarity": 0.948,
+          "wpm": 165,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.78): heard \"iya ada jalur jagitannya ke bawah gue ikutin dulu\"",
+            "word mismatch (ratio 0.78): heard \"iya ada jalur jagitannya ke bawah gue ikutin dulu\"",
+            "165 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Iya, ada jalur jagitannya ke bawah, gue ikutin dulu",
+          "mismatches": [
+            {
+              "expected": "jahitannya",
+              "heard": "jagitannya"
+            },
+            {
+              "expected": "gw",
+              "heard": "gue"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "iya, ada jalur jagitannya ke bawah, gue ikutin dulu",
+          "rawMismatches": [
+            {
+              "expected": "jahitannya",
+              "heard": "jagitannya"
+            },
+            {
+              "expected": "gw",
+              "heard": "gue"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.78): heard \"iya ada jalur jagitannya ke bawah gue ikutin dulu\""
+          ]
+        },
+        {
+          "seed": 2,
+          "wordRatio": 0.778,
+          "similarity": 0.958,
+          "wpm": 158,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.89): heard \"iya ada jalur jahitannya ke bawah gue ikutin dulu\"",
+            "word mismatch (ratio 0.78): heard \"iya ada jalur jahitannya ke bawah gue ikuti dulu\""
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Iya, ada jalur jahitannya ke bawah. Gue ikuti dulu.",
+          "mismatches": [
+            {
+              "expected": "gw",
+              "heard": "gue"
+            },
+            {
+              "expected": "ikutin",
+              "heard": "ikuti"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Iya, ada jalur jahitannya ke bawah, gue ikutin dulu.",
+          "rawMismatches": [
+            {
+              "expected": "gw",
+              "heard": "gue"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.89): heard \"iya ada jalur jahitannya ke bawah gue ikutin dulu\""
+          ]
+        }
+      ]
+    }
+  ]
+}

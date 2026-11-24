@@ -70,7 +70,10 @@
       "reviewPath": "episodes/009-jahitan-langit/review.md",
       "captionDraftPath": "episodes/009-jahitan-langit/caption-draft.md",
       "pipelineStatePath": "episodes/009-jahitan-langit/pipeline-state.json",
-      "latestRendered": null,
+      "latestRendered": {
+        "path": "out/009-jahitan-langit/arsip03-jahitan-langit-v1.mp4",
+        "sha256": "43b450d765360ac04ee8c1329211f6bafec144fd16ef070f3f4318fba1b330c0"
+      },
       "independentlyAudited": null,
       "ownerReviewed": null,
       "published": null

@@ -90,6 +90,10 @@ Model proxy only, not audience evidence. Reviewer saw only `sources/cold-read-in
 - **Confusion:** ?I cannot tell exactly where the three went or whether Bima actually crossed through the opening. The final image makes the campsite look enclosed behind the zipper, which then closes. The name Tanpa Nama does not establish who took the image or made the recording.?
 - **Gate:** pass for Q1?Q4. The locations and fate remain inferential; first-viewer human verification remains pending. The reviewer flagged the transcribed-hash discrepancy; the file itself was independently hashed as above.
 
+### Timing-only rebind after voice generation
+
+Current script SHA-256: `8f92e9cfc64151a23aded2a3aa50fe8eae9dc9c5efd55ec5c972ee6f2d520639`. Six event positions changed solely to fit measured clips: m6 432?437, m11 852?854, m16 1284?1322, m17 1350?1363, m18 1476?1513 and m19 1530?1550. The exporter output before and after these changes is byte-for-byte identical after excluding its SHA line; the fresh-context answers above remain the original verbatim answers, not a newly performed review. No dialogue or literal still description changed. See `sources/cold-read-input-initial.md` and `sources/cold-read-input.md`.
+
 ## Fair-Play Clue Ledger
 
 Minimal satu clue visual berada di **40% pertama** dan terbaca di ukuran ponsel. Payoff selalu ditunjukkan lewat artefak, tidak pernah dijelaskan karakter.
@@ -121,28 +125,28 @@ Formula: setiap pesan baru ditahan minimal **`180 ms × kata + 600 ms`**, minimu
 | `m2` | 84 | 2.80 | photo + caption | 5 | 1.50 | 3.00 |
 | `m3` | 174 | 5.80 | text | 4 | 1.32 | 2.40 |
 | `m4` | 246 | 8.20 | text | 8 | 2.04 | 2.60 |
-| `m5` | 324 | 10.80 | voice | 8 | 2.04 | 3.60 |
-| `m6` | 432 | 14.40 | text | 3 | 1.20 | 1.80 |
+| `m5` | 324 | 10.80 | voice | 8 | 2.04 | 3.77 |
+| `m6` | 437 | 14.57 | text | 3 | 1.20 | 1.63 |
 | `m7` | 486 | 16.20 | text | 4 | 1.32 | 2.20 |
 | `m8` | 552 | 18.40 | photo + caption | 3 | 1.20 | 3.60 |
 | `m9` | 660 | 22.00 | text | 3 | 1.20 | 2.20 |
-| `m10` | 726 | 24.20 | voice | 9 | 2.22 | 4.20 |
-| `m11` | 852 | 28.40 | text | 3 | 1.20 | 2.00 |
+| `m10` | 726 | 24.20 | voice | 9 | 2.22 | 4.27 |
+| `m11` | 854 | 28.47 | text | 3 | 1.20 | 1.93 |
 | `m12` | 912 | 30.40 | photo + caption | 2 | 1.20 | 3.20 |
 | `m13` | 1008 | 33.60 | voice | 6 | 1.68 | 3.80 |
 | `m14` | 1122 | 37.40 | text | 2 | 1.20 | 1.80 |
-| `m15` | 1176 | 39.20 | voice | 10 | 2.40 | 3.60 |
-| `m16` | 1284 | 42.80 | text | 4 | 1.32 | 2.20 |
-| `m17` | 1350 | 45.00 | voice | 9 | 2.22 | 4.20 |
-| `m18` | 1476 | 49.20 | text | 2 | 1.20 | 1.80 |
-| `m19` | 1530 | 51.00 | voice | 3 | 1.20 | 3.60 |
+| `m15` | 1176 | 39.20 | voice | 10 | 2.40 | 4.87 |
+| `m16` | 1322 | 44.07 | text | 4 | 1.32 | 1.37 |
+| `m17` | 1363 | 45.43 | voice | 9 | 2.22 | 5.00 |
+| `m18` | 1513 | 50.43 | text | 2 | 1.20 | 1.23 |
+| `m19` | 1550 | 51.67 | voice | 3 | 1.20 | 2.93 |
 | `m20` | 1638 | 54.60 | evidence | 10 | 2.40 | 2.80 |
 | `m21` | 1722 | 57.40 | photo | 0 | 1.20 | 2.80 |
 | `m22` | 1806 | 60.20 | voice (unplayed) | 4 | 1.32 | 3.80 tail |
 
 ## Visuals List (5 Amateur Phone Photos)
 
-Style: foto ponsel malam yang autentik — noise ISO, flash keras, framing tidak sempurna, low-light — **bukan ilustrasi**, tanpa gore, tanpa merek atau orang nyata. Semua still **belum dibuat**; status aset `pending`.
+Style: foto ponsel malam yang autentik — noise ISO, flash keras, framing tidak sempurna, low-light — **bukan ilustrasi**, tanpa gore, tanpa merek atau orang nyata. Stills have been generated and inspected at 540 ? 960; see `assets.md` for limitations and provenance.
 
 **Glitch beats:** `6 f` di `m8` (saat kain terlihat) dan `8 f` di `m15` (saat VN udara mati). Intensitas rendah; tidak boleh membuat teks yang sedang terbaca tampil ganda. Tidak ada rewind loop.
 
@@ -156,7 +160,7 @@ Style: foto ponsel malam yang autentik — noise ISO, flash keras, framing tidak
 
 ## Audio & Sound-Design Cue Sheet (No Melodic Music; Diegetic Bed + Tension + Silence Drops)
 
-**No melodic music.** Semua suara non-melodik dan sebagian besar diegetik. Bed lokasi harus terdengar di speaker ponsel dan tidak boleh turun di bawah `-50 dBFS` kecuali pada `silence-1` yang memang tercatat. Semua aset audio **belum dibuat**; durasi VN adalah target yang harus diukur ulang setelah generasi.
+**No melodic music.** Semua suara non-melodik dan sebagian besar diegetik. Bed lokasi harus terdengar di speaker ponsel dan tidak boleh turun di bawah `-50 dBFS` kecuali pada `silence-1` yang memang tercatat. The cue sheet below is the original plan; measured takes and final timings are recorded in `assets.md` and `chat-script.json`.
 
 | Layer / Cue ID | Frame Range (30 fps) | Time (s) | Type (`location-bed` / `tension-drone` / `voice-note` / `ui-sfx` / `tanpa-nama-ping` / `silence-drop`) | Speaker / Asset | Exact Line / Sound Design & Target Level |
 | --- | --- | --- | --- | --- | --- |

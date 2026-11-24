@@ -1,0 +1,177 @@
+{
+  "version": 1,
+  "voiceId": "voice_71a5a701-796e-421d-840e-0adc00b0816a",
+  "voiceName": "voice_71a5a701-796e-421d-840e-0adc00b0816a",
+  "provider": "gemini-cloud",
+  "model": "gemini-3.8-flash-tts",
+  "master": false,
+  "masterFilter": null,
+  "asrModel": "small",
+  "generatedAt": "2026-11-24T22:30:26.201Z",
+  "passed": false,
+  "totalChunks": 1,
+  "verifiedChunks": 0,
+  "warningChunks": 0,
+  "failedChunks": 1,
+  "plannedDurationSec": 1.565,
+  "finalAlignment": {
+    "transcript": "Gue nyusul bentar",
+    "mismatches": [
+      {
+        "expected": "gw",
+        "heard": "gue"
+      }
+    ],
+    "passed": false
+  },
+  "audioQuality": {
+    "integratedLufs": -25.5,
+    "loudnessRangeLu": 0,
+    "noiseFloorDbfs": -25.1,
+    "targets": {
+      "integratedLufs": -14,
+      "loudnessRangeLu": [
+        5,
+        7
+      ]
+    }
+  },
+  "chunks": [
+    {
+      "index": 0,
+      "tag": null,
+      "text": "Gw nyusul bentar.",
+      "retries": 2,
+      "status": "failed",
+      "bestSimilarity": 0.909,
+      "bestWordRatio": 0.667,
+      "acceptedAttempt": 0,
+      "attempts": [
+        {
+          "seed": 0,
+          "wordRatio": 0.667,
+          "similarity": 0.909,
+          "wpm": 115,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.67): heard \"gue nyusul bentar\"",
+            "raw: char similarity 0.91 < 0.94",
+            "raw: 96 wpm outside 130±25%",
+            "word mismatch (ratio 0.67): heard \"gua nyusul bentar\"",
+            "char similarity 0.91 < 0.94"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Gua nyusul bentar.",
+          "mismatches": [
+            {
+              "expected": "gw",
+              "heard": "gua"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Gue nyusul bentar",
+          "rawMismatches": [
+            {
+              "expected": "gw",
+              "heard": "gue"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.67): heard \"gue nyusul bentar\"",
+            "char similarity 0.91 < 0.94",
+            "96 wpm outside 130±25%"
+          ]
+        },
+        {
+          "seed": 1,
+          "wordRatio": 0.667,
+          "similarity": 0.909,
+          "wpm": 123,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.67): heard \"gua nyusul bentar\"",
+            "raw: char similarity 0.91 < 0.94",
+            "word mismatch (ratio 0.67): heard \"gua nyusul bentar\"",
+            "char similarity 0.91 < 0.94"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Gua nyusul bentar.",
+          "mismatches": [
+            {
+              "expected": "gw",
+              "heard": "gua"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Gua nyusul bentar.",
+          "rawMismatches": [
+            {
+              "expected": "gw",
+              "heard": "gua"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.67): heard \"gua nyusul bentar\"",
+            "char similarity 0.91 < 0.94"
+          ]
+        },
+        {
+          "seed": 2,
+          "wordRatio": 0.333,
+          "similarity": 0.882,
+          "wpm": 125,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.33): heard \"gua nyusul bentara\"",
+            "raw: last word missing, truncated, or has invalid timestamps",
+            "raw: char similarity 0.88 < 0.94",
+            "word mismatch (ratio 0.33): heard \"gua nyusul bentara\"",
+            "last word missing, truncated, or has invalid timestamps",
+            "char similarity 0.88 < 0.94"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Gua nyusul bentara.",
+          "mismatches": [
+            {
+              "expected": "gw",
+              "heard": "gua"
+            },
+            {
+              "expected": "bentar",
+              "heard": "bentara"
+            }
+          ],
+          "endTruncated": true,
+          "rawTranscript": "Gua nyusul bentara.",
+          "rawMismatches": [
+            {
+              "expected": "gw",
+              "heard": "gua"
+            },
+            {
+              "expected": "bentar",
+              "heard": "bentara"
+            }
+          ],
+          "rawEndTruncated": true,
+          "rawReasons": [
+            "word mismatch (ratio 0.33): heard \"gua nyusul bentara\"",
+            "last word missing, truncated, or has invalid timestamps",
+            "char similarity 0.88 < 0.94"
+          ]
+        }
+      ]
+    }
+  ]
+}

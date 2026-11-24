@@ -1,0 +1,68 @@
+{
+  "version": 1,
+  "voiceId": "Leda",
+  "durationSec": 3.025,
+  "master": false,
+  "chunks": [
+    {
+      "index": 0,
+      "tag": null,
+      "text": "Bima, Gil, di sini gelap banget, gue enggak nemu",
+      "start": 0,
+      "end": 3.025,
+      "retries": 2,
+      "status": "failed"
+    }
+  ],
+  "words": [
+    {
+      "word": "Bima!",
+      "start": 0,
+      "end": 0.5,
+      "chunk": 0
+    },
+    {
+      "word": "Gila",
+      "start": 0.72,
+      "end": 1.06,
+      "chunk": 0
+    },
+    {
+      "word": "disini",
+      "start": 1.06,
+      "end": 1.32,
+      "chunk": 0
+    },
+    {
+      "word": "gelap",
+      "start": 1.32,
+      "end": 1.58,
+      "chunk": 0
+    },
+    {
+      "word": "banget!",
+      "start": 1.58,
+      "end": 2,
+      "chunk": 0
+    },
+    {
+      "word": "Gue",
+      "start": 2.38,
+      "end": 2.54,
+      "chunk": 0
+    },
+    {
+      "word": "ga",
+      "start": 2.54,
+      "end": 2.68,
+      "chunk": 0
+    },
+    {
+      "word": "nemu!",
+      "start": 2.68,
+      "end": 2.94,
+      "chunk": 0
+    }
+  ],
+  "sfx": []
+}

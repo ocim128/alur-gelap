@@ -1,0 +1,155 @@
+{
+  "version": 1,
+  "voiceId": "Puck",
+  "voiceName": "Puck",
+  "provider": "gemini-cloud",
+  "model": "gemini-3.8-flash-tts",
+  "master": false,
+  "masterFilter": null,
+  "asrModel": "small",
+  "generatedAt": "2026-11-24T22:30:28.327Z",
+  "passed": false,
+  "totalChunks": 1,
+  "verifiedChunks": 0,
+  "warningChunks": 0,
+  "failedChunks": 1,
+  "plannedDurationSec": 2.565,
+  "finalAlignment": {
+    "transcript": "Gede banget, gue buka dikit ya.",
+    "mismatches": [
+      {
+        "expected": "gw",
+        "heard": "gue"
+      }
+    ],
+    "passed": false
+  },
+  "audioQuality": {
+    "integratedLufs": -16.4,
+    "loudnessRangeLu": 0,
+    "noiseFloorDbfs": -17.1,
+    "targets": {
+      "integratedLufs": -14,
+      "loudnessRangeLu": [
+        5,
+        7
+      ]
+    }
+  },
+  "chunks": [
+    {
+      "index": 0,
+      "tag": null,
+      "text": "Gede banget. Gw buka dikit ya.",
+      "retries": 2,
+      "status": "failed",
+      "bestSimilarity": 0.947,
+      "bestWordRatio": 0.833,
+      "acceptedAttempt": 0,
+      "attempts": [
+        {
+          "seed": 0,
+          "wordRatio": 0.833,
+          "similarity": 0.947,
+          "wpm": 140,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.83): heard \"gede banget gue buka dikit ya\"",
+            "word mismatch (ratio 0.83): heard \"gede banget gue buka dikit ya\""
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Gede banget, gue buka dikit ya.",
+          "mismatches": [
+            {
+              "expected": "gw",
+              "heard": "gue"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Gede banget Gue buka dikit ya",
+          "rawMismatches": [
+            {
+              "expected": "gw",
+              "heard": "gue"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.83): heard \"gede banget gue buka dikit ya\""
+          ]
+        },
+        {
+          "seed": 1,
+          "wordRatio": 0.833,
+          "similarity": 0.947,
+          "wpm": 141,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.83): heard \"gede banget gue buka dikit ya\"",
+            "word mismatch (ratio 0.83): heard \"gede banget gua buka dikit ya\""
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Gede banget, gua buka dikit ya.",
+          "mismatches": [
+            {
+              "expected": "gw",
+              "heard": "gua"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Gede banget! Gue buka dikit ya!",
+          "rawMismatches": [
+            {
+              "expected": "gw",
+              "heard": "gue"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.83): heard \"gede banget gue buka dikit ya\""
+          ]
+        },
+        {
+          "seed": 2,
+          "wordRatio": 0.833,
+          "similarity": 0.947,
+          "wpm": 108,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.83): heard \"gede banget gue buka dikit ya\"",
+            "word mismatch (ratio 0.83): heard \"gede banget gue buka dikit ya\""
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Gede banget. Gue buka dikit ya.",
+          "mismatches": [
+            {
+              "expected": "gw",
+              "heard": "gue"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Gede banget. Gue buka dikit ya.",
+          "rawMismatches": [
+            {
+              "expected": "gw",
+              "heard": "gue"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.83): heard \"gede banget gue buka dikit ya\""
+          ]
+        }
+      ]
+    }
+  ]
+}

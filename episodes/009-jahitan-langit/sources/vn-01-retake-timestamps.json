@@ -1,0 +1,68 @@
+{
+  "version": 1,
+  "voiceId": "Puck",
+  "durationSec": 3.705,
+  "master": false,
+  "chunks": [
+    {
+      "index": 0,
+      "tag": null,
+      "text": "Gil, hujannya bunyi di atas, ga nyampe tanah.",
+      "start": 0,
+      "end": 3.705,
+      "retries": 2,
+      "status": "failed"
+    }
+  ],
+  "words": [
+    {
+      "word": "Gil,",
+      "start": 0,
+      "end": 0.58,
+      "chunk": 0
+    },
+    {
+      "word": "hujannya",
+      "start": 1.04,
+      "end": 1.5,
+      "chunk": 0
+    },
+    {
+      "word": "bunyi",
+      "start": 1.5,
+      "end": 1.84,
+      "chunk": 0
+    },
+    {
+      "word": "di",
+      "start": 1.84,
+      "end": 1.94,
+      "chunk": 0
+    },
+    {
+      "word": "atas.",
+      "start": 1.94,
+      "end": 2.5,
+      "chunk": 0
+    },
+    {
+      "word": "Gak",
+      "start": 2.74,
+      "end": 2.94,
+      "chunk": 0
+    },
+    {
+      "word": "nyampe",
+      "start": 2.94,
+      "end": 3.18,
+      "chunk": 0
+    },
+    {
+      "word": "tanah.",
+      "start": 3.18,
+      "end": 3.54,
+      "chunk": 0
+    }
+  ],
+  "sfx": []
+}

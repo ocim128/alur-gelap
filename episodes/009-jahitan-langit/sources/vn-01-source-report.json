@@ -1,0 +1,199 @@
+{
+  "version": 1,
+  "voiceId": "Puck",
+  "voiceName": "Puck",
+  "provider": "gemini-cloud",
+  "model": "gemini-3.8-flash-tts",
+  "master": false,
+  "masterFilter": null,
+  "asrModel": "small",
+  "generatedAt": "2026-11-24T22:30:05.951Z",
+  "passed": false,
+  "totalChunks": 1,
+  "verifiedChunks": 0,
+  "warningChunks": 0,
+  "failedChunks": 1,
+  "plannedDurationSec": 3.885,
+  "finalAlignment": {
+    "transcript": "Gil, hujahnya bunyi di atas. Nggak nyampe tanah.",
+    "mismatches": [
+      {
+        "expected": "hujannya",
+        "heard": "hujahnya"
+      },
+      {
+        "expected": "ga",
+        "heard": "nggak"
+      }
+    ],
+    "passed": false
+  },
+  "audioQuality": {
+    "integratedLufs": -20.9,
+    "loudnessRangeLu": 1.5,
+    "noiseFloorDbfs": -22.5,
+    "targets": {
+      "integratedLufs": -14,
+      "loudnessRangeLu": [
+        5,
+        7
+      ]
+    }
+  },
+  "chunks": [
+    {
+      "index": 0,
+      "tag": null,
+      "text": "Gil, hujannya bunyi di atas, ga nyampe tanah.",
+      "retries": 2,
+      "status": "failed",
+      "bestSimilarity": 0.976,
+      "bestWordRatio": 0.75,
+      "acceptedAttempt": 1,
+      "attempts": [
+        {
+          "seed": 0,
+          "wordRatio": 0.625,
+          "similarity": 0.955,
+          "wpm": 138,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.63): heard \"gil hujiannya kebunyi di atas gak nyampe tanah\"",
+            "word mismatch (ratio 0.63): heard \"gil hujiannya kebunyi di atas gak nyampe tanah\""
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Gil, hujiannya kebunyi di atas, gak nyampe tanah.",
+          "mismatches": [
+            {
+              "expected": "hujannya",
+              "heard": "hujiannya"
+            },
+            {
+              "expected": "bunyi",
+              "heard": "kebunyi"
+            },
+            {
+              "expected": "ga",
+              "heard": "gak"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Gil, hujiannya kebunyi di atas, gak nyampe tanah.",
+          "rawMismatches": [
+            {
+              "expected": "hujannya",
+              "heard": "hujiannya"
+            },
+            {
+              "expected": "bunyi",
+              "heard": "kebunyi"
+            },
+            {
+              "expected": "ga",
+              "heard": "gak"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.63): heard \"gil hujiannya kebunyi di atas gak nyampe tanah\""
+          ]
+        },
+        {
+          "seed": 1,
+          "wordRatio": 0.75,
+          "similarity": 0.976,
+          "wpm": 124,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.75): heard \"gil hujahnya bunyi di atas gak nyampe tanah\"",
+            "word mismatch (ratio 0.75): heard \"gil hujanya bunyi di atas gak nyampe tanah\""
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Gil, hujanya bunyi di atas, gak nyampe tanah.",
+          "mismatches": [
+            {
+              "expected": "hujannya",
+              "heard": "hujanya"
+            },
+            {
+              "expected": "ga",
+              "heard": "gak"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Gil, hujahnya bunyi di atas, gak nyampe tanah.",
+          "rawMismatches": [
+            {
+              "expected": "hujannya",
+              "heard": "hujahnya"
+            },
+            {
+              "expected": "ga",
+              "heard": "gak"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.75): heard \"gil hujahnya bunyi di atas gak nyampe tanah\""
+          ]
+        },
+        {
+          "seed": 2,
+          "wordRatio": 0.625,
+          "similarity": 0.965,
+          "wpm": 138,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.63): heard \"gila hujanya bunyi di atas gak nyampe tanah\"",
+            "word mismatch (ratio 0.63): heard \"gila hujanya bunyi di atas gak nyampe tanah\""
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Gila, hujanya bunyi di atas, gak nyampe tanah.",
+          "mismatches": [
+            {
+              "expected": "gil",
+              "heard": "gila"
+            },
+            {
+              "expected": "hujannya",
+              "heard": "hujanya"
+            },
+            {
+              "expected": "ga",
+              "heard": "gak"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Gila, hujanya bunyi di atas, gak nyampe tanah.",
+          "rawMismatches": [
+            {
+              "expected": "gil",
+              "heard": "gila"
+            },
+            {
+              "expected": "hujannya",
+              "heard": "hujanya"
+            },
+            {
+              "expected": "ga",
+              "heard": "gak"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.63): heard \"gila hujanya bunyi di atas gak nyampe tanah\""
+          ]
+        }
+      ]
+    }
+  ]
+}

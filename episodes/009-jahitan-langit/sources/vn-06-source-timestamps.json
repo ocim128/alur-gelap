@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "voiceId": "voice_71a5a701-796e-421d-840e-0adc00b0816a",
+  "durationSec": 1.565,
+  "master": false,
+  "chunks": [
+    {
+      "index": 0,
+      "tag": null,
+      "text": "Gw nyusul bentar.",
+      "start": 0,
+      "end": 1.565,
+      "retries": 2,
+      "status": "failed"
+    }
+  ],
+  "words": [
+    {
+      "word": "Gue",
+      "start": 0,
+      "end": 0.52,
+      "chunk": 0
+    },
+    {
+      "word": "nyusul",
+      "start": 0.52,
+      "end": 1.16,
+      "chunk": 0
+    },
+    {
+      "word": "bentar",
+      "start": 1.16,
+      "end": 1.48,
+      "chunk": 0
+    }
+  ],
+  "sfx": []
+}

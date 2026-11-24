@@ -1,0 +1,197 @@
+{
+  "version": 1,
+  "voiceId": "Puck",
+  "voiceName": "Puck",
+  "provider": "gemini-cloud",
+  "model": "gemini-3.8-flash-tts",
+  "master": false,
+  "masterFilter": null,
+  "asrModel": "small",
+  "generatedAt": "2026-11-24T22:33:32.944Z",
+  "passed": false,
+  "totalChunks": 1,
+  "verifiedChunks": 0,
+  "warningChunks": 0,
+  "failedChunks": 1,
+  "plannedDurationSec": 4.825,
+  "finalAlignment": {
+    "transcript": "Gil, diluar kosong, nggak ada angin, nggak ada apa-apa.",
+    "mismatches": [
+      {
+        "expected": "enggak",
+        "heard": "nggak"
+      },
+      {
+        "expected": "enggak",
+        "heard": "nggak"
+      }
+    ],
+    "passed": false
+  },
+  "audioQuality": {
+    "integratedLufs": -21.2,
+    "loudnessRangeLu": 1,
+    "noiseFloorDbfs": -23,
+    "targets": {
+      "integratedLufs": -14,
+      "loudnessRangeLu": [
+        5,
+        7
+      ]
+    }
+  },
+  "chunks": [
+    {
+      "index": 0,
+      "tag": null,
+      "text": "Gil, di luar kosong, enggak ada angin, enggak ada apa-apa",
+      "retries": 2,
+      "status": "failed",
+      "bestSimilarity": 0.971,
+      "bestWordRatio": 0.8,
+      "acceptedAttempt": 0,
+      "attempts": [
+        {
+          "seed": 0,
+          "wordRatio": 0.8,
+          "similarity": 0.971,
+          "wpm": 137,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.80): heard \"gil diluar kosong nggak ada angin nggak ada apa apa\"",
+            "word mismatch (ratio 0.80): heard \"gil diluar kosong nggak ada angin nggak ada apa apa\""
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Gil, diluar kosong, nggak ada angin, nggak ada apa-apa.",
+          "mismatches": [
+            {
+              "expected": "enggak",
+              "heard": "nggak"
+            },
+            {
+              "expected": "enggak",
+              "heard": "nggak"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Gil, diluar kosong, nggak ada angin, nggak ada apa-apa.",
+          "rawMismatches": [
+            {
+              "expected": "enggak",
+              "heard": "nggak"
+            },
+            {
+              "expected": "enggak",
+              "heard": "nggak"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.80): heard \"gil diluar kosong nggak ada angin nggak ada apa apa\""
+          ]
+        },
+        {
+          "seed": 1,
+          "wordRatio": 0.8,
+          "similarity": 0.931,
+          "wpm": 147,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.80): heard \"gil diluar kosong gak ada angin gak ada apa apa\"",
+            "raw: char similarity 0.93 < 0.94",
+            "word mismatch (ratio 0.80): heard \"gil diluar kosong gak ada angin gak ada apa apa\"",
+            "char similarity 0.93 < 0.94"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Gil, diluar kosong, gak ada angin, gak ada apa-apa.",
+          "mismatches": [
+            {
+              "expected": "enggak",
+              "heard": "gak"
+            },
+            {
+              "expected": "enggak",
+              "heard": "gak"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Gil, diluar kosong, gak ada angin, gak ada apa-apa.",
+          "rawMismatches": [
+            {
+              "expected": "enggak",
+              "heard": "gak"
+            },
+            {
+              "expected": "enggak",
+              "heard": "gak"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.80): heard \"gil diluar kosong gak ada angin gak ada apa apa\"",
+            "char similarity 0.93 < 0.94"
+          ]
+        },
+        {
+          "seed": 2,
+          "wordRatio": 0.7,
+          "similarity": 0.922,
+          "wpm": 145,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.70): heard \"gila diluar kosong gak ada angin gak ada apa apa\"",
+            "raw: char similarity 0.92 < 0.94",
+            "word mismatch (ratio 0.70): heard \"gila diluar kosong gak ada angin gak ada apa apa\"",
+            "char similarity 0.92 < 0.94"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Gila, diluar kosong. Gak ada angin, gak ada apa-apa.",
+          "mismatches": [
+            {
+              "expected": "gil",
+              "heard": "gila"
+            },
+            {
+              "expected": "enggak",
+              "heard": "gak"
+            },
+            {
+              "expected": "enggak",
+              "heard": "gak"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Gila, diluar kosong. Gak ada angin, gak ada apa-apa.",
+          "rawMismatches": [
+            {
+              "expected": "gil",
+              "heard": "gila"
+            },
+            {
+              "expected": "enggak",
+              "heard": "gak"
+            },
+            {
+              "expected": "enggak",
+              "heard": "gak"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.70): heard \"gila diluar kosong gak ada angin gak ada apa apa\"",
+            "char similarity 0.92 < 0.94"
+          ]
+        }
+      ]
+    }
+  ]
+}

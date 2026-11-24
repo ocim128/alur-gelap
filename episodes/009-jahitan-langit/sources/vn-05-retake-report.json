@@ -1,0 +1,214 @@
+{
+  "version": 1,
+  "voiceId": "Leda",
+  "voiceName": "Leda",
+  "provider": "gemini-cloud",
+  "model": "gemini-3.8-flash-tts",
+  "master": false,
+  "masterFilter": null,
+  "asrModel": "small",
+  "generatedAt": "2026-11-24T22:32:12.333Z",
+  "passed": false,
+  "totalChunks": 1,
+  "verifiedChunks": 0,
+  "warningChunks": 0,
+  "failedChunks": 1,
+  "plannedDurationSec": 3.505,
+  "finalAlignment": {
+    "transcript": "Bima, Gil, di sini gelap banget. Kuang ga nunggu.",
+    "mismatches": [
+      {
+        "expected": "gw",
+        "heard": "kuang"
+      },
+      {
+        "expected": "nemu",
+        "heard": "nunggu"
+      }
+    ],
+    "passed": false
+  },
+  "audioQuality": {
+    "integratedLufs": -12.3,
+    "loudnessRangeLu": 0.7,
+    "noiseFloorDbfs": -12.2,
+    "targets": {
+      "integratedLufs": -14,
+      "loudnessRangeLu": [
+        5,
+        7
+      ]
+    }
+  },
+  "chunks": [
+    {
+      "index": 0,
+      "tag": null,
+      "text": "Bima, Gil, di sini gelap banget, gw ga nemu",
+      "retries": 2,
+      "status": "failed",
+      "bestSimilarity": 0.871,
+      "bestWordRatio": 0.778,
+      "acceptedAttempt": 0,
+      "attempts": [
+        {
+          "seed": 0,
+          "wordRatio": 0.778,
+          "similarity": 0.871,
+          "wpm": 154,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.78): heard \"bima gil di sini gelap banget kuang ga nunggu\"",
+            "raw: last word missing, truncated, or has invalid timestamps",
+            "raw: char similarity 0.87 < 0.94",
+            "word mismatch (ratio 0.78): heard \"bima gil di sini gelap banget kuang ga nunggu\"",
+            "last word missing, truncated, or has invalid timestamps",
+            "char similarity 0.87 < 0.94"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Bima, Gil, di sini gelap banget. Kuang ga nunggu.",
+          "mismatches": [
+            {
+              "expected": "gw",
+              "heard": "kuang"
+            },
+            {
+              "expected": "nemu",
+              "heard": "nunggu"
+            }
+          ],
+          "endTruncated": true,
+          "rawTranscript": "Bima, Gil, di sini gelap banget! Kuang ga nunggu!",
+          "rawMismatches": [
+            {
+              "expected": "gw",
+              "heard": "kuang"
+            },
+            {
+              "expected": "nemu",
+              "heard": "nunggu"
+            }
+          ],
+          "rawEndTruncated": true,
+          "rawReasons": [
+            "word mismatch (ratio 0.78): heard \"bima gil di sini gelap banget kuang ga nunggu\"",
+            "last word missing, truncated, or has invalid timestamps",
+            "char similarity 0.87 < 0.94"
+          ]
+        },
+        {
+          "seed": 1,
+          "wordRatio": 0.667,
+          "similarity": 0.94,
+          "wpm": 142,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.67): heard \"bima gila di sini gelap banget gue gak nemu\"",
+            "raw: char similarity 0.94 < 0.94",
+            "word mismatch (ratio 0.67): heard \"bima gila di sini gelap banget gue gak nemu\"",
+            "char similarity 0.94 < 0.94"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Bima, gila di sini gelap banget. Gue gak nemu.",
+          "mismatches": [
+            {
+              "expected": "gil",
+              "heard": "gila"
+            },
+            {
+              "expected": "gw",
+              "heard": "gue"
+            },
+            {
+              "expected": "ga",
+              "heard": "gak"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Bima, gila, di sini gelap banget. Gue gak nemu.",
+          "rawMismatches": [
+            {
+              "expected": "gil",
+              "heard": "gila"
+            },
+            {
+              "expected": "gw",
+              "heard": "gue"
+            },
+            {
+              "expected": "ga",
+              "heard": "gak"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.67): heard \"bima gila di sini gelap banget gue gak nemu\"",
+            "char similarity 0.94 < 0.94"
+          ]
+        },
+        {
+          "seed": 2,
+          "wordRatio": 0.667,
+          "similarity": 0.94,
+          "wpm": 141,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.67): heard \"bima gil di sini gelap banget gue gak nemuk\"",
+            "raw: last word missing, truncated, or has invalid timestamps",
+            "raw: char similarity 0.94 < 0.94",
+            "word mismatch (ratio 0.67): heard \"bima gil di sini gelap banget gue gak nemuk\"",
+            "last word missing, truncated, or has invalid timestamps",
+            "char similarity 0.94 < 0.94"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Bima, Gil, di sini gelap banget. Gue gak nemuk.",
+          "mismatches": [
+            {
+              "expected": "gw",
+              "heard": "gue"
+            },
+            {
+              "expected": "ga",
+              "heard": "gak"
+            },
+            {
+              "expected": "nemu",
+              "heard": "nemuk"
+            }
+          ],
+          "endTruncated": true,
+          "rawTranscript": "Bima, Gil, di sini gelap banget. Gue gak nemuk.",
+          "rawMismatches": [
+            {
+              "expected": "gw",
+              "heard": "gue"
+            },
+            {
+              "expected": "ga",
+              "heard": "gak"
+            },
+            {
+              "expected": "nemu",
+              "heard": "nemuk"
+            }
+          ],
+          "rawEndTruncated": true,
+          "rawReasons": [
+            "word mismatch (ratio 0.67): heard \"bima gil di sini gelap banget gue gak nemuk\"",
+            "last word missing, truncated, or has invalid timestamps",
+            "char similarity 0.94 < 0.94"
+          ]
+        }
+      ]
+    }
+  ]
+}

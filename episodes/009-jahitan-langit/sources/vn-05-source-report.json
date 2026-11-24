@@ -1,0 +1,331 @@
+{
+  "version": 1,
+  "voiceId": "Leda",
+  "voiceName": "Leda",
+  "provider": "gemini-cloud",
+  "model": "gemini-3.8-flash-tts",
+  "master": false,
+  "masterFilter": null,
+  "asrModel": "small",
+  "generatedAt": "2026-11-24T22:30:46.811Z",
+  "passed": false,
+  "totalChunks": 2,
+  "verifiedChunks": 0,
+  "warningChunks": 0,
+  "failedChunks": 2,
+  "plannedDurationSec": 5.83,
+  "finalAlignment": {
+    "transcript": "Bimak! Gil, di sini rapanget, gue gak nemu...",
+    "mismatches": [
+      {
+        "expected": "bima",
+        "heard": "bimak"
+      },
+      {
+        "expected": "gelap",
+        "heard": null
+      },
+      {
+        "expected": "banget",
+        "heard": "rapanget"
+      },
+      {
+        "expected": "gw",
+        "heard": "gue"
+      },
+      {
+        "expected": "ga",
+        "heard": "gak"
+      }
+    ],
+    "passed": false
+  },
+  "audioQuality": {
+    "integratedLufs": -13.9,
+    "loudnessRangeLu": 6.2,
+    "noiseFloorDbfs": -16.4,
+    "targets": {
+      "integratedLufs": -14,
+      "loudnessRangeLu": [
+        5,
+        7
+      ]
+    }
+  },
+  "chunks": [
+    {
+      "index": 0,
+      "tag": null,
+      "text": "Bima? ... Gil, di sini gelap banget.",
+      "retries": 2,
+      "status": "failed",
+      "bestSimilarity": 0.889,
+      "bestWordRatio": 0.727,
+      "acceptedAttempt": 2,
+      "attempts": [
+        {
+          "seed": 0,
+          "wordRatio": 0.667,
+          "similarity": 0.836,
+          "wpm": 111,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.67): heard \"bima gil disini kelepangat\"",
+            "raw: last word missing, truncated, or has invalid timestamps",
+            "raw: char similarity 0.84 < 0.94",
+            "word mismatch (ratio 0.67): heard \"bima gil disini kelepangat\"",
+            "last word missing, truncated, or has invalid timestamps",
+            "char similarity 0.84 < 0.94"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Bima... Gil, disini kelepangat...",
+          "mismatches": [
+            {
+              "expected": "gelap",
+              "heard": null
+            },
+            {
+              "expected": "banget",
+              "heard": "kelepangat"
+            }
+          ],
+          "endTruncated": true,
+          "rawTranscript": "Bima, Gil, disini kelepangat.",
+          "rawMismatches": [
+            {
+              "expected": "gelap",
+              "heard": null
+            },
+            {
+              "expected": "banget",
+              "heard": "kelepangat"
+            }
+          ],
+          "rawEndTruncated": true,
+          "rawReasons": [
+            "word mismatch (ratio 0.67): heard \"bima gil disini kelepangat\"",
+            "last word missing, truncated, or has invalid timestamps",
+            "char similarity 0.84 < 0.94"
+          ]
+        },
+        {
+          "seed": 1,
+          "wordRatio": 0.667,
+          "similarity": 0.949,
+          "wpm": 113,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.67): heard \"dima gila di sini gelap banget\"",
+            "word mismatch (ratio 0.67): heard \"dima gila di sini gelap banget\""
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Dima? Gila, di sini gelap banget.",
+          "mismatches": [
+            {
+              "expected": "bima",
+              "heard": "dima"
+            },
+            {
+              "expected": "gil",
+              "heard": "gila"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Dima? Gila, di sini gelap banget.",
+          "rawMismatches": [
+            {
+              "expected": "bima",
+              "heard": "dima"
+            },
+            {
+              "expected": "gil",
+              "heard": "gila"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.67): heard \"dima gila di sini gelap banget\""
+          ]
+        },
+        {
+          "seed": 2,
+          "wordRatio": 0.727,
+          "similarity": 0.889,
+          "wpm": 74,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.73): heard \"bima gil di sini rapanget\"",
+            "raw: last word missing, truncated, or has invalid timestamps",
+            "raw: char similarity 0.89 < 0.94",
+            "raw: 70 wpm outside 130±25%",
+            "word mismatch (ratio 0.73): heard \"bima gil di sini rapanget\"",
+            "last word missing, truncated, or has invalid timestamps",
+            "char similarity 0.89 < 0.94",
+            "74 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Bima! Gil, di sini rapanget!",
+          "mismatches": [
+            {
+              "expected": "gelap",
+              "heard": null
+            },
+            {
+              "expected": "banget",
+              "heard": "rapanget"
+            }
+          ],
+          "endTruncated": true,
+          "rawTranscript": "Bima... Gil, di sini rapanget.",
+          "rawMismatches": [
+            {
+              "expected": "gelap",
+              "heard": null
+            },
+            {
+              "expected": "banget",
+              "heard": "rapanget"
+            }
+          ],
+          "rawEndTruncated": true,
+          "rawReasons": [
+            "word mismatch (ratio 0.73): heard \"bima gil di sini rapanget\"",
+            "last word missing, truncated, or has invalid timestamps",
+            "char similarity 0.89 < 0.94",
+            "70 wpm outside 130±25%"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "tag": null,
+      "text": "Gw ga nemu—",
+      "retries": 2,
+      "status": "failed",
+      "bestSimilarity": 1,
+      "bestWordRatio": 1,
+      "acceptedAttempt": 1,
+      "attempts": [
+        {
+          "seed": 0,
+          "wordRatio": 0.667,
+          "similarity": 0.857,
+          "wpm": 147,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.67): heard \"gua ga nemu\"",
+            "raw: char similarity 0.86 < 0.94",
+            "word mismatch (ratio 0.67): heard \"gua ga nemu\"",
+            "char similarity 0.86 < 0.94"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Gua ga nemu?",
+          "mismatches": [
+            {
+              "expected": "gw",
+              "heard": "gua"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Gua ga nemu?",
+          "rawMismatches": [
+            {
+              "expected": "gw",
+              "heard": "gua"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.67): heard \"gua ga nemu\"",
+            "char similarity 0.86 < 0.94"
+          ]
+        },
+        {
+          "seed": 1,
+          "wordRatio": 1,
+          "similarity": 1,
+          "wpm": 229,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: 188 wpm outside 130±25%",
+            "229 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Gw ga nemu",
+          "mismatches": [],
+          "endTruncated": false,
+          "rawTranscript": "Gw ga nemu",
+          "rawMismatches": [],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "188 wpm outside 130±25%"
+          ]
+        },
+        {
+          "seed": 2,
+          "wordRatio": 0.333,
+          "similarity": 0.72,
+          "wpm": 173,
+          "expectedWpm": 130,
+          "passed": false,
+          "reasons": [
+            "raw: word mismatch (ratio 0.33): heard \"gue enggak nemu\"",
+            "raw: char similarity 0.72 < 0.94",
+            "raw: 173 wpm outside 130±25%",
+            "word mismatch (ratio 0.33): heard \"gue enggak nemu\"",
+            "char similarity 0.72 < 0.94",
+            "173 wpm outside 130±25%"
+          ],
+          "warnings": [
+            "speech starts at 0ms — onset may be clipped (whisper floors word starts)"
+          ],
+          "transcript": "Gue enggak nemu.",
+          "mismatches": [
+            {
+              "expected": "gw",
+              "heard": "gue"
+            },
+            {
+              "expected": "ga",
+              "heard": "enggak"
+            }
+          ],
+          "endTruncated": false,
+          "rawTranscript": "Gue enggak nemu.",
+          "rawMismatches": [
+            {
+              "expected": "gw",
+              "heard": "gue"
+            },
+            {
+              "expected": "ga",
+              "heard": "enggak"
+            }
+          ],
+          "rawEndTruncated": false,
+          "rawReasons": [
+            "word mismatch (ratio 0.33): heard \"gue enggak nemu\"",
+            "char similarity 0.72 < 0.94",
+            "173 wpm outside 130±25%"
+          ]
+        }
+      ]
+    }
+  ]
+}

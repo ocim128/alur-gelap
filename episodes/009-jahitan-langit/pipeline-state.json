@@ -1,19 +1,19 @@
 {
   "brief": {
     "status": "pass",
-    "notes": "Owner authorized production; fresh-context proxy cold-read passes Q1?Q4 for script SHA-256 a1060a68751014cb16fbac899f7209679842202f030ca857215f640c405a6e37. Not audience evidence."
+    "notes": "Fresh-context model proxy passed Q1?Q4 for a1060a68751014cb16fbac899f7209679842202f030ca857215f640c405a6e37; input-equivalent timing-only rebind to 8f92e9cfc64151a23aded2a3aa50fe8eae9dc9c5efd55ec5c972ee6f2d520639. Not audience evidence."
   },
   "audio": {
-    "status": "pending",
-    "notes": "No episode audio generated. Voice roster roles assigned; episode listening review: none."
+    "status": "pass",
+    "notes": "Six selected ShortZ transcripts match intended words after colloquial spelling normalization; short-form WPM/onset warnings remain. Procedural SFX generated. listening review: none; acoustics and final cut unverified."
   },
   "images": {
-    "status": "pending",
-    "notes": "Five stills planned; none generated or reviewed."
+    "status": "pass",
+    "notes": "Five images examined at 540x960; opening required three attempts. Creator visual assessment only; export and human review remain pending."
   },
   "render": {
-    "status": "pending",
-    "notes": "Composition ID reserved; composition not registered or rendered."
+    "status": "ready",
+    "notes": "64 s v1 rendered and measured; all required checks pass, source and delivery still require listening and independent review. SHA-256 43b450d765360ac04ee8c1329211f6bafec144fd16ef070f3f4318fba1b330c0."
   },
   "audit": {
     "status": "pending",
@@ -23,7 +23,10 @@
     "status": "pending",
     "notes": "Not authorized."
   },
-  "latestRendered": null,
+  "latestRendered": {
+    "path": "out/009-jahitan-langit/arsip03-jahitan-langit-v1.mp4",
+    "sha256": "43b450d765360ac04ee8c1329211f6bafec144fd16ef070f3f4318fba1b330c0"
+  },
   "independentlyAudited": null,
   "ownerReviewed": null,
   "published": null

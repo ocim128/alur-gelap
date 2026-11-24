@@ -1,7 +1,7 @@
 # Strict Cold-Read Input
 
 - **Script ID:** `arsip03-jahitan-langit`
-- **Script SHA-256:** `a1060a68751014cb16fbac899f7209679842202f030ca857215f640c405a6e37`
+- **Script SHA-256:** `8f92e9cfc64151a23aded2a3aa50fe8eae9dc9c5efd55ec5c972ee6f2d520639`
 
 This document contains ONLY the permitted on-screen/subtitle blind-review fields (no brief prose, no clue ledger, no audio/production notes). Answer Q1–Q4 based strictly on the material below.
 

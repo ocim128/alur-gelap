@@ -1,0 +1,80 @@
+{
+  "version": 1,
+  "voiceId": "Puck",
+  "durationSec": 4.485,
+  "master": false,
+  "chunks": [
+    {
+      "index": 0,
+      "tag": null,
+      "text": "Gil... di luar kosong. Ga ada angin, ga ada apa-apa.",
+      "start": 0,
+      "end": 4.485,
+      "retries": 2,
+      "status": "failed"
+    }
+  ],
+  "words": [
+    {
+      "word": "Gil",
+      "start": 0,
+      "end": 0.44,
+      "chunk": 0
+    },
+    {
+      "word": "Di",
+      "start": 1.54,
+      "end": 1.98,
+      "chunk": 0
+    },
+    {
+      "word": "luar",
+      "start": 1.98,
+      "end": 2.2,
+      "chunk": 0
+    },
+    {
+      "word": "kosong",
+      "start": 2.2,
+      "end": 2.94,
+      "chunk": 0
+    },
+    {
+      "word": "Nggak",
+      "start": 2.94,
+      "end": 3.52,
+      "chunk": 0
+    },
+    {
+      "word": "ada",
+      "start": 3.52,
+      "end": 3.68,
+      "chunk": 0
+    },
+    {
+      "word": "angin,",
+      "start": 3.68,
+      "end": 3.88,
+      "chunk": 0
+    },
+    {
+      "word": "nggak",
+      "start": 3.92,
+      "end": 4,
+      "chunk": 0
+    },
+    {
+      "word": "ada",
+      "start": 4,
+      "end": 4.12,
+      "chunk": 0
+    },
+    {
+      "word": "papa",
+      "start": 4.12,
+      "end": 4.38,
+      "chunk": 0
+    }
+  ],
+  "sfx": []
+}

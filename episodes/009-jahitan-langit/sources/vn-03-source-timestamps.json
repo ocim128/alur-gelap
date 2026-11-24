@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "voiceId": "Puck",
+  "durationSec": 2.565,
+  "master": false,
+  "chunks": [
+    {
+      "index": 0,
+      "tag": null,
+      "text": "Gede banget. Gw buka dikit ya.",
+      "start": 0,
+      "end": 2.565,
+      "retries": 2,
+      "status": "failed"
+    }
+  ],
+  "words": [
+    {
+      "word": "Gede",
+      "start": 0,
+      "end": 0.62,
+      "chunk": 0
+    },
+    {
+      "word": "banget,",
+      "start": 0.62,
+      "end": 1.08,
+      "chunk": 0
+    },
+    {
+      "word": "gue",
+      "start": 1.74,
+      "end": 2.04,
+      "chunk": 0
+    },
+    {
+      "word": "buka",
+      "start": 2.04,
+      "end": 2.2,
+      "chunk": 0
+    },
+    {
+      "word": "dikit",
+      "start": 2.2,
+      "end": 2.38,
+      "chunk": 0
+    },
+    {
+      "word": "ya.",
+      "start": 2.38,
+      "end": 2.5,
+      "chunk": 0
+    }
+  ],
+  "sfx": []
+}

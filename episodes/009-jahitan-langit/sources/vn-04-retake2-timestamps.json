@@ -1,0 +1,80 @@
+{
+  "version": 1,
+  "voiceId": "Puck",
+  "durationSec": 4.825,
+  "master": false,
+  "chunks": [
+    {
+      "index": 0,
+      "tag": null,
+      "text": "Gil, di luar kosong, enggak ada angin, enggak ada apa-apa",
+      "start": 0,
+      "end": 4.825,
+      "retries": 2,
+      "status": "failed"
+    }
+  ],
+  "words": [
+    {
+      "word": "Gil,",
+      "start": 0,
+      "end": 0.42,
+      "chunk": 0
+    },
+    {
+      "word": "diluar",
+      "start": 0.92,
+      "end": 1.4,
+      "chunk": 0
+    },
+    {
+      "word": "kosong,",
+      "start": 1.4,
+      "end": 2.08,
+      "chunk": 0
+    },
+    {
+      "word": "nggak",
+      "start": 2.42,
+      "end": 2.8,
+      "chunk": 0
+    },
+    {
+      "word": "ada",
+      "start": 2.8,
+      "end": 3.08,
+      "chunk": 0
+    },
+    {
+      "word": "angin,",
+      "start": 3.08,
+      "end": 3.52,
+      "chunk": 0
+    },
+    {
+      "word": "nggak",
+      "start": 3.92,
+      "end": 4.16,
+      "chunk": 0
+    },
+    {
+      "word": "ada",
+      "start": 4.16,
+      "end": 4.34,
+      "chunk": 0
+    },
+    {
+      "word": "apa",
+      "start": 4.34,
+      "end": 4.54,
+      "chunk": 0
+    },
+    {
+      "word": "-apa.",
+      "start": 4.54,
+      "end": 4.74,
+      "chunk": 0
+    }
+  ],
+  "sfx": []
+}

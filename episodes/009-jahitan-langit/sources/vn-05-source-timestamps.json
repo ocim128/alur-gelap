@@ -1,0 +1,77 @@
+{
+  "version": 1,
+  "voiceId": "Leda",
+  "durationSec": 5.83,
+  "master": false,
+  "chunks": [
+    {
+      "index": 0,
+      "tag": null,
+      "text": "Bima? ... Gil, di sini gelap banget.",
+      "start": 0,
+      "end": 4.885,
+      "retries": 2,
+      "status": "failed"
+    },
+    {
+      "index": 1,
+      "tag": null,
+      "text": "Gw ga nemu—",
+      "start": 5.045,
+      "end": 5.83,
+      "retries": 2,
+      "status": "failed"
+    }
+  ],
+  "words": [
+    {
+      "word": "Bimak!",
+      "start": 0,
+      "end": 0.56,
+      "chunk": 0
+    },
+    {
+      "word": "Gil,",
+      "start": 2.12,
+      "end": 2.66,
+      "chunk": 0
+    },
+    {
+      "word": "di",
+      "start": 3.44,
+      "end": 4.06,
+      "chunk": 0
+    },
+    {
+      "word": "sini",
+      "start": 4.06,
+      "end": 4.22,
+      "chunk": 0
+    },
+    {
+      "word": "rapanget,",
+      "start": 4.22,
+      "end": 4.76,
+      "chunk": 0
+    },
+    {
+      "word": "gue",
+      "start": 5.06,
+      "end": 5.34,
+      "chunk": 1
+    },
+    {
+      "word": "gak",
+      "start": 5.34,
+      "end": 5.48,
+      "chunk": 1
+    },
+    {
+      "word": "nemu...",
+      "start": 5.48,
+      "end": 5.8,
+      "chunk": 1
+    }
+  ],
+  "sfx": []
+}
