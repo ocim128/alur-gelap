@@ -1,5 +1,11 @@
 # ARSIP #002 asset and rights record — 2026-11-25
 
+## Social cover and upload copy · 2026-11-25
+
+- `out/008-pagi-jam-dua/cover-social-9x16-v2.jpg` revises the existing social cover using built-in ImageGen. The owner supplied the replacement headline “JAM 02.41 TAPI KOK LANGIT MALAH CERAH?”. The 1080 × 1920 JPG and centered 3:4 crop were inspected for text readability. Generator publication terms remain unverified.
+- `out/008-pagi-jam-dua/cover-social-9x16.jpg` is a 1080 × 1920 promotional still for `Arsip02PagiJamDua`. Generated with built-in ImageGen from `still-02-lereng.jpg` as the scene reference and the ARSIP #001 cover as the typography reference. The prompt preserves the view through the tent and the cold band of light on the dark ridge, with “JAM 02.41 KOK UDAH PAGI?” under `ARSIP #002 · @skenarium`. Generator publication terms have not been independently verified.
+- `out/008-pagi-jam-dua/caption.txt` contains separate upload copy for TikTok, YouTube, Instagram Reels and Facebook Page. Each version includes `#fiksi` and `#ceritahorror`.
+
 ## v2 replacement and retained v1 record
 
 The sections below preserve the v1 history; the current v2 substitutions are documented here. The five photos m1/m5/m9/m14/m19 and voice WAVs m3/m7 were checked against the v1 hashes below and remain byte-identical. **listening review: none**.

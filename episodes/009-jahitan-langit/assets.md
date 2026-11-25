@@ -1,5 +1,10 @@
 # Asset and rights record ? ARSIP #003
 
+## Social cover and upload copy · 2026-11-25
+
+- `out/009-jahitan-langit/cover-social-9x16.jpg` is a 1080 × 1920 promotional still for `Arsip03JahitanLangit`. Generated with built-in ImageGen from `still-01-sky-seam.jpg` as the scene reference and the ARSIP #001 cover as the typography reference. The prompt shows the opening photo's two rows of stitches across the star field above the campsite, with “LANGITNYA ADA JAHITAN” under `ARSIP #003 · @skenarium`. Generator publication terms have not been independently verified.
+- `out/009-jahitan-langit/caption.txt` contains separate upload copy for TikTok, YouTube, Instagram Reels and Facebook Page. Each version includes `#fiksi` and `#ceritahorror`.
+
 ## Still photos
 
 Generated with the built-in OpenAI image generator on 2026-11-25; JPEG conversions preserve the generated image. Publication rights and applicable terms are **not independently verified**. No identifiable real people or third-party source photographs were intentionally used. Each still was examined at 540 ? 960 in `sources/still-previews/`; this is a creator inspection, not human audience evidence. The first still took three attempts (initial seam resembled wires; second stitched but single row; third edit has two rows); all other stills took one attempt. The final phone size and zoom framing still require MP4 inspection.
